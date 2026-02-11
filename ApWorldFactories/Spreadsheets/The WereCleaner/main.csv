@@ -1,0 +1,11 @@
+Level,Collectibles,Abilities Required,,Collectibles,Collectible ID,Abilities,,Level Name,Level ID,Column 1
+Monday,Kyle's Life Savings,Washer,,Kyle's Life Savings,id_lifeSavings,Washer,,Monday,Level_1_V2,
+Tuesday,"Kyle's Life Savings, Deluxe Toilet Paper Roll, E.O.T.M Scrapbook",Washer,,Rebellion's Megaphone,id_megaphone,Vacuum,,Tuesday,Level_2_V2,"Charlie, Ena"
+Wednesday,"Rebellion's Megaphone, The CEO's Suit, Wooden Stake and Garlic, Peanut Butter Cookie","Washer, Vacuum",,E.O.T.M Scrapbook,id_scrapbook,Knapper,,Wednesday,Level_3_V2,"Jonathan, Erin, Harrison, Emma, Mason, Phoebe, Chloe"
+Thursday,"The CEO's Suit, Deluxe Toilet Paper Roll, E.O.T.M Scrapbook, Kyle's Life Savings, Rebellion's Megaphone, Wooden Stake and Garlic, Peanut Butter Cookie","Washer, Vacuum",,The CEO's Suit,id_suit,,,Thursday,Level_4_V2,"Abby, William, Jonathan, Isabel, Shruti, Glenn, Emma, Cerulean, Phoebe, Noah, Charlie, Angie, Seung, Mason, Levi, Samuel"
+Friday,"Rebellion's Megaphone, The CEO's Suit, Mr. Shoop's Head, Gold Wolf Plushie, Peanut Butter Cookie","Washer, Vacuum, Knapper",,Deluxe Toilet Paper Roll,id_toilet,,,Friday,Level_5_V2,"Amy, William, Janina, Harrison, David, Beowulf, John, Youngeun, Glenn, Seung, Levi, Cerulean, Karina, Cameron, Emma, Taro, Nevaeh, Rod, Noah, Isabel, Erin, Austin"
+Saturday,"Kyle's Life Savings, Rebellion's Megaphone, E.O.T.M Scrapbook, The CEO's Suit, Deluxe Toilet Paper Roll, Mr. Shoop's Head, Gold Wolf Plushie, Wooden Stake and Garlic, Peanut Butter Cookie","Washer, Vacuum, Knapper",,Mr. Shoop's Head,id_shoop,,,Saturday,Level_6_V2,"Janina, Sierra, William, Harrison, Youngeun, Beowulf, Rod, Isabel, Emma, Levi, Glenn, Noah, Charlie, Nicole, Shruti, Cerulean, Amy, Karina, Cameron, Mason, Erin, David, Taro, Samuel, Seung, Eggsy, Angie, Nevaeh, Jonathan, Chloe"
+Sunday,"Kyle's Life Savings, Rebellion's Megaphone, E.O.T.M Scrapbook, The CEO's Suit, Deluxe Toilet Paper Roll, Gold Wolf Plushie, Wooden Stake and Garlic, Peanut Butter Cookie, Lethal Pepper Spray, Mr. Shoop's Head","Washer, Vacuum",,Gold Wolf Plushie,id_plush,,,Sunday,Level_7_V2,"Noah, William, Harrison, Levi, Beowulf, Isabel, Janina, Rod, Charlie, Taro, Phoebe, Cameron, Mason, Emma, David, Jonathan, Nevaeh, Seung, Angie, John"
+,,,,Wooden Stake and Garlic,id_stake,,,,,
+,,,,Peanut Butter Cookie,id_cookie,,,,,
+,,,,Lethal Pepper Spray,id_spray,,,,,

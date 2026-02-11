@@ -1,18 +1,15 @@
 ﻿using CreepyUtil.Archipelago.WorldFactory;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 
-namespace ApWorldFactories;
+namespace ApWorldFactories.Games;
 
 public class WereCleaner() : BuildData(
-    DDrive, "The WereCleaner", "SW_CreeperKing.Werepelago", "the_werecleaner", "The WereCleaner - Sheet1.csv", "0.1.2"
+    DDrive, "The WereCleaner", "SW_CreeperKing.Werepelago", "the_werecleaner", "1wrzYGdzRh6-fmsBK-dAzhe72PdNrhvEZKUcQJCXDaJ4", "0.1.2"
 )
 {
-    // Spreadsheet used for logic:
-    // https://docs.google.com/spreadsheets/d/1wrzYGdzRh6-fmsBK-dAzhe72PdNrhvEZKUcQJCXDaJ4/edit?usp=sharing
-
     public override void RunShenanigans(WorldFactory factory)
     {
-        GetSpreadsheet()
+        GetSpreadsheet("main")
            .ToFactory()
            .ReadTable(new LevelDataCreator(), 3, out var levelData).SkipColumn()
            .ReadTable(new ItemDataCreator(), 3, out var itemData).SkipColumn()
@@ -57,10 +54,10 @@ public class WereCleaner() : BuildData(
                .GenerateItemsFile();
 
         factory.GetRuleFactory(GitLink)
-               .AddLogicFunction("level", "has_level", StateHasR("f\"Unlock {level} Night\""), "level")
-               .AddLogicFunction("Washer", "has_washer", StateHasSR("Washer"))
-               .AddLogicFunction("Vacuum", "has_vacuum", StateHasSR("Vacuum"))
-               .AddLogicFunction("Knapper", "has_knapper", StateHasSR("Knapper"))
+               .AddLogicFunction("level", "has_level", StateHas("f\"Unlock {level} Night\"", stringify:false), "level")
+               .AddLogicFunction("Washer", "has_washer", StateHas("Washer"))
+               .AddLogicFunction("Vacuum", "has_vacuum", StateHas("Vacuum"))
+               .AddLogicFunction("Knapper", "has_knapper", StateHas("Knapper"))
                .AddLogicRules(
                     collectibles.ToDictionary(
                         s => s, s => string.Join(
@@ -105,9 +102,8 @@ public class WereCleaner() : BuildData(
                 // .UseGenerateEarly(method => method.AddCode(CreatePushPrecollected("Unlock Monday Night")))
                .UseCreateRegions()
                .AddCreateItems()
-               .UseSetRules(method => method.AddCode(
-                        "self.multiworld.completion_condition[self.player] = lambda state: state.has(\"Nights Survived\", self.player, 7)"
-                    )
+               .UseSetRules(method => method
+                   .AddCode(CreateGoalCondition(StateHas("Nights Survived", "7", returnValue:false)))
                 )
                .UseFillSlotData(new Dictionary<string, string> { ["Kyle"] = "str(\"Best Boi\")" })
                .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
