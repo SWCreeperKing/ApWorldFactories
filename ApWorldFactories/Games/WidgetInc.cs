@@ -145,9 +145,7 @@ public class WidgetInc() : BuildData(
            .AddCreateItems()
            .UseSetRules(method => method
                                  .AddCode("player = self.player")
-                                 .AddCode(
-                                      $"self.multiworld.completion_condition[self.player] = lambda state: {factory.GetRuleFactory().GenerateCompiledRule("RocketSegment")}"
-                                  )
+                                 .AddCode(CreateGoalCondition("RocketSegment", factory.GetRuleFactory()))
             )
            .UseFillSlotData(
                 new Dictionary<string, string> { ["uuid"] = "str(shuffled)" },

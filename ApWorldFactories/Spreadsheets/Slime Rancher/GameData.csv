@@ -1,0 +1,18 @@
+Region,Back Connections,,Item,Count,Prog type
+Menu,,,Air Burst,1,nonprog_useful
+The Ranch,Menu,,Liquid Slot,1,nonprog_useful
+Upgrades,Menu,,Golden Sure Shot,1,nonprog_useful
+The Lab,The Ranch,,Drone,4,nonprog_useful
+The Overgrowth,The Ranch,,Advanced Drone,4,nonprog_useful
+The Grotto,The Ranch,,Market Link,3,nonprog_useful
+Dry Reef,The Ranch,,Progressive Max Health,4,prog_useful
+Indigo Quarry,Dry Reef,,Progressive Max Ammo,4,prog_useful
+Moss Blanket,Dry Reef,,Progressive Run Efficiency,2,prog_useful
+Ancient Ruins Transition,"Indigo Quarry, Moss Blanket",,Progressive Market Stonks,5,prog_useful
+Ancient Ruins,Ancient Ruins Transition,,Progressive Max Energy,3,prog_prog
+Glass Desert,Ancient Ruins,,Progressive Jetpack,2,prog_prog
+,,,Progressive Treasure Cracker,3,prog_prog
+,,,75x Newbucks,-,filler
+,,,81x Newbucks,-,filler
+,,,99x Newbucks,-,filler
+,,,100x Newbucks,-,filler

@@ -65,3 +65,9 @@ public abstract class BuildData
 
     public abstract void RunShenanigans(WorldFactory factory);
 }
+
+public static class Extensions
+{
+    public static string[] SplitAndTrim(this string txt, char splitter) => txt.Split(splitter).Select(s => s.Trim()).ToArray();
+    public static string[] SplitAndTrim(this string txt, string splitter) => txt.Split(splitter).Select(s => s.Trim()).ToArray();
+}
