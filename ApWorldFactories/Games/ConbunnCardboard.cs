@@ -18,12 +18,12 @@ public class ConbunnCardboard() : BuildData(
     {
         GetSpreadsheet("main")
            .ToFactory()
-           .ReadTable(new RegionDataCreator(), 5, out var regionData).SkipColumn()
+           .ReadTable(new RegionDataCreator(), 6, out var regionData)
            .ReadTable(new LocationDataCreator(), 3, out var locationData).SkipColumn()
            .ReadTable(new AbilityDataCreator(), 1, out var abilityData).SkipColumn()
            .ReadTable(new SkinDataCreator(), 5, out var skinData);
 
-        var Unlocks = regionData.Where(data => data.HasTransition).ToDictionary(
+        var unlocks = regionData.Where(data => data.HasTransition).ToDictionary(
             data => data.Region, data => $"Transition Unlock: {data.Region}"
         );
         Dictionary<string, int[]> Counter = [];
@@ -42,13 +42,21 @@ public class ConbunnCardboard() : BuildData(
                .GenerateOptionFile();
 
         factory.GetLocationFactory(GitLink)
-               .AddLocations("coins", locationData.Where(data => data.IsCoin).Select(data => (string[])[LocationIdMap[data.Id], data.Region]))
-               .AddLocations("cds", locationData.Where(data => !data.IsCoin).Select(data => (string[])[LocationIdMap[data.Id], data.Region]))
+               .AddLocations(
+                    "coins",
+                    locationData.Where(data => data.IsCoin)
+                                .Select(data => (string[])[LocationIdMap[data.Id], data.Region])
+                )
+               .AddLocations(
+                    "cds",
+                    locationData.Where(data => !data.IsCoin)
+                                .Select(data => (string[])[LocationIdMap[data.Id], data.Region])
+                )
                .AddLocations("skins", skinData.Select(data => (string[])[data.Name, data.Region]))
                .GenerateLocationFile();
 
         factory.GetItemFactory(GitLink)
-               .AddItemListVariable("unlocks", Progression, list: Unlocks.Values.ToArray())
+               .AddItemListVariable("unlocks", Progression, list: unlocks.Values.ToArray())
                .AddItemListVariable("abilities", Progression, list: abilityData.Select(data => data.Name).ToArray())
                .AddItemCountVariable("CDs", new Dictionary<string, int> { ["CD"] = 40 }, Progression)
                .AddItem("Cardboard Coin", Filler)
@@ -76,15 +84,12 @@ public class ConbunnCardboard() : BuildData(
 
         regionData.Aggregate(
             regionFactory, (factory1, data)
-                => data.BackRegions.Aggregate(
-                    factory1,
-                    (factory2, s) =>
-                    {
-                        var rule = data.GenRule;
-                        return rule is not "" ? factory2.AddConnectionCompiledRule(s, data.Region, rule)
-                            : factory2.AddConnection(s, data.Region);
-                    }
-                )
+                =>
+            {
+                var rule = data.GenRule;
+                return rule is not "" ? factory1.AddConnectionCompiledRule(data.BackRegion, data.Region, rule)
+                    : factory1.AddConnection(data.BackRegion, data.Region);
+            }
         );
 
         regionFactory.AddLocationsFromList("coins")
@@ -118,7 +123,9 @@ public class ConbunnCardboard() : BuildData(
             "TransitionIds",
             regionData.Where(data => data.HasTransition).Select(data => $"{data.TransitionName}:{data.Region}")
         );
-        WriteData("LocationDoors", regionData.Where(data => data.HasDoor).Select(data => $"{data.Region},{data.DoorFrame}"));
+        WriteData(
+            "LocationDoors", regionData.Where(data => data.HasDoor).Select(data => $"{data.Region},{data.DoorFrame}")
+        );
         WriteData(
             "SkinData",
             skinData.OrderBy(data => int.Parse(data.Id)).Select(data => $"{data.Name},{data.LocalInt},{data.GloablInt}")
@@ -128,12 +135,14 @@ public class ConbunnCardboard() : BuildData(
 
 public readonly struct RegionData(string[] param)
 {
-    public readonly string Region = param[0];
-    public readonly string[] BackRegions = param[1].Split(',').Select(s => s.Trim()).ToArray();
-    public readonly string[] Abilities = param[2].Split(',').Select(s => s.Trim()).ToArray();
+    public readonly string RawRegion = param[0];
+    public readonly string BackRegion = param[1];
+    public readonly string[] Abilities = param[2].SplitAndTrim(',');
     public readonly string TransitionName = param[3];
     public readonly string DoorFrame = param[4];
+    public readonly bool IsSubZone = param[5] is not ""&& param[5].ToLower()[0] == 'y';
 
+    public string Region => IsSubZone ? $"{RawRegion} ({BackRegion})" : RawRegion;
     public bool HasTransition => TransitionName is not "";
     public bool HasDoor => DoorFrame is not "";
 
