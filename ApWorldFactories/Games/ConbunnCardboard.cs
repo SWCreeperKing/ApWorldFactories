@@ -9,7 +9,7 @@ namespace ApWorldFactories.Games;
 public class ConbunnCardboard() : BuildData(
     FDrive, "Conbunn Cardboard", "SW_CreeperKing.Conbunnipelago", "conbunn_cardboard",
     "1T4Gk3olQCz_J6dkZXPU1BtXysywf3wvbPeJHVYvnYic",
-    "0.1.0"
+    "0.1.1"
 )
 {
     public override Dictionary<string, string> SheetGids { get; }
@@ -28,6 +28,7 @@ public class ConbunnCardboard() : BuildData(
         );
         Dictionary<string, int[]> Counter = [];
         Dictionary<string, string> LocationIdMap = [];
+        var RegionMap = regionData.ToDictionary(data => data.RawRegion, data => data.Region);
 
         foreach (var location in locationData)
         {
@@ -45,14 +46,14 @@ public class ConbunnCardboard() : BuildData(
                .AddLocations(
                     "coins",
                     locationData.Where(data => data.IsCoin)
-                                .Select(data => (string[])[LocationIdMap[data.Id], data.Region])
+                                .Select(data => (string[])[LocationIdMap[data.Id], RegionMap[data.Region]])
                 )
                .AddLocations(
                     "cds",
                     locationData.Where(data => !data.IsCoin)
-                                .Select(data => (string[])[LocationIdMap[data.Id], data.Region])
+                                .Select(data => (string[])[LocationIdMap[data.Id], RegionMap[data.Region]])
                 )
-               .AddLocations("skins", skinData.Select(data => (string[])[data.Name, data.Region]))
+               .AddLocations("skins", skinData.Select(data => (string[])[data.Name, RegionMap[data.Region]]))
                .GenerateLocationFile();
 
         factory.GetItemFactory(GitLink)
@@ -76,7 +77,7 @@ public class ConbunnCardboard() : BuildData(
                .AddLogicFunction("pads", "has_bounce_pads", StateHas("Bounce Pads"))
                .AddLogicFunction("coin", "has_coin_count", StateHas("Real Coin", "amt"), "amt")
                .AddLogicRules(locationData.ToDictionary(data => LocationIdMap[data.Id], data => data.GenRule))
-               .AddLogicRules(skinData.ToDictionary(data => data.Name, data => data.GenRule))
+               .AddLogicRules(skinData.ToDictionary(data => data.Name, data => data.GenRule(RegionMap)))
                .GenerateRulesFile();
 
         var regionFactory = factory.GetRegionFactory(GitLink)
@@ -140,7 +141,7 @@ public readonly struct RegionData(string[] param)
     public readonly string[] Abilities = param[2].SplitAndTrim(',');
     public readonly string TransitionName = param[3];
     public readonly string DoorFrame = param[4];
-    public readonly bool IsSubZone = param[5] is not ""&& param[5].ToLower()[0] == 'y';
+    public readonly bool IsSubZone = param[5] is not "" && param[5].ToLower()[0] == 'y';
 
     public string Region => IsSubZone ? $"{RawRegion} ({BackRegion})" : RawRegion;
     public bool HasTransition => TransitionName is not "";
@@ -191,15 +192,12 @@ public readonly struct SkinData(string[] param)
     public readonly string LocalInt = param[3];
     public readonly string GloablInt = param[4];
 
-    public string GenRule
+    public string GenRule(Dictionary<string, string> regionMap)
     {
-        get
-        {
-            List<string> req = [$"unlock[\"{Region}\"]"];
-            if (Id is "1") req.Add("coin[50]");
-            if (Id is "2") req.Add("coin[150]");
-            return string.Join(" and ", req);
-        }
+        List<string> req = [$"unlock[\"{regionMap[Region]}\"]"];
+        if (Id is "1") req.Add("coin[50]");
+        if (Id is "2") req.Add("coin[150]");
+        return string.Join(" and ", req);
     }
 }
 

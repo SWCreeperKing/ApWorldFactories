@@ -31,10 +31,15 @@ public class WidgetInc() : BuildData(
         var endingNodes = techTreeData.Where(tech => techTreeData.All(data => data.PreviousTech != tech.Tech))
                                       .Select(data => data.Tech).ToArray();
 
+        var tieredProducers =
+            techTreeData.Where(data => data.Unlock != "").GroupBy(data => data.TierRequirement)
+                        .ToDictionary(g => g.Key, g => g.Select(data => data.Tech).ToArray());
+        
         factory
            .GetOptionsFactory(GitLink)
            .AddOption("Production Multiplier", "Gives a production multiplier", new Range(4, 1, 10))
            .AddOption("Hand Crafting Multiplier", "Gives a multiplier to hand crafting", new Range(2, 1, 10))
+           .AddOption("Starting Tier Producers", "Starts with upto X Tier producers", new Range(1, 0, 3))
            .AddCheckOptions()
            .GenerateOptionFile();
 
@@ -140,7 +145,15 @@ public class WidgetInc() : BuildData(
            .UseInitFunction()
            .UseGenerateEarly()
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
-           .UseGenerateEarly(method => method.AddCode(CreatePushPrecollected("Widget Factory")))
+           .UseGenerateEarly(method =>
+                {
+                    var firstProducers = new IfFactory("options.starting_tier_producers == 1");
+                    tieredProducers[1].Aggregate(firstProducers, (ifFactory, s) => ifFactory.AddCode(CreatePushPrecollected(s)));
+                    firstProducers.SetElse(new CodeBlockFactory().AddCode(CreatePushPrecollected("Widget Factory")));
+                    
+                    method.AddCode(firstProducers);
+                }
+            )
            .UseCreateRegions()
            .AddCreateItems()
            .UseSetRules(method => method
