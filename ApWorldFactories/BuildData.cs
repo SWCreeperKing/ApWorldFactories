@@ -66,8 +66,15 @@ public abstract class BuildData
     public abstract void RunShenanigans(WorldFactory factory);
 }
 
+public class DataCreator<T> : CsvTableRowCreator<T>
+{
+    public override T CreateRowData(string[] param) => (T)Activator.CreateInstance(typeof(T), [param])!;
+}
+
 public static class Extensions
 {
     public static string[] SplitAndTrim(this string txt, char splitter) => txt.Split(splitter).Select(s => s.Trim()).ToArray();
     public static string[] SplitAndTrim(this string txt, string splitter) => txt.Split(splitter).Select(s => s.Trim()).ToArray();
+
+    public static bool IsTrue(this string text) => text[0] is 't' or 'T' or 'y' or 'Y';
 }

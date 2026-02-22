@@ -17,7 +17,7 @@ public class SlimeRancher() : BuildData(
         GetSpreadsheet("GameData")
            .ToFactory()
            .ReadTable(new RegionDataCreator(), 2, out var regionData).SkipColumn()
-           .ReadTable(new ItemAmountDataCreator(), 3, out var itemAmountData);
+           .ReadTable(new DataCreator<ItemAmountData>(), 3, out var itemAmountData);
 
         var zones = regionData.Select(data => data.Region).ToArray();
         var backwardsConnections = regionData.ToDictionary(data => data.Region, data => data.BackConnections);
@@ -368,43 +368,32 @@ file readonly struct ItemAmountData(string[] param)
     public readonly string ProgType = param[2];
 }
 
-file class InteractableCreator(string[] zones) : CsvTableRowCreator<InteractableRowData>
+file class InteractableCreator(string[] zones) : DataCreator<InteractableRowData>
 {
-    public override InteractableRowData CreateRowData(string[] param) => new(param);
     public override bool IsValidData(InteractableRowData t) => zones.Contains(t.Area);
 }
 
-file class GateCreator : CsvTableRowCreator<GateRowData>
+file class GateCreator : DataCreator<GateRowData>
 {
-    public override GateRowData CreateRowData(string[] param) => new(param);
     public override bool IsValidData(GateRowData t) => t.Id != "";
 }
 
-file class GordoCreator : CsvTableRowCreator<GordoRowData>
+file class GordoCreator : DataCreator<GordoRowData>
 {
-    public override GordoRowData CreateRowData(string[] param) => new(param);
     public override bool IsValidData(GordoRowData t) => t.Id != "";
 }
 
-file class UpgradeCreator : CsvTableRowCreator<UpgradeRowData>
+file class UpgradeCreator : DataCreator<UpgradeRowData>
 {
-    public override UpgradeRowData CreateRowData(string[] param) => new(param);
     public override bool IsValidData(UpgradeRowData t) => t.Name != "";
 }
 
-file class CorporateCreator : CsvTableRowCreator<CorporateRowData>
+file class CorporateCreator : DataCreator<CorporateRowData>
 {
-    public override CorporateRowData CreateRowData(string[] param) => new(param);
     public override bool IsValidData(CorporateRowData t) => t.Location != "";
 }
 
-file class RegionDataCreator : CsvTableRowCreator<RegionData>
+file class RegionDataCreator : DataCreator<RegionData>
 {
-    public override RegionData CreateRowData(string[] param) => new(param);
     public override bool IsValidData(RegionData t) => t.BackConnections.Length != 0 && t.Region is not "Menu";
-}
-
-file class ItemAmountDataCreator : CsvTableRowCreator<ItemAmountData>
-{
-    public override ItemAmountData CreateRowData(string[] param) => new(param);
 }

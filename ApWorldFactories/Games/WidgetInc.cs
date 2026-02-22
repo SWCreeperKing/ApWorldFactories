@@ -13,8 +13,8 @@ public class WidgetInc() : BuildData(
     {
         GetSpreadsheet("Main")
            .ToFactory()
-           .ReadTable(new TechTreeCreator(), 6, out var techTreeData).SkipColumn()
-           .ReadTable(new ResourceCreator(), 2, out var resourceData);
+           .ReadTable(new DataCreator<TechTreeData>(), 6, out var techTreeData).SkipColumn()
+           .ReadTable(new DataCreator<ResourceData>(), 2, out var resourceData);
 
         var frameIdMap = techTreeData.ToDictionary(data => data.Tech, data => data.Id);
 
@@ -194,14 +194,4 @@ public readonly struct ResourceData(string[] param)
 {
     public readonly string Resource = param[0].Trim();
     public readonly string[] CraftingRequirements = param[1].Split(',').Select(s => s.Trim()).ToArray();
-}
-
-public class TechTreeCreator : CsvTableRowCreator<TechTreeData>
-{
-    public override TechTreeData CreateRowData(string[] param) => new(param);
-}
-
-public class ResourceCreator : CsvTableRowCreator<ResourceData>
-{
-    public override ResourceData CreateRowData(string[] param) => new(param);
 }

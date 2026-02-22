@@ -11,9 +11,9 @@ public class WereCleaner() : BuildData(
     {
         GetSpreadsheet("main")
            .ToFactory()
-           .ReadTable(new LevelDataCreator(), 3, out var levelData).SkipColumn()
-           .ReadTable(new ItemDataCreator(), 3, out var itemData).SkipColumn()
-           .ReadTable(new NpcDataCreator(), 3, out var npcData);
+           .ReadTable(new DataCreator<LevelData>(), 3, out var levelData).SkipColumn()
+           .ReadTable(new DataCreator<ItemData>(), 3, out var itemData).SkipColumn()
+           .ReadTable(new DataCreator<NpcData>(), 3, out var npcData);
 
         var rawNpcs = npcData.SelectMany(data => data.Npcs).Where(s => s.Trim() is not "").ToHashSet().ToArray();
         var allNpcs = rawNpcs.Select(data => $"Kill {data}").ToArray();
@@ -134,21 +134,4 @@ public readonly struct NpcData(string[] param)
     public readonly string LevelName = param[0];
     public readonly string LevelId = param[1];
     public readonly string[] Npcs = param[2].Split(',').Select(s => s.Trim()).ToArray();
-}
-
-public class LevelDataCreator : CsvTableRowCreator<LevelData>
-{
-
-    public override LevelData CreateRowData(string[] param) => new(param);
-}
-
-public class ItemDataCreator : CsvTableRowCreator<ItemData>
-{
-
-    public override ItemData CreateRowData(string[] param) => new(param);
-}
-
-public class NpcDataCreator : CsvTableRowCreator<NpcData>
-{
-    public override NpcData CreateRowData(string[] param) => new(param);
 }

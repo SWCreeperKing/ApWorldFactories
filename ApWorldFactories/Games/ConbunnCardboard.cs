@@ -1,5 +1,4 @@
-﻿using System.Text;
-using CreepyUtil.Archipelago.WorldFactory;
+﻿using CreepyUtil.Archipelago.WorldFactory;
 using static CreepyUtil.Archipelago.WorldFactory.ItemFactory.ItemClassification;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 using Range = CreepyUtil.Archipelago.WorldFactory.Range;
@@ -19,9 +18,9 @@ public class ConbunnCardboard() : BuildData(
         GetSpreadsheet("main")
            .ToFactory()
            .ReadTable(new RegionDataCreator(), 6, out var regionData)
-           .ReadTable(new LocationDataCreator(), 3, out var locationData).SkipColumn()
-           .ReadTable(new AbilityDataCreator(), 1, out var abilityData).SkipColumn()
-           .ReadTable(new SkinDataCreator(), 5, out var skinData);
+           .ReadTable(new DataCreator<LocData>(), 3, out var locationData).SkipColumn()
+           .ReadTable(new DataCreator<AbilityData>(), 1, out var abilityData).SkipColumn()
+           .ReadTable(new DataCreator<SkinData>(), 5, out var skinData);
 
         var unlocks = regionData.Where(data => data.HasTransition).ToDictionary(
             data => data.Region, data => $"Transition Unlock: {data.Region}"
@@ -184,7 +183,7 @@ public readonly struct AbilityData(string[] parm)
     public readonly string Name = parm[0];
 }
 
-public readonly struct SkinData(string[] param)
+public record SkinData(string[] param)
 {
     public readonly string Name = param[0];
     public readonly string Id = param[1];
@@ -201,23 +200,7 @@ public readonly struct SkinData(string[] param)
     }
 }
 
-public class RegionDataCreator : CsvTableRowCreator<RegionData>
+public class RegionDataCreator : DataCreator<RegionData>
 {
-    public override RegionData CreateRowData(string[] param) => new(param);
     public override bool IsValidData(RegionData t) => t.Region is not "Menu";
-}
-
-public class LocationDataCreator : CsvTableRowCreator<LocData>
-{
-    public override LocData CreateRowData(string[] param) => new(param);
-}
-
-public class AbilityDataCreator : CsvTableRowCreator<AbilityData>
-{
-    public override AbilityData CreateRowData(string[] param) => new(param);
-}
-
-public class SkinDataCreator : CsvTableRowCreator<SkinData>
-{
-    public override SkinData CreateRowData(string[] param) => new(param);
 }
