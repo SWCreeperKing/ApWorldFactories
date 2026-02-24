@@ -10,8 +10,8 @@ Node Id override,Hex,Node,Logic Rule,SPECIFIC Techs,Disease(s),Type,Infectivity,
 ,28,Sneezing,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,5,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,N/A,5
 ,39,Sweating,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,2,1,0,0,0,0,0,0,0,0,0,0,0,0.05,0,0,0.01,0,TRUE,0,N/A,3
 ,10,Paranoia,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.06,0,TRUE,0,N/A,4
-,21,Hyper Sensitivity,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,1,2,0,0,0,0,0,0,0.04,0,0,0,0,0,0,0,0.01,0,TRUE,0,The only symptom with wealthy country effectiveness,2
-,32,Abcesses,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,4,4,0,,,,,,,,,,,,,,,,TRUE,,,2
+,21,Hyper sensitivity,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,1,2,0,0,0,0,0,0,0.04,0,0,0,0,0,0,0,0.01,0,TRUE,0,The only symptom with wealthy country effectiveness,2
+,32,Abscesses,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,4,4,0,,,,,,,,,,,,,,,,TRUE,,,2
 ,43,Haemophilia,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,3,3,0,,,,,,,,,,,,,,,,FALSE,,,3
 ,12,Pulmonary Oedema,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,5,4,2,,,,,,,,,,,,,,,,FALSE,,,
 ,34,Fever,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,4,3,3,,,,,,,,,,,,,,,,FALSE,,,
@@ -53,13 +53,13 @@ Node Id override,Hex,Node,Logic Rule,SPECIFIC Techs,Disease(s),Type,Infectivity,
 ,2,Heat Resistance 1,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
 ,7,Heat Resistance 2,SPECIFIC,Heat Resistance 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
 ,12,Environmental Hardening,SPECIFIC,"Cold Resistance 2, Heat Resistance 2","Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
-,34,Bacterial Resistance 1,ALWAYS,,Bacteria,Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
-,40,Bacterial Resistance 2,ADJACENT,,Bacteria,Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
-,46,Bacterial Resistance 3,ADJACENT,,Bacteria,Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
+,34,Bacterial Resilience 1,ALWAYS,,Bacteria,Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
+,40,Bacterial Resilience 2,ADJACENT,,Bacteria,Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
+,46,Bacterial Resilience 3,ADJACENT,,Bacteria,Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
 ,4,Drug Resistance 1,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
 ,9,Drug Resistance 2,SPECIFIC,Drug Resistance 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
 ,10,Genetic Hardening 1,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
 ,16,Genetic Hardening 2,SPECIFIC,Genetic Hardening 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
-,15,Genetic Reshuffle 1,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
-,21,Genetic Reshuffle 2,SPECIFIC,Genetic Reshuffle 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
-,26,Genetic Reshuffle 3,SPECIFIC,Genetic Reshuffle 2,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
+,15,Genetic ReShuffle 1,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
+,21,Genetic ReShuffle 2,SPECIFIC,Genetic ReShuffle 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
+,26,Genetic ReShuffle 3,SPECIFIC,Genetic ReShuffle 2,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,,,,,,,,,,,,,,,,,,,FALSE,,,
