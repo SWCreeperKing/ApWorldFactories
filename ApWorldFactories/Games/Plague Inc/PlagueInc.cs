@@ -4,11 +4,16 @@ using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 
 namespace ApWorldFactories.Games.Plague_Inc;
 
-public class PlagueInc() : BuildData(
-    FDrive, "Plague Inc", "SW_CreeperKing.Plaguepelago", "plague_inc", "1VRvUwqMd4uWx3bVjrkY-fnQSKrj1e03jdUMcTmoNiPs",
-    "0.1.0", gameFolder: "PlagueInc"
-)
+public class PlagueInc : BuildData
 {
+    public override string SteamDirectory => FDrive;
+    public override string ModFolderName => "SW_CreeperKing.Plaguepelago";
+    public override string GameName => "Plague Inc";
+    public override string ApWorldName => "plague_inc";
+    public override string GoogleSheetId => "1VRvUwqMd4uWx3bVjrkY-fnQSKrj1e03jdUMcTmoNiPs";
+    public override string WorldVersion => "0.1.0";
+    public override string GameFolder => "PlagueInc";
+
     public override Dictionary<string, string> SheetGids { get; }
         = new() { ["techs"] = "894487465", ["data"] = "508764681", ["combos"] = "919603737" };
 

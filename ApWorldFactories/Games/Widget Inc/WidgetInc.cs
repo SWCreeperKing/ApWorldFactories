@@ -4,11 +4,16 @@ using Range = CreepyUtil.Archipelago.WorldFactory.Range;
 
 namespace ApWorldFactories.Games.Widget_Inc;
 
-public class WidgetInc() : BuildData(
-    FDrive, "Widget Inc", "SW_CreeperKing.Widgitpelago", "widget_inc", "1IdcSvjcpVu7AlMY5EUUnbr9mLd9X6LaLiIemBAgD_gA",
-    "0.1.2", gameFolder: "WidgetInc"
-)
+public class WidgetInc : BuildData
 {
+    public override string SteamDirectory => FDrive;
+    public override string ModFolderName => "SW_CreeperKing.Widgitpelago";
+    public override string GameName => "Widget Inc";
+    public override string ApWorldName => "widget_inc";
+    public override string GoogleSheetId => "1IdcSvjcpVu7AlMY5EUUnbr9mLd9X6LaLiIemBAgD_gA";
+    public override string WorldVersion => "0.1.2";
+    public override string GameFolder => "WidgetInc";
+
     private TechTreeData[] TechTreeData = [];
     private ResourceData[] ResourceData = [];
 
@@ -67,9 +72,9 @@ public class WidgetInc() : BuildData(
         location_fact.AddLocations(
             "tech_tree",
             TechTreeData
-               .Append(new TechTreeData(["Starting Check (1)", "", "", "", "", "0"]))
-               .Append(new TechTreeData(["Starting Check (2)", "", "", "", "", "0"]))
-               .Append(new TechTreeData(["Starting Check (3)", "", "", "", "", "0"]))
+               .Append(new TechTreeData((string[])["Starting Check (1)", "", "", "", "", "0"]))
+               .Append(new TechTreeData((string[])["Starting Check (2)", "", "", "", "", "0"]))
+               .Append(new TechTreeData((string[])["Starting Check (3)", "", "", "", "", "0"]))
                .Select(data => (string[])
                     [data.Tech, $"Tier {data.TierRequirement}".Replace("Tier 0", "Menu")]
                 )

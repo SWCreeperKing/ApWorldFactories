@@ -3,11 +3,15 @@ using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 
 namespace ApWorldFactories.Games.The_WereCleaner;
 
-public class WereCleaner() : BuildData(
-    DDrive, "The WereCleaner", "SW_CreeperKing.Werepelago", "the_werecleaner",
-    "1wrzYGdzRh6-fmsBK-dAzhe72PdNrhvEZKUcQJCXDaJ4", "0.1.2"
-)
+public class WereCleaner : BuildData
 {
+    public override string SteamDirectory => DDrive;
+    public override string ModFolderName => "SW_CreeperKing.Werepelago";
+    public override string GameName => "The WereCleaner";
+    public override string ApWorldName => "the_werecleaner";
+    public override string GoogleSheetId => "1wrzYGdzRh6-fmsBK-dAzhe72PdNrhvEZKUcQJCXDaJ4";
+    public override string WorldVersion => "0.1.2";
+    
     private LevelData[] LevelData = [];
     private ItemData[] ItemData = [];
     private NpcData[] NpcData = [];

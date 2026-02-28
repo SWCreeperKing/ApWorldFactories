@@ -4,11 +4,15 @@ using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 
 namespace ApWorldFactories.Games.Slime_Rancher;
 
-public class SlimeRancher() : BuildData(
-    DDrive, "Slime Rancher", "SW_CreeperKing.Slimipelago", "slime_rancher",
-    "15PdrnGmkYdocX9RU-D5U_9OgihRNN9axX71mm-jOPUQ", "0.2.3"
-)
+public class SlimeRancher : BuildData
 {
+    public override string SteamDirectory => DDrive;
+    public override string ModFolderName => "SW_CreeperKing.Slimipelago";
+    public override string GameName => "Slime Rancher";
+    public override string ApWorldName => "slime_rancher";
+    public override string GoogleSheetId => "15PdrnGmkYdocX9RU-D5U_9OgihRNN9axX71mm-jOPUQ";
+    public override string WorldVersion => "0.2.3";
+
     public override Dictionary<string, string> SheetGids { get; }
         = new() { ["GameData"] = "72469245", ["NewLogic"] = "2113673017" };
 
@@ -94,7 +98,7 @@ public class SlimeRancher() : BuildData(
                              notes = read all notes
                              7Zee = buy all 7Zee ranks
                              credits = get credits
-                             """, new Choice("notes", "7Zee", "credits")
+                             """, new Choice(0, "notes", "7Zee", "credits")
             )
            .AddOption("Start With Dry Reef", "Start with the Dry Reef unlocked", new DefaultOnToggle())
            .AddOption(

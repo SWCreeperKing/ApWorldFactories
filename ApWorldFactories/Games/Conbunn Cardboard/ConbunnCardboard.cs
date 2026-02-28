@@ -6,13 +6,14 @@ using Range = CreepyUtil.Archipelago.WorldFactory.Range;
 
 namespace ApWorldFactories.Games.Conbunn_Cardboard;
 
-public class ConbunnCardboard() : BuildData(
-    FDrive, "Conbunn Cardboard", "SW_CreeperKing.Conbunnipelago", "conbunn_cardboard",
-    "1T4Gk3olQCz_J6dkZXPU1BtXysywf3wvbPeJHVYvnYic",
-    "0.1.1"
-)
+public class ConbunnCardboard : BuildData
 {
-    public override Dictionary<string, string> SheetGids { get; }
+    public override string SteamDirectory => FDrive;
+    public override string ModFolderName => "SW_CreeperKing.Conbunnipelago";
+    public override string GameName => "Conbunn Cardboard";
+    public override string ApWorldName => "conbunn_cardboard";
+    public override string GoogleSheetId => "1T4Gk3olQCz_J6dkZXPU1BtXysywf3wvbPeJHVYvnYic";
+    public override string WorldVersion => "0.1.1";
 
     private Games.ConbunnCardboard.RegionData[] RegionData = [];
     private LocData[] LocationData = [];
@@ -23,7 +24,7 @@ public class ConbunnCardboard() : BuildData(
     private Dictionary<string, int[]> Counter = [];
     private Dictionary<string, string> LocationIdMap = [];
     private Dictionary<string, string> RegionMap = [];
-    
+
     public override void RunShenanigans()
     {
         GetSpreadsheet("main")
@@ -58,7 +59,7 @@ public class ConbunnCardboard() : BuildData(
             SkinData.OrderBy(data => int.Parse(data.Id)).Select(data => $"{data.Name},{data.LocalInt},{data.GloablInt}")
         );
     }
-    
+
     public override void Options(WorldFactory _, OptionsFactory options_fact)
     {
         options_fact

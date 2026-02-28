@@ -30,7 +30,7 @@ def add_client_to_launcher() -> None:
 add_client_to_launcher()
 
  */
-public abstract class ManualBuildData(int directory, string gameName, string modFolder, string apWorld, string sheetId, string version, string apVersion = "0.6.5", string gameFolder = "") : BuildData(directory, gameName, modFolder, apWorld, sheetId, version, apVersion, gameFolder)
+public abstract class ManualBuildData
 {
     
 }

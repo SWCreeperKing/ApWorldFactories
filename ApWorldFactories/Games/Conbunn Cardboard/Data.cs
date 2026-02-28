@@ -1,13 +1,13 @@
 ﻿namespace ApWorldFactories.Games.ConbunnCardboard;
 
-public readonly struct RegionData(string[] param)
+public readonly struct RegionData(DataArray param)
 {
-    public readonly string RawRegion = param[0];
-    public readonly string BackRegion = param[1];
-    public readonly string[] Abilities = param[2].SplitAndTrim(',');
-    public readonly string TransitionName = param[3];
-    public readonly string DoorFrame = param[4];
-    public readonly bool IsSubZone = param[5] is not "" && param[5].ToLower()[0] == 'y';
+    public readonly string RawRegion = param;
+    public readonly string BackRegion = param;
+    public readonly string[] Abilities = param;
+    public readonly string TransitionName = param;
+    public readonly string DoorFrame = param;
+    public readonly bool IsSubZone = param;
 
     public string Region => IsSubZone ? $"{RawRegion} ({BackRegion})" : RawRegion;
     public bool HasTransition => TransitionName is not "";
@@ -26,11 +26,11 @@ public readonly struct RegionData(string[] param)
     }
 }
 
-public readonly struct LocData(string[] param)
+public readonly struct LocData(DataArray param)
 {
-    public readonly string Id = param[0];
-    public readonly string Region = param[1];
-    public readonly string[] Abilities = param[2].Split(',').Select(s => s.Trim()).ToArray();
+    public readonly string Id = param;
+    public readonly string Region = param;
+    public readonly string[] Abilities = param;
     public bool IsCoin => Id.StartsWith("Coin_");
 
     public string GenRule
@@ -45,18 +45,18 @@ public readonly struct LocData(string[] param)
     }
 }
 
-public readonly struct AbilityData(string[] parm)
+public readonly struct AbilityData(DataArray parm)
 {
-    public readonly string Name = parm[0];
+    public readonly string Name = parm;
 }
 
-public record SkinData(string[] param)
+public record SkinData(DataArray param)
 {
-    public readonly string Name = param[0];
-    public readonly string Id = param[1];
-    public readonly string Region = param[2];
-    public readonly string LocalInt = param[3];
-    public readonly string GloablInt = param[4];
+    public readonly string Name = param;
+    public readonly string Id = param;
+    public readonly string Region = param;
+    public readonly string LocalInt = param;
+    public readonly string GloablInt = param;
 
     public string GenRule(Dictionary<string, string> regionMap)
     {
