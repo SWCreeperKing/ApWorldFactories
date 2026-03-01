@@ -28,8 +28,8 @@ public class WidgetInc : BuildData
     {
         GetSpreadsheet("Main")
            .ToFactory()
-           .ReadTable(new DataCreator<TechTreeData>(), 6, out TechTreeData).SkipColumn()
-           .ReadTable(new DataCreator<ResourceData>(), 2, out ResourceData);
+           .ReadTable(out TechTreeData).SkipColumn()
+           .ReadTable(out ResourceData);
 
         FrameIdMap = TechTreeData.ToDictionary(data => data.Tech, data => data.Id);
 

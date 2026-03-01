@@ -4,13 +4,13 @@ namespace ApWorldFactories.Games.Slime_Rancher;
 
 public readonly struct InteractableRowData(DataArray param)
 {
-    public readonly string Id = param;
-    public readonly string Name = param;
-    public readonly string Area = param;
-    public readonly string CrackerLevel = param;
-    public readonly bool NeedsJetpack = param;
-    public readonly int MinJetpackEnergy = int.TryParse(param.Get().Split(' ')[0], out var energy) ? energy : 100;
-    public readonly string Summary = param;
+    [Mark] public readonly string Id = param;
+    [Mark] public readonly string Name = param;
+    [Mark] public readonly string Area = param;
+    [Mark] public readonly string CrackerLevel = param;
+    [Mark] public readonly bool NeedsJetpack = param;
+    [Mark] public readonly int MinJetpackEnergy = int.TryParse(param.Get().Split(' ')[0], out var energy) ? energy : 100;
+    [Mark] public readonly string Summary = param;
     public bool IsSecretStyle => CrackerLevel == "Secret Style";
     public bool IsNote => CrackerLevel == "Note";
     public string GetText => $"{Id},{Name},{Summary}";
@@ -43,55 +43,55 @@ public readonly struct InteractableRowData(DataArray param)
 
 public readonly struct GateRowData(DataArray param)
 {
-    public readonly string Id = param;
-    public readonly string Name = param;
-    public readonly string FromArea = param;
-    public readonly string ToArea = param;
-    public readonly string SkippableWithJetpack = param;
+    [Mark] public readonly string Id = param;
+    [Mark] public readonly string Name = param;
+    [Mark] public readonly string FromArea = param;
+    [Mark] public readonly string ToArea = param;
+    [Mark] public readonly string SkippableWithJetpack = param;
     public string GetText => $"{Id},{Name}";
 }
 
 public readonly struct GordoRowData(DataArray param)
 {
-    public readonly string Id = param;
-    public readonly string Name = param;
-    public readonly string Area = param;
-    public readonly string Contents = param;
-    public readonly string TeleporterLocation = param;
-    public readonly string JetpackRequirement = param;
-    public readonly string NormalFoodRequirement = param;
-    public readonly string FavoriteFood = param;
+    [Mark] public readonly string Id = param;
+    [Mark] public readonly string Name = param;
+    [Mark] public readonly string Area = param;
+    [Mark] public readonly string Contents = param;
+    [Mark] public readonly string TeleporterLocation = param;
+    [Mark] public readonly string JetpackRequirement = param;
+    [Mark] public readonly string NormalFoodRequirement = param;
+    [Mark] public readonly string FavoriteFood = param;
     public string GetText => $"{Id},{Name},Favorite: {FavoriteFood}";
 }
 
 public readonly struct UpgradeRowData(DataArray param)
 {
-    public readonly string Name = param;
-    public readonly string Id = param;
-    public readonly string Rule = param;
+    [Mark] public readonly string Name = param;
+    [Mark] public readonly string Id = param;
+    [Mark] public readonly string Rule = param;
 }
 
 public readonly struct CorporateRowData(DataArray param)
 {
-    public readonly string Location = param.Get().Trim();
-    public readonly int Level = param[0] != "" ? int.Parse(param[0].Split(':')[0].Split('.')[1]) : -1;
-    public readonly string Price = param;
-    public readonly string Area = param;
+    [Mark] public readonly string Location = param.Get().Trim();
+    [Mark] public readonly int Level = param[0] != "" ? int.Parse(param[0].Split(':')[0].Split('.')[1]) : -1;
+    [Mark] public readonly string Price = param;
+    [Mark] public readonly string Area = param;
 
     public static implicit operator LocationData(CorporateRowData data) => new(data.Area, data.Location);
 }
 
 public readonly struct RegionData(DataArray param)
 {
-    public readonly string Region = param;
-    public readonly string[] BackConnections = param;
+    [Mark] public readonly string Region = param;
+    [Mark] public readonly string[] BackConnections = param;
 }
 
 public readonly struct ItemAmountData(DataArray param)
 {
-    public readonly string Item = param;
-    public readonly string Count = param;
-    public readonly string ProgType = param;
+    [Mark] public readonly string Item = param;
+    [Mark] public readonly string Count = param;
+    [Mark] public readonly string ProgType = param;
 }
 
 public class InteractableCreator(string[] zones) : DataCreator<InteractableRowData>

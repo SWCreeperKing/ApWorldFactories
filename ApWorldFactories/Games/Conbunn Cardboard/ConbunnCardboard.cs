@@ -29,10 +29,10 @@ public class ConbunnCardboard : BuildData
     {
         GetSpreadsheet("main")
            .ToFactory()
-           .ReadTable(new Games.ConbunnCardboard.RegionDataCreator(), 6, out RegionData)
-           .ReadTable(new DataCreator<LocData>(), 3, out LocationData).SkipColumn()
-           .ReadTable(new DataCreator<AbilityData>(), 1, out AbilityData).SkipColumn()
-           .ReadTable(new DataCreator<SkinData>(), 5, out SkinData);
+           .ReadTable(new RegionDataCreator(), out RegionData)
+           .ReadTable(out LocationData).SkipColumn()
+           .ReadTable(out AbilityData).SkipColumn()
+           .ReadTable(out SkinData);
 
         Unlocks = RegionData.Where(data => data.HasTransition).ToDictionary(
             data => data.Region, data => $"Transition Unlock: {data.Region}"

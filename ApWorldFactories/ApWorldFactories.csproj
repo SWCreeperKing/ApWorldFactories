@@ -1,19 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <OutputType>Exe</OutputType>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="CreepyUtil.Archipelago.WorldFactory" Version="0.1.12" />
-      <PackageReference Include="CreepyUtil.ClrCnsl" Version="0.1.0" />
-      <PackageReference Include="CreepyUtil.ClrCnsl.Prompts" Version="0.1.0" />
+      <PackageReference Include="CreepyUtil.Archipelago.WorldFactory" Version="0.1.15" />
+      <PackageReference Include="CreepyUtil.ClrCnsl" Version="0.2.0" />
+      <PackageReference Include="CreepyUtil.ClrCnsl.Prompts" Version="0.2.0" />
+      <PackageReference Include="CreepyUtil.Pos" Version="0.2.0" />
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Output\Atlyss\" />
       <Folder Include="Spreadsheets\" />
     </ItemGroup>
 

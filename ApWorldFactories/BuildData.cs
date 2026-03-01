@@ -1,6 +1,8 @@
-﻿using CreepyUtil;
+﻿using System.Reflection;
+using CreepyUtil;
 using CreepyUtil.Archipelago.WorldFactory;
-using RedefinedRpg;
+using CreepyUtil.ClrCnsl;
+using CreepyUtil.Pos;
 
 namespace ApWorldFactories;
 
@@ -23,7 +25,8 @@ public abstract class BuildData
 
     public virtual string GamePath => SteamDirectory is "" ? "" : $"{SteamDirectory}/{GameName}";
 
-    public virtual string ModDataPath => SteamDirectory is "" || ModFolderName is "" ? ""
+    public virtual string WriteOutputDirectory => SteamDirectory is "" || ModFolderName is ""
+        ? $"../../../Output/{GameName}"
         : $"{SteamDirectory}/{GameName}/Mods/{ModFolderName}/Data";
 
     public virtual string ApWorldPath => $"E:/coding projects/python/Deathipelago/worlds/{ApWorldName}";
@@ -67,10 +70,10 @@ public abstract class BuildData
     public CsvParser GetSpreadsheet(string sheet, int linesFromTop = 1, int linesFromLeft = 0)
         => new($"{CsvPath}/{sheet}.csv", linesFromTop, linesFromLeft);
 
-    public void WriteData(string file, IEnumerable<string> data)
+    public void WriteData(string file, IEnumerable<string> data, string ext = "txt")
     {
-        if (ModDataPath is "") return;
-        File.WriteAllLines($"{ModDataPath}/{file}.txt", data);
+        if (WriteOutputDirectory is "") return;
+        File.WriteAllLines($"{WriteOutputDirectory}/{file}.{ext}", data);
     }
 
     public void Run()
@@ -78,7 +81,8 @@ public abstract class BuildData
         var builder = new WorldFactory(GameName)
                      .SetOnCompilerError((e, s) => ClrCnsl.WriteLine($"[#red]Error: [{s}]\n{e}"))
                      .SetOutputDirectory(ApWorldPath);
-        if (ModDataPath is not "" && !Directory.Exists(ModDataPath)) Directory.CreateDirectory(ModDataPath);
+        if (WriteOutputDirectory is not "" && !Directory.Exists(WriteOutputDirectory))
+            Directory.CreateDirectory(WriteOutputDirectory);
         if (!Directory.Exists(ApWorldPath)) Directory.CreateDirectory(ApWorldPath);
 
         var options_fact = builder.GetOptionsFactory(GitLink);
@@ -101,13 +105,16 @@ public abstract class BuildData
 
         GenerateOptions(options_fact);
         GenerateHostSettings(host_fact);
-        GenerateLocations(location_fact);
-        GenerateItems(item_fact);
+        GenerateLocations(out var locationList, location_fact);
+        GenerateItems(out var itemList, item_fact);
         GenerateRules(rule_fact);
         GenerateRegions(region_fact);
         GenerateInit(init_fact);
 
         GenerateJson(builder);
+
+        ProcessLocationList(locationList);
+        ProcessItemList(itemList);
     }
 
     public abstract void RunShenanigans();
@@ -124,25 +131,36 @@ public abstract class BuildData
     public abstract void Regions(WorldFactory _, RegionFactory region_fact);
     public abstract void Init(WorldFactory _, WorldInitFactory init_fact);
 
-
     public virtual void GenerateOptions(OptionsFactory optionsFactory) => optionsFactory.GenerateOptionFile();
 
     public virtual void GenerateHostSettings(HostSettingsFactory hostSettingsFactory)
         => hostSettingsFactory.GenerateHostSettingsFile();
 
-    public virtual void GenerateLocations(LocationFactory locationFactory) => locationFactory.GenerateLocationFile();
-    public virtual void GenerateItems(ItemFactory itemFactory) => itemFactory.GenerateItemsFile();
+    public virtual void GenerateLocations(out string[] locationList, LocationFactory locationFactory)
+        => locationFactory.GenerateLocationFile(out locationList);
+
+    public virtual void GenerateItems(out string[] itemList, ItemFactory itemFactory)
+        => itemFactory.GenerateItemsFile(out itemList);
+
     public virtual void GenerateRules(RuleFactory ruleFactory) => ruleFactory.GenerateRulesFile();
     public virtual void GenerateRegions(RegionFactory regionFactory) => regionFactory.GenerateRegionFile();
     public virtual void GenerateInit(WorldInitFactory initFactory) => initFactory.GenerateInitFile();
 
     public virtual void GenerateJson(WorldFactory worldFactory)
         => worldFactory.GenerateArchipelagoJson(ArchipelagoVersion, WorldVersion, "SW_CreeperKing");
+
+    public virtual void ProcessLocationList(string[] locationList)
+    {
+    }
+
+    public virtual void ProcessItemList(string[] itemList)
+    {
+    }
 }
 
 public class DataCreator<T> : CsvTableRowCreator<T>
 {
-    public override T CreateRowData(string[] param) => (T)Activator.CreateInstance(typeof(T), [param])!;
+    public override T CreateRowData(string[] param) => (T)Activator.CreateInstance(typeof(T), [(DataArray)param])!;
 }
 
 public static class Extensions
@@ -153,11 +171,23 @@ public static class Extensions
     public static string[] SplitAndTrim(this string txt, string splitter)
         => txt.Split(splitter).Select(s => s.Trim()).ToArray();
 
-    public static bool IsTrue(this string text) => text[0] is 't' or 'T' or 'y' or 'Y';
+    public static bool IsTrue(this string text) => text is not "" && text[0] is 't' or 'T' or 'y' or 'Y';
 
     public static string OptionFormat(
         this string text, string options = "options", string prefix = "", string suffix = ""
     ) => $"{options}.{prefix.LowerReplace()}{text.LowerReplace()}{suffix.LowerReplace()}";
 
     public static string LowerReplace(this string text) => text.ToLower().Replace(' ', '_');
+
+    public static CsvFactory ReadTable<T>(this CsvFactory factory, CsvTableRowCreator<T> creator, out T[] table)
+    {
+        var fieldsCount = typeof(T).GetFields().Count(f => f.GetCustomAttributes<MarkAttribute>().Any());
+        return factory.ReadTable(creator, fieldsCount, out table);
+    }
+
+    public static CsvFactory ReadTable<T>(this CsvFactory factory, out T[] table)
+        => factory.ReadTable(new DataCreator<T>(), out table);
 }
+
+[AttributeUsage(AttributeTargets.Field)]
+public class MarkAttribute : Attribute;

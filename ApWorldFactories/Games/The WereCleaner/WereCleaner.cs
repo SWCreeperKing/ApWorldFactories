@@ -11,7 +11,7 @@ public class WereCleaner : BuildData
     public override string ApWorldName => "the_werecleaner";
     public override string GoogleSheetId => "1wrzYGdzRh6-fmsBK-dAzhe72PdNrhvEZKUcQJCXDaJ4";
     public override string WorldVersion => "0.1.2";
-    
+
     private LevelData[] LevelData = [];
     private ItemData[] ItemData = [];
     private NpcData[] NpcData = [];
@@ -27,9 +27,9 @@ public class WereCleaner : BuildData
     {
         GetSpreadsheet("main")
            .ToFactory()
-           .ReadTable(new DataCreator<LevelData>(), 3, out LevelData).SkipColumn()
-           .ReadTable(new DataCreator<ItemData>(), 3, out ItemData).SkipColumn()
-           .ReadTable(new DataCreator<NpcData>(), 3, out NpcData);
+           .ReadTable(out LevelData).SkipColumn()
+           .ReadTable(out ItemData).SkipColumn()
+           .ReadTable(out NpcData);
 
         RawNpcs = NpcData.SelectMany(data => data.Npcs).Where(s => s.Trim() is not "").ToHashSet().ToArray();
         AllNpcs = RawNpcs.Select(data => $"Kill {data}").ToArray();

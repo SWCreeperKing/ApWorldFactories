@@ -2,12 +2,12 @@
 
 public readonly struct RegionData(DataArray param)
 {
-    public readonly string RawRegion = param;
-    public readonly string BackRegion = param;
-    public readonly string[] Abilities = param;
-    public readonly string TransitionName = param;
-    public readonly string DoorFrame = param;
-    public readonly bool IsSubZone = param;
+    [Mark] public readonly string RawRegion = param;
+    [Mark] public readonly string BackRegion = param;
+    [Mark] public readonly string[] Abilities = param;
+    [Mark] public readonly string TransitionName = param;
+    [Mark] public readonly string DoorFrame = param;
+    [Mark] public readonly bool IsSubZone = param;
 
     public string Region => IsSubZone ? $"{RawRegion} ({BackRegion})" : RawRegion;
     public bool HasTransition => TransitionName is not "";
@@ -28,9 +28,9 @@ public readonly struct RegionData(DataArray param)
 
 public readonly struct LocData(DataArray param)
 {
-    public readonly string Id = param;
-    public readonly string Region = param;
-    public readonly string[] Abilities = param;
+    [Mark] public readonly string Id = param;
+    [Mark] public readonly string Region = param;
+    [Mark] public readonly string[] Abilities = param;
     public bool IsCoin => Id.StartsWith("Coin_");
 
     public string GenRule
@@ -47,16 +47,16 @@ public readonly struct LocData(DataArray param)
 
 public readonly struct AbilityData(DataArray parm)
 {
-    public readonly string Name = parm;
+    [Mark] public readonly string Name = parm;
 }
 
 public record SkinData(DataArray param)
 {
-    public readonly string Name = param;
-    public readonly string Id = param;
-    public readonly string Region = param;
-    public readonly string LocalInt = param;
-    public readonly string GloablInt = param;
+    [Mark] public readonly string Name = param;
+    [Mark] public readonly string Id = param;
+    [Mark] public readonly string Region = param;
+    [Mark] public readonly string LocalInt = param;
+    [Mark] public readonly string GloablInt = param;
 
     public string GenRule(Dictionary<string, string> regionMap)
     {

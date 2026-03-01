@@ -1,7 +1,10 @@
 ﻿using System.Reflection;
 using ApWorldFactories;
-using static RedefinedRpg.ClrCnsl;
-using static RedefinedRpg.Prompts;
+using static CreepyUtil.ClrCnsl.ClrCnsl;
+using static CreepyUtil.ClrCnsl.Prompts.Prompts;
+
+EnableAscii();
+CursorVis(false);
 
 var types = Assembly
            .GetEntryAssembly()!
@@ -43,13 +46,13 @@ while (true)
                         WriteLine("Building World");
                         world.Run();
                         WriteLine("World Built");
-                        WaitForInput();
+                        WaitForAnyInput();
                         break;
                     case 2:
                         WriteLine("Downloading Sheet(s)");
                         world.DownloadSheets();
                         WriteLine("Sheet(s) Downloaded");
-                        WaitForInput();
+                        WaitForAnyInput();
                         break;
                     case 3:
                         WriteLine("Downloading Sheet(s)");
@@ -58,7 +61,7 @@ while (true)
                         WriteLine("Building World");
                         world.Run();
                         WriteLine("World Built");
-                        WaitForInput();
+                        WaitForAnyInput();
                         break;
                 }
                 break;
@@ -67,7 +70,7 @@ while (true)
     catch (Exception e)
     {
         WriteLine($"[#red]Error: \n{e}");
-        WaitForInput();
+        WaitForAnyInput();
     }
     Clr();
 }

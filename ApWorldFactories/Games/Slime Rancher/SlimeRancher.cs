@@ -32,38 +32,38 @@ public class SlimeRancher : BuildData
     private string[] FillerItems = [];
     private InteractableRowData[] Interactables = [];
     private InteractableRowData[] DlcInteractables = [];
-    
+
     public override void RunShenanigans()
     {
         GetSpreadsheet("GameData")
            .ToFactory()
-           .ReadTable(new RegionDataCreator(), 2, out RegionData).SkipColumn()
-           .ReadTable(new DataCreator<ItemAmountData>(), 3, out ItemAmountData);
-        
+           .ReadTable(new RegionDataCreator(), out RegionData).SkipColumn()
+           .ReadTable(out ItemAmountData);
+
         Zones = RegionData.Select(data => data.Region).ToArray();
         BackwardsConnections = RegionData.ToDictionary(data => data.Region, data => data.BackConnections);
 
         NonProgressiveUsefulItemCount = ItemAmountData.Where(data => data.ProgType is "nonprog_useful")
-                                                          .ToDictionary(
-                                                               data => data.Item, data => int.Parse(data.Count)
-                                                           );
-        
+                                                      .ToDictionary(
+                                                           data => data.Item, data => int.Parse(data.Count)
+                                                       );
+
         ProgressiveUsefulItemCount = ItemAmountData.Where(data => data.ProgType is "prog_useful")
-                                                       .ToDictionary(data => data.Item, data => int.Parse(data.Count));
+                                                   .ToDictionary(data => data.Item, data => int.Parse(data.Count));
         ProgressiveProgressionItemCount = ItemAmountData.Where(data => data.ProgType is "prog_prog")
-                                                            .ToDictionary(
-                                                                 data => data.Item, data => int.Parse(data.Count)
-                                                             );
+                                                        .ToDictionary(
+                                                             data => data.Item, data => int.Parse(data.Count)
+                                                         );
         FillerItems = ItemAmountData.Where(data => data.ProgType is "filler").Select(data => data.Item).ToArray();
 
         GetSpreadsheet("main")
            .ToFactory()
-           .ReadTable(new InteractableCreator(Zones), 7, out RawInteractables).SkipColumn()
-           .ReadTable(new GateCreator(), 5, out Gates).SkipColumn()
-           .ReadTable(new GordoCreator(), 8, out Gordos).SkipColumn()
-           .ReadTable(new UpgradeCreator(), 3, out Upgrades).SkipColumn()
-           .ReadTable(new CorporateCreator(), 3, out CorporateLocations);
-        
+           .ReadTable(new InteractableCreator(Zones), out RawInteractables).SkipColumn()
+           .ReadTable(new GateCreator(), out Gates).SkipColumn()
+           .ReadTable(new GordoCreator(), out Gordos).SkipColumn()
+           .ReadTable(new UpgradeCreator(), out Upgrades).SkipColumn()
+           .ReadTable(new CorporateCreator(), out CorporateLocations);
+
         Interactables = RawInteractables.Where(line => !line.IsSecretStyle).ToArray();
         DlcInteractables = RawInteractables.Where(line => line.IsSecretStyle).ToArray();
 
@@ -73,8 +73,8 @@ public class SlimeRancher : BuildData
                          .Where(s => s != "")
         );
 
-        var noteLocations = File.Exists($"{ModDataPath}/NoteLocations.txt")
-            ? File.ReadAllLines($"{ModDataPath}/NoteLocations.txt").ToList() : [];
+        var noteLocations = File.Exists($"{WriteOutputDirectory}/NoteLocations.txt")
+            ? File.ReadAllLines($"{WriteOutputDirectory}/NoteLocations.txt").ToList() : [];
         noteLocations.AddRange(
             Interactables.Where(inter => inter.IsNote && !noteLocations.Contains(inter.Id)).Select(inter => inter.Id)
         );
@@ -88,7 +88,7 @@ public class SlimeRancher : BuildData
         WriteData("Upgrades", Upgrades.Select(line => $"{line.Name},{line.Id}"));
         WriteData("7Zee", CorporateLocations.Select(line => $"{line.Location},{line.Level}"));
     }
-    
+
     public override void Options(WorldFactory _, OptionsFactory options_fact)
     {
         options_fact

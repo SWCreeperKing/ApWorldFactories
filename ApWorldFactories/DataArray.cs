@@ -18,7 +18,7 @@ public class DataArray(string[] param)
     public float TryGetFloat(float def = 0, bool move = true) => float.TryParse(Get(move), out var f) ? f : def;
 
     public TEnum GetEnum<TEnum>(bool ignoreCase = true, bool move = true) where TEnum : struct
-        => Enum.Parse<TEnum>(Get(move), ignoreCase);
+        => Enum.Parse<TEnum>(Get(move).Replace(" ", "").Replace("&", "And"), ignoreCase);
 
     public DataArray SetIndex(int i)
     {

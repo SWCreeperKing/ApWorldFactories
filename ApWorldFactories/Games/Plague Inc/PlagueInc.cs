@@ -33,14 +33,14 @@ public class PlagueInc : BuildData
     public override void RunShenanigans()
     {
         GetSpreadsheet("main").ToFactory()
-                              .ReadTable(new DataCreator<DiseaseData>(), 3, out DiseaseData).SkipColumn()
-                              .ReadTable(new DataCreator<CountryData>(), 9, out CountryData);
+                              .ReadTable(out DiseaseData).SkipColumn()
+                              .ReadTable(out CountryData);
 
-        GetSpreadsheet("techs").ToFactory().ReadTable(new DataCreator<TechData>(), 29, out TechData);
+        GetSpreadsheet("techs").ToFactory().ReadTable(out TechData);
 
         GetSpreadsheet("data").ToFactory()
-                              .ReadTable(new DataCreator<DifficultyData>(), 3, out DifficultyData).SkipColumn()
-                              .ReadTable(new DataCreator<HexLayoutData>(), 2, out HexLayoutData);
+                              .ReadTable(out DifficultyData).SkipColumn()
+                              .ReadTable(out HexLayoutData);
 
         TabNames = TechData.Select(data => data.TechTreeType).Distinct().ToArray();
         Diseases = DiseaseData
@@ -140,9 +140,10 @@ public class PlagueInc : BuildData
         );
     }
 
-    public override void GenerateLocations(LocationFactory locationFactory)
+    public override void GenerateLocations(out string[] locationList, LocationFactory locationFactory)
     {
         locationFactory.GenerateLocationFile(
+            out locationList,
             injectCode: factory1 => factory1.AddObject(
                 new MappedVariable<string, string>(
                     "victory_scores",
@@ -163,13 +164,16 @@ public class PlagueInc : BuildData
         item_fact
            .AddItemListVariable(
                 "always_tech", Progression,
-                list: TechData.Where(data => data.RuleType is LogicRule.Always).Select(data => data.Id)
+                list: TechData.Where(data => data.RuleType is LogicRule.Always && data.TechTreeType is "Transmission")
+                              .Select(data => data.Id)
                               .ToArray()
             )
            .AddItemListVariable(
                 "tech_items", Progression,
-                list: TechData.Where(data => data.RuleType is not LogicRule.Always).Select(data => data.Id)
-                              .ToArray()
+                list: TechData
+                     .Where(data => !(data.RuleType is LogicRule.Always && data.TechTreeType is "Transmission"))
+                     .Select(data => data.Id)
+                     .ToArray()
             )
            .AddItemListVariable(
                 "difficulties", Progression, list: DifficultyData.Select(data => data.Difficulty).ToArray()
@@ -249,13 +253,14 @@ public class PlagueInc : BuildData
     public override void Init(WorldFactory _, WorldInitFactory init_fact)
     {
         init_fact
-           .UseInitFunction(method => method.AddCode(new Variable("self.starting_diff", "\"\"")))
-           .UseInitFunction(method => method.AddCode(new Variable("self.starting_disease", "\"\"")))
-           .UseInitFunction(method => method.AddCode(new Variable("self.victories_needed", "0")))
+           .UseInitFunction(method => method.AddCode(new Variable("self.starting_diff", "\"\""))
+                                            .AddCode(new Variable("self.starting_disease", "\"\""))
+                                            .AddCode(new Variable("self.victories_needed", "0"))
+            )
            .AddUseUniversalTrackerPassthrough(
                 yamlNeeded: false,
                 utBlock: factory1
-                    => factory1.AddCode(CreateUtPassthrough("\"victories_needed\"", "self.victories_needed"))
+                    => factory1.AddCode(CreateUtPassthrough("\"victories_needed\"", "victories_needed"))
             )
            .UseGenerateEarly(method
                 => method.AddCode(CreatePushPrecollected("self.starting_diff", stringify: false)).AddCode(

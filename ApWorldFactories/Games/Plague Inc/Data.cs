@@ -2,81 +2,83 @@
 
 public readonly struct DiseaseData(DataArray param)
 {
-    public readonly string Name = param;
-    public readonly string Id = param;
-    public readonly bool Include = param;
+    [Mark] public readonly string Name = param;
+    [Mark] public readonly string Id = param;
+    [Mark] public readonly bool Include = param;
 }
 
 public readonly struct CountryData(DataArray param)
 {
-    public readonly string Name = param;
-    public readonly bool IsWealthy = param;
-    public readonly bool IsPoor = param;
-    public readonly bool IsUrban = param;
-    public readonly bool IsRural = param;
-    public readonly bool IsHot = param;
-    public readonly bool IsCold = param;
-    public readonly bool IsHumid = param;
-    public readonly bool IsArid = param;
+    [Mark] public readonly string Name = param;
+    [Mark] public readonly bool IsWealthy = param;
+    [Mark] public readonly bool IsPoor = param;
+    [Mark] public readonly bool IsUrban = param;
+    [Mark] public readonly bool IsRural = param;
+    [Mark] public readonly bool IsHot = param;
+    [Mark] public readonly bool IsCold = param;
+    [Mark] public readonly bool IsHumid = param;
+    [Mark] public readonly bool IsArid = param;
 }
 
 public readonly struct DifficultyData(DataArray param)
 {
-    public readonly string DiseaseType = param;
-    public readonly string Difficulty = param;
-    public readonly int VictoryScore = param;
+    [Mark] public readonly string DiseaseType = param;
+    [Mark] public readonly string Difficulty = param;
+    [Mark] public readonly int VictoryScore = param;
 }
 
 public readonly struct HexLayoutData(DataArray param)
 {
-    public readonly int Hex = param;
-    public readonly int[] AdjacentHexes = param.Get().Trim('[', ']').Split(',').Select(s => int.Parse(s.Trim())).ToArray();
+    [Mark] public readonly int Hex = param;
+
+    [Mark] public readonly int[] AdjacentHexes
+        = param.Get().Trim('[', ']').Split(',').Select(s => int.Parse(s.Trim())).ToArray();
 }
 
 public readonly struct TechData(DataArray param)
 {
-    public readonly string Id = param.Get() is "" ? param[2] : param[0];
-    public readonly int Hex = param;
+    [Mark] public readonly string Id = param.Get() is "" ? param[2] : param[0];
+    [Mark] public readonly int Hex = param;
 
-    public readonly LogicRule RuleType = param.SetIndex(3).Get().ToLower() switch
+    [Mark] public readonly LogicRule RuleType = param.SetIndex(3).Get().ToLower() switch
     {
         "always" => LogicRule.Always,
         "adjacent" => LogicRule.Adjacent,
         "specific" => LogicRule.Specific,
     };
 
-    public readonly string SpecificRuleTechs = string.Join(
+    [Mark] public readonly string SpecificRuleTechs = string.Join(
         " and ", param.GetSplitAndTrim().Select(s => $"has[\"{s}\"]")
     );
 
-    public readonly string[] Diseases = param;
-    public readonly string TechTreeType = param;
-    public readonly float Infectivity = param;
-    public readonly float Severity = param;
-    public readonly float Lethality = param;
-    
-    public readonly float MutationChance = param;
-    public readonly float TraitCost = param;
-    public readonly float LandTransmission = param;
-    public readonly float SeaTransmission = param;
-    public readonly float AirTransmission = param;
-    public readonly float CorpseTransmission = param;
-    
-    public readonly float WealthyEffectiveness = param;
-    public readonly float PoorEffectiveness = param;
-    public readonly float UrbanEffectiveness = param;
-    public readonly float RuralEffectiveness = param;
-    public readonly float HotEffectiveness = param;
-    public readonly float ColdEffectiveness = param;
-    public readonly float HumidEffectiveness = param;
-    public readonly float AridEffectiveness = param;
-    public readonly float CureRequirement = param;
-    public readonly float CureResearchEfficiency = param;
-    
-    public readonly bool CanDevolve = param;
-    
-    public readonly float DevolveCostModifier = param;
-    public readonly string ImportantNotes = param;
+    [Mark] public readonly string[] Diseases = param;
+    [Mark] public readonly string TechTreeType = param;
+    [Mark] public readonly float Infectivity = param;
+    [Mark] public readonly float Severity = param;
+    [Mark] public readonly float Lethality = param;
+
+    [Mark] public readonly float MutationChance = param;
+    [Mark] public readonly float TraitCost = param;
+    [Mark] public readonly float LandTransmission = param;
+    [Mark] public readonly float SeaTransmission = param;
+    [Mark] public readonly float AirTransmission = param;
+    [Mark] public readonly float CorpseTransmission = param;
+
+    [Mark] public readonly float WealthyEffectiveness = param;
+    [Mark] public readonly float PoorEffectiveness = param;
+    [Mark] public readonly float UrbanEffectiveness = param;
+    [Mark] public readonly float RuralEffectiveness = param;
+    [Mark] public readonly float HotEffectiveness = param;
+    [Mark] public readonly float ColdEffectiveness = param;
+    [Mark] public readonly float HumidEffectiveness = param;
+    [Mark] public readonly float AridEffectiveness = param;
+    [Mark] public readonly float CureRequirement = param;
+    [Mark] public readonly float CureResearchEfficiency = param;
+
+    [Mark] public readonly bool CanDevolve = param;
+
+    [Mark] public readonly float DevolveCostModifier = param;
+    [Mark] public readonly string ImportantNotes = param;
 
     public float GetScore => Infectivity + Lethality;
 
@@ -101,13 +103,13 @@ public readonly struct TechData(DataArray param)
         public readonly int Hex = hex;
         public readonly string Tab = tab;
 
-        public string GenRule(Dictionary<string, Dictionary<string, HexMap>> maps) => RuleType switch
-        {
-            LogicRule.Specific => $"has[\"{Disease}\"] and {SpecificRule}",
-            LogicRule.Always => $"has[\"{Disease}\"]",
-            LogicRule.Adjacent =>
-                $"has[\"{Disease}\"] and has[\"{Id}\"] and ( {string.Join(" or ", maps[disease][tab][Hex].Adjacents.Where(node => node.Name is not "").Select(node => $"has[\"{node.Name}\"]"))} )",
-        };
+        public string GenRule(Dictionary<string, Dictionary<string, HexMap>> maps)
+            => $"has[\"{Disease}\"] and has[\"{Id}\"]{RuleType switch
+            {
+                LogicRule.Specific => $" and {SpecificRule}",
+                LogicRule.Adjacent => $" and ( {string.Join(" or ", maps[disease][tab][Hex].Adjacents.Where(node => node.Name is not "").Select(node => $"has[\"{node.Name}\"]"))} )",
+                _ => ""
+            }}";
     }
 }
 
