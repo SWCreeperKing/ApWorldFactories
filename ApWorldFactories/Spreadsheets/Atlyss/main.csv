@@ -1,0 +1,64 @@
+Area,Level Min,Level Max,Comes From,Enemies,Quest Requirement,,Enemy,Level,Area,,Quest,Quest Requirement,Level Requirement,Area Accepted At,Area Performed At,Extra Notes,,Profression,Node Type,Profession Level Minimum,Maximum In Logic,Area,,Merchant,Area
+Sanctum,0,0,N/A,N/A,N/A,,Lesser Wisp,1,"Outer Sanctum, Arcwood Pass, Sanctum Catacombs lvl 1",,A Warm Welcome,N/A,1,Sanctum,Sanctum,,,Fishing,,1,3,Sanctum,,Sally's Nook,Sanctum
+Outer Sanctum,1,4,Sanctum,"Lesser Wisp, Slime, Biggun, Nograd",N/A,,Slime,1,"Outer Sanctum, Arcwood Pass, Effold Terrace",,Communing Catacombs,A Warm Welcome,1,Sanctum,Sanctum Catacombs lvl 1,,,Fishing,,3,6,Arcwood Pass,,Skrit's Sikrit Market,Sanctum
+Arcwood Pass,1,4,Outer Sanctum,"Slime, Lesser Wisp, Greater Wisp",N/A,,Tar Spawn,3,"Effold Terrace, Tuul Valley",,Diva Must Die,Communing Catacombs,4,Sanctum,Effold Terrace,,,Fishing,,6,10,Cresent Road,,Frankie's Goods,Arcwood Pass
+Effold Terrace,1,10,Outer Sanctum,"Slime, Slimek, Slime Diva, Tar Spawn, Greater Wisp",Diva Must Die,,Greater Wisp,4,"Arcwood Pass, Effold Terrace, Sanctum Catacombs lvl 1, Sanctum Catacombs lvl 2",,The Keep Within,Diva Must Die,8,Sanctum,Cresent Keep,,,Mining,Hefty Stone,1,2,"Arcwood Pass, Effold Terrace",,Craig's Bazzar,Wall of the Stars
+Tuul Valley,8,14,Outer Sanctum,"Mekboar, Wizboar",N/A,,Mini Geist,4,"Sanctum Catacombs lvl 1, Cresent Road, Cresent Keep",,Disciple of Magic,N/A,10,Sanctum,N/A,Class Quest,,Mining,Dense Stone,2,3,"Arcwood Pass, Effold Terrace, Outer Sanctum, Cresent Keep, Tuul Enclave",,Dye Merchant,Sanctum
+Sanctum Catacombs lvl 1,1,6,Arcwood Pass,"Tar Spawn, Mini Geist, Geist, Lesser Wisp, Greater Wisp",Communing Catacombs,,Slimek,5,Effold Terrace,,Tethering Grove,The Keep Within,15,Sanctum,Cresent Grove lvl 1,,,Mining,Amberite Stone,3,6,"Tuul Valley, Cresent Keep",,Tesh's Wares,Sanctum Catacombs lvl 2
+Sanctum Catacombs lvl 2,6,12,Sanctum Catacombs lvl 1,"Deathgel, Geist, Greater Wisp, Toxin, Lord Zuulneruda",N/A,,Deathgel,6,Sanctum Catacombs lvl 2,,The Glyphik Booklet,Finding Ammagon,24,Sanctum,"Luvora Garden, Tuul Enclave, Cresent Grove lvl 2",Requires All,,Mining,Sapphite Stone,6,10,Tuul Enclave,,Nesh's Wares,Sanctum Catacombs lvl 3
+Sanctum Catacombs lvl 3,12,18,Sanctum Catacombs lvl 2,"Hellsludge, Poltergeist, Toxin, Miasma, Lord Kaluuz",N/A,,Geist,7,"Sanctum Catacombs lvl 1, Sanctum Catacombs lvl 2, Sanctum Catacombs lvl 3",,Cleaning Terrace,Diva Must Die,5,Sanctum,Effold Terrace,,,,,,,,,Rikko's Treasures,Cresent Grove lvl 1
+Cresent Road,8,14,Arcwood Pass,"Mini Golem, Golem, Blightwood, Dolkin, Mouth, Klamkull",The Keep Within,,Mekboar,8,"Tuul Valley, Cresent Keep",,Ancient Beings,The Keep Within,8,Sanctum,Cresent Road,,,,,,,,,Cotoo's Treasures,Cresent Grove lvl 2
+Tuul Enclave,13,16,Tuul Valley,"Gahool, Wizboar, Vultia, Vout",N/A,,Mini Golem,8,"Cresent Road, Cresent Keep",,Wicked Wizboars,N/A,10,Sanctum,"Tuul Valley, Cresent Keep",Needs Any,,,,,,,,Ruka's Furnace,Sanctum
+Luvora Garden,13,18,Cresent Road,"Klamkull, Mandragora",N/A,,Toxin,8,"Sanctum Catacombs lvl 2, Sanctum Catacombs lvl 3",,Spiraling In The Grove,Tethering Grove,15,Sanctum,Cresent Grove lvl 1,,,,,,,,,Torta's Fishing Shack,Sanctum
+Cresent Keep,8,13,Cresent Road,"Mini Golem, Golem, Wizboar, Blightwood, Mouth, Mekboar",N/A,,Blightwood,9,"Cresent Road, Cresent Keep",,Hell In The Grove,Tethering Grove,20,Sanctum,Cresent Grove lvl 2,,,,,,,,,Mad Statue's Gift,Sanctum
+Bularr Fortress,17,26,Tuul Enclave,"Rageboar, Kruole, Boomboar, Warboar, Galius",Finding Ammagon,,Mouth,10,"Cresent Road, Cresent Keep",,Nulversa Magica,N/A,20,Sanctum,Cresent Grove lvl 2,,,,,,,,,,
+Cresent Grove lvl 1,15,20,Cresent Keep,"Deadwood, Blue Minichroom, Red Minichroom, Alshar, Stezza, Maw, Carbuncle, Monolith, Colossus",The Keep Within,,Golem,12,"Cresent Road, Cresent Keep",,Strength and Honor,N/A,10,Sanctum,N/A,Class Quest,,,,,,,,,
+Cresent Grove lvl 2,20,25,Cresent Grove lvl 1,"Aqua Muchroom, Gale Muchroom, Nagrath, Barknaught, Sirius, Firebreath, Demigolem, Death Knight, Valdur",N/A,,Hellsludge,13,Sanctum Catacombs lvl 3,,Finding Ammagon,N/A,14,Sanctum,Bularr Fortress,,,,,,,,,,
+Gate of the Moon,0,0,Cresent Keep,N/A,Cresent Grove Sigil,,Klamkull,13,"Arcwood Pass, Cresent Road",,The Colossus,The Keep Within,15,Sanctum,Cresent Grove lvl 1,,,,,,,,,,
+Wall of the Stars,0,0,Gate of the Moon,N/A,N/A,,Wizboar,13,"Tuul Valley, Tuul Enclave, Cresent Keep",,Night Spirits,N/A,1,Sanctum,"Arcwood Pass, Effold Terrace",Needs Any,,,,,,,,,
+Redwoud,30,30,Gate of the Moon,Sinroot,N/A,,Miasma,14,Sanctum Catacombs lvl 3,,Ridding Slimes,N/A,1,Sanctum,Outer Sanctum,,,,,,,,,,
+Trial of the Stars,0,0,Wall of the Stars,N/A,Up and Over It,,Vout,14,Tuul Enclave,,Huntin' Hogs,N/A,7,Sanctum,"Tuul Valley, Cresent Keep",Needs Any,,,,,,,,,
+,,,,,,,Deadwood,15,Cresent Grove lvl 1,,Purging the Grove,The Colossus,15,Sanctum,Cresent Grove lvl 1,,,,,,,,,,
+,,,,,,,Stezza,16,Cresent Grove lvl 1,,Cleansing the Grove,The Colossus,20,Sanctum,Cresent Grove lvl 2,,,,,,,,,,
+,,,,,,,Alshar,16,Cresent Grove lvl 1,,Nulversa Viscera,N/A,20,Sanctum,Cresent Grove lvl 2,,,,,,,,,,
+,,,,,,,Blue Minichroom,16,Cresent Grove lvl 1,,Call of Fury,N/A,4,Sanctum,N/A,,,,,,,,,,
+,,,,,,,Red Minichroom,16,Cresent Grove lvl 1,,Mastery of Strength,N/A,10,Sanctum,N/A,,,,,,,,,,
+,,,,,,,Rageboar,17,Bularr Fortress,,Beckoning Foes,N/A,12,Sanctum,N/A,,,,,,,,,,
+,,,,,,,Maw,17,Cresent Grove lvl 1,,Ghostly Goodes,A Warm Welcome,1,Sanctum,"Sanctum Catacombs lvl 1, Sanctum Catacombs lvl 2, Sanctum Catacombs lvl 3",Needs Any,,,,,,,,,
+,,,,,,,Mandragora,18,Luvora Garden,,Makin' a Mekspear,N/A,7,Sanctum,"Tuul Valley, Cresent Keep, Effold Terrace","area[""Effold Valley""] + Needs Any",,,,,,,,,
+,,,,,,,Gale Muchroom,20,Cresent Grove lvl 2,,Makin' a Wizwand,N/A,10,Sanctum,"Tuul Valley, Cresent Road",Requires All,,,,,,,,,
+,,,,,,,Aqua Muchroom,20,Cresent Grove lvl 2,,Devious Pact,N/A,10,Sanctum,N/A,Class Quest,,,,,,,,,
+,,,,,,,Firebreath,24,Cresent Grove lvl 2,,Makin' a Vile Blade,N/A,10,Sanctum,"Cresent Road, Effold Terrace, Sanctum Catacombs lvl 2",Requires All,,,,,,,,,
+,,,,,,,Sinroot,30,Redwoud,,Makin' a Golem Chestpiece,The Keep Within,12,Sanctum,Cresent Road,,,,,,,,,,
+,,,,,,,Poltergeist,16,Sanctum Catacombs lvl 3,,Makin' a Ragespear,Makin' a Mekspear,15,Sanctum,"Effold Terrace, Sanctum Catacombs lvl 3, Bularr Fortress",Requires All,,,,,,,,,
+,,,,,,,Vultia,16,Tuul Enclave,,Makin' a Monolith Chestpiece,Makin' a Golem Chestpiece,16,Sanctum,Cresent Grove lvl 1,,,,,,,,,,
+,,,,,,,Boomboar,18,Bularr Fortress,,Makin' a Firebreath Blade,N/A,20,Sanctum,Cresent Grove lvl 2,,,,,,,,,,
+,,,,,,,Carbuncle,18,Cresent Grove lvl 1,,Makin' a Follycannon,N/A,24,Sanctum,Bularr Fortress,,,,,,,,,,
+,,,,,,,Monolith,19,Cresent Grove lvl 1,,Summore' Spectral Powder!,Ghostly Goods,1,Sanctum,"Sanctum Catacombs lvl 1, Sanctum Catacombs lvl 2, Sanctum Catacombs lvl 3",Needs Any,,,,,,,,,
+,,,,,,,Nagrath,20,Cresent Grove lvl 2,,Makin' More Mekspears,Makin' a Mekspear,7,Sanctum,"Tuul Valley, Cresent Keep, Effold Terrace","area[""Effold Valley""] + Needs Any",,,,,,,,,
+,,,,,,,Barknaught,22,Cresent Grove lvl 2,,Makin' More Wizwands,Makin' a Wizwand,10,Sanctum,"Tuul Valley, Cresent Road",Requires All,,,,,,,,,
+,,,,,,,Warboar,23,Bularr Fortress,,Makin' More Vile Blades,Makin' a Vile Blade,10,Sanctum,"Cresent Road, Effold Terrace, Sanctum Catacombs lvl 2",Requires All,,,,,,,,,
+,,,,,,,Sirius,23,Cresent Grove lvl 2,,Summore' Golem Chestpieces,Makin' a Golem Chestpiece,12,Sanctum,Cresent Road,,,,,,,,,,
+,,,,,,,Death Knight,24,Cresent Grove lvl 2,,Makin' More Ragespears,Makin' a Ragespear,15,Sanctum,"Effold Terrace, Sanctum Catacombs lvl 3, Bularr Fortress",Requires All,,,,,,,,,
+,,,,,,,Demigolem,24,Cresent Grove lvl 2,,Summore' Monolith Chestpieces,Makin' a Monolith Chestpiece,16,Sanctum,Cresent Grove lvl 1,,,,,,,,,,
+,,,,,,,Biggun,4,Arcwood Pass,,"Nulversa, Greenversa!",N/A,20,Sanctum,Cresent Grove lvl 2,,,,,,,,,,
+,,,,,,,Nograd,4,Arcwood Pass,,Summore' Firebreath Blades,Makin' a Firebreath Blade,20,Sanctum,Cresent Grove lvl 2,,,,,,,,,,
+,,,,,,,Rokkamek,14,Tuul Valley,,Makin' More Follycannons,Makin' a Follycannon,24,Sanctum,Bularr Fortress,,,,,,,,,,
+,,,,,,,Dolkin,14,Arcwood Pass,,Focusin' in,N/A,4,Sanctum,N/A,,,,,,,,,,
+,,,,,,,Gahool,15,Tuul Valley,,Mastery of Dexterity,N/A,10,Sanctum,N/A,,,,,,,,,,
+,,,,,,,Kruole,21,Tuul Enclave,,Whatta' Rush!,N/A,12,Sanctum,N/A,,,,,,,,,,
+,,,,,,,Slime Diva,10,Effold Terrace,,The Voice of Zuulneruda,Killing Tomb,6,Arcwood Pass,Sanctum Catacombs lvl 2,,,,,,,,,,
+,,,,,,,Lord Zuulneruda,12,Sanctum Catacombs lvl 2,,Killing Tomb,N/A,1,Arcwood Pass,Sanctum Catacombs lvl 1,,,,,,,,,,
+,,,,,,,Lord Kaluuz,18,Sanctum Catacombs lvl 3,,Purging the Undead,Killing Tomb,6,Arcwood Pass,Sanctum Catacombs lvl 2,,,,,,,,,,
+,,,,,,,Colossus,20,Cresent Grove lvl 1,,Rattlecage Rage,Killing Tomb,6,Arcwood Pass,Sanctum Catacombs lvl 2,,,,,,,,,,
+,,,,,,,Valdur,25,Cresent Grove lvl 2,,Consumed Madness,The Voice of Zuulneruda,12,Arcwood Pass,Sanctum Catacombs lvl 3,,,,,,,,,,
+,,,,,,,Galius,26,Bularr Fortress,,Eradicating the Undead,The Voice of Zuulneruda,12,Arcwood Pass,Sanctum Catacombs lvl 3,,,,,,,,,,
+,,,,,,,,,,,Reviling the Rageboars,N/A,14,Bularr Fortress,Bularr Fortress,,,,,,,,,,
+,,,,,,,,,,,Gatling Galius,N/A,22,Bularr Fortress,Bularr Fortress,,,,,,,,,,
+,,,,,,,,,,,Reviling more Rageboars,Reviling the Rageboars,14,Bularr Fortress,Bularr Fortress,,,,,,,,,,
+,,,,,,,,,,,Facing Foes,N/A,18,Bularr Fortress,Bularr Fortress,,,,,,,,,,
+,,,,,,,,,,,The Gall of Galius,Gatling Galius,22,Bularr Fortress,Bularr Fortress,,,,,,,,,,
+,,,,,,,,,,,Up and Over It,N/A,15,Wall of the Stars,Trial of the Stars,,,,,,,,,,
+,,,,,,,,,,,Dense Ingots,N/A,1,Sanctum,Arcwood Pass,,,,,,,,,,
+,,,,,,,,,,,Amberite Ingots,Dense Ingots,6,Sanctum,"Cresent Keep, Tuul Valley",Needs Any,,,,,,,,,
+,,,,,,,,,,,Sapphite Ingots,Amberite Ingots,8,Sanctum,Tuul Enclave,,,,,,,,,,

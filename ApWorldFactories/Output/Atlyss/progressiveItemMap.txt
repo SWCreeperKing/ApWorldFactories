@@ -1,0 +1,67 @@
+Progressive Any Weapon|1|Wooden Shield,Crypt Buckler,Slimek Shield
+Progressive Any Weapon|2|Demicrypt Buckler,Dense Shield,Iron Shield,Iris Shield,Omen Shield
+Progressive Any Weapon|3|Amberite Shield,Slabton Shield,Mithril Shield,Nethercrypt Shield
+Progressive Any Weapon|4|Rustweary Shield,Rustwise Shield,Sapphite Shield,Rigor Buckler
+Progressive Any Weapon|5|Daemon Shield,Irisun Shield
+Progressive Any Helmet|1|Agility Ears,Leather Cap,Newfold Halo,Acolyte Hood,Cryptsinge Halo,Initial Spectacles
+Progressive Any Helmet|2|Demicrypt Halo,Desne Helm,Diva Crown,Iron Halo,Necromancer Hood,Geistlord Crown,Journeyman Spectacles
+Progressive Any Helmet|3|Amberite Helm,Focus Circlet,Magistrate Circlet,Rage Circlet,Focusi Glasses,Nethercrypt Halo
+Progressive Any Helmet|4|Carbuncle Hat,Geistlord Eye,Glyphgrift Halo,Jestercast Memory,Knightguard Halo,Mithril Halo,Sapphite Mindhat
+Progressive Any Helmet|5|Dire Helm,Druidic Halo,Guardel Helm,Leathen Cap,Boarus Helm,Deathknight Helm,Emerock Halo
+Progressive Any Helmet|6|Boarus Torment
+Progressive Any Cape|1|Initiate Cloak,Slimewoven Cloak
+Progressive Any Cape|2|Nokket Cloak,Rugged Cloak,Regazuul Cape
+Progressive Any Cape|3|Flux Cloak,Cozy Cloak,Nethercrypt Cloak
+Progressive Any Cape|4|Cobblerage Cloak,Deathward Cape,Forlorn Cloak,Meshlink Cape,Sagecaller Cape,Roudon Cape,Blueversa Cape,Greenversa Cape,Nulversa Cape,Redversa Cape
+Progressive Any Cape|5|Windgolem Cloak,Mekwar Drape
+Progressive Any Chest Piece|1|Aero Top,Leather Top,Necro Marrow,Nutso Top,Sagecloth Top,Ghostly Tabard,Poacher Cloth,Ragged Shirt,Slimecrust Chest,Worn Robe,Cryptsinge Chest,Journeyman Vest,Slimek Chest
+Progressive Any Chest Piece|2|Dense Chestpiece,Trodd Tunic,Iron Chestplate,Tattered Battlerobe,Apprentice Robe,Duelist Garb,Skywrill Tabard,Sleeper's Robe,Warrior Chest
+Progressive Any Chest Piece|3|Amberite Breastplate,Golem Chestpiece,Nethercrypt Tabard,Chainmail Guard,Ornamented Battlerobe
+Progressive Any Chest Piece|4|Carbuncle Robe,Chainscale Chest,Gemveil Raiment,Mercenary Vestment,Mithril Chestpiece,Monolith Chestpiece,Sapphite Guard,Druidic Robe,Emerock Chestpiece,Fortified Chestpiece,Roudon Chestpiece
+Progressive Any Chest Piece|5|Earthbind Tabard,Gemveil Breastplate,Roudon Robe,Ruggrok Vest
+Progressive Any Leggings|1|Aero Pants,Leather Britches,Necro Caustics,Nutso Pants,Sagecloth Shorts,Ghostly Legwraps,Journeyman Shorts,Slimecrust Leggings,Journeyman Leggings,Slimek Leggings
+Progressive Any Leggings|2|Dense Leggings,Sash Leggings,Warrior Leggings
+Progressive Any Leggings|3|Amberite Leggings,Chainmail Leggings,Darkcloth Pants
+Progressive Any Leggings|4|Mercenary Leggings,Stridebond Pants,Sapphite Leggings,Jadewall Trousers,Temrak Britches
+Progressive Any Leggings|5|Eschek Greaves,Gemveil Leggings
+Progressive Any Trinket|1|Old Ring,Ring of Ambition,Test Ring,Nograd's Amulet,The One Ring
+Progressive Any Trinket|2|Ambersquire Ring,Emeraldfocus Ring,Sapphireweave Ring,Edon's Pendant
+Progressive Any Trinket|3|Geistlord Ring,Students Ring,Pearlpond Ring,Slitherwraith Ring
+Progressive Any Trinket|4|Geistlord Band,Jadetrout Ring,Orbos Ring,Valor Ring,Earthwoken Ring,Noji Talisman
+Progressive Any Trinket|5|Valdur Effigy
+Progressive Any Trinket|6|Glyphik Booklet,Tessellated Drive
+Progressive Fighter Weapon|1|Wood Sword,Crypt Blade,Femur Club,Ironbark Sword,Slimecrust Blade,Gilded Sword,Splitbark Club,Wood Hammer,Slimek Axehammer,Mini Geist Scythe,Wood Spear
+Progressive Fighter Weapon|2|Demicrypt Blade,Dense Mace,Iron Sword,Dawn Mace,Rude Blade,Vile Blade,Dense Hammer,Iron Axehammer,Crypt Pounder,Geist Scythe,Stone Greatblade,Dense Spear,Iron Spear,Cryptsinge Halberd,Mekspear
+Progressive Fighter Weapon|3|Amberite Sword,Nethercrypt Blade,Amberite Warstar,Dolkin's Axe,Poltergeist Scythe,Amberite Halberd,Necroroyal Halberd,Sinner Bardiche
+Progressive Fighter Weapon|4|Coldgeist Blade,Mithril Sword,Serrated Blade,Nulrok Mace,Quake Pummeler,Coldgeist Punisher,Deadwood Axe,Mithril Greatsword,Mithril Halberd,Ragespear,Serrated Spear,Sapphite Spear,Nulrok Spear
+Progressive Fighter Weapon|5|Firebreath Blade,Valdur Blade,Deathknight Runeblade,Cyrotribe Spear,Flametribe Spear
+Progressive Fighter Weapon|6|Fier Blade,Ryzer Greataxe
+Progressive Fighter Chest Piece|1|Lord Breastplate
+Progressive Fighter Chest Piece|2|King Breastplate,Berserker Chestpiece
+Progressive Fighter Chest Piece|3|Excecutioner Vestment
+Progressive Fighter Leggings|1|Lord Greaves
+Progressive Fighter Leggings|2|King Greaves,Berserker Leggings
+Progressive Fighter Leggings|3|Executioner Leggings
+Progressive Mystic Weapon|1|Wood Scepter,Marrow Bauble,Splitbark Scepter,Wooden Bell
+Progressive Mystic Weapon|2|Demicrypt Bauble,Iron Scepter,Cryo Cane,Slime Diva Baton,Cryptcall Bell,Iron Bell
+Progressive Mystic Weapon|3|Pyre Cane,Wizwand,Nethercrypt Bauble
+Progressive Mystic Weapon|4|Aquapetal Staff,Flamepetal Staff,Mithril Scepter,Sapphite Scepter,Coldgeist Frostcaller,Mithril Bell,Colossus Tone,Sapphite Bell
+Progressive Mystic Weapon|5|Voalstark Wand
+Progressive Mystic Helmet|1|Wizlad Hood
+Progressive Mystic Chest Piece|1|Witchlock Robe
+Progressive Mystic Chest Piece|2|Witchwizard Robe,Magilord Overalls
+Progressive Mystic Chest Piece|3|Wizlad Robe
+Progressive Mystic Leggings|1|Witchlock Loincloth
+Progressive Mystic Leggings|2|Witchwizard Garterbelt,Magilord Boots
+Progressive Bandit Weapon|1|Wood Daggers,Sliemcrust Katars,Cryptsinge Katars,Slimek Shivs,Wooden Bow,Crypt Bow
+Progressive Bandit Weapon|2|Deathgel Shivs,Dense Katars,Iron Katars,Runic Katars,Demicrypt Bow,Iron Bow,Mekspike Bow,Menace Bow
+Progressive Bandit Weapon|3|Geistlord Claws,Hellsludge Shivs,Mithril Katars,Petrified Bow,Mithril Bow,Necroroyal Bow,Amberite Boomstick
+Progressive Bandit Weapon|4|Frostbite Claws,Serrated Knuckles,Rummok Bladerings,Sapphite Katars,Golemfist Katars,Colgeist Bow,Serrated Longbow,Magitek Burstgun
+Progressive Bandit Weapon|5|Torrentius Longbow
+Progressive Bandit Weapon|6|Follycannon
+Progressive Bandit Chest Piece|1|Reapsow Garb
+Progressive Bandit Chest Piece|2|Reaper Gi,Fuguefall Duster
+Progressive Bandit Chest Piece|3|Fender Garb
+Progressive Bandit Leggings|1|Reapsow Pants
+Progressive Bandit Leggings|2|Reaper Leggings,Fuguefall Pants
+Progressive Bandit Leggings|3|Fender Leggings
