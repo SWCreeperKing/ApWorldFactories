@@ -160,12 +160,12 @@ public class SlimeRancher : BuildData
     {
         item_fact
            .AddItemListVariable(
-                "region_unlocks", Progression, true, Zones.Skip(2).Select(zone => $"Region Unlock: {zone}").ToArray()
+                "region_unlocks", Progression, true, true, Zones.Skip(2).Select(zone => $"Region Unlock: {zone}").ToArray()
             )
            .AddItemCountVariable("non_progressive_useful_items", NonProgressiveUsefulItemCount, Useful)
            .AddItemCountVariable("progressive_useful_item_count", ProgressiveUsefulItemCount, Useful)
            .AddItemCountVariable("progressive_progression_item_count", ProgressiveProgressionItemCount, Progression)
-           .AddItemListVariable("filler_items", Filler, true, FillerItems)
+           .AddItemListVariable("filler_items", Filler, true, true, FillerItems)
            .AddItem("Trap Slime", Trap)
            .AddCreateItems(func => func.AddCode(
                                             """

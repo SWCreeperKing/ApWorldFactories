@@ -1,6 +1,5 @@
-﻿using System.Text;
-using CreepyUtil.Archipelago.WorldFactory;
-using CreepyUtil.ClrCnsl;
+﻿using CreepyUtil.Archipelago.WorldFactory;
+using static CreepyUtil.Archipelago.WorldFactory.ItemFactory.ItemClassification;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 
 namespace ApWorldFactories.Games.Atlyss;
@@ -53,38 +52,6 @@ public class Atlyss : BuildData
 
             itemTierList.Add(item);
         }
-
-        // var color1 = new Color(87, 153, 209);
-        // var color2 = new Color(49, 119, 180);
-        // var color3 = new Color(33, 79, 120);
-        // var color4 = new Color(6, 40, 60);
-        // var folder = new Folder("Equipment") { Color = color1 };
-        // foreach (var (itemType, itemClassDict) in EquipmentItems)
-        // {
-        //     var itemListFolder = new Folder($"{itemType} ({itemClassDict.Count})");
-        //     itemListFolder.Color = color2;
-        //     foreach (var (classType, itemList) in itemClassDict )
-        //     {
-        //         var tierListFolder = new Folder($"{classType} ({itemList.Count})");
-        //         tierListFolder.Color = color3;
-        //         foreach (var (tier, tierList) in itemList.OrderBy(item => item.Key))
-        //         {
-        //             var tierFolder = new Folder($"Tier {tier} ({tierList.Count})");
-        //             tierFolder.Color = color4;
-        //             foreach (var item in tierList.OrderBy(item => item.LevelReq).ThenBy(item => item.Name))
-        //             {
-        //                 tierFolder.Items.Add($"{item.Name} (lv. {item.LevelReq})");
-        //             }
-        //             
-        //             tierListFolder.SubFolders.Add(tierFolder);
-        //         }
-        //         
-        //         itemListFolder.SubFolders.Add(tierListFolder);
-        //     }
-        //
-        //     folder.SubFolders.Add(itemListFolder);
-        // }
-        // folder.Display();
     }
 
     public override void Options(WorldFactory _, OptionsFactory options_fact)
@@ -142,22 +109,31 @@ public class Atlyss : BuildData
                     .AddOption(
                          "Secondary Class", "What you chose to be as your secondary class",
                          new Choice(0, "random", "fighter", "bandit", "mystic", "none")
-//                      )
-//                     .AddOption(
-//                          "Class Filler",
-//                          """
-//                          Filter equipment in the item pool to only include gear for specific classes.
-//                          Weapons are filtered by scaling stat (STR=Fighter, MIND=Mystic, DEX=Bandit).
-//                          Class-locked armor is filtered by its required class.
-//                          Shields are included for Fighter and Mystic (one-handed weapon users).
-//                          Universal armor (helms, capes, trinkets, cosmetics) is always included.
-//
-//                          false (default): No filtering, all equipment is in the pool.
-//                          Single class: Only that class's weapons and armor are included.
-//                          true: Chosen classes' equipment is included.
-//                          """,
-//                          new Toggle()
-                     ).AddCheckOptions();
+                     )
+                    .InjectCodeIntoOptionsClass(classFact => classFact.AddMethod(
+                             new MethodFactory("is_class").AddParams("self", "class_name")
+                                                          .AddCode(
+                                                               """
+                                                               class_name_lower = class_name.lower()
+                                                               if class_name_lower == 'any': return True
+                                                               return class_name_lower == self.main_class or class_name_lower == self.secondary_class
+                                                               """
+                                                           )
+                         )
+                     )
+                    .AddCheckOptions(method =>
+                         method.AddCode("""
+                                        classes = ['fighter', 'mystic', 'bandit']
+                                        if options.main_class == 'random':
+                                            options.main_class = MainClass(random.choice(classes))
+                                        
+                                        if options.secondary_class == 'random':
+                                            options.secondary_class = SecondaryClass(random.choice([clas for clas in classes if clas != options.main_class]))
+                                            
+                                        if options.main_class == options.secondary_class:
+                                            raise_yaml_error(world.player, "You cannot have the same class selected for main_class and secondary_class")
+                                        """)
+                     );
     }
 
     public override void Locations(WorldFactory _, LocationFactory location_fact)
@@ -182,92 +158,53 @@ public class Atlyss : BuildData
     {
         List<string> progressiveItemMap = [];
         List<string> progressiveItemMapMd = [];
-        GetMaxProgressive("Any", ClassType.Any);
+        GetMaxProgressive("Any", ClassType.Any, progressiveItemMapMd, item_fact, progressiveItemMap);
         progressiveItemMapMd.Add("\n---\n");
-        GetMaxProgressive("Fighter", ClassType.Fighter);
+        GetMaxProgressive("Fighter", ClassType.Fighter, progressiveItemMapMd, item_fact, progressiveItemMap);
         progressiveItemMapMd.Add("\n---\n");
-        GetMaxProgressive("Mystic", ClassType.Mystic);
+        GetMaxProgressive("Mystic", ClassType.Mystic, progressiveItemMapMd, item_fact, progressiveItemMap);
         progressiveItemMapMd.Add("\n---\n");
-        GetMaxProgressive("Bandit", ClassType.Bandit);
+        GetMaxProgressive("Bandit", ClassType.Bandit, progressiveItemMapMd, item_fact, progressiveItemMap);
 
-        WriteData("progressiveItemMap", progressiveItemMap);
+        ItemData.Where(data => data.ItemPoolCount > 0)
+                .GroupBy(data => data.Classification)
+                .ToDictionary(
+                     g => g.Key, g => g.ToDictionary(data => data.Name, data => data.ItemPoolCount)
+                 ).Aggregate(
+                     item_fact,
+                     (factory, pair) => factory.AddItemCountVariable(
+                         $"item_counts_{pair.Key}".ToLower(), pair.Value, pair.Key
+                     )
+                 );
+
+        // item_fact.AddCreateItems(method => method.AddCode(new IfFactory("").AddCode(CreateItemsFromList())));
+        item_fact.AddCreateItems(factory => {});
+
+        WriteData("progressiveItemMap", progressiveItemMap.Select(s => s.Trim('"')));
         WriteData("progressiveItemMap", progressiveItemMapMd, "md");
-        return;
-
-        void GetMaxProgressive(string className, ClassType classType)
-        {
-            progressiveItemMapMd.AddRange(
-                "<details>", $"<summary><h1 style=\"display: inline\">{className} Progressive Items</h1></summary>"
-            );
-            item_fact
-               .AddItemCountVariable(
-                    $"{className.ToLower()}_progressives",
-                    EquipmentItems
-                       .Select(kv1 =>
-                            {
-                                if (!kv1.Value.TryGetValue(classType, out var dict)) return ("", 0);
-                                var tiers = dict.Keys.ToArray();
-
-                                if (tiers.Length == 0) return ("", 0);
-
-                                progressiveItemMapMd.AddRange(
-                                    "<details>",
-                                    $"<summary><h2 style=\"display: inline\">Progressive {kv1.Key.Str()}</h2></summary>"
-                                );
-                                progressiveItemMap.AddRange(
-                                    dict
-                                       .Select(kv => kv.Value)
-                                       .Select((itemList, progressiveTier)
-                                                =>
-                                            {
-                                                progressiveItemMapMd.AddRange(
-                                                    "<details>",
-                                                    $"<summary><h3 style=\"display: inline\">Tier #{progressiveTier + 1}</h3></summary>\n"
-                                                );
-                                                progressiveItemMapMd.AddRange(
-                                                    itemList.Select(item => $"  - {item.Name} (lv. {item.LevelReq})")
-                                                );
-
-                                                progressiveItemMapMd.Add("</details>");
-                                                return
-                                                    $"Progressive {className} {kv1.Key.Str()}|{progressiveTier + 1}|{string.Join(",", itemList.Select(item => item.Name))}";
-                                            }
-                                        )
-                                );
-
-                                progressiveItemMapMd.Add("</details>");
-
-                                return ($"Progressive {className} {kv1.Key.Str()}", tiers.Length);
-                            }
-                        )
-                       .Where(t => t.Item2 > 0)
-                       .ToDictionary(t => t.Item1, t => t.Item2),
-                    ItemFactory.ItemClassification.ProgressionSkipBalancing
-                );
-
-            progressiveItemMapMd.Add("</details>");
-        }
     }
 
     public override void Rules(WorldFactory _, RuleFactory rule_fact)
     {
         rule_fact
+           .AddLogicFunction("area", "has_area", StateHas("area", stringify: false), "area")
+           .AddLogicFunction("quest", "has_quest", StateHas("f\"Complete: {quest}\"", stringify: false), "quest")
            .AddLogicFunction(
                 "grind", "can_grind",
                 """
-                if level > 26: return can_grind(26)
+                if level > 26: return can_grind(state, player, 26, area_data)
                 if level <= 1: return True
 
                 for area in area_data:
-                    if not has_area(area[0]): continue
-                    if area[1] <= level <= area[2]: return can_grind(area[1] - 1)
+                    if not has_area(state, player, area[0]): continue
+                    if area[1] <= level <= area[2]: return can_grind(state, player, area[1] - 1, area_data)
                     
                 return False
                 """, "level", "area_data"
             )
-           .AddLogicFunction("area", "has_area", StateHas("area", stringify: false), "area")
-           .AddLogicFunction("quest", "has_quest", StateHas("f\"Complete: {quest}\"", stringify: false), "quest")
-           .AddCompoundLogicFunction("level", "can_grind_level", "grind[level, location_grind_data]", "level");
+           .AddCompoundLogicFunction("level", "can_grind_level", "grind[level, location_grind_data]", "level")
+           .AddCompoundLogicFunction("fish", "can_grind_fish", "grind[level, fishing_grind_data]", "level")
+           .AddCompoundLogicFunction("mine", "can_grind_mine", "grind[level, mining_grind_data]", "level");
     }
 
     public override void Regions(WorldFactory worldFactory, RegionFactory region_fact)
@@ -296,15 +233,90 @@ public class Atlyss : BuildData
     {
         locationFactory.GenerateLocationFile(
             out locationList,
-            injectCode: factory1 => factory1.AddObject(
-                new ListedVariable<string>(
-                    "location_grind_data",
-                    LocationLevelData.Select(data => $"[\"{data.Area}\", {data.LevelMin}, {data.LevelMax}]")
-                )
-            )
+            injectCode: factory1 =>
+                factory1
+                   .AddObject(GetGrindData("location", LocationLevelData.Cast<IFarmingNode>().ToArray()))
+                   .AddObject(
+                        GetGrindData(
+                            "fishing",
+                            ProfessionsData.Where(data => data.Profession is "Fishing")
+                                           .SelectMany(data => data.GetNodes()).ToArray()
+                        )
+                    ).AddObject(
+                        GetGrindData(
+                            "mining",
+                            ProfessionsData.Where(data => data.Profession is "Mining")
+                                           .SelectMany(data => data.GetNodes()).ToArray()
+                        )
+                    )
         );
+
+        return;
+
+        ListedVariable<string> GetGrindData(string name, IFarmingNode[] nodes)
+        {
+            return new ListedVariable<string>($"{name}_grind_data", nodes.Select(node => node.FarmAreaMinMaxLevel()));
+        }
     }
 
     public override void ProcessLocationList(string[] locationList) => WriteData("locations", locationList);
     public override void ProcessItemList(string[] itemList) => WriteData("items", itemList);
+
+    private void GetMaxProgressive(
+        string className, ClassType classType, List<string> progressiveItemMapMd, ItemFactory item_fact,
+        List<string> progressiveItemMap
+    )
+    {
+        progressiveItemMapMd.AddRange(
+            "<details>", $"<summary><h1 style=\"display: inline\">{className} Progressive Items</h1></summary>"
+        );
+        item_fact
+           .AddItemCountVariable(
+                $"{className.ToLower()}_progressives",
+                EquipmentItems
+                   .Select(kv1 =>
+                        {
+                            if (!kv1.Value.TryGetValue(classType, out var dict)) return ("", 0);
+                            var tiers = dict.Keys.ToArray();
+
+                            if (tiers.Length == 0) return ("", 0);
+
+                            progressiveItemMapMd.AddRange(
+                                "<details>",
+                                $"<summary><h2 style=\"display: inline\">Progressive {kv1.Key.Str()}</h2></summary>"
+                            );
+                            progressiveItemMap.AddRange(
+                                dict
+                                   .Select(kv => kv.Value)
+                                   .Select((itemList, progressiveTier)
+                                            =>
+                                        {
+                                            progressiveItemMapMd.AddRange(
+                                                "<details>",
+                                                $"<summary><h3 style=\"display: inline\">Tier #{progressiveTier + 1}</h3></summary>\n"
+                                            );
+                                            progressiveItemMapMd.AddRange(
+                                                itemList.Select(item => $"  - {item.Name} (lv. {item.LevelReq})")
+                                            );
+
+                                            progressiveItemMapMd.Add("</details>");
+                                            return
+                                                $"Progressive {className} {kv1.Key.Str()}|{progressiveTier + 1}|{string.Join(",", itemList.Select(item => item.Name))}";
+                                        }
+                                    )
+                            );
+
+                            progressiveItemMapMd.Add("</details>");
+
+                            return ($"Progressive {className} {kv1.Key.Str()}", tiers.Length);
+                        }
+                    )
+                   .Where(t => t.Item2 > 0)
+                   .ToDictionary(t => t.Item1, t => t.Item2),
+                ProgressionSkipBalancing
+            );
+
+        progressiveItemMapMd.Add("</details>");
+    }
+
 }

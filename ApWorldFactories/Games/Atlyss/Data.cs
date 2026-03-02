@@ -3,7 +3,7 @@ using static CreepyUtil.Archipelago.WorldFactory.ItemFactory;
 
 namespace ApWorldFactories.Games.Atlyss;
 
-public readonly struct LocationLevelData(DataArray param)
+public readonly struct LocationLevelData(DataArray param) : IFarmingNode
 {
     [Mark] public readonly string Area = param;
     [Mark] public readonly int LevelMin = param;
@@ -19,12 +19,15 @@ public readonly struct LocationLevelData(DataArray param)
         if (QuestRequirement is not "") rules.Add($"quest[\"{QuestRequirement}\"]");
         return string.Join(" and ", rules);
     }
+
+    public string FarmAreaMinMaxLevel() => $"[\"{Area}\", {LevelMin}, {LevelMax}]";
 }
 
 public readonly struct EnemyListData(DataArray param)
 {
     [Mark] public readonly string Name = param;
     [Mark] public readonly int Level = param;
+    [Mark] public readonly int Tier= param;
     [Mark] public readonly string[] Areas = param.GetSplitAndTrim();
 }
 
@@ -34,6 +37,7 @@ public readonly struct QuestData(DataArray param)
     [Mark] public readonly string PrevQuest = param.Get() is "N/A" ? "" : param[1];
     [Mark] public readonly int Level = param;
     [Mark] public readonly string AreaAccepted = param;
+    [Mark] public readonly string ClassRequired = param;
 
     [Mark] public readonly string[] AreasRequired
         = param.GetSplitAndTrim().Where(s => s is not "N/A").ToArray();
@@ -63,6 +67,20 @@ public readonly struct ProfessionsData(DataArray param)
     [Mark] public readonly int MinLevel = param;
     [Mark] public readonly int MaxInLogic = param;
     [Mark] public readonly string[] Areas = param;
+
+    public IFarmingNode[] GetNodes()
+    {
+        var self = this;
+        return Areas.Select(area => new SingleNodes(area, self.MinLevel, self.MaxInLogic)).Cast<IFarmingNode>().ToArray();
+    }
+
+    public readonly struct SingleNodes(string area, int minLevel, int maxLevel) : IFarmingNode
+    {
+        public readonly string Area = area;
+        public readonly int MinLevel = minLevel;
+        public readonly int MaxLevel = maxLevel;
+        public string FarmAreaMinMaxLevel() => $"[\"{Area}\", {MinLevel}, {MaxLevel}]";
+    } 
 }
 
 public readonly struct MerchantData(DataArray param)
@@ -84,6 +102,11 @@ public readonly struct ItemData(DataArray param)
     [Mark] public readonly string Notes = param;
     [Mark] public readonly int FillerWeight = param;
     [Mark] public readonly int ItemPoolCount = param;
+}
+
+public interface IFarmingNode
+{
+    public string FarmAreaMinMaxLevel();
 }
 
 public enum ClassType
