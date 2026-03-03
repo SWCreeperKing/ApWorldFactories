@@ -1,39 +1,471 @@
-"Progressive Any Weapon"
-"Progressive Any Helmet"
-"Progressive Any Cape"
-"Progressive Any Chest Piece"
-"Progressive Any Leggings"
-"Progressive Any Trinket"
-"Progressive Fighter Weapon"
-"Progressive Fighter Chest Piece"
-"Progressive Fighter Leggings"
-"Progressive Mystic Weapon"
-"Progressive Mystic Helmet"
-"Progressive Mystic Chest Piece"
-"Progressive Mystic Leggings"
-"Progressive Bandit Weapon"
-"Progressive Bandit Chest Piece"
-"Progressive Bandit Leggings"
-"Tome of Naivety"
-"Tome of Unlearning"
-"Agility Stone"
-"Angela's Tear"
-"Flux Stone"
-"Might Stone"
-"Soul Pearl"
-"Black Dye"
-"Blue Dye"
-"Brown Dye"
-"Cyan Dye"
-"Green Dye"
-"Grey Dye"
-"Lime Dye"
-"Orange Dye"
-"Pink Dye"
-"Purple Dye"
-"Red Dye"
-"White Dye"
-"Yellow Dye"
-"Epic Carrot"
-"Experience Bond"
-"Illusion Stone"
+Progressive Any Weapon
+Progressive Any Helmet
+Progressive Any Cape
+Progressive Any Chest Piece
+Progressive Any Leggings
+Progressive Any Trinket
+Progressive Fighter Weapon
+Progressive Fighter Chest Piece
+Progressive Fighter Leggings
+Progressive Mystic Weapon
+Progressive Mystic Helmet
+Progressive Mystic Chest Piece
+Progressive Mystic Leggings
+Progressive Bandit Weapon
+Progressive Bandit Chest Piece
+Progressive Bandit Leggings
+Agility Potion Pack
+Agility Vial Pack
+Bolster Potion Pack
+Bolster Vial Pack
+Bunbag Pack
+Bunjar Pack
+Bunpot Pack
+Carrot Cake Pack
+Magiclove Pack
+Magiflower Pack
+Magileaf Pack
+Minchroom Juice Pack
+Regen Potion Pack
+Regen Vial Pack
+Spectral Powder Pack
+Stamstar
+Wisdom Potion Pack
+Wisdom Vial Pack
+Black Dye
+Blue Dye
+Brown Dye
+Cyan Dye
+Green Dye
+Grey Dye
+Lime Dye
+Orange Dye
+Pink Dye
+Purple Dye
+Red Dye
+White Dye
+Yellow Dye
+Festive Hat
+Fishin Hat
+Orefinder Hat
+Spooky Hat
+Top Hat
+Wizard Hat
+Bunhost Garb
+Festive Coat
+Fisher Overalls
+Noble Shirt
+Orefinder Vest
+Ritualist Garb
+Silken Top
+Spooky Garment
+Test Chestpiece
+Vampiric Coat
+Bunhost Leggings
+Festive Trouser
+Noble Pants
+Orefinder
+Ritualist Straps
+Silken Loincloth
+Test Pants
+Vampiric Leggings
+Aqua Muchroom Cap
+Barknaught Face
+Blightwood Log
+Blightwood Stick
+Blue Minchroom Cap
+Boomboar Gear
+Boomboar Head
+Boomboar Pouch
+Burnrose
+Carbuncle Foot
+Cursed Note
+Deadwood Log
+Deathgel Core
+Deathknight Gauntlet
+Demigolem Core
+Demigolem Gem
+Diva Necklace
+Firebreath Gland
+Fluxfern
+Gale Muchroom Cap
+Geist Collar
+Ghostdust
+Golem Core
+Golem Gem
+Green Lipstick
+Hellsludge Core
+Maw Eye
+Mekboar Head
+Mekboar Spear
+Monolith Core
+Monolith Gem
+Mouth Bittertooth
+Mouth Eye
+Rageboar Head
+Rageboar Spear
+Red Minchroom Cap
+Rock
+Slime Core
+Slime Diva Ears
+Slime Ears
+Slimek Core
+Slimek Ears
+Slimek Eye
+Vinethorn
+Vout Antennae
+Vout Wing
+Warboar Axe
+Warboar Head
+Wizboar Head
+Wizboar Scepter
+Amberite Ingot
+Amberite Ore
+Big Wan
+Bittering Katfish
+Bonefish
+Coal
+Copper Cluster
+Dense Ingot
+Dense Ore
+Iron Cluster
+Mithril Cluster
+Old Boot
+Sapphite Ingot
+Sapphite Ore
+Smiling Wrellfish
+Squangfish
+Starlight Gem
+Sugeel
+Sugshrimp
+Windtail Fish
+Coldgeist Badge
+Earthcore Badge
+Geistlord Badge
+Illusion Stone
+Windcore Badge
+Crowns (Small)
+Crowns (Medium)
+Crowns (Large)
+Crowns (Huge)
+Tome of Experience
+Tome of Greater Experience
+Tome of Lesser Experience
+Tome of Naivety
+Tome of Unlearning
+Wood Sword
+Crypt Blade
+Femur Club
+Ironbark Sword
+Slimecrust Blade
+Gilded Sword
+Splitbark Club
+Demicrypt Blade
+Dense Mace
+Iron Sword
+Dawn Mace
+Rude Blade
+Vile Blade
+Amberite Sword
+Nethercrypt Blade
+Coldgeist Blade
+Mithril Sword
+Serrated Blade
+Nulrok Mace
+Firebreath Blade
+Valdur Blade
+Fier Blade
+Wood Hammer
+Slimek Axehammer
+Dense Hammer
+Iron Axehammer
+Crypt Pounder
+Quake Pummeler
+Mini Geist Scythe
+Geist Scythe
+Stone Greatblade
+Amberite Warstar
+Dolkin's Axe
+Poltergeist Scythe
+Coldgeist Punisher
+Deadwood Axe
+Mithril Greatsword
+Deathknight Runeblade
+Ryzer Greataxe
+Wood Spear
+Dense Spear
+Iron Spear
+Cryptsinge Halberd
+Mekspear
+Amberite Halberd
+Necroroyal Halberd
+Sinner Bardiche
+Mithril Halberd
+Ragespear
+Serrated Spear
+Sapphite Spear
+Nulrok Spear
+Cyrotribe Spear
+Flametribe Spear
+Wood Scepter
+Marrow Bauble
+Splitbark Scepter
+Demicrypt Bauble
+Iron Scepter
+Cryo Cane
+Slime Diva Baton
+Pyre Cane
+Wizwand
+Nethercrypt Bauble
+Aquapetal Staff
+Flamepetal Staff
+Mithril Scepter
+Sapphite Scepter
+Voalstark Wand
+Wooden Bell
+Cryptcall Bell
+Iron Bell
+Coldgeist Frostcaller
+Mithril Bell
+Colossus Tone
+Sapphite Bell
+Wood Daggers
+Sliemcrust Katars
+Cryptsinge Katars
+Slimek Shivs
+Deathgel Shivs
+Dense Katars
+Iron Katars
+Runic Katars
+Geistlord Claws
+Hellsludge Shivs
+Mithril Katars
+Frostbite Claws
+Serrated Knuckles
+Rummok Bladerings
+Sapphite Katars
+Golemfist Katars
+Wooden Bow
+Crypt Bow
+Demicrypt Bow
+Iron Bow
+Mekspike Bow
+Menace Bow
+Petrified Bow
+Mithril Bow
+Necroroyal Bow
+Colgeist Bow
+Serrated Longbow
+Torrentius Longbow
+Amberite Boomstick
+Magitek Burstgun
+Follycannon
+Agility Ears
+Leather Cap
+Newfold Halo
+Acolyte Hood
+Cryptsinge Halo
+Initial Spectacles
+Demicrypt Halo
+Desne Helm
+Diva Crown
+Iron Halo
+Necromancer Hood
+Geistlord Crown
+Journeyman Spectacles
+Amberite Helm
+Focus Circlet
+Magistrate Circlet
+Rage Circlet
+Focusi Glasses
+Nethercrypt Halo
+Carbuncle Hat
+Geistlord Eye
+Glyphgrift Halo
+Jestercast Memory
+Knightguard Halo
+Mithril Halo
+Sapphite Mindhat
+Dire Helm
+Druidic Halo
+Guardel Helm
+Leathen Cap
+Boarus Helm
+Deathknight Helm
+Emerock Halo
+Wizlad Hood
+Boarus Torment
+Initiate Cloak
+Slimewoven Cloak
+Nokket Cloak
+Rugged Cloak
+Regazuul Cape
+Flux Cloak
+Cozy Cloak
+Nethercrypt Cloak
+Cobblerage Cloak
+Deathward Cape
+Forlorn Cloak
+Meshlink Cape
+Sagecaller Cape
+Roudon Cape
+Blueversa Cape
+Greenversa Cape
+Nulversa Cape
+Redversa Cape
+Windgolem Cloak
+Mekwar Drape
+Aero Top
+Leather Top
+Necro Marrow
+Nutso Top
+Sagecloth Top
+Ghostly Tabard
+Poacher Cloth
+Ragged Shirt
+Slimecrust Chest
+Worn Robe
+Cryptsinge Chest
+Journeyman Vest
+Slimek Chest
+Dense Chestpiece
+Trodd Tunic
+Iron Chestplate
+Tattered Battlerobe
+Apprentice Robe
+Duelist Garb
+Skywrill Tabard
+Sleeper's Robe
+Warrior Chest
+Amberite Breastplate
+Golem Chestpiece
+Lord Breastplate
+Nethercrypt Tabard
+Reapsow Garb
+Witchlock Robe
+Chainmail Guard
+Ornamented Battlerobe
+Carbuncle Robe
+Chainscale Chest
+Gemveil Raiment
+King Breastplate
+Mercenary Vestment
+Mithril Chestpiece
+Reaper Gi
+Witchwizard Robe
+Berserker Chestpiece
+Fuguefall Duster
+Magilord Overalls
+Monolith Chestpiece
+Sapphite Guard
+Druidic Robe
+Emerock Chestpiece
+Fortified Chestpiece
+Roudon Chestpiece
+Earthbind Tabard
+Gemveil Breastplate
+Roudon Robe
+Ruggrok Vest
+Excecutioner Vestment
+Fender Garb
+Wizlad Robe
+Aero Pants
+Leather Britches
+Necro Caustics
+Nutso Pants
+Sagecloth Shorts
+Ghostly Legwraps
+Journeyman Shorts
+Slimecrust Leggings
+Journeyman Leggings
+Slimek Leggings
+Dense Leggings
+Sash Leggings
+Warrior Leggings
+Amberite Leggings
+Chainmail Leggings
+Darkcloth Pants
+Lord Greaves
+Reapsow Pants
+Witchlock Loincloth
+King Greaves
+Mercenary Leggings
+Reaper Leggings
+Stridebond Pants
+Witchwizard Garterbelt
+Berserker Leggings
+Fuguefall Pants
+Magilord Boots
+Sapphite Leggings
+Jadewall Trousers
+Temrak Britches
+Eschek Greaves
+Gemveil Leggings
+Executioner Leggings
+Fender Leggings
+Wooden Shield
+Crypt Buckler
+Slimek Shield
+Demicrypt Buckler
+Dense Shield
+Iron Shield
+Iris Shield
+Omen Shield
+Amberite Shield
+Slabton Shield
+Mithril Shield
+Nethercrypt Shield
+Rustweary Shield
+Rustwise Shield
+Sapphite Shield
+Rigor Buckler
+Daemon Shield
+Irisun Shield
+Old Ring
+Ring of Ambition
+Test Ring
+Nograd's Amulet
+The One Ring
+Ambersquire Ring
+Emeraldfocus Ring
+Sapphireweave Ring
+Edon's Pendant
+Geistlord Ring
+Students Ring
+Pearlpond Ring
+Slitherwraith Ring
+Geistlord Band
+Jadetrout Ring
+Orbos Ring
+Valor Ring
+Earthwoken Ring
+Noji Talisman
+Valdur Effigy
+Glyphik Booklet
+Tessellated Drive
+Agility Stone
+Angela's Tear
+Flux Stone
+Might Stone
+Soul Pearl
+Epic Carrot
+Experience Bond
+Illusion Stone
+Sanctum Portal
+Outer Sanctum Portal
+Arcwood Pass Portal
+Effold Terrace Portal
+Tuul Valley Portal
+Catacombs Portal
+Cresent Road Portal
+Tuul Enclave Portal
+Luvora Garden Portal
+Cresent Keep Portal
+Bularr Fortress Portal
+Cresent Grove lvl 1 Portal
+Cresent Grove lvl 2 Portal
+Gate of the Moon Portal
+Wall of the Stars Portal
+Redwoud Portal
+Trial of the Stars Portal
+"Progressive Portal"

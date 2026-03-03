@@ -291,7 +291,7 @@ public class SlimeRancher : BuildData
                      elif self.options.goal_type == 1:
                          {CreateGoalCondition(StateHas("7Zee Bought", "len(corporate_locations)", returnValue: false))}
                      elif self.options.goal_type == 2:
-                         {CreateGoalCondition(StateHasAll("region_unlocks[3:]", false, false))}
+                         {CreateGoalCondition(StateHasAll("region_unlocks[3:]", false))}
                      """
                 )
             )

@@ -8,14 +8,15 @@ public readonly struct LocationLevelData(DataArray param) : IFarmingNode
     [Mark] public readonly string Area = param;
     [Mark] public readonly int LevelMin = param;
     [Mark] public readonly int LevelMax = param;
-    [Mark] public readonly string Connection = param.Get() is "N/A" ? "Menu" : param[3];
+    [Mark] public readonly string Connection = param.Get() is "N/A" or "" ? "Menu" : param[3];
     [Mark] public readonly string[] Enemies = param.GetSplitAndTrim().Where(s => s is not "N/A").ToArray();
     [Mark] public readonly string QuestRequirement = param.Get() is "N/A" ? "" : param[5];
+    [Mark] public readonly int ProgressivePortalCount = param;
 
     public string GenRule()
     {
         List<string> rules = [];
-        if (Connection is not "Menu") rules.Add($"area[\"{Connection}\"]");
+        if (Connection is not "Menu") rules.Add($"area[\"{Area}\"]");
         if (QuestRequirement is not "") rules.Add($"quest[\"{QuestRequirement}\"]");
         return string.Join(" and ", rules);
     }
@@ -27,8 +28,9 @@ public readonly struct EnemyListData(DataArray param)
 {
     [Mark] public readonly string Name = param;
     [Mark] public readonly int Level = param;
-    [Mark] public readonly int Tier= param;
+    [Mark] public readonly int Tier = param;
     [Mark] public readonly string[] Areas = param.GetSplitAndTrim();
+    [Mark] public readonly bool IsBoss = param;
 }
 
 public readonly struct QuestData(DataArray param)
@@ -40,7 +42,7 @@ public readonly struct QuestData(DataArray param)
     [Mark] public readonly string ClassRequired = param;
 
     [Mark] public readonly string[] AreasRequired
-        = param.GetSplitAndTrim().Where(s => s is not "N/A").ToArray();
+        = param.GetSplitAndTrim().Where(s => s is not ("N/A" or "")).ToArray();
 
     [Mark] public readonly string LogicNotes = param;
 
@@ -48,15 +50,17 @@ public readonly struct QuestData(DataArray param)
 
     public string GenRule()
     {
-        var areas = AreasRequired.Append(AreaAccepted).Distinct().Select(s => $"area[\"{s}\"").ToArray();
-        StringBuilder sb = new();
+        var areas = $"[{string.Join(", ", AreasRequired.Distinct().Select(s => $"\"{s}\""))}]";
+        List<string> rules = [$"level[{Level}]"];
 
-        if (PrevQuest is not "") sb.Append($"quest[\"{PrevQuest}\"] and ");
+        if (PrevQuest is not "") rules.Add($"quest[\"{PrevQuest}\"]");
 
-        return $"{(PrevQuest is not "" ? $"quest[\"{PrevQuest}\"] and " : "")}{LogicNotes.Replace("+", "and")
-           .Replace("Needs Any", $"( {string.Join(" or ", areas)} )")
-           .Replace("Requires All", $"( {string.Join(" and ", areas)} )")
-        }";
+        if (LogicNotes.Trim() is not "")
+            rules.Add(
+                $"{LogicNotes.Replace("+", "and").Replace("Needs Any", $"any_area[{areas}]").Replace("Requires All", $"all_areas[{areas}]").Trim()}"
+            );
+
+        return string.Join(" and ", rules);
     }
 }
 
@@ -71,7 +75,8 @@ public readonly struct ProfessionsData(DataArray param)
     public IFarmingNode[] GetNodes()
     {
         var self = this;
-        return Areas.Select(area => new SingleNodes(area, self.MinLevel, self.MaxInLogic)).Cast<IFarmingNode>().ToArray();
+        return Areas.Select(area => new SingleNodes(area, self.MinLevel, self.MaxInLogic)).Cast<IFarmingNode>()
+                    .ToArray();
     }
 
     public readonly struct SingleNodes(string area, int minLevel, int maxLevel) : IFarmingNode
@@ -80,7 +85,7 @@ public readonly struct ProfessionsData(DataArray param)
         public readonly int MinLevel = minLevel;
         public readonly int MaxLevel = maxLevel;
         public string FarmAreaMinMaxLevel() => $"[\"{Area}\", {MinLevel}, {MaxLevel}]";
-    } 
+    }
 }
 
 public readonly struct MerchantData(DataArray param)
@@ -161,7 +166,7 @@ public static class Helper
             ItemType.MonsterDrop => "Monster Drop",
             ItemType.OresAndIngots => "Ores & Ingots",
             ItemType.TradeCurrency => "Trade Currency",
-            ItemType.QuestItem => "Quest Item", 
+            ItemType.QuestItem => "Quest Item",
             _ => $"{type}",
         };
 }

@@ -21,7 +21,7 @@ Nulversa Viscera
 Call of Fury
 Mastery of Strength
 Beckoning Foes
-Ghostly Goodes
+Ghostly Goods
 Makin' a Mekspear
 Makin' a Wizwand
 Makin' a Vile Blade
@@ -134,3 +134,23 @@ Buy Item #2 from Mad Statue's Gift
 Buy Item #3 from Mad Statue's Gift
 Buy Item #4 from Mad Statue's Gift
 Buy Item #5 from Mad Statue's Gift
+Fishing Lv. 1
+Fishing Lv. 2
+Fishing Lv. 3
+Fishing Lv. 4
+Fishing Lv. 5
+Fishing Lv. 6
+Fishing Lv. 7
+Fishing Lv. 8
+Fishing Lv. 9
+Fishing Lv. 10
+Mining Lv. 1
+Mining Lv. 2
+Mining Lv. 3
+Mining Lv. 4
+Mining Lv. 5
+Mining Lv. 6
+Mining Lv. 7
+Mining Lv. 8
+Mining Lv. 9
+Mining Lv. 10

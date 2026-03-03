@@ -85,17 +85,6 @@ public class Atlyss : BuildData
                          """, new Toggle()
                      )
                     .AddOption(
-                         "Equipment Progression",
-                         """
-                         How equipment is distributed.
-                         Gated (default): Equipment has level requirements. Higher tier gear only
-                         appears at locations accessible at appropriate levels. Tier 1 gear (lv 1-5)
-                         can appear anywhere; Tier 5 gear (lv 21-26) only at endgame locations.
-                         Random: Equipment can appear anywhere with no level gating. You may find
-                         endgame weapons in early spheres — chaotic but fun.
-                         """, new Choice(0, "gated", "random")
-                     )
-                    .AddOption(
                          "Shop Sanity",
                          """
                          Whether shop items can contain Archipelago items from other worlds.
@@ -104,35 +93,33 @@ public class Atlyss : BuildData
                      )
                     .AddOption(
                          "Main Class", "What you chose to be as your main class",
-                         new Choice(0, "random", "fighter", "bandit", "mystic")
+                         new Choice(0, "fighter", "bandit", "mystic")
                      )
                     .AddOption(
                          "Secondary Class", "What you chose to be as your secondary class",
-                         new Choice(0, "random", "fighter", "bandit", "mystic", "none")
+                         new Choice(0, "fighter", "bandit", "mystic", "none")
                      )
                     .InjectCodeIntoOptionsClass(classFact => classFact.AddMethod(
-                             new MethodFactory("is_class").AddParams("self", "class_name")
-                                                          .AddCode(
-                                                               """
-                                                               class_name_lower = class_name.lower()
-                                                               if class_name_lower == 'any': return True
-                                                               return class_name_lower == self.main_class or class_name_lower == self.secondary_class
-                                                               """
-                                                           )
+                             new MethodFactory("is_class")
+                                .AddParams("self", "class_name")
+                                .AddCode(
+                                     """
+                                     class_name_lower = class_name.lower()
+                                     if class_name_lower == 'any': return True
+                                     return class_name_lower == self.main_class.value or class_name_lower == self.secondary_class.value
+                                     """
+                                 )
                          )
                      )
                     .AddCheckOptions(method =>
-                         method.AddCode("""
-                                        classes = ['fighter', 'mystic', 'bandit']
-                                        if options.main_class == 'random':
-                                            options.main_class = MainClass(random.choice(classes))
-                                        
-                                        if options.secondary_class == 'random':
-                                            options.secondary_class = SecondaryClass(random.choice([clas for clas in classes if clas != options.main_class]))
-                                            
-                                        if options.main_class == options.secondary_class:
-                                            raise_yaml_error(world.player, "You cannot have the same class selected for main_class and secondary_class")
-                                        """)
+                         method.AddCode(
+                             """
+                             classes = ['fighter', 'mystic', 'bandit']
+
+                             if options.main_class.value == options.secondary_class.value:
+                                 raise_yaml_error(world.player, "You cannot have the same class selected for main_class and secondary_class")
+                             """
+                         )
                      );
     }
 
@@ -143,13 +130,20 @@ public class Atlyss : BuildData
                           QuestData.Where(data => data.Enabled)
                                    .Select(data => (string[])[data.Quest, data.AreaAccepted])
                       )
-                     .AddLocations("levels", Enumerable.Range(1, 16).Select(i => $"Reach Level {i * 2}"))
+                     .AddLocations(
+                          "levels", Enumerable.Range(1, 16).Select(i => (string[])[$"Reach Level {i * 2}", "Menu"])
+                      )
                      .AddLocations(
                           "merchants",
                           MerchantData.SelectMany(data
                               => Enumerable.Range(1, 5).Select(i => (string[])
                                   [$"Buy Item #{i} from {data.Name}", data.Area]
                               )
+                          )
+                      ).AddLocations(
+                          "professions",
+                          ProfessionsData.Select(data => data.Profession).Distinct().SelectMany(s
+                              => Enumerable.Range(1, 10).Select(i => (string[])[$"{s} Lv. {i}", "Menu"])
                           )
                       );
     }
@@ -158,13 +152,19 @@ public class Atlyss : BuildData
     {
         List<string> progressiveItemMap = [];
         List<string> progressiveItemMapMd = [];
-        GetMaxProgressive("Any", ClassType.Any, progressiveItemMapMd, item_fact, progressiveItemMap);
+        GetMaxProgressive("Any", ClassType.Any, progressiveItemMapMd, item_fact, progressiveItemMap, out var _);
         progressiveItemMapMd.Add("\n---\n");
-        GetMaxProgressive("Fighter", ClassType.Fighter, progressiveItemMapMd, item_fact, progressiveItemMap);
+        GetMaxProgressive(
+            "Fighter", ClassType.Fighter, progressiveItemMapMd, item_fact, progressiveItemMap, out var addFighter
+        );
         progressiveItemMapMd.Add("\n---\n");
-        GetMaxProgressive("Mystic", ClassType.Mystic, progressiveItemMapMd, item_fact, progressiveItemMap);
+        GetMaxProgressive(
+            "Mystic", ClassType.Mystic, progressiveItemMapMd, item_fact, progressiveItemMap, out var addMystic
+        );
         progressiveItemMapMd.Add("\n---\n");
-        GetMaxProgressive("Bandit", ClassType.Bandit, progressiveItemMapMd, item_fact, progressiveItemMap);
+        GetMaxProgressive(
+            "Bandit", ClassType.Bandit, progressiveItemMapMd, item_fact, progressiveItemMap, out var addBandit
+        );
 
         ItemData.Where(data => data.ItemPoolCount > 0)
                 .GroupBy(data => data.Classification)
@@ -173,12 +173,62 @@ public class Atlyss : BuildData
                  ).Aggregate(
                      item_fact,
                      (factory, pair) => factory.AddItemCountVariable(
-                         $"item_counts_{pair.Key}".ToLower(), pair.Value, pair.Key
+                         $"item_counts_{pair.Key}".ToLower(), pair.Value, pair.Key, addToList: false
                      )
                  );
 
-        // item_fact.AddCreateItems(method => method.AddCode(new IfFactory("").AddCode(CreateItemsFromList())));
-        item_fact.AddCreateItems(factory => {});
+        ItemData.GroupBy(data => data.Classification).Aggregate(
+            item_fact,
+            (factory, data) => factory.AddItemListVariable(
+                $"{data.Key}_items".ToLower(), data.Key, list: data.Select(d => d.Name).ToArray()
+            )
+        );
+
+        item_fact.AddItemCountVariable(
+                      "filler_weights",
+                      ItemData.Where(data => data.FillerWeight > 0).ToDictionary(
+                          data => data.Name, data => data.FillerWeight
+                      ),
+                      Deprioritized, addToList: false
+                  )
+                 .AddItemListVariable(
+                      "portals", Progression,
+                      list: LocationLevelData
+                           .Select(data
+                                => $"{(data.Area.StartsWith("Sanctum Catacombs") ? "Catacombs" : data.Area)} Portal"
+                            )
+                            .Distinct()
+                           .ToArray()
+                  )
+                 .AddItem("Progressive Portal", Progression)
+                 .AddCreateItems(factory =>
+                      factory
+                         .AddCode("random = world.random")
+                         .AddCode(CreateItemsFromMapCountGenCode("any_progressives"))
+                         .AddCode(addFighter)
+                         .AddCode(addMystic)
+                         .AddCode(addBandit)
+                         .AddCode(CreateItemsFromMapCountGenCode("item_counts_useful"))
+                         .AddCode(CreateItemsFromMapCountGenCode("item_counts_filler"))
+                         .AddCode(CreateItemsFromMapCountGenCode("item_counts_progression"))
+                         .AddCode(
+                              new IfFactory("options.random_portals").AddCode(CreateItemsFromList("portals")).SetElse(
+                                  new CodeBlockFactory().AddCode(
+                                      CreateItemsFromCountGenCode(
+                                          $"{LocationLevelData.Max(data => data.ProgressivePortalCount)}",
+                                          "Progressive Portal"
+                                      )
+                                  )
+                              )
+                          )
+                         .AddCode("filler_items = [key for key, value in filler_weights.items()]")
+                         .AddCode("filler_weightings = [value for key, value in filler_weights.items()]")
+                         .AddCode(
+                              CreateItemsFillRemainingWithItem(
+                                  "random.choices(filler_items, filler_weightings)[0]", false
+                              )
+                          )
+                  );
 
         WriteData("progressiveItemMap", progressiveItemMap.Select(s => s.Trim('"')));
         WriteData("progressiveItemMap", progressiveItemMapMd, "md");
@@ -187,12 +237,28 @@ public class Atlyss : BuildData
     public override void Rules(WorldFactory _, RuleFactory rule_fact)
     {
         rule_fact
-           .AddLogicFunction("area", "has_area", StateHas("area", stringify: false), "area")
+           .AddLogicFunction(
+                "area", "has_area",
+                $$"""
+                  if not state.multiworld.worlds[player].options.random_portals:
+                    return {{StateHas("Progressive Portal", "portal_counts[area]", true, false)}}
+                  if area.startswith("Sanctum Catacombs"):
+                    area = "Catacombs"
+                  portal = f"{area} Portal"
+                  {{StateHas("portal", stringify: false)}}
+                  """, "area"
+            )
+           .AddLogicFunction(
+                "any_area", "has_any_area", "return any(has_area(state, player, area) for area in areas)", "areas"
+            )
+           .AddLogicFunction(
+                "all_areas", "has_all_areas", "return all(has_area(state, player, area) for area in areas)", "areas"
+            )
            .AddLogicFunction("quest", "has_quest", StateHas("f\"Complete: {quest}\"", stringify: false), "quest")
            .AddLogicFunction(
                 "grind", "can_grind",
                 """
-                if level > 26: return can_grind(state, player, 26, area_data)
+                if level > 30: return can_grind(state, player, 30, area_data)
                 if level <= 1: return True
 
                 for area in area_data:
@@ -204,7 +270,27 @@ public class Atlyss : BuildData
             )
            .AddCompoundLogicFunction("level", "can_grind_level", "grind[level, location_grind_data]", "level")
            .AddCompoundLogicFunction("fish", "can_grind_fish", "grind[level, fishing_grind_data]", "level")
-           .AddCompoundLogicFunction("mine", "can_grind_mine", "grind[level, mining_grind_data]", "level");
+           .AddCompoundLogicFunction("mine", "can_grind_mine", "grind[level, mining_grind_data]", "level")
+           .AddCompoundLogicFunction(
+                "enemy", "can_beat_enemy", "level[enemy_data[enemy_name][0]] and any_area[enemy_data[enemy_name][1]]",
+                "enemy_name"
+            ).AddLogicRules(
+                QuestData.Where(data => data.Enabled).ToDictionary(data => data.Quest, data => data.GenRule())
+            )
+           .AddLogicRules(Enumerable.Range(1, 16).ToDictionary(i => $"Reach Level {i * 2}", i => $"level[{i * 2}]"))
+           .AddLogicRules(
+                MerchantData.SelectMany(data
+                    => Enumerable.Range(1, 5).Select(i =>
+                        ($"Buy Item #{i} from {data.Name}", $"area[\"{data.Area}\"]")
+                    )
+                ).ToDictionary(t => t.Item1, t => t.Item2)
+            ).AddLogicRules(
+                Enumerable.Range(1, 10).Select(i => ($"Fishing Lv. {i}", $"fish[{i}]"))
+                          .ToDictionary(t => t.Item1, t => t.Item2)
+            ).AddLogicRules(
+                Enumerable.Range(1, 10).Select(i => ($"Mining Lv. {i}", $"mine[{i}]"))
+                          .ToDictionary(t => t.Item1, t => t.Item2)
+            );
     }
 
     public override void Regions(WorldFactory worldFactory, RegionFactory region_fact)
@@ -214,15 +300,53 @@ public class Atlyss : BuildData
             region_fact,
             (factory, data) => factory.AddConnectionCompiledRule(data.Connection, data.Area, data.GenRule())
         );
+
+        region_fact.AddLocationsFromList("merchants", condition: "options.shop_sanity")
+                   .AddLocationsFromList("quests")
+                   .AddLocationsFromList("levels")
+                   .AddLocationsFromList("professions")
+                   .AddEventLocationsFromList("quests", "f\"Quest Completion: {location[0]}\"", "f\"Complete: {location[0]}\"");
     }
 
-    public override void Init(WorldFactory _, WorldInitFactory init_fact)
+    public override void Init(WorldFactory factory, WorldInitFactory init_fact)
     {
-        init_fact.UseInitFunction(method =>
-            method
-               .AddCode(new Variable("primary_class", "\"\""))
-               .AddCode(new Variable("secondary_class", "\"\""))
-        );
+        var rule_fact = factory.GetRuleFactory();
+        init_fact.UseInitFunction()
+                 .UseGenerateEarly()
+                 .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
+                 .UseCreateRegions()
+                 .AddCreateItems()
+                 .UseSetRules(method =>
+                      method.AddCode(
+                          $"""
+                           options = self.options
+                           match options.goal:
+                              case 0: #silme_diva
+                                  {CreateGoalCondition("enemy['Slime Diva']", rule_fact)}
+                              case 1: #lord_zuulneruda
+                                  {CreateGoalCondition("enemy['Lord Zuulneruda']", rule_fact)}
+                              case 2: #colossus
+                                  {CreateGoalCondition("enemy['Colossus']", rule_fact)}
+                              case 3: #galius
+                                  {CreateGoalCondition("enemy['Galius']", rule_fact)}
+                              case 4: #lord_kaluuz
+                                  {CreateGoalCondition("enemy['Lord Kaluuz']", rule_fact)}
+                              case 5: #valdur
+                                  {CreateGoalCondition("enemy['Valdur']", rule_fact)}
+                              case 6: #all_bosses
+                                  {CreateGoalCondition(string.Join(" and ", EnemyListData.Where(data => data.IsBoss)
+                                     .Select(data => $"enemy[\"{data.Name}\"]")), rule_fact)}
+                              case 7: #all_quests
+                                  {CreateGoalCondition(string.Join(" and ", QuestData.Where(data => data.Enabled && QuestData.All(qData => qData.PrevQuest != data.Quest))
+                                     .Select(data => $"quest[\"{data.Quest}\"]")), rule_fact)}
+                              case 8: #level_32
+                                  {CreateGoalCondition("level[32]", rule_fact)}
+                           """
+                      )
+                  )
+                 .UseFillSlotData()
+                 .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
+                 .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
     }
 
     public override void GenerateJson(WorldFactory worldFactory) => worldFactory.GenerateArchipelagoJson(
@@ -248,6 +372,21 @@ public class Atlyss : BuildData
                             ProfessionsData.Where(data => data.Profession is "Mining")
                                            .SelectMany(data => data.GetNodes()).ToArray()
                         )
+                    ).AddObject(
+                        new MappedVariable<string, string>(
+                            "enemy_data",
+                            EnemyListData.ToDictionary(
+                                data => $"\"{data.Name}\"",
+                                data => $"[{data.Level}, [{string.Join(", ", data.Areas.Select(s => $"\"{s}\""))}]]"
+                            )
+                        )
+                    ).AddObject(
+                        new MappedVariable<string, string>(
+                            "portal_counts",
+                            LocationLevelData.ToDictionary(
+                                data => $"\"{data.Area}\"", data => $"{data.ProgressivePortalCount}"
+                            )
+                        )
                     )
         );
 
@@ -264,7 +403,7 @@ public class Atlyss : BuildData
 
     private void GetMaxProgressive(
         string className, ClassType classType, List<string> progressiveItemMapMd, ItemFactory item_fact,
-        List<string> progressiveItemMap
+        List<string> progressiveItemMap, out IfFactory addCode
     )
     {
         progressiveItemMapMd.AddRange(
@@ -313,10 +452,14 @@ public class Atlyss : BuildData
                     )
                    .Where(t => t.Item2 > 0)
                    .ToDictionary(t => t.Item1, t => t.Item2),
-                ProgressionSkipBalancing
+                Useful
             );
 
         progressiveItemMapMd.Add("</details>");
+        addCode =
+            new IfFactory($"options.is_class('{classType}')".ToLower()).AddCode(
+                CreateItemsFromMapCountGenCode($"{classType}_progressives".ToLower())
+            );
     }
 
 }

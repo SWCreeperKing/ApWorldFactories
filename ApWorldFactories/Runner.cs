@@ -51,13 +51,11 @@ while (true)
                     case 2:
                         WriteLine("Downloading Sheet(s)");
                         world.DownloadSheets();
-                        WriteLine("Sheet(s) Downloaded");
                         WaitForAnyInput();
                         break;
                     case 3:
                         WriteLine("Downloading Sheet(s)");
                         world.DownloadSheets();
-                        WriteLine("Sheet(s) Downloaded");
                         WriteLine("Building World");
                         world.Run();
                         WriteLine("World Built");

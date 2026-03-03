@@ -41,15 +41,15 @@ public abstract class BuildData
         using var client = new HttpClient();
         var pos = ClrCnsl.GetCursor();
         var amount = SheetGids.Count + 1;
-        PrintProgress(pos, 0, amount);
+        PrintProgress(pos, 0, amount, "Sheet(s) Downloaded");
         DownloadSheet(client, MainSheetLink, "main");
-        PrintProgress(pos, 1, amount);
+        PrintProgress(pos, 1, amount, "Sheet(s) Downloaded");
         if (SheetGids.Count == 0) return;
         var i = 2;
         foreach (var (name, gid) in SheetGids)
         {
             DownloadSheet(client, $"{MainSheetLink}&gid={gid}", name);
-            PrintProgress(pos, i++, amount);
+            PrintProgress(pos, i++, amount, "Sheet(s) Downloaded");
         }
     }
 
@@ -60,11 +60,11 @@ public abstract class BuildData
         File.WriteAllBytes($"{CsvPath}/{output}.csv", csvData);
     }
 
-    private void PrintProgress(Pos pos, int curr, int amount)
+    private void PrintProgress(Pos pos, int curr, int amount, string text)
     {
         ClrCnsl.SetCursor(pos);
         ClrCnsl.ProgressBar(curr, amount, 20, d => d switch { < 1 => ConsoleColor.Cyan, >= 1 => ConsoleColor.Green });
-        ClrCnsl.Write($"\n{curr}/{amount} ");
+        ClrCnsl.WriteLine($"\n{curr}/{amount} {text}");
     }
 
     public CsvParser GetSpreadsheet(string sheet, int linesFromTop = 1, int linesFromLeft = 0)
@@ -93,28 +93,50 @@ public abstract class BuildData
         var region_fact = builder.GetRegionFactory(GitLink);
         var init_fact = builder.GetInitFactory(GitLink);
 
+        var cur = ClrCnsl.GetCursor();
+        const int stepCount = 18;
+        var i = 0;
+        PrintProgress(cur, i++, stepCount, "Manipulating Data");
         RunShenanigans();
 
+        PrintProgress(cur, i++, stepCount, "Generating Options");
         Options(builder, options_fact);
+        PrintProgress(cur, i++, stepCount, "Generating Host Settings");
         HostSettings(builder, host_fact);
+        PrintProgress(cur, i++, stepCount, "Generating Locations    ");
         Locations(builder, location_fact);
+        PrintProgress(cur, i++, stepCount, "Generating Items    ");
         Items(builder, item_fact);
+        PrintProgress(cur, i++, stepCount, "Generating Rules");
         Rules(builder, rule_fact);
+        PrintProgress(cur, i++, stepCount, "Generating Regions");
         Regions(builder, region_fact);
+        PrintProgress(cur, i++, stepCount, "Generating Init   ");
         Init(builder, init_fact);
 
+        PrintProgress(cur, i++, stepCount, "Outputting Options");
         GenerateOptions(options_fact);
+        PrintProgress(cur, i++, stepCount, "Outputting Host Settings");
         GenerateHostSettings(host_fact);
+        PrintProgress(cur, i++, stepCount, "Outputting Locations    ");
         GenerateLocations(out var locationList, location_fact);
+        PrintProgress(cur, i++, stepCount, "Outputting Items    ");
         GenerateItems(out var itemList, item_fact);
+        PrintProgress(cur, i++, stepCount, "Outputting Rules");
         GenerateRules(rule_fact);
+        PrintProgress(cur, i++, stepCount, "Outputting Regions");
         GenerateRegions(region_fact);
+        PrintProgress(cur, i++, stepCount, "Outputting Init   ");
         GenerateInit(init_fact);
 
+        PrintProgress(cur, i++, stepCount, "Writing Ap Json");
         GenerateJson(builder);
 
+        PrintProgress(cur, i++, stepCount, "Processing Locations");
         ProcessLocationList(locationList);
+        PrintProgress(cur, i++, stepCount, "Processing Items    ");
         ProcessItemList(itemList);
+        PrintProgress(cur, i++, stepCount, "World Built!    ");
     }
 
     public abstract void RunShenanigans();
