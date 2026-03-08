@@ -27,7 +27,6 @@ public class WidgetInc : BuildData
     public override void RunShenanigans()
     {
         GetSpreadsheet("Main")
-           .ToFactory()
            .ReadTable(out TechTreeData).SkipColumn()
            .ReadTable(out ResourceData);
 

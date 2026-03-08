@@ -26,7 +26,6 @@ public class WereCleaner : BuildData
     public override void RunShenanigans()
     {
         GetSpreadsheet("main")
-           .ToFactory()
            .ReadTable(out LevelData).SkipColumn()
            .ReadTable(out ItemData).SkipColumn()
            .ReadTable(out NpcData);

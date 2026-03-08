@@ -36,7 +36,6 @@ public class SlimeRancher : BuildData
     public override void RunShenanigans()
     {
         GetSpreadsheet("GameData")
-           .ToFactory()
            .ReadTable(new RegionDataCreator(), out RegionData).SkipColumn()
            .ReadTable(out ItemAmountData);
 
@@ -57,7 +56,6 @@ public class SlimeRancher : BuildData
         FillerItems = ItemAmountData.Where(data => data.ProgType is "filler").Select(data => data.Item).ToArray();
 
         GetSpreadsheet("main")
-           .ToFactory()
            .ReadTable(new InteractableCreator(Zones), out RawInteractables).SkipColumn()
            .ReadTable(new GateCreator(), out Gates).SkipColumn()
            .ReadTable(new GordoCreator(), out Gordos).SkipColumn()

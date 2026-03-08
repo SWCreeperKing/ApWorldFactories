@@ -32,13 +32,13 @@ public class PlagueInc : BuildData
 
     public override void RunShenanigans()
     {
-        GetSpreadsheet("main").ToFactory()
+        GetSpreadsheet("main")
                               .ReadTable(out DiseaseData).SkipColumn()
                               .ReadTable(out CountryData);
 
-        GetSpreadsheet("techs").ToFactory().ReadTable(out TechData);
+        GetSpreadsheet("techs").ReadTable(out TechData);
 
-        GetSpreadsheet("data").ToFactory()
+        GetSpreadsheet("data")
                               .ReadTable(out DifficultyData).SkipColumn()
                               .ReadTable(out HexLayoutData);
 

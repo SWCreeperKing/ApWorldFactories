@@ -28,7 +28,6 @@ public class ConbunnCardboard : BuildData
     public override void RunShenanigans()
     {
         GetSpreadsheet("main")
-           .ToFactory()
            .ReadTable(new RegionDataCreator(), out RegionData)
            .ReadTable(out LocationData).SkipColumn()
            .ReadTable(out AbilityData).SkipColumn()

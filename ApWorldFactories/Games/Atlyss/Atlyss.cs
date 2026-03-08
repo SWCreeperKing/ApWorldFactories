@@ -12,7 +12,9 @@ public class Atlyss : BuildData
     public override string ApWorldName => "atlyss";
     public override string GoogleSheetId => "15j_e_S0TrJHna8_CJPs4rqst0saaTQv36iNUke8NhUA";
     public override string WorldVersion => "0.1.0";
-    public override Dictionary<string, string> SheetGids => new() { ["items"] = "1796499840" };
+
+    public override Dictionary<string, string> SheetGids
+        => new() { ["items"] = "1796499840", ["achievements"] = "254672963" };
 
     private LocationLevelData[] LocationLevelData = [];
     private EnemyListData[] EnemyListData = [];
@@ -20,18 +22,19 @@ public class Atlyss : BuildData
     private ProfessionsData[] ProfessionsData = [];
     private MerchantData[] MerchantData = [];
     private ItemData[] ItemData = [];
+    private AchievementData[] AchievementData = [];
     private Dictionary<ItemType, Dictionary<ClassType, Dictionary<int, List<ItemData>>>> EquipmentItems = [];
 
     public override void RunShenanigans()
     {
         GetSpreadsheet("main")
-           .ToFactory()
            .ReadTable(out LocationLevelData).SkipColumn()
            .ReadTable(out EnemyListData).SkipColumn()
            .ReadTable(out QuestData).SkipColumn()
            .ReadTable(out ProfessionsData).SkipColumn()
            .ReadTable(out MerchantData);
-        GetSpreadsheet("items").ToFactory().ReadTable(out ItemData);
+        GetSpreadsheet("items").ReadTable(out ItemData);
+        GetSpreadsheet("achievements").ReadTable(out AchievementData);
 
         EquipmentItems.Clear();
         foreach (var item in ItemData)
@@ -145,6 +148,9 @@ public class Atlyss : BuildData
                           ProfessionsData.Select(data => data.Profession).Distinct().SelectMany(s
                               => Enumerable.Range(1, 10).Select(i => (string[])[$"{s} Lv. {i}", "Menu"])
                           )
+                      ).AddLocations(
+                          "achievements",
+                          AchievementData.Where(data => data.Enabled).Select(data => (string[])[data.Name, data.Area])
                       );
     }
 
@@ -197,7 +203,7 @@ public class Atlyss : BuildData
                            .Select(data
                                 => $"{(data.Area.StartsWith("Sanctum Catacombs") ? "Catacombs" : data.Area)} Portal"
                             )
-                            .Distinct()
+                           .Distinct()
                            .ToArray()
                   )
                  .AddItem("Progressive Portal", Progression)
@@ -274,7 +280,9 @@ public class Atlyss : BuildData
            .AddCompoundLogicFunction(
                 "enemy", "can_beat_enemy", "level[enemy_data[enemy_name][0]] and any_area[enemy_data[enemy_name][1]]",
                 "enemy_name"
-            ).AddLogicRules(
+            )
+           .AddLogicFunction("item", "has_item", StateHas("item", "count", false), "item", "count")
+           .AddLogicRules(
                 QuestData.Where(data => data.Enabled).ToDictionary(data => data.Quest, data => data.GenRule())
             )
            .AddLogicRules(Enumerable.Range(1, 16).ToDictionary(i => $"Reach Level {i * 2}", i => $"level[{i * 2}]"))
@@ -290,6 +298,8 @@ public class Atlyss : BuildData
             ).AddLogicRules(
                 Enumerable.Range(1, 10).Select(i => ($"Mining Lv. {i}", $"mine[{i}]"))
                           .ToDictionary(t => t.Item1, t => t.Item2)
+            ).AddLogicRules(
+                AchievementData.Where(data => data.Enabled).ToDictionary(data => data.Name, data => data.GenRule())
             );
     }
 
@@ -305,7 +315,25 @@ public class Atlyss : BuildData
                    .AddLocationsFromList("quests")
                    .AddLocationsFromList("levels")
                    .AddLocationsFromList("professions")
-                   .AddEventLocationsFromList("quests", "f\"Quest Completion: {location[0]}\"", "f\"Complete: {location[0]}\"");
+                   .AddLocations(
+                        "",
+                        AchievementData
+                           .Where(data => data.Enabled && data.Class is ClassType.Any)
+                           .Select(data => new LocationData(data.Area, data.Name))
+                           .ToArray()
+                    )
+                   .AddEventLocationsFromList(
+                        "quests", "f\"Quest Completion: {location[0]}\"", "f\"Complete: {location[0]}\""
+                    );
+
+        AchievementData.Where(data => data is { Enabled: true, Class: not ClassType.Any }).GroupBy(data => data.Class)
+                       .Aggregate(
+                            region_fact,
+                            (factory, g) => factory.AddLocations(
+                                $"options.is_class(\"{g.Key}\")".ToLower(),
+                                g.Select(data => new LocationData(data.Area, data.Name)).ToArray()
+                            )
+                        );
     }
 
     public override void Init(WorldFactory factory, WorldInitFactory init_fact)

@@ -67,8 +67,8 @@ public abstract class BuildData
         ClrCnsl.WriteLine($"\n{curr}/{amount} {text}");
     }
 
-    public CsvParser GetSpreadsheet(string sheet, int linesFromTop = 1, int linesFromLeft = 0)
-        => new($"{CsvPath}/{sheet}.csv", linesFromTop, linesFromLeft);
+    public CsvFactory GetSpreadsheet(string sheet, int linesFromTop = 1, int linesFromLeft = 0)
+        => new CsvParser($"{CsvPath}/{sheet}.csv", linesFromTop, linesFromLeft).ToFactory();
 
     public void WriteData(string file, IEnumerable<string> data, string ext = "txt")
     {

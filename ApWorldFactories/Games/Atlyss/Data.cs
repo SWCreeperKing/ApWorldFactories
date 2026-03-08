@@ -36,7 +36,7 @@ public readonly struct EnemyListData(DataArray param)
 public readonly struct QuestData(DataArray param)
 {
     [Mark] public readonly string Quest = param;
-    [Mark] public readonly string PrevQuest = param.Get() is "N/A" ? "" : param[1];
+    [Mark] public readonly string PrevQuest = param.Get(false) is "N/A" ? "" : param;
     [Mark] public readonly int Level = param;
     [Mark] public readonly string AreaAccepted = param;
     [Mark] public readonly string ClassRequired = param;
@@ -107,6 +107,38 @@ public readonly struct ItemData(DataArray param)
     [Mark] public readonly string Notes = param;
     [Mark] public readonly int FillerWeight = param;
     [Mark] public readonly int ItemPoolCount = param;
+}
+
+public readonly struct AchievementData(DataArray param)
+{
+    [Mark] public readonly string Name = param;
+    [Mark] public readonly string Area = param.Get(false) is "" ? "Menu" : param;
+    [Mark] public readonly int Level = param;
+    [Mark] public readonly ClassType Class = param.GetEnum<ClassType>();
+    [Mark] public readonly string Subclass = param;
+
+    [Mark] public readonly string[] RequiredItems =
+        param.GetSplitAndTrim()
+             .Where(s => s.Trim() is not "")
+             .Select(s =>
+                  {
+                      var split = s.Split('x');
+                      return split.Length < 2 ? $"item[\"{s}\", 1]"
+                          : $"item[\"{string.Join('x', split.Skip(1))}\", {split[0]}]";
+                  }
+              ).ToArray();
+
+    [Mark] public readonly bool Enabled = param;
+
+    public string GenRule()
+    {
+        List<string> rules = [$"level[{Level}]"];
+
+        if (Area is not ("Menu" or "Sanctum")) rules.Add($"area[\"{Area}\"]");
+        if (RequiredItems.Any()) rules.AddRange(RequiredItems);
+
+        return string.Join(" and ", rules);
+    }
 }
 
 public interface IFarmingNode
