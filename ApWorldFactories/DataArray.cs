@@ -30,7 +30,7 @@ public class DataArray(string[] param)
 
     public static implicit operator DataArray(string[] array) => new(array);
     public static implicit operator string(DataArray array) => array.Get();
-    public static implicit operator string[](DataArray array) => array.GetSplitAndTrim();
+    public static implicit operator string[](DataArray array) => array.GetSplitAndTrim().Where(s => s is not "").ToArray();
     public static implicit operator bool(DataArray array) => array.GetIsTrue();
     public static implicit operator int(DataArray array) => array.TryGetInt();
     public static implicit operator float(DataArray array) => array.TryGetFloat();

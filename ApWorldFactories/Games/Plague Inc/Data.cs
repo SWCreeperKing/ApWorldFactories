@@ -37,18 +37,13 @@ public readonly struct HexLayoutData(DataArray param)
 
 public readonly struct TechData(DataArray param)
 {
-    [Mark] public readonly string Id = param.Get() is "" ? param[2] : param[0];
+    [Mark] public readonly string OverrideId = param;
     [Mark] public readonly int Hex = param;
-
-    [Mark] public readonly LogicRule RuleType = param.SetIndex(3).Get().ToLower() switch
-    {
-        "always" => LogicRule.Always,
-        "adjacent" => LogicRule.Adjacent,
-        "specific" => LogicRule.Specific,
-    };
+    [Mark] public readonly string CommonId = param;
+    [Mark] public readonly LogicRule RuleType = param.GetEnum<LogicRule>();
 
     [Mark] public readonly string SpecificRuleTechs = string.Join(
-        " and ", param.GetSplitAndTrim().Select(s => $"has[\"{s}\"]")
+        " and ", ((string[])param).Select(s => $"has[\"{s}\"]")
     );
 
     [Mark] public readonly string[] Diseases = param;
@@ -76,10 +71,10 @@ public readonly struct TechData(DataArray param)
     [Mark] public readonly float CureResearchEfficiency = param;
 
     [Mark] public readonly bool CanDevolve = param;
-
     [Mark] public readonly float DevolveCostModifier = param;
     [Mark] public readonly string ImportantNotes = param;
-
+    
+    public string Id => OverrideId is "" ? CommonId : OverrideId;
     public float GetScore => Infectivity + Lethality;
 
     public SingledOutTechData[] GetIndevTechs()

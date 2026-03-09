@@ -1,0 +1,10 @@
+Combo Name,Requirements,Effects,Special Notes
+Projectile Vomiting,"Nausea, Coughing, Vomiting","Infectivity +4, Severity +1",
+Walking Dead,"Insomnia, Anaemia",,
+Profuse Bleeding,"Haemophilia, Skin Lesions",,
+Oops,"Sneezing, Diarrhoea","Priority +2, Cure Research Inefficiency +0.1",
+Public Defecation,"Insanity, Diarrhoea","Priority +4, Infectivity +2",
+Swine Flu,"Nausea, Vomiting, Livestock 1, Livestock 2, Diarrhoea, Coughing, Pneumonia, Sneezing, Insomnia",Cure research requirement +0.1,Will not evolve if you have skin leisons or tumors evolved
+,,,
+,,,
+Unable to find details for walking dead and profuse bleeding. I'm working on it though,,,

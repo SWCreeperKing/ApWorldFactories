@@ -67,7 +67,7 @@ public abstract class BuildData
         ClrCnsl.WriteLine($"\n{curr}/{amount} {text}");
     }
 
-    public CsvFactory GetSpreadsheet(string sheet, int linesFromTop = 1, int linesFromLeft = 0)
+    public CsvFactory GetSpreadsheet(string sheet = "main", int linesFromTop = 1, int linesFromLeft = 0)
         => new CsvParser($"{CsvPath}/{sheet}.csv", linesFromTop, linesFromLeft).ToFactory();
 
     public void WriteData(string file, IEnumerable<string> data, string ext = "txt")
@@ -141,7 +141,7 @@ public abstract class BuildData
 
     public abstract void RunShenanigans();
 
-    public abstract void Options(WorldFactory _, OptionsFactory options_fact);
+    public virtual void Options(WorldFactory _, OptionsFactory options_fact) => options_fact.AddCheckOptions();
 
     public virtual void HostSettings(WorldFactory _, HostSettingsFactory host_fact)
     {

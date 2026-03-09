@@ -32,15 +32,14 @@ public class PlagueInc : BuildData
 
     public override void RunShenanigans()
     {
-        GetSpreadsheet("main")
-                              .ReadTable(out DiseaseData).SkipColumn()
-                              .ReadTable(out CountryData);
+        GetSpreadsheet().ReadTable(out DiseaseData).SkipColumn()
+                        .ReadTable(out CountryData);
 
         GetSpreadsheet("techs").ReadTable(out TechData);
 
         GetSpreadsheet("data")
-                              .ReadTable(out DifficultyData).SkipColumn()
-                              .ReadTable(out HexLayoutData);
+           .ReadTable(out DifficultyData).SkipColumn()
+           .ReadTable(out HexLayoutData);
 
         TabNames = TechData.Select(data => data.TechTreeType).Distinct().ToArray();
         Diseases = DiseaseData
