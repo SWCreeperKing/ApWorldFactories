@@ -16,15 +16,19 @@ public class Poco : BuildData
     public LocationData[] LocationData = [];
     public ItemData[] ItemData = [];
     public NpcQuestData[] NpcQuestData = [];
+    public ItemBlockerData[] ItemBlockerData = [];
 
     public override void RunShenanigans()
     {
         GetSpreadsheet().ReadTable(out RegionData).SkipColumn()
                         .ReadTable(out LocationData).SkipColumn()
                         .ReadTable(out ItemData).SkipColumn()
-                        .ReadTable(out NpcQuestData);
+                        .ReadTable(out NpcQuestData).SkipColumn()
+                        .ReadTable(out ItemBlockerData);
 
-        WriteData("locations", LocationData.Select(data => $"{data.Area}:{data.Id}"));
+        WriteData("locations", LocationData.Select(data => $"{data.Location}:{data.Id}"));
+        WriteData("items", ItemData.Select(data => data.Name));
+        WriteData("blockers", ItemBlockerData.Select(data => $"{data.Item}:{string.Join(',', data.Blockers)}"));
     }
 
     public override void Locations(WorldFactory _, LocationFactory location_fact)
@@ -47,6 +51,7 @@ public class Poco : BuildData
     public override void Rules(WorldFactory _, RuleFactory rule_fact)
     {
         rule_fact.AddLogicFunction("has", "has_item", StateHas("item", stringify: false), "item")
+                 .AddLogicFunction("quest", "done_quest", StateHas("f\"{quest}'s Quest Completion\"", stringify:false), "quest")
                  .AddLogicRules(
                       LocationData.Where(data => data.Requirements.Any()).ToDictionary(
                           data => data.Location, data => data.GenRule()
@@ -93,6 +98,10 @@ public class Poco : BuildData
                         worldFactory.GetRuleFactory()
                     )
                 )
+            )
+           .UseFillSlotData(
+                new Dictionary<string, string> { ["uuid"] = "str(shuffled)" },
+                method => method.AddCode(CreateUniqueId())
             )
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
