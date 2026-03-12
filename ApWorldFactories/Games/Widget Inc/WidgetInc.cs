@@ -1,4 +1,5 @@
-﻿using CreepyUtil.Archipelago.WorldFactory;
+﻿using ApWorldFactories.Graphviz;
+using CreepyUtil.Archipelago.WorldFactory;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 using Range = CreepyUtil.Archipelago.WorldFactory.Range;
 
@@ -114,53 +115,46 @@ public class WidgetInc : BuildData
            .AddLogicFunction(
                 "tier", "has_tier", StateHas("Progressive Tier", "tier"), "tier"
             )
-           .AddLogicFunction("frame", "has_frame", StateHas("frame", stringify: false), "frame");
-
-        CraftlessResources.Aggregate(
-            rule_fact, (factory1, s) =>
-                factory1.AddCompoundLogicFunction(
+           .AddLogicFunction("frame", "has_frame", StateHas("frame", stringify: false), "frame")
+           .ForEachOf(
+                CraftlessResources, (b, s) => b.AddCompoundLogicFunction(
                     s.Replace(" ", ""),
                     s.ToLower().Replace(" ", "_"), $"frame['{ResourceBuildingRequirement[s]}']"
                 )
-        );
-
-        CraftingRecipes.Aggregate(
-            rule_fact, (factory1, pair) =>
-                factory1.AddCompoundLogicFunction(
+            ).ForEachOf(
+                CraftingRecipes, (b, pair) => b.AddCompoundLogicFunction(
                     pair.Key.Replace(" ", ""), pair.Key.ToLower().Replace(" ", "_"),
                     $"frame[\"{TechTreeData.First(data => data.Unlock == pair.Key).Tech}\"] and {string.Join(" and ", pair.Value.Select(s => s.Replace(" ", "")))}"
                 )
-        );
+            ).ForEachOf(
+                TechTreeData, (b, data) =>
+                {
+                    List<string> rules = [];
 
-        TechTreeData.Aggregate(
-            rule_fact, (factory1, data) =>
-            {
-                List<string> rules = [];
+                    if (data.PreviousTech is not "") rules.Add($"frame['{data.PreviousTech}']");
+                    rules.AddRange(data.ResourceRequirements.Select(res => res.Replace(" ", "")));
+                    rules.Add($"tier[{data.TierRequirement}]");
 
-                if (data.PreviousTech is not "") rules.Add($"frame['{data.PreviousTech}']");
-                rules.AddRange(data.ResourceRequirements.Select(res => res.Replace(" ", "")));
-                rules.Add($"tier[{data.TierRequirement}]");
-
-                return factory1.AddLogicRule(data.Tech, string.Join(" and ", rules));
-            }
-        );
+                    b.AddLogicRule(data.Tech, string.Join(" and ", rules));
+                }
+            );
     }
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
-        for (var i = 0; i < 12; i++)
-        {
-            region_fact.AddRegion($"Tier {i + 1}");
-
-            if (i == 0)
+        region_fact.ForEachOf(
+            Enumerable.Range(0, 12), (b, i) =>
             {
-                region_fact.AddConnectionCompiledRule("Menu", "Tier 1", "tier[1]");
-                continue;
-            }
-            region_fact.AddConnectionCompiledRule($"Tier {i}", $"Tier {i + 1}", $"tier[{i + 1}]");
-        }
+                b.AddRegion($"Tier {i + 1}");
 
-        region_fact.AddLocationsFromList("tech_tree");
+                if (i == 0)
+                {
+                    b.AddConnectionCompiledRule("Menu", "Tier 1", "tier[1]");
+                    return;
+                }
+                b.AddConnectionCompiledRule($"Tier {i}", $"Tier {i + 1}", $"tier[{i + 1}]");
+            }
+        ).AddLocationsFromList("tech_tree");
     }
 
     public override void Init(WorldFactory world_fact, WorldInitFactory init_fact)
@@ -169,16 +163,11 @@ public class WidgetInc : BuildData
            .UseInitFunction()
            .UseGenerateEarly()
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
-           .UseGenerateEarly(method =>
-                {
-                    var firstProducers = new IfFactory("options.starting_tier_producers == 1");
-                    TieredProducers[1].Aggregate(
-                        firstProducers, (ifFactory, s) => ifFactory.AddCode(CreatePushPrecollected(s))
-                    );
-                    firstProducers.SetElse(new CodeBlockFactory().AddCode(CreatePushPrecollected("Widget Factory")));
-
-                    method.AddCode(firstProducers);
-                }
+           .UseGenerateEarly(method => method.AddCode(
+                    new IfFactory("options.starting_tier_producers == 1")
+                       .ForEachOf(TieredProducers[1], (ifFactory, s) => ifFactory.AddCode(CreatePushPrecollected(s)))
+                       .SetElse(new CodeBlockFactory().AddCode(CreatePushPrecollected("Widget Factory")))
+                )
             )
            .UseCreateRegions()
            .AddCreateItems()
@@ -192,5 +181,26 @@ public class WidgetInc : BuildData
             )
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
+    }
+
+    public override string GenerateGraphViz(
+        WorldFactory worldFactory, Dictionary<string, string> associations, Func<string, string> getRule,
+        string[][] locationDoubleArrays
+    )
+    {
+        return new GraphBuilder(GameName)
+              .ForEachOf(
+                   Enumerable.Range(0, 12), (b, i) =>
+                   {
+                       if (i == 0)
+                       {
+                           b.AddConnection("Menu", "Tier 1", "tier[1]");
+                           return;
+                       }
+                       b.AddConnection($"Tier {i}", $"Tier {i + 1}", $"tier[{i + 1}]");
+                   }
+               )
+              .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
+              .GenString();
     }
 }

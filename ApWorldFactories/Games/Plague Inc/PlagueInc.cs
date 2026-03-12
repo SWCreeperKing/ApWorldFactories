@@ -1,4 +1,5 @@
-﻿using CreepyUtil.Archipelago.WorldFactory;
+﻿using ApWorldFactories.Graphviz;
+using CreepyUtil.Archipelago.WorldFactory;
 using static CreepyUtil.Archipelago.WorldFactory.ItemFactory.ItemClassification;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 
@@ -75,16 +76,15 @@ public class PlagueInc : BuildData
 
     public override void Options(WorldFactory _, OptionsFactory options_fact)
     {
-        Diseases.Keys.Aggregate(
-            options_fact, (factory1, disease) => factory1.AddOption(
+        options_fact.ForEachOf(
+            Diseases.Keys,
+            (b, disease) => b.AddOption(
                 disease, "Allow the disease as an item in the multiworld",
                 disease is "Bacteria" ? new DefaultOnToggle() : new Toggle()
             )
-        );
-
-        DifficultyData.Aggregate(
-            options_fact,
-            (factory1, data) => factory1.AddOption(
+        ).ForEachOf(
+            DifficultyData,
+            (b, data) => b.AddOption(
                 $"{data.Difficulty} Difficulty", "Allow the difficulty as an item in the multiworld",
                 data.Difficulty.ToLower()[0] is 'c' ? new DefaultOnToggle() : new Toggle()
             )
@@ -128,14 +128,14 @@ public class PlagueInc : BuildData
 
     public override void Locations(WorldFactory _, LocationFactory location_fact)
     {
-        Diseases.Keys.Aggregate(
-            location_fact, (factory1, disease) =>
-                factory1.AddLocations(
-                    $"{disease.LowerReplace()}_techs",
-                    VictoryScores.Where(t => t.Disease == disease).Select(t => (string[])[t.Name, t.Disease]).Concat(
-                        DifficultyVictory.Where(t => t.disease == disease).Select(t => (string[])[t.name, t.disease])
-                    )
+        location_fact.ForEachOf(
+            Diseases.Keys,
+            (b, disease) => b.AddLocations(
+                $"{disease.LowerReplace()}_techs",
+                VictoryScores.Where(t => t.Disease == disease).Select(t => (string[])[t.Name, t.Disease]).Concat(
+                    DifficultyVictory.Where(t => t.disease == disease).Select(t => (string[])[t.name, t.disease])
                 )
+            )
         );
     }
 
@@ -181,29 +181,22 @@ public class PlagueInc : BuildData
            .AddItem("A Sickly Sensation", Filler)
            .AddCreateItems(method =>
                 {
-                    method.AddCode(CreateItemsFromList("tech_items"));
-
-                    DifficultyData.Aggregate(
-                        method,
-                        (methodFactory, data) => methodFactory.AddCode(
-                            new IfFactory(
-                                $"{data.Difficulty.OptionFormat(suffix: "_difficulty")} and world.starting_diff != \"{data.Difficulty}\""
-                            ).AddCode(
-                                CreateItem(data.Difficulty)
-                            )
-                        )
-                    );
-
-                    Diseases.Keys.Aggregate(
-                        method,
-                        (methodFactory, disease) => methodFactory.AddCode(
-                            new IfFactory(
-                                $"{disease.OptionFormat()} and world.starting_disease != \"{disease}\""
-                            ).AddCode(CreateItem(disease))
-                        )
-                    );
-
-                    method.AddCode(CreateItemsFillRemainingWithItem("A Sickly Sensation"));
+                    method.AddCode(CreateItemsFromList("tech_items"))
+                          .ForEachOf(
+                               DifficultyData,
+                               data => method.AddCode(
+                                   new IfFactory(
+                                       $"{data.Difficulty.OptionFormat(suffix: "_difficulty")} and world.starting_diff != \"{data.Difficulty}\""
+                                   ).AddCode(CreateItem(data.Difficulty))
+                               )
+                           ).ForEachOf(
+                               Diseases.Keys,
+                               disease => method.AddCode(
+                                   new IfFactory(
+                                       $"{disease.OptionFormat()} and world.starting_disease != \"{disease}\""
+                                   ).AddCode(CreateItem(disease))
+                               )
+                           ).AddCode(CreateItemsFillRemainingWithItem("A Sickly Sensation"));
                 }
             );
     }
@@ -228,25 +221,22 @@ public class PlagueInc : BuildData
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
-        region_fact.AddRegions(Diseases.Keys.ToArray());
-
-        Diseases.Keys.Aggregate(
-            region_fact,
-            (factory1, disease) => factory1.AddConnectionCompiledRule(
-                                                "Menu", disease, $"has[\"{disease}\"]",
-                                                condition: disease.OptionFormat()
-                                            ).AddLocationsFromList(
-                                                $"{disease.LowerReplace()}_techs", condition: disease.OptionFormat()
-                                            )
-                                           .AddEventLocations(
-                                                disease.OptionFormat(),
-                                                DifficultyVictory.Where(t => t.disease == disease).Select(t
-                                                    => new EventLocationData(
-                                                        t.disease, $"Event: {t.name}", "Victory", t.name
-                                                    )
-                                                ).ToArray()
-                                            )
-        );
+        region_fact.AddRegions(Diseases.Keys.ToArray())
+                   .ForEachOf(
+                        Diseases.Keys,
+                        (b, disease)
+                            => b.AddConnectionCompiledRule(
+                                     "Menu", disease, $"has[\"{disease}\"]", condition: disease.OptionFormat()
+                                 ).AddLocationsFromList(
+                                     $"{disease.LowerReplace()}_techs", condition: disease.OptionFormat()
+                                 )
+                                .AddEventLocations(
+                                     disease.OptionFormat(),
+                                     DifficultyVictory.Where(t => t.disease == disease).Select(t
+                                         => new EventLocationData(t.disease, $"Event: {t.name}", "Victory", t.name)
+                                     ).ToArray()
+                                 )
+                    );
     }
 
     public override void Init(WorldFactory _, WorldInitFactory init_fact)
@@ -278,5 +268,24 @@ public class PlagueInc : BuildData
            .UseFillSlotData(new Dictionary<string, string> { ["victories_needed"] = "int(self.victories_needed)" })
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
+    }
+
+    public override string GenerateGraphViz(
+        WorldFactory worldFactory, Dictionary<string, string> associations, Func<string, string> getRule,
+        string[][] locationDoubleArrays
+    )
+    {
+        return new GraphBuilder(GameName)
+              .ForEachOf(
+                   Diseases.Keys,
+                   (b, disease) => b.AddConnection("Menu", disease, $"has[\"{disease}\"]").ForEachOf(
+                       DifficultyVictory.Where(t => t.disease == disease),
+                       t => b.AddLocation(
+                           t.disease, new GraphLocation($"Event: {t.name}", getRule(t.name), true, "Victory")
+                       )
+                   )
+               )
+              .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
+              .GenString();
     }
 }

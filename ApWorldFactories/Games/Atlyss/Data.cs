@@ -55,7 +55,7 @@ public readonly struct QuestData(DataArray param)
 
         if (PrevQuest is not "") rules.Add($"quest[\"{PrevQuest}\"]");
 
-        if (LogicNotes.Trim() is not "")
+        if (LogicNotes.Trim() is not "") 
             rules.Add(
                 $"{LogicNotes.Replace("+", "and").Replace("Needs Any", $"any_area[{areas}]").Replace("Requires All", $"all_areas[{areas}]").Trim()}"
             );

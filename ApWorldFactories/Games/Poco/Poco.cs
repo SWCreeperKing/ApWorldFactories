@@ -1,4 +1,5 @@
-﻿using CreepyUtil.Archipelago.WorldFactory;
+﻿using ApWorldFactories.Graphviz;
+using CreepyUtil.Archipelago.WorldFactory;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 
 namespace ApWorldFactories.Games.Poco;
@@ -51,37 +52,33 @@ public class Poco : BuildData
     public override void Rules(WorldFactory _, RuleFactory rule_fact)
     {
         rule_fact.AddLogicFunction("has", "has_item", StateHas("item", stringify: false), "item")
-                 .AddLogicFunction("quest", "done_quest", StateHas("f\"{quest}'s Quest Completion\"", stringify:false), "quest")
-                 .AddLogicRules(
-                      LocationData.Where(data => data.Requirements.Any()).ToDictionary(
-                          data => data.Location, data => data.GenRule()
-                      )
+                 .AddLogicFunction(
+                      "quest", "done_quest", StateHas("f\"{quest}'s Quest Completion\"", stringify: false), "quest"
                   )
                  .AddLogicRules(
-                      NpcQuestData.ToDictionary(data => $"Complete {data.NpcName}'s Quest", data => data.GenRule())
+                      LocationData.Where(data => data.Requirements.Length != 0 || data.QuestRequirements.Length != 0)
+                                  .ToDictionary(
+                                       data => data.Location, data => data.GenRule()
+                                   )
+                  )
+                 .AddLogicRules(
+                      NpcQuestData.ToDictionary(data => data.QuestName, data => data.GenRule())
                   );
     }
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
-        region_fact.AddRegions(RegionData.Select(data => data.Region).Distinct().ToArray());
-
-        RegionData.Aggregate(
-            region_fact,
-            (factory, data) => factory.AddConnectionCompiledRule(data.ConnectsFrom, data.Region, data.GenRule())
-        );
-
-        region_fact.AddLocationsFromList("locations");
-
-        NpcQuestData.Aggregate(
-            region_fact,
-            (factory, data) => factory.AddEventLocation(
-                new EventLocationData(
-                    data.Area, $"Complete {data.NpcName}'s Quest", $"{data.NpcName}'s Quest Completion",
-                    $"Complete {data.NpcName}'s Quest"
-                )
-            )
-        );
+        region_fact.AddRegions(RegionData.Select(data => data.Region).Distinct().ToArray())
+                   .ForEachOf(
+                        RegionData,
+                        (b, data) => b.AddConnectionCompiledRule(data.ConnectsFrom, data.Region, data.GenRule())
+                    ).AddLocationsFromList("locations")
+                   .ForEachOf(
+                        NpcQuestData,
+                        (b, data) => b.AddEventLocation(
+                            new EventLocationData(data.Area, data.QuestName, data.QuestItem, data.QuestName)
+                        )
+                    );
     }
 
     public override void Init(WorldFactory worldFactory, WorldInitFactory init_fact)
@@ -91,10 +88,9 @@ public class Poco : BuildData
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
            .UseCreateRegions()
            .AddCreateItems()
-           .UseSetRules(method => method
-               .AddCode(
+           .UseSetRules(method => method.AddCode(
                     CreateGoalCondition(
-                        string.Join(" and ", NpcQuestData.Select(data => $"has[\"{data.NpcName}'s Quest Completion\"]")),
+                        string.Join(" and ", NpcQuestData.Select(data => $"has[\"{data.QuestItem}\"]")),
                         worldFactory.GetRuleFactory()
                     )
                 )
@@ -105,5 +101,25 @@ public class Poco : BuildData
             )
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
+    }
+
+    public override string GenerateGraphViz(
+        WorldFactory worldFactory, Dictionary<string, string> associations, Func<string, string> getRule,
+        string[][] locationDoubleArrays
+    )
+    {
+        return new GraphBuilder(GameName)
+              .AddRegions(RegionData.Select(data => data.Region).Distinct().ToArray())
+              .ForEachOf(
+                   RegionData, (b, data) => b.AddConnection(data.ConnectsFrom, data.Region, data.GenRule())
+               )
+              .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
+              .ForEachOf(
+                   NpcQuestData,
+                   (b, data) => b.AddEventLocation(
+                       data.Area, getRule, data.QuestName, data.QuestName, data.QuestItem
+                   )
+               )
+              .GenString();
     }
 }

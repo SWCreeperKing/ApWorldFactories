@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="CreepyUtil.Archipelago.WorldFactory" Version="0.1.20" />
+      <PackageReference Include="CreepyUtil.Archipelago.WorldFactory" Version="0.1.22.2" />
       <PackageReference Include="CreepyUtil.ClrCnsl" Version="0.2.0" />
       <PackageReference Include="CreepyUtil.ClrCnsl.Prompts" Version="0.2.0" />
       <PackageReference Include="CreepyUtil.Pos" Version="0.2.0" />
@@ -16,6 +16,8 @@
 
     <ItemGroup>
       <Folder Include="Output\Atlyss\" />
+      <Folder Include="Output\Graph Output\" />
+      <Folder Include="Output\Raw Graph Data\" />
       <Folder Include="Spreadsheets\" />
     </ItemGroup>
 

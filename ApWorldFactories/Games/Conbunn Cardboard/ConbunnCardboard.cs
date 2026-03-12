@@ -1,4 +1,5 @@
 ﻿using ApWorldFactories.Games.ConbunnCardboard;
+using ApWorldFactories.Graphviz;
 using CreepyUtil.Archipelago.WorldFactory;
 using static CreepyUtil.Archipelago.WorldFactory.ItemFactory.ItemClassification;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
@@ -27,7 +28,7 @@ public class ConbunnCardboard : BuildData
 
     public override void RunShenanigans()
     {
-        GetSpreadsheet("main")
+        GetSpreadsheet()
            .ReadTable(new RegionDataCreator(), out RegionData)
            .ReadTable(out LocationData).SkipColumn()
            .ReadTable(out AbilityData).SkipColumn()
@@ -112,19 +113,16 @@ public class ConbunnCardboard : BuildData
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
-        region_fact.AddRegions(RegionData.Select(data => data.Region).ToArray());
-
-        RegionData.Aggregate(
-            region_fact, (factory1, data)
-                =>
-            {
-                var rule = data.GenRule;
-                return rule is not "" ? factory1.AddConnectionCompiledRule(data.BackRegion, data.Region, rule)
-                    : factory1.AddConnection(data.BackRegion, data.Region);
-            }
-        );
-
-        region_fact.AddLocationsFromList("coins")
+        region_fact.AddRegions(RegionData.Select(data => data.Region).ToArray())
+                   .ForEachOf(
+                        RegionData, (b, data) =>
+                        {
+                            var rule = data.GenRule;
+                            if (rule is not "") b.AddConnectionCompiledRule(data.BackRegion, data.Region, rule);
+                            else b.AddConnection(data.BackRegion, data.Region);
+                        }
+                    )
+                   .AddLocationsFromList("coins")
                    .AddLocationsFromList("cds")
                    .AddLocationsFromList("skins")
                    .AddEventLocationsFromList("coins", item: "\"Real Coin\"");
@@ -148,5 +146,22 @@ public class ConbunnCardboard : BuildData
             )
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
+    }
+
+    public override string GenerateGraphViz(
+        WorldFactory worldFactory, Dictionary<string, string> associations, Func<string, string> getRule,
+        string[][] locationDoubleArrays
+    )
+    {
+        return new GraphBuilder(GameName)
+              .ForEachOf(RegionData, (b, data) => b.AddConnection(data.BackRegion, data.Region, data.GenRule))
+              .AddLocationsFromDoubleArray(locationDoubleArrays, getRule).ForEachOf(
+                   LocationData.Where(data => data.IsCoin),
+                   (b, data) => b.AddEventLocation(
+                       RegionMap[data.Region], getRule, $"Event: {LocationIdMap[data.Id]}", LocationIdMap[data.Id],
+                       "Real Coin"
+                   )
+               )
+              .GenString();
     }
 }

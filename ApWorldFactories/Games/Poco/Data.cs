@@ -39,6 +39,9 @@ public readonly struct NpcQuestData(DataArray param)
     [Mark] public readonly string Area = param;
     [Mark] public readonly string[] QuestRequirements = param;
 
+    public string QuestName => $"Complete {NpcName}'s Quest";
+    public string QuestItem => $"{NpcName}'s Quest Completion";
+    
     public string GenRule() => string.Join(
         " and ",
         Requirements.Select(item => $"has[\"{item}\"]").Concat(QuestRequirements.Select(quest => $"quest[\"{quest}\"]"))

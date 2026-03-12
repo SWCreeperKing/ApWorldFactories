@@ -1,4 +1,5 @@
-﻿using CreepyUtil.Archipelago.WorldFactory;
+﻿using ApWorldFactories.Graphviz;
+using CreepyUtil.Archipelago.WorldFactory;
 using static CreepyUtil.Archipelago.WorldFactory.ItemFactory.ItemClassification;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 
@@ -55,7 +56,7 @@ public class SlimeRancher : BuildData
                                                          );
         FillerItems = ItemAmountData.Where(data => data.ProgType is "filler").Select(data => data.Item).ToArray();
 
-        GetSpreadsheet("main")
+        GetSpreadsheet()
            .ReadTable(new InteractableCreator(Zones), out RawInteractables).SkipColumn()
            .ReadTable(new GateCreator(), out Gates).SkipColumn()
            .ReadTable(new GordoCreator(), out Gordos).SkipColumn()
@@ -158,7 +159,8 @@ public class SlimeRancher : BuildData
     {
         item_fact
            .AddItemListVariable(
-                "region_unlocks", Progression, true, true, Zones.Skip(2).Select(zone => $"Region Unlock: {zone}").ToArray()
+                "region_unlocks", Progression, true, true,
+                Zones.Skip(2).Select(zone => $"Region Unlock: {zone}").ToArray()
             )
            .AddItemCountVariable("non_progressive_useful_items", NonProgressiveUsefulItemCount, Useful)
            .AddItemCountVariable("progressive_useful_item_count", ProgressiveUsefulItemCount, Useful)
@@ -211,61 +213,60 @@ public class SlimeRancher : BuildData
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
-        region_fact.AddRegions(BackwardsConnections.Keys.ToArray());
-
-        BackwardsConnections
-           .Aggregate(
-                region_fact, (factory1, zoneKv) =>
-                {
-                    if (zoneKv.Key is "Ancient Ruins")
-                    {
-                        return factory1.AddConnectionCompiledRule(zoneKv.Value[0], zoneKv.Key, "ToRuins");
-                    }
-
-                    foreach (var backConnection in zoneKv.Value)
-                    {
-                        if (backConnection is "Menu")
+        region_fact.AddRegions(BackwardsConnections.Keys.ToArray())
+                   .ForEachOf(
+                        BackwardsConnections, (b, zoneKv) =>
                         {
-                            factory1.AddConnection("Menu", zoneKv.Key);
-                            continue;
+                            if (zoneKv.Key is "Ancient Ruins")
+                            {
+                                b.AddConnectionCompiledRule(zoneKv.Value[0], zoneKv.Key, "ToRuins");
+                                return;
+                            }
+
+                            foreach (var backConnection in zoneKv.Value)
+                            {
+                                if (backConnection is "Menu")
+                                {
+                                    b.AddConnection("Menu", zoneKv.Key);
+                                    continue;
+                                }
+                                b.AddConnectionCompiledRule(backConnection, zoneKv.Key, $"region[\"{zoneKv.Key}\"]");
+                            }
                         }
+                    ).ForEachOf(
+                        Upgrades, (b, upgrade) =>
+                        {
+                            var condition = "";
 
-                        factory1.AddConnectionCompiledRule(backConnection, zoneKv.Key, $"region[\"{zoneKv.Key}\"]");
-                    }
+                            if (upgrade.Rule is "7z") { condition = "world.options.include_7z"; }
+                            else if (upgrade.Name.Contains("Treasure Cracker"))
+                            {
+                                condition
+                                    = $"\"{upgrade.Name}\" > f\"Buy Personal Upgrade (Treasure Cracker lv.{{world.options.treasure_cracker_checks}})\"";
+                            }
 
-                    return factory1;
-                }
-            );
-
-        foreach (var upgrade in Upgrades)
-        {
-            var condition = "";
-
-            if (upgrade.Rule is "7z") { condition = "world.options.include_7z"; }
-            else if (upgrade.Name.Contains("Treasure Cracker"))
-            {
-                condition
-                    = $"\"{upgrade.Name}\" > f\"Buy Personal Upgrade (Treasure Cracker lv.{{world.options.treasure_cracker_checks}})\"";
-            }
-
-            region_fact.AddLocation(new LocationData("Upgrades", upgrade.Name), condition);
-        }
-
-        region_fact
-           .AddLocationsFromList("interactables")
-           .AddEventLocations(
-                "world.options.goal_type == 0",
-                Interactables
-                   .Where(inter => inter.Name.Contains("Hobson's Note"))
-                   .Select(inter => new EventLocationData(inter.Area, $"Read: {inter.Name}", "Note Read", inter.Name))
-                   .ToArray()
-            )
-           .AddLocationsFromList("dlc_interactables", condition: "world.options.enable_stylish_dlc_treasure_pods")
-           .AddLocationsFromList("corporate_locations", condition: "world.options.include_7z")
-           .AddEventLocationsFromList(
-                "corporate_locations", "f\"Bought: {location[0]}\"", "\"7Zee Bought\"",
-                condition: "world.options.include_7z and world.options.goal_type == 1"
-            );
+                            b.AddLocation(new LocationData("Upgrades", upgrade.Name), condition);
+                        }
+                    )
+                   .AddLocationsFromList("interactables")
+                   .AddEventLocations(
+                        "world.options.goal_type == 0",
+                        Interactables
+                           .Where(inter => inter.Name.Contains("Hobson's Note"))
+                           .Select(inter => new EventLocationData(
+                                    inter.Area, $"Read: {inter.Name}", "Note Read", inter.Name
+                                )
+                            )
+                           .ToArray()
+                    )
+                   .AddLocationsFromList(
+                        "dlc_interactables", condition: "world.options.enable_stylish_dlc_treasure_pods"
+                    )
+                   .AddLocationsFromList("corporate_locations", condition: "world.options.include_7z")
+                   .AddEventLocationsFromList(
+                        "corporate_locations", "f\"Bought: {location[0]}\"", "\"7Zee Bought\"",
+                        condition: "world.options.include_7z and world.options.goal_type == 1"
+                    );
     }
 
     public override void Init(WorldFactory _, WorldInitFactory init_fact)
@@ -299,5 +300,47 @@ public class SlimeRancher : BuildData
             )
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
+    }
+
+    public override string GenerateGraphViz(
+        WorldFactory worldFactory, Dictionary<string, string> associations, Func<string, string> getRule,
+        string[][] locationDoubleArrays
+    )
+    {
+        return new GraphBuilder(GameName)
+              .ForEachOf(
+                   BackwardsConnections, (b, zoneKv) =>
+                   {
+                       if (zoneKv.Key is "Ancient Ruins")
+                       {
+                           b.AddConnection(zoneKv.Value[0], zoneKv.Key, "ToRuins");
+                           return;
+                       }
+
+                       foreach (var backConnection in zoneKv.Value)
+                       {
+                           if (backConnection is "Menu")
+                           {
+                               b.AddConnection("Menu", zoneKv.Key);
+                               continue;
+                           }
+                           b.AddConnection(backConnection, zoneKv.Key, $"region[\"{zoneKv.Key}\"]");
+                       }
+                   }
+               )
+              .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
+              .AddLocations("Upgrades", getRule, Upgrades.Select(up => up.Name).ToArray())
+              .ForEachOf(
+                   Interactables
+                      .Where(inter => inter.Name.Contains("Hobson's Note")),
+                   (b, inter) => b.AddEventLocation(inter.Area, getRule, $"Read: {inter.Name}", inter.Name, "Note Read")
+               )
+              .ForEachOf(
+                   CorporateLocations,
+                   (b, line) => b.AddEventLocation(
+                       line.Area, getRule, $"Bought: {line.Location}", line.Location, "7Zee Bought"
+                   )
+               )
+              .GenString();
     }
 }

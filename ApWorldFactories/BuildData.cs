@@ -1,5 +1,5 @@
-﻿using System.Reflection;
-using CreepyUtil;
+﻿using System.Diagnostics;
+using System.Reflection;
 using CreepyUtil.Archipelago.WorldFactory;
 using CreepyUtil.ClrCnsl;
 using CreepyUtil.Pos;
@@ -8,6 +8,8 @@ namespace ApWorldFactories;
 
 public abstract class BuildData
 {
+    public const string RawOutputPath = "../../../Output/";
+    public const string DotCommandPrefix = "E:/Graphviz-14.1.3-win64/bin/dot.exe";
     public const string DDrive = "D:/Programs/steam/steamapps/common";
     public const string FDrive = "F:/SteamLibrary/steamapps/common";
 
@@ -26,7 +28,7 @@ public abstract class BuildData
     public virtual string GamePath => SteamDirectory is "" ? "" : $"{SteamDirectory}/{GameName}";
 
     public virtual string WriteOutputDirectory => SteamDirectory is "" || ModFolderName is ""
-        ? $"../../../Output/{GameName}"
+        ? $"{RawOutputPath}{GameName}"
         : $"{SteamDirectory}/{GameName}/Mods/{ModFolderName}/Data";
 
     public virtual string ApWorldPath => $"E:/coding projects/python/Deathipelago/worlds/{ApWorldName}";
@@ -137,6 +139,62 @@ public abstract class BuildData
         PrintProgress(cur, i++, stepCount, "Processing Items    ");
         ProcessItemList(itemList);
         PrintProgress(cur, i++, stepCount, "World Built!    ");
+
+        ClrCnsl.WriteLine("Checking for Graph Gen");
+
+        var associations = rule_fact.GetRuleMapAssociations();
+        Func<string, string> getRule = s => associations.GetValueOrDefault(s, "");
+        var doubleArr = location_fact.ReadLocationsDoubleArray().SelectMany(kv => kv.Value.Select(arr => arr).ToArray())
+                                     .ToArray();
+        
+        var graph = GenerateGraphViz(builder, associations, getRule, doubleArr);
+
+        if (graph is "")
+        {
+            ClrCnsl.WriteLine("No Graph Detected :(");
+            return;
+        }
+
+        ClrCnsl.WriteLine("Writing Graph Data");
+        if (!Directory.Exists($"{RawOutputPath}/Raw Graph Data"))
+            Directory.CreateDirectory($"{RawOutputPath}/Raw Graph Data");
+        if (!Directory.Exists($"{RawOutputPath}/Graph Output"))
+            Directory.CreateDirectory($"{RawOutputPath}/Graph Output");
+
+        File.WriteAllText($"{RawOutputPath}/Raw Graph Data/{GameName}.dot", graph);
+
+        ClrCnsl.WriteLine("Generating Graph");
+
+        var curDir = Directory.GetCurrentDirectory();
+        var cmd1 = $"cd {curDir}";
+        var cmd2
+            = $"\"{DotCommandPrefix}\" -Tpng \"{RawOutputPath}Raw Graph Data/{GameName}.dot\" > \"{RawOutputPath}Graph Output/{GameName}.png\"";
+
+        var graphProcess = new ProcessStartInfo
+        {
+            FileName = "cmd.exe", RedirectStandardOutput = true, RedirectStandardError = true,
+            UseShellExecute = false, CreateNoWindow = true, RedirectStandardInput = true
+        };
+
+        using var process = new Process();
+        process.StartInfo = graphProcess;
+        process.Start();
+
+        using var sw = process.StandardInput;
+        if (sw.BaseStream.CanWrite)
+        {
+            ClrCnsl.WriteLine($"Running: [#darkgray]{cmd1}");
+            sw.WriteLine(cmd1);
+            ClrCnsl.WriteLine($"Running: [#darkgray]{cmd2}");
+            sw.WriteLine(cmd2);
+            sw.WriteLine("exit");
+        }
+
+        var output = process.StandardOutput.ReadToEnd();
+        if (output.Trim() is not "") ClrCnsl.WriteLine($"Output: [#darkgray]{output}");
+        var error = process.StandardError.ReadToEnd();
+
+        ClrCnsl.WriteLine(!string.IsNullOrEmpty(error) ? $"[#red]Error: {error}" : "Graph Generated");
     }
 
     public abstract void RunShenanigans();
@@ -178,6 +236,8 @@ public abstract class BuildData
     public virtual void ProcessItemList(string[] itemList)
     {
     }
+
+    public virtual string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations, Func<string, string> getRule, string[][] locationDoubleArrays) => "";
 }
 
 public class DataCreator<T> : CsvTableRowCreator<T>
@@ -209,6 +269,18 @@ public static class Extensions
 
     public static CsvFactory ReadTable<T>(this CsvFactory factory, out T[] table)
         => factory.ReadTable(new DataCreator<T>(), out table);
+
+    public static T ForEachOf<T, TV>(this T t, IEnumerable<TV> arr, Action<TV> action)
+    {
+        foreach (var v in arr) action(v);
+        return t;
+    }
+
+    public static T ForEachOf<T, TV>(this T t, IEnumerable<TV> arr, Action<T, TV> action)
+    {
+        foreach (var v in arr) action(t, v);
+        return t;
+    }
 }
 
 [AttributeUsage(AttributeTargets.Field)]

@@ -1,4 +1,5 @@
-﻿using CreepyUtil.Archipelago.WorldFactory;
+﻿using ApWorldFactories.Graphviz;
+using CreepyUtil.Archipelago.WorldFactory;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 
 namespace ApWorldFactories.Games.The_WereCleaner;
@@ -25,7 +26,7 @@ public class WereCleaner : BuildData
 
     public override void RunShenanigans()
     {
-        GetSpreadsheet("main")
+        GetSpreadsheet()
            .ReadTable(out LevelData).SkipColumn()
            .ReadTable(out ItemData).SkipColumn()
            .ReadTable(out NpcData);
@@ -112,8 +113,8 @@ public class WereCleaner : BuildData
            .AddRegions("Levels", "Collectibles", "Killsanity")
            .AddConnection("Menu", "Levels")
            .AddConnection("Menu", "Collectibles")
-            // .AddConnection("Menu", "Killsanity", condition: "world.options.kill_sanity")
            .AddConnection("Menu", "Killsanity")
+            // .AddConnection("Menu", "Killsanity", condition: "world.options.kill_sanity")
            .AddLocationsFromList("starting_checks")
            .AddLocationsFromList("collectibles")
            .AddLocationsFromList("levels")
@@ -138,5 +139,24 @@ public class WereCleaner : BuildData
            .UseFillSlotData(new Dictionary<string, string> { ["Kyle"] = "str(\"Best Boi\")" })
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
+    }
+
+    public override string GenerateGraphViz(
+        WorldFactory worldFactory, Dictionary<string, string> associations, Func<string, string> getRule,
+        string[][] locationDoubleArrays
+    )
+    {
+        return new GraphBuilder(GameName)
+              .AddRegions("Levels", "Collectibles", "Killsanity")
+              .AddConnection("Menu", "Levels")
+              .AddConnection("Menu", "Collectibles")
+              .AddConnection("Menu", "Killsanity")
+              .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
+              .ForEachOf(
+                   locationDoubleArrays.Where(arr => arr[1] is "Levels"),
+                   (b, strings) => b.AddLocation(
+                       strings[1], getRule, $"Beat: {strings[0]}", true, "Nights Survived"
+                   )
+               ).GenString();
     }
 }

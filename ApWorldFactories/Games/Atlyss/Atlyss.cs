@@ -1,6 +1,10 @@
-﻿using CreepyUtil.Archipelago.WorldFactory;
+﻿using ApWorldFactories.Games.Poco;
+using ApWorldFactories.Graphviz;
+using CreepyUtil.Archipelago.WorldFactory;
 using static CreepyUtil.Archipelago.WorldFactory.ItemFactory.ItemClassification;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
+using LocationData = CreepyUtil.Archipelago.WorldFactory.LocationData;
+using RegionData = CreepyUtil.Archipelago.WorldFactory.RegionData;
 
 namespace ApWorldFactories.Games.Atlyss;
 
@@ -27,7 +31,7 @@ public class Atlyss : BuildData
 
     public override void RunShenanigans()
     {
-        GetSpreadsheet("main")
+        GetSpreadsheet()
            .ReadTable(out LocationLevelData).SkipColumn()
            .ReadTable(out EnemyListData).SkipColumn()
            .ReadTable(out QuestData).SkipColumn()
@@ -128,30 +132,32 @@ public class Atlyss : BuildData
 
     public override void Locations(WorldFactory _, LocationFactory location_fact)
     {
-        location_fact.AddLocations(
-                          "quests",
-                          QuestData.Where(data => data.Enabled)
-                                   .Select(data => (string[])[data.Quest, data.AreaAccepted])
-                      )
-                     .AddLocations(
-                          "levels", Enumerable.Range(1, 16).Select(i => (string[])[$"Reach Level {i * 2}", "Menu"])
-                      )
-                     .AddLocations(
-                          "merchants",
-                          MerchantData.SelectMany(data
-                              => Enumerable.Range(1, 5).Select(i => (string[])
-                                  [$"Buy Item #{i} from {data.Name}", data.Area]
-                              )
-                          )
-                      ).AddLocations(
-                          "professions",
-                          ProfessionsData.Select(data => data.Profession).Distinct().SelectMany(s
-                              => Enumerable.Range(1, 10).Select(i => (string[])[$"{s} Lv. {i}", "Menu"])
-                          )
-                      ).AddLocations(
-                          "achievements",
-                          AchievementData.Where(data => data.Enabled).Select(data => (string[])[data.Name, data.Area])
-                      );
+        location_fact
+           .AddLocations(
+                "quests",
+                QuestData.Where(data => data.Enabled)
+                         .Select(data => (string[])[data.Quest, data.AreaAccepted])
+            )
+           .AddLocations(
+                "levels", Enumerable.Range(1, 16).Select(i => (string[])[$"Reach Level {i * 2}", "Menu"])
+            )
+           .AddLocations(
+                "merchants",
+                MerchantData.SelectMany(data
+                    => Enumerable.Range(1, 5).Select(i => (string[])
+                        [$"Buy Item #{i} from {data.Name}", data.Area]
+                    )
+                )
+            ).AddLocations(
+                "professions",
+                ProfessionsData.Select(data => data.Profession).Distinct().SelectMany(s
+                    => Enumerable.Range(1, 10).Select(i => (string[])[$"{s} Lv. {i}", "Menu"])
+                )
+            ).AddLocations(
+                "achievements",
+                AchievementData.Where(data => data.Enabled)
+                               .Select(data => (string[])[data.Name, data.Area])
+            );
     }
 
     public override void Items(WorldFactory _, ItemFactory item_fact)
@@ -172,69 +178,66 @@ public class Atlyss : BuildData
             "Bandit", ClassType.Bandit, progressiveItemMapMd, item_fact, progressiveItemMap, out var addBandit
         );
 
-        ItemData.Where(data => data.ItemPoolCount > 0)
-                .GroupBy(data => data.Classification)
-                .ToDictionary(
-                     g => g.Key, g => g.ToDictionary(data => data.Name, data => data.ItemPoolCount)
-                 ).Aggregate(
-                     item_fact,
-                     (factory, pair) => factory.AddItemCountVariable(
-                         $"item_counts_{pair.Key}".ToLower(), pair.Value, pair.Key, addToList: false
-                     )
-                 );
-
-        ItemData.GroupBy(data => data.Classification).Aggregate(
-            item_fact,
-            (factory, data) => factory.AddItemListVariable(
-                $"{data.Key}_items".ToLower(), data.Key, list: data.Select(d => d.Name).ToArray()
+        item_fact
+           .ForEachOf(
+                ItemData.Where(data => data.ItemPoolCount > 0).GroupBy(data => data.Classification).ToDictionary(
+                    g => g.Key, g => g.ToDictionary(data => data.Name, data => data.ItemPoolCount)
+                ),
+                pair => item_fact.AddItemCountVariable(
+                    $"item_counts_{pair.Key}".ToLower(), pair.Value, pair.Key, addToList: false
+                )
             )
-        );
-
-        item_fact.AddItemCountVariable(
-                      "filler_weights",
-                      ItemData.Where(data => data.FillerWeight > 0).ToDictionary(
-                          data => data.Name, data => data.FillerWeight
-                      ),
-                      Deprioritized, addToList: false
-                  )
-                 .AddItemListVariable(
-                      "portals", Progression,
-                      list: LocationLevelData
-                           .Select(data
-                                => $"{(data.Area.StartsWith("Sanctum Catacombs") ? "Catacombs" : data.Area)} Portal"
+           .ForEachOf(
+                ItemData.GroupBy(data => data.Classification),
+                data => item_fact.AddItemListVariable(
+                    $"{data.Key}_items".ToLower(), data.Key, list: data.Select(d => d.Name).ToArray()
+                )
+            )
+           .AddItemCountVariable(
+                "filler_weights",
+                ItemData.Where(data => data.FillerWeight > 0).ToDictionary(
+                    data => data.Name, data => data.FillerWeight
+                ),
+                Deprioritized, addToList: false
+            )
+           .AddItemListVariable(
+                "portals", Progression,
+                list: LocationLevelData
+                     .Select(data
+                          => $"{(data.Area.StartsWith("Sanctum Catacombs") ? "Catacombs" : data.Area)} Portal"
+                      )
+                     .Distinct()
+                     .ToArray()
+            )
+           .AddItem("Progressive Portal", Progression)
+           .AddCreateItems(factory =>
+                factory
+                   .AddCode("random = world.random")
+                   .AddCode(CreateItemsFromMapCountGenCode("any_progressives"))
+                   .AddCode(addFighter)
+                   .AddCode(addMystic)
+                   .AddCode(addBandit)
+                   .AddCode(CreateItemsFromMapCountGenCode("item_counts_useful"))
+                   .AddCode(CreateItemsFromMapCountGenCode("item_counts_filler"))
+                   .AddCode(CreateItemsFromMapCountGenCode("item_counts_progression"))
+                   .AddCode(
+                        new IfFactory("options.random_portals").AddCode(CreateItemsFromList("portals")).SetElse(
+                            new CodeBlockFactory().AddCode(
+                                CreateItemsFromCountGenCode(
+                                    $"{LocationLevelData.Max(data => data.ProgressivePortalCount)}",
+                                    "Progressive Portal"
+                                )
                             )
-                           .Distinct()
-                           .ToArray()
-                  )
-                 .AddItem("Progressive Portal", Progression)
-                 .AddCreateItems(factory =>
-                      factory
-                         .AddCode("random = world.random")
-                         .AddCode(CreateItemsFromMapCountGenCode("any_progressives"))
-                         .AddCode(addFighter)
-                         .AddCode(addMystic)
-                         .AddCode(addBandit)
-                         .AddCode(CreateItemsFromMapCountGenCode("item_counts_useful"))
-                         .AddCode(CreateItemsFromMapCountGenCode("item_counts_filler"))
-                         .AddCode(CreateItemsFromMapCountGenCode("item_counts_progression"))
-                         .AddCode(
-                              new IfFactory("options.random_portals").AddCode(CreateItemsFromList("portals")).SetElse(
-                                  new CodeBlockFactory().AddCode(
-                                      CreateItemsFromCountGenCode(
-                                          $"{LocationLevelData.Max(data => data.ProgressivePortalCount)}",
-                                          "Progressive Portal"
-                                      )
-                                  )
-                              )
-                          )
-                         .AddCode("filler_items = [key for key, value in filler_weights.items()]")
-                         .AddCode("filler_weightings = [value for key, value in filler_weights.items()]")
-                         .AddCode(
-                              CreateItemsFillRemainingWithItem(
-                                  "random.choices(filler_items, filler_weightings)[0]", false
-                              )
-                          )
-                  );
+                        )
+                    )
+                   .AddCode("filler_items = [key for key, value in filler_weights.items()]")
+                   .AddCode("filler_weightings = [value for key, value in filler_weights.items()]")
+                   .AddCode(
+                        CreateItemsFillRemainingWithItem(
+                            "random.choices(filler_items, filler_weightings)[0]", false
+                        )
+                    )
+            );
 
         WriteData("progressiveItemMap", progressiveItemMap.Select(s => s.Trim('"')));
         WriteData("progressiveItemMap", progressiveItemMapMd, "md");
@@ -305,35 +308,31 @@ public class Atlyss : BuildData
 
     public override void Regions(WorldFactory worldFactory, RegionFactory region_fact)
     {
-        region_fact.AddRegions(LocationLevelData.Select(data => data.Area).ToArray());
-        LocationLevelData.Aggregate(
-            region_fact,
-            (factory, data) => factory.AddConnectionCompiledRule(data.Connection, data.Area, data.GenRule())
-        );
-
-        region_fact.AddLocationsFromList("merchants", condition: "options.shop_sanity")
+        region_fact.AddRegions(LocationLevelData.Select(data => data.Area).ToArray())
+                   .ForEachOf(
+                        LocationLevelData,
+                        (b, data) => b.AddConnectionCompiledRule(data.Connection, data.Area, data.GenRule())
+                    ).AddLocationsFromList("merchants", condition: "options.shop_sanity")
                    .AddLocationsFromList("quests")
                    .AddLocationsFromList("levels")
                    .AddLocationsFromList("professions")
                    .AddLocations(
                         "",
                         AchievementData
-                           .Where(data => data.Enabled && data.Class is ClassType.Any)
+                           .Where(data => data is { Enabled: true, Class: ClassType.Any })
                            .Select(data => new LocationData(data.Area, data.Name))
                            .ToArray()
                     )
                    .AddEventLocationsFromList(
                         "quests", "f\"Quest Completion: {location[0]}\"", "f\"Complete: {location[0]}\""
+                    ).ForEachOf(
+                        AchievementData.Where(data => data is { Enabled: true, Class: not ClassType.Any })
+                                       .GroupBy(data => data.Class),
+                        (b, g) => b.AddLocations(
+                            $"options.is_class(\"{g.Key}\")".ToLower(),
+                            g.Select(data => new LocationData(data.Area, data.Name)).ToArray()
+                        )
                     );
-
-        AchievementData.Where(data => data is { Enabled: true, Class: not ClassType.Any }).GroupBy(data => data.Class)
-                       .Aggregate(
-                            region_fact,
-                            (factory, g) => factory.AddLocations(
-                                $"options.is_class(\"{g.Key}\")".ToLower(),
-                                g.Select(data => new LocationData(data.Area, data.Name)).ToArray()
-                            )
-                        );
     }
 
     public override void Init(WorldFactory factory, WorldInitFactory init_fact)
@@ -490,4 +489,20 @@ public class Atlyss : BuildData
             );
     }
 
+    public override string GenerateGraphViz(
+        WorldFactory worldFactory, Dictionary<string, string> associations, Func<string, string> getRule,
+        string[][] locationDoubleArrays
+    )
+    {
+        return new GraphBuilder(GameName)
+              .ForEachOf(LocationLevelData, (b, data) => b.AddConnection(data.Connection, data.Area, data.GenRule()))
+              .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
+              .ForEachOf(
+                   QuestData.Where(data => data.Enabled),
+                   (b, data) => b.AddEventLocation(
+                       data.AreaAccepted, getRule, $"Quest Completion: {data.Quest}", data.Quest,
+                       $"Complete: {data.Quest}"
+                   )
+               ).GenString();
+    }
 }
