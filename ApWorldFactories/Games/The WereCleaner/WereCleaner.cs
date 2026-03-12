@@ -154,8 +154,8 @@ public class WereCleaner : BuildData
               .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
               .ForEachOf(
                    locationDoubleArrays.Where(arr => arr[1] is "Levels"),
-                   (b, strings) => b.AddLocation(
-                       strings[1], getRule, $"Beat: {strings[0]}", true, "Nights Survived"
+                   (b, strings) => b.AddEventLocation(
+                       strings[1], getRule, $"Beat: {strings[0]}", strings[0], "Nights Survived"
                    )
                ).GenString();
     }

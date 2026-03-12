@@ -22,19 +22,19 @@ Tome of Naivety,Consumable,0,0,Any,Consumable,Useful,Consumable,,,2
 Tome of Unlearning,Consumable,0,0,Any,Consumable,Useful,Consumable,,,2
 Wisdom Potion Pack,Consumable,0,0,Any,Consumable,Filler,Consumable,,1,
 Wisdom Vial Pack,Consumable,0,0,Any,Consumable,Filler,Consumable,,2,
-Black Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,1
-Blue Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,1
-Brown Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,1
-Cyan Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,1
-Green Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,1
-Grey Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,1
-Lime Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,1
-Orange Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,1
-Pink Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,1
-Purple Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,1
-Red Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,1
-White Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,1
-Yellow Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,1
+Black Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,0
+Blue Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,0
+Brown Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,0
+Cyan Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,0
+Green Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,0
+Grey Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,0
+Lime Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,0
+Orange Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,0
+Pink Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,0
+Purple Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,0
+Red Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,0
+White Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,0
+Yellow Dye,Dye,0,0,Any,Cosmetic,Filler,Consumable,,,0
 Wood Sword,Weapon,1,1,Fighter,Common,Useful,One Handed Melee,,,0
 Crypt Blade,Weapon,2,1,Fighter,Common,Useful,One Handed Melee,,,0
 Femur Club,Weapon,2,1,Fighter,Common,Useful,One Handed Melee,,,0

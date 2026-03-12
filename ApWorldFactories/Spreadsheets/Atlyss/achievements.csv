@@ -1,0 +1,21 @@
+Achievment,Area,Level,Class,Subclass,Other Required Items,Include
+A New Journey,Sanctum,0,Any,Any,,TRUE
+Clearing Catacombs (1-6),Sanctum Catacombs lvl 1,1,Any,Any,,TRUE
+Clearing Catacombs (6-12),Sanctum Catacombs lvl 2,6,Any,Any,,TRUE
+Becoming a Fighter,Sanctum,10,Fighter,Any,,TRUE
+Becoming a Mystic,Sanctum,10,Mystic,Any,,TRUE
+Becoming a Bandit,Sanctum,10,Bandit,Any,,TRUE
+Clearing Catacombs (12-18),Sanctum Catacombs lvl 3,12,Any,Any,,TRUE
+Clearing Grove (15-20),Cresent Grove lvl 1,15,Any,Any,,TRUE
+Clearing Grove (20-25),Cresent Grove lvl 2,20,Any,Any,,TRUE
+Judgement,Sanctum,28,Fighter,Paladin,1xExperience Bond,TRUE
+Corrupted Arcana,Sanctum,28,Mystic,Magus,1xExperience Bond,TRUE
+Holier than Thou,Sanctum,28,Mystic,Bishop,1xExperience Bond,TRUE
+Fashion Sense,,0,Any,Any,1xCosmetic Equipment,FALSE
+Altered Vision,Sanctum,0,Any,Any,1xIllusion Stone,TRUE
+Teaming Up,,0,Any,Any,Multiplayer,FALSE
+Trout Master,Sanctum,0,Any,Any,99xSugshrimp,FALSE
+Scaling the Tower,Sanctum,0,Any,Any,,TRUE
+Scaling Stars,Trial of the Stars,15,Any,Any,,TRUE
+Rude!,Sanctum,0,Any,Any,,TRUE
+Skill Student,,0,Any,Any,12xSkill Scrolls,FALSE
