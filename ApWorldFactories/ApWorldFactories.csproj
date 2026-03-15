@@ -8,13 +8,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="CreepyUtil.Archipelago.WorldFactory" Version="0.1.22.2" />
+      <PackageReference Include="CreepyUtil.Archipelago.WorldFactory" Version="0.1.25.1" />
       <PackageReference Include="CreepyUtil.ClrCnsl" Version="0.2.0" />
       <PackageReference Include="CreepyUtil.ClrCnsl.Prompts" Version="0.2.0" />
       <PackageReference Include="CreepyUtil.Pos" Version="0.2.0" />
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Input\Vampire Survivors\" />
       <Folder Include="Output\Atlyss\" />
       <Folder Include="Output\Graph Output\" />
       <Folder Include="Output\Raw Graph Data\" />

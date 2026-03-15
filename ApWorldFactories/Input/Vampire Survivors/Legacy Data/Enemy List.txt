@@ -1,0 +1,288 @@
+Pipeestrello: Mad Forest,Inlaid Library,Gallo Tower,Green Acres,Boss Rash,Whiteout,Carlo Cart,Bat Country,Tiny Bridge,Eudaimonia M.,Mt.Moonspell,Polus Replica
+Zombie: Mad Forest,Green Acres,Eudaimonia M.,Mt.Moonspell
+Skeleton: Mad Forest,Dairy Plant,Gallo Tower,Green Acres,Eudaimonia M.
+Ghost: Mad Forest,Inlaid Library,Gallo Tower,Moongolow,Green Acres,Boss Rash,Whiteout,Astral Stair,Tiny Bridge,Eudaimonia M.,Ode to Castlevania
+Mudman: Mad Forest,Green Acres,Astral Stair
+Mantichana: Mad Forest,Green Acres,Boss Rash
+Flower Wall: Mad Forest,Green Acres,Mt.Moonspell
+Giant Bat: Mad Forest,Inlaid Library,Green Acres,Boss Rash,Carlo Cart,Bat Country,Tiny Bridge,Ode to Castlevania
+Werewolf: Mad Forest,Green Acres,Boss Rash
+Big Mummy: Mad Forest,Inlaid Library,Green Acres,Boss Rash,Astral Stair
+Venus: Mad Forest,Green Acres,Boss Rash
+Dust Elemental: Inlaid Library,Green Acres,Laborratory,Eudaimonia M.
+Sig.ra Rossi: Inlaid Library,Green Acres,Astral Stair
+Musc Musc: Inlaid Library,Green Acres,Boss Rash,Space 54,Laborratory
+Sneaky Head: Inlaid Library,Moongolow,Green Acres,Tiny Bridge
+Mummy: Inlaid Library,Green Acres,Astral Stair,Eudaimonia M.,Ode to Castlevania
+Testa di Mano: Inlaid Library,Gallo Tower,Green Acres,Eudaimonia M.,Room 1665
+Lionhead: Inlaid Library,Green Acres,Boss Rash,Carlo Cart
+Dullahan: Inlaid Library,Green Acres,Ode to Castlevania
+Merdusa: Inlaid Library,Green Acres,Boss Rash
+Undead Witch: Inlaid Library,Green Acres
+Undead Sassy Witch: Inlaid Library,Green Acres,Boss Rash
+Nesufritto: Inlaid Library,Green Acres,Boss Rash
+Skullone: Inlaid Library,Gallo Tower,Green Acres,The Bone Zone,Boss Rash,Tiny Bridge
+Hag: Inlaid Library,Green Acres,Boss Rash
+Merman: Dairy Plant,Moongolow,Green Acres,Boss Rash,Carlo Cart,Laborratory,Eudaimonia M.
+The Stalker: Dairy Plant,Green Acres,The Bone Zone,Boss Rash,Carlo Cart
+Lizard Rook: Dairy Plant,Green Acres,Carlo Cart,Laborratory
+Twin Snakes: Dairy Plant,Green Acres
+Milk Elemental: Dairy Plant,Green Acres,Eudaimonia M.
+Lizard Pawn: Dairy Plant,Green Acres,Carlo Cart,Laborratory,Eudaimonia M.
+Minotaur: Dairy Plant,Green Acres,Boss Rash,Carlo Cart,Laborratory,Ode to Castlevania
+Jellyfish: Dairy Plant,Moongolow,Green Acres,Boss Rash,Laborratory
+Skeleton Ninja: Dairy Plant,Green Acres,The Bone Zone
+Mignotaur: Dairy Plant,Green Acres
+Twin Demons: Dairy Plant,Green Acres,The Bone Zone,Carlo Cart
+Lost Twin: Dairy Plant,Green Acres,The Bone Zone,Carlo Cart,Laborratory
+Melone: Dairy Plant,Green Acres
+Archon Ascia: Dairy Plant,Cappella Magna,Green Acres,Boss Rash
+Archon Lancia: Dairy Plant,Green Acres
+Tritont: Dairy Plant,Green Acres,Boss Rash
+Big Golem: Dairy Plant,Green Acres,Boss Rash,Astral Stair
+Skelewing: Dairy Plant,Gallo Tower,Green Acres,The Bone Zone,Tiny Bridge
+Sword Guardian: Dairy Plant,Green Acres,Boss Rash
+Gallotrice: Dairy Plant,Gallo Tower,Green Acres,Boss Rash,Tiny Bridge,Lake Foscari
+Skullino: Gallo Tower,Green Acres,The Bone Zone,Astral Stair,Tiny Bridge,Eudaimonia M.
+Skulorosso: Gallo Tower,Green Acres,The Bone Zone,Eudaimonia M.
+Scarleton: Gallo Tower,Green Acres,The Bone Zone
+Dragon Shrimp: Gallo Tower,Green Acres,The Bone Zone,Boss Rash
+Undead Mage: Gallo Tower,Green Acres
+Ghiavolo: Gallo Tower,Green Acres
+Bloodbath: Gallo Tower,Green Acres
+Impefinger: Gallo Tower,Green Acres,Carlo Cart,Tiny Bridge
+Harzia: Gallo Tower,Green Acres,Tiny Bridge
+Archon Disco: Gallo Tower,Green Acres,Boss Rash
+Archon Spada: Gallo Tower,Cappella Magna,Green Acres
+Manticore: Gallo Tower,Green Acres,Boss Rash
+Giant Enemy Crab: Gallo Tower,Green Acres,Boss Rash
+Meat Golem: Gallo Tower,Green Acres
+Fallen Cherub: Cappella Magna,Green Acres
+Fallen Cherubbello: Cappella Magna,Green Acres
+Reaper Trainee: Cappella Magna,Green Acres,Tiny Bridge,Eudaimonia M.
+Unknown: Cappella Magna,Green Acres,Boss Rash,Eudaimonia M.
+Tetrabrachia: Cappella Magna,Green Acres,Tiny Bridge
+Succubus: Cappella Magna,Green Acres,Boss Rash,Ode to Castlevania
+Archon Fiamma: Cappella Magna,Green Acres
+Archon Rame: Cappella Magna,Green Acres,Boss Rash,Tiny Bridge
+Archon Oro: Cappella Magna,Green Acres
+Demon Priest: Cappella Magna,Green Acres,Room 1665
+Demon Beast: Cappella Magna,Green Acres
+Archdemon: Cappella Magna,Green Acres,Boss Rash
+Stage Killer: Cappella Magna,Green Acres
+Fallen Throne: Cappella Magna,Green Acres
+Trinacria: Cappella Magna,Green Acres,Boss Rash
+Sad Molisano: Il Molise
+Cute Molisano: Il Molise
+Happy Molisano: Il Molise
+Dead Molisano: Il Molise
+Old Molisano: Il Molise
+The Reaper: Il Molise,The Bone Zone,Space 54,Bat Country
+Serpentvine: Moongolow
+Non-Giant Enemy Crab: Moongolow,Boss Rash
+Sig.ra Blu: Moongolow
+Nightshade: Moongolow,Boss Rash
+Garlic: Moongolow,Boss Rash
+Moongolow Atlanteans: Moongolow
+Skeletone: The Bone Zone
+Twin Skulls: The Bone Zone
+Skeleton Panther: The Bone Zone
+Giant Skeleton: The Bone Zone,Boss Rash
+The Drowner: The Bone Zone,Boss Rash,Carlo Cart
+The Ender: Boss Rash
+The Trickster: Boss Rash,Carlo Cart
+The Maddener: Boss Rash,Carlo Cart
+Mimic Season One: Boss Rash
+Tri-Anchors: Boss Rash
+Miragellos: Whiteout
+Bambaman: Whiteout
+Madd-Onna: Whiteout
+Menta Elemental: Whiteout
+Kizzune: Whiteout
+Chickenfantry: The Coop
+Cockreliutennant: The Coop
+Chik: The Coop
+Egge: The Coop
+Abraxas: The Coop
+Pol.lo Rosso: The Coop
+Abraxas Phronesis: The Coop
+Abraxas Dynamis: The Coop
+Gala Invader: Space 54
+Moon Duck: Space 54
+Space Pickle: Space 54,Polus Replica
+ECMASlime: Space 54
+Moon Rabbit: Space 54
+Sinistronz: Space 54
+Space Ant Onion: Space 54,Polus Replica
+Holy Circuit Creations: Carlo Cart,Laborratory
+Tri-Blunder: Laborratory
+Bounty Hunter: Laborratory
+Space Hunter: Laborratory
+LV128 Golden Bat: Bat Country
+Astral Elemental: Astral Stair
+Lord Ghost: Astral Stair
+Blood Moss: Astral Stair,Abyss Foscari
+Redusa Head: Astral Stair,Abyss Foscari
+Undead Stars: Astral Stair
+Astral Curtain: Astral Stair
+Kamaitachi: Tiny Bridge,Mt.Moonspell
+The Directer: Eudaimonia M.
+Ska'sa Ka'sos: Room 1665
+Levatee Darkasso: Room 1665
+Juda R'kasso: Room 1665
+Levarsee Darkasso: Room 1665
+Shendi Darkasso: Room 1665
+Sphon'Dato Darkasso: Room 1665
+Eh'Lleve-Teh Darkasso: Room 1665
+Spiritello: Mt.Moonspell
+Tsuchinoko: Mt.Moonspell
+Mikoshi-nyudo: Mt.Moonspell
+Raiju: Mt.Moonspell
+Thunderous Oni: Mt.Moonspell
+Yamamba: Mt.Moonspell
+Windy Oni: Mt.Moonspell
+Tanuki: Mt.Moonspell
+Tengu: Mt.Moonspell
+Tsuchigumo: Mt.Moonspell
+Orochimario: Mt.Moonspell
+Chompo: Lake Foscari
+Brownie: Lake Foscari
+Wiseparke: Lake Foscari
+Ceffoose: Lake Foscari
+Hill Trow: Lake Foscari
+Sea Trow: Lake Foscari
+Nutmeg: Lake Foscari
+Sam the Sandown Clown: Lake Foscari
+Njuggles: Lake Foscari
+Vulvio: Lake Foscari
+Lammuga: Lake Foscari
+Notadam: Lake Foscari
+Crocifriggitore: Lake Foscari
+Missing Church: Lake Foscari,Abyss Foscari
+Snek: Lake Foscari,Abyss Foscari
+Green Knight: Lake Foscari
+Ghostly Apparition: Lake Foscari
+Avatar of Gaea: Lake Foscari
+Average Hag: Lake Foscari
+Maronna: Lake Foscari
+Hand of Glory: Lake Foscari
+Cauld: Abyss Foscari
+Lost Head: Abyss Foscari
+Rellyfish: Abyss Foscari
+Burning Skull: Abyss Foscari
+Meatball: Abyss Foscari
+Followa: Abyss Foscari
+Cold Cauld: Abyss Foscari
+Edna: Abyss Foscari
+Well Dweller: Abyss Foscari
+Wet Njuggles: Abyss Foscari
+Maronna Meea: Abyss Foscari
+Fomorians: Abyss Foscari
+Glove of Glory: Abyss Foscari
+Je-Ne-Viv: Abyss Foscari
+Brainoid: Polus Replica
+Frijjitello: Polus Replica
+G062T: Polus Replica
+Shapeunshifter: Polus Replica
+Space Apparition: Polus Replica
+Mocholo: Polus Replica
+Martian Face: Polus Replica
+Spotter: Polus Replica
+Victor Frankenstein: Polus Replica
+Sponkey: Polus Replica
+Steroid: Polus Replica
+Trip Trop: Polus Replica
+Suspicious Eyes: Polus Replica
+Ledder: Neo Galuga
+Greeder: Neo Galuga
+Warlord: Neo Galuga
+Evil Snowman: Neo Galuga,Hectic Highway
+Gulcan Tank: Neo Galuga
+Alien Centipede: Neo Galuga
+Metal Alien: Neo Galuga,Hectic Highway
+Human Faced Dog: Neo Galuga
+Garth: Neo Galuga
+Junkyard Car: Neo Galuga,Hectic Highway
+Ball Walker: Neo Galuga
+Flight Zako: Neo Galuga,Hectic Highway
+M78: Neo Galuga,Hectic Highway
+Big Bot Gordea: Neo Galuga,Hectic Highway
+Bugger: Neo Galuga
+Mutant Crawler: Neo Galuga,Hectic Highway
+Bundle: Neo Galuga,Hectic Highway
+Poisonous Insect Gel: Neo Galuga
+Zako Alien: Neo Galuga
+Kimkoh: Neo Galuga
+Gigafly: Neo Galuga
+Taka: Neo Galuga,Hectic Highway
+Simondo Belmont: Neo Galuga
+Big Fuzz: Neo Galuga
+Hellrider: Hectic Highway
+Flying Zombie: Ode to Castlevania
+Bitterfly: Ode to Castlevania
+Imp: Ode to Castlevania
+Ukoback: Ode to Castlevania
+Killer Doll: Ode to Castlevania
+Frozen Shade: Ode to Castlevania
+Bugbear: Ode to Castlevania
+Harpy: Ode to Castlevania
+Devil: Ode to Castlevania
+Flea Rider: Ode to Castlevania
+Spectre: Ode to Castlevania
+Amalaric Sniper: Ode to Castlevania
+Hippogryph: Ode to Castlevania
+Alastor: Ode to Castlevania
+Flea Armor: Ode to Castlevania
+Fleaman: Ode to Castlevania
+Yorick: Ode to Castlevania
+OG Merman: Ode to Castlevania
+Giant Medusa Head: Ode to Castlevania
+Moldy Corpse: Ode to Castlevania
+Warg: Ode to Castlevania
+Gurkha Knife Master: Ode to Castlevania
+Disc Armor: Ode to Castlevania
+Valhalla Knight: Ode to Castlevania
+Spittle Bone: Ode to Castlevania
+Persephone: Ode to Castlevania
+Bone Ark: Ode to Castlevania
+Axe Armor: Ode to Castlevania
+Bloody Painting: Ode to Castlevania
+Bone Golem: Ode to Castlevania
+Gorgon: Ode to Castlevania
+Malachi: Ode to Castlevania
+Behemoth: Ode to Castlevania
+Slogra: Ode to Castlevania
+Gaibon: Ode to Castlevania
+Doppelganger: Ode to Castlevania
+Puppet Master: Ode to Castlevania
+Blackmore: Ode to Castlevania
+Paranoia: Ode to Castlevania
+Zephyr: Ode to Castlevania
+Abbadon: Ode to Castlevania
+Death: Ode to Castlevania
+The Creature: Ode to Castlevania
+Keremet: Ode to Castlevania
+Menace: Ode to Castlevania
+Eligor: Ode to Castlevania
+Treant: Ode to Castlevania
+Psychic Ogre: Emerald Diorama
+Divine Wood Spirit: Emerald Diorama
+Specter of Iwanaga-hime: Emerald Diorama
+Earth Dragon: Emerald Diorama
+Iron Maiden: Emerald Diorama
+Living Anguish: Emerald Diorama
+Rana Combatant: Emerald Diorama
+Alraune: Emerald Diorama
+Skydiver: Emerald Diorama
+Forest Hermit: Emerald Diorama
+Boar Infantry: Emerald Diorama
+Decobat: Emerald Diorama
+Rascal: Emerald Diorama
+Skeleton from Beyond: Emerald Diorama
+Werewolf from Beyond: Emerald Diorama
+Failinis: Emerald Diorama
+Kelpie: Emerald Diorama
+Maggot Ball: Emerald Diorama
+Golden Baum: Emerald Diorama
+Anti-Ant: Emerald Diorama
+Moch: Emerald Diorama

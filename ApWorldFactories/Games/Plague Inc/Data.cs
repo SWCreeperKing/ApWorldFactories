@@ -99,7 +99,7 @@ public readonly struct TechData(DataArray param)
         public readonly string Tab = tab;
 
         public string GenRule(Dictionary<string, Dictionary<string, HexMap>> maps)
-            => $"has[\"{Disease}\"] and has[\"{Id}\"]{RuleType switch
+            => $"has[\"{Id}\"]{RuleType switch
             {
                 LogicRule.Specific => $" and {SpecificRule}",
                 LogicRule.Adjacent => $" and ( {string.Join(" or ", maps[disease][tab][Hex].Adjacents.Where(node => node.Name is not "").Select(node => $"has[\"{node.Name}\"]"))} )",

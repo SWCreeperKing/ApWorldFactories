@@ -6,7 +6,7 @@ Tunnels,Launch Pad,,,,Pickup Cog,Launch Pad,,,Cog,,Carrot,,Jaz,"Pacifier, Bug St
 Garden,Launch Pad,Coin,,,Pickup Coal,Tunnels,,,Coal,,Worm Castings,,Dungsworth,Cymbal Button,Lake Path,,,Cooked Fish Dinner,Craft Cooked Fish Dinner
 Lake Path,Launch Pad,,,,Pickup Photo #3,Tunnels,,,pic.3,,Fancy Button,,Weevilton,"Fancy Button, Cute Button, Basic Button",Mountain Top,,,Red Paint,Craft Red Paint
 Water Gate,Lake Path,Valve Handle,,,Rat Skull #6,Tunnels,,,skull.6,,Coin,,Scuttlesby,,Backrooms #3,,,Blue Paint,Craft Blue Paint
-Garden,Water Gate,,,,Pickup Carrot,Tunnels,,,Carrot,,Cute Button,,Cerberus,"Pacifier, Bug Steak, Dog Treat",Tunnels Cave,,,Green Paint,Craft Green Paint
+Garden,Water Gate,,,,Pickup Carrot,Tunnels,,,Carrot,,Cute Button,,Cerberus,"Pacifier, Bug Steak, Dog Treat",Tunnels,"Dungsworth, Weevilton, Scuttlesby",,Green Paint,Craft Green Paint
 Mountain,Launch Pad,Potato Battery,,,Pickup Worm Castings,Tunnels,,,Worm Castings,,Feather,,,,,,,,
 Fisherman's Island,Lake Path,Spoon,,,Pickup Fancy Button,Tunnels,,,Fancy Button,,Snail Slime,,,,,,,,
 Backrooms #1,Gripp's Hoard,Old Key,,,Pickup Coin,Launch Pad,,,Coin,,Valve Handle,,,,,,,,
@@ -14,7 +14,7 @@ Backrooms #2,Backrooms #1,Bone Key,,,Pickup Cute Button,Garden,,,Cute Button,,Po
 Backrooms #3,Backrooms #2,Golden Key,,,Pickup Feather,Garden,,,Feather,,Yellow Moss,,,,,,,,
 Garden Cave,Garden,Machete,,,Rat Skull #3,Garden,,,skull.3,,Spoon,,,,,,,,
 Mountain Top,Mountain,Rope,,,Pickup Snail Slime,Lake Path,,,Snail Slime,,Basic Button,,,,,,,,
-Tunnels Cave,Tunnels,,"Dungsworth, Weevilton, Scuttlesby",,Pickup Photo #2,Lake Path,,,pic.2,,Match,,,,,,,,
+Tunnels Cave,Tunnels,,Cerberus,,Pickup Photo #2,Lake Path,,,pic.2,,Match,,,,,,,,
 ,,,,,Pickup Valve Handle,Lake Path,,,Valve Handle,,Maggot,,,,,,,,
 ,,,,,Pickup Potato Battery,Lake Path,,,Potato Battery,,Bone Key,,,,,,,,
 ,,,,,Rat Skull #2,Lake Path,,,skull.2,,Magenta Blossom,,,,,,,,

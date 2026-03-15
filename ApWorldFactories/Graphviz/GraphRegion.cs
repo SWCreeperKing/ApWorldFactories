@@ -80,7 +80,7 @@ public class GraphBuilder(string gameName)
 
         sb.Append("\n}");
 
-        return sb.ToString();
+        return sb.ToString().Replace('&', '+');
     }
 }
 

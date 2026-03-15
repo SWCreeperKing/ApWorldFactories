@@ -157,7 +157,44 @@ public class Atlyss : BuildData
                 "achievements",
                 AchievementData.Where(data => data.Enabled)
                                .Select(data => (string[])[data.Name, data.Area])
+            ).AddIndependentVariable(GetGrindData("location", LocationLevelData.Cast<IFarmingNode>().ToArray()))
+           .AddIndependentVariable(
+                GetGrindData(
+                    "fishing",
+                    ProfessionsData.Where(data => data.Profession is "Fishing")
+                                   .SelectMany(data => data.GetNodes()).ToArray()
+                )
+            )
+           .AddIndependentVariable(
+                GetGrindData(
+                    "mining",
+                    ProfessionsData.Where(data => data.Profession is "Mining")
+                                   .SelectMany(data => data.GetNodes()).ToArray()
+                )
+            )
+           .AddIndependentVariable(
+                new MappedVariable<string, string>(
+                    "enemy_data",
+                    EnemyListData.ToDictionary(
+                        data => $"\"{data.Name}\"",
+                        data => $"[{data.Level}, [{string.Join(", ", data.Areas.Select(s => $"\"{s}\""))}]]"
+                    )
+                )
+            ).AddIndependentVariable(
+                new MappedVariable<string, string>(
+                    "portal_counts",
+                    LocationLevelData.ToDictionary(
+                        data => $"\"{data.Area}\"", data => $"{data.ProgressivePortalCount}"
+                    )
+                )
             );
+
+        return;
+
+        ListedVariable<string> GetGrindData(string name, IFarmingNode[] nodes)
+        {
+            return new ListedVariable<string>($"{name}_grind_data", nodes.Select(node => node.FarmAreaMinMaxLevel()));
+        }
     }
 
     public override void Items(WorldFactory _, ItemFactory item_fact)
@@ -379,51 +416,6 @@ public class Atlyss : BuildData
     public override void GenerateJson(WorldFactory worldFactory) => worldFactory.GenerateArchipelagoJson(
         ArchipelagoVersion, WorldVersion, "Azrael0534", "Nichologeam", "Sterlia", "SW_CreeperKing"
     );
-
-    public override void GenerateLocations(out string[] locationList, LocationFactory locationFactory)
-    {
-        locationFactory.GenerateLocationFile(
-            out locationList,
-            injectCode: factory1 =>
-                factory1
-                   .AddObject(GetGrindData("location", LocationLevelData.Cast<IFarmingNode>().ToArray()))
-                   .AddObject(
-                        GetGrindData(
-                            "fishing",
-                            ProfessionsData.Where(data => data.Profession is "Fishing")
-                                           .SelectMany(data => data.GetNodes()).ToArray()
-                        )
-                    ).AddObject(
-                        GetGrindData(
-                            "mining",
-                            ProfessionsData.Where(data => data.Profession is "Mining")
-                                           .SelectMany(data => data.GetNodes()).ToArray()
-                        )
-                    ).AddObject(
-                        new MappedVariable<string, string>(
-                            "enemy_data",
-                            EnemyListData.ToDictionary(
-                                data => $"\"{data.Name}\"",
-                                data => $"[{data.Level}, [{string.Join(", ", data.Areas.Select(s => $"\"{s}\""))}]]"
-                            )
-                        )
-                    ).AddObject(
-                        new MappedVariable<string, string>(
-                            "portal_counts",
-                            LocationLevelData.ToDictionary(
-                                data => $"\"{data.Area}\"", data => $"{data.ProgressivePortalCount}"
-                            )
-                        )
-                    )
-        );
-
-        return;
-
-        ListedVariable<string> GetGrindData(string name, IFarmingNode[] nodes)
-        {
-            return new ListedVariable<string>($"{name}_grind_data", nodes.Select(node => node.FarmAreaMinMaxLevel()));
-        }
-    }
 
     public override void ProcessLocationList(string[] locationList) => WriteData("locations", locationList);
     public override void ProcessItemList(string[] itemList) => WriteData("items", itemList);

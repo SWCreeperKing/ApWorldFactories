@@ -446,11 +446,11 @@ Tessellated Drive
 Agility Stone
 Angela's Tear
 Flux Stone
+Illusion Stone
 Might Stone
 Soul Pearl
 Epic Carrot
 Experience Bond
-Illusion Stone
 Sanctum Portal
 Outer Sanctum Portal
 Arcwood Pass Portal

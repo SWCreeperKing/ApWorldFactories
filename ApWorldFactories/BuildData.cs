@@ -8,7 +8,9 @@ namespace ApWorldFactories;
 
 public abstract class BuildData
 {
-    public const string RawOutputPath = "../../../Output/";
+    public const string MainDirectory = "../../../";
+    public const string RawOutputPath = $"{MainDirectory}Output/";
+    public const string RawInputPath = $"{MainDirectory}Input/";
     public const string DotCommandPrefix = "E:/Graphviz-14.1.3-win64/bin/dot.exe";
     public const string DDrive = "D:/Programs/steam/steamapps/common";
     public const string FDrive = "F:/SteamLibrary/steamapps/common";
@@ -24,6 +26,7 @@ public abstract class BuildData
     public abstract string WorldVersion { get; }
     public virtual string ArchipelagoVersion => "0.6.5";
     public virtual string GameFolder => GameName;
+    public virtual string MainSheetGid => "0";
 
     public virtual string GamePath => SteamDirectory is "" ? "" : $"{SteamDirectory}/{GameName}";
 
@@ -31,6 +34,7 @@ public abstract class BuildData
         ? $"{RawOutputPath}{GameName}"
         : $"{SteamDirectory}/{GameName}/Mods/{ModFolderName}/Data";
 
+    public virtual string ReadInputDirectory => $"{RawInputPath}{GameName}/";
     public virtual string ApWorldPath => $"E:/coding projects/python/Deathipelago/worlds/{ApWorldName}";
     public virtual string CsvPath => $"E:/coding projects/C#/ApWorldFactories/ApWorldFactories/Spreadsheets/{GameName}";
     public virtual string MainSheetLink => $"https://docs.google.com/spreadsheets/d/{GoogleSheetId}/export?format=csv";
@@ -44,9 +48,8 @@ public abstract class BuildData
         var pos = ClrCnsl.GetCursor();
         var amount = SheetGids.Count + 1;
         PrintProgress(pos, 0, amount, "Sheet(s) Downloaded");
-        DownloadSheet(client, MainSheetLink, "main");
+        DownloadSheet(client, $"{MainSheetLink}&gid={MainSheetGid}", "main");
         PrintProgress(pos, 1, amount, "Sheet(s) Downloaded");
-        if (SheetGids.Count == 0) return;
         var i = 2;
         foreach (var (name, gid) in SheetGids)
         {
@@ -62,7 +65,7 @@ public abstract class BuildData
         File.WriteAllBytes($"{CsvPath}/{output}.csv", csvData);
     }
 
-    private void PrintProgress(Pos pos, int curr, int amount, string text)
+    private static void PrintProgress(Pos pos, int curr, int amount, string text)
     {
         ClrCnsl.SetCursor(pos);
         ClrCnsl.ProgressBar(curr, amount, 20, d => d switch { < 1 => ConsoleColor.Cyan, >= 1 => ConsoleColor.Green });
@@ -77,6 +80,11 @@ public abstract class BuildData
         if (WriteOutputDirectory is "") return;
         File.WriteAllLines($"{WriteOutputDirectory}/{file}.{ext}", data);
     }
+
+    public T[] ReadData<T>(string file, Func<string, T> iterAction, string ext = "txt")
+        => ReadData(file, ext).Select(iterAction).ToArray();
+
+    public string[] ReadData(string file, string ext = "txt") => File.ReadAllLines($"{ReadInputDirectory}{file}.{ext}");
 
     public void Run()
     {
@@ -146,7 +154,7 @@ public abstract class BuildData
         Func<string, string> getRule = s => associations.GetValueOrDefault(s, "");
         var doubleArr = location_fact.ReadLocationsDoubleArray().SelectMany(kv => kv.Value.Select(arr => arr).ToArray())
                                      .ToArray();
-        
+
         var graph = GenerateGraphViz(builder, associations, getRule, doubleArr);
 
         if (graph is "")
@@ -237,7 +245,10 @@ public abstract class BuildData
     {
     }
 
-    public virtual string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations, Func<string, string> getRule, string[][] locationDoubleArrays) => "";
+    public virtual string GenerateGraphViz(
+        WorldFactory worldFactory, Dictionary<string, string> associations, Func<string, string> getRule,
+        string[][] locationDoubleArrays
+    ) => "";
 }
 
 public class DataCreator<T> : CsvTableRowCreator<T>
@@ -254,6 +265,10 @@ public static class Extensions
         => txt.Split(splitter).Select(s => s.Trim()).ToArray();
 
     public static bool IsTrue(this string text) => text is not "" && text[0] is 't' or 'T' or 'y' or 'Y';
+
+    public static string OptionVariableFormat(
+        this string text, string prefix = "", string suffix = ""
+    ) => $"{prefix.LowerReplace()}{text.LowerReplace()}{suffix.LowerReplace()}";
 
     public static string OptionFormat(
         this string text, string options = "options", string prefix = "", string suffix = ""
@@ -280,6 +295,14 @@ public static class Extensions
     {
         foreach (var v in arr) action(t, v);
         return t;
+    }
+
+    public static string AsStringifiedArray(
+        this IEnumerable<string> arr, string surround = "\"", string separator = ", ", string leftEnd = "[",
+        string rightEnd = "]"
+    )
+    {
+        return $"{leftEnd}{string.Join(separator, arr.Select(s => s.Surround(surround)))}{rightEnd}";
     }
 }
 
