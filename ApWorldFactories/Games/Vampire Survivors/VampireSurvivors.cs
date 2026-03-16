@@ -136,6 +136,26 @@ public class VampireSurvivors : BuildData
         }
 
         // MergeLegacyData.MergeData(this);
+
+        WriteData(
+            "EnemyData",
+            EnemyData.Where(data => data.Name is not "" && data.BestiaryInclude)
+                     .Select(data => $"{data.Name}:{data.EnemyId}")
+        );
+        WriteData("StageData", StageData.Select(data => $"{data.StageName}:{data.StageId}"));
+        WriteData("EnemyVariantMap", EnemyVariantMap.Where(kv => kv.Key != kv.Value).Select(kv => $"{kv.Key}:{kv.Value}"));
+        WriteData(
+            "CharData",
+            CharacterData.Where(data => data.Name is not "").Select(data => $"{data.Name}:{data.CharacterId}")
+        );
+        WriteData(
+            "EnemyVariants",
+            EnemyData.Where(data => data.Variants.Length != 0 && data.Variants[0] is not "")
+                     .Select(data => $"{data.EnemyId}:{string.Join('|', data.Variants)}")
+        );
+        WriteData("EnemyMap", EnemyMap.Select(kv => $"{kv.Key}:{string.Join('|', kv.Value)}"));
+        WriteData("EnemyHurryMap", EnemyHurryMap.Select(kv => $"{kv.Key}:{string.Join('|', kv.Value)}"));
+        WriteData("ArcanaEnemyList", EnemyData.Where(data => data.NeedArcana).Select(data => data.EnemyId));
     }
 
     public override void HostSettings(WorldFactory _, HostSettingsFactory host_fact)
@@ -432,7 +452,7 @@ public class VampireSurvivors : BuildData
                   )
                  .AddCompoundLogicFunction("hurry", "has_hurry", "gamemode[\"Hurry\"]")
                  .AddCompoundLogicFunction("arcana", "has_arcana", "gamemode[\"Arcanas\"]")
-                 .AddLogicRules(StageNameMap.ToDictionary(kv => $"{kv.Key} Beaten", _ => "hurry"))
+                 .AddLogicRules(StageNameMap.ToDictionary(kv => $"{kv.Value} Beaten", _ => "hurry"))
                  .AddLogicRules(
                       CharacterData.ToDictionary(
                           data => $"Beat with {data.Name}", data => $"char[\"{data.Name}\"] and hurry"

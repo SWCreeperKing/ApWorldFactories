@@ -51,21 +51,21 @@ public static class MergeLegacyData
         var convertedMissingHurry
             = missingHurry.Select(kv => (enemyTypeMap[kv.Key], kv.Value.Select(s => stageTypeMap[s]).ToArray()));
 
-        vs.WriteData("Bestiary", vs.EnemyMap.Keys);
+        vs.WriteData("(LEGACY) Bestiary", vs.EnemyMap.Keys);
         
-        vs.WriteData("Transformed Data", convertedMissing.SelectMany(t => t.Item2.Select(s => $"{t.Item1}\t{s}\t5")));
+        vs.WriteData("T(LEGACY) ransformed Data", convertedMissing.SelectMany(t => t.Item2.Select(s => $"{t.Item1}\t{s}\t5")));
         vs.WriteData(
-            "Transformed Data Hurry", convertedMissingHurry.SelectMany(t => t.Item2.Select(s => $"{t.Item1}\t{s}\t30"))
+            "(LEGACY) Transformed Data Hurry", convertedMissingHurry.SelectMany(t => t.Item2.Select(s => $"{t.Item1}\t{s}\t30"))
         );
 
-        vs.WriteData("missing names", vs.EnemyNameMap.Values.Except(vs.EnemyMap.Keys).ToArray());
+        vs.WriteData("(LEGACY) missing names", vs.EnemyNameMap.Values.Except(vs.EnemyMap.Keys).ToArray());
         CheckForUnnamedEnemies();
         return;
 
         void CheckForUnnamedEnemies()
         {
             vs.WriteData(
-                "new_unnamed_enemy_data",
+                "(LEGACY) new_unnamed_enemy_data",
                 vs.EnemyData.Where(data => data.BestiaryInclude && data.Name.Trim() is "").Select(data => data.EnemyId)
             );
         }
