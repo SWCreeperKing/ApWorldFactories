@@ -31,8 +31,8 @@ public abstract class BuildData
     public virtual string GamePath => SteamDirectory is "" ? "" : $"{SteamDirectory}/{GameName}";
 
     public virtual string WriteOutputDirectory => SteamDirectory is "" || ModFolderName is ""
-        ? $"{RawOutputPath}{GameName}"
-        : $"{SteamDirectory}/{GameName}/Mods/{ModFolderName}/Data";
+        ? $"{RawOutputPath}{GameFolder}"
+        : $"{SteamDirectory}/{GameFolder}/Mods/{ModFolderName}/Data";
 
     public virtual string ReadInputDirectory => $"{RawInputPath}{GameName}/";
     public virtual string ApWorldPath => $"E:/coding projects/python/Deathipelago/worlds/{ApWorldName}";
@@ -67,9 +67,11 @@ public abstract class BuildData
 
     private static void PrintProgress(Pos pos, int curr, int amount, string text)
     {
+        var real = ClrCnsl.GetCursor();
         ClrCnsl.SetCursor(pos);
         ClrCnsl.ProgressBar(curr, amount, 20, d => d switch { < 1 => ConsoleColor.Cyan, >= 1 => ConsoleColor.Green });
         ClrCnsl.WriteLine($"\n{curr}/{amount} {text}");
+        ClrCnsl.SetCursor(real);
     }
 
     public CsvFactory GetSpreadsheet(string sheet = "main", int linesFromTop = 1, int linesFromLeft = 0)
@@ -78,6 +80,7 @@ public abstract class BuildData
     public void WriteData(string file, IEnumerable<string> data, string ext = "txt")
     {
         if (WriteOutputDirectory is "") return;
+        ClrCnsl.WriteLine($"[#darkgray]Writing: [{WriteOutputDirectory}/{file}.{ext}]");
         File.WriteAllLines($"{WriteOutputDirectory}/{file}.{ext}", data);
     }
 
@@ -88,6 +91,7 @@ public abstract class BuildData
 
     public void Run()
     {
+        ClrCnsl.Clr();
         var builder = new WorldFactory(GameName)
                      .SetOnCompilerError((e, s) => ClrCnsl.WriteLine($"[#red]Error: [{s}]\n{e}"))
                      .SetOutputDirectory(ApWorldPath);
@@ -106,6 +110,7 @@ public abstract class BuildData
         var cur = ClrCnsl.GetCursor();
         const int stepCount = 18;
         var i = 0;
+        ClrCnsl.SetCursor(cur.X, cur.Y + 2);
         PrintProgress(cur, i++, stepCount, "Manipulating Data");
         RunShenanigans();
 

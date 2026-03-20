@@ -56,6 +56,14 @@ public class WidgetInc : BuildData
 
         WriteData("scoutHints", scoutHints);
         WriteData("idMap", FrameIdMap.Select(kv => $"{kv.Key}:{kv.Value}"));
+        
+        WriteData("resources", ResourceBuildingRequirement.Select(kv => $"{kv.Key}:{kv.Value}"));
+        WriteData("recipes", CraftingRecipes.Select(kv => $"{kv.Key}:{string.Join(',', kv.Value)}"));
+        WriteData(
+            "requireMap",
+            TechTreeData.Where(data => data.ResourceRequirements.Length != 0)
+                        .Select(data => $"{data.Id}:{string.Join(',', data.ResourceRequirements)}")
+        );
     }
 
     public override void Options(WorldFactory _, OptionsFactory options_fact)
@@ -71,13 +79,7 @@ public class WidgetInc : BuildData
     {
         location_fact.AddLocations(
             "tech_tree",
-            TechTreeData
-               .Append(new TechTreeData((string[])["Starting Check (1)", "", "", "", "", "0"]))
-               .Append(new TechTreeData((string[])["Starting Check (2)", "", "", "", "", "0"]))
-               .Append(new TechTreeData((string[])["Starting Check (3)", "", "", "", "", "0"]))
-               .Select(data => (string[])
-                    [data.Tech, $"Tier {data.TierRequirement}".Replace("Tier 0", "Menu")]
-                )
+            TechTreeData.Select(data => (string[])[data.Tech, $"Tier {data.TierRequirement}".Replace("Tier 0", "Menu")])
         );
     }
 
@@ -112,10 +114,8 @@ public class WidgetInc : BuildData
     public override void Rules(WorldFactory _, RuleFactory rule_fact)
     {
         rule_fact
-           .AddLogicFunction(
-                "tier", "has_tier", StateHas("Progressive Tier", "tier"), "tier"
-            )
-           .AddLogicFunction("frame", "has_frame", StateHas("frame", stringify: false), "frame")
+           .AddCompoundLogicFunction("tier", "has_tier", "hasN['Progressive Tier', tier]", "tier")
+           .AddCompoundLogicFunction("frame", "has_frame", "has[frame]", "frame")
            .ForEachOf(
                 CraftlessResources, (b, s) => b.AddCompoundLogicFunction(
                     s.Replace(" ", ""),
@@ -133,7 +133,6 @@ public class WidgetInc : BuildData
 
                     if (data.PreviousTech is not "") rules.Add($"frame['{data.PreviousTech}']");
                     rules.AddRange(data.ResourceRequirements.Select(res => res.Replace(" ", "")));
-                    rules.Add($"tier[{data.TierRequirement}]");
 
                     b.AddLogicRule(data.Tech, string.Join(" and ", rules));
                 }

@@ -1,49 +1,52 @@
 Tech,Previous Tech,ID,Resource Req,Unlocks,Tier Req,,Resource,Req
-Tier 1,,t1_tech,,,0,,Iron Ingot,Iron Ore
-Tier 1 Mastery,,t1_mastery,Basic Widget,,1,,Basic Widget,Iron Ingot
-Deconstruct,,t1_deconstruct,Basic Widget,,1,,Glass,Sand
-Frame Relocation,Deconstruct,t3_move_frame,Basic Widget,,1,,Gyroscope,"Glass, Basic Widget"
-Iron Mine,,t1f_iron_ore,,Iron Ore,1,,Power,Oil
-Efficient Extraction,Iron Mine,t1u_iron_ore_speed_0,Basic Widget,,1,,Spinning Widget,"Gyroscope, Basic Widget"
-Iron Smelter,Iron Mine,t1f_iron_ingot,,Iron Ingot,1,,Battery,"Iron Ingot, Basic Widget, Power"
-Furnace Optimizer,Iron Smelter,t1u_iron_smelter_auto,Basic Widget,,1,,Capacitor Widget,"Spinning Widget, Battery"
-Superheated Crucible (Iron Ingot),Iron Smelter,t1u_iron_ingot_smeltspeed_0,Basic Widget,,1,,Copper Ingot,Copper Ore
-Widget Factory,Iron Smelter,t1f_widget,Iron Ingot,Basic Widget,1,,Plastic,Oil
-Optimized Materials,Widget Factory,t1u_widget_prod_0,Basic Widget,,1,,Circuit Board,"Copper Ingot, Plastic"
-Rapid Assembly,Widget Factory,t1u_widget_speed_0,Basic Widget,,1,,Computational Widget,"Circuit Board, Capacitor Widget, Spinning Widget"
-Glitched Frame,Widget Factory,t1f_glitched_frame,Basic Widget,,1,,Bottled Lightning,"Glass, Power"
-Fortress,Widget Factory,t1f_fortress,Basic Widget,,1,,Thinking Core,"Capacitor Widget, Computational Widget"
-Dig Site,Widget Factory,t1f_digsite,Basic Widget,,1,,Integrated Widget,"Bottled Lightning, Capacitor Widget, Thinking Core"
-Tier 2,,t2_tech,Basic Widget,,1,,Silicon,"Sand, Power"
-Tier 2 Mastery,,t2_mastery,Spinning Widget,,2,,Microprocessors,"Silicon, Circuit Board, Thinking Core"
-Warehouse,,t1f_warehouse,Spinning Widget,,2,,Mainframe Widget,"Microprocessors, Integrated Widget"
-Sand Pit,,t2f_sand,Basic Widget,Sand,2,,Uranium,Power
-Mechanized Shovels,Sand Pit,t2u_sand_speed_0,Spinning Widget,,2,,Fuel Rod,"Iron Ingot, Uranium, Power, Gyroscope"
-Glass Kiln,Sand Pit,t2f_glass,Basic Widget,Glass,2,,Cloud Widget,"Mainframe Widget, Power"
-Kiln Governor,Glass Kiln,t2u_glass_temp,Spinning Widget,,2,,Widget Particle,"Basic Widget, Power"
-Gyroscope Fabricator,Glass Kiln,t2f_gyroscope,Basic Widget,Gyroscope,2,,Nanoprocessor,"Microprocessors, Widget Particle"
-Widget Spinner,Gyroscope Fabricator,t2f_spinning_widget,Basic Widget,Spinning Widget,2,,Portable Reactor,"Fuel Rod, Battery"
-Spin Stabilizer,Widget Spinner,t2u_spinning_widget_prod_0,Spinning Widget,,2,,Quantum Widget,"Nanoprocessor, Portable Reactor, Cloud Widget"
-Gyroscopic Array,Widget Spinner,t2u_spinning_widget_speed_0,Spinning Widget,,2,,Helium,Power
-Iron-rich Rocks,Iron Mine,t1u_iron_ore_placement,Spinning Widget,,2,,Superconductor,"Helium, Nanoprocessor, Iron Ingot"
-Efficient Loader Arms,Iron Smelter,t1u_iron_ingot_speed_0,Spinning Widget,,2,,AI Core,"Superconductor, Silicon, Thinking Core"
-High Heat Density,Superheated Crucible (Iron Ingot),t1u_iron_smelter_placement,Spinning Widget,,2,,Unshackled Widget,"AI Core, Quantum Widget"
-Widget Twins,Optimized Materials,t1u_widget_placement,Spinning Widget,,2,,AI Training Data,Unshackled Widget
-Warped Speed,Glitched Frame,t1a_speed_multiplier,Spinning Widget,,2,,Ascension Matrix,"AI Training Data, Superconductor, Gyroscope"
-Tier 3,,t3_tech,Spinning Widget,,2,,Ascended Widget,"Ascension Matrix, Nanoprocessor, Unshackled Widget"
-Construction Overview,,t3u_construction_progress,Capacitor Widget,,3,,Sentience Core,"AI Core, AI Training Data, Power"
-Pause Construction,Construction Overview,t3u_construction_pause,Capacitor Widget,,3,,Picoprocessor,"Superconductor, Nanoprocessor, AI Training Data"
-Cancel All Construction,Pause Construction,t3u_construction_cancelall,Capacitor Widget,,3,,Sentient Widget,"Sentience Core, Picoprocessor, Ascended Widget"
-Tier 3 Mastery,,t3_mastery,Capacitor Widget,,3,,Processor Amalgamation,"Microprocessors, Circuit Board, Nanoprocessor, Picoprocessor"
-Eminent Domain,,t3u_frame_cost,Capacitor Widget,,3,,Core Amalgamation,"Thinking Core, AI Core, Sentience Core"
-Clone Layout,Eminent Domain,t5_copy_paste,Capacitor Widget,,3,,Widget Amalgamation,"Basic Widget, Spinning Widget, Capacitor Widget, Computational Widget, Integrated Widget, Mainframe Widget, Cloud Widget, Quantum Widget, Unshackled Widget, Ascended Widget, Sentient Widget"
-Area Move,Clone Layout,t5_area_move,Capacitor Widget,,3,,Omega Project Casing,"Iron Ingot, Copper Ingot, Superconductor, Sentient Widget"
-Oil Field,,t3f_oil,Spinning Widget,Oil,3,,Omega Project Shielding,"Plastic, Bottled Lightning, Portable Reactor, Sentient Widget"
-Autopressurizer,Oil Field,t3u_oil_pressure,Capacitor Widget,,3,,Omega Widget,"Widget Amalgamation, Core Amalgamation, Processor Amalgamation, Omega Project Casing, Omega Project Shielding"
-Black Gold,Oil Field,t3u_oil_speed_0,Capacitor Widget,,3,,Rocket Electronics,"Processor Amalgamation, Core Amalgamation"
-Oil Power Plant,Oil Field,t3f_power,Spinning Widget,Power,3,,Rocket Fuel,"Oil, Fuel Rod, Power"
-Flame Stack,Oil Power Plant,t3u_power_prod_0,Capacitor Widget,,3,,Rocket Hull,"Omega Project Casing, Omega Project Shielding"
-Battery Assembler,Oil Power Plant,t3f_battery,Spinning Widget,Battery,3,,Rocket Segment,"Omega Widget, Rocket Hull, Rocket Electronics, Rocket Fuel"
+Starting Check (1),,,,,0,,Iron Ingot,Iron Ore
+Starting Check (2),,,,,0,,Basic Widget,Iron Ingot
+Starting Check (3),,,,,0,,Glass,Sand
+Tier 1,,t1_tech,,,0,,Gyroscope,"Glass, Basic Widget"
+Tier 1 Mastery,,t1_mastery,Basic Widget,,1,,Power,Oil
+Deconstruct,,t1_deconstruct,Basic Widget,,1,,Spinning Widget,"Gyroscope, Basic Widget"
+Frame Relocation,Deconstruct,t3_move_frame,Basic Widget,,1,,Battery,"Iron Ingot, Basic Widget, Power"
+Iron Mine,,t1f_iron_ore,,Iron Ore,1,,Capacitor Widget,"Spinning Widget, Battery"
+Efficient Extraction,Iron Mine,t1u_iron_ore_speed_0,Basic Widget,,1,,Copper Ingot,Copper Ore
+Iron Smelter,Iron Mine,t1f_iron_ingot,,Iron Ingot,1,,Plastic,Oil
+Furnace Optimizer,Iron Smelter,t1u_iron_smelter_auto,Basic Widget,,1,,Circuit Board,"Copper Ingot, Plastic"
+Superheated Crucible (Iron Ingot),Iron Smelter,t1u_iron_ingot_smeltspeed_0,Basic Widget,,1,,Computational Widget,"Circuit Board, Capacitor Widget, Spinning Widget"
+Widget Factory,Iron Smelter,t1f_widget,Iron Ingot,Basic Widget,1,,Bottled Lightning,"Glass, Power"
+Optimized Materials,Widget Factory,t1u_widget_prod_0,Basic Widget,,1,,Thinking Core,"Capacitor Widget, Computational Widget"
+Rapid Assembly,Widget Factory,t1u_widget_speed_0,Basic Widget,,1,,Integrated Widget,"Bottled Lightning, Capacitor Widget, Thinking Core"
+Glitched Frame,Widget Factory,t1f_glitched_frame,Basic Widget,,1,,Silicon,"Sand, Power"
+Fortress,Widget Factory,t1f_fortress,Basic Widget,,1,,Microprocessors,"Silicon, Circuit Board, Thinking Core"
+Dig Site,Widget Factory,t1f_digsite,Basic Widget,,1,,Mainframe Widget,"Microprocessors, Integrated Widget"
+Tier 2,,t2_tech,Basic Widget,,1,,Uranium,Power
+Tier 2 Mastery,,t2_mastery,Spinning Widget,,2,,Fuel Rod,"Iron Ingot, Uranium, Power, Gyroscope"
+Warehouse,,t1f_warehouse,Spinning Widget,,2,,Cloud Widget,"Mainframe Widget, Power"
+Sand Pit,,t2f_sand,Basic Widget,Sand,2,,Widget Particle,"Basic Widget, Power"
+Mechanized Shovels,Sand Pit,t2u_sand_speed_0,Spinning Widget,,2,,Nanoprocessor,"Microprocessors, Widget Particle"
+Glass Kiln,Sand Pit,t2f_glass,Basic Widget,Glass,2,,Portable Reactor,"Fuel Rod, Battery"
+Kiln Governor,Glass Kiln,t2u_glass_temp,Spinning Widget,,2,,Quantum Widget,"Nanoprocessor, Portable Reactor, Cloud Widget"
+Gyroscope Fabricator,Glass Kiln,t2f_gyroscope,Basic Widget,Gyroscope,2,,Helium,Power
+Widget Spinner,Gyroscope Fabricator,t2f_spinning_widget,Basic Widget,Spinning Widget,2,,Superconductor,"Helium, Nanoprocessor, Iron Ingot"
+Spin Stabilizer,Widget Spinner,t2u_spinning_widget_prod_0,Spinning Widget,,2,,AI Core,"Superconductor, Silicon, Thinking Core"
+Gyroscopic Array,Widget Spinner,t2u_spinning_widget_speed_0,Spinning Widget,,2,,Unshackled Widget,"AI Core, Quantum Widget"
+Iron-rich Rocks,Iron Mine,t1u_iron_ore_placement,Spinning Widget,,2,,AI Training Data,Unshackled Widget
+Efficient Loader Arms,Iron Smelter,t1u_iron_ingot_speed_0,Spinning Widget,,2,,Ascension Matrix,"AI Training Data, Superconductor, Gyroscope"
+High Heat Density,Superheated Crucible (Iron Ingot),t1u_iron_smelter_placement,Spinning Widget,,2,,Ascended Widget,"Ascension Matrix, Nanoprocessor, Unshackled Widget"
+Widget Twins,Optimized Materials,t1u_widget_placement,Spinning Widget,,2,,Sentience Core,"AI Core, AI Training Data, Power"
+Warped Speed,Glitched Frame,t1a_speed_multiplier,Spinning Widget,,2,,Picoprocessor,"Superconductor, Nanoprocessor, AI Training Data"
+Tier 3,,t3_tech,Spinning Widget,,2,,Sentient Widget,"Sentience Core, Picoprocessor, Ascended Widget"
+Construction Overview,,t3u_construction_progress,Capacitor Widget,,3,,Processor Amalgamation,"Microprocessors, Circuit Board, Nanoprocessor, Picoprocessor"
+Pause Construction,Construction Overview,t3u_construction_pause,Capacitor Widget,,3,,Core Amalgamation,"Thinking Core, AI Core, Sentience Core"
+Cancel All Construction,Pause Construction,t3u_construction_cancelall,Capacitor Widget,,3,,Widget Amalgamation,"Basic Widget, Spinning Widget, Capacitor Widget, Computational Widget, Integrated Widget, Mainframe Widget, Cloud Widget, Quantum Widget, Unshackled Widget, Ascended Widget, Sentient Widget"
+Tier 3 Mastery,,t3_mastery,Capacitor Widget,,3,,Omega Project Casing,"Iron Ingot, Copper Ingot, Superconductor, Sentient Widget"
+Eminent Domain,,t3u_frame_cost,Capacitor Widget,,3,,Omega Project Shielding,"Plastic, Bottled Lightning, Portable Reactor, Sentient Widget"
+Clone Layout,Eminent Domain,t5_copy_paste,Capacitor Widget,,3,,Omega Widget,"Widget Amalgamation, Core Amalgamation, Processor Amalgamation, Omega Project Casing, Omega Project Shielding"
+Area Move,Clone Layout,t5_area_move,Capacitor Widget,,3,,Rocket Electronics,"Processor Amalgamation, Core Amalgamation"
+Oil Field,,t3f_oil,Spinning Widget,Oil,3,,Rocket Fuel,"Oil, Fuel Rod, Power"
+Autopressurizer,Oil Field,t3u_oil_pressure,Capacitor Widget,,3,,Rocket Hull,"Omega Project Casing, Omega Project Shielding"
+Black Gold,Oil Field,t3u_oil_speed_0,Capacitor Widget,,3,,Rocket Segment,"Omega Widget, Rocket Hull, Rocket Electronics, Rocket Fuel"
+Oil Power Plant,Oil Field,t3f_power,Spinning Widget,Power,3,,,
+Flame Stack,Oil Power Plant,t3u_power_prod_0,Capacitor Widget,,3,,,
+Battery Assembler,Oil Power Plant,t3f_battery,Spinning Widget,Battery,3,,,
 Superjuiced Upcharger,Battery Assembler,t3u_battery_speed_0,Capacitor Widget,,3,,,
 Capacitor Bank,Battery Assembler,t3f_capacitor_widget,Spinning Widget,Capacitor Widget,3,,,
 Substable Wiring,Capacitor Bank,t3u_capacitor_widget_prod_0,Capacitor Widget,,3,,,

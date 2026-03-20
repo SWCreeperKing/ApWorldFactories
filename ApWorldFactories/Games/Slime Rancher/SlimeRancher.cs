@@ -193,10 +193,10 @@ public class SlimeRancher : BuildData
     public override void Rules(WorldFactory _, RuleFactory rule_fact)
     {
         rule_fact
-           .AddLogicFunction("cracker", "has_cracker", StateHas("Progressive Treasure Cracker", "level"), "level")
-           .AddLogicFunction("energy", "has_energy", StateHas("Progressive Max Energy", "amount"), "amount")
-           .AddLogicFunction("jetpack", "has_jetpack", StateHas("Progressive Jetpack"))
-           .AddLogicFunction("region", "has_region", StateHas("f'Region Unlock: {region}'", stringify: false), "region")
+           .AddCompoundLogicFunction("cracker", "has_cracker", "hasN['Progressive Treasure Cracker', level]", "level")
+           .AddCompoundLogicFunction("energy", "has_energy", "hasN['Progressive Max Energy', amount]", "amount")
+           .AddCompoundLogicFunction("jetpack", "has_jetpack", "has['Progressive Jetpack']")
+           .AddCompoundLogicFunction("region", "has_region", "has[f\"Region Unlock: {region}\"]", "region")
            .AddCompoundLogicFunction("Reef", "can_access_dry_reef", "region['Dry Reef']")
            .AddCompoundLogicFunction(
                 "ToRuins", "can_access_to_ruins_from_trans",

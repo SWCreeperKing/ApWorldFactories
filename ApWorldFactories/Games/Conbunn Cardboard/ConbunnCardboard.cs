@@ -100,13 +100,10 @@ public class ConbunnCardboard : BuildData
     public override void Rules(WorldFactory _, RuleFactory rule_fact)
     {
         rule_fact
-           .AddLogicFunction(
-                "unlock", "has_unlock", StateHas("f\"Transition Unlock: {transition}\"", stringify: false),
-                "transition"
-            )
-           .AddLogicFunction("dash", "has_dash", StateHas("Dash"))
-           .AddLogicFunction("pads", "has_bounce_pads", StateHas("Bounce Pads"))
-           .AddLogicFunction("coin", "has_coin_count", StateHas("Real Coin", "amt"), "amt")
+           .AddCompoundLogicFunction("unlock", "has_unlock", "has[f\"Transition Unlock: {transition}\"]", "transition")
+           .AddCompoundLogicFunction("dash", "has_dash", "has['Dash']")
+           .AddCompoundLogicFunction("pads", "has_bounce_pads", "has['Bounce Pads']")
+           .AddCompoundLogicFunction("coin", "has_coin_count", "hasN['Real Coin', amt]", "amt")
            .AddLogicRules(LocationData.ToDictionary(data => LocationIdMap[data.Id], data => data.GenRule))
            .AddLogicRules(SkinData.ToDictionary(data => data.Name, data => data.GenRule(RegionMap)));
     }

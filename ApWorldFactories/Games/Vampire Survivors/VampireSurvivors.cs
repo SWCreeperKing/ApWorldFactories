@@ -3,6 +3,7 @@ using ApWorldFactories.Extended;
 using ApWorldFactories.Games.Slime_Rancher;
 using ApWorldFactories.Graphviz;
 using CreepyUtil.Archipelago.WorldFactory;
+using CreepyUtil.ClrCnsl;
 using static ApWorldFactories.Games.Vampire_Survivors.CodeBank;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 using Range = CreepyUtil.Archipelago.WorldFactory.Range;
@@ -63,7 +64,11 @@ public class VampireSurvivors : BuildData
         StageData = StageData.Where(data => !overrideStageData.Any(data.IsMatch)).Concat(overrideStageData)
                              .Where(data => data.IsAcceptable()).ToArray();
 
+        StageClassificationData = StageClassificationData
+                                 .Where(data => StageData.Any(stage => stage.GetName() == data.Name)).ToArray();
+
         StageEnemyData = StageEnemyData.Where(data => !overrideStageEnemyData.Any(data.IsMatch))
+                                       .Where(data => StageData.Any(stage => stage.StageId == data.StageId))
                                        .Concat(overrideStageEnemyData)
                                        .ToArray();
 
@@ -77,6 +82,7 @@ public class VampireSurvivors : BuildData
                          ).ToArray();
 
         StageBossData = StageBossData.Where(data => !overrideStageBossData.Any(data.IsMatch))
+                                     .Where(data => StageData.Any(stage => stage.StageId == data.StageId))
                                      .Concat(overrideStageBossData).ToArray();
 
         StageBossData = StageBossData
@@ -113,7 +119,7 @@ public class VampireSurvivors : BuildData
                          .Select(t => (EnemyVariantMap.TryGetValue(t.Item1, out var value) ? value : t.Item1, t.StageId,
                               t.Minute)
                           )
-                         .Where(t => EnemyNameMap.ContainsKey(t.Item1))
+                         .Where(t => EnemyNameMap.ContainsKey(t.Item1) && StageNameMap.ContainsKey(t.StageId))
                          .Select(t => (EnemyNameMap[t.Item1], StageNameMap[t.StageId], t.Minute)).ToArray();
 
         var rawEnemyMapGrouping = rawEnemyMap.GroupBy(t => t.Item1).ToArray();
@@ -143,7 +149,9 @@ public class VampireSurvivors : BuildData
                      .Select(data => $"{data.Name}:{data.EnemyId}")
         );
         WriteData("StageData", StageData.Select(data => $"{data.StageName}:{data.StageId}"));
-        WriteData("EnemyVariantMap", EnemyVariantMap.Where(kv => kv.Key != kv.Value).Select(kv => $"{kv.Key}:{kv.Value}"));
+        WriteData(
+            "EnemyVariantMap", EnemyVariantMap.Where(kv => kv.Key != kv.Value).Select(kv => $"{kv.Key}:{kv.Value}")
+        );
         WriteData(
             "CharData",
             CharacterData.Where(data => data.Name is not "").Select(data => $"{data.Name}:{data.CharacterId}")
@@ -436,11 +444,7 @@ public class VampireSurvivors : BuildData
 
     public override void Rules(WorldFactory _, RuleFactory rule_fact)
     {
-        rule_fact.AddLogicFunction("hasN", "has_amount", StateHas("item", "amount", false), "item", "amount")
-                 .AddCompoundLogicFunction("has", "has", "hasN[item, 1]", "item")
-                 .AddLogicFunction("any", "has_any", "return any(has(state, player, item) for item in items)", "items")
-                 .AddLogicFunction("all", "has_all", "return all(has(state, player, item) for item in items)", "items")
-                 .AddCompoundLogicFunction(
+        rule_fact.AddCompoundLogicFunction(
                       "char", "has_character", "has[f\"Character Unlock: {character}\"]", "character"
                   )
                  .AddCompoundLogicFunction("stage", "has_stage", "has[f\"Stage Unlock: {stage}\"]", "stage")
@@ -515,23 +519,26 @@ public class VampireSurvivors : BuildData
                                   .AddCode(
                                        new ForLoopFactory("character", "characters")
                                           .AddCode(
-                                               "make_location(world, f\"Beat with {character}\", region_map[\"Characters\"], rule_map)"
+                                               "make_location(world, f'Beat with {character}', region_map['Characters'], rule_map)"
                                            )
                                    )
                                   .AddCode(
-                                       new ForLoopFactory("enemy, raw_find_locs", "enemy_map.items()")
+                                       new IfFactory("options.enemysanity")
                                           .AddCode(
-                                               new IfFactory(
-                                                   "enemy == \"Death\" and (\"Ode to Castlevania\" not in stages or \"Richter Belmont\" not in characters)"
-                                               ).AddCode("continue")
-                                           )
-                                          .AddCode(
-                                               new IfFactory(
-                                                   "not any(loc in stages for loc in raw_find_locs)"
-                                               ).AddCode("continue")
-                                           )
-                                          .AddCode(
-                                               "make_location(world, f\"Kill {enemy}\", region_map[\"Enemies\"], rule_map)"
+                                               new ForLoopFactory("enemy, raw_find_locs", "enemy_map.items()")
+                                                  .AddCode(
+                                                       new IfFactory(
+                                                           "enemy == 'Death' and ('Ode to Castlevania' not in stages or 'Richter Belmont' not in characters)"
+                                                       ).AddCode("continue")
+                                                   )
+                                                  .AddCode(
+                                                       new IfFactory(
+                                                           "not any(loc in stages for loc in raw_find_locs)"
+                                                       ).AddCode("continue")
+                                                   )
+                                                  .AddCode(
+                                                       "make_location(world, f'Kill {enemy}', region_map['Enemies'], rule_map)"
+                                                   )
                                            )
                                    );
                         }

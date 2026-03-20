@@ -81,10 +81,10 @@ public class WereCleaner : BuildData
     public override void Rules(WorldFactory _, RuleFactory rule_fact)
     {
         rule_fact
-           .AddLogicFunction("level", "has_level", StateHas("f\"Unlock {level} Night\"", stringify: false), "level")
-           .AddLogicFunction("Washer", "has_washer", StateHas("Washer"))
-           .AddLogicFunction("Vacuum", "has_vacuum", StateHas("Vacuum"))
-           .AddLogicFunction("Knapper", "has_knapper", StateHas("Knapper"))
+           .AddCompoundLogicFunction("level", "has_level", "has[f'Unlock {level} Night']", "level")
+           .AddCompoundLogicFunction("Washer", "has_washer", "has['Washer']")
+           .AddCompoundLogicFunction("Vacuum", "has_vacuum", "has['Vacuum']")
+           .AddCompoundLogicFunction("Knapper", "has_knapper", "has['Knapper']")
            .AddLogicRules(
                 Collectibles.ToDictionary(
                     s => s, s => string.Join(

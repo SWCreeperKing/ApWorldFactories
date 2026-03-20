@@ -51,19 +51,17 @@ public class Poco : BuildData
 
     public override void Rules(WorldFactory _, RuleFactory rule_fact)
     {
-        rule_fact.AddLogicFunction("has", "has_item", StateHas("item", stringify: false), "item")
-                 .AddLogicFunction(
-                      "quest", "done_quest", StateHas("f\"{quest}'s Quest Completion\"", stringify: false), "quest"
-                  )
-                 .AddLogicRules(
-                      LocationData.Where(data => data.Requirements.Length != 0 || data.QuestRequirements.Length != 0)
-                                  .ToDictionary(
-                                       data => data.Location, data => data.GenRule()
-                                   )
-                  )
-                 .AddLogicRules(
-                      NpcQuestData.ToDictionary(data => data.QuestName, data => data.GenRule())
-                  );
+        rule_fact
+           .AddCompoundLogicFunction("quest", "done_quest", "has[f\"{quest}'s Quest Completion\"]", "quest")
+           .AddLogicRules(
+                LocationData.Where(data => data.Requirements.Length != 0 || data.QuestRequirements.Length != 0)
+                            .ToDictionary(
+                                 data => data.Location, data => data.GenRule()
+                             )
+            )
+           .AddLogicRules(
+                NpcQuestData.ToDictionary(data => data.QuestName, data => data.GenRule())
+            );
     }
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)

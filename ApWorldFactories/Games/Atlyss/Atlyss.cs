@@ -300,7 +300,7 @@ public class Atlyss : BuildData
            .AddLogicFunction(
                 "all_areas", "has_all_areas", "return all(has_area(state, player, area) for area in areas)", "areas"
             )
-           .AddLogicFunction("quest", "has_quest", StateHas("f\"Complete: {quest}\"", stringify: false), "quest")
+           .AddCompoundLogicFunction("quest", "has_quest", "has[f\"Complete: {quest}\"]", "quest")
            .AddLogicFunction(
                 "grind", "can_grind",
                 """
@@ -321,7 +321,6 @@ public class Atlyss : BuildData
                 "enemy", "can_beat_enemy", "level[enemy_data[enemy_name][0]] and any_area[enemy_data[enemy_name][1]]",
                 "enemy_name"
             )
-           .AddLogicFunction("item", "has_item", StateHas("item", "count", false), "item", "count")
            .AddLogicRules(
                 QuestData.Where(data => data.Enabled).ToDictionary(data => data.Quest, data => data.GenRule())
             )

@@ -123,8 +123,8 @@ public readonly struct AchievementData(DataArray param)
              .Select(s =>
                   {
                       var split = s.Split('x');
-                      return split.Length < 2 ? $"item[\"{s}\", 1]"
-                          : $"item[\"{string.Join('x', split.Skip(1))}\", {split[0]}]";
+                      return split.Length < 2 ? $"has[\"{s}\"]"
+                          : $"hasN[\"{string.Join('x', split.Skip(1))}\", {split[0]}]";
                   }
               ).ToArray();
 

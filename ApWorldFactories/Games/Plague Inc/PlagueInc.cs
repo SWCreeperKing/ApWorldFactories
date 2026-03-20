@@ -204,7 +204,6 @@ public class PlagueInc : BuildData
     public override void Rules(WorldFactory _, RuleFactory rule_fact)
     {
         rule_fact
-           .AddLogicFunction("has", "has_item", StateHas("item", stringify: false), "item")
            .AddLogicFunction(
                 "score", "has_score",
                 "return sum([victory_scores[disease][item] for item, count in state.prog_items[player].items() if count > 0 and item in victory_scores[disease]]) >= target_score",
