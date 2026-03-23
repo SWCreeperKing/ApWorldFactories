@@ -29,6 +29,8 @@ public static class CodeBank
                                      return
                                      """;
 
+    //todo: make a pool limit for characters and stages
+    //todo: make an arcana needed setting for enemy sanity
     public const string GenEarly = """
                                    stages = [stage for stage in self.final_included_stages_list if stage != EUDAI]
                                    characters = self.final_included_characters_list

@@ -24,6 +24,7 @@ public class WidgetInc : BuildData
     private string[] CraftlessResources = [];
     private string[] EndingNodes = [];
     private Dictionary<int, string[]> TieredProducers = [];
+    private string[][] ScoutItems = [];
 
     public override void RunShenanigans()
     {
@@ -50,13 +51,12 @@ public class WidgetInc : BuildData
             TechTreeData.Where(data => data.Unlock != "").GroupBy(data => data.TierRequirement)
                         .ToDictionary(g => g.Key, g => g.Select(data => data.Tech).ToArray());
 
-        var scoutHints = TechTreeData.Where(data => data.Unlock is not "").GroupBy(data => data.TierRequirement)
-                                     .OrderBy(g => g.Key)
-                                     .Select(g => string.Join(", ", g.Select(data => data.Tech)));
+        ScoutItems = TechTreeData.Where(data => data.Unlock is not "").GroupBy(data => data.TierRequirement)
+                                 .OrderBy(g => g.Key)
+                                 .Select(g => g.Select(data => data.Tech).ToArray()).ToArray();
 
-        WriteData("scoutHints", scoutHints);
         WriteData("idMap", FrameIdMap.Select(kv => $"{kv.Key}:{kv.Value}"));
-        
+
         WriteData("resources", ResourceBuildingRequirement.Select(kv => $"{kv.Key}:{kv.Value}"));
         WriteData("recipes", CraftingRecipes.Select(kv => $"{kv.Key}:{string.Join(',', kv.Value)}"));
         WriteData(
@@ -71,7 +71,10 @@ public class WidgetInc : BuildData
         options_fact
            .AddOption("Production Multiplier", "Gives a production multiplier", new Range(4, 1, 10))
            .AddOption("Hand Crafting Multiplier", "Gives a multiplier to hand crafting", new Range(2, 1, 10))
-           .AddOption("Starting Tier Producers", "Starts with upto X Tier producers", new Range(1, 0, 3))
+           .AddOption(
+                "Scout Hint Tier Producers", "Scout hint upto [1-13] Tier resource producers\n0 is off",
+                new Range(3, 0, 12)
+            )
            .AddCheckOptions();
     }
 
@@ -106,7 +109,7 @@ public class WidgetInc : BuildData
            .AddCreateItems(method =>
                 method
                    .AddCode(CreateItemsFromMapCountGenCode("progressive_tier"))
-                   .AddCode(CreateItemsFromClassificationList())
+                   .AddCode(CreateItemsFromClassificationList(exclusionCondition: "item == \"Widget Factory\""))
                    .AddCode(CreateItemsFillRemainingWithItem("Motivational Poster"))
             );
     }
@@ -162,11 +165,20 @@ public class WidgetInc : BuildData
            .UseInitFunction()
            .UseGenerateEarly()
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
-           .UseGenerateEarly(method => method.AddCode(
-                    new IfFactory("options.starting_tier_producers == 1")
-                       .ForEachOf(TieredProducers[1], (ifFactory, s) => ifFactory.AddCode(CreatePushPrecollected(s)))
-                       .SetElse(new CodeBlockFactory().AddCode(CreatePushPrecollected("Widget Factory")))
-                )
+           .UseGenerateEarly(method =>
+                {
+                    method.AddCode(CreatePushPrecollected("Widget Factory"));
+
+                    for (var i = 0; i < ScoutItems.Length; i++)
+                    {
+                        method.AddCode(
+                            new IfFactory($"options.scout_hint_tier_producers > {i}")
+                               .AddCode(
+                                    $"options.start_hints = StartHints([*options.start_hints, {string.Join(", ", ScoutItems[i].Select(s => $"\"{s}\""))}])"
+                                )
+                        );
+                    }
+                }
             )
            .UseCreateRegions()
            .AddCreateItems()
@@ -202,4 +214,6 @@ public class WidgetInc : BuildData
               .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
               .GenString();
     }
+
+    public override void ProcessLocationList(string[] locationList) => WriteData("locations", locationList);
 }

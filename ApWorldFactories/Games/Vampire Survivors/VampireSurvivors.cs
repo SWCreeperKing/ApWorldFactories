@@ -17,7 +17,7 @@ public class VampireSurvivors : BuildData
     public override string GameName => "Vampire Survivors";
     public override string ApWorldName => "vampire_survivors";
     public override string GoogleSheetId => "1lXIr2a5fa7rdQ9fe5efA7BOAGaO1ko-pNSSO62mqlCM";
-    public override string WorldVersion => "0.3.0";
+    public override string WorldVersion => "0.3.1";
     public override string MainSheetGid => "954348750";
 
     public override Dictionary<string, string> SheetGids => new()
@@ -400,7 +400,7 @@ public class VampireSurvivors : BuildData
                  .AddIndependentVariable(
                       new Variable(
                           "filler_items",
-                          "[\"Empty Coffins\", \"Floor Chickens\", \"Suspiciously Clean Skull\", \"Easter Eggs\", \"Progressive Nothing\"]"
+                          "['Empty Coffins', 'Floor Chickens', 'Suspiciously Clean Skull', 'Easter Eggs', 'Progressive Nothing']"
                       )
                   )
                  .AddToFinalLocationList("**{item: ItemClassification.progression for item in unlock_character_items}")
