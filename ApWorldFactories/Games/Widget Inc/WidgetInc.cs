@@ -12,7 +12,7 @@ public class WidgetInc : BuildData
     public override string GameName => "Widget Inc";
     public override string ApWorldName => "widget_inc";
     public override string GoogleSheetId => "1IdcSvjcpVu7AlMY5EUUnbr9mLd9X6LaLiIemBAgD_gA";
-    public override string WorldVersion => "0.1.2";
+    public override string WorldVersion => "0.2.0";
     public override string GameFolder => "WidgetInc";
 
     private TechTreeData[] TechTreeData = [];
