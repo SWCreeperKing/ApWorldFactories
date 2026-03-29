@@ -2,34 +2,6 @@
 
 public static class CodeBank
 {
-    public const string UtGenEarly = """
-                                     # UT yaml-less support
-                                     self.options.enemysanity.value = passthrough["enemysanity"]
-                                     self.options.chest_checks_per_stage.value = passthrough["chest_checks_per_stage"]
-                                     self.options.goal_requirement.value = passthrough["goal_requirement"]
-                                     self.options.egg_inclusion.value = passthrough["egg_inclusion"]
-                                     self.options.lock_hyper_behind_item.value = passthrough["is_hyper_locked"]
-                                     self.options.lock_hurry_behind_item.value = passthrough["is_hurry_locked"]
-                                     self.options.lock_arcanas_behind_item.value = passthrough["is_arcanas_locked"]
-
-                                     # simple UT support
-                                     self.starting_character = passthrough["starting_character"]
-                                     self.starting_stage = passthrough["starting_stage"]
-                                     self.final_included_stages_list = passthrough["final_stages"]
-                                     self.final_included_characters_list = passthrough["final_chars"]
-                                     self.ending_stage_count = passthrough["ending_stage_count"]
-
-                                     self.multiworld.push_precollected(self.create_item(f"Stage Unlock: {self.starting_stage}"))
-                                     self.multiworld.push_precollected(self.create_item(f"Character Unlock: {self.starting_character}"))
-
-                                     if not self.options.lock_arcanas_behind_item.value:
-                                         self.multiworld.push_precollected(self.create_item(f"Gamemode Unlock: Arcanas"))
-                                     if not self.options.lock_hurry_behind_item.value:
-                                         self.multiworld.push_precollected(self.create_item(f"Gamemode Unlock: Hurry"))
-                                     return
-                                     """;
-
-    //todo: make a pool limit for characters and stages
     //todo: make an arcana needed setting for enemy sanity
     public const string GenEarly = """
                                    stages = [stage for stage in self.final_included_stages_list if stage != EUDAI]
@@ -67,7 +39,7 @@ public static class CodeBank
                                    	self.starting_character = self.random.choice(characters_to_choose_from)
                                    else:
                                    	self.starting_character = characters[0]
-                                   self.stage_goal_amount = len(stages) - 1
+                                   self.stage_goal_amount = len(stages)
 
                                    self.multiworld.push_precollected(self.create_item(f"Stage Unlock: {self.starting_stage}"))
                                    self.multiworld.push_precollected(self.create_item(f"Character Unlock: {self.starting_character}"))
@@ -102,6 +74,12 @@ public static class CodeBank
                                        if len(characters) == 0:
                                            raise_yaml_error(world.player_name, "You must have more than 0 eligible characters included")
 
+                                       if len(stages) > options.stage_pool_size > 0:
+                                           stages = random.sample(stages, options.stage_pool_size)
+                                           
+                                       if len(characters) > options.character_pool_size > 0:
+                                           characters = random.sample(characters, options.character_pool_size)
+                                       
                                        if EUDAI not in stages and options.goal_requirement == 1:
                                            stages.append(EUDAI)
 

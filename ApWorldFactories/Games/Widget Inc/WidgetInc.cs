@@ -59,11 +59,9 @@ public class WidgetInc : BuildData
 
         WriteData("resources", ResourceBuildingRequirement.Select(kv => $"{kv.Key}:{kv.Value}"));
         WriteData("recipes", CraftingRecipes.Select(kv => $"{kv.Key}:{string.Join(',', kv.Value)}"));
-        WriteData(
-            "requireMap",
+        WriteData("requireMap",
             TechTreeData.Where(data => data.ResourceRequirements.Length != 0)
-                        .Select(data => $"{data.Id}:{string.Join(',', data.ResourceRequirements)}")
-        );
+                        .Select(data => $"{data.Id}:{string.Join(',', data.ResourceRequirements)}"));
     }
 
     public override void Options(WorldFactory _, OptionsFactory options_fact)
@@ -71,47 +69,41 @@ public class WidgetInc : BuildData
         options_fact
            .AddOption("Production Multiplier", "Gives a production multiplier", new Range(4, 1, 10))
            .AddOption("Hand Crafting Multiplier", "Gives a multiplier to hand crafting", new Range(2, 1, 10))
-           .AddOption(
-                "Scout Hint Tier Producers", "Scout hint upto [1-13] Tier resource producers\n0 is off",
-                new Range(3, 0, 12)
-            )
+           .AddOption("Scout Hint Tier Producers", "Scout hint upto [1-13] Tier resource producers\n0 is off",
+                new Range(3, 0, 12))
            .AddCheckOptions();
     }
 
     public override void Locations(WorldFactory _, LocationFactory location_fact)
     {
-        location_fact.AddLocations(
-            "tech_tree",
-            TechTreeData.Select(data => (string[])[data.Tech, $"Tier {data.TierRequirement}".Replace("Tier 0", "Menu")])
-        );
+        location_fact.AddLocations("tech_tree",
+            TechTreeData.Select(data => (string[])
+            [
+                data.Tech, $"Tier {data.TierRequirement}".Replace("Tier 0", "Menu")
+            ]));
     }
 
     public override void Items(WorldFactory _, ItemFactory item_fact)
     {
         item_fact
            .AddItem("Motivational Poster", ItemFactory.ItemClassification.Filler)
-           .AddItemCountVariable(
-                "progressive_tier", new Dictionary<string, int> { ["Progressive Tier"] = 12 },
-                ItemFactory.ItemClassification.Progression
-            )
-           .AddItems(
-                ItemFactory.ItemClassification.Filler,
+           .AddItemCountVariable("progressive_tier", new Dictionary<string, int> { ["Progressive Tier"] = 12 },
+                ItemFactory.ItemClassification.Progression)
+           .AddItems(ItemFactory.ItemClassification.Filler,
                 items: TechTreeData.Where(tech => EndingNodes.Contains(tech.Tech) && tech.Unlock is "")
                                    .Select(data => data.Tech)
-                                   .Where(s => !s.StartsWith("Tier") || s.EndsWith("Mastery")).ToArray()
-            )
-           .AddItems(
-                ItemFactory.ItemClassification.Progression,
+                                   .Where(s => !s.StartsWith("Tier") || s.EndsWith("Mastery")).ToArray())
+           .AddItems(ItemFactory.ItemClassification.Progression,
                 items: TechTreeData.Where(tech => !EndingNodes.Contains(tech.Tech) || tech.Unlock is not "")
                                    .Select(data => data.Tech)
-                                   .Where(s => !s.StartsWith("Tier") || s.EndsWith("Mastery")).ToArray()
-            )
+                                   .Where(s => !s.StartsWith("Tier") || s.EndsWith("Mastery")).ToArray())
            .AddCreateItems(method =>
                 method
                    .AddCode(CreateItemsFromMapCountGenCode("progressive_tier"))
-                   .AddCode(CreateItemsFromClassificationList(exclusionCondition: "item == \"Widget Factory\""))
-                   .AddCode(CreateItemsFillRemainingWithItem("Motivational Poster"))
-            );
+                   .AddCode(CreateItemsFromClassificationList(exclusionCondition: string.Join(" or ",
+                        ((string[])["Widget Factor", "Progressive Tier", "Motivational Poster"]).Select(
+                            s => $"item == \"{s}\""))))
+                   .AddCode(CreateItemsFillRemainingWithItem("Motivational Poster")));
     }
 
     public override void Rules(WorldFactory _, RuleFactory rule_fact)
@@ -119,77 +111,59 @@ public class WidgetInc : BuildData
         rule_fact
            .AddCompoundLogicFunction("tier", "has_tier", "hasN['Progressive Tier', tier]", "tier")
            .AddCompoundLogicFunction("frame", "has_frame", "has[frame]", "frame")
-           .ForEachOf(
-                CraftlessResources, (b, s) => b.AddCompoundLogicFunction(
-                    s.Replace(" ", ""),
-                    s.ToLower().Replace(" ", "_"), $"frame['{ResourceBuildingRequirement[s]}']"
-                )
-            ).ForEachOf(
-                CraftingRecipes, (b, pair) => b.AddCompoundLogicFunction(
-                    pair.Key.Replace(" ", ""), pair.Key.ToLower().Replace(" ", "_"),
-                    $"frame[\"{TechTreeData.First(data => data.Unlock == pair.Key).Tech}\"] and {string.Join(" and ", pair.Value.Select(s => s.Replace(" ", "")))}"
-                )
-            ).ForEachOf(
-                TechTreeData, (b, data) =>
-                {
-                    List<string> rules = [];
+           .ForEachOf(CraftlessResources, (b, s) => b.AddCompoundLogicFunction(s.Replace(" ", ""),
+                s.ToLower().Replace(" ", "_"), $"frame['{ResourceBuildingRequirement[s]}']")).ForEachOf(CraftingRecipes,
+                (b, pair) => b.AddCompoundLogicFunction(pair.Key.Replace(" ", ""), pair.Key.ToLower().Replace(" ", "_"),
+                    $"frame[\"{TechTreeData.First(data => data.Unlock == pair.Key).Tech}\"] and {string.Join(" and ", pair.Value.Select(s => s.Replace(" ", "")))}"))
+           .ForEachOf(TechTreeData, (b, data) =>
+            {
+                List<string> rules = [];
 
-                    if (data.PreviousTech is not "") rules.Add($"frame['{data.PreviousTech}']");
-                    rules.AddRange(data.ResourceRequirements.Select(res => res.Replace(" ", "")));
+                if (data.PreviousTech is not "") rules.Add($"frame['{data.PreviousTech}']");
+                rules.AddRange(data.ResourceRequirements.Select(res => res.Replace(" ", "")));
 
-                    b.AddLogicRule(data.Tech, string.Join(" and ", rules));
-                }
-            );
+                b.AddLogicRule(data.Tech, string.Join(" and ", rules));
+            });
     }
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
-        region_fact.ForEachOf(
-            Enumerable.Range(0, 12), (b, i) =>
-            {
-                b.AddRegion($"Tier {i + 1}");
+        region_fact.ForEachOf(Enumerable.Range(0, 12), (b, i) =>
+        {
+            b.AddRegion($"Tier {i + 1}");
 
-                if (i == 0)
-                {
-                    b.AddConnectionCompiledRule("Menu", "Tier 1", "tier[1]");
-                    return;
-                }
-                b.AddConnectionCompiledRule($"Tier {i}", $"Tier {i + 1}", $"tier[{i + 1}]");
+            if (i == 0)
+            {
+                b.AddConnectionCompiledRule("Menu", "Tier 1", "tier[1]");
+                return;
             }
-        ).AddLocationsFromList("tech_tree");
+            b.AddConnectionCompiledRule($"Tier {i}", $"Tier {i + 1}", $"tier[{i + 1}]");
+        }).AddLocationsFromList("tech_tree");
     }
 
     public override void Init(WorldFactory world_fact, WorldInitFactory init_fact)
     {
         init_fact
            .UseInitFunction()
-           .UseGenerateEarly()
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
            .UseGenerateEarly(method =>
-                {
-                    method.AddCode(CreatePushPrecollected("Widget Factory"));
+            {
+                method.AddCode(CreatePushPrecollected("Widget Factory"));
 
-                    for (var i = 0; i < ScoutItems.Length; i++)
-                    {
-                        method.AddCode(
-                            new IfFactory($"options.scout_hint_tier_producers > {i}")
-                               .AddCode(
-                                    $"options.start_hints = StartHints([*options.start_hints, {string.Join(", ", ScoutItems[i].Select(s => $"\"{s}\""))}])"
-                                )
-                        );
-                    }
+                for (var i = 0; i < ScoutItems.Length; i++)
+                {
+                    method.AddCode(new IfFactory($"options.scout_hint_tier_producers > {i}")
+                       .AddCode(
+                            $"options.start_hints = StartHints([*options.start_hints, {string.Join(", ", ScoutItems[i].Select(s => $"\"{s}\""))}])"));
                 }
-            )
+            })
            .UseCreateRegions()
            .AddCreateItems()
            .UseSetRules(method => method
                                  .AddCode("player = self.player")
-                                 .AddCode(CreateGoalCondition("RocketSegment", world_fact.GetRuleFactory()))
-            )
-           .UseFillSlotData(
-                new Dictionary<string, string> { ["uuid"] = "str(shuffled)" },
-                method => method.AddCode(CreateUniqueId())
-            )
+                                 .AddCode(CreateGoalCondition("RocketSegment", world_fact.GetRuleFactory())))
+           .UseFillSlotData(new Dictionary<string, string> { ["uuid"] = "str(shuffled)" },
+                method => method.AddCode(CreateUniqueId()))
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
     }
@@ -200,17 +174,15 @@ public class WidgetInc : BuildData
     )
     {
         return new GraphBuilder(GameName)
-              .ForEachOf(
-                   Enumerable.Range(0, 12), (b, i) =>
+              .ForEachOf(Enumerable.Range(0, 12), (b, i) =>
+               {
+                   if (i == 0)
                    {
-                       if (i == 0)
-                       {
-                           b.AddConnection("Menu", "Tier 1", "tier[1]");
-                           return;
-                       }
-                       b.AddConnection($"Tier {i}", $"Tier {i + 1}", $"tier[{i + 1}]");
+                       b.AddConnection("Menu", "Tier 1", "tier[1]");
+                       return;
                    }
-               )
+                   b.AddConnection($"Tier {i}", $"Tier {i + 1}", $"tier[{i + 1}]");
+               })
               .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
               .GenString();
     }
