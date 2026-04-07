@@ -4,6 +4,7 @@ namespace ApWorldFactories.Graphviz;
 
 public class GraphBuilder(string gameName)
 {
+    private const string Font = "monocraft";
     private string GameName = gameName;
     private Dictionary<string, GraphRegion> Regions = new() { ["Menu"] = new GraphRegion("Menu") };
 
@@ -72,7 +73,7 @@ public class GraphBuilder(string gameName)
     {
         StringBuilder sb = new();
 
-        sb.Append($"digraph {GameName.Replace(" ", "_")} {{\nconcentrate=True\nrankdir=TB;\nnode [shape=none]\n");
+        sb.Append($"digraph {GameName.Replace(" ", "_")} {{\nconcentrate=True\nrankdir=TB;\nnode [shape=none]\ngraph [fontname = \"{Font}\"];\nnode [fontname = \"{Font}\"];\nedge [fontname = \"{Font}\"];");
 
         var regions = Regions.Values.ToArray();
         foreach (var graphRegion in regions) sb.Append(graphRegion.GenNode()).Append('\n');

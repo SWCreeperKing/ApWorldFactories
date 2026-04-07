@@ -31,7 +31,7 @@ public class WereCleaner : BuildData
            .ReadTable(out ItemData).SkipColumn()
            .ReadTable(out NpcData);
 
-        RawNpcs = NpcData.SelectMany(data => data.Npcs).Where(s => s.Trim() is not "").ToHashSet().ToArray();
+        RawNpcs = NpcData.SelectMany(data => data.Npcs).Where(s => s.Trim() is not "").Distinct().ToArray();
         AllNpcs = RawNpcs.Select(data => $"Kill {data}").ToArray();
         Days = LevelData.Select(data => $"Survive {data.LevelName} Night").ToArray();
         DayUnlocks = LevelData.Select(data => $"Unlock {data.LevelName} Night").ToArray();

@@ -14,78 +14,89 @@ public class SlimeRancher : BuildData
     public override string GoogleSheetId => "15PdrnGmkYdocX9RU-D5U_9OgihRNN9axX71mm-jOPUQ";
     public override string WorldVersion => "0.2.3";
 
-    public override Dictionary<string, string> SheetGids { get; }
-        = new() { ["GameData"] = "72469245", ["NewLogic"] = "2113673017" };
+    public override Dictionary<string, string> SheetGids { get; } = new()
+    {
+        ["GameData"] = "72469245", ["NewLogic"] = "2113673017"
+    };
 
-    private InteractableRowData[] RawInteractables = [];
-    private GateRowData[] Gates = [];
-    private GordoRowData[] Gordos = [];
     private UpgradeRowData[] Upgrades = [];
     private CorporateRowData[] CorporateLocations = [];
-    private RegionData[] RegionData = [];
     private ItemAmountData[] ItemAmountData = [];
+    private RegionUnlockRowData[] RegionUnlockData = [];
+    private SlimeRowData[] SlimeData = [];
+    private RegionSector[] CombinedRegionData = [];
+    private InteractableSector[] CombinedInteractableData = [];
 
     private string[] Zones = [];
-    private Dictionary<string, string[]> BackwardsConnections = [];
     private Dictionary<string, int> NonProgressiveUsefulItemCount = [];
     private Dictionary<string, int> ProgressiveUsefulItemCount = [];
     private Dictionary<string, int> ProgressiveProgressionItemCount = [];
+
     private string[] FillerItems = [];
-    private InteractableRowData[] Interactables = [];
-    private InteractableRowData[] DlcInteractables = [];
 
     public override void RunShenanigans()
     {
-        GetSpreadsheet("GameData")
-           .ReadTable(new RegionDataCreator(), out RegionData).SkipColumn()
-           .ReadTable(out ItemAmountData);
+        GetSpreadsheet("NewLogic")
+           .ReadTable(out InteractableRowData[] rawInteractableData).SkipColumn()
+           .ReadTable(out RegionRowData[] rawRegionData).SkipColumn()
+           .ReadTable(out SlimeData);
 
-        Zones = RegionData.Select(data => data.Region).ToArray();
-        BackwardsConnections = RegionData.ToDictionary(data => data.Region, data => data.BackConnections);
+        SlimeData = SlimeData.Where(data => data.PlortDrop is not "N/A").ToArray();
+
+        CombinedRegionData = RegionSector.CreateSectorFromData(rawRegionData, data => new RegionSector(data));
+        CombinedInteractableData = InteractableSector.CreateSectorFromData(
+            rawInteractableData, data => new InteractableSector(data)
+        );
+
+        GetSpreadsheet("GameData")
+           .ReadTable(out ItemAmountData).SkipColumn()
+           .ReadTable(out RegionUnlockData);
+
+        Zones = rawRegionData.SelectMany(zone => (string[])[zone.From, zone.To]).Distinct()
+                             .Where(zone => zone is not "Menu").ToArray();
 
         NonProgressiveUsefulItemCount = ItemAmountData.Where(data => data.ProgType is "nonprog_useful")
-                                                      .ToDictionary(
-                                                           data => data.Item, data => int.Parse(data.Count)
-                                                       );
+                                                      .ToDictionary(data => data.Item, data => int.Parse(data.Count));
 
         ProgressiveUsefulItemCount = ItemAmountData.Where(data => data.ProgType is "prog_useful")
                                                    .ToDictionary(data => data.Item, data => int.Parse(data.Count));
+
         ProgressiveProgressionItemCount = ItemAmountData.Where(data => data.ProgType is "prog_prog")
-                                                        .ToDictionary(
-                                                             data => data.Item, data => int.Parse(data.Count)
-                                                         );
+                                                        .ToDictionary(data => data.Item, data => int.Parse(data.Count));
+
         FillerItems = ItemAmountData.Where(data => data.ProgType is "filler").Select(data => data.Item).ToArray();
 
         GetSpreadsheet()
-           .ReadTable(new InteractableCreator(Zones), out RawInteractables).SkipColumn()
-           .ReadTable(new GateCreator(), out Gates).SkipColumn()
-           .ReadTable(new GordoCreator(), out Gordos).SkipColumn()
+           .SkipColumn(8)
+           .ReadTable(new GateCreator(), out _).SkipColumn()
+           .ReadTable(new GordoCreator(), out _).SkipColumn()
            .ReadTable(new UpgradeCreator(), out Upgrades).SkipColumn()
            .ReadTable(new CorporateCreator(), out CorporateLocations);
 
-        Interactables = RawInteractables.Where(line => !line.IsSecretStyle).ToArray();
-        DlcInteractables = RawInteractables.Where(line => line.IsSecretStyle).ToArray();
-
+        InteractableRowData.ForCompiler = false;
         WriteData(
             "Logic",
-            Interactables.Concat(DlcInteractables).Select(line => $"{line.Name}:{line.GenRule(false)}:{line.Area}")
-                         .Where(s => s != "")
+            rawInteractableData.Select(line => $"{line.VagueName}:{line.GenRule()}:{(int)line.SkipLogic}:{line.Region}")
+                               .Where(s => s != "")
         );
 
-        var noteLocations = File.Exists($"{WriteOutputDirectory}/NoteLocations.txt")
-            ? File.ReadAllLines($"{WriteOutputDirectory}/NoteLocations.txt").ToList() : [];
-        noteLocations.AddRange(
-            Interactables.Where(inter => inter.IsNote && !noteLocations.Contains(inter.Id)).Select(inter => inter.Id)
-        );
+        var noteLocationsFromSheet = CombinedInteractableData.Where(sector => sector.IsNote).Select(sector => sector.Id)
+                                                             .ToArray();
+        var noteLocations = (File.Exists($"{WriteOutputDirectory}/NoteLocations.txt")
+                                ? File.ReadAllLines($"{WriteOutputDirectory}/NoteLocations.txt").ToList() : [])
+                           .Where(loc => noteLocationsFromSheet.Any(sector => sector == loc)).ToList();
+        noteLocations.AddRange(noteLocationsFromSheet.Where(inter => !noteLocations.Contains(inter)));
+
         WriteData("NoteLocations", noteLocations);
 
         WriteData(
             "Locations",
-            RawInteractables.Select(line => line.GetText).Concat(Gates.Select(line => line.GetText))
-                            .Concat(Gordos.Select(line => line.GetText))
+            rawInteractableData.Select(line => line.GetText).Distinct()
         );
         WriteData("Upgrades", Upgrades.Select(line => $"{line.Name},{line.Id}"));
         WriteData("7Zee", CorporateLocations.Select(line => $"{line.Location},{line.Level}"));
+
+        InteractableRowData.ForCompiler = true;
     }
 
     public override void Options(WorldFactory _, OptionsFactory options_fact)
@@ -101,7 +112,8 @@ public class SlimeRancher : BuildData
             )
            .AddOption("Start With Dry Reef", "Start with the Dry Reef unlocked", new DefaultOnToggle())
            .AddOption(
-                "Enable Stylish Dlc Treasure Pods", "note: THIS WILL NOT GIVE YOU DLC\nYOU MUST __***OWN***__ THE DLC",
+                "Enable Stylish Dlc Treasure Pods",
+                "note: THIS WILL NOT GIVE YOU DLC\nYOU MUST __***OWN***__ THE DLC",
                 new Toggle()
             )
            .AddOption(
@@ -114,7 +126,8 @@ public class SlimeRancher : BuildData
                                            """, new CreepyUtil.Archipelago.WorldFactory.Range(1, 0, 3)
             )
            .AddOption(
-                "Include 7z", "Include unlockables behind 7z as checks\nestimated to appear in sphere 2 and above",
+                "Include 7z",
+                "Include unlockables behind 7z as checks\nestimated to appear in sphere 2 and above",
                 new Toggle()
             )
            .AddOption(
@@ -128,6 +141,24 @@ public class SlimeRancher : BuildData
            .AddOption(
                 "Trap Percent", "what percent of filler should be replaced with traps",
                 new CreepyUtil.Archipelago.WorldFactory.Range(15, 0, 100)
+            )
+           .AddOption(
+                "Easy Skips", "Enable Skips that many new players end up finding on their first playthrough",
+                new Toggle()
+            )
+           .AddOption("Precise Movement", "Enable Skips that require tighter movement than average", new Toggle())
+           .AddOption(
+                "Dangerous Skips", "Enable Skips that have a high chance of taking damage or getting killed",
+                new Toggle()
+            )
+           .AddOption(
+                "Obscure Locations", "Enable Skips that abuse the terrain, usually in unintuitive ways", new Toggle()
+            )
+           .AddOption("Largo Jumps", "EnableSkips where you jump off a largo midair", new Toggle())
+           .AddOption(
+                "Jetpack Boosts",
+                "Enable Skips where you use the ability to get rid of jetpack's startup times through careful jumping, allowing for more energy conservation",
+                new Toggle()
             )
            .AddCheckOptions(method =>
                 method.AddCode(
@@ -146,12 +177,22 @@ public class SlimeRancher : BuildData
             // .AddLocations("backwards_connections", BackwardsConnections, addToFinalList: false)
            .AddLocations("upgrades", Upgrades.Select(line => line.Name))
            .AddLocations(
-                "upgrades_7z", Upgrades.Where(up => up.Rule is "7z").Select(up => up.Name), addToFinalList: false
+                "upgrades_7z", Upgrades.Where(up => up.Rule is "7z").Select(up => up.Name),
+                addToFinalList: false
             )
-           .AddLocations("interactables", Interactables.Select(line => (string[])[line.Name, line.Area]))
-           .AddLocations("dlc_interactables", DlcInteractables.Select(line => (string[])[line.Name, line.Area]))
            .AddLocations(
-                "corporate_locations", CorporateLocations.Select(line => (string[])[line.Location, line.Area])
+                "interactables",
+                CombinedInteractableData.Where(sector => !sector.IsSecretStyle && sector.HasNoRule())
+                                        .Select(line => (string[])[line.VagueName, line.Region])
+            )
+           .AddLocations(
+                "dlc_interactables",
+                CombinedInteractableData.Where(sector => sector.IsSecretStyle && sector.HasNoRule())
+                                        .Select(line => (string[])[line.VagueName, line.Region])
+            )
+           .AddLocations(
+                "corporate_locations",
+                CorporateLocations.Select(line => (string[])[line.Location, line.Area])
             );
     }
 
@@ -160,33 +201,32 @@ public class SlimeRancher : BuildData
         item_fact
            .AddItemListVariable(
                 "region_unlocks", Progression, true, true,
-                Zones.Skip(2).Select(zone => $"Region Unlock: {zone}").ToArray()
+                RegionUnlockData.Where(data => data.Include).Select(zone => $"Region Unlock: {zone.RegionName}")
+                                .ToArray()
             )
            .AddItemCountVariable("non_progressive_useful_items", NonProgressiveUsefulItemCount, Useful)
            .AddItemCountVariable("progressive_useful_item_count", ProgressiveUsefulItemCount, Useful)
            .AddItemCountVariable("progressive_progression_item_count", ProgressiveProgressionItemCount, Progression)
            .AddItemListVariable("filler_items", Filler, true, true, FillerItems)
            .AddItem("Trap Slime", Trap)
-           .AddCreateItems(func => func.AddCode(
-                                            """
-                                            for zone in region_unlocks:
-                                                if "Reef" in zone and options.start_with_dry_reef: continue
-                                                world.location_count -= 1
-                                                pool.append(world.create_item(zone))
-                                            """
-                                        ).AddNewLine()
-                                       .AddCode(CreateItemsFromMapCountGenCode("non_progressive_useful_items"))
-                                       .AddNewLine()
-                                       .AddCode(CreateItemsFromMapCountGenCode("progressive_useful_item_count"))
-                                       .AddNewLine()
-                                       .AddCode(CreateItemsFromMapCountGenCode("progressive_progression_item_count"))
-                                       .AddNewLine()
-                                       .AddCode(
-                                            CreateItemsFromCountGenCode(
-                                                "int(world.location_count * (options.trap_percent / 100))", "Trap Slime"
-                                            )
-                                        ).AddNewLine()
-                                       .AddCode(CreateItemsFillRemainingWith("filler_items"))
+           .AddCreateItems(func =>
+                func.AddCode(
+                         """
+                         for zone in region_unlocks:
+                             if "Reef" in zone and options.start_with_dry_reef: continue
+                             world.location_count -= 1
+                             pool.append(world.create_item(zone))
+                         """
+                     ).AddNewLine()
+                    .AddCode(CreateItemsFromMapCountGenCode("non_progressive_useful_items")).AddNewLine()
+                    .AddCode(CreateItemsFromMapCountGenCode("progressive_useful_item_count")).AddNewLine()
+                    .AddCode(CreateItemsFromMapCountGenCode("progressive_progression_item_count")).AddNewLine()
+                    .AddCode(
+                         CreateItemsFromCountGenCode(
+                             "int(world.location_count * (options.trap_percent / 100))", "Trap Slime"
+                         )
+                     ).AddNewLine()
+                    .AddCode(CreateItemsFillRemainingWith("filler_items"))
             );
     }
 
@@ -207,33 +247,23 @@ public class SlimeRancher : BuildData
                 "Reef and ToRuins"
             )
            .AddCompoundLogicFunction("Lab", "can_access_lab", "Reef and region['Indigo Quarry'] and region['The Lab']")
-           .AddLogicRules(RawInteractables.ToDictionary(inter => inter.Name, inter => inter.GenRule(true)))
+           .AddLogicRules(CombinedInteractableData.ToDictionary(inter => inter.VagueName, inter => inter.GenRule()))
            .AddLogicRules(Upgrades.ToDictionary(up => up.Name, up => up.Rule));
     }
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
-        region_fact.AddRegions(BackwardsConnections.Keys.ToArray())
+        region_fact.AddRegions(Zones)
                    .ForEachOf(
-                        BackwardsConnections, (b, zoneKv) =>
-                        {
-                            if (zoneKv.Key is "Ancient Ruins")
-                            {
-                                b.AddConnectionCompiledRule(zoneKv.Value[0], zoneKv.Key, "ToRuins");
-                                return;
-                            }
-
-                            foreach (var backConnection in zoneKv.Value)
-                            {
-                                if (backConnection is "Menu")
-                                {
-                                    b.AddConnection("Menu", zoneKv.Key);
-                                    continue;
-                                }
-                                b.AddConnectionCompiledRule(backConnection, zoneKv.Key, $"region[\"{zoneKv.Key}\"]");
-                            }
-                        }
+                        CombinedRegionData.Where(data => data.HasNoRule()),
+                        (b, sector) => b.AddConnectionCompiledRule(sector.From, sector.To, sector.GenRule())
                     ).ForEachOf(
+                        CombinedRegionData.Where(data => !data.HasNoRule()), (b, sector) => b
+                           .AddConnectionCompiledRule(
+                                sector.From, sector.To, sector.GenRule(), condition: sector.GenOption()
+                            )
+                    )
+                   .ForEachOf(
                         Upgrades, (b, upgrade) =>
                         {
                             var condition = "";
@@ -251,21 +281,30 @@ public class SlimeRancher : BuildData
                    .AddLocationsFromList("interactables")
                    .AddEventLocations(
                         "world.options.goal_type == 0",
-                        Interactables
-                           .Where(inter => inter.Name.Contains("Hobson's Note"))
+                        CombinedInteractableData
+                           .Where(inter => inter.IsNote)
                            .Select(inter => new EventLocationData(
-                                    inter.Area, $"Read: {inter.Name}", "Note Read", inter.Name
+                                    inter.Region, $"Read: {inter.VagueName}", "Note Read",
+                                    inter.VagueName
                                 )
                             )
                            .ToArray()
                     )
                    .AddLocationsFromList(
-                        "dlc_interactables", condition: "world.options.enable_stylish_dlc_treasure_pods"
+                        "dlc_interactables",
+                        condition: "world.options.enable_stylish_dlc_treasure_pods"
                     )
                    .AddLocationsFromList("corporate_locations", condition: "world.options.include_7z")
                    .AddEventLocationsFromList(
                         "corporate_locations", "f\"Bought: {location[0]}\"", "\"7Zee Bought\"",
                         condition: "world.options.include_7z and world.options.goal_type == 1"
+                    ).AddEventLocations(
+                        locations: SlimeData
+                                  .SelectMany(data => data.SpawnLocations.Select(region => new EventLocationData(
+                                               region, $"{data.Slime} ({region})", data.PlortDrop, "''"
+                                           )
+                                       )
+                                   ).ToArray()
                     );
     }
 
@@ -302,44 +341,34 @@ public class SlimeRancher : BuildData
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
     }
 
-    public override string GenerateGraphViz(
-        WorldFactory worldFactory, Dictionary<string, string> associations, Func<string, string> getRule,
-        string[][] locationDoubleArrays
-    )
+    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
+        Func<string, string> getRule,
+        string[][] locationDoubleArrays)
     {
         return new GraphBuilder(GameName)
-              .ForEachOf(
-                   BackwardsConnections, (b, zoneKv) =>
-                   {
-                       if (zoneKv.Key is "Ancient Ruins")
-                       {
-                           b.AddConnection(zoneKv.Value[0], zoneKv.Key, "ToRuins");
-                           return;
-                       }
-
-                       foreach (var backConnection in zoneKv.Value)
-                       {
-                           if (backConnection is "Menu")
-                           {
-                               b.AddConnection("Menu", zoneKv.Key);
-                               continue;
-                           }
-                           b.AddConnection(backConnection, zoneKv.Key, $"region[\"{zoneKv.Key}\"]");
-                       }
-                   }
-               )
+              .ForEachOf(CombinedRegionData, (b, sector) => b.AddConnection(sector.From, sector.To, sector.GenRule()))
               .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
               .AddLocations("Upgrades", getRule, Upgrades.Select(up => up.Name).ToArray())
               .ForEachOf(
-                   Interactables
-                      .Where(inter => inter.Name.Contains("Hobson's Note")),
-                   (b, inter) => b.AddEventLocation(inter.Area, getRule, $"Read: {inter.Name}", inter.Name, "Note Read")
+                   CombinedInteractableData
+                      .Where(inter => inter.IsNote),
+                   (b, inter) => b.AddEventLocation(
+                       inter.Region, getRule, $"Read: {inter.VagueName}", inter.VagueName,
+                       "Note Read"
+                   )
                )
               .ForEachOf(
                    CorporateLocations,
                    (b, line) => b.AddEventLocation(
-                       line.Area, getRule, $"Bought: {line.Location}", line.Location, "7Zee Bought"
+                       line.Area, getRule, $"Bought: {line.Location}", line.Location,
+                       "7Zee Bought"
                    )
+               )
+              .ForEachOf(
+                   SlimeData, (b, data) =>
+                       b.ForEachOf(
+                           data.SpawnLocations, (_, s) => b.AddEventLocation(s, getRule, data.Slime, "", data.PlortDrop)
+                       )
                )
               .GenString();
     }

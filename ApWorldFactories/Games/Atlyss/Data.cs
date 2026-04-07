@@ -1,5 +1,4 @@
-﻿using System.Text;
-using static CreepyUtil.Archipelago.WorldFactory.ItemFactory;
+﻿using static CreepyUtil.Archipelago.WorldFactory.ItemFactory;
 
 namespace ApWorldFactories.Games.Atlyss;
 

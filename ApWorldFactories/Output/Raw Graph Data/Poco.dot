@@ -2,7 +2,9 @@ digraph Poco {
 concentrate=True
 rankdir=TB;
 node [shape=none]
-"Menu" [label=<<table border="2" cellborder="1" cellspacing="0" cellpadding="4"><tr> <td colspan = "3"><b>"Menu"</b></td></tr></table>>]
+graph [fontname = "monocraft"];
+node [fontname = "monocraft"];
+edge [fontname = "monocraft"];"Menu" [label=<<table border="2" cellborder="1" cellspacing="0" cellpadding="4"><tr> <td colspan = "3"><b>"Menu"</b></td></tr></table>>]
 "Gripp's Hoard" [label=<<table border="2" cellborder="1" cellspacing="0" cellpadding="4"><tr> <td colspan = "3"><b>"Gripp's Hoard"</b></td></tr><tr><td><b>Location</b></td><td><b>Logic</b></td><td><b>Item</b></td></tr><tr><td align="left">"Pickup Axe"</td><td>"N/A"</td><td>"Random"</td></tr><tr><td align="left">"Pickup Photo #5"</td><td>"N/A"</td><td>"Random"</td></tr></table>>]
 "Junk Rivers" [label=<<table border="2" cellborder="1" cellspacing="0" cellpadding="4"><tr> <td colspan = "3"><b>"Junk Rivers"</b></td></tr><tr><td><b>Location</b></td><td><b>Logic</b></td><td><b>Item</b></td></tr><tr><td align="left">"Rat Skull #1"</td><td>"N/A"</td><td>"Random"</td></tr><tr><td align="left">"Pickup Old Key"</td><td>"has['Feather']"</td><td>"Random"</td></tr></table>>]
 "Launch Pad" [label=<<table border="2" cellborder="1" cellspacing="0" cellpadding="4"><tr> <td colspan = "3"><b>"Launch Pad"</b></td></tr><tr><td><b>Location</b></td><td><b>Logic</b></td><td><b>Item</b></td></tr><tr><td align="left">"Pickup Cog"</td><td>"N/A"</td><td>"Random"</td></tr><tr><td align="left">"Pickup Coin"</td><td>"N/A"</td><td>"Random"</td></tr><tr><td align="left">"Milk Beetle"</td><td>"has['Bucket']"</td><td>"Random"</td></tr></table>>]

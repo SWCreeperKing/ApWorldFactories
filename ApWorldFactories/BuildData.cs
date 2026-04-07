@@ -186,7 +186,7 @@ public abstract class BuildData
         var graphProcess = new ProcessStartInfo
         {
             FileName = "cmd.exe", RedirectStandardOutput = true, RedirectStandardError = true,
-            UseShellExecute = false, CreateNoWindow = true, RedirectStandardInput = true
+            CreateNoWindow = true, RedirectStandardInput = true
         };
 
         using var process = new Process();
@@ -214,9 +214,7 @@ public abstract class BuildData
 
     public virtual void Options(WorldFactory _, OptionsFactory options_fact) => options_fact.AddCheckOptions();
 
-    public virtual void HostSettings(WorldFactory _, HostSettingsFactory host_fact)
-    {
-    }
+    public virtual void HostSettings(WorldFactory _, HostSettingsFactory host_fact) { }
 
     public abstract void Locations(WorldFactory _, LocationFactory location_fact);
     public abstract void Items(WorldFactory _, ItemFactory item_fact);
@@ -242,18 +240,13 @@ public abstract class BuildData
     public virtual void GenerateJson(WorldFactory worldFactory)
         => worldFactory.GenerateArchipelagoJson(ArchipelagoVersion, WorldVersion, "SW_CreeperKing");
 
-    public virtual void ProcessLocationList(string[] locationList)
-    {
-    }
+    public virtual void ProcessLocationList(string[] locationList) { }
 
-    public virtual void ProcessItemList(string[] itemList)
-    {
-    }
+    public virtual void ProcessItemList(string[] itemList) { }
 
-    public virtual string GenerateGraphViz(
-        WorldFactory worldFactory, Dictionary<string, string> associations, Func<string, string> getRule,
-        string[][] locationDoubleArrays
-    ) => "";
+    public virtual string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
+        Func<string, string> getRule,
+        string[][] locationDoubleArrays) => "";
 }
 
 public class DataCreator<T> : CsvTableRowCreator<T>
@@ -271,13 +264,11 @@ public static class Extensions
 
     public static bool IsTrue(this string text) => text is not "" && text[0] is 't' or 'T' or 'y' or 'Y';
 
-    public static string OptionVariableFormat(
-        this string text, string prefix = "", string suffix = ""
-    ) => $"{prefix.LowerReplace()}{text.LowerReplace()}{suffix.LowerReplace()}";
+    public static string OptionVariableFormat(this string text, string prefix = "", string suffix = "")
+        => $"{prefix.LowerReplace()}{text.LowerReplace()}{suffix.LowerReplace()}";
 
-    public static string OptionFormat(
-        this string text, string options = "options", string prefix = "", string suffix = ""
-    ) => $"{options}.{prefix.LowerReplace()}{text.LowerReplace()}{suffix.LowerReplace()}";
+    public static string OptionFormat(this string text, string options = "options", string prefix = "",
+        string suffix = "") => $"{options}.{prefix.LowerReplace()}{text.LowerReplace()}{suffix.LowerReplace()}";
 
     public static string LowerReplace(this string text) => text.ToLower().Replace(' ', '_');
 
@@ -302,13 +293,10 @@ public static class Extensions
         return t;
     }
 
-    public static string AsStringifiedArray(
-        this IEnumerable<string> arr, string surround = "\"", string separator = ", ", string leftEnd = "[",
-        string rightEnd = "]"
-    )
-    {
-        return $"{leftEnd}{string.Join(separator, arr.Select(s => s.Surround(surround)))}{rightEnd}";
-    }
+    public static string AsStringifiedArray(this IEnumerable<string> arr, string surround = "\"",
+        string separator = ", ", string leftEnd = "[",
+        string rightEnd = "]")
+        => $"{leftEnd}{string.Join(separator, arr.Select(s => s.Surround(surround)))}{rightEnd}";
 }
 
 [AttributeUsage(AttributeTargets.Field)]
