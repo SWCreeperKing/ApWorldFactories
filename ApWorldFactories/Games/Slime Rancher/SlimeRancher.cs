@@ -7,12 +7,16 @@ namespace ApWorldFactories.Games.Slime_Rancher;
 
 public class SlimeRancher : BuildData
 {
+    private const string Retreat = "Ogden's Retreat";
+    private const string Manor = "Mochi's Manor";
+    private const string Workshop = "Viktor's Workshop";
+
     public override string SteamDirectory => DDrive;
     public override string ModFolderName => "SW_CreeperKing.Slimipelago";
     public override string GameName => "Slime Rancher";
     public override string ApWorldName => "slime_rancher";
     public override string GoogleSheetId => "15PdrnGmkYdocX9RU-D5U_9OgihRNN9axX71mm-jOPUQ";
-    public override string WorldVersion => "0.2.3";
+    public override string WorldVersion => "0.3.0";
 
     public override Dictionary<string, string> SheetGids { get; } = new()
     {
@@ -26,11 +30,12 @@ public class SlimeRancher : BuildData
     private SlimeRowData[] SlimeData = [];
     private RegionSector[] CombinedRegionData = [];
     private InteractableSector[] CombinedInteractableData = [];
+    private GateRowData[] GateData = [];
 
-    private string[] Zones = [];
     private Dictionary<string, int> NonProgressiveUsefulItemCount = [];
     private Dictionary<string, int> ProgressiveUsefulItemCount = [];
     private Dictionary<string, int> ProgressiveProgressionItemCount = [];
+    private Dictionary<string, string> LocationMap = [];
 
     private string[] FillerItems = [];
 
@@ -39,7 +44,11 @@ public class SlimeRancher : BuildData
         GetSpreadsheet("NewLogic")
            .ReadTable(out InteractableRowData[] rawInteractableData).SkipColumn()
            .ReadTable(out RegionRowData[] rawRegionData).SkipColumn()
-           .ReadTable(out SlimeData);
+           .ReadTable(out SlimeData).SkipColumn()
+           .ReadTable(out LocationNameGroupData[] rawLocationGroups);
+
+        LocationMap = rawLocationGroups.SelectMany(data => data.Locations.Select(reg => (reg, data.Group)))
+                                       .ToDictionary(t => t.reg, t => t.Group);
 
         SlimeData = SlimeData.Where(data => data.PlortDrop is not "N/A").ToArray();
 
@@ -51,9 +60,6 @@ public class SlimeRancher : BuildData
         GetSpreadsheet("GameData")
            .ReadTable(out ItemAmountData).SkipColumn()
            .ReadTable(out RegionUnlockData);
-
-        Zones = rawRegionData.SelectMany(zone => (string[])[zone.From, zone.To]).Distinct()
-                             .Where(zone => zone is not "Menu").ToArray();
 
         NonProgressiveUsefulItemCount = ItemAmountData.Where(data => data.ProgType is "nonprog_useful")
                                                       .ToDictionary(data => data.Item, data => int.Parse(data.Count));
@@ -68,7 +74,7 @@ public class SlimeRancher : BuildData
 
         GetSpreadsheet()
            .SkipColumn(8)
-           .ReadTable(new GateCreator(), out _).SkipColumn()
+           .ReadTable(new GateCreator(), out GateData).SkipColumn()
            .ReadTable(new GordoCreator(), out _).SkipColumn()
            .ReadTable(new UpgradeCreator(), out Upgrades).SkipColumn()
            .ReadTable(new CorporateCreator(), out CorporateLocations);
@@ -79,6 +85,13 @@ public class SlimeRancher : BuildData
             rawInteractableData.Select(line => $"{line.VagueName}:{line.GenRule()}:{(int)line.SkipLogic}:{line.Region}")
                                .Where(s => s != "")
         );
+        WriteData(
+            "RegionLogic",
+            rawRegionData.Select(line
+                => $"{line.To}:{line.From}:{line.GenRule()}:{(int)line.SkipLogic}:{string.Join(';', line.PlortsRequired)}:{string.Join(';', line.RegionUnlocks)}"
+            )
+        );
+        WriteData("PlortLogic", SlimeData.Select(line => $"{line.PlortDrop}:{string.Join(';', line.SpawnLocations)}"));
 
         var noteLocationsFromSheet = CombinedInteractableData.Where(sector => sector.IsNote).Select(sector => sector.Id)
                                                              .ToArray();
@@ -90,11 +103,15 @@ public class SlimeRancher : BuildData
         WriteData("NoteLocations", noteLocations);
 
         WriteData(
+            "Zones", RegionUnlockData.Where(data => data.Include).Select(data => $"{data.ZoneId}:{data.RegionName}")
+        );
+        WriteData(
             "Locations",
             rawInteractableData.Select(line => line.GetText).Distinct()
         );
         WriteData("Upgrades", Upgrades.Select(line => $"{line.Name},{line.Id}"));
         WriteData("7Zee", CorporateLocations.Select(line => $"{line.Location},{line.Level}"));
+        WriteData("Gates", GateData.Select(data => $"{data.Id};{data.RegionUnlock}"));
 
         InteractableRowData.ForCompiler = true;
     }
@@ -142,6 +159,9 @@ public class SlimeRancher : BuildData
                 "Trap Percent", "what percent of filler should be replaced with traps",
                 new CreepyUtil.Archipelago.WorldFactory.Range(15, 0, 100)
             )
+           .AddOption("Include Ogden", "Include Ogden's Retreat", new Toggle())
+           .AddOption("Include Mochi", "Include Mochi's Manor", new Toggle())
+           .AddOption("Include Viktor", "Include Viktor's Workshop", new Toggle())
            .AddOption(
                 "Easy Skips", "Enable Skips that many new players end up finding on their first playthrough",
                 new Toggle()
@@ -166,15 +186,13 @@ public class SlimeRancher : BuildData
                     if options.goal_type == 1 and not options.include_7z:
                         raise_yaml_error(world.player, "7Zee goal type requires you to include 7Zee locations")
                     """
-                )
+                ).AddCode(CreateMinimalCatch(GameName))
             );
     }
 
     public override void Locations(WorldFactory _, LocationFactory location_fact)
     {
         location_fact
-            // .AddLocations("zones", Zones, addToFinalList: false)
-            // .AddLocations("backwards_connections", BackwardsConnections, addToFinalList: false)
            .AddLocations("upgrades", Upgrades.Select(line => line.Name))
            .AddLocations(
                 "upgrades_7z", Upgrades.Where(up => up.Rule is "7z").Select(up => up.Name),
@@ -193,7 +211,7 @@ public class SlimeRancher : BuildData
            .AddLocations(
                 "corporate_locations",
                 CorporateLocations.Select(line => (string[])[line.Location, line.Area])
-            );
+            ).AddLocations("gates", GateData.Select(line => (string[])[line.Name, line.ToArea]));
     }
 
     public override void Items(WorldFactory _, ItemFactory item_fact)
@@ -214,6 +232,9 @@ public class SlimeRancher : BuildData
                          """
                          for zone in region_unlocks:
                              if "Reef" in zone and options.start_with_dry_reef: continue
+                             if "Retreat" in zone and not options.include_ogden: continue
+                             if "Manor" in zone and not options.include_mochi: continue
+                             if "Workshop" in zone and not options.include_viktor: continue
                              world.location_count -= 1
                              pool.append(world.create_item(zone))
                          """
@@ -227,6 +248,14 @@ public class SlimeRancher : BuildData
                          )
                      ).AddNewLine()
                     .AddCode(CreateItemsFillRemainingWith("filler_items"))
+            )
+           .AddIndependentVariable(
+                new StringArray(
+                    "credits_unlocks", RegionUnlockData
+                                      .Where(data => data is { Include: true, ForCreditsGoal: true })
+                                      .Select(zone => $"Region Unlock: {zone.RegionName}")
+                                      .ToArray()
+                )
             );
     }
 
@@ -237,6 +266,7 @@ public class SlimeRancher : BuildData
            .AddCompoundLogicFunction("energy", "has_energy", "hasN['Progressive Max Energy', amount]", "amount")
            .AddCompoundLogicFunction("jetpack", "has_jetpack", "has['Progressive Jetpack']")
            .AddCompoundLogicFunction("region", "has_region", "has[f\"Region Unlock: {region}\"]", "region")
+           .AddCompoundLogicFunction("gate", "has_gate", "has[f\"Opened Gate: {gate}\"]", "gate")
            .AddCompoundLogicFunction("Reef", "can_access_dry_reef", "region['Dry Reef']")
            .AddCompoundLogicFunction(
                 "ToRuins", "can_access_to_ruins_from_trans",
@@ -253,7 +283,37 @@ public class SlimeRancher : BuildData
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
-        region_fact.AddRegions(Zones)
+        var noConditionZones = CombinedRegionData
+                              .Where(sector => sector.HasNoRule())
+                              .SelectMany(zone => ((string[])[zone.From, zone.To]).Distinct())
+                              .Where(zone => zone is not "Menu"
+                                             && LocationMap[zone] is not (Retreat or Manor or Workshop)
+                               ).Distinct().ToArray();
+
+        var conditionZones = CombinedRegionData
+                            .Where(sector => !sector.HasNoRule()
+                                             || LocationMap[sector.From] is Retreat or Manor or Workshop
+                             )
+                            .SelectMany(zone => ((string, string)[])
+                                 [
+                                     (zone.From, zone.GenOption()), (zone.To, zone.GenOption()),
+                                 ]
+                             ).Where(t => !noConditionZones.Contains(t.Item1))
+                            .GroupBy(t => t.Item1)
+                            .Select(g => (g.Key, string.Join(" or ", g.Select(t => t.Item2))));
+
+        region_fact.AddRegions("", noConditionZones)
+                   .ForEachOf(
+                        conditionZones,
+                        (b, t) => b.AddRegion(
+                            t.Key,
+                            LocationMap[t.Key] switch
+                            {
+                                Retreat => "options.include_ogden", Manor => "options.include_mochi",
+                                Workshop => "options.include_viktor", _ => t.Item2
+                            }
+                        )
+                    )
                    .ForEachOf(
                         CombinedRegionData.Where(data => data.HasNoRule()),
                         (b, sector) => b.AddConnectionCompiledRule(sector.From, sector.To, sector.GenRule())
@@ -271,8 +331,8 @@ public class SlimeRancher : BuildData
                             if (upgrade.Rule is "7z") { condition = "world.options.include_7z"; }
                             else if (upgrade.Name.Contains("Treasure Cracker"))
                             {
-                                condition
-                                    = $"\"{upgrade.Name}\" > f\"Buy Personal Upgrade (Treasure Cracker lv.{{world.options.treasure_cracker_checks}})\"";
+                                var num = int.Parse($"{upgrade.Name[^2]}");
+                                condition = $"{num} <= world.options.treasure_cracker_checks";
                             }
 
                             b.AddLocation(new LocationData("Upgrades", upgrade.Name), condition);
@@ -305,13 +365,23 @@ public class SlimeRancher : BuildData
                                            )
                                        )
                                    ).ToArray()
-                    );
+                    ).AddEventLocationsFromList("gates", item: "f\"Opened Gate: {location[0]}\"");
     }
 
     public override void Init(WorldFactory _, WorldInitFactory init_fact)
     {
         init_fact
-           .AddItemNameGroups(new Dictionary<string, string> { ["unlocks"] = "region_unlocks" })
+           .UseItemGroups(new Dictionary<string, string> { ["unlocks"] = "region_unlocks" })
+           .UseLocationGroups(
+                CombinedInteractableData.Select(data => (LocationMap[data.Region], data.VagueName))
+                                        .GroupBy(t => t.Item1)
+                                        .ToDictionary(
+                                             g => g.Key,
+                                             g => (ICollection)new StringCollection(
+                                                 g.Select(t => t.VagueName).ToArray()
+                                             )
+                                         )
+            )
            .UseInitFunction()
            .UseGenerateEarly()
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
@@ -323,14 +393,13 @@ public class SlimeRancher : BuildData
            .AddCreateItems()
            .UseSetRules(method =>
                 method.AddCode(
-                    $"""
-                     if self.options.goal_type == 0:
-                         {CreateGoalCondition(StateHas("Note Read", "28", returnValue: false))}
-                     elif self.options.goal_type == 1:
-                         {CreateGoalCondition(StateHas("7Zee Bought", "len(corporate_locations)", returnValue: false))}
-                     elif self.options.goal_type == 2:
-                         {CreateGoalCondition(StateHasAll("region_unlocks[3:]", false))}
-                     """
+                    new MatchFactory("self.options.goal_type")
+                       .AddCase("0", CreateGoalCondition(StateHas("Note Read", "28", returnValue: false)))
+                       .AddCase(
+                            "1",
+                            CreateGoalCondition(StateHas("7Zee Bought", "len(corporate_locations)", returnValue: false))
+                        )
+                       .AddCase("2", CreateGoalCondition(StateHasAll("credits_unlocks", false)))
                 )
             )
            .UseFillSlotData(

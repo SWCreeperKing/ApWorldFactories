@@ -1,7 +1,7 @@
 Tech,Previous Tech,ID,Resource Req,Unlocks,Tier Req,,Resource,Req
-Starting Check (1),,,,,0,,Iron Ingot,Iron Ore
-Starting Check (2),,,,,0,,Basic Widget,Iron Ingot
-Starting Check (3),,,,,0,,Glass,Sand
+Starting Check (1),,ignore,,,0,,Iron Ingot,Iron Ore
+Starting Check (2),,ignore,,,0,,Basic Widget,Iron Ingot
+Starting Check (3),,ignore,,,0,,Glass,Sand
 Tier 1,,t1_tech,,,0,,Gyroscope,"Glass, Basic Widget"
 Tier 1 Mastery,,t1_mastery,Basic Widget,,1,,Power,Oil
 Deconstruct,,t1_deconstruct,Basic Widget,,1,,Spinning Widget,"Gyroscope, Basic Widget"

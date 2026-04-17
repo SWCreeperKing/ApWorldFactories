@@ -90,5 +90,9 @@ public static class CodeBank
                                        random.shuffle(stages)
                                        world.final_included_characters_list = characters
                                        world.final_included_stages_list = stages
+                                       
+                                       if world.options.goal_requirement == 1:
+                                         if world.ending_stage_count == 0:
+                                       	   world.ending_stage_count = int(len(world.final_included_stages_list) * .75)
                                        """;
 }

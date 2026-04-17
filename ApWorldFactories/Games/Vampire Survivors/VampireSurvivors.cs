@@ -531,10 +531,12 @@ public class VampireSurvivors : BuildData
                  .AddLogicRule("Kill Death", "stage[\"Ode to Castlevania\"] and char[\"Richter Belmont\"] and hurry");
     }
 
-    public override void Regions(WorldFactory _, RegionFactory region_fact)
+    public override void Regions(WorldFactory worldFactory, RegionFactory region_fact)
     {
-        region_fact.AddRegions("Characters", "Enemies")
-                   .AddRegions(StageNameMap.Values.ToArray())
+        var rule_fact = worldFactory.GetRuleFactory();
+        
+        region_fact.AddRegions("", "Characters", "Enemies")
+                   .AddRegions("", StageNameMap.Values.ToArray())
                    .AddConnection("Menu", "Characters")
                    .AddConnection("Menu", "Enemies")
                    .InjectCodeIntoCreateRegions(method =>
@@ -547,22 +549,27 @@ public class VampireSurvivors : BuildData
                                           .AddCode(
                                                new CodeBlockFactory()
                                                   .AddCode(
-                                                       "make_location(world, f\"{stage} Beaten\", region_map[stage], rule_map)"
+                                                       "make_location(world, f\"{stage} Beaten\", stage, region_map, rule_map)"
                                                    )
                                            )
                                           .AddCode(
-                                               "make_event_location(world, f\"Event: [{stage} Beaten]\", f\"{stage} Beaten\", \"Beat a Stage\", None, region_map[stage], rule_map)"
+                                               "make_event_location(world, f\"Event: [{stage} Beaten]\", f\"{stage} Beaten\", \"Beat a Stage\", None, stage, region_map, rule_map)"
                                            )
                                           .AddCode(
                                                new IfFactory("stage != EUDAI").AddCode(
                                                    new ForLoopFactory("i", "range(chest_checks)")
                                                       .AddCode(
-                                                           "make_location(world, f\"Open Chest #{i + 1} on {stage}\", region_map[stage], rule_map)"
+                                                           "make_location(world, f\"Open Chest #{i + 1} on {stage}\", stage, region_map, rule_map)"
                                                        )
                                                )
                                            )
                                           .AddCode(
-                                               $"region_map[\"Menu\"].connect(region_map[stage], rule = lambda state, stage_name=stage: {StateHas("f\"Stage Unlock: {stage_name}\"", stringify: false, returnValue: false)})"
+                                               new IfFactory("stage == EUDAI and options.goal_requirement == 1")
+                                                  .AddCode(
+                                                       $"region_map[\"Menu\"].connect(region_map[stage], rule = lambda state, stage_name=stage: {rule_fact.GenerateCompiledRule("stage[EUDAI] and hasN[\"Beat a Stage\", world.ending_stage_count]")})")
+                                                  .SetElse(
+                                                       $"region_map[\"Menu\"].connect(region_map[stage], rule = lambda state, stage_name=stage: {rule_fact.GenerateCompiledRule("stage[f\"{stage_name}\"]")})"
+                                                   )
                                            )
                                    )
                                   .AddCode(
@@ -614,11 +621,11 @@ public class VampireSurvivors : BuildData
             )
            .AddUseUniversalTrackerPassthrough(
                 method => method
-                         .AddCode(CreateUtPassthrough("starting_character", "self.starting_character"))
-                         .AddCode(CreateUtPassthrough("self.starting_stage", "self.starting_stage"))
-                         .AddCode(CreateUtPassthrough("final_stages", "self.final_included_stages_list"))
-                         .AddCode(CreateUtPassthrough("final_chars", "self.final_included_characters_list"))
-                         .AddCode(CreateUtPassthrough("ending_stage_count", "self.ending_stage_count"))
+                         .AddCode(CreateUtPassthrough("\"starting_character\"", "self.starting_character"))
+                         .AddCode(CreateUtPassthrough("\"self.starting_stage\"", "self.starting_stage"))
+                         .AddCode(CreateUtPassthrough("\"final_stages\"", "self.final_included_stages_list"))
+                         .AddCode(CreateUtPassthrough("\"final_chars\"", "self.final_included_characters_list"))
+                         .AddCode(CreateUtPassthrough("\"ending_stage_count\"", "self.ending_stage_count"))
                          .AddCode(CreatePushPrecollected("f\"Stage Unlock: {self.starting_stage}\"", stringify: false))
                          .AddCode(
                               CreatePushPrecollected(
@@ -649,11 +656,6 @@ public class VampireSurvivors : BuildData
                             )
                         ).AddElseIf(
                             new ElifFactory("self.options.goal_requirement == 1")
-                               .AddCode(
-                                    new IfFactory("self.ending_stage_count == 0").AddCode(
-                                        "self.ending_stage_count = int(len(self.final_included_stages_list) * .75)"
-                                    )
-                                )
                                .AddCode(
                                     CreateGoalCondition(
                                         "stage[EUDAI] and hasN[\"Beat a Stage\", self.ending_stage_count]",

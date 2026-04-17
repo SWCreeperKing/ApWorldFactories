@@ -427,8 +427,7 @@ Epic Carrot,Quest Item,0,0,Any,Quest Items,Progression,Epic Carrot,1 in Pool (On
 Experience Bond,Trade Currency,0,0,Any,Currency,Progression,Trade Currencies,"making it any for now, should be fine",,1
 Flux Stone,Consumable,0,0,Mystic,Consumable,Useful,Enchanting,,,1
 Geistlord Badge,Trade Currency,0,0,Any,Currency,Filler,Trade Currencies,,,
-Illusion Stone,Trade Currency,0,0,Any,Currency,Filler,Trade Currencies,,,
-Illusion Stone,Trade Currency,0,0,Any,Currency,Useful,Trade Currencies,,,1
+Illusion Stone,Trade Currency,0,0,Any,Currency,Progression,Trade Currencies,,,1
 Might Stone,Consumable,0,0,Fighter,Consumable,Useful,Enchanting,,,1
 Soul Pearl,Consumable,0,0,Any,Consumable,Useful,Consumable,,,1
 Windcore Badge,Trade Currency,0,0,Any,Currency,Filler,Trade Currencies,,,

@@ -66,7 +66,7 @@ public class Poco : BuildData
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
-        region_fact.AddRegions(RegionData.Select(data => data.Region).Distinct().ToArray())
+        region_fact.AddRegions("", RegionData.Select(data => data.Region).Distinct().ToArray())
                    .ForEachOf(
                         RegionData,
                         (b, data) => b.AddConnectionCompiledRule(data.ConnectsFrom, data.Region, data.GenRule())

@@ -32,6 +32,7 @@ public class WidgetInc : BuildData
            .ReadTable(out TechTreeData).SkipColumn()
            .ReadTable(out ResourceData);
 
+        TechTreeData = TechTreeData.Where(data => data.Id is not "ignore").ToArray();
         FrameIdMap = TechTreeData.ToDictionary(data => data.Tech, data => data.Id);
 
         ResourceBuildingRequirement =

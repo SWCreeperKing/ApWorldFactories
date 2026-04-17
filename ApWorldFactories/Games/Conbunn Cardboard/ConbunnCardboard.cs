@@ -110,7 +110,7 @@ public class ConbunnCardboard : BuildData
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
-        region_fact.AddRegions(RegionData.Select(data => data.Region).ToArray())
+        region_fact.AddRegions("", RegionData.Select(data => data.Region).ToArray())
                    .ForEachOf(
                         RegionData, (b, data) =>
                         {

@@ -110,7 +110,7 @@ public class WereCleaner : BuildData
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
         region_fact
-           .AddRegions("Levels", "Collectibles", "Killsanity")
+           .AddRegions("", "Levels", "Collectibles", "Killsanity")
            .AddConnection("Menu", "Levels")
            .AddConnection("Menu", "Collectibles")
            .AddConnection("Menu", "Killsanity")

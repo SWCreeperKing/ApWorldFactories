@@ -15,8 +15,10 @@ public class PlagueInc : BuildData
     public override string WorldVersion => "0.1.0";
     public override string GameFolder => "PlagueInc";
 
-    public override Dictionary<string, string> SheetGids { get; }
-        = new() { ["techs"] = "894487465", ["data"] = "508764681", ["combos"] = "919603737" };
+    public override Dictionary<string, string> SheetGids { get; } = new()
+    {
+        ["techs"] = "894487465", ["data"] = "508764681", ["combos"] = "919603737"
+    };
 
     private DiseaseData[] DiseaseData = [];
     private CountryData[] CountryData = [];
@@ -52,8 +54,8 @@ public class PlagueInc : BuildData
                                                       .Where(data => data.Diseases.Contains(disease))
                                                       .SelectMany(data => data.GetIndevTechs())
                                  ).DistinctBy(data => data.Name).ToArray();
-        DifficultyVictory = Diseases.Keys.SelectMany(disease => DifficultyData.Select(diff
-                => ($"Beat {disease} on {diff.Difficulty}", disease, diff.Difficulty, diff.VictoryScore)
+        DifficultyVictory = Diseases.Keys.SelectMany(disease => DifficultyData.Select(diff => (
+                $"Beat {disease} on {diff.Difficulty}", disease, diff.Difficulty, diff.VictoryScore)
             )
         ).ToArray();
 
@@ -193,8 +195,9 @@ public class PlagueInc : BuildData
                                Diseases.Keys,
                                disease => method.AddCode(
                                    new IfFactory(
-                                       $"{disease.OptionFormat()} and world.starting_disease != \"{disease}\""
-                                   ).AddCode(CreateItem(disease))
+                                           $"{disease.OptionFormat()} and world.starting_disease != \"{disease}\""
+                                       )
+                                      .AddCode(CreateItem(disease))
                                )
                            ).AddCode(CreateItemsFillRemainingWithItem("A Sickly Sensation"));
                 }
@@ -220,22 +223,21 @@ public class PlagueInc : BuildData
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
-        region_fact.AddRegions(Diseases.Keys.ToArray())
-                   .ForEachOf(
-                        Diseases.Keys,
-                        (b, disease)
-                            => b.AddConnectionCompiledRule(
-                                     "Menu", disease, $"has[\"{disease}\"]", condition: disease.OptionFormat()
-                                 ).AddLocationsFromList(
-                                     $"{disease.LowerReplace()}_techs", condition: disease.OptionFormat()
-                                 )
-                                .AddEventLocations(
-                                     disease.OptionFormat(),
-                                     DifficultyVictory.Where(t => t.disease == disease).Select(t
-                                         => new EventLocationData(t.disease, $"Event: {t.name}", "Victory", t.name)
-                                     ).ToArray()
-                                 )
-                    );
+        region_fact.ForEachOf(
+            Diseases.Keys,
+            (b, disease) => b
+                           .AddRegion(disease, disease.OptionFormat())
+                           .AddConnectionCompiledRule(
+                                "Menu", disease, $"has[\"{disease}\"]", condition: disease.OptionFormat()
+                            ).AddLocationsFromList($"{disease.LowerReplace()}_techs", condition: disease.OptionFormat())
+                           .AddEventLocations(
+                                disease.OptionFormat(),
+                                DifficultyVictory.Where(t => t.disease == disease).Select(t => new EventLocationData(
+                                        t.disease, $"Event: {t.name}", "Victory", t.name
+                                    )
+                                ).ToArray()
+                            )
+        );
     }
 
     public override void Init(WorldFactory _, WorldInitFactory init_fact)
@@ -247,17 +249,15 @@ public class PlagueInc : BuildData
             )
            .AddUseUniversalTrackerPassthrough(
                 yamlNeeded: false,
-                utBlock: factory1
-                    => factory1.AddCode(CreateUtPassthrough("\"victories_needed\"", "victories_needed"))
+                utBlock: factory1 => factory1.AddCode(CreateUtPassthrough("\"victories_needed\"", "victories_needed"))
             )
-           .UseGenerateEarly(method
-                => method.AddCode(CreatePushPrecollected("self.starting_diff", stringify: false)).AddCode(
-                    CreatePushPrecollected("self.starting_disease", stringify: false)
-                ).AddCode(
-                    new ForLoopFactory("always_avail_tech", "always_tech").AddCode(
-                        CreatePushPrecollected("always_avail_tech", stringify: false)
-                    )
-                )
+           .UseGenerateEarly(method => method.AddCode(CreatePushPrecollected("self.starting_diff", stringify: false))
+                                             .AddCode(CreatePushPrecollected("self.starting_disease", stringify: false))
+                                             .AddCode(
+                                                  new ForLoopFactory("always_avail_tech", "always_tech").AddCode(
+                                                      CreatePushPrecollected("always_avail_tech", stringify: false)
+                                                  )
+                                              )
             )
            .UseCreateRegions()
            .AddCreateItems()
@@ -269,10 +269,9 @@ public class PlagueInc : BuildData
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
     }
 
-    public override string GenerateGraphViz(
-        WorldFactory worldFactory, Dictionary<string, string> associations, Func<string, string> getRule,
-        string[][] locationDoubleArrays
-    )
+    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
+        Func<string, string> getRule,
+        string[][] locationDoubleArrays)
     {
         return new GraphBuilder(GameName)
               .ForEachOf(

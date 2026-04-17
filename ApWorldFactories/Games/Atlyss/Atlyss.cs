@@ -120,10 +120,8 @@ public class Atlyss : BuildData
                     .AddCheckOptions(method =>
                          method.AddCode(
                              """
-                             classes = ['fighter', 'mystic', 'bandit']
-
                              if options.main_class.value == options.secondary_class.value:
-                                 options.secondary_class = SecondaryClass('none')
+                                 options.secondary_class = SecondaryClass(3)
                              """
                          )
                      );
@@ -302,23 +300,23 @@ public class Atlyss : BuildData
                   """, "area"
             )
            .AddLogicFunction(
-                "any_area", "has_any_area", "return any(has_area(state, player, area) for area in areas)",
+                "any_area", "has_any_area", "return any(has_area(state, player, options, area) for area in areas)",
                 "areas"
             )
            .AddLogicFunction(
                 "all_areas", "has_all_areas",
-                "return all(has_area(state, player, area) for area in areas)", "areas"
+                "return all(has_area(state, player, options, area) for area in areas)", "areas"
             )
            .AddCompoundLogicFunction("quest", "has_quest", "has[f\"Complete: {quest}\"]", "quest")
            .AddLogicFunction(
                 "grind", "can_grind",
                 """
-                if level > 30: return can_grind(state, player, 30, area_data)
+                if level > 30: return can_grind(state, player, options, 30, area_data)
                 if level <= 1: return True
 
                 for area in area_data:
                     if not has_area(state, player, options, area[0]): continue
-                    if area[1] <= level <= area[2]: return can_grind(state, player, area[1] - 1, area_data)
+                    if area[1] <= level <= area[2]: return can_grind(state, player, options, area[1] - 1, area_data)
                     
                 return False
                 """, "level", "area_data"
@@ -359,7 +357,7 @@ public class Atlyss : BuildData
 
     public override void Regions(WorldFactory worldFactory, RegionFactory region_fact)
     {
-        region_fact.AddRegions(LocationLevelData.Select(data => data.Area).ToArray())
+        region_fact.AddRegions("", LocationLevelData.Select(data => data.Area).ToArray())
                    .ForEachOf(
                         LocationLevelData,
                         (b, data) => b.AddConnectionCompiledRule(data.Connection, data.Area, data.GenRule())

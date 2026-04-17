@@ -1,20 +1,20 @@
-Item,Count,Prog type,,Zone ID,Region Name,Include
-Air Burst,1,nonprog_useful,,-1,NONE,FALSE
-Liquid Slot,1,nonprog_useful,,0,RANCH,FALSE
-Golden Sure Shot,1,nonprog_useful,,1,Dry Reef,TRUE
-Drone,4,nonprog_useful,,2,Indigo Quarry,TRUE
-Advanced Drone,4,nonprog_useful,,3,Moss Blanket,TRUE
-Market Link,3,nonprog_useful,,4,Glass Desert,TRUE
-Progressive Max Health,4,prog_useful,,5,SEA,FALSE
-Progressive Max Ammo,4,prog_useful,,7,Ancient Ruins,TRUE
-Progressive Run Efficiency,2,prog_useful,,8,Ancient Ruins Transition,TRUE
-Progressive Market Stonks,5,prog_useful,,9,The Wilds,TRUE
-Progressive Max Energy,3,prog_prog,,10,Ogden's Retreat,TRUE
-Progressive Jetpack,2,prog_prog,,11,Nimble Valley,TRUE
-Progressive Treasure Cracker,3,prog_prog,,12,Mochi's Manor,TRUE
-75x Newbucks,-,filler,,13,The Slimeulations,TRUE
-81x Newbucks,-,filler,,14,Viktor's Workshop,TRUE
-99x Newbucks,-,filler,,-,The Grotto,TRUE
-100x Newbucks,-,filler,,-,The Overgrowth,TRUE
-,,,,-,The Lab,TRUE
-,,,,-,The Docks,TRUE
+Item,Count,Prog type,,Zone ID,Region Name,Include,For Credits
+Air Burst,1,nonprog_useful,,-1,NONE,FALSE,FALSE
+Liquid Slot,1,nonprog_useful,,0,RANCH,FALSE,FALSE
+Golden Sure Shot,1,nonprog_useful,,1,Dry Reef,TRUE,TRUE
+Drone,4,nonprog_useful,,2,Indigo Quarry,TRUE,TRUE
+Advanced Drone,4,nonprog_useful,,3,Moss Blanket,TRUE,TRUE
+Market Link,3,nonprog_useful,,4,Glass Desert,TRUE,TRUE
+Progressive Max Health,4,prog_useful,,5,SEA,FALSE,FALSE
+Progressive Max Ammo,4,prog_useful,,7,Ancient Ruins,TRUE,TRUE
+Progressive Run Efficiency,2,prog_useful,,8,Ancient Ruins Transition,TRUE,TRUE
+Progressive Market Stonks,5,prog_useful,,9,The Wilds,TRUE,FALSE
+Progressive Max Energy,3,prog_prog,,10,Ogden's Retreat,TRUE,FALSE
+Progressive Jetpack,2,prog_prog,,11,Nimble Valley,TRUE,FALSE
+Progressive Treasure Cracker,3,prog_prog,,12,Mochi's Manor,TRUE,FALSE
+75x Newbucks,-,filler,,13,The Slimeulations,TRUE,FALSE
+81x Newbucks,-,filler,,14,Viktor's Workshop,TRUE,FALSE
+99x Newbucks,-,filler,,-,The Grotto,TRUE,FALSE
+100x Newbucks,-,filler,,-,The Overgrowth,TRUE,FALSE
+,,,,-,The Lab,TRUE,FALSE
+,,,,-,The Docks,TRUE,FALSE
