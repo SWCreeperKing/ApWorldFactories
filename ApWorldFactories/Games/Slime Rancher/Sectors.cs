@@ -14,14 +14,12 @@ public class RegionSector(RegionRowData data) : LogicSector<RegionSector, Region
 public class InteractableSector(InteractableRowData data) : LogicSector<InteractableSector, InteractableRowData, SkipLogic>(data)
 {
     public readonly string Id = data.Id;
-    public readonly string LegacyName = data.LegacyName;
-    public readonly string VagueName = data.VagueName;
-    public readonly string PreciseName = data.PreciseName;
+    public readonly string VagueName = data.Name;
     public readonly string Region = data.Region;
     public readonly bool IsSecretStyle = data.IsSecretStyle;
     public readonly bool IsNote = data.IsNote;
     public readonly string GetText = data.GetText;
 
     public override bool HasNoRule() => Variants.ContainsKey(SkipLogic.None);
-    public override bool Match(InteractableRowData data) => Id == data.Id && VagueName == data.VagueName;
+    public override bool Match(InteractableRowData data) => Id == data.Id && VagueName == data.Name;
 }

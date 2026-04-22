@@ -7,9 +7,7 @@ public readonly struct InteractableRowData(DataArray param) : IGetLogicEnum<Skip
 {
     public static bool ForCompiler = false;
     [Mark] public readonly string Id = param;
-    [Mark] public readonly string LegacyName = param;
-    [Mark] public readonly string VagueName = param;
-    [Mark] public readonly string PreciseName = param;
+    [Mark] public readonly string Name = param;
     [Mark] public readonly string Region = param;
     [Mark] public readonly string CrackerLevel = param;
     [Mark] public readonly bool NeedsJetpack = param;
@@ -21,7 +19,7 @@ public readonly struct InteractableRowData(DataArray param) : IGetLogicEnum<Skip
 
     public bool IsSecretStyle => CrackerLevel == "Secret Style";
     public bool IsNote => CrackerLevel == "H Note";
-    public string GetText => $"{Id},{VagueName}";
+    public string GetText => $"{Id},{Name}";
 
     public string GenRule()
     {
@@ -46,9 +44,9 @@ public readonly struct InteractableRowData(DataArray param) : IGetLogicEnum<Skip
         return ForCompiler ? string.Join(" and ", rules) : string.Join("", rules);
     }
 
-    public static implicit operator LocationData(InteractableRowData data) => new(data.Region, data.VagueName);
+    public static implicit operator LocationData(InteractableRowData data) => new(data.Region, data.Name);
     public SkipLogic GetEnum() => SkipLogic;
-    public string Print() => $"Location |{VagueName}|";
+    public string Print() => $"Location |{Name}|";
     public string GenOption() => SkipLogic.GenOption();
 }
 
@@ -88,7 +86,7 @@ public readonly struct RegionRowData(DataArray param) : IGetLogicEnum<SkipLogic>
         if (ForCompiler && PlortsRequired.Length != 0)
             rules.AddRange(PlortsRequired.Select(plort => $"has['{plort}']"));
         if (ForCompiler && GateEvent is not "") rules.Add($"gate[\"{GateEvent}\"]");
-        
+
         return string.Join(" and ", rules);
     }
 
@@ -104,6 +102,7 @@ public readonly struct SlimeRowData(DataArray param)
     [Mark] public readonly string FavoriteFood = param;
     [Mark] public readonly string[] SpawnLocations = param;
     [Mark] public readonly string PlortDrop = param;
+    [Mark] public readonly int PlortId = param;
 }
 
 public readonly struct LocationNameGroupData(DataArray param)
@@ -139,7 +138,9 @@ public readonly struct UpgradeRowData(DataArray param)
 {
     [Mark] public readonly string Name = param;
     [Mark] public readonly string Id = param;
-    [Mark] public readonly string Rule = param;
+    [Mark] public readonly string Area = param;
+    [Mark] public readonly bool Is7ZeeUpgrade = param;
+    [Mark] public readonly string UnlockNeed = param;
 }
 
 public readonly struct CorporateRowData(DataArray param)
@@ -192,7 +193,7 @@ public enum SkipLogic
 {
     None = 0, EasySkips = 1, PreciseMovement = 1 << 1,
     ObscureLocations = 1 << 2, JetpackBoosts = 1 << 3, LargoJumps = 1 << 4,
-    DangerousSkips = 1 << 5,
+    DangerousSkips = 1 << 5, PostGame = 1 << 6,
 }
 
 public static class SkipLogicHelper
@@ -207,6 +208,7 @@ public static class SkipLogicHelper
         if (logic.HasFlag(SkipLogic.JetpackBoosts)) rules.Add("jetpack_boosts");
         if (logic.HasFlag(SkipLogic.LargoJumps)) rules.Add("largo_jumps");
         if (logic.HasFlag(SkipLogic.DangerousSkips)) rules.Add("dangerous_skips");
+        if (logic.HasFlag(SkipLogic.PostGame)) rules.Add("postgame");
 
         return rules.ToArray();
     }
@@ -222,7 +224,7 @@ public static class SkipLogicHelper
     public static SkipLogic ParseSkipLogic(this string[] skip)
     {
         if (skip.Length == 0) return SkipLogic.None;
-        var logics = skip.Select(s => Enum.Parse<SkipLogic>(s.Replace(" ", ""), true)).ToArray();
+        var logics = skip.Select(s => Enum.Parse<SkipLogic>(s.Replace(" ", "").Replace("-", ""), true)).ToArray();
         return logics.Length == 1 ? logics[0] : logics.Aggregate((fA, fB) => fA | fB);
     }
 }
