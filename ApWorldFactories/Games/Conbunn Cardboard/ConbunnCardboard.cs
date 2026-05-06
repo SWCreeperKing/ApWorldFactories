@@ -1,6 +1,7 @@
 ﻿using ApWorldFactories.Games.ConbunnCardboard;
 using ApWorldFactories.Graphviz;
 using CreepyUtil.Archipelago.WorldFactory;
+using static ApWorldFactories.PathConstants;
 using static CreepyUtil.Archipelago.WorldFactory.ItemFactory.ItemClassification;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 using Range = CreepyUtil.Archipelago.WorldFactory.Range;

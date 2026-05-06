@@ -1,25 +1,28 @@
 ﻿namespace ApWorldFactories;
 
-public abstract class LogicSector<TSector, TData, TEnum>(TData data)
-    where TSector : LogicSector<TSector, TData, TEnum>
-    where TData : IGetLogicEnum<TEnum>, IGenRule, IPrintable, IGenOption
-    where TEnum : struct, Enum
+public abstract class LogicSector<TSector, TData, TIdentifierType>(TData thisData)
+    where TSector : LogicSector<TSector, TData, TIdentifierType>
+    where TData : ILogicSectorDataType<TIdentifierType, TData> where TIdentifierType : notnull
 {
-    public readonly Dictionary<TEnum, TData> Variants = new() { [data.GetEnum()] = data };
+    public readonly TData ThisData = thisData;
 
-    public abstract bool HasNoRule();
-    public abstract bool Match(TData data);
+    public readonly Dictionary<TIdentifierType, TData> Variants = new() { [thisData.GetIdentifier()] = thisData };
+    public bool HasNoOption { get; private set; } = thisData.IsNoOption();
 
-    public static LogicSector<TSector, TData, TEnum> operator +(LogicSector<TSector, TData, TEnum> sector, TData data)
+    public bool Match(TData data) => ThisData.IsMatch(data);
+
+    public static LogicSector<TSector, TData, TIdentifierType> operator +(
+        LogicSector<TSector, TData, TIdentifierType> sector, TData data)
     {
-        if (sector.Variants.ContainsKey(data.GetEnum()))
+        if (sector.Variants.ContainsKey(data.GetIdentifier()))
             throw new ArgumentException($"Duplicate logic found: [{data.Print()}]");
-        sector.Variants[data.GetEnum()] = data;
+        sector.Variants[data.GetIdentifier()] = data;
+        sector.HasNoOption = sector.HasNoOption || data.IsNoOption();
         return sector;
     }
 
     public static T[] CreateSectorFromData<T>(TData[] dataArr, Func<TData, T> maker)
-        where T : LogicSector<TSector, TData, TEnum>
+        where T : LogicSector<TSector, TData, TIdentifierType>
     {
         List<T> rawSector = [];
         foreach (var dataObj in dataArr)
@@ -42,7 +45,7 @@ public abstract class LogicSector<TSector, TData, TEnum>(TData data)
         Variants.Values.Select(sector => sector.GenRule()).Where(rule => rule.Trim() is not "")
                 .Select(rule => $"( {rule} )")
     );
-    
+
     public string GenOption() => string.Join(
         " or ",
         Variants.Values.Select(sector => sector.GenOption()).Where(rule => rule.Trim() is not "")
@@ -50,22 +53,12 @@ public abstract class LogicSector<TSector, TData, TEnum>(TData data)
     );
 }
 
-public interface IGetLogicEnum<out TEnum> where TEnum : struct, Enum
+public interface ILogicSectorDataType<out TIdentifierType, TDataType> where TIdentifierType : notnull
 {
-    public TEnum GetEnum();
-}
-
-public interface IGenRule
-{
+    public TIdentifierType GetIdentifier();
+    public bool IsMatch(TDataType matchAgainst);
+    public bool IsNoOption();
     public string GenRule();
-}
-
-public interface IGenOption
-{
     public string GenOption();
-}
-
-public interface IPrintable
-{
     public string Print();
 }

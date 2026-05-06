@@ -1,5 +1,6 @@
 ﻿using ApWorldFactories.Graphviz;
 using CreepyUtil.Archipelago.WorldFactory;
+using static ApWorldFactories.PathConstants;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 
 namespace ApWorldFactories.Games.Poco;
@@ -42,7 +43,8 @@ public class Poco : BuildData
         item_fact.AddItemListVariable(
                       "items", ItemFactory.ItemClassification.Progression,
                       list: ItemData.Select(data => data.Name).ToArray()
-                  ).AddItem("Clown Nose", ItemFactory.ItemClassification.Filler)
+                  )
+                 .AddItem("Clown Nose", ItemFactory.ItemClassification.Filler)
                  .AddCreateItems(method
                       => method.AddCode(CreateItemsFromList("items"))
                                .AddCode(CreateItemsFillRemainingWithItem("Clown Nose"))
@@ -70,7 +72,8 @@ public class Poco : BuildData
                    .ForEachOf(
                         RegionData,
                         (b, data) => b.AddConnectionCompiledRule(data.ConnectsFrom, data.Region, data.GenRule())
-                    ).AddLocationsFromList("locations")
+                    )
+                   .AddLocationsFromList("locations")
                    .ForEachOf(
                         NpcQuestData,
                         (b, data) => b.AddEventLocation(

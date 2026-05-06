@@ -2,6 +2,7 @@
 using CreepyUtil.Archipelago.WorldFactory;
 using static CreepyUtil.Archipelago.WorldFactory.ItemFactory.ItemClassification;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
+using static ApWorldFactories.PathConstants;
 
 namespace ApWorldFactories.Games.Plague_Inc;
 

@@ -1,5 +1,6 @@
 ﻿using ApWorldFactories.Graphviz;
 using CreepyUtil.Archipelago.WorldFactory;
+using static ApWorldFactories.PathConstants;
 using static CreepyUtil.Archipelago.WorldFactory.ItemFactory.ItemClassification;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 
@@ -16,7 +17,7 @@ public class SlimeRancher : BuildData
     public override string GameName => "Slime Rancher";
     public override string ApWorldName => "slime_rancher";
     public override string GoogleSheetId => "15PdrnGmkYdocX9RU-D5U_9OgihRNN9axX71mm-jOPUQ";
-    public override string WorldVersion => "0.3.0";
+    public override string WorldVersion => "0.3.1";
 
     public override Dictionary<string, string> SheetGids { get; } = new()
     {
@@ -27,9 +28,8 @@ public class SlimeRancher : BuildData
     private CorporateRowData[] CorporateLocations = [];
     private ItemAmountData[] ItemAmountData = [];
     private RegionUnlockRowData[] RegionUnlockData = [];
-    private SlimeRowData[] SlimeData = [];
-    private RegionSector[] CombinedRegionData = [];
-    private InteractableSector[] CombinedInteractableData = [];
+    private RegionSector[] RegionSector = [];
+    private InteractableSector[] InteractableSector = [];
     private GateRowData[] GateData = [];
     private GordoRowData[] GordoData = [];
 
@@ -39,13 +39,16 @@ public class SlimeRancher : BuildData
     private Dictionary<string, string> LocationMap = [];
 
     private string[] FillerItems = [];
+    private string[] PlortTypes = [];
+    private Dictionary<string, List<string>> NormalPlortPlacement = [];
+    private Dictionary<string, List<string>> MarketPlortPlacement = [];
 
     public override void RunShenanigans()
     {
         GetSpreadsheet("NewLogic")
            .SkipColumn(9)
            .ReadTable(out RegionRowData[] rawRegionData).SkipColumn()
-           .ReadTable(out SlimeData).SkipColumn()
+           .ReadTable(out SlimeRowData[] rawSlimeData).SkipColumn()
            .ReadTable(out LocationNameGroupData[] rawLocationGroups);
 
         GetSpreadsheet()
@@ -58,10 +61,25 @@ public class SlimeRancher : BuildData
         LocationMap = rawLocationGroups.SelectMany(data => data.Locations.Select(reg => (reg, data.Group)))
                                        .ToDictionary(t => t.reg, t => t.Group);
 
-        SlimeData = SlimeData.Where(data => data.PlortDrop is not "N/A").ToArray();
+        PlortTypes = rawSlimeData.GroupBy(data => data.PlortDrop).Select(g => g.Key).Where(s => s is not "N/A")
+                                 .Distinct().ToArray();
 
-        CombinedRegionData = RegionSector.CreateSectorFromData(rawRegionData, data => new RegionSector(data));
-        CombinedInteractableData = InteractableSector.CreateSectorFromData(
+        NormalPlortPlacement = rawSlimeData.Where(data => data.SkipLogic is SkipLogic.None)
+                                           .SelectMany(data => data.SpawnLocations
+                                                                   .Select(loc => (string[])[loc, data.Slime]).ToArray()
+                                            ).GroupBy(arr => arr[0]).ToDictionary(
+                                                g => g.Key, g => g.Select(arr => arr[1][..^6]).ToList()
+                                            );
+
+        MarketPlortPlacement = rawSlimeData.Where(data => data.SkipLogic is SkipLogic.MarketLogic)
+                                           .SelectMany(data => data.SpawnLocations
+                                                                   .Select(loc => (string[])[loc, data.Slime]).ToArray()
+                                            ).GroupBy(arr => arr[0]).ToDictionary(
+                                                g => g.Key, g => g.Select(arr => arr[1][..^6]).ToList()
+                                            );
+
+        RegionSector = Slime_Rancher.RegionSector.CreateSectorFromData(rawRegionData, data => new RegionSector(data));
+        InteractableSector = Slime_Rancher.InteractableSector.CreateSectorFromData(
             rawInteractableData, data => new InteractableSector(data)
         );
 
@@ -80,7 +98,7 @@ public class SlimeRancher : BuildData
 
         FillerItems = ItemAmountData.Where(data => data.ProgType is "filler").Select(data => data.Item).ToArray();
 
-        InteractableRowData.ForCompiler = false;
+        SlimeRancherLogicHelper.ForCompiler = false;
         WriteData(
             "Logic",
             rawInteractableData.Select(line => $"{line.Name}:{line.GenRule()}:{(int)line.SkipLogic}:{line.Region}")
@@ -94,12 +112,14 @@ public class SlimeRancher : BuildData
         );
         WriteData(
             "PlortLogic",
-            SlimeData.Select(line => $"{line.PlortDrop}:{string.Join(';', line.SpawnLocations)}:{line.PlortId}")
+            rawSlimeData.Select(line
+                => $"{line.PlortDrop}:{string.Join(';', line.SpawnLocations)}:{line.PlortId}:{(int)line.SkipLogic}"
+            )
         );
         WriteData("Gordo", GordoData.Select(data => $"{data.Id};{data.Name}"));
 
-        var noteLocationsFromSheet = CombinedInteractableData.Where(sector => sector.IsNote).Select(sector => sector.Id)
-                                                             .ToArray();
+        var noteLocationsFromSheet = InteractableSector.Where(sector => sector.IsNote).Select(sector => sector.Id)
+                                                       .ToArray();
         var noteLocations = (File.Exists($"{WriteOutputDirectory}/NoteLocations.txt")
                                 ? File.ReadAllLines($"{WriteOutputDirectory}/NoteLocations.txt").ToList() : [])
                            .Where(loc => noteLocationsFromSheet.Any(sector => sector == loc)).ToList();
@@ -118,7 +138,7 @@ public class SlimeRancher : BuildData
         WriteData("7Zee", CorporateLocations.Select(line => $"{line.Location},{line.Level}"));
         WriteData("Gates", GateData.Select(data => $"{data.Id};{data.RegionUnlock}"));
 
-        InteractableRowData.ForCompiler = true;
+        SlimeRancherLogicHelper.ForCompiler = true;
     }
 
     public override void Options(WorldFactory _, OptionsFactory options_fact)
@@ -184,12 +204,13 @@ public class SlimeRancher : BuildData
            .AddOption(
                 "Obscure Locations", "Enable Skips that abuse the terrain, usually in unintuitive ways", new Toggle()
             )
-           .AddOption("Largo Jumps", "EnableSkips where you jump off a largo midair", new Toggle())
+           .AddOption("Largo Jumps", "Enable Skips where you jump off a largo midair", new Toggle())
            .AddOption(
                 "Jetpack Boosts",
                 "Enable Skips where you use the ability to get rid of jetpack's startup times through careful jumping, allowing for more energy conservation",
                 new Toggle()
             )
+           .AddOption("Market Logic", "Enable Logic tied to early trading when opening slime gates", new Toggle())
            .AddCheckOptions(method =>
                 method.AddCode(
                     """
@@ -206,20 +227,20 @@ public class SlimeRancher : BuildData
            .AddLocations("upgrades", Upgrades.Select(line => (string[])[line.Name, line.Area]))
            .AddLocations(
                 "interactables",
-                CombinedInteractableData.Where(sector => !sector.IsSecretStyle && sector.HasNoRule())
-                                        .Select(line => (string[])[line.VagueName, line.Region])
+                InteractableSector.Where(sector => !sector.IsSecretStyle && sector.HasNoOption)
+                                  .Select(line => (string[])[line.VagueName, line.Region])
             )
            .AddLocations(
                 "dlc_interactables",
-                CombinedInteractableData.Where(sector => sector.IsSecretStyle && sector.HasNoRule())
-                                        .Select(line => (string[])[line.VagueName, line.Region])
+                InteractableSector.Where(sector => sector.IsSecretStyle && sector.HasNoOption)
+                                  .Select(line => (string[])[line.VagueName, line.Region])
             )
            .AddLocations(
                 "corporate_locations",
                 CorporateLocations.Select(line => (string[])[line.Location, line.Area])
             )
            .AddLocations("gates", GateData.Select(line => (string[])[line.Name, line.ToArea]))
-           .AddLocations("plorts", SlimeData.Select(data => $"Sell a {data.PlortDrop}"));
+           .AddLocations("plorts", PlortTypes.Select(plort => $"Sell a {plort}"));
     }
 
     public override void Items(WorldFactory _, ItemFactory item_fact)
@@ -283,23 +304,21 @@ public class SlimeRancher : BuildData
                     up => up.Name, up => $"region[\"{up.UnlockNeed}\"]"
                 )
             )
-           .AddLogicRules(CombinedInteractableData.ToDictionary(inter => inter.VagueName, inter => inter.GenRule()))
-           .AddLogicRules(
-                SlimeData.ToDictionary(data => $"Sell a {data.PlortDrop}", data => $"has[\"{data.PlortDrop}\"]")
-            );
+           .AddLogicRules(InteractableSector.ToDictionary(inter => inter.VagueName, inter => inter.GenRule()))
+           .AddLogicRules(PlortTypes.ToDictionary(plort => $"Sell a {plort}", plort => $"has[\"{plort}\"]"));
     }
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
-        var noConditionZones = CombinedRegionData
-                              .Where(sector => sector.HasNoRule())
+        var noConditionZones = RegionSector
+                              .Where(sector => sector.HasNoOption)
                               .SelectMany(zone => ((string[])[zone.From, zone.To]).Distinct())
                               .Where(zone => zone is not "Menu"
                                              && LocationMap[zone] is not (Retreat or Manor or Workshop)
                                ).Distinct().ToArray();
 
-        var conditionZones = CombinedRegionData
-                            .Where(sector => !sector.HasNoRule()
+        var conditionZones = RegionSector
+                            .Where(sector => !sector.HasNoOption
                                              || LocationMap[sector.From] is Retreat or Manor or Workshop
                              )
                             .SelectMany(zone => ((string, string)[])
@@ -323,10 +342,10 @@ public class SlimeRancher : BuildData
                         )
                     )
                    .ForEachOf(
-                        CombinedRegionData.Where(data => data.HasNoRule()),
+                        RegionSector.Where(data => data.HasNoOption),
                         (b, sector) => b.AddConnectionCompiledRule(sector.From, sector.To, sector.GenRule())
                     ).ForEachOf(
-                        CombinedRegionData.Where(data => !data.HasNoRule()), (b, sector) => b
+                        RegionSector.Where(data => !data.HasNoOption), (b, sector) => b
                            .AddConnectionCompiledRule(
                                 sector.From, sector.To, sector.GenRule(), condition: sector.GenOption()
                             )
@@ -349,7 +368,7 @@ public class SlimeRancher : BuildData
                    .AddLocationsFromList("interactables")
                    .AddEventLocations(
                         "world.options.goal_type == 0",
-                        CombinedInteractableData
+                        InteractableSector
                            .Where(inter => inter.IsNote)
                            .Select(inter => new EventLocationData(
                                     inter.Region, $"Read: {inter.VagueName}", "Note Read",
@@ -366,18 +385,26 @@ public class SlimeRancher : BuildData
                    .AddEventLocationsFromList(
                         "corporate_locations", "f\"Bought: {location[0]}\"", "\"7Zee Bought\"",
                         condition: "world.options.include_7z and world.options.goal_type == 1"
-                    ).AddEventLocations(
-                        locations: SlimeData
-                                  .SelectMany(data => data.SpawnLocations.Select(region => new EventLocationData(
-                                               region, $"{data.Slime} ({region})", data.PlortDrop, "''"
-                                           )
-                                       )
-                                   ).ToArray()
-                    ).AddEventLocationsFromList("gates", item: "f\"Opened Gate: {location[0]}\"")
+                    )
+                   .AddEventLocations(
+                        locations: NormalPlortPlacement.SelectMany(kv => kv.Value.Select(slime => new EventLocationData(
+                                    kv.Key, $"{slime} ({kv.Key})", $"{slime} Plort", "''"
+                                )
+                            )
+                        ).ToArray()
+                    )
+                   .AddEventLocations(
+                        locations: MarketPlortPlacement.SelectMany(kv => kv.Value.Select(slime => new EventLocationData(
+                                    kv.Key, $"ML_{slime} ({kv.Key})", $"{slime} Plort", "''"
+                                )
+                            )
+                        ).ToArray()
+                    )
+                   .AddEventLocationsFromList("gates", item: "f\"Opened Gate: {location[0]}\"")
                    .AddLocations(
                         "options.plortsanity > 0",
-                        SlimeData.Where(data => !data.Slime.Contains("Gold") && !data.Slime.Contains("Saber"))
-                                 .Select(data => new LocationData("Menu", $"Sell a {data.PlortDrop}")).ToArray()
+                        PlortTypes.Where(plort => plort is not ("Gold Plort" or "Saber Plort"))
+                                  .Select(plort => new LocationData("Menu", $"Sell a {plort}")).ToArray()
                     )
                    .AddLocation(
                         new LocationData("Menu", "Sell a Saber Plort"),
@@ -391,14 +418,12 @@ public class SlimeRancher : BuildData
         init_fact
            .UseItemGroups(new Dictionary<string, string> { ["unlocks"] = "region_unlocks" })
            .UseLocationGroups(
-                CombinedInteractableData.Select(data => (LocationMap[data.Region], data.VagueName))
-                                        .GroupBy(t => t.Item1)
-                                        .ToDictionary(
-                                             g => g.Key,
-                                             g => (ICollection)new StringCollection(
-                                                 g.Select(t => t.VagueName).ToArray()
-                                             )
-                                         )
+                InteractableSector.Select(data => (LocationMap[data.Region], data.VagueName))
+                                  .GroupBy(t => t.Item1)
+                                  .ToDictionary(
+                                       g => g.Key,
+                                       g => (ICollection)new StringCollection(g.Select(t => t.VagueName).ToArray())
+                                   )
             )
            .UseInitFunction()
            .UseGenerateEarly()
@@ -445,10 +470,10 @@ public class SlimeRancher : BuildData
         string[][] locationDoubleArrays)
     {
         return new GraphBuilder(GameName)
-              .ForEachOf(CombinedRegionData, (b, sector) => b.AddConnection(sector.From, sector.To, sector.GenRule()))
+              .ForEachOf(RegionSector, (b, sector) => b.AddConnection(sector.From, sector.To, sector.GenRule()))
               .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
               .ForEachOf(
-                   CombinedInteractableData
+                   InteractableSector
                       .Where(inter => inter.IsNote),
                    (b, inter) => b.AddEventLocation(
                        inter.Region, getRule, $"Read: {inter.VagueName}", inter.VagueName,
@@ -463,12 +488,18 @@ public class SlimeRancher : BuildData
                    )
                )
               .ForEachOf(
-                   SlimeData, (b, data) =>
-                       b.ForEachOf(
-                           data.SpawnLocations, (_, s) => b.AddEventLocation(s, getRule, data.Slime, "", data.PlortDrop)
-                       )
+                   NormalPlortPlacement,
+                   (b, kv) => b.ForEachOf(
+                       kv.Value, (_, slime) => b.AddEventLocation(kv.Key, getRule, slime, "", $"{slime} Plort")
+                   )
                )
-              .ForEachOf(SlimeData, (b, data) => b.AddLocation("Menu", getRule, $"Sell a {data.PlortDrop}"))
+              .ForEachOf(
+                   MarketPlortPlacement,
+                   (b, kv) => b.ForEachOf(
+                       kv.Value, (_, slime) => b.AddEventLocation(kv.Key, getRule, $"ML_{slime}", "", $"{slime} Plort")
+                   )
+               )
+              .ForEachOf(PlortTypes, (b, plort) => b.AddLocation("Menu", getRule, $"Sell a {plort}"))
               .GenString();
     }
 }

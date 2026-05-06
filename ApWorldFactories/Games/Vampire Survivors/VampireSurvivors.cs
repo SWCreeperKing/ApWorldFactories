@@ -1,5 +1,6 @@
 ﻿using ApWorldFactories.Graphviz;
 using CreepyUtil.Archipelago.WorldFactory;
+using static ApWorldFactories.PathConstants;
 using static ApWorldFactories.Games.Vampire_Survivors.CodeBank;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 using Range = CreepyUtil.Archipelago.WorldFactory.Range;

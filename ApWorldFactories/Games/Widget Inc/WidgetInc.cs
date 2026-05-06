@@ -1,5 +1,6 @@
 ﻿using ApWorldFactories.Graphviz;
 using CreepyUtil.Archipelago.WorldFactory;
+using static ApWorldFactories.PathConstants;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 using Range = CreepyUtil.Archipelago.WorldFactory.Range;
 

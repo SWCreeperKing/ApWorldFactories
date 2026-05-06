@@ -1,11 +1,9 @@
 ﻿using CreepyUtil.Archipelago.WorldFactory;
-using static ApWorldFactories.Games.Slime_Rancher.InteractableRowData;
 
 namespace ApWorldFactories.Games.Slime_Rancher;
 
-public readonly struct InteractableRowData(DataArray param) : IGetLogicEnum<SkipLogic>, IGenRule, IGenOption, IPrintable
+public readonly struct InteractableRowData(DataArray param) : ILogicSectorDataType<SkipLogic, InteractableRowData>
 {
-    public static bool ForCompiler = false;
     [Mark] public readonly string Id = param;
     [Mark] public readonly string Name = param;
     [Mark] public readonly string Region = param;
@@ -21,36 +19,20 @@ public readonly struct InteractableRowData(DataArray param) : IGetLogicEnum<Skip
     public bool IsNote => CrackerLevel == "H Note";
     public string GetText => $"{Id},{Name}";
 
-    public string GenRule()
-    {
-        List<string> rules = [];
+    public bool IsMatch(InteractableRowData matchAgainst) => Id == matchAgainst.Id && Name == matchAgainst.Name;
+    public bool IsNoOption() => SkipLogic is SkipLogic.None;
 
-        if (CrackerLevel.Contains("Treasure Cracker"))
-        {
-            var level = Math.Max(1, CrackerLevel.Count(c => c == 'I'));
-            rules.Add(ForCompiler ? $"cracker[{level}]" : string.Join("", Enumerable.Repeat('c', level)));
-        }
-
-        if (NeedsJetpack) rules.Add(ForCompiler ? "jetpack" : "j");
-
-        if (MinJetpackEnergy > 100)
-        {
-            var energyLevel = (int)Math.Ceiling(MinJetpackEnergy / 50f - 2f);
-            rules.Add(ForCompiler ? $"energy[{energyLevel}]" : string.Join("", Enumerable.Repeat('e', energyLevel)));
-        }
-
-        if (ForCompiler && SkipLogic is not SkipLogic.None) rules.Add(SkipLogic.GenRule());
-
-        return ForCompiler ? string.Join(" and ", rules) : string.Join("", rules);
-    }
+    public string GenRule() => SlimeRancherLogicHelper.GenRule(
+        CrackerLevel, [], NeedsJetpack, MinJetpackEnergy, SkipLogic, "", []
+    );
 
     public static implicit operator LocationData(InteractableRowData data) => new(data.Region, data.Name);
-    public SkipLogic GetEnum() => SkipLogic;
+    public SkipLogic GetIdentifier() => SkipLogic;
     public string Print() => $"Location |{Name}|";
     public string GenOption() => SkipLogic.GenOption();
 }
 
-public readonly struct RegionRowData(DataArray param) : IGetLogicEnum<SkipLogic>, IGenRule, IGenOption, IPrintable
+public readonly struct RegionRowData(DataArray param) : ILogicSectorDataType<SkipLogic, RegionRowData>
 {
     [Mark] public readonly string From = param;
     [Mark] public readonly string To = param;
@@ -68,27 +50,13 @@ public readonly struct RegionRowData(DataArray param) : IGetLogicEnum<SkipLogic>
     [Mark] public readonly string GateEvent = param;
     [Mark] public readonly SkipLogic SkipLogic = ((string[])param).ParseSkipLogic();
 
-    public SkipLogic GetEnum() => SkipLogic;
+    public SkipLogic GetIdentifier() => SkipLogic;
+    public bool IsMatch(RegionRowData matchAgainst) => From == matchAgainst.From && To == matchAgainst.To;
+    public bool IsNoOption() => SkipLogic is SkipLogic.None;
 
-    public string GenRule()
-    {
-        List<string> rules = [];
-        if (ForCompiler) rules.AddRange(RegionUnlocks.Select(region => $"region[\"{region}\"]"));
-        if (NeedsJetpack) rules.Add(ForCompiler ? "jetpack" : "j");
-
-        if (MinJetpackEnergy > 100)
-        {
-            var energyLevel = (int)Math.Ceiling(MinJetpackEnergy / 50f - 2f);
-            rules.Add(ForCompiler ? $"energy[{energyLevel}]" : string.Join("", Enumerable.Repeat('e', energyLevel)));
-        }
-
-        if (ForCompiler && SkipLogic is not SkipLogic.None) rules.Add(SkipLogic.GenRule());
-        if (ForCompiler && PlortsRequired.Length != 0)
-            rules.AddRange(PlortsRequired.Select(plort => $"has['{plort}']"));
-        if (ForCompiler && GateEvent is not "") rules.Add($"gate[\"{GateEvent}\"]");
-
-        return string.Join(" and ", rules);
-    }
+    public string GenRule() => SlimeRancherLogicHelper.GenRule(
+        "", RegionUnlocks, NeedsJetpack, MinJetpackEnergy, SkipLogic, GateEvent, PlortsRequired
+    );
 
     public string Print()
         => $"Region: |{From},{To},{SlimeGated},{string.Join(';', RegionUnlocks)}|{NeedsJetpack},{SkipLogic}|";
@@ -103,6 +71,7 @@ public readonly struct SlimeRowData(DataArray param)
     [Mark] public readonly string[] SpawnLocations = param;
     [Mark] public readonly string PlortDrop = param;
     [Mark] public readonly int PlortId = param;
+    [Mark] public readonly SkipLogic SkipLogic = param.GetEnum<SkipLogic>();
 }
 
 public readonly struct LocationNameGroupData(DataArray param)
@@ -193,7 +162,7 @@ public enum SkipLogic
 {
     None = 0, EasySkips = 1, PreciseMovement = 1 << 1,
     ObscureLocations = 1 << 2, JetpackBoosts = 1 << 3, LargoJumps = 1 << 4,
-    DangerousSkips = 1 << 5, PostGame = 1 << 6,
+    DangerousSkips = 1 << 5, PostGame = 1 << 6, MarketLogic = 1 << 7,
 }
 
 public static class SkipLogicHelper
@@ -209,6 +178,7 @@ public static class SkipLogicHelper
         if (logic.HasFlag(SkipLogic.LargoJumps)) rules.Add("largo_jumps");
         if (logic.HasFlag(SkipLogic.DangerousSkips)) rules.Add("dangerous_skips");
         if (logic.HasFlag(SkipLogic.PostGame)) rules.Add("postgame");
+        if (logic.HasFlag(SkipLogic.MarketLogic)) rules.Add("market_logic");
 
         return rules.ToArray();
     }
@@ -226,5 +196,39 @@ public static class SkipLogicHelper
         if (skip.Length == 0) return SkipLogic.None;
         var logics = skip.Select(s => Enum.Parse<SkipLogic>(s.Replace(" ", "").Replace("-", ""), true)).ToArray();
         return logics.Length == 1 ? logics[0] : logics.Aggregate((fA, fB) => fA | fB);
+    }
+}
+
+public static class SlimeRancherLogicHelper
+{
+    public static bool ForCompiler = false;
+
+    public static string GenRule(string crackerLevel, string[] regionUnlocks, bool needsJetpack,
+        int minJetpackEnergy,
+        SkipLogic skipLogic, string gateEvent, string[] plortsRequired)
+    {
+        List<string> rules = [];
+        if (ForCompiler && regionUnlocks.Length != 0)
+            rules.AddRange(regionUnlocks.Select(region => $"region[\"{region}\"]"));
+        if (needsJetpack) rules.Add(ForCompiler ? "jetpack" : "j");
+
+        if (crackerLevel is not "" && crackerLevel.Contains("Treasure Cracker"))
+        {
+            var level = Math.Max(1, crackerLevel.Count(c => c == 'I'));
+            rules.Add(ForCompiler ? $"cracker[{level}]" : string.Join("", Enumerable.Repeat('c', level)));
+        }
+
+        if (minJetpackEnergy > 100)
+        {
+            var energyLevel = (int)Math.Ceiling(minJetpackEnergy / 50f - 2f);
+            rules.Add(ForCompiler ? $"energy[{energyLevel}]" : string.Join("", Enumerable.Repeat('e', energyLevel)));
+        }
+
+        if (ForCompiler && skipLogic is not SkipLogic.None) rules.Add(skipLogic.GenRule());
+        if (ForCompiler && plortsRequired.Length != 0)
+            rules.AddRange(plortsRequired.Select(plort => $"has['{plort}']"));
+        if (ForCompiler && gateEvent is not "") rules.Add($"gate[\"{gateEvent}\"]");
+
+        return string.Join(" and ", rules);
     }
 }

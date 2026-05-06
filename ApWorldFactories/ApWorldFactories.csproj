@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="CreepyUtil.Archipelago.WorldFactory" Version="0.2.0.7" />
+      <PackageReference Include="CreepyUtil.Archipelago.WorldFactory" Version="0.2.0.8" />
       <PackageReference Include="CreepyUtil.ClrCnsl" Version="0.2.0" />
       <PackageReference Include="CreepyUtil.ClrCnsl.Prompts" Version="0.2.0" />
       <PackageReference Include="CreepyUtil.Pos" Version="0.2.0" />
@@ -21,6 +21,14 @@
       <Folder Include="Output\Graph Output\" />
       <Folder Include="Output\Raw Graph Data\" />
       <Folder Include="Spreadsheets\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="C:\Users\Pizza\.nuget\packages\creepyutil.archipelago.worldfactory\0.2.0.8\contentFiles\any\net10.0\README.md" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\WorldBuilder\WorldBuilder.csproj" />
     </ItemGroup>
 
 </Project>

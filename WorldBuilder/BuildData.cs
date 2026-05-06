@@ -3,6 +3,7 @@ using System.Reflection;
 using CreepyUtil.Archipelago.WorldFactory;
 using CreepyUtil.ClrCnsl;
 using CreepyUtil.Pos;
+using static WorldBuilder.Runner;
 
 namespace ApWorldFactories;
 
@@ -11,12 +12,6 @@ public abstract class BuildData
     public const string MainDirectory = "../../../";
     public const string RawOutputPath = $"{MainDirectory}Output/";
     public const string RawInputPath = $"{MainDirectory}Input/";
-    public const string DotCommandPrefix = "E:/Graphviz-14.1.3-win64/bin/dot.exe";
-    public const string DDrive = "D:/Programs/steam/steamapps/common";
-    public const string FDrive = "F:/SteamLibrary/steamapps/common";
-
-    public const string GitLink
-        = "https://github.com/SWCreeperKing/ApWorldFactories/tree/master/ApWorldFactories/Games";
 
     public abstract string SteamDirectory { get; }
     public abstract string ModFolderName { get; }
@@ -99,13 +94,13 @@ public abstract class BuildData
             Directory.CreateDirectory(WriteOutputDirectory);
         if (!Directory.Exists(ApWorldPath)) Directory.CreateDirectory(ApWorldPath);
 
-        var options_fact = builder.GetOptionsFactory(GitLink);
-        var host_fact = builder.GetHostSettingsFactory(GitLink);
-        var location_fact = builder.GetLocationFactory(GitLink);
-        var item_fact = builder.GetItemFactory(GitLink);
-        var rule_fact = builder.GetRuleFactory(GitLink);
-        var region_fact = builder.GetRegionFactory(GitLink);
-        var init_fact = builder.GetInitFactory(GitLink);
+        var options_fact = builder.GetOptionsFactory(GithubLink);
+        var host_fact = builder.GetHostSettingsFactory(GithubLink);
+        var location_fact = builder.GetLocationFactory(GithubLink);
+        var item_fact = builder.GetItemFactory(GithubLink);
+        var rule_fact = builder.GetRuleFactory(GithubLink);
+        var region_fact = builder.GetRegionFactory(GithubLink);
+        var init_fact = builder.GetInitFactory(GithubLink);
 
         var cur = ClrCnsl.GetCursor();
         const int stepCount = 18;
@@ -181,7 +176,7 @@ public abstract class BuildData
         var curDir = Directory.GetCurrentDirectory();
         var cmd1 = $"cd {curDir}";
         var cmd2
-            = $"\"{DotCommandPrefix}\" -Tpng \"{RawOutputPath}Raw Graph Data/{GameName}.dot\" > \"{RawOutputPath}Graph Output/{GameName}.png\"";
+            = $"\"{GraphVizPath}\" -Tpng \"{RawOutputPath}Raw Graph Data/{GameName}.dot\" > \"{RawOutputPath}Graph Output/{GameName}.png\"";
 
         var graphProcess = new ProcessStartInfo
         {
@@ -238,7 +233,7 @@ public abstract class BuildData
     public virtual void GenerateInit(WorldInitFactory initFactory) => initFactory.GenerateInitFile();
 
     public virtual void GenerateJson(WorldFactory worldFactory)
-        => worldFactory.GenerateArchipelagoJson(ArchipelagoVersion, WorldVersion, "SW_CreeperKing");
+        => worldFactory.GenerateArchipelagoJson(ArchipelagoVersion, WorldVersion, DefaultAuthors);
 
     public virtual void ProcessLocationList(string[] locationList) { }
 
