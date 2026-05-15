@@ -1,29 +1,26 @@
 ﻿namespace ApWorldFactories.Games.ConbunnCardboard;
 
-public readonly struct RegionData(DataArray param)
+public readonly struct RegionRowData(DataArray param)
 {
-    [Mark] public readonly string RawRegion = param;
-    [Mark] public readonly string BackRegion = param;
+    [Mark] public readonly string Region = param;
+    [Mark] public readonly bool IsSubZone = param;
+    [Mark] public readonly string DoorFrame = param;
+    [Mark] public readonly string BackingRegion = param;
+
+    public string RegionName => IsSubZone ? $"{Region} ({BackingRegion})" : Region;
+    public bool HasDoor => DoorFrame is not "";
+}
+
+public readonly struct ConnectionRowData(DataArray param)
+{
+    [Mark] public readonly string From = param;
+    [Mark] public readonly string To = param;
     [Mark] public readonly string[] Abilities = param;
     [Mark] public readonly string TransitionName = param;
-    [Mark] public readonly string DoorFrame = param;
-    [Mark] public readonly bool IsSubZone = param;
-
-    public string Region => IsSubZone ? $"{RawRegion} ({BackRegion})" : RawRegion;
     public bool HasTransition => TransitionName is not "";
-    public bool HasDoor => DoorFrame is not "";
 
-    public string GenRule
-    {
-        get
-        {
-            List<string> req = [];
-            if (Abilities.Contains("Bounce Pads")) req.Add("pads");
-            if (Abilities.Contains("Dash")) req.Add("dash");
-            if (HasTransition) req.Add($"unlock[\"{Region}\"]");
-            return string.Join(" and ", req);
-        }
-    }
+    public string GenRule(Dictionary<string, string> regionMap)
+        => ConbunnGenRule.GenRule([], Abilities, regionMap[To], HasTransition, 0);
 }
 
 public readonly struct LocData(DataArray param)
@@ -32,17 +29,7 @@ public readonly struct LocData(DataArray param)
     [Mark] public readonly string Region = param;
     [Mark] public readonly string[] Abilities = param;
     public bool IsCoin => Id.StartsWith("Coin_");
-
-    public string GenRule
-    {
-        get
-        {
-            List<string> req = [];
-            if (Abilities.Contains("Bounce Pads")) req.Add("pads");
-            if (Abilities.Contains("Dash")) req.Add("dash");
-            return string.Join(" and ", req);
-        }
-    }
+    public string GenRule() => ConbunnGenRule.GenRule([], Abilities, Region, false, 0);
 }
 
 public readonly struct AbilityData(DataArray parm)
@@ -58,16 +45,23 @@ public record SkinData(DataArray param)
     [Mark] public readonly string LocalInt = param;
     [Mark] public readonly string GloablInt = param;
 
-    public string GenRule(Dictionary<string, string> regionMap)
-    {
-        List<string> req = [$"unlock[\"{regionMap[Region]}\"]"];
-        if (Id is "1") req.Add("coin[50]");
-        if (Id is "2") req.Add("coin[150]");
-        return string.Join(" and ", req);
-    }
+    public string GenRule(Dictionary<string, string> regionMap) => ConbunnGenRule.GenRule(
+        [regionMap[Region]], [], Region, false, Id switch { "1" => 50, "2" => 150, _ => 0 }
+    );
 }
 
-public class RegionDataCreator : DataCreator<RegionData>
+public static class ConbunnGenRule
 {
-    public override bool IsValidData(RegionData t) => t.Region is not "Menu";
+    public static string GenRule(string[] regionsReq, string[] abilities, string region, bool hasTransition,
+        int coinReq)
+    {
+        List<string> req = [];
+        if (regionsReq.Length != 0) req.AddRange(regionsReq.Select(r => $"unlock[\"{r}\"]"));
+        if (abilities.Contains("Bounce Pads")) req.Add("pads");
+        if (abilities.Contains("Dash")) req.Add("dash");
+        if (abilities.Contains("Cable Car")) req.Add("cablecar");
+        if (hasTransition) req.Add($"unlock[\"{region}\"]");
+        if (coinReq > 0) req.Add($"coin[{coinReq}]");
+        return string.Join(" and ", req);
+    }
 }

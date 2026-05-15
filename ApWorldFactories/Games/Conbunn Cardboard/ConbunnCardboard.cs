@@ -15,9 +15,10 @@ public class ConbunnCardboard : BuildData
     public override string GameName => "Conbunn Cardboard";
     public override string ApWorldName => "conbunn_cardboard";
     public override string GoogleSheetId => "1T4Gk3olQCz_J6dkZXPU1BtXysywf3wvbPeJHVYvnYic";
-    public override string WorldVersion => "0.1.1";
+    public override string WorldVersion => "0.1.2";
 
-    private Games.ConbunnCardboard.RegionData[] RegionData = [];
+    private RegionRowData[] RegionData = [];
+    private ConnectionRowData[] ConnectionRowData = [];
     private LocData[] LocationData = [];
     private AbilityData[] AbilityData = [];
     private SkinData[] SkinData = [];
@@ -30,15 +31,18 @@ public class ConbunnCardboard : BuildData
     public override void RunShenanigans()
     {
         GetSpreadsheet()
-           .ReadTable(new RegionDataCreator(), out RegionData)
+           .ReadTable(out RegionData).SkipColumn()
+           .ReadTable(out ConnectionRowData).SkipColumn()
            .ReadTable(out LocationData).SkipColumn()
            .ReadTable(out AbilityData).SkipColumn()
            .ReadTable(out SkinData);
 
-        Unlocks = RegionData.Where(data => data.HasTransition).ToDictionary(
-            data => data.Region, data => $"Transition Unlock: {data.Region}"
+        RegionData = RegionData.Where(data => data.Region is not "Menu").ToArray();
+        RegionMap = RegionData.ToDictionary(data => data.Region, data => data.RegionName);
+
+        Unlocks = ConnectionRowData.Where(data => data.HasTransition).DistinctBy(data => data.To).ToDictionary(
+            data => data.To, data => $"Transition Unlock: {RegionMap.GetValueOrDefault(data.To, data.To)}"
         );
-        RegionMap = RegionData.ToDictionary(data => data.RawRegion, data => data.Region);
 
         foreach (var location in LocationData)
         {
@@ -50,7 +54,7 @@ public class ConbunnCardboard : BuildData
         WriteData("LocationIds", LocationIdMap.Select(kv => $"{kv.Key}:{kv.Value}"));
         WriteData(
             "TransitionIds",
-            RegionData.Where(data => data.HasTransition).Select(data => $"{data.TransitionName}:{data.Region}")
+            ConnectionRowData.Where(data => data.HasTransition).Select(data => $"{data.TransitionName}:{RegionMap.GetValueOrDefault(data.To, data.To)}")
         );
         WriteData(
             "LocationDoors", RegionData.Where(data => data.HasDoor).Select(data => $"{data.Region},{data.DoorFrame}")
@@ -71,6 +75,7 @@ public class ConbunnCardboard : BuildData
     public override void Locations(WorldFactory _, LocationFactory location_fact)
     {
         location_fact
+           .AddLocations("npcs", ["Talk to the Museum Book", "Cardbun Museum"])
            .AddLocations(
                 "coins",
                 LocationData.Where(data => data.IsCoin)
@@ -102,10 +107,11 @@ public class ConbunnCardboard : BuildData
     {
         rule_fact
            .AddCompoundLogicFunction("unlock", "has_unlock", "has[f\"Transition Unlock: {transition}\"]", "transition")
+           .AddCompoundLogicFunction("cablecar", "has_cable_car", "has['Cable Car']")
            .AddCompoundLogicFunction("dash", "has_dash", "has['Dash']")
            .AddCompoundLogicFunction("pads", "has_bounce_pads", "has['Bounce Pads']")
            .AddCompoundLogicFunction("coin", "has_coin_count", "hasN['Real Coin', amt]", "amt")
-           .AddLogicRules(LocationData.ToDictionary(data => LocationIdMap[data.Id], data => data.GenRule))
+           .AddLogicRules(LocationData.ToDictionary(data => LocationIdMap[data.Id], data => data.GenRule()))
            .AddLogicRules(SkinData.ToDictionary(data => data.Name, data => data.GenRule(RegionMap)));
     }
 
@@ -113,11 +119,12 @@ public class ConbunnCardboard : BuildData
     {
         region_fact.AddRegions("", RegionData.Select(data => data.Region).ToArray())
                    .ForEachOf(
-                        RegionData, (b, data) =>
+                        ConnectionRowData, (b, data) =>
                         {
-                            var rule = data.GenRule;
-                            if (rule is not "") b.AddConnectionCompiledRule(data.BackRegion, data.Region, rule);
-                            else b.AddConnection(data.BackRegion, data.Region);
+                            var rule = data.GenRule(RegionMap);
+                            var to = RegionMap.GetValueOrDefault(data.To, data.To);
+                            if (rule is not "") b.AddConnectionCompiledRule(data.From, to, rule);
+                            else b.AddConnection(data.From, to);
                         }
                     )
                    .AddLocationsFromList("coins")
@@ -133,8 +140,7 @@ public class ConbunnCardboard : BuildData
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
            .UseCreateRegions()
            .AddCreateItems()
-           .UseSetRules(method
-                => method.AddCode(
+           .UseSetRules(method => method.AddCode(
                     CreateGoalCondition(StateHas("CD", "self.options.cds_required_to_goal", returnValue: false))
                 )
             )
@@ -146,13 +152,16 @@ public class ConbunnCardboard : BuildData
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
     }
 
-    public override string GenerateGraphViz(
-        WorldFactory worldFactory, Dictionary<string, string> associations, Func<string, string> getRule,
-        string[][] locationDoubleArrays
-    )
+    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
+        Func<string, string> getRule,
+        string[][] locationDoubleArrays)
     {
         return new GraphBuilder(GameName)
-              .ForEachOf(RegionData, (b, data) => b.AddConnection(data.BackRegion, data.Region, data.GenRule))
+              .ForEachOf(ConnectionRowData, (b, data) =>
+                   {
+                       b.AddConnection(data.From, RegionMap.GetValueOrDefault(data.To, data.To), data.GenRule(RegionMap));
+                   }
+               )
               .AddLocationsFromDoubleArray(locationDoubleArrays, getRule).ForEachOf(
                    LocationData.Where(data => data.IsCoin),
                    (b, data) => b.AddEventLocation(
