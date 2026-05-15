@@ -6,11 +6,7 @@ public readonly struct RegionData(DataArray param)
     [Mark] public readonly string ConnectsFrom = param.Get(false) is "" ? "Menu" : param;
     [Mark] public readonly string[] Requirements = param;
     [Mark] public readonly string[] QuestRequirements = param;
-
-    public string GenRule() => string.Join(
-        " and ",
-        Requirements.Select(item => $"has[\"{item}\"]").Concat(QuestRequirements.Select(quest => $"quest[\"{quest}\"]"))
-    );
+    public string GenRule() => PocoGenRule.GenRule(Requirements, QuestRequirements);
 }
 
 public readonly struct LocationData(DataArray param)
@@ -20,11 +16,7 @@ public readonly struct LocationData(DataArray param)
     [Mark] public readonly string[] Requirements = param;
     [Mark] public readonly string[] QuestRequirements = param;
     [Mark] public readonly string Id = param;
-
-    public string GenRule() => string.Join(
-        " and ",
-        Requirements.Select(item => $"has[\"{item}\"]").Concat(QuestRequirements.Select(quest => $"quest[\"{quest}\"]"))
-    );
+    public string GenRule() => PocoGenRule.GenRule(Requirements, QuestRequirements);
 }
 
 public readonly struct ItemData(DataArray param)
@@ -41,15 +33,27 @@ public readonly struct NpcQuestData(DataArray param)
 
     public string QuestName => $"Complete {NpcName}'s Quest";
     public string QuestItem => $"{NpcName}'s Quest Completion";
-    
-    public string GenRule() => string.Join(
-        " and ",
-        Requirements.Select(item => $"has[\"{item}\"]").Concat(QuestRequirements.Select(quest => $"quest[\"{quest}\"]"))
-    );
+    public string GenRule() => PocoGenRule.GenRule(Requirements, QuestRequirements);
 }
 
 public readonly struct ItemBlockerData(DataArray param)
 {
     [Mark] public readonly string Item = param;
     [Mark] public readonly string[] Blockers = param;
+}
+
+public readonly struct AchievementRowData(DataArray param)
+{
+    [Mark] public readonly string Achievement = param;
+    [Mark] public readonly string Region = param;
+    [Mark] public readonly string[] QuestRequirements = param;
+    public string GenRule() => PocoGenRule.GenRule([], QuestRequirements);
+}
+
+public static class PocoGenRule
+{
+    public static string GenRule(string[] itemRequirements, string[] questRequirements) => string.Join(
+        " and ",
+        itemRequirements.Select(item => $"has[\"{item}\"]").Concat(questRequirements.Select(quest => $"quest[\"{quest}\"]"))
+    );
 }

@@ -1,4 +1,5 @@
-﻿using ApWorldFactories.Graphviz;
+﻿using ApWorldFactories.Games.Atlyss;
+using ApWorldFactories.Graphviz;
 using CreepyUtil.Archipelago.WorldFactory;
 using static ApWorldFactories.PathConstants;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
@@ -12,13 +13,14 @@ public class Poco : BuildData
     public override string GameName => "Poco";
     public override string ApWorldName => "poco";
     public override string GoogleSheetId => "1Hq3zKyTXmiiiCPAdSduEHKs5kzdlWuW7MVS0LdjU6U0";
-    public override string WorldVersion => "0.1.1";
+    public override string WorldVersion => "0.1.2";
 
     public RegionData[] RegionData = [];
     public LocationData[] LocationData = [];
     public ItemData[] ItemData = [];
     public NpcQuestData[] NpcQuestData = [];
     public ItemBlockerData[] ItemBlockerData = [];
+    public AchievementRowData[] AchievementRowData = [];
 
     public override void RunShenanigans()
     {
@@ -26,7 +28,8 @@ public class Poco : BuildData
                         .ReadTable(out LocationData).SkipColumn()
                         .ReadTable(out ItemData).SkipColumn()
                         .ReadTable(out NpcQuestData).SkipColumn()
-                        .ReadTable(out ItemBlockerData);
+                        .ReadTable(out ItemBlockerData).SkipColumn()
+                        .ReadTable(out AchievementRowData);
 
         WriteData("locations", LocationData.Select(data => $"{data.Location}:{data.Id}"));
         WriteData("items", ItemData.Select(data => data.Name));
@@ -35,7 +38,9 @@ public class Poco : BuildData
 
     public override void Locations(WorldFactory _, LocationFactory location_fact)
     {
-        location_fact.AddLocations("locations", LocationData.Select(data => (string[])[data.Location, data.Area]));
+        location_fact.AddLocations("locations", LocationData.Select(data => (string[])[data.Location, data.Area]))
+                     .AddLocations("achievements", AchievementRowData.Select(data => (string[])[data.Achievement, data.Region]))
+                     .AddLocations("note", [["Read John's Note", "Tunnels Cave"]]);
     }
 
     public override void Items(WorldFactory _, ItemFactory item_fact)
@@ -63,7 +68,8 @@ public class Poco : BuildData
             )
            .AddLogicRules(
                 NpcQuestData.ToDictionary(data => data.QuestName, data => data.GenRule())
-            );
+            )
+           .AddLogicRules(AchievementRowData.ToDictionary(data => data.Achievement, data => data.GenRule()));
     }
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
@@ -74,6 +80,8 @@ public class Poco : BuildData
                         (b, data) => b.AddConnectionCompiledRule(data.ConnectsFrom, data.Region, data.GenRule())
                     )
                    .AddLocationsFromList("locations")
+                   .AddLocationsFromList("achievements")
+                   .AddLocationsFromList("note")
                    .ForEachOf(
                         NpcQuestData,
                         (b, data) => b.AddEventLocation(
