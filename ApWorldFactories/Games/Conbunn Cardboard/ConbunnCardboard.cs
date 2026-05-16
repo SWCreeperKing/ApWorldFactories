@@ -15,7 +15,7 @@ public class ConbunnCardboard : BuildData
     public override string GameName => "Conbunn Cardboard";
     public override string ApWorldName => "conbunn_cardboard";
     public override string GoogleSheetId => "1T4Gk3olQCz_J6dkZXPU1BtXysywf3wvbPeJHVYvnYic";
-    public override string WorldVersion => "0.1.2";
+    public override string WorldVersion => "0.1.3";
 
     private RegionRowData[] RegionData = [];
     private ConnectionRowData[] ConnectionRowData = [];
@@ -57,7 +57,7 @@ public class ConbunnCardboard : BuildData
             ConnectionRowData.Where(data => data.HasTransition).Select(data => $"{data.TransitionName}:{RegionMap.GetValueOrDefault(data.To, data.To)}")
         );
         WriteData(
-            "LocationDoors", RegionData.Where(data => data.HasDoor).Select(data => $"{data.Region},{data.DoorFrame}")
+            "LocationDoors", RegionData.Where(data => data.HasDoor).Select(data => $"{data.RegionName},{data.DoorFrame}")
         );
         WriteData(
             "SkinData",
@@ -75,7 +75,7 @@ public class ConbunnCardboard : BuildData
     public override void Locations(WorldFactory _, LocationFactory location_fact)
     {
         location_fact
-           .AddLocations("npcs", ["Talk to the Museum Book", "Cardbun Museum"])
+           .AddLocations("npcs", [["Talk to the Museum Book", RegionMap["Cardbun Museum"]]])
            .AddLocations(
                 "coins",
                 LocationData.Where(data => data.IsCoin)
@@ -117,7 +117,9 @@ public class ConbunnCardboard : BuildData
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
-        region_fact.AddRegions("", RegionData.Select(data => data.Region).ToArray())
+        region_fact.AddRegions(
+                        "", RegionData.Select(data => RegionMap.GetValueOrDefault(data.Region, data.Region)).ToArray()
+                    )
                    .ForEachOf(
                         ConnectionRowData, (b, data) =>
                         {
@@ -130,6 +132,7 @@ public class ConbunnCardboard : BuildData
                    .AddLocationsFromList("coins")
                    .AddLocationsFromList("cds")
                    .AddLocationsFromList("skins")
+                   .AddLocationsFromList("npcs")
                    .AddEventLocationsFromList("coins", item: "\"Real Coin\"");
     }
 
@@ -157,9 +160,13 @@ public class ConbunnCardboard : BuildData
         string[][] locationDoubleArrays)
     {
         return new GraphBuilder(GameName)
-              .ForEachOf(ConnectionRowData, (b, data) =>
+              .ForEachOf(
+                   ConnectionRowData,
+                   (b, data) =>
                    {
-                       b.AddConnection(data.From, RegionMap.GetValueOrDefault(data.To, data.To), data.GenRule(RegionMap));
+                       b.AddConnection(
+                           data.From, RegionMap.GetValueOrDefault(data.To, data.To), data.GenRule(RegionMap)
+                       );
                    }
                )
               .AddLocationsFromDoubleArray(locationDoubleArrays, getRule).ForEachOf(
