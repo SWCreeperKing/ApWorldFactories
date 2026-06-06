@@ -17,7 +17,7 @@ public readonly struct InteractableRowData(DataArray param) : ILogicSectorDataTy
 
     public bool IsSecretStyle => CrackerLevel == "Secret Style";
     public bool IsNote => CrackerLevel == "H Note";
-    public string GetText => $"{Id},{Name}";
+    public string GetText => $"{Id};{Name}";
 
     public bool IsMatch(InteractableRowData matchAgainst) => Id == matchAgainst.Id && Name == matchAgainst.Name;
     public bool IsNoOption() => SkipLogic is SkipLogic.None;
@@ -87,7 +87,7 @@ public readonly struct GateRowData(DataArray param)
     [Mark] public readonly string FromArea = param;
     [Mark] public readonly string ToArea = param;
     [Mark] public readonly string RegionUnlock = param;
-    public string GetText => $"{Id},{Name}";
+    public string GetText => $"{Id};{Name}";
 }
 
 public readonly struct GordoRowData(DataArray param)
@@ -100,7 +100,7 @@ public readonly struct GordoRowData(DataArray param)
     [Mark] public readonly string JetpackRequirement = param;
     [Mark] public readonly string NormalFoodRequirement = param;
     [Mark] public readonly string FavoriteFood = param;
-    public string GetText => $"{Id},{Name},Favorite: {FavoriteFood}";
+    public string GetText => $"{Id};{Name};Favorite: {FavoriteFood}";
 }
 
 public readonly struct UpgradeRowData(DataArray param)
@@ -156,6 +156,7 @@ public class CorporateCreator : DataCreator<CorporateRowData>
 {
     public override bool IsValidData(CorporateRowData t) => t.Location != "";
 }
+
 
 [Flags]
 public enum SkipLogic

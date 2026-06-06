@@ -1,5 +1,4 @@
-﻿using ApWorldFactories.Games.Slime_Rancher;
-using ApWorldFactories.Graphviz;
+﻿using ApWorldFactories.Graphviz;
 using CreepyUtil.Archipelago.WorldFactory;
 using static ApWorldFactories.PathConstants;
 using static CreepyUtil.Archipelago.WorldFactory.ItemFactory.ItemClassification;
@@ -14,7 +13,7 @@ public class PlacidPlasticDuckSim : BuildData
     public override string GameName => "Placid Plastic Duck Simulator";
     public override string ApWorldName => "placidplasticducksim";
     public override string GoogleSheetId => "1xOW8OJ-Mya3Lgp_vYhXJTQ4B8r41K80tyesA-TwNOXY";
-    public override string WorldVersion => "0.3.0";
+    public override string WorldVersion => "0.3.2";
 
     public DuckRowData[] DuckRowData = [];
     public DuckLogicRowData[] DuckLogicRowData = [];

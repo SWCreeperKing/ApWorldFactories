@@ -134,8 +134,8 @@ public class SlimeRancher : BuildData
             "Locations",
             rawInteractableData.Select(line => line.GetText).Distinct()
         );
-        WriteData("Upgrades", Upgrades.Select(line => $"{line.Name},{line.Id}"));
-        WriteData("7Zee", CorporateLocations.Select(line => $"{line.Location},{line.Level}"));
+        WriteData("Upgrades", Upgrades.Select(line => $"{line.Name};{line.Id}"));
+        WriteData("7Zee", CorporateLocations.Select(line => $"{line.Location};{line.Level}"));
         WriteData("Gates", GateData.Select(data => $"{data.Id};{data.RegionUnlock}"));
 
         SlimeRancherLogicHelper.ForCompiler = true;
@@ -394,7 +394,8 @@ public class SlimeRancher : BuildData
                         ).ToArray()
                     )
                    .AddEventLocations(
-                        locations: MarketPlortPlacement.SelectMany(kv => kv.Value.Select(slime => new EventLocationData(
+                        "options.market_logic",
+                        MarketPlortPlacement.SelectMany(kv => kv.Value.Select(slime => new EventLocationData(
                                     kv.Key, $"ML_{slime} ({kv.Key})", $"{slime} Plort", "''"
                                 )
                             )

@@ -37,9 +37,8 @@ public readonly struct HexLayoutData(DataArray param)
 
 public readonly struct TechData(DataArray param)
 {
-    [Mark] public readonly string OverrideId = param;
+    [Mark] public readonly string Name = param;
     [Mark] public readonly int Hex = param;
-    [Mark] public readonly string CommonId = param;
     [Mark] public readonly LogicRule RuleType = param.GetEnum<LogicRule>();
 
     [Mark] public readonly string SpecificRuleTechs = string.Join(
@@ -74,14 +73,13 @@ public readonly struct TechData(DataArray param)
     [Mark] public readonly float DevolveCostModifier = param;
     [Mark] public readonly string ImportantNotes = param;
     
-    public string Id => OverrideId is "" ? CommonId : OverrideId;
     public float GetScore => Infectivity + Lethality;
 
     public SingledOutTechData[] GetIndevTechs()
     {
         var tech = this;
         return Diseases.Select(disease => new SingledOutTechData(
-                disease, tech.Id, (int)tech.GetScore, tech.RuleType, tech.SpecificRuleTechs, tech.Hex, tech.TechTreeType
+                disease, tech.Name, (int)tech.GetScore, tech.RuleType, tech.SpecificRuleTechs, tech.Hex, tech.TechTreeType
             )
         ).ToArray();
     }

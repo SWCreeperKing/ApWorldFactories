@@ -1,5 +1,4 @@
-﻿using ApWorldFactories.Games.Atlyss;
-using ApWorldFactories.Graphviz;
+﻿using ApWorldFactories.Graphviz;
 using CreepyUtil.Archipelago.WorldFactory;
 using static ApWorldFactories.PathConstants;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;

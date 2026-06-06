@@ -32,6 +32,7 @@ public class PlagueInc : BuildData
     public Dictionary<int, int[]> hexAdjacency = [];
     private TechData.SingledOutTechData[] VictoryScores = [];
     private (string name, string disease, string diff, int score)[] DifficultyVictory = [];
+    //                          disease            tab     nodes
     private readonly Dictionary<string, Dictionary<string, HexMap>> HexMap = [];
 
     public override void RunShenanigans()
@@ -74,7 +75,7 @@ public class PlagueInc : BuildData
         }
 
         WriteData("diseases", DiseaseData.Select(data => $"{data.Name}:{data.Id}"));
-        WriteData("techs", TechData.Select(data => data.Id));
+        WriteData("techs", TechData.Select(data => data.Name));
     }
 
     public override void Options(WorldFactory _, OptionsFactory options_fact)
@@ -167,14 +168,14 @@ public class PlagueInc : BuildData
            .AddItemListVariable(
                 "always_tech", Progression,
                 list: TechData.Where(data => data.RuleType is LogicRule.Always && data.TechTreeType is "Transmission")
-                              .Select(data => data.Id)
+                              .Select(data => data.Name)
                               .ToArray()
             )
            .AddItemListVariable(
                 "tech_items", Progression,
                 list: TechData
                      .Where(data => !(data.RuleType is LogicRule.Always && data.TechTreeType is "Transmission"))
-                     .Select(data => data.Id)
+                     .Select(data => data.Name)
                      .ToArray()
             )
            .AddItemListVariable(

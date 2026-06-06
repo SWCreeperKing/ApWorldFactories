@@ -43,11 +43,10 @@ public class WereCleaner : BuildData
         WriteData("itemIds", ItemData.Select(data => $"{data.Collectible}:{data.CollectibleId}"));
     }
 
-    public override void Options(WorldFactory _, OptionsFactory options_fact)
-    {
-        // options_fact.AddOption("Kill Sanity", "Killing each unique npc sends a check", new Toggle())
-        options_fact.AddCheckOptions();
-    }
+    public override void Options(WorldFactory _, OptionsFactory options_fact) =>
+        options_fact
+           .AddOption("Kill Sanity", "Killing each unique npc sends a check", new DefaultOnToggle())
+           .AddCheckOptions();
 
     public override void Locations(WorldFactory _, LocationFactory location_fact)
     {
@@ -69,12 +68,6 @@ public class WereCleaner : BuildData
            .AddItem("Floor Penny", ItemFactory.ItemClassification.Filler)
            .AddCreateItems(method => method
                                     .AddCode(CreateItemsFromClassificationList())
-                                     // .AddCode("""
-                                     //                 for item, classification in item_table.items():
-                                     //                     if item != "Unlock Monday Night":
-                                     //                         world.location_count -= 1
-                                     //                         pool.append(world.create_item(item))
-                                     //                 """)
                                     .AddCode(CreateItemsFillRemainingWithItem("Floor Penny"))
             );
     }
@@ -111,19 +104,16 @@ public class WereCleaner : BuildData
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
         region_fact
-           .AddRegions("", "Levels", "Collectibles", "Killsanity")
+           .AddRegions("", "Levels", "Collectibles")
+           .AddRegion("Killsanity", "options.kill_sanity")
            .AddConnection("Menu", "Levels")
            .AddConnection("Menu", "Collectibles")
            .AddConnection("Menu", "Killsanity")
-            // .AddConnection("Menu", "Killsanity", condition: "world.options.kill_sanity")
            .AddLocationsFromList("starting_checks")
            .AddLocationsFromList("collectibles")
            .AddLocationsFromList("levels")
-            // .AddLocationsFromList("npcs", condition: "world.options.kill_sanity")
            .AddLocationsFromList("npcs")
-           .AddEventLocationsFromList(
-                "levels", "f\"Beat: {location[0]}\"", "\"Nights Survived\""
-            );
+           .AddEventLocationsFromList("levels", "f\"Beat: {location[0]}\"", "\"Nights Survived\"");
     }
 
     public override void Init(WorldFactory _, WorldInitFactory init_fact)
@@ -131,7 +121,6 @@ public class WereCleaner : BuildData
         init_fact
            .UseInitFunction(method => method.AddCode(new Variable("self.starting_stage", "\"\"")))
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
-            // .UseGenerateEarly(method => method.AddCode(CreatePushPrecollected("Unlock Monday Night")))
            .UseCreateRegions()
            .AddCreateItems()
            .UseSetRules(method => method
@@ -142,10 +131,8 @@ public class WereCleaner : BuildData
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
     }
 
-    public override string GenerateGraphViz(
-        WorldFactory worldFactory, Dictionary<string, string> associations, Func<string, string> getRule,
-        string[][] locationDoubleArrays
-    )
+    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
+        Func<string, string> getRule, string[][] locationDoubleArrays)
     {
         return new GraphBuilder(GameName)
               .AddRegions("Levels", "Collectibles", "Killsanity")

@@ -1,65 +1,92 @@
-Node Id override,Hex,Node,Logic Rule,SPECIFIC Techs,Disease(s),Type,Infectivity,Severity,Lethality,Mutation Chance,Trait Cost,Land Transmission,Sea Transmission,Air Transmission,Corpse Transmission,Wealthy Effectiveness,Poor Effectiveness,Urban Effectiveness,Rural Effectiveness,Hot Effectiveness,Cold Effectiveness,Humid Effectiveness,Arid Effectiveness,Cure Requirement,Cure Research Efficiency,Can Devolve?,Devolve Cost Modifier,Important notes
-,0,Nausea,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,1,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,N/A
-,22,Coughing,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,3,1,0,0,4,0,0,0,0,0,0,0.05,0,0,0,0,0,0.01,0,TRUE,0,N/A
-,44,Rash,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,2,1,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,N/A
-,5,Insomnia,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,0,3,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0.03,0,TRUE,0,N/A
-,27,Cysts,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,2,2,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,N/A
-,49,Anaemia,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,1,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,N/A
-,6,Vomiting,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,3,1,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,N/A
-,17,Pneumonia,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,3,2,0,0,3,0,0,0,0,0,0,0,0,0,0.05,0,0,0.01,0,TRUE,0,N/A
-,28,Sneezing,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,5,1,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,N/A
-,39,Sweating,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,2,1,0,0,3,0,0,0,0,0,0,0,0,0,0.05,0,0,0.01,0,TRUE,0,N/A
-,10,Paranoia,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,0,4,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0.06,0,TRUE,0,N/A
-,21,Hyper sensitivity,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,1,2,0,0,2,0,0,0,0,0.04,0,0,0,0,0,0,0,0.01,0,TRUE,0,The only symptom with wealthy country effectiveness
-,32,Abscesses,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,4,4,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
-,43,Haemophilia,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,3,3,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
-,12,Pulmonary Oedema,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,5,4,2,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
-,34,Fever,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,4,3,3,0,9,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
-,15,Inflammation,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,2,2,2,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
-,37,Tumours,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,2,0,4,0,11,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
-,7,Diarrhoea,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,6,4,1,0,6,0,0,0,0,0,0.05,0,0,0,0,0,0,0.01,0,TRUE,0,
-,18,Pulmonary Fibrosis,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,3,3,2,0,6,0,0,0,0,0,0,0,0,0,0,0.05,0,0.01,0,TRUE,0,
-,29,Immune Suppression,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,2,6,4,1,12,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
-,40,Skin Lesions,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,11,4,0,0,8,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
-,9,Seizures,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,1,7,3,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
-,20,Paralysis,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,1,5,1,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,TRUE,0,
-,31,Systemic Infection,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,6,7,6,0,17,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
-,42,Internal Haemorrhaging,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,0,9,7,0,12,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
-,2,Dysentery,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,8,15,8,0,19,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
-,3,Insanity,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,6,15,0,0,18,0,0,0,0,0,0,0,0,0,0,0,0,0.2,0,TRUE,0,
-,46,Necrosis,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,10,20,13,0,27,0,0,0,10,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
-,47,Hemorrhagic Shock,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,0,15,15,0,23,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
-,25,Coma,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,0,15,2,0,21,0,0,0,0,0,0,0,0,0,0,0,0,0.24,0,TRUE,0,
-,24,Total Organ Failure,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,0,20,25,0,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0,
-,0,Bird 1,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,3,0,0,1,12,9,0,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0,
-,6,Bird 2,SPECIFIC,Bird 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,6,0,0,2,18,90,0,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0,
-,2,Rodent 1,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,3,0,0,0.5,10,0,0,0,0,0,0,0.8,0,0,0,0,0,0,0,TRUE,0,
-,7,Rodent 2,SPECIFIC,Rodent 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,6,0,0,1,16,0,0,0,0,0,0,1.2,0,0,0,0,0,0,0,TRUE,0,
-,23,Livestock 1,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,2,0,0,0.5,7,0,0,0,0,0,0,0,0.8,0,0,0,0,0,0,TRUE,0,
-,18,Livestock 2,SPECIFIC,Livestock 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,4,0,0,1,12,0,0,0,0,0,0,0,1.2,0,0,0,0,0,0,TRUE,0,
-,12,Extreme Zoonosis,SPECIFIC,"Bird 2, Rodent 2, Livestock 2","Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,5,0,0,3,22,10,0,0,0,0,0,1,1,0,0,0,0,0,0,TRUE,0,Very small chance to have non-human infections of a country. Slightly cheaper on fungus.
-,39,Air 1,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,4,0,0,0,9,0,0,9,0,0,0,0,0,0,0,0,0.8,0,0,TRUE,0,
-,45,Air 2,SPECIFIC,Air 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,7,0,0,0,14,0,0,90,0,0,0,0,0,0,0,0,1.2,0,0,TRUE,0,
-,42,Water 1,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,4,0,0,0,9,0,9,0,0,0,0,0,0,0,0,0.8,0,0,0,TRUE,0,
-,47,Water 2,SPECIFIC,Water 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,8,0,0,0,15,0,90,0,0,0,0,0,0,0,0,1.2,0,0,0,TRUE,0,
-,46,Extreme Bioaerosol,SPECIFIC,"Air 2, Water 2","Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,5,0,0,0,16,0,20,20,0,0,0,0,0,0,0,1.3,1.3,0,0,TRUE,0,
-,5,Insect 1,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,4,0,0,0.5,9,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,TRUE,0,
-,10,Insect 2,SPECIFIC,Insect 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,8,0,0,1,20,0,0,0,0,0,0,0,0,0.3,0,0,0,0,0,TRUE,0,
-,27,Blood 1,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,2,0,0,0.5,8,0,0,0,0,0,0.8,0,0,0,0,0,0,0,0,TRUE,0,
-,21,Blood 2,SPECIFIC,Blood 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,4,0,0,1,13,0,0,0,0,0,1.2,0,0,0,0,0,0,0,0,TRUE,0,
-,15,Extreme Hematophagy,SPECIFIC,"Insect 2, Blood 2","Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,5,0,0,1,24,0,0,0,0,0,1,0,0,0.3,0,0,0,0,0,TRUE,0,Can Infect another country rarely when public order is over 0.5. Neccesesary for Contaminated Package achivement
-,0,Cold Resistance 1,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,7,0,0,0,0,0,0,0,0,0,0.3,0,0,0,0,TRUE,0,
-,6,Cold Resistance 2,SPECIFIC,Cold Resistance 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,12,0,0,0,0,0,0,0,0,0,0.6,0,0,0,0,TRUE,0,
-,2,Heat Resistance 1,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,11,0,0,0,0,0,0,0,0,0.3,0,0,0,0,0,TRUE,0,
-,7,Heat Resistance 2,SPECIFIC,Heat Resistance 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,22,0,0,0,0,0,0,0,0,0.6,0,0,0,0,0,TRUE,0,
-,12,Environmental Hardening,SPECIFIC,"Cold Resistance 2, Heat Resistance 2","Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,30,0,0,0,0,0,0,0,0,1,1,0,0,0,0,TRUE,0,
-,34,Bacterial Resilience 1,ALWAYS,,Bacteria,Ability,0,0,0,0,6,0,0,0,0,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.01,0,TRUE,0,
-,40,Bacterial Resilience 2,ADJACENT,,Bacteria,Ability,0,0,0,0,7,0,0,0,0,0.075,0.075,0.075,0.075,0.075,0.075,0.075,0.075,0.01,0,TRUE,0,
-,46,Bacterial Resilience 3,ADJACENT,,Bacteria,Ability,0,0,0,0,9,0,0,0,0,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.01,0,TRUE,0,
-,4,Drug Resistance 1,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,11,0,0,0,0,0.3,0,0,0,0,0,0,0,0,0,TRUE,0,
-,9,Drug Resistance 2,SPECIFIC,Drug Resistance 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,25,0,0,0,0,0.7,0,0,0,0,0,0,0,0,0,TRUE,0,
-,10,Genetic Hardening 1,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,TRUE,0,
-,16,Genetic Hardening 2,SPECIFIC,Genetic Hardening 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,0,0,0.3,TRUE,0,
-,15,Genetic ReShuffle 1,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,17,0,0,0,0,0,0,0,0,0,0,0,0,0.25,0,TRUE,0,
-,21,Genetic ReShuffle 2,SPECIFIC,Genetic ReShuffle 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,21,0,0,0,0,0,0,0,0,0,0,0,0,0.25,0,TRUE,0,
-,26,Genetic ReShuffle 3,SPECIFIC,Genetic ReShuffle 2,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,25,0,0,0,0,0,0,0,0,0,0,0,0,0.25,0,TRUE,0,
+Node,Hex,Logic Rule,SPECIFIC Techs,Disease(s),Type,Infectivity,Severity,Lethality,Mutation Chance,Trait Cost,Land Transmission,Sea Transmission,Air Transmission,Corpse Transmission,Wealthy Effectiveness,Poor Effectiveness,Urban Effectiveness,Rural Effectiveness,Hot Effectiveness,Cold Effectiveness,Humid Effectiveness,Arid Effectiveness,Cure Requirement,Cure Research Efficiency,Can Devolve?,Devolve Cost Modifier,Important notes
+Bacterial Resilience 1,34,ALWAYS,,Bacteria,Ability,0,0,0,0,6,0,0,0,0,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.01,0,TRUE,0,
+Bacterial Resilience 2,40,ADJACENT,,Bacteria,Ability,0,0,0,0,7,0,0,0,0,0.075,0.075,0.075,0.075,0.075,0.075,0.075,0.075,0.01,0,TRUE,0,
+Bacterial Resilience 3,46,ADJACENT,,Bacteria,Ability,0,0,0,0,9,0,0,0,0,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.01,0,TRUE,0,
+Abscesses,32,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,4,4,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Air 1,39,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,4,0,0,0,9,0,0,9,0,0,0,0,0,0,0,0,0.8,0,0,TRUE,0,
+Air 2,45,SPECIFIC,Air 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,7,0,0,0,14,0,0,90,0,0,0,0,0,0,0,0,1.2,0,0,TRUE,0,
+Anaemia,49,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,1,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,N/A
+Bird 1,0,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,3,0,0,1,12,9,0,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0,
+Bird 2,6,SPECIFIC,Bird 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,6,0,0,2,18,90,0,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0,
+Blood 1,27,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,2,0,0,0.5,8,0,0,0,0,0,0.8,0,0,0,0,0,0,0,0,TRUE,0,
+Blood 2,21,SPECIFIC,Blood 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,4,0,0,1,13,0,0,0,0,0,1.2,0,0,0,0,0,0,0,0,TRUE,0,
+Cold Resistance 1,0,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,7,0,0,0,0,0,0,0,0,0,0.3,0,0,0,0,TRUE,0,
+Cold Resistance 2,6,SPECIFIC,Cold Resistance 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,12,0,0,0,0,0,0,0,0,0,0.6,0,0,0,0,TRUE,0,
+Coma,25,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,0,15,2,0,21,0,0,0,0,0,0,0,0,0,0,0,0,0.24,0,TRUE,0,
+Coughing,22,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,3,1,0,0,4,0,0,0,0,0,0,0.05,0,0,0,0,0,0.01,0,TRUE,0,N/A
+Cysts,27,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,2,2,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,N/A
+Diarrhoea,7,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,6,4,1,0,6,0,0,0,0,0,0.05,0,0,0,0,0,0,0.01,0,TRUE,0,
+Drug Resistance 1,4,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,11,0,0,0,0,0.3,0,0,0,0,0,0,0,0,0,TRUE,0,
+Drug Resistance 2,9,SPECIFIC,Drug Resistance 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,25,0,0,0,0,0.7,0,0,0,0,0,0,0,0,0,TRUE,0,
+Dysentery,2,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,8,15,8,0,19,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Environmental Hardening,12,SPECIFIC,"Cold Resistance 2, Heat Resistance 2","Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,30,0,0,0,0,0,0,0,0,1,1,0,0,0,0,TRUE,0,
+Extreme Bioaerosol,46,SPECIFIC,"Air 2, Water 2","Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,5,0,0,0,16,0,20,20,0,0,0,0,0,0,0,1.3,1.3,0,0,TRUE,0,
+Extreme Hematophagy,15,SPECIFIC,"Insect 2, Blood 2","Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,5,0,0,1,24,0,0,0,0,0,1,0,0,0.3,0,0,0,0,0,TRUE,0,Can Infect another country rarely when public order is over 0.5. Neccesesary for Contaminated Package achivement
+Extreme Zoonosis,12,SPECIFIC,"Bird 2, Rodent 2, Livestock 2","Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,5,0,0,3,22,10,0,0,0,0,0,1,1,0,0,0,0,0,0,TRUE,0,Very small chance to have non-human infections of a country. Slightly cheaper on fungus.
+Fever,34,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,4,3,3,0,9,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Genetic Hardening 1,10,SPECIFIC,Drug Resistance 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0.1,TRUE,0,
+Genetic Hardening 2,16,SPECIFIC,Genetic Hardening 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,0,0,0.3,TRUE,0,
+Genetic ReShuffle 1,15,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,17,0,0,0,0,0,0,0,0,0,0,0,0,0.25,0,TRUE,0,
+Genetic ReShuffle 2,21,SPECIFIC,Genetic ReShuffle 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,21,0,0,0,0,0,0,0,0,0,0,0,0,0.25,0,TRUE,0,
+Genetic ReShuffle 3,26,SPECIFIC,Genetic ReShuffle 2,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,25,0,0,0,0,0,0,0,0,0,0,0,0,0.25,0,TRUE,0,
+Haemophilia,43,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,3,3,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Heat Resistance 1,2,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,11,0,0,0,0,0,0,0,0,0.3,0,0,0,0,0,TRUE,0,
+Heat Resistance 2,7,SPECIFIC,Heat Resistance 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Ability,0,0,0,0,22,0,0,0,0,0,0,0,0,0.6,0,0,0,0,0,TRUE,0,
+Hemorrhagic Shock,47,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,0,15,15,0,23,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Hyper sensitivity,21,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,1,2,0,0,2,0,0,0,0,0.04,0,0,0,0,0,0,0,0.01,0,TRUE,0,The only symptom with wealthy country effectiveness
+Immune Suppression,29,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,2,6,4,1,12,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Inflammation,15,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,2,2,2,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Insanity,3,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,6,15,0,0,18,0,0,0,0,0,0,0,0,0,0,0,0,0.2,0,TRUE,0,
+Insect 1,5,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,4,0,0,0.5,9,0,0,0,0,0,0,0,0,0.1,0,0,0,0,0,TRUE,0,
+Insect 2,10,SPECIFIC,Insect 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,8,0,0,1,20,0,0,0,0,0,0,0,0,0.3,0,0,0,0,0,TRUE,0,
+Insomnia,5,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,0,3,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0.03,0,TRUE,0,N/A
+Internal Haemorrhaging,42,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,0,9,7,0,12,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Livestock 1,23,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,2,0,0,0.5,7,0,0,0,0,0,0,0,0.8,0,0,0,0,0,0,TRUE,0,
+Livestock 2,18,SPECIFIC,Livestock 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,4,0,0,1,12,0,0,0,0,0,0,0,1.2,0,0,0,0,0,0,TRUE,0,
+Nausea,0,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,1,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,N/A
+Necrosis,46,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,10,20,13,0,27,0,0,0,10,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Paralysis,20,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,1,5,1,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0.1,0,TRUE,0,
+Paranoia,10,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,0,4,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0.06,0,TRUE,0,N/A
+Pneumonia,17,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,3,2,0,0,3,0,0,0,0,0,0,0,0,0,0.05,0,0,0.01,0,TRUE,0,N/A
+Pulmonary Fibrosis,18,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,3,3,2,0,6,0,0,0,0,0,0,0,0,0,0,0.05,0,0.01,0,TRUE,0,
+Pulmonary Oedema,12,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,5,4,2,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Rash,44,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,2,1,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,N/A
+Rodent 1,2,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,3,0,0,0.5,10,0,0,0,0,0,0,0.8,0,0,0,0,0,0,0,TRUE,0,
+Rodent 2,7,SPECIFIC,Rodent 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,6,0,0,1,16,0,0,0,0,0,0,1.2,0,0,0,0,0,0,0,TRUE,0,
+Seizures,9,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,1,7,3,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Skin Lesions,40,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,11,4,0,0,8,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Sneezing,28,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,5,1,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,N/A
+Sweating,39,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,2,1,0,0,3,0,0,0,0,0,0,0,0,0,0.05,0,0,0.01,0,TRUE,0,N/A
+Systemic Infection,31,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,6,7,6,0,17,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Total Organ Failure,24,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,0,20,25,0,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0,
+Tumours,37,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,2,0,4,0,11,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Vomiting,6,ADJACENT,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Symptom,3,1,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,N/A
+Water 1,42,ALWAYS,,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,4,0,0,0,9,0,9,0,0,0,0,0,0,0,0,0.8,0,0,0,TRUE,0,
+Water 2,47,SPECIFIC,Water 1,"Bacteria, Virus, Fungus, Parasite, Prion, Nano Virus, Bio Weapon",Transmission,8,0,0,0,15,0,90,0,0,0,0,0,0,0,0,1.2,0,0,0,TRUE,0,
+Deactivate modified genes 1,51,ALWAYS,,Bio Weapon,Ability,0,0,-2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0,
+Deactivate modified genes 2,52,ADJACENT,,Bio Weapon,Ability,0,0,-3.5,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0,
+Deactivate modified genes 3,47,ADJACENT,,Bio Weapon,Ability,0,0,-5,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0,
+Gene Compression 1,29,ALWAYS,,Bio Weapon,Ability,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0,
+Gene Compression 2,30,ADJACENT,,Bio Weapon,Ability,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0,
+Gene Compression 3,36,ADJACENT,,Bio Weapon,Ability,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0,
+Neucleic Acid Neutralisation 1,50,ALWAYS,,Bio Weapon,Ability,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0,
+Neucleic Acid Neutralisation 2,44,ADJACENT,,Bio Weapon,Ability,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0,
+Neucleic Acid Neutralisation 3,43,ADJACENT,,Bio Weapon,Ability,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0,
+Unlock Annihilate gene,42,SPECIFIC,"Gene Compression 3, Neucleic Acid Neutralisation 3, Deactivate modified genes 3",Bio Weapon,Ability,40,40,100,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0,
+Broadcast Interceptor overload,51,ADJACENT,,Nano Virus,Ability,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0.95,0,TRUE,0,"Interceptor Overload flag (""Makes disease immune to the cure for a short period of time, but increases susceptibility to the cure in the long run."")"
+Code fragment interception,36,ALWAYS,,Nano Virus,Ability,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0.09,TRUE,0,
+Code segment interception,30,ADJACENT,,Nano Virus,Ability,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0.18,TRUE,0,
+Drug immunity,42,ADJACENT,,Nano Virus,Ability,0,0,0,0,11,0,0,0,0,1,0,0,0,0,0,0,0,0,0,TRUE,0,
+Encryption breached,52,ADJACENT,,Nano Virus,Ability,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0,
+Kill Switch stasis,40,ADJACENT,,Nano Virus,Ability,0,0,0,0,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0.35,TRUE,0,
+Radical elements stabilised,47,ALWAYS,,Nano Virus,Ability,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0.95,0,TRUE,0,
+Replication Factory overload,29,ADJACENT,,Nano Virus,Ability,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0,"Replication Overload flag (""boosts infectivity for a short period of time, but slightly reducing infectivity in the long run.)"
+Symbiosis 1,42,ALWAYS,,Parasite,Ability,0,-3,0,0,8,1,1,1,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Symbiosis 2,41,ADJACENT,,Parasite,Ability,0,-6,0,0,11,2,2,2,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Symbiosis 3,40,ADJACENT,,Parasite,Ability,2,-9,0,0,14,3,3,3,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Neural Atrophy 1,35,ALWAYS,,Prion,Ability,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0.04,TRUE,0,
+Neural Atrophy 2,41,ADJACENT,,Prion,Ability,0,0,0,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0.09,TRUE,0,
+Neural Atrophy 3,46,ADJACENT,,Prion,Ability,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0.14,TRUE,0,
+Viral Instability 1,36,ALWAYS,,Virus,Ability,0,0,0,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Viral Instability 2,41,ADJACENT,,Virus,Ability,0,0,0,1.5,5,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,
+Viral Instability 3,46,ADJACENT,,Virus,Ability,0,0,0,2,6,0,0,0,0,0,0,0,0,0,0,0,0,0.01,0,TRUE,0,

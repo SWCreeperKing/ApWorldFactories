@@ -1,0 +1,6 @@
+RoomID,StoryEvent,Name,Items
+A1_BossFightRoom,Boss_Kill_1,Augustus - The Immutable Fogy,"Blast, D_Painter"
+A1_BossFightRoom,Boss_Kill_1,Augustus - The Immutable Fogy,"Blast, PU_Stone_Creation"
+A1_BossFightRoom,Boss_Kill_1,Augustus - The Immutable Fogy,"Blast, Weapon_Teleport"
+A2_Boss,Boss_Kill_2,Bélia - The Stone Hearted,"PU_Stone_Remembrance, PU_Stone_Creation"
+A2_Boss,Boss_Kill_2,Bélia - The Stone Hearted,"PU_Stone_Remembrance, Weapon_Teleport"

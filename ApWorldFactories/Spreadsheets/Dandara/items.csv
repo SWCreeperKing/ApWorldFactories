@@ -1,0 +1,60 @@
+ItemID,ItemName,Item Type,Count,Description,Column 1,,ItemID,,ItemID,,ItemID,,Upgrade,ID,Check Count,Unlock Item,,Event Name,RoomID,Event Item,Items,,Region,Level
+OpenedEldarDoor,???,Progression,0,???,,,Weapon_EnergyBall,,Weapon_Missile,,Weapon_Missile,,Heart Shop,PU_Health,17,Heart Enhancer Permit,,Event: Kill Eldar,AF_Boss,FinalBoss_Kill,"PU_Stone_Creation, PU_Stone_Remembrance, PU_Stone_Intention, PU_Stone_Dreams",,Crib of Creation,1
+DLCF_EntranceAccessUnlocked,FearKey,Progression,1,Key to the fear world,,,Weapon_WaterBomb,,Weapon_EnergyBall,,Weapon_Bounce,,Mana Shop,PU_Ammo,10,Freedom Enhancer Permit,,Event: Kill Eldar,AF_Boss,FinalBoss_Kill,"PU_Stone_Remembrance, PU_Stone_Intention, PU_Stone_Dreams, Weapon_Teleport",,Village of Artists,2
+DLCF_FacedTheMasters,???,Progression,0,Keyevent that allows you to fight the DLC FB,,,Weapon_Remembrance,,Weapon_Bounce,,,,Health Flask Shop,PU_ManaFlaskUpgrade,7,Essence Enhancer Permit,,Event: Ture Ending,AFEAR_Boss,DLCF_FearEnded,"FinalBoss_Kill, DLCF_FreedNara",,The Colossal Bridge,5
+DLCF_FreedNara,FreeNara,Progression,1,Need to talk to here to get on the path to DLCFB,,,,,Weapon_WaterBomb,,,,Mana Flask Shop,PU_ManaFlaskUpgrade,7,Infusion Enhancer Permit,,,,,,,Remembrance Desert,9
+DLCF_TimeFlagTrap,TimeFlag,Progression,1,flag needed to finish the run for Persistent,,,,,,,,,,,,,,,,,,,Hidden Realms,13
+DLCF_FearEnded,TrueEnding,Progression,0,The True Ending ???,,,,,,,,,,,,,,,,,,,Intention Capital,14
+FinalBoss_Kill,Eldar Killed Event,,0,Eldar - The Outer Voice,,,,,,,,,,,,,,,,,,,Masters' Auditorium,15
+Boss_Kill_1,Boss StoryEvent Key 1,Progression,1,Augustus - The Immutable Fogy,,,,,,,,,,,,,,,,,,,Dream Lands,16
+Boss_Kill_2,Boss StoryEvent Key 2,Progression,1,Bélia - The Stone Hearted,,,,,,,,,,,,,,,,,,,Ephemeral Station,29
+Boss_Kill_3,Boss StoryEvent Key 3,,0,???,,,,,,,,,,,,,,,,,,,Golden Fortress,32
+Boss_Kill_4,Boss StoryEvent Key 4,,0,???,,,,,,,,,,,,,,,,,,,The Masquerade Ball,35
+Boss_Kill_5,Boss StoryEvent Key 5,,0,???,,,,,,,,,,,,,,,,,,,Exile of Contemplations,41
+Boss_Kill_6,Boss StoryEvent Key 6,,0,???,,,,,,,,,,,,,,,,,,,,
+Boss_Kill_7,Boss StoryEvent Key 7,,0,???,,,,,,,,,,,,,,,,,,,,
+Miniboss_Kill_1,Miniboss StoryEvent Key 1,,0,???,,,,,,,,,,,,,,,,,,,,
+Miniboss_Kill_2,Miniboss StoryEvent Key 2,,0,???,,,,,,,,,,,,,,,,,,,,
+Miniboss_Kill_3,Miniboss StoryEvent Key 3,,0,???,,,,,,,,,,,,,,,,,,,,
+PU_Stone_Creation,Stone of Creation,Progression,1,Its carrier can leap farther when a Creation device is nearby,,,,,,,,,,,,,,,,,,,,
+PU_Stone_Remembrance,Rock of Remembrance,Progression,1,The reminiscence of old times will activate and resonate in its mere presence,,,,,,,,,,,,,,,,,,,,
+PU_Stone_Intention,Stone of Intention,Progression,1,Unlock new angles for its carriers,,,,,,,,,,,,,,,,,,,,
+PU_Stone_Dreams,Pearl of Dreams,Progression,1,Used by the Lord of dreams himself to travel the land when seeking inspiration,,,,,,,,,,,,,,,,,,,,
+PU_DLCF_FinalKey,Shell Mirror,Progression,1,Look fear staight in the eye,,,,,,,,,,,,,,,,,,,,
+PU_Health,Heart of the Great Salt,Progression,17,Incresses Dandara's endurance,,,,,,,,,,,,,,,,,,,,
+PU_Ammo,Scarf of Freedom,Progression,1,Incresses Dandara's energy,,,,,,,,,,,,,,,,,,,,
+PU_HealthFlask,Essence of Salt,Progression,9,to regain your strength,,,,,,,,,,,,,,,,,,,,
+PU_Map,Map,Useful,1,the path you have taken,,,,,,,,,,,,,,,,,,,,
+PU_Shield,Bracers of the Patient,Useful,1,Spend energy in Faith and Patience,,,,,,,,,,,,,,,,,,,,
+PU_ManaFlask,Infusion of Salt,Progression,9,Use it to recharge your energy,,,,,,,,,,,,,,,,,,,,
+PU_HealthFlaskUpgrade,Essence of Salt Enhancer,Progression,6,Increasses Essence effect,,,,,,,,,,,,,,,,,,,,
+PU_ManaFlaskUpgrade,Infusion of Salt Enhancer,Progression,6,Increasses Infusion effect,,,,,,,,,,,,,,,,,,,,
+PU_Money_Fear,Pleas of the Salt Fear,Filler,24,The most basic particles of the salt,,,,,,,,,,,,,,,,,,,,
+PU_Money,Pleas of the Salt,Filler,44,The most basic particles of the salt,about 44 chest will need to double check,,,,,,,,,,,,,,,,,,,
+PU_DandaraArrow,Arrow of Freedom,Useful,1,Dandara's energy burst has grown,,,,,,,,,,,,,,,,,,,,
+PU_SuperDandara,Salt's Awareness,Useful,1,,,,,,,,,,,,,,,,,,,,,
+Weapon_Missile,Jonny B. Missiles,Progression,1,,,,,,,,,,,,,,,,,,,,,
+Weapon_EnergyBall,Anxiety Shock,Progression,1,,,,,,,,,,,,,,,,,,,,,
+Weapon_Remembrance,Memories Shaft,Progression,1,,,,,,,,,,,,,,,,,,,,,
+Weapon_Bounce,Logic Blast,Progression,1,,,,,,,,,,,,,,,,,,,,,
+Weapon_WaterBomb,Skin Knitter,Progression,1,"You need the D_DLCF_ExplorerFinish, D_DLCF_NobleFinish , D_DLCF_PersistentFinish and some Reach ablity to get to it",,,,,,,,,,,,,,,,,,,,
+Weapon_Teleport,Displaced Presence,Progression,1,,,,,,,,,,,,,,,,,,,,,
+D_Painter,Paint Platform,Progression,1,,,,,,,,,,,,,,,,,,,,,
+D_Musician,Music Platform,Progression,1,,,,,,,,,,,,,,,,,,,,,
+D_CreatGuardBridge,,,0,"keyevent, not sure how it is used",,,,,,,,,,,,,,,,,,,,
+D_DLCF_MastersIntroduction,DLC StoryEvent 1,Progression,1,"Starts the trials unlocking; ExplorerStart, NobleStart and PersistentStart which allows u to get to those area",,,,,,,,,,,,,,,,,,,,
+D_DLCF_ExplorerStart,DLC StoryEvent 2,Progression,1,This is an event when you enter the starting area of this Master Challenge,,,,,,,,,,,,,,,,,,,,
+D_DLCF_NobleStart,DLC StoryEvent 3,Progression,1,This is an event when you enter the starting area of this Master Challenge,,,,,,,,,,,,,,,,,,,,
+D_DLCF_PersistentStart,DLC StoryEvent 4,Progression,1,This is an event when you enter the starting area of this Master Challenge,,,,,,,,,,,,,,,,,,,,
+D_DLCF_ExplorerFinish,DLC StoryEvent 5,Progression,1,This is an event when you enter the end area of this Master Challenge,,,,,,,,,,,,,,,,,,,,
+D_DLCF_NobleFinish,DLC StoryEvent 6,Progression,1,This is an event when you enter the end area of this Master Challenge,,,,,,,,,,,,,,,,,,,,
+D_DLCF_PersistentFinish,DLC StoryEvent 7,Progression,1,This is an event when you enter the end area of this Master Challenge,,,,,,,,,,,,,,,,,,,,
+None,None,,0,No Item Needed,,,,,,,,,,,,,,,,,,,,
+Reach,Reach,Progression,0,Look at [AI] {Weapon Reach},,,,,,,,,,,,,,,,,,,,
+Blast,Blast,Progression,0,Look at [AI] {Weapon Blast},,,,,,,,,,,,,,,,,,,,
+Weapon Duo,Weapon Duo,Progression,0,,,,,,,,,,,,,,,,,,,,,
+Wall Break,Wall Break,Progression,1,,,,,,,,,,,,,,,,,,,,,
+Essence Enhancer Permit,Essence Enhancer Permit,Progression,1,Allows play to buy the updates for HealthFlaskUpgrade,,,,,,,,,,,,,,,,,,,,
+Infusion Enhancer Permit,Infusion Enhancer Permit,Progression,1,Allows play to buy the updates for ManaFlaskUpgrade,,,,,,,,,,,,,,,,,,,,
+Freedom Enhancer Permit,Freedom Enhancer Permit,Progression,1,Allows play to buy the updates for Ammo Bar,,,,,,,,,,,,,,,,,,,,
+Heart Enhancer Permit,Heart Enhancer Permit,Progression,1,Allows play to buy the updates for Health,,,,,,,,,,,,,,,,,,,,

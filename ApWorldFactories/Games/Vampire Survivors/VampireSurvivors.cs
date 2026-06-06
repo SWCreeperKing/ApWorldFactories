@@ -14,7 +14,7 @@ public class VampireSurvivors : BuildData
     public override string GameName => "Vampire Survivors";
     public override string ApWorldName => "vampire_survivors";
     public override string GoogleSheetId => "1lXIr2a5fa7rdQ9fe5efA7BOAGaO1ko-pNSSO62mqlCM";
-    public override string WorldVersion => "0.3.2";
+    public override string WorldVersion => "0.3.4";
     public override string MainSheetGid => "954348750";
 
     public override Dictionary<string, string> SheetGids
@@ -576,7 +576,7 @@ public class VampireSurvivors : BuildData
                                   .AddCode(
                                        new ForLoopFactory("character", "characters")
                                           .AddCode(
-                                               "make_location(world, f'Beat with {character}', region_map['Characters'], rule_map)"
+                                               "make_location(world, f'Beat with {character}', 'Characters', region_map, rule_map)"
                                            )
                                    )
                                   .AddCode(
@@ -600,7 +600,7 @@ public class VampireSurvivors : BuildData
                                                           .AddCode("continue")
                                                    )
                                                   .AddCode(
-                                                       "make_location(world, f\"Kill {enemy}\", region_map['Enemies'], rule_map)"
+                                                       "make_location(world, f\"Kill {enemy}\", 'Enemies', region_map, rule_map)"
                                                    )
                                            )
                                    );
@@ -623,7 +623,7 @@ public class VampireSurvivors : BuildData
            .AddUseUniversalTrackerPassthrough(
                 method => method
                          .AddCode(CreateUtPassthrough("\"starting_character\"", "self.starting_character"))
-                         .AddCode(CreateUtPassthrough("\"self.starting_stage\"", "self.starting_stage"))
+                         .AddCode(CreateUtPassthrough("\"starting_stage\"", "self.starting_stage"))
                          .AddCode(CreateUtPassthrough("\"final_stages\"", "self.final_included_stages_list"))
                          .AddCode(CreateUtPassthrough("\"final_chars\"", "self.final_included_characters_list"))
                          .AddCode(CreateUtPassthrough("\"ending_stage_count\"", "self.ending_stage_count"))

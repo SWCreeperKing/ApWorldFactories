@@ -129,7 +129,7 @@ public readonly struct GraphLocation
     (string name, string logic = "", bool isEventLocation = false, string placedItem = "")
 {
     public readonly string LocationName = name;
-    public readonly string Logic = logic.Trim() is "" ? "N/A" : logic;
+    public readonly string Logic = logic.Trim() is "" or "True" ? "N/A" : logic;
     public readonly bool IsEvent = isEventLocation;
     public readonly string PlacedItem = placedItem.Trim() is "" ? "Random" : placedItem;
 

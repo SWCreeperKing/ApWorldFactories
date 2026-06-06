@@ -1,5 +1,4 @@
 ﻿using CreepyUtil.Archipelago.WorldFactory;
-using CreepyUtil.ClrCnsl;
 
 namespace ApWorldFactories.Games.Dandara;
 
@@ -85,6 +84,19 @@ public readonly struct ShopRowData(DataArray param)
     [Mark] public readonly string Upgrade = param;
     [Mark] public readonly string UpgradeId = param;
     [Mark] public readonly int CheckCount = param;
+    [Mark] public readonly string UnlockItem = param;
+
+    public string[][] GetLocations
+    {
+        get
+        {
+            var upgrade = Upgrade;
+            return Enumerable.Range(1, CheckCount).Select(i => (string[])[$"Buy {upgrade} Upgrade #{i}", upgrade]).ToArray();
+        }
+    }
+
+    public string GetRule => $"has[\"{UnlockItem}\"]";
+    public string GetListName => Upgrade.LowerReplace();
 }
 
 public readonly struct EventItemsRowData(DataArray param) : ILogicSectorDataType<string, EventItemsRowData>
@@ -104,6 +116,12 @@ public readonly struct EventItemsRowData(DataArray param) : ILogicSectorDataType
 
     public string GenOption() => "";
     public string Print() => $"EventItem| {EventName},{RoomId},{EventItem},[{string.Join(", ", Items)}]";
+}
+
+public readonly struct ShopLevelRowData(DataArray param)
+{
+    [Mark] public readonly string Region = param;
+    [Mark] public readonly int Level = param;
 }
 
 public readonly struct RoomsRowData(DataArray param)
@@ -130,8 +148,9 @@ public readonly struct ChestsRowData(DataArray param) : ILogicSectorDataType<str
 
     public bool IsMatch(ChestsRowData matchAgainst) => CheckType == matchAgainst.CheckType
                                                        && RoomId == matchAgainst.RoomId
-                                                       && ChestContents == matchAgainst.ChestContents
-                                                       && Position == matchAgainst.Position;
+                                                       && ChestContents == matchAgainst.ChestContents;
+                                                       // && Position == matchAgainst.Position
+                                                       
 
     public string Print()
         => $"OverworldChest| {CheckType},{RoomId},{ChestName},{ChestContents},[{string.Join(',', Items)}],{Position}";

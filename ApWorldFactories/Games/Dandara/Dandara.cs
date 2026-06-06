@@ -33,6 +33,7 @@ public class Dandara : BuildData
     public WeaponBlastRowData[] WeaponBlastRowData = [];
     public ShopRowData[] ShopRowData = [];
     public EventItemSector[] EventItemsData = [];
+    public ShopLevelRowData[] ShopLevelRowData = [];
     public RoomsRowData[] RoomsRowData = [];
     public ChestsSector[] OverworldChestsData = [];
     public ChestsSector[] FearworldChestsData = [];
@@ -52,7 +53,8 @@ public class Dandara : BuildData
                                .ReadTable(out WeaponReachRowData).SkipColumn()
                                .ReadTable(out WeaponBlastRowData).SkipColumn()
                                .ReadTable(out ShopRowData).SkipColumn()
-                               .ReadTable(out EventItemsRowData[] rawEventItemsRowData);
+                               .ReadTable(out EventItemsRowData[] rawEventItemsRowData).SkipColumn()
+                               .ReadTable(out ShopLevelRowData);
         GetSpreadsheet("rooms").SkipColumn().ReadTable(out RoomsRowData);
         GetSpreadsheet("chests").ReadTable<ChestsRowData>(out var rawOverworldChestsRowData).SkipColumn(2)
                                 .ReadTable<ChestsRowData>(out var rawFearworldChestsRowData);
@@ -76,8 +78,19 @@ public class Dandara : BuildData
         );
 
         EventItemsData = EventItemSector.CreateSectorFromData(rawEventItemsRowData, data => new EventItemSector(data));
-        
-        WriteData("locationIDs", OverworldChestsData.Concat(FearworldChestsData).Select(data => $"{data.RoomId}{data.ChestName}{data.ChestContents}"));
+
+        WriteData(
+            "locationIDs",
+            OverworldChestsData.Concat(FearworldChestsData)
+                               .Select(data => $"{data.RoomId}{data.ChestName}{data.ChestContents}")
+                               .Concat(
+                                    Enumerable.Range(
+                                        ShopLevelRowData.Min(data => data.Level),
+                                        ShopLevelRowData.Max(data => data.Level)
+                                        - ShopLevelRowData.Min(data => data.Level) + 1
+                                    ).Select(i => $"Buy Upgrade {i}")
+                                )
+        );
     }
 
     public override void Options(WorldFactory _, OptionsFactory options_fact)
@@ -95,7 +108,15 @@ public class Dandara : BuildData
             ).AddLocations(
                 "fearworld_chest",
                 FearworldChestsData.Select(data => (string[])[data.Name, RoomIdToRegion[data.RoomId]])
+            )
+           .AddLocations(
+                "shop_levels",
+                Enumerable.Range(
+                    ShopLevelRowData.Min(data => data.Level),
+                    ShopLevelRowData.Max(data => data.Level) - ShopLevelRowData.Min(data => data.Level) + 1
+                ).Select(i => (string[])[$"Buy Upgrade {i}", ShopLevelRowData.First(data => data.Level >= i).Region])
             );
+        // ).ForEachOf(ShopRowData, (b, data) => b.AddLocations(data.GetListName, data.GetLocations));
     }
 
     public override void Items(WorldFactory _, ItemFactory item_fact)
@@ -127,6 +148,20 @@ public class Dandara : BuildData
     {
         rule_fact
            .AddLogicFunction(
+                "level", "can_reach_shop_level",
+                new CodeBlockFactory()
+                   .AddCode("sum = 0")
+                   .ForEachOf(
+                        ShopRowData, (b, data) =>
+                            b.AddCode(
+                                new IfFactory(StateHas(data.UnlockItem, returnValue: false))
+                                   .AddCode($"sum += {data.CheckCount}")
+                            )
+                    )
+                   .AddCode("return sum >= level")
+                , "level"
+            )
+           .AddLogicFunction(
                 "duo", "has_weapon_duo",
                 $"return state.has_from_list_unique([{string.Join(", ", WeaponDuoRowData.Select(id => $"\"{ItemIdToItemName[id.ItemId]}\""))}], player, 2)"
             )
@@ -140,19 +175,28 @@ public class Dandara : BuildData
             )
            .AddLogicRules(OverworldChestsData.ToDictionary(data => data.Name, data => data.GenRule()))
            .AddLogicRules(FearworldChestsData.ToDictionary(data => data.Name, data => data.GenRule()))
-           .AddLogicRules(EventItemsData.ToDictionary(data => data.EventName, data => data.GenRule()));
+           .AddLogicRules(EventItemsData.ToDictionary(data => data.EventName, data => data.GenRule()))
+           .AddLogicRules(
+                Enumerable.Range(
+                    ShopLevelRowData.Min(data => data.Level),
+                    ShopLevelRowData.Max(data => data.Level) - ShopLevelRowData.Min(data => data.Level) + 1
+                ).ToDictionary(i => $"Buy Upgrade {i}", i => $"level[{i}]")
+            );
     }
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
         var regionNames = RegionRowData.Select(data => data.Region).ToArray();
-        region_fact.AddRegions("", regionNames)
+        region_fact.AddRegions("", regionNames.Concat(ShopRowData.Select(data => data.Upgrade)).ToArray())
                    .ForEachOf(
                         ConnectionsData,
                         (b, sector) => b.AddConnectionCompiledRule(sector.From, sector.To, sector.GenRule())
                     )
+                   .ForEachOf(ShopRowData, (b, data) => b.AddConnectionCompiledRule("Menu", data.Upgrade, data.GetRule))
                    .AddLocationsFromList("overworld_chest")
                    .AddLocationsFromList("fearworld_chest")
+                   .AddLocationsFromList("shop_levels")
+                    // .ForEachOf(ShopRowData, (b, data) => b.AddLocationsFromList(data.GetListName))
                    .AddEventLocations(
                         "",
                         EventItemsData.Select(data => new EventLocationData(
@@ -190,6 +234,7 @@ public class Dandara : BuildData
                    ConnectionsData, (b, sector) =>
                        b.AddConnection(sector.From, sector.To, sector.GenRule())
                )
+              .ForEachOf(ShopRowData, (b, data) => b.AddConnection("Menu", data.Upgrade, data.GetRule))
               .ForEachOf(
                    EventItemsData,
                    (b, data) => b.AddEventLocation(
@@ -199,5 +244,7 @@ public class Dandara : BuildData
               .AddLocationsFromDoubleArray(locationDoubleArrays, getRule).GenString();
     }
 
-    public override void GenerateJson(WorldFactory worldFactory) => worldFactory.GenerateArchipelagoJson(ArchipelagoVersion, WorldVersion, "Smores9000", "SW_CreeperKing");
+    public override void GenerateJson(WorldFactory worldFactory) => worldFactory.GenerateArchipelagoJson(
+        ArchipelagoVersion, WorldVersion, "Smores9000", "SW_CreeperKing"
+    );
 }

@@ -40,17 +40,26 @@ public abstract class LogicSector<TSector, TData, TIdentifierType>(TData thisDat
         return rawSector.ToArray();
     }
 
-    public string GenRule() => string.Join(
-        " or ",
+    public string GenRule() => GetFormat(
         Variants.Values.Select(sector => sector.GenRule()).Where(rule => rule.Trim() is not "")
-                .Select(rule => $"( {rule} )")
+                .Select(rule => rule.Contains(" and ") || rule.Contains(" or ") ? $"({rule})" : rule)
+                .ToArray()
     );
 
-    public string GenOption() => string.Join(
-        " or ",
+    public string GenOption() => GetFormat(
         Variants.Values.Select(sector => sector.GenOption()).Where(rule => rule.Trim() is not "")
-                .Select(rule => $"( {rule} )")
+                .Select(rule => rule.Contains(" and ") || rule.Contains(" or ") ? $"({rule})" : rule).ToArray()
     );
+
+    private string GetFormat(string[] arr)
+    {
+        var nearFinal = arr.Length switch { 0 => "", 1 => arr[0], _ => string.Join(" or ", arr) };
+
+        if (nearFinal.Count('(') == 1 && nearFinal.Count(')') == 1 && nearFinal.StartsWith('(')
+            && nearFinal.EndsWith(')')) return nearFinal[1..^1];
+
+        return nearFinal;
+    }
 }
 
 public interface ILogicSectorDataType<out TIdentifierType, TDataType> where TIdentifierType : notnull

@@ -1,0 +1,43 @@
+Check,RoomID,Items,Camp_or_Flag
+1,A1_ForestEdge,None,Camp
+2,A1_FavelaHub,D_Painter,Camp
+2,A1_FavelaHub,Weapon_Teleport,Camp
+2,A1_FavelaHub,"PU_Stone_Creation, D_Musician",Camp
+2,A1_FavelaHub,"PU_Stone_Creation, Weapon_Missile",Camp
+4,A1_BridgePath,PU_Stone_Creation,Camp
+4,A1_BridgePath,Weapon_Teleport,Camp
+5,AB_FieldCamp,PU_Stone_Creation,Camp
+5,AB_FieldCamp,Weapon_Teleport,Camp
+6,A2_DesertCamp,PU_Stone_Creation,Camp
+6,A2_DesertCamp,Weapon_Teleport,Camp
+7,A2_BeforeWriter,"PU_Stone_Remembrance, Weapon_Teleport",Camp
+7,A2_BeforeWriter,PU_Stone_Creation,Camp
+8,A3_Camp,,Camp
+9,A4_DreamStone,"PU_Stone_Intention, PU_Stone_Creation",Camp
+9,A4_DreamStone,"PU_Stone_Intention, Weapon_Teleport",Camp
+10,AF_1,"PU_Stone_Dreams, PU_Stone_Remembrance, PU_Stone_Creation",Camp
+10,AF_1,"PU_Stone_Dreams, PU_Stone_Remembrance, Weapon_Teleport",Camp
+11,AF_D4,,Camp
+12,AF_FinalCamp,"FinalBoss_Kill, DLCF_FreedNara",Camp
+13,AFEAR_A_7,DLCF_EntranceAccessUnlocked,Camp
+14,AFEAR_Bridge,DLCF_EntranceAccessUnlocked,Camp
+15,AFEAR_Cage_PreRoom,DLCF_EntranceAccessUnlocked,Camp
+16,AFEAR_M_Camp,DLCF_EntranceAccessUnlocked,Camp
+17,AFEAR_T_7,DLCF_EntranceAccessUnlocked,Camp
+1,A1_GD2,"D_Painter, D_Musician",Flag
+1,A1_GD2,"D_Musician, Weapon_Teleport",Flag
+1,A1_GD2,"Weapon_Teleport, Weapon_Missile",Flag
+2,A1_GreatRuins,,Flag
+3,A1_MusicianPath4,,Flag
+4,A1_PainterPath2,,Flag
+5,A2_DesertHeartRoom1,,Flag
+6,A2_ToInsideShortcut,,Flag
+7,A3_ToIntention2,,Flag
+8,A4_A7,,Flag
+9,AF_MainRoom,,Flag
+10,AFEAR_A_13,DLCF_EntranceAccessUnlocked,Flag
+11,AFEAR_FinalPath1,DLCF_EntranceAccessUnlocked,Flag
+12,AFEAR_K_Maze,DLCF_EntranceAccessUnlocked,Flag
+13,AFEAR_M_Persistent1,DLCF_EntranceAccessUnlocked,Flag
+14,AFEAR_M_Persistent2,"DLCF_EntranceAccessUnlocked, D_DLCF_MastersIntroduction",Flag
+15,AFEAR_T_1,DLCF_EntranceAccessUnlocked,Flag

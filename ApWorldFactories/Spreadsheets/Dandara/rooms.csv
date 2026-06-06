@@ -1,0 +1,283 @@
+,RoomID,RoomName,RoomArea,Overworld/Fearworld,,,RoomID,RoomName,RoomArea,,,RoomID,RoomName,RoomArea,,,RoomID,RoomName,RoomArea
+1,A0_Tutorial1,Child Poet's Refuge,Crib of Creation,Overworld,,1,AFEAR_T_1,Past Central Gate,Ephemeral Station,,1,AFEAR_Boss,The Colossal Bridge,The Salt Is Hesitant,,1,A0_Tutorial1,Child Poet's Refuge,Crib of Creation
+2,A0_Tutorial2,Teachings of the Creative,Crib of Creation,Overworld,,2,AFEAR_T_10,A Last Overrun,Ephemeral Station,,2,AFEAR_FinalPath_Entrance,Control Chamber,The Salt Is Hesitant,,2,A0_Tutorial2,Teachings of the Creative,Crib of Creation
+3,A0_Tutorial3,Trials of the Connected,Crib of Creation,Overworld,,3,AFEAR_T_2,Pusher's Assignment,Ephemeral Station,,3,AFEAR_FinalPath1,Path to Great Fortune,The Salt Is Hesitant,,3,A0_Tutorial3,Trials of the Connected,Crib of Creation
+4,A0_Tutorial4,Creation Windbreaker,Crib of Creation,Overworld,,4,AFEAR_T_2_B,Pusher's Evaluation,Ephemeral Station,,4,AFEAR_FinalPath2,Eldarian Gates,The Salt Is Hesitant,,4,A0_Tutorial4,Creation Windbreaker,Crib of Creation
+5,A1_AvenueEast,Main Avenue,Village of Artists,Overworld,,5,AFEAR_T_3,Waster's Procrastination,Ephemeral Station,,5,AFEAR_FinalPath3,The Golden Pride,The Salt Is Hesitant,,5,A1_CityEntrance,Side Gate,Crib of Creation
+6,A1_AvenueEastTurn,Corner's Club,Village of Artists,Overworld,,6,AFEAR_T_4,Past Side Gate,Ephemeral Station,,6,AFEAR_FinalPath4,The Golden Threat,The Salt Is Hesitant,,6,A1_ForestEdge,Creation Meadow,Crib of Creation
+7,A1_BossFightRoom,Temple of Creation,Village of Artists,Overworld,,7,AFEAR_T_5,Ticket Line,Ephemeral Station,,7,AFEAR_FinalPath5,Corruption Transform,The Salt Is Hesitant,,7,A1_GreatRuins,Crib of Creation,Crib of Creation
+8,A1_BridgePath,Village Outskirts,The Colossal Bridge,Overworld,,8,AFEAR_T_6,Waiter's Room,Ephemeral Station,,8,AFEAR_FinalPath6,Capital Outskirts,The Salt Is Hesitant,,8,A1_Void4,The Void,Crib of Creation
+9,A1_CityEntrance,Side Gate,Crib of Creation,Overworld,,9,AFEAR_T_7,Ticket Office,Ephemeral Station,,9,AFEAR_FinalPath7,The Traveler's Corridor,The Salt Is Hesitant,,9,AB_FirstTrack1,Palmares Track,Crib of Creation
+10,A1_CityMainEntrance,Main Gate,The Colossal Bridge,Overworld,,10,AFEAR_T_8,Pusher's Deadline,Ephemeral Station,,,,,,,10,AB_FirstTrack2,Pleasure Woods,Crib of Creation
+11,A1_CreationStoneRoom,Temple of Creation,Village of Artists,Overworld,,11,AFEAR_T_9,Waiter and Waster,Ephemeral Station,,,,,,,11,AB_FirstTrack3,Fighter's Trail,Crib of Creation
+12,A1_FavelaHub,The Village Center,Village of Artists,Overworld,,12,AFEAR_T_Entrance,Central Gate Plaza,Ephemeral Station,,,,,,,12,A4_A1,Corner's Club,Dream Lands
+13,A1_ForestEdge,Creation Meadow,Crib of Creation,Overworld,,13,AFEAR_T_Exit,Future Path Gate,Ephemeral Station,,,,,,,13,A4_A2,Main Avenue,Dream Lands
+14,A1_GameDesigner1,The Big Walk,Village of Artists,Overworld,,14,AFEAR_T_PathA1,Station Rendezvous,Ephemeral Station,,,,,,,14,A4_A3,Corner's Club,Dream Lands
+15,A1_GD10,Writer's Flow,Village of Artists,Overworld,,15,AFEAR_T_PathB1,Station Side Lock,Ephemeral Station,,,,,,,15,A4_A4,Dream Lands,Dream Lands
+16,A1_GD11,Dancing Triplets,Village of Artists,Overworld,,16,AFEAR_T_Tower,Clock Tower,Ephemeral Station,,,,,,,16,A4_A4B,Dream Lands,Dream Lands
+17,A1_GD12,Mind Cross,Village of Artists,Overworld,,17,AFEAR_Cage_1,Gates of Exile,Exile of Contemplations,,,,,,,17,A4_A5,Dream Lands,Dream Lands
+18,A1_GD13,Corral Mountain Range,Village of Artists,Overworld,,18,AFEAR_Cage_2,Nara's Cage,Exile of Contemplations,,,,,,,18,A4_A6,Dream Lands,Dream Lands
+19,A1_GD14,Jonny B. Cave,Village of Artists,Overworld,,19,AFEAR_Cage_Miniboss,Maze of Ruminations,Exile of Contemplations,,,,,,,19,A4_A7,Dream Lands,Dream Lands
+20,A1_GD15,Concrete Cave,Village of Artists,Overworld,,20,AFEAR_Cage_PreRoom,Passage of The Exiled,Exile of Contemplations,,,,,,,20,A4_AEntrance,Dream Lands,Dream Lands
+21,A1_GD2,Theater Arena,Village of Artists,Overworld,,21,AFEAR_Bridge,Hidden Bridge,Hidden Bridge,,,,,,,21,A4_B1,Dream Lands,Dream Lands
+22,A1_GD3,One-way Street,Village of Artists,Overworld,,22,AFEAR_A_1,Overcast Hidden Entrance,Hidden Realms,,,,,,,22,A4_B2,Dream Lands,Dream Lands
+23,A1_GD4,Buritis,Village of Artists,Overworld,,23,AFEAR_A_10,The Golden View From Beneath,Hidden Realms,,,,,,,23,A4_B3,Dream Lands,Dream Lands
+24,A1_GD5,Illusionary Way,Village of Artists,Overworld,,24,AFEAR_A_11,Infinite Walk,Hidden Realms,,,,,,,24,A4_B4,Dream Lands,Dream Lands
+25,A1_GD6,Dona Clara's Restaurant,Village of Artists,Overworld,,25,AFEAR_A_12,Finite Run,Hidden Realms,,,,,,,25,A4_Circle,Dream Lands,Dream Lands
+26,A1_GD7,Samba Hostel,Village of Artists,Overworld,,26,AFEAR_A_13,Tunnel of the Impulsive,Hidden Realms,,,,,,,26,A4_DreamStone,Dream Lands,Dream Lands
+27,A1_GD8,The Dalvian Star,Village of Artists,Overworld,,27,AFEAR_A_14,Path to Recognition,Hidden Realms,,,,,,,27,A4_Entrance,View of the Deep,Dream Lands
+28,A1_GD9,House of Sadness,Village of Artists,Overworld,,28,AFEAR_A_15,Self Reflection Ways,Hidden Realms,,,,,,,28,A4_Miniboss,Dream Lands,Dream Lands
+29,A1_GreatRuins,Crib of Creation,Crib of Creation,Overworld,,29,AFEAR_A_2,Whelmed in Fear,Hidden Realms,,,,,,,29,AF_B1,Augustus' Headquarters,Golden Fortress
+30,A1_Market,Central Market,Village of Artists,Overworld,,30,AFEAR_A_3,Leap of Mistrust,Hidden Realms,,,,,,,30,AF_B2,Augustus' Exhibitions,Golden Fortress
+31,A1_MinibossAvenue,Beautiful Horizon Avenue,Village of Artists,Overworld,,31,AFEAR_A_4,Irresolute Trifurcation,Hidden Realms,,,,,,,31,AF_B3,Augustus' Tests Room,Golden Fortress
+32,A1_MusicianHouse,Thommaz's House,Village of Artists,Overworld,,32,AFEAR_A_5,Crumbling Hollow,Hidden Realms,,,,,,,32,AF_B4,Augustus' Labs,Golden Fortress
+33,A1_MusicianPath1,Market Back Door,Village of Artists,Overworld,,33,AFEAR_A_6,A Dark Angle,Hidden Realms,,,,,,,33,AF_B5,Augustus' Machinery,Golden Fortress
+34,A1_MusicianPath2,First Nine Alley,Village of Artists,Overworld,,34,AFEAR_A_7,The Golden Breach,Hidden Realms,,,,,,,34,AF_Boss,Control Chamber,Golden Fortress
+35,A1_MusicianPath3,Bridge of the Falling River,Village of Artists,Overworld,,35,AFEAR_A_8,The Golden Creep,Hidden Realms,,,,,,,35,AF_C1,Beautiful Women's Salon,Golden Fortress
+36,A1_MusicianPath4,Piano Alley,Village of Artists,Overworld,,36,AFEAR_A_9,Unlucky's Grotto,Hidden Realms,,,,,,,36,AF_C2,Demure Women's Salon,Golden Fortress
+37,A1_MusicianPathB,Garantido's Bar,Village of Artists,Overworld,,37,AFEAR_A_AlternativeChest,True Explorers Treasure,Hidden Realms,,,,,,,37,AF_C3,Corridor of Silence,Golden Fortress
+38,A1_MusicianPathC,Lazúli's House,Village of Artists,Overworld,,38,AFEAR_A_AlternativePath,Self Awareness Deviation,Hidden Realms,,,,,,,38,AF_C4,Gymnasium Space,Golden Fortress
+39,A1_PainterExit1,Backyard,Village of Artists,Overworld,,39,AFEAR_A_Cave2,Nevermore a Beautiful Horizon,Hidden Realms,,,,,,,39,AF_C4_2,"No Pain, No Gain",Golden Fortress
+40,A1_PainterExit2,Sewers,Village of Artists,Overworld,,40,AFEAR_A_EyeSecret1,Through The Eyes of Fear,Hidden Realms,,,,,,,40,AF_C5,Wives' Corridor,Golden Fortress
+41,A1_PainterHouse,Tarsila's House,Village of Artists,Overworld,,41,AFEAR_A_EyeSecret2,To The Award of Courage,Hidden Realms,,,,,,,41,AF_C6,Children Lobby,Golden Fortress
+42,A1_PainterPath1,Paint Well,Village of Artists,Overworld,,42,AFEAR_A_PathtoT_1,"Stress Vent, So Stressful",Hidden Realms,,,,,,,42,AF_D1,ID Control,Golden Fortress
+43,A1_PainterPath2,Abandoned House,Village of Artists,Overworld,,43,AFEAR_A_PathtoT_2,Incident Square,Hidden Realms,,,,,,,43,AF_D2,Command Center,Golden Fortress
+44,A1_PainterPath3,Community Street,Village of Artists,Overworld,,44,AFEAR_A_Secret1,Spinning Laughter,Hidden Realms,,,,,,,44,AF_D3,Eldarian Army Courtyard,Golden Fortress
+45,A1_PainterPath4,The Rich and the Poor,Village of Artists,Overworld,,45,AFEAR_A_Secret2,Underlying Truth,Hidden Realms,,,,,,,45,AF_D4,Guardhouse,Golden Fortress
+46,A1_PainterPathB,Library,Village of Artists,Overworld,,46,AFEAR_A_SuperDandara_1,Rest on the Second Sunday,Hidden Realms,,,,,,,46,AF_D5,White Space,Golden Fortress
+47,A1_PreBoss,Temple of Creation,Village of Artists,Overworld,,47,AFEAR_A_SuperDandara_2,Resilience Growth,Hidden Realms,,,,,,,47,AF_D6,Greediness Space,Golden Fortress
+48,A1_StatisticsRoom,Right Projector Room,Village of Artists,Overworld,,48,AFEAR_A_ToArea,Resolute Situation,Hidden Realms,,,,,,,48,AF_D7,Miserliness Space,Golden Fortress
+49,A1_Void_Run1,UNKNOWN_ROOMNAME,UNKNOWN_AREANAME,UNKNOWN_REGIONNAME,,49,AFEAR_A_ToBridge1,Cave of Struggle,Hidden Realms,,,,,,,49,AF_FinalCamp,Eldarian Gates,Golden Fortress
+50,A1_Void4,The Void,Crib of Creation,Overworld,,50,AFEAR_A_ToBridge2,Hidden Eye,Hidden Realms,,,,,,,50,AF_MainRoom,Path to Great Fortune,Golden Fortress
+51,A2_AnteChamber,Foyer of Formidable Burdens,Remembrance Desert,Overworld,,51,AFEAR_K_PathA1,Distant Laugher,Hidden Realms,,,,,,,51,AF_PathA_1,Strong Men's Corridor,Golden Fortress
+52,A2_AnteChamberDown,Archive of the Toddler,Remembrance Desert,Overworld,,52,AFEAR_K_PathA2,Distant Warm Breath,Hidden Realms,,,,,,,52,AF_PathA_2,Smart Men's Room,Golden Fortress
+53,A2_AnteChamberDownRight,Archive of the Invincible,Remembrance Desert,Overworld,,53,AFEAR_M_1,Students Way,Hidden Realms,,,,,,,53,AF_PathA_3,Rich Men's Lounge,Golden Fortress
+54,A2_AnteChamberUp,Archive of the Child,Remembrance Desert,Overworld,,54,AFEAR_M_2,Natatorium of Adventure,Hidden Realms,,,,,,,54,AF_PathA_4,Powerful Men's Hall,Golden Fortress
+55,A2_BarrierMiniboss,Writer's Lone Balcony,Remembrance Desert,Overworld,,55,AFEAR_M_3,King's View,Hidden Realms,,,,,,,55,AF_PathA_5,Experienced Men's Lobby,Golden Fortress
+56,A2_BeforeWriter,Tower Stairway,Remembrance Desert,Overworld,,56,AFEAR_M_4,Apprentice Lane,Hidden Realms,,,,,,,56,A3_Back1,Central Trading,Intention Capital
+57,A2_Boss,Overcast Gate Ruins,Remembrance Desert,Overworld,,57,AFEAR_M_5,Cave of the Most Talented Child,Hidden Realms,,,,,,,57,A3_Back2,Parlance Road,Intention Capital
+58,A2_DesertAdvancedCamp,Kid's Lecture House,Remembrance Desert,Overworld,,58,AFEAR_M_6,Hall of the Monk,Hidden Realms,,,,,,,58,A3_Back3,Speech Corner,Intention Capital
+59,A2_DesertCamp,View of Solitude,Remembrance Desert,Overworld,,59,AFEAR_M_7,Hallway of Merit,Hidden Realms,,,,,,,59,A3_Back4,Europa Avenue,Intention Capital
+60,A2_DesertCrawler1,The Wanderer Archives,Remembrance Desert,Overworld,,60,AFEAR_M_Camp,Ateles' Study,Hidden Realms,,,,,,,60,A3_Back5,Eagle Highway,Intention Capital
+61,A2_DesertCrawler2,Unseen Tunnel,Remembrance Desert,Overworld,,61,AFEAR_M_Secret1,Windy Hall,Hidden Realms,,,,,,,61,A3_Back6,Euler's Pass,Intention Capital
+62,A2_DesertCrawler3,B for Bruises and Betweens,Remembrance Desert,Overworld,,62,AFEAR_M_Secret2,Windy Cave,Hidden Realms,,,,,,,62,A3_Back7,Side Turn,Intention Capital
+63,A2_DesertHeartRoom1,Broken Heart Archive,Remembrance Desert,Overworld,,63,AFEAR_M_Secret3,Windy Corridor,Hidden Realms,,,,,,,63,A3_BackSecret1,A Good Bargain,Intention Capital
+64,A2_DesertJumper,Corridor of Conscious Recollections,Remembrance Desert,Overworld,,64,AFEAR_Masters,The Grand Stage,Masters' Auditorium,,,,,,,64,A3_BackSecret2,Calculus Path,Intention Capital
+65,A2_LeversInPersue,Labyrinth Warehouse,Remembrance Desert,Overworld,,65,AFEAR_Masters_Outside,Auditorium Hall,Masters' Auditorium,,,,,,,65,A3_BackSecret3,The Perfect Corner,Intention Capital
+66,A2_Lotus,The Drifter Archives,Remembrance Desert,Overworld,,66,AFEAR_M_Persistent1,Rock Cave,The Enduring Fortress,,,,,,,66,A3_Camp,Reasoning Lock,Intention Capital
+67,A2_LotusCorridor,Main Warehouse,Remembrance Desert,Overworld,,67,AFEAR_M_Persistent2,Pain Sanctuary,The Enduring Fortress,,,,,,,67,A3_CityEntrance,Capital Entrance,Intention Capital
+68,A2_MiningCart,Traversing the Old Days,Remembrance Desert,Overworld,,68,AFEAR_M_Persistent3,Moonlight Shrine,The Enduring Fortress,,,,,,,68,A3_CribOfIntention,Crib of Intention,Intention Capital
+69,A2_MiningHeart,The Treasure,Remembrance Desert,Overworld,,69,AFEAR_K_Camp,The Masquerade Welcome,The Masquerade Ball,,,,,,,69,A3_Shield1,Little Hut Club,Intention Capital
+70,A2_RBPlatformTutorial,Eldarian Army Outpost,Remembrance Desert,Overworld,,70,AFEAR_K_Lock,Changing Room,The Masquerade Ball,,,,,,,70,A3_Shield2,Club Backstage,Intention Capital
+71,A2_RemembranceStoneAltar,Remembrance Cliff,Remembrance Desert,Overworld,,71,AFEAR_K_Maze,Friendly Gathering,The Masquerade Ball,,,,,,,71,A3_Shield3,Back Alley,Intention Capital
+72,A2_RemembranceWeaponRoom,Quarter of a Distant Love,Remembrance Desert,Overworld,,72,AFEAR_K_PathB1,The Example,The Masquerade Ball,,,,,,,72,A3_Shield4,Disposal Street,Intention Capital
+73,A2_Threeway,C for Curiosity and Creation,Remembrance Desert,Overworld,,73,AFEAR_K_PathB1_1,Wet Masks Room,The Masquerade Ball,,,,,,,73,A3_Shield5,Recycle Room,Intention Capital
+74,A2_ToInside1,S for Smiles and Scars,Remembrance Desert,Overworld,,74,AFEAR_K_PathB1_2,Warm Masks Room,The Masquerade Ball,,,,,,,74,A3_ToIntention1,Logical Path,Intention Capital
+75,A2_ToInside2,Warm Welcome,Remembrance Desert,Overworld,,75,AFEAR_K_PathC1,Cold Masks Room,The Masquerade Ball,,,,,,,75,A3_ToIntention2,Intention Square,Intention Capital
+76,A2_ToInside3,Auditorium,Remembrance Desert,Overworld,,76,AFEAR_K_PathC2,Dry Masks Room,The Masquerade Ball,,,,,,,76,AB_FieldCampSecret,Structural Cave,Intention Capital
+77,A2_ToInside4,Overburden Deposits,Remembrance Desert,Overworld,,77,AFEAR_K_PathD1,Club Mascot & Live Stage,The Masquerade Ball,,,,,,,77,AF_10,The Golden Hold,Intention Capital
+78,A2_ToInside5,Museum Side Entrance,Remembrance Desert,Overworld,,78,AFEAR_K_PathD2,Esteemed Scholar Council,The Masquerade Ball,,,,,,,78,AF_11,The Golden Corner,Intention Capital
+79,A2_ToInsideShortcut,Museum Main Hall,Remembrance Desert,Overworld,,79,AFEAR_K_PathD3,Peak Beauty Caucus,The Masquerade Ball,,,,,,,79,AF_12,The Golden Angle,Intention Capital
+80,A2_ToLeversInPersue1,Broken Heart Stairway,Remembrance Desert,Overworld,,80,AFEAR_K_PathD3_B,Ostentation Room,The Masquerade Ball,,,,,,,80,AF_6,The Golden Honor,Intention Capital
+81,A2_ToLeversInPersue2,Rise of Passion,Remembrance Desert,Overworld,,81,AFEAR_K_PathE1,Weak-Minded Segregation,The Masquerade Ball,,,,,,,81,AF_7,The Golden Menace,Intention Capital
+82,A2_ToLeversInPersue3,Corridor of the Naive,Remembrance Desert,Overworld,,82,AFEAR_K_PathE2,Weak-Blooded Punishment,The Masquerade Ball,,,,,,,82,AF_8,The Golden Walkway,Intention Capital
+83,A2_ToOutside1,F for Findings and Fun,Remembrance Desert,Overworld,,83,AFEAR_K_PathE3,Test Against The Unmasked,The Masquerade Ball,,,,,,,83,AF_9,The Golden Storage,Intention Capital
+84,A2_ToOutside2,Corner of the Unasked Question,Remembrance Desert,Overworld,,84,AFEAR_K_PathF1,Secrets Better Left Unmentioned,The Masquerade Ball,,,,,,,84,AB_Backtrack1,Limits of Sanity,Primal Woods
+85,A2_ToRemembranceWeapon,Remember Good Moments,Remembrance Desert,Overworld,,85,AFEAR_K_PathF2,Secrets Beneath Masks,The Masquerade Ball,,,,,,,85,AB_Backtrack2,The Rise,Primal Woods
+86,A2_WriterRoom,The Tower,Remembrance Desert,Overworld,,86,AFEAR_K_PathF3,Secrets Beneath Faces,The Masquerade Ball,,,,,,,86,AB_Backtrack3,Cave of Desire,Primal Woods
+87,A3_Back1,Central Trading,Intention Capital,Overworld,,87,AFEAR_M_Explorer1,Nakaturen Frigate Elevator,The Pioneer Facility,,,,,,,87,AB_Backtrack4,Confusion Ruins,Primal Woods
+88,A3_Back2,Parlance Road,Intention Capital,Overworld,,88,AFEAR_M_Explorer2,Refair,The Pioneer Facility,,,,,,,88,AB_ToAF,Corruption Transform,Primal Woods
+89,A3_Back3,Speech Corner,Intention Capital,Overworld,,89,AFEAR_M_Explorer3,Crawstar,The Pioneer Facility,,,,,,,89,AF_1,The Breach in the Wall,Primal Woods
+90,A3_Back4,Europa Avenue,Intention Capital,Overworld,,90,AFEAR_M_Explorer4,Wrecked Nakaturen Bridge,The Pioneer Facility,,,,,,,90,AF_2,The Golden Weaponry,Primal Woods
+91,A3_Back5,Eagle Highway,Intention Capital,Overworld,,91,AFEAR_M_Noble1,Castle Entrance,The Privileged Keep,,,,,,,91,AF_3,The Golden Path,Primal Woods
+92,A3_Back6,Euler's Pass,Intention Capital,Overworld,,92,AFEAR_M_Noble2,Victorious Hall,The Privileged Keep,,,,,,,92,AF_4,The Golden Threat,Primal Woods
+93,A3_Back7,Side Turn,Intention Capital,Overworld,,93,AFEAR_M_Noble3,Alchemist's Gallery,The Privileged Keep,,,,,,,93,AF_5,The Golden Pride,Primal Woods
+94,A3_BackSecret1,A Good Bargain,Intention Capital,Overworld,,94,AFEAR_M_Noble4,Lord's Rest Chamber,The Privileged Keep,,,,,,,94,A2_AnteChamber,Foyer of Formidable Burdens,Remembrance Desert
+95,A3_BackSecret2,Calculus Path,Intention Capital,Overworld,,95,AFEAR_M_Noble5,Rest of the Acolyte,The Privileged Keep,,,,,,,95,A2_AnteChamberDown,Archive of the Toddler,Remembrance Desert
+96,A3_BackSecret3,The Perfect Corner,Intention Capital,Overworld,,,,,,,,,,,,96,A2_AnteChamberDownRight,Archive of the Invincible,Remembrance Desert
+97,A3_Camp,Reasoning Lock,Intention Capital,Overworld,,,,,,,,,,,,97,A2_AnteChamberUp,Archive of the Child,Remembrance Desert
+98,A3_CityEntrance,Capital Entrance,Intention Capital,Overworld,,,,,,,,,,,,98,A2_BarrierMiniboss,Writer's Lone Balcony,Remembrance Desert
+99,A3_CribOfIntention,Crib of Intention,Intention Capital,Overworld,,,,,,,,,,,,99,A2_BeforeWriter,Tower Stairway,Remembrance Desert
+100,A3_Shield1,Little Hut Club,Intention Capital,Overworld,,,,,,,,,,,,100,A2_Boss,Overcast Gate Ruins,Remembrance Desert
+101,A3_Shield2,Club Backstage,Intention Capital,Overworld,,,,,,,,,,,,101,A2_DesertAdvancedCamp,Kid's Lecture House,Remembrance Desert
+102,A3_Shield3,Back Alley,Intention Capital,Overworld,,,,,,,,,,,,102,A2_DesertCamp,View of Solitude,Remembrance Desert
+103,A3_Shield4,Disposal Street,Intention Capital,Overworld,,,,,,,,,,,,103,A2_DesertCrawler1,The Wanderer Archives,Remembrance Desert
+104,A3_Shield5,Recycle Room,Intention Capital,Overworld,,,,,,,,,,,,104,A2_DesertCrawler2,Unseen Tunnel,Remembrance Desert
+105,A3_ToIntention1,Logical Path,Intention Capital,Overworld,,,,,,,,,,,,105,A2_DesertCrawler3,B for Bruises and Betweens,Remembrance Desert
+106,A3_ToIntention2,Intention Square,Intention Capital,Overworld,,,,,,,,,,,,106,A2_DesertHeartRoom1,Broken Heart Archive,Remembrance Desert
+107,A4_A1,Corner's Club,Dream Lands,Overworld,,,,,,,,,,,,107,A2_DesertJumper,Corridor of Conscious Recollections,Remembrance Desert
+108,A4_A2,Main Avenue,Dream Lands,Overworld,,,,,,,,,,,,108,A2_LeversInPersue,Labyrinth Warehouse,Remembrance Desert
+109,A4_A3,Corner's Club,Dream Lands,Overworld,,,,,,,,,,,,109,A2_Lotus,The Drifter Archives,Remembrance Desert
+110,A4_A4,Dream Lands,Dream Lands,Overworld,,,,,,,,,,,,110,A2_LotusCorridor,Main Warehouse,Remembrance Desert
+111,A4_A4B,Dream Lands,Dream Lands,Overworld,,,,,,,,,,,,111,A2_MiningCart,Traversing the Old Days,Remembrance Desert
+112,A4_A5,Dream Lands,Dream Lands,Overworld,,,,,,,,,,,,112,A2_MiningHeart,The Treasure,Remembrance Desert
+113,A4_A6,Dream Lands,Dream Lands,Overworld,,,,,,,,,,,,113,A2_RBPlatformTutorial,Eldarian Army Outpost,Remembrance Desert
+114,A4_A7,Dream Lands,Dream Lands,Overworld,,,,,,,,,,,,114,A2_RemembranceStoneAltar,Remembrance Cliff,Remembrance Desert
+115,A4_AEntrance,Dream Lands,Dream Lands,Overworld,,,,,,,,,,,,115,A2_RemembranceWeaponRoom,Quarter of a Distant Love,Remembrance Desert
+116,A4_B1,Dream Lands,Dream Lands,Overworld,,,,,,,,,,,,116,A2_Threeway,C for Curiosity and Creation,Remembrance Desert
+117,A4_B2,Dream Lands,Dream Lands,Overworld,,,,,,,,,,,,117,A2_ToInside1,S for Smiles and Scars,Remembrance Desert
+118,A4_B3,Dream Lands,Dream Lands,Overworld,,,,,,,,,,,,118,A2_ToInside2,Warm Welcome,Remembrance Desert
+119,A4_B4,Dream Lands,Dream Lands,Overworld,,,,,,,,,,,,119,A2_ToInside3,Auditorium,Remembrance Desert
+120,A4_Circle,Dream Lands,Dream Lands,Overworld,,,,,,,,,,,,120,A2_ToInside4,Overburden Deposits,Remembrance Desert
+121,A4_DreamStone,Dream Lands,Dream Lands,Overworld,,,,,,,,,,,,121,A2_ToInside5,Museum Side Entrance,Remembrance Desert
+122,A4_Entrance,View of the Deep,Dream Lands,Overworld,,,,,,,,,,,,122,A2_ToInsideShortcut,Museum Main Hall,Remembrance Desert
+123,A4_Miniboss,Dream Lands,Dream Lands,Overworld,,,,,,,,,,,,123,A2_ToLeversInPersue1,Broken Heart Stairway,Remembrance Desert
+124,AB_Backtrack1,Limits of Sanity,Primal Woods,Overworld,,,,,,,,,,,,124,A2_ToLeversInPersue2,Rise of Passion,Remembrance Desert
+125,AB_Backtrack2,The Rise,Primal Woods,Overworld,,,,,,,,,,,,125,A2_ToLeversInPersue3,Corridor of the Naive,Remembrance Desert
+126,AB_Backtrack3,Cave of Desire,Primal Woods,Overworld,,,,,,,,,,,,126,A2_ToOutside1,F for Findings and Fun,Remembrance Desert
+127,AB_Backtrack4,Confusion Ruins,Primal Woods,Overworld,,,,,,,,,,,,127,A2_ToOutside2,Corner of the Unasked Question,Remembrance Desert
+128,AB_Bridge,The Colossal Bridge,The Colossal Bridge,Overworld,,,,,,,,,,,,128,A2_ToRemembranceWeapon,Remember Good Moments,Remembrance Desert
+129,AB_FieldCamp,Capital Outskirts,The Colossal Bridge,Overworld,,,,,,,,,,,,129,A2_WriterRoom,The Tower,Remembrance Desert
+130,AB_FieldCampSecret,Structural Cave,Intention Capital,Overworld,,,,,,,,,,,,130,A1_BridgePath,Village Outskirts,The Colossal Bridge
+131,AB_FirstTrack1,Palmares Track,Crib of Creation,Overworld,,,,,,,,,,,,131,A1_CityMainEntrance,Main Gate,The Colossal Bridge
+132,AB_FirstTrack2,Pleasure Woods,Crib of Creation,Overworld,,,,,,,,,,,,132,AB_Bridge,The Colossal Bridge,The Colossal Bridge
+133,AB_FirstTrack3,Fighter's Trail,Crib of Creation,Overworld,,,,,,,,,,,,133,AB_FieldCamp,Capital Outskirts,The Colossal Bridge
+134,AB_ToAF,Corruption Transform,Primal Woods,Overworld,,,,,,,,,,,,134,AB_ToDesert_Secret1,Wealth Lair,The Colossal Bridge
+135,AB_ToDesert_Secret1,Wealth Lair,The Colossal Bridge,Overworld,,,,,,,,,,,,135,AB_ToDesert1,Forest of Encoders,The Colossal Bridge
+136,AB_ToDesert1,Forest of Encoders,The Colossal Bridge,Overworld,,,,,,,,,,,,136,AB_ToDesert2,Hoarders Woods,The Colossal Bridge
+137,AB_ToDesert2,Hoarders Woods,The Colossal Bridge,Overworld,,,,,,,,,,,,137,AB_ToDesert3,Reclamation Grove,The Colossal Bridge
+138,AB_ToDesert3,Reclamation Grove,The Colossal Bridge,Overworld,,,,,,,,,,,,138,AB_ToFieldCamp1,The Traveler's Corridor,The Colossal Bridge
+139,AB_ToFieldCamp1,The Traveler's Corridor,The Colossal Bridge,Overworld,,,,,,,,,,,,139,A1_AvenueEast,Main Avenue,Village of Artists
+140,AF_1,The Breach in the Wall,Primal Woods,Overworld,,,,,,,,,,,,140,A1_AvenueEastTurn,Corner's Club,Village of Artists
+141,AF_10,The Golden Hold,Intention Capital,Overworld,,,,,,,,,,,,141,A1_BossFightRoom,Temple of Creation,Village of Artists
+142,AF_11,The Golden Corner,Intention Capital,Overworld,,,,,,,,,,,,142,A1_CreationStoneRoom,Temple of Creation,Village of Artists
+143,AF_12,The Golden Angle,Intention Capital,Overworld,,,,,,,,,,,,143,A1_FavelaHub,The Village Center,Village of Artists
+144,AF_2,The Golden Weaponry,Primal Woods,Overworld,,,,,,,,,,,,144,A1_GameDesigner1,The Big Walk,Village of Artists
+145,AF_3,The Golden Path,Primal Woods,Overworld,,,,,,,,,,,,145,A1_GD10,Writer's Flow,Village of Artists
+146,AF_4,The Golden Threat,Primal Woods,Overworld,,,,,,,,,,,,146,A1_GD11,Dancing Triplets,Village of Artists
+147,AF_5,The Golden Pride,Primal Woods,Overworld,,,,,,,,,,,,147,A1_GD12,Mind Cross,Village of Artists
+148,AF_6,The Golden Honor,Intention Capital,Overworld,,,,,,,,,,,,148,A1_GD13,Corral Mountain Range,Village of Artists
+149,AF_7,The Golden Menace,Intention Capital,Overworld,,,,,,,,,,,,149,A1_GD14,Jonny B. Cave,Village of Artists
+150,AF_8,The Golden Walkway,Intention Capital,Overworld,,,,,,,,,,,,150,A1_GD15,Concrete Cave,Village of Artists
+151,AF_9,The Golden Storage,Intention Capital,Overworld,,,,,,,,,,,,151,A1_GD2,Theater Arena,Village of Artists
+152,AF_B1,Augustus' Headquarters,Golden Fortress,Overworld,,,,,,,,,,,,152,A1_GD3,One-way Street,Village of Artists
+153,AF_B2,Augustus' Exhibitions,Golden Fortress,Overworld,,,,,,,,,,,,153,A1_GD4,Buritis,Village of Artists
+154,AF_B3,Augustus' Tests Room,Golden Fortress,Overworld,,,,,,,,,,,,154,A1_GD5,Illusionary Way,Village of Artists
+155,AF_B4,Augustus' Labs,Golden Fortress,Overworld,,,,,,,,,,,,155,A1_GD6,Dona Clara's Restaurant,Village of Artists
+156,AF_B5,Augustus' Machinery,Golden Fortress,Overworld,,,,,,,,,,,,156,A1_GD7,Samba Hostel,Village of Artists
+157,AF_Boss,Control Chamber,Golden Fortress,Overworld,,,,,,,,,,,,157,A1_GD8,The Dalvian Star,Village of Artists
+158,AF_C1,Beautiful Women's Salon,Golden Fortress,Overworld,,,,,,,,,,,,158,A1_GD9,House of Sadness,Village of Artists
+159,AF_C2,Demure Women's Salon,Golden Fortress,Overworld,,,,,,,,,,,,159,A1_Market,Central Market,Village of Artists
+160,AF_C3,Corridor of Silence,Golden Fortress,Overworld,,,,,,,,,,,,160,A1_MinibossAvenue,Beautiful Horizon Avenue,Village of Artists
+161,AF_C4,Gymnasium Space,Golden Fortress,Overworld,,,,,,,,,,,,161,A1_MusicianHouse,Thommaz's House,Village of Artists
+162,AF_C4_2,"No Pain, No Gain",Golden Fortress,Overworld,,,,,,,,,,,,162,A1_MusicianPath1,Market Back Door,Village of Artists
+163,AF_C5,Wives' Corridor,Golden Fortress,Overworld,,,,,,,,,,,,163,A1_MusicianPath2,First Nine Alley,Village of Artists
+164,AF_C6,Children Lobby,Golden Fortress,Overworld,,,,,,,,,,,,164,A1_MusicianPath3,Bridge of the Falling River,Village of Artists
+165,AF_D1,ID Control,Golden Fortress,Overworld,,,,,,,,,,,,165,A1_MusicianPath4,Piano Alley,Village of Artists
+166,AF_D2,Command Center,Golden Fortress,Overworld,,,,,,,,,,,,166,A1_MusicianPathB,Garantido's Bar,Village of Artists
+167,AF_D3,Eldarian Army Courtyard,Golden Fortress,Overworld,,,,,,,,,,,,167,A1_MusicianPathC,Lazúli's House,Village of Artists
+168,AF_D4,Guardhouse,Golden Fortress,Overworld,,,,,,,,,,,,168,A1_PainterExit1,Backyard,Village of Artists
+169,AF_D5,White Space,Golden Fortress,Overworld,,,,,,,,,,,,169,A1_PainterExit2,Sewers,Village of Artists
+170,AF_D6,Greediness Space,Golden Fortress,Overworld,,,,,,,,,,,,170,A1_PainterHouse,Tarsila's House,Village of Artists
+171,AF_D7,Miserliness Space,Golden Fortress,Overworld,,,,,,,,,,,,171,A1_PainterPath1,Paint Well,Village of Artists
+172,AF_FinalCamp,Eldarian Gates,Golden Fortress,Overworld,,,,,,,,,,,,172,A1_PainterPath2,Abandoned House,Village of Artists
+173,AF_MainRoom,Path to Great Fortune,Golden Fortress,Overworld,,,,,,,,,,,,173,A1_PainterPath3,Community Street,Village of Artists
+174,AF_PathA_1,Strong Men's Corridor,Golden Fortress,Overworld,,,,,,,,,,,,174,A1_PainterPath4,The Rich and the Poor,Village of Artists
+175,AF_PathA_2,Smart Men's Room,Golden Fortress,Overworld,,,,,,,,,,,,175,A1_PainterPathB,Library,Village of Artists
+176,AF_PathA_3,Rich Men's Lounge,Golden Fortress,Overworld,,,,,,,,,,,,176,A1_PreBoss,Temple of Creation,Village of Artists
+177,AF_PathA_4,Powerful Men's Hall,Golden Fortress,Overworld,,,,,,,,,,,,177,A1_StatisticsRoom,Right Projector Room,Village of Artists
+178,AF_PathA_5,Experienced Men's Lobby,Golden Fortress,Overworld,,,,,,,,,,,,178,A1_Void_Run1,UNKNOWN_NAME,UNKNOWN_AREANAME
+179,AFEAR_A_1,Overcast Hidden Entrance,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+180,AFEAR_A_10,The Golden View From Beneath,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+181,AFEAR_A_11,Infinite Walk,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+182,AFEAR_A_12,Finite Run,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+183,AFEAR_A_13,Tunnel of the Impulsive,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+184,AFEAR_A_14,Path to Recognition,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+185,AFEAR_A_15,Self Reflection Ways,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+186,AFEAR_A_2,Whelmed in Fear,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+187,AFEAR_A_3,Leap of Mistrust,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+188,AFEAR_A_4,Irresolute Trifurcation,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+189,AFEAR_A_5,Crumbling Hollow,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+190,AFEAR_A_6,A Dark Angle,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+191,AFEAR_A_7,The Golden Breach,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+192,AFEAR_A_8,The Golden Creep,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+193,AFEAR_A_9,Unlucky's Grotto,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+194,AFEAR_A_AlternativeChest,True Explorers Treasure,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+195,AFEAR_A_AlternativePath,Self Awareness Deviation,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+196,AFEAR_A_Cave2,Nevermore a Beautiful Horizon,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+197,AFEAR_A_EyeSecret1,Through The Eyes of Fear,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+198,AFEAR_A_EyeSecret2,To The Award of Courage,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+199,AFEAR_A_PathtoT_1,"Stress Vent, So Stressful",Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+200,AFEAR_A_PathtoT_2,Incident Square,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+201,AFEAR_A_Secret1,Spinning Laughter,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+202,AFEAR_A_Secret2,Underlying Truth,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+203,AFEAR_A_SuperDandara_1,Rest on the Second Sunday,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+204,AFEAR_A_SuperDandara_2,Resilience Growth,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+205,AFEAR_A_ToArea,Resolute Situation,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+206,AFEAR_A_ToBridge1,Cave of Struggle,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+207,AFEAR_A_ToBridge2,Hidden Eye,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+208,AFEAR_Boss,The Colossal Bridge,The Salt Is Hesitant,FinaleBoss,,,,,,,,,,,,,,,
+209,AFEAR_Bridge,Hidden Bridge,Hidden Bridge,Fearworld,,,,,,,,,,,,,,,
+210,AFEAR_Cage_1,Gates of Exile,Exile of Contemplations,Fearworld,,,,,,,,,,,,,,,
+211,AFEAR_Cage_2,Nara's Cage,Exile of Contemplations,Fearworld,,,,,,,,,,,,,,,
+212,AFEAR_Cage_Miniboss,Maze of Ruminations,Exile of Contemplations,Fearworld,,,,,,,,,,,,,,,
+213,AFEAR_Cage_PreRoom,Passage of The Exiled,Exile of Contemplations,Fearworld,,,,,,,,,,,,,,,
+214,AFEAR_FinalPath_Entrance,Control Chamber,The Salt Is Hesitant,FinaleBoss,,,,,,,,,,,,,,,
+215,AFEAR_FinalPath1,Path to Great Fortune,The Salt Is Hesitant,FinaleBoss,,,,,,,,,,,,,,,
+216,AFEAR_FinalPath2,Eldarian Gates,The Salt Is Hesitant,FinaleBoss,,,,,,,,,,,,,,,
+217,AFEAR_FinalPath3,The Golden Pride,The Salt Is Hesitant,FinaleBoss,,,,,,,,,,,,,,,
+218,AFEAR_FinalPath4,The Golden Threat,The Salt Is Hesitant,FinaleBoss,,,,,,,,,,,,,,,
+219,AFEAR_FinalPath5,Corruption Transform,The Salt Is Hesitant,FinaleBoss,,,,,,,,,,,,,,,
+220,AFEAR_FinalPath6,Capital Outskirts,The Salt Is Hesitant,FinaleBoss,,,,,,,,,,,,,,,
+221,AFEAR_FinalPath7,The Traveler's Corridor,The Salt Is Hesitant,FinaleBoss,,,,,,,,,,,,,,,
+222,AFEAR_K_Camp,The Masquerade Welcome,The Masquerade Ball,Fearworld,,,,,,,,,,,,,,,
+223,AFEAR_K_Lock,Changing Room,The Masquerade Ball,Fearworld,,,,,,,,,,,,,,,
+224,AFEAR_K_Maze,Friendly Gathering,The Masquerade Ball,Fearworld,,,,,,,,,,,,,,,
+225,AFEAR_K_PathA1,Distant Laugher,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+226,AFEAR_K_PathA2,Distant Warm Breath,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+227,AFEAR_K_PathB1,The Example,The Masquerade Ball,Fearworld,,,,,,,,,,,,,,,
+228,AFEAR_K_PathB1_1,Wet Masks Room,The Masquerade Ball,Fearworld,,,,,,,,,,,,,,,
+229,AFEAR_K_PathB1_2,Warm Masks Room,The Masquerade Ball,Fearworld,,,,,,,,,,,,,,,
+230,AFEAR_K_PathC1,Cold Masks Room,The Masquerade Ball,Fearworld,,,,,,,,,,,,,,,
+231,AFEAR_K_PathC2,Dry Masks Room,The Masquerade Ball,Fearworld,,,,,,,,,,,,,,,
+232,AFEAR_K_PathD1,Club Mascot & Live Stage,The Masquerade Ball,Fearworld,,,,,,,,,,,,,,,
+233,AFEAR_K_PathD2,Esteemed Scholar Council,The Masquerade Ball,Fearworld,,,,,,,,,,,,,,,
+234,AFEAR_K_PathD3,Peak Beauty Caucus,The Masquerade Ball,Fearworld,,,,,,,,,,,,,,,
+235,AFEAR_K_PathD3_B,Ostentation Room,The Masquerade Ball,Fearworld,,,,,,,,,,,,,,,
+236,AFEAR_K_PathE1,Weak-Minded Segregation,The Masquerade Ball,Fearworld,,,,,,,,,,,,,,,
+237,AFEAR_K_PathE2,Weak-Blooded Punishment,The Masquerade Ball,Fearworld,,,,,,,,,,,,,,,
+238,AFEAR_K_PathE3,Test Against The Unmasked,The Masquerade Ball,Fearworld,,,,,,,,,,,,,,,
+239,AFEAR_K_PathF1,Secrets Better Left Unmentioned,The Masquerade Ball,Fearworld,,,,,,,,,,,,,,,
+240,AFEAR_K_PathF2,Secrets Beneath Masks,The Masquerade Ball,Fearworld,,,,,,,,,,,,,,,
+241,AFEAR_K_PathF3,Secrets Beneath Faces,The Masquerade Ball,Fearworld,,,,,,,,,,,,,,,
+242,AFEAR_M_1,Students Way,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+243,AFEAR_M_2,Natatorium of Adventure,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+244,AFEAR_M_3,King's View,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+245,AFEAR_M_4,Apprentice Lane,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+246,AFEAR_M_5,Cave of the Most Talented Child,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+247,AFEAR_M_6,Hall of the Monk,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+248,AFEAR_M_7,Hallway of Merit,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+249,AFEAR_M_Camp,Ateles' Study,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+250,AFEAR_M_Explorer1,Nakaturen Frigate Elevator,The Pioneer Facility,Fearworld,,,,,,,,,,,,,,,
+251,AFEAR_M_Explorer2,Refair,The Pioneer Facility,Fearworld,,,,,,,,,,,,,,,
+252,AFEAR_M_Explorer3,Crawstar,The Pioneer Facility,Fearworld,,,,,,,,,,,,,,,
+253,AFEAR_M_Explorer4,Wrecked Nakaturen Bridge,The Pioneer Facility,Fearworld,,,,,,,,,,,,,,,
+254,AFEAR_M_Noble1,Castle Entrance,The Privileged Keep,Fearworld,,,,,,,,,,,,,,,
+255,AFEAR_M_Noble2,Victorious Hall,The Privileged Keep,Fearworld,,,,,,,,,,,,,,,
+256,AFEAR_M_Noble3,Alchemist's Gallery,The Privileged Keep,Fearworld,,,,,,,,,,,,,,,
+257,AFEAR_M_Noble4,Lord's Rest Chamber,The Privileged Keep,Fearworld,,,,,,,,,,,,,,,
+258,AFEAR_M_Noble5,Rest of the Acolyte,The Privileged Keep,Fearworld,,,,,,,,,,,,,,,
+259,AFEAR_M_Persistent1,Rock Cave,The Enduring Fortress,Fearworld,,,,,,,,,,,,,,,
+260,AFEAR_M_Persistent2,Pain Sanctuary,The Enduring Fortress,Fearworld,,,,,,,,,,,,,,,
+261,AFEAR_M_Persistent3,Moonlight Shrine,The Enduring Fortress,Fearworld,,,,,,,,,,,,,,,
+262,AFEAR_M_Secret1,Windy Hall,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+263,AFEAR_M_Secret2,Windy Cave,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+264,AFEAR_M_Secret3,Windy Corridor,Hidden Realms,Fearworld,,,,,,,,,,,,,,,
+265,AFEAR_Masters,The Grand Stage,Masters' Auditorium,Fearworld,,,,,,,,,,,,,,,
+266,AFEAR_Masters_Outside,Auditorium Hall,Masters' Auditorium,Fearworld,,,,,,,,,,,,,,,
+267,AFEAR_T_1,Past Central Gate,Ephemeral Station,Fearworld,,,,,,,,,,,,,,,
+268,AFEAR_T_10,A Last Overrun,Ephemeral Station,Fearworld,,,,,,,,,,,,,,,
+269,AFEAR_T_2,Pusher's Assignment,Ephemeral Station,Fearworld,,,,,,,,,,,,,,,
+270,AFEAR_T_2_B,Pusher's Evaluation,Ephemeral Station,Fearworld,,,,,,,,,,,,,,,
+271,AFEAR_T_3,Waster's Procrastination,Ephemeral Station,Fearworld,,,,,,,,,,,,,,,
+272,AFEAR_T_4,Past Side Gate,Ephemeral Station,Fearworld,,,,,,,,,,,,,,,
+273,AFEAR_T_5,Ticket Line,Ephemeral Station,Fearworld,,,,,,,,,,,,,,,
+274,AFEAR_T_6,Waiter's Room,Ephemeral Station,Fearworld,,,,,,,,,,,,,,,
+275,AFEAR_T_7,Ticket Office,Ephemeral Station,Fearworld,,,,,,,,,,,,,,,
+276,AFEAR_T_8,Pusher's Deadline,Ephemeral Station,Fearworld,,,,,,,,,,,,,,,
+277,AFEAR_T_9,Waiter and Waster,Ephemeral Station,Fearworld,,,,,,,,,,,,,,,
+278,AFEAR_T_Entrance,Central Gate Plaza,Ephemeral Station,Fearworld,,,,,,,,,,,,,,,
+279,AFEAR_T_Exit,Future Path Gate,Ephemeral Station,Fearworld,,,,,,,,,,,,,,,
+280,AFEAR_T_PathA1,Station Rendezvous,Ephemeral Station,Fearworld,,,,,,,,,,,,,,,
+281,AFEAR_T_PathB1,Station Side Lock,Ephemeral Station,Fearworld,,,,,,,,,,,,,,,
+282,AFEAR_T_Tower,Clock Tower,Ephemeral Station,Fearworld,,,,,,,,,,,,,,,
