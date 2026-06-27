@@ -17,3 +17,6 @@ examples in the Games folder:
 - Poco or Werecleaner (simple examples)
 - Atlyss (for looking at how to output locations to use as a string to id)
 - Vampire Survivors (for looking at how to read external ddata)
+
+The backbone of the entire project:
+https://github.com/SWCreeperKing/CreepyUtil/tree/master/CreepyUtil.Archipelago.WorldFactory
