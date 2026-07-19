@@ -15,7 +15,7 @@ notable files:
 
 examples in the Games folder:
 - Poco or Werecleaner (simple examples)
-- Atlyss (for looking at how to output locations to use as a string to id)
+- Atlyss (for looking at how to output locations to use as a string to id for the mod to use)
 - Vampire Survivors (for looking at how to read external ddata)
 
 The backbone of the entire project:
