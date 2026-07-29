@@ -3,6 +3,7 @@ using CreepyUtil.Archipelago.WorldFactory;
 using static ApWorldFactories.PathConstants;
 using static CreepyUtil.Archipelago.WorldFactory.ItemFactory.ItemClassification;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
+using Range = CreepyUtil.Archipelago.WorldFactory.Range;
 
 namespace ApWorldFactories.Games.Slime_Rancher;
 
@@ -17,7 +18,7 @@ public class SlimeRancher : BuildData
     public override string GameName => "Slime Rancher";
     public override string ApWorldName => "slime_rancher";
     public override string GoogleSheetId => "15PdrnGmkYdocX9RU-D5U_9OgihRNN9axX71mm-jOPUQ";
-    public override string WorldVersion => "0.3.1";
+    public override string WorldVersion => "0.3.2";
 
     public override Dictionary<string, string> SheetGids { get; } = new()
     {
@@ -46,7 +47,6 @@ public class SlimeRancher : BuildData
     public override void RunShenanigans()
     {
         GetSpreadsheet("NewLogic")
-           .SkipColumn(9)
            .ReadTable(out RegionRowData[] rawRegionData).SkipColumn()
            .ReadTable(out SlimeRowData[] rawSlimeData).SkipColumn()
            .ReadTable(out LocationNameGroupData[] rawLocationGroups);
@@ -149,13 +149,23 @@ public class SlimeRancher : BuildData
                              What criteria to goal
                              notes = read all notes
                              7Zee = buy all 7Zee ranks
-                             credits = get credits
-                             """, new Choice(0, "notes", "7Zee", "credits")
+                             credits = get to the end credits
+                             mail = mcguffin hunt, Casey's Letters 
+                             """, new Choice(0, "notes", "7Zee", "credits", "mail")
+            )
+           .AddOption(
+                "Mail Count", "How many Casey's Letters to add to the pool for mcguffin hunt\n8-20", new Range(8, 8, 20)
             )
            .AddOption("Start With Dry Reef", "Start with the Dry Reef unlocked", new DefaultOnToggle())
            .AddOption(
                 "Enable Stylish Dlc Treasure Pods",
-                "note: THIS WILL NOT GIVE YOU DLC\nYOU MUST __***OWN***__ THE DLC",
+                """
+                Whether the Secret Style DLC Treasure Pods are locations in the pool.
+
+                This will add approximately 17 checks
+
+                note: THIS WILL NOT GIVE YOU DLC\nYOU MUST __***OWN***__ THE DLC
+                """,
                 new Toggle()
             )
            .AddOption(
@@ -165,15 +175,16 @@ public class SlimeRancher : BuildData
                                            level 1 requires crafting 1 gadget
                                            level 2 requires crafting 20 gadgets
                                            level 3 requires crafting 50 gadgets
-                                           """, new CreepyUtil.Archipelago.WorldFactory.Range(1, 0, 3)
+                                           """, new Range(1, 0, 3)
             )
            .AddOption(
                 "Include 7z",
-                "Include unlockables behind 7z as checks\nestimated to appear in sphere 2 and above",
+                "Include unlockables behind 7z as checks\nestimated to appear in sphere 2 and above\n\nThis will add 54 checks",
                 new Toggle()
             )
            .AddOption(
-                "Plortsanity", "Selling a plort for the first time will send a check",
+                "Plortsanity",
+                "Selling a plort for the first time will send a check\n\nThis will add approximately 16 checks",
                 new Choice(1, "off", "all_except_gold", "all")
             )
            .AddOption(
@@ -186,12 +197,14 @@ public class SlimeRancher : BuildData
            .AddOption("Start With Drone", "Start with a Drone", new DefaultOnToggle())
            .AddOption(
                 "Trap Percent", "what percent of filler should be replaced with traps",
-                new CreepyUtil.Archipelago.WorldFactory.Range(15, 0, 100)
+                new Range(15, 0, 100)
             )
-           .AddOption("Include Ogden", "Include Ogden's Retreat", new Toggle())
-           .AddOption("Include Mochi", "Include Mochi's Manor", new Toggle())
-           .AddOption("Include Viktor", "Include Viktor's Workshop", new Toggle())
-           .AddOption("Postgame", "Include Post-Credit Locations, i.e. Item Vaults", new Toggle())
+           .AddOption("Include Ogden", "Include Ogden's Retreat\n\nThis will add 10 checks", new Toggle())
+           .AddOption("Include Mochi", "Include Mochi's Manor\n\nThis will add 7 checks", new Toggle())
+           .AddOption("Include Viktor", "Include Viktor's Workshop\n\nThis will add 13 checks", new Toggle())
+           .AddOption(
+                "Postgame", "Include Post-Credit Locations, i.e. Item Vaults\n\nThis will add 42 checks", new Toggle()
+            )
            .AddOption(
                 "Easy Skips", "Enable Skips that many new players end up finding on their first playthrough",
                 new Toggle()
@@ -256,6 +269,7 @@ public class SlimeRancher : BuildData
            .AddItemCountVariable("progressive_progression_item_count", ProgressiveProgressionItemCount, Progression)
            .AddItemListVariable("filler_items", Filler, true, true, FillerItems)
            .AddItem("Trap Slime", Trap)
+           .AddItem("Casey's Letter", ProgressionSkipBalancing)
            .AddCreateItems(func =>
                 func.AddCode(
                          """
@@ -279,6 +293,11 @@ public class SlimeRancher : BuildData
                              "int(world.location_count * (options.trap_percent / 100))", "Trap Slime"
                          )
                      ).AddNewLine()
+                    .AddCode(
+                         new IfFactory("options.goal_type == 3").AddCode(
+                             CreateItemsFromCountGenCode("options.mail_count", "Casey's Letter")
+                         )
+                     )
                     .AddCode(CreateItemsFillRemainingWith("filler_items"))
             )
            .AddIndependentVariable(
@@ -414,8 +433,9 @@ public class SlimeRancher : BuildData
                    .AddLocation(new LocationData("Menu", "Sell a Gold Plort"), "options.plortsanity > 1");
     }
 
-    public override void Init(WorldFactory _, WorldInitFactory init_fact)
+    public override void Init(WorldFactory world_fact, WorldInitFactory init_fact)
     {
+        var rule_fact = world_fact.GetRuleFactory();
         init_fact
            .UseItemGroups(new Dictionary<string, string> { ["unlocks"] = "region_unlocks" })
            .UseLocationGroups(
@@ -450,12 +470,10 @@ public class SlimeRancher : BuildData
            .UseSetRules(method =>
                 method.AddCode(
                     new MatchFactory("self.options.goal_type")
-                       .AddCase("0", CreateGoalCondition(StateHas("Note Read", "28", returnValue: false)))
-                       .AddCase(
-                            "1",
-                            CreateGoalCondition(StateHas("7Zee Bought", "len(corporate_locations)", returnValue: false))
-                        )
-                       .AddCase("2", CreateGoalCondition(StateHasAll("credits_unlocks", false)))
+                       .AddCase("0", CreateGoalCondition("hasN[\"Note Read\", 30]", rule_fact))
+                       .AddCase("1", CreateGoalCondition("hasN[\"7Zee Bought\", len(corporate_locations)]", rule_fact))
+                       .AddCase("2", CreateGoalCondition("all[credits_unlocks]", rule_fact))
+                       .AddCase("3", CreateGoalCondition("hasN[\"Casey's Letter\", options.mail_count]", rule_fact))
                 )
             )
            .UseFillSlotData(
