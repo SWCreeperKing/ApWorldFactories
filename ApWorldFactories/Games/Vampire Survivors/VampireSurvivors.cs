@@ -14,7 +14,7 @@ public class VampireSurvivors : BuildData
     public override string GameName => "Vampire Survivors";
     public override string ApWorldName => "vampire_survivors";
     public override string GoogleSheetId => "1lXIr2a5fa7rdQ9fe5efA7BOAGaO1ko-pNSSO62mqlCM";
-    public override string WorldVersion => "0.3.4";
+    public override string WorldVersion => "0.3.5";
     public override string MainSheetGid => "954348750";
 
     public override Dictionary<string, string> SheetGids
@@ -535,9 +535,13 @@ public class VampireSurvivors : BuildData
     public override void Regions(WorldFactory worldFactory, RegionFactory region_fact)
     {
         var rule_fact = worldFactory.GetRuleFactory();
-        
-        region_fact.AddRegions("", "Characters", "Enemies")
-                   .AddRegions("", StageNameMap.Values.ToArray())
+
+        region_fact.AddRegion("Characters")
+                   .AddRegion("Enemies", "options.enemysanity")
+                   .ForEachOf(
+                        StageNameMap.Values.ToArray(),
+                        (b, s) => b.AddRegion(s, $"\"{s}\" in world.final_included_stages_list")
+                    )
                    .AddConnection("Menu", "Characters")
                    .AddConnection("Menu", "Enemies")
                    .InjectCodeIntoCreateRegions(method =>
@@ -550,24 +554,25 @@ public class VampireSurvivors : BuildData
                                           .AddCode(
                                                new CodeBlockFactory()
                                                   .AddCode(
-                                                       "make_location(world, f\"{stage} Beaten\", stage, region_map, rule_map)"
+                                                       "make_location(world, f\"{stage} Beaten\", stage, region_map, rule_map, False)"
                                                    )
                                            )
                                           .AddCode(
-                                               "make_event_location(world, f\"Event: [{stage} Beaten]\", f\"{stage} Beaten\", \"Beat a Stage\", None, stage, region_map, rule_map)"
+                                               "make_event_location(world, f\"Event: [{stage} Beaten]\", f\"{stage} Beaten\", \"Beat a Stage\", None, stage, region_map, rule_map, False)"
                                            )
                                           .AddCode(
                                                new IfFactory("stage != EUDAI").AddCode(
                                                    new ForLoopFactory("i", "range(chest_checks)")
                                                       .AddCode(
-                                                           "make_location(world, f\"Open Chest #{i + 1} on {stage}\", stage, region_map, rule_map)"
+                                                           "make_location(world, f\"Open Chest #{i + 1} on {stage}\", stage, region_map, rule_map, False)"
                                                        )
                                                )
                                            )
                                           .AddCode(
                                                new IfFactory("stage == EUDAI and options.goal_requirement == 1")
                                                   .AddCode(
-                                                       $"region_map[\"Menu\"].connect(region_map[stage], rule = lambda state, stage_name=stage: {rule_fact.GenerateCompiledRule("stage[EUDAI] and hasN[\"Beat a Stage\", world.ending_stage_count]")})")
+                                                       $"region_map[\"Menu\"].connect(region_map[stage], rule = lambda state, stage_name=stage: {rule_fact.GenerateCompiledRule("stage[EUDAI] and hasN[\"Beat a Stage\", world.ending_stage_count]")})"
+                                                   )
                                                   .SetElse(
                                                        $"region_map[\"Menu\"].connect(region_map[stage], rule = lambda state, stage_name=stage: {rule_fact.GenerateCompiledRule("stage[f\"{stage_name}\"]")})"
                                                    )
@@ -576,7 +581,7 @@ public class VampireSurvivors : BuildData
                                   .AddCode(
                                        new ForLoopFactory("character", "characters")
                                           .AddCode(
-                                               "make_location(world, f'Beat with {character}', 'Characters', region_map, rule_map)"
+                                               "make_location(world, f'Beat with {character}', 'Characters', region_map, rule_map, False)"
                                            )
                                    )
                                   .AddCode(
@@ -600,7 +605,7 @@ public class VampireSurvivors : BuildData
                                                           .AddCode("continue")
                                                    )
                                                   .AddCode(
-                                                       "make_location(world, f\"Kill {enemy}\", 'Enemies', region_map, rule_map)"
+                                                       "make_location(world, f\"Kill {enemy}\", 'Enemies', region_map, rule_map, False)"
                                                    )
                                            )
                                    );
@@ -669,16 +674,9 @@ public class VampireSurvivors : BuildData
            .UseFillSlotData(
                 new Dictionary<string, string>
                 {
-                    ["goal_requirement"] = "int(self.options.goal_requirement)",
-                    ["egg_inclusion"] = "int(self.options.egg_inclusion.value)",
                     ["starting_character"] = "str(self.starting_character)",
                     ["starting_stage"] = "str(self.starting_stage)",
                     ["stages_to_beat"] = "str(self.final_included_stages_list)",
-                    ["is_hyper_locked"] = "bool(self.options.lock_hyper_behind_item)",
-                    ["is_hurry_locked"] = "bool(self.options.lock_hurry_behind_item)",
-                    ["is_arcanas_locked"] = "bool(self.options.lock_arcanas_behind_item)",
-                    ["chest_checks_per_stage"] = "int(self.options.chest_checks_per_stage)",
-                    ["enemysanity"] = "bool(self.options.enemysanity)",
                     ["final_stages"] = "self.final_included_stages_list",
                     ["final_chars"] = "self.final_included_characters_list",
                     ["ending_stage_count"] = "int(self.ending_stage_count)",
