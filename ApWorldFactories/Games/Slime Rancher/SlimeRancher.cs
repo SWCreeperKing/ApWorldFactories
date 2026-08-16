@@ -18,7 +18,7 @@ public class SlimeRancher : BuildData
     public override string GameName => "Slime Rancher";
     public override string ApWorldName => "slime_rancher";
     public override string GoogleSheetId => "15PdrnGmkYdocX9RU-D5U_9OgihRNN9axX71mm-jOPUQ";
-    public override string WorldVersion => "0.3.2";
+    public override string WorldVersion => "0.3.2.1";
 
     public override Dictionary<string, string> SheetGids { get; } = new()
     {
@@ -289,13 +289,13 @@ public class SlimeRancher : BuildData
                     .AddCode(CreateItemsFromMapCountGenCode("progressive_useful_item_count")).AddNewLine()
                     .AddCode(CreateItemsFromMapCountGenCode("progressive_progression_item_count")).AddNewLine()
                     .AddCode(
-                         CreateItemsFromCountGenCode(
-                             "int(world.location_count * (options.trap_percent / 100))", "Trap Slime"
+                         new IfFactory("options.goal_type == 3").AddCode(
+                             CreateItemsFromCountGenCode("options.mail_count", "Casey's Letter")
                          )
                      ).AddNewLine()
                     .AddCode(
-                         new IfFactory("options.goal_type == 3").AddCode(
-                             CreateItemsFromCountGenCode("options.mail_count", "Casey's Letter")
+                         CreateItemsFromCountGenCode(
+                             "int(world.location_count * (options.trap_percent / 100))", "Trap Slime"
                          )
                      )
                     .AddCode(CreateItemsFillRemainingWith("filler_items"))
