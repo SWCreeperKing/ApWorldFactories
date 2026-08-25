@@ -80,7 +80,7 @@ public abstract class BuildData
     }
 
     public T[] ReadData<T>(string file, Func<string, T> iterAction, string ext = "txt")
-        => ReadData(file, ext).Select(iterAction).ToArray();
+        => [.. ReadData(file, ext).Select(iterAction)];
 
     public string[] ReadData(string file, string ext = "txt") => File.ReadAllLines($"{ReadInputDirectory}{file}.{ext}");
 
@@ -252,10 +252,10 @@ public class DataCreator<T> : CsvTableRowCreator<T>
 public static class Extensions
 {
     public static string[] SplitAndTrim(this string txt, char splitter)
-        => txt.Split(splitter).Select(s => s.Trim()).ToArray();
+        => [.. txt.Split(splitter).Select(s => s.Trim())];
 
     public static string[] SplitAndTrim(this string txt, string splitter)
-        => txt.Split(splitter).Select(s => s.Trim()).ToArray();
+        => [.. txt.Split(splitter).Select(s => s.Trim())];
 
     public static bool IsTrue(this string text) => text is not "" && text[0] is 't' or 'T' or 'y' or 'Y';
 

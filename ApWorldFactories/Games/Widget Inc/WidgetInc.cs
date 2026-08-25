@@ -33,7 +33,7 @@ public class WidgetInc : BuildData
            .ReadTable(out TechTreeData).SkipColumn()
            .ReadTable(out ResourceData);
 
-        TechTreeData = TechTreeData.Where(data => data.Id is not "ignore").ToArray();
+        TechTreeData = [.. TechTreeData.Where(data => data.Id is not "ignore")];
         FrameIdMap = TechTreeData.ToDictionary(data => data.Tech, data => data.Id);
 
         ResourceBuildingRequirement =
@@ -43,19 +43,24 @@ public class WidgetInc : BuildData
         CraftingRecipes =
             ResourceData.ToDictionary(data => data.Resource, data => data.CraftingRequirements);
 
-        CraftlessResources =
-            ResourceBuildingRequirement.Keys.Except(CraftingRecipes.Keys).ToArray();
+        CraftlessResources = [.. ResourceBuildingRequirement.Keys.Except(CraftingRecipes.Keys)];
 
-        EndingNodes = TechTreeData.Where(tech => TechTreeData.All(data => data.PreviousTech != tech.Tech))
-                                  .Select(data => data.Tech).ToArray();
+        EndingNodes =
+        [
+            .. TechTreeData.Where(tech => TechTreeData.All(data => data.PreviousTech != tech.Tech))
+                           .Select(data => data.Tech),
+        ];
 
         TieredProducers =
             TechTreeData.Where(data => data.Unlock != "").GroupBy(data => data.TierRequirement)
                         .ToDictionary(g => g.Key, g => g.Select(data => data.Tech).ToArray());
 
-        ScoutItems = TechTreeData.Where(data => data.Unlock is not "").GroupBy(data => data.TierRequirement)
-                                 .OrderBy(g => g.Key)
-                                 .Select(g => g.Select(data => data.Tech).ToArray()).ToArray();
+        ScoutItems =
+        [
+            .. TechTreeData.Where(data => data.Unlock is not "").GroupBy(data => data.TierRequirement)
+                           .OrderBy(g => g.Key)
+                           .Select(g => g.Select(data => data.Tech).ToArray()),
+        ];
 
         WriteData("idMap", FrameIdMap.Select(kv => $"{kv.Key}:{kv.Value}"));
 
@@ -92,13 +97,21 @@ public class WidgetInc : BuildData
            .AddItemCountVariable("progressive_tier", new Dictionary<string, int> { ["Progressive Tier"] = 12 },
                 ItemFactory.ItemClassification.Progression)
            .AddItems(ItemFactory.ItemClassification.Filler,
-                items: TechTreeData.Where(tech => EndingNodes.Contains(tech.Tech) && tech.Unlock is "")
+                items:
+                [
+                    .. TechTreeData.Where(tech => EndingNodes.Contains(tech.Tech) && tech.Unlock is "")
                                    .Select(data => data.Tech)
-                                   .Where(s => !s.StartsWith("Tier") || s.EndsWith("Mastery")).ToArray())
+                                   .Where(s => !s.StartsWith("Tier") || s.EndsWith("Mastery")),
+                ]
+            )
            .AddItems(ItemFactory.ItemClassification.Progression,
-                items: TechTreeData.Where(tech => !EndingNodes.Contains(tech.Tech) || tech.Unlock is not "")
+                items:
+                [
+                    .. TechTreeData.Where(tech => !EndingNodes.Contains(tech.Tech) || tech.Unlock is not "")
                                    .Select(data => data.Tech)
-                                   .Where(s => !s.StartsWith("Tier") || s.EndsWith("Mastery")).ToArray())
+                                   .Where(s => !s.StartsWith("Tier") || s.EndsWith("Mastery")),
+                ]
+            )
            .AddCreateItems(method =>
                 method
                    .AddCode(CreateItemsFromMapCountGenCode("progressive_tier"))

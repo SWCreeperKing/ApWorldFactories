@@ -37,18 +37,21 @@ public abstract class LogicSector<TSector, TData, TIdentifierType>(TData thisDat
             rawSector.Add(maker(dataObj));
         }
 
-        return rawSector.ToArray();
+        return [.. rawSector];
     }
 
     public string GenRule() => GetFormat(
-        Variants.Values.Select(sector => sector.GenRule()).Where(rule => rule.Trim() is not "")
-                .Select(rule => rule.Contains(" and ") || rule.Contains(" or ") ? $"({rule})" : rule)
-                .ToArray()
+        [
+            .. Variants.Values.Select(sector => sector.GenRule()).Where(rule => rule.Trim() is not "")
+                       .Select(rule => rule.Contains(" and ") || rule.Contains(" or ") ? $"({rule})" : rule),
+        ]
     );
 
     public string GenOption() => GetFormat(
-        Variants.Values.Select(sector => sector.GenOption()).Where(rule => rule.Trim() is not "")
-                .Select(rule => rule.Contains(" and ") || rule.Contains(" or ") ? $"({rule})" : rule).ToArray()
+        [
+            .. Variants.Values.Select(sector => sector.GenOption()).Where(rule => rule.Trim() is not "")
+                       .Select(rule => rule.Contains(" and ") || rule.Contains(" or ") ? $"({rule})" : rule),
+        ]
     );
 
     private string GetFormat(string[] arr)

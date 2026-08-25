@@ -32,12 +32,12 @@ public class WereCleaner : BuildData
            .ReadTable(out ItemData).SkipColumn()
            .ReadTable(out NpcData);
 
-        RawNpcs = NpcData.SelectMany(data => data.Npcs).Where(s => s.Trim() is not "").Distinct().ToArray();
-        AllNpcs = RawNpcs.Select(data => $"Kill {data}").ToArray();
-        Days = LevelData.Select(data => $"Survive {data.LevelName} Night").ToArray();
-        DayUnlocks = LevelData.Select(data => $"Unlock {data.LevelName} Night").ToArray();
-        Collectibles = ItemData.Select(data => data.Collectible).ToArray();
-        Abilities = ItemData.Select(data => data.Ability).Where(s => s is not "").ToArray();
+        RawNpcs = [.. NpcData.SelectMany(data => data.Npcs).Where(s => s.Trim() is not "").Distinct()];
+        AllNpcs = [.. RawNpcs.Select(data => $"Kill {data}")];
+        Days = [.. LevelData.Select(data => $"Survive {data.LevelName} Night")];
+        DayUnlocks = [.. LevelData.Select(data => $"Unlock {data.LevelName} Night")];
+        Collectibles = [.. ItemData.Select(data => data.Collectible)];
+        Abilities = [.. ItemData.Select(data => data.Ability).Where(s => s is not "")];
 
         WriteData("levelIds", NpcData.Select(data => $"{data.LevelName}:{data.LevelId}"));
         WriteData("itemIds", ItemData.Select(data => $"{data.Collectible}:{data.CollectibleId}"));

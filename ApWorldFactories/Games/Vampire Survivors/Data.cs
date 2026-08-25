@@ -45,7 +45,7 @@ public readonly struct EnemyData(DataArray param) : IGetDlc, IGetName
     [Mark] public readonly bool BestiaryInclude = param;
     [Mark] public readonly bool NeedArcana = param;
     [Mark] public readonly VsDlc Dlc = param.Get().ToVampireSurvivorsDlc();
-    [Mark] public readonly string[] Variants = param.GetSplitAndTrim().Distinct().ToArray();
+    [Mark] public readonly string[] Variants = [.. param.GetSplitAndTrim().Distinct()];
 
     public bool IsMatch(EnemyData data) => EnemyId == data.EnemyId;
     public bool IsAcceptable() => Name is not "" || !BestiaryInclude;
@@ -140,13 +140,13 @@ public static class Converter
     };
 
     public static string[] GetNames<T>(this IEnumerable<T> arr) where T : IGetName
-        => arr.Select(t => t.GetName()).ToArray();
+        => [.. arr.Select(t => t.GetName())];
 
     public static T[] OfClassifier<T>(this IEnumerable<T> arr, int type) where T : IClassifier
-        => arr.Where(t => t.GetClassifier(type)).ToArray();
+        => [.. arr.Where(t => t.GetClassifier(type))];
 
     public static T[] OfDlc<T>(this IEnumerable<T> arr, VsDlc dlc) where T : IGetDlc
-        => arr.Where(t => t.GetDlc() == dlc).ToArray();
+        => [.. arr.Where(t => t.GetDlc() == dlc)];
 
     public static bool Contains(this EnemyBlacklistData[] arr, string id) => arr.Any(data => data.EnemyId == id);
 }

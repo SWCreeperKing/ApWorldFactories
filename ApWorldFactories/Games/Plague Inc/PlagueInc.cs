@@ -46,20 +46,26 @@ public class PlagueInc : BuildData
            .ReadTable(out DifficultyData).SkipColumn()
            .ReadTable(out HexLayoutData);
 
-        TabNames = TechData.Select(data => data.TechTreeType).Distinct().ToArray();
+        TabNames = [.. TechData.Select(data => data.TechTreeType).Distinct()];
         Diseases = DiseaseData
                   .Where(data => data.Include && TechData.Any(data1 => data1.Diseases.Contains(data.Name)))
                   .ToDictionary(data => data.Name, data => data.Id);
         hexAdjacency = HexLayoutData.ToDictionary(data => data.Hex, data => data.AdjacentHexes);
-        VictoryScores = Diseases.Keys
-                                .SelectMany(disease => TechData
-                                                      .Where(data => data.Diseases.Contains(disease))
-                                                      .SelectMany(data => data.GetIndevTechs())
-                                 ).DistinctBy(data => data.Name).ToArray();
-        DifficultyVictory = Diseases.Keys.SelectMany(disease => DifficultyData.Select(diff => (
-                $"Beat {disease} on {diff.Difficulty}", disease, diff.Difficulty, diff.VictoryScore)
-            )
-        ).ToArray();
+        VictoryScores =
+        [
+            .. Diseases.Keys
+                       .SelectMany(disease => TechData
+                                             .Where(data => data.Diseases.Contains(disease))
+                                             .SelectMany(data => data.GetIndevTechs())
+                        ).DistinctBy(data => data.Name),
+        ];
+        DifficultyVictory =
+        [
+            .. Diseases.Keys.SelectMany(disease => DifficultyData.Select(diff => (
+                    $"Beat {disease} on {diff.Difficulty}", disease, diff.Difficulty, diff.VictoryScore)
+                )
+            ),
+        ];
 
         foreach (var singledOutTechData in VictoryScores)
         {
@@ -167,21 +173,25 @@ public class PlagueInc : BuildData
         item_fact
            .AddItemListVariable(
                 "always_tech", Progression,
-                list: TechData.Where(data => data.RuleType is LogicRule.Always && data.TechTreeType is "Transmission")
-                              .Select(data => data.Name)
-                              .ToArray()
+                list:
+                [
+                    .. TechData.Where(data => data.RuleType is LogicRule.Always && data.TechTreeType is "Transmission")
+                               .Select(data => data.Name),
+                ]
             )
            .AddItemListVariable(
                 "tech_items", Progression,
-                list: TechData
-                     .Where(data => !(data.RuleType is LogicRule.Always && data.TechTreeType is "Transmission"))
-                     .Select(data => data.Name)
-                     .ToArray()
+                list:
+                [
+                    .. TechData
+                      .Where(data => !(data.RuleType is LogicRule.Always && data.TechTreeType is "Transmission"))
+                      .Select(data => data.Name),
+                ]
             )
            .AddItemListVariable(
-                "difficulties", Progression, list: DifficultyData.Select(data => data.Difficulty).ToArray()
+                "difficulties", Progression, list: [.. DifficultyData.Select(data => data.Difficulty)]
             )
-           .AddItemListVariable("diseases", Progression, list: Diseases.Keys.ToArray())
+           .AddItemListVariable("diseases", Progression, list: [.. Diseases.Keys])
            .AddItem("A Sickly Sensation", Filler)
            .AddCreateItems(method =>
                 {
@@ -234,10 +244,13 @@ public class PlagueInc : BuildData
                             ).AddLocationsFromList($"{disease.LowerReplace()}_techs", condition: disease.OptionFormat())
                            .AddEventLocations(
                                 disease.OptionFormat(),
-                                DifficultyVictory.Where(t => t.disease == disease).Select(t => new EventLocationData(
-                                        t.disease, $"Event: {t.name}", "Victory", t.name
-                                    )
-                                ).ToArray()
+                                [
+                                    .. DifficultyVictory.Where(t => t.disease == disease)
+                                                        .Select(t => new EventLocationData(
+                                                                 t.disease, $"Event: {t.name}", "Victory", t.name
+                                                             )
+                                                         ),
+                                ]
                             )
         );
     }

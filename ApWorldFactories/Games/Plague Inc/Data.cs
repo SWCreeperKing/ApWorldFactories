@@ -32,7 +32,7 @@ public readonly struct HexLayoutData(DataArray param)
     [Mark] public readonly int Hex = param;
 
     [Mark] public readonly int[] AdjacentHexes
-        = param.Get().Trim('[', ']').Split(',').Select(s => int.Parse(s.Trim())).ToArray();
+        = [.. param.Get().Trim('[', ']').Split(',').Select(s => int.Parse(s.Trim()))];
 }
 
 public readonly struct TechData(DataArray param)
@@ -78,10 +78,14 @@ public readonly struct TechData(DataArray param)
     public SingledOutTechData[] GetIndevTechs()
     {
         var tech = this;
-        return Diseases.Select(disease => new SingledOutTechData(
-                disease, tech.Name, (int)tech.GetScore, tech.RuleType, tech.SpecificRuleTechs, tech.Hex, tech.TechTreeType
-            )
-        ).ToArray();
+        return
+        [
+            .. Diseases.Select(disease => new SingledOutTechData(
+                    disease, tech.Name, (int)tech.GetScore, tech.RuleType, tech.SpecificRuleTechs, tech.Hex,
+                    tech.TechTreeType
+                )
+            ),
+        ];
     }
 
     public readonly struct SingledOutTechData
@@ -120,7 +124,7 @@ public readonly struct HexMap
     {
         var map = this;
         Nodes[node].Name = name;
-        Nodes[node].Adjacents = adjacents.Select(i => map.Nodes[i]).ToArray();
+        Nodes[node].Adjacents = [.. adjacents.Select(i => map.Nodes[i])];
     }
 
     public HexNode this[int i] => Nodes[i];

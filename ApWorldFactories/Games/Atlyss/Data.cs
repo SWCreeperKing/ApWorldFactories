@@ -8,7 +8,7 @@ public readonly struct LocationLevelData(DataArray param) : IFarmingNode
     [Mark] public readonly int LevelMin = param;
     [Mark] public readonly int LevelMax = param;
     [Mark] public readonly string Connection = param.Get() is "N/A" or "" ? "Menu" : param[3];
-    [Mark] public readonly string[] Enemies = param.GetSplitAndTrim().Where(s => s is not "N/A").ToArray();
+    [Mark] public readonly string[] Enemies = [.. param.GetSplitAndTrim().Where(s => s is not "N/A")];
     [Mark] public readonly string QuestRequirement = param.Get() is "N/A" ? "" : param[5];
     [Mark] public readonly int ProgressivePortalCount = param;
 
@@ -41,7 +41,7 @@ public readonly struct QuestData(DataArray param)
     [Mark] public readonly string ClassRequired = param;
 
     [Mark] public readonly string[] AreasRequired
-        = param.GetSplitAndTrim().Where(s => s is not ("N/A" or "")).ToArray();
+        = [.. param.GetSplitAndTrim().Where(s => s is not ("N/A" or ""))];
 
     [Mark] public readonly string LogicNotes = param;
 
@@ -74,8 +74,7 @@ public readonly struct ProfessionsData(DataArray param)
     public IFarmingNode[] GetNodes()
     {
         var self = this;
-        return Areas.Select(area => new SingleNodes(area, self.MinLevel, self.MaxInLogic)).Cast<IFarmingNode>()
-                    .ToArray();
+        return [.. Areas.Select(area => new SingleNodes(area, self.MinLevel, self.MaxInLogic)).Cast<IFarmingNode>()];
     }
 
     public readonly struct SingleNodes(string area, int minLevel, int maxLevel) : IFarmingNode
@@ -117,15 +116,17 @@ public readonly struct AchievementData(DataArray param)
     [Mark] public readonly string Subclass = param;
 
     [Mark] public readonly string[] RequiredItems =
-        param.GetSplitAndTrim()
-             .Where(s => s.Trim() is not "")
-             .Select(s =>
-                  {
-                      var split = s.Split('x');
-                      return split.Length < 2 ? $"has[\"{s}\"]"
-                          : $"hasN[\"{string.Join('x', split.Skip(1))}\", {split[0]}]";
-                  }
-              ).ToArray();
+    [
+        .. param.GetSplitAndTrim()
+                .Where(s => s.Trim() is not "")
+                .Select(s =>
+                     {
+                         var split = s.Split('x');
+                         return split.Length < 2 ? $"has[\"{s}\"]"
+                             : $"hasN[\"{string.Join('x', split.Skip(1))}\", {split[0]}]";
+                     }
+                 ),
+    ];
 
     [Mark] public readonly bool Enabled = param;
 

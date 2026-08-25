@@ -61,8 +61,11 @@ public class SlimeRancher : BuildData
         LocationMap = rawLocationGroups.SelectMany(data => data.Locations.Select(reg => (reg, data.Group)))
                                        .ToDictionary(t => t.reg, t => t.Group);
 
-        PlortTypes = rawSlimeData.GroupBy(data => data.PlortDrop).Select(g => g.Key).Where(s => s is not "N/A")
-                                 .Distinct().ToArray();
+        PlortTypes =
+        [
+            .. rawSlimeData.GroupBy(data => data.PlortDrop).Select(g => g.Key).Where(s => s is not "N/A")
+                           .Distinct(),
+        ];
 
         NormalPlortPlacement = rawSlimeData.Where(data => data.SkipLogic is SkipLogic.None)
                                            .SelectMany(data => data.SpawnLocations
@@ -96,7 +99,7 @@ public class SlimeRancher : BuildData
         ProgressiveProgressionItemCount = ItemAmountData.Where(data => data.ProgType is "prog_prog")
                                                         .ToDictionary(data => data.Item, data => int.Parse(data.Count));
 
-        FillerItems = ItemAmountData.Where(data => data.ProgType is "filler").Select(data => data.Item).ToArray();
+        FillerItems = [.. ItemAmountData.Where(data => data.ProgType is "filler").Select(data => data.Item)];
 
         SlimeRancherLogicHelper.ForCompiler = false;
         WriteData(
@@ -261,8 +264,7 @@ public class SlimeRancher : BuildData
         item_fact
            .AddItemListVariable(
                 "region_unlocks", Progression, true, true,
-                RegionUnlockData.Where(data => data.Include).Select(zone => $"Region Unlock: {zone.RegionName}")
-                                .ToArray()
+                [.. RegionUnlockData.Where(data => data.Include).Select(zone => $"Region Unlock: {zone.RegionName}")]
             )
            .AddItemCountVariable("non_progressive_useful_items", NonProgressiveUsefulItemCount, Useful)
            .AddItemCountVariable("progressive_useful_item_count", ProgressiveUsefulItemCount, Useful)
@@ -302,10 +304,11 @@ public class SlimeRancher : BuildData
             )
            .AddIndependentVariable(
                 new StringArray(
-                    "credits_unlocks", RegionUnlockData
-                                      .Where(data => data is { Include: true, ForCreditsGoal: true })
-                                      .Select(zone => $"Region Unlock: {zone.RegionName}")
-                                      .ToArray()
+                    "credits_unlocks", [
+                        .. RegionUnlockData
+                          .Where(data => data is { Include: true, ForCreditsGoal: true })
+                          .Select(zone => $"Region Unlock: {zone.RegionName}"),
+                    ]
                 )
             );
     }
@@ -387,14 +390,15 @@ public class SlimeRancher : BuildData
                    .AddLocationsFromList("interactables")
                    .AddEventLocations(
                         "world.options.goal_type == 0",
-                        InteractableSector
-                           .Where(inter => inter.IsNote)
-                           .Select(inter => new EventLocationData(
-                                    inter.Region, $"Read: {inter.VagueName}", "Note Read",
-                                    inter.VagueName
-                                )
-                            )
-                           .ToArray()
+                        [
+                            .. InteractableSector
+                              .Where(inter => inter.IsNote)
+                              .Select(inter => new EventLocationData(
+                                       inter.Region, $"Read: {inter.VagueName}", "Note Read",
+                                       inter.VagueName
+                                   )
+                               ),
+                        ]
                     )
                    .AddLocationsFromList(
                         "dlc_interactables",
@@ -406,25 +410,32 @@ public class SlimeRancher : BuildData
                         condition: "world.options.include_7z and world.options.goal_type == 1"
                     )
                    .AddEventLocations(
-                        locations: NormalPlortPlacement.SelectMany(kv => kv.Value.Select(slime => new EventLocationData(
-                                    kv.Key, $"{slime} ({kv.Key})", $"{slime} Plort", "''"
+                        locations:
+                        [
+                            .. NormalPlortPlacement.SelectMany(kv => kv.Value.Select(slime => new EventLocationData(
+                                        kv.Key, $"{slime} ({kv.Key})", $"{slime} Plort", "''"
+                                    )
                                 )
-                            )
-                        ).ToArray()
+                            ),
+                        ]
                     )
                    .AddEventLocations(
                         "options.market_logic",
-                        MarketPlortPlacement.SelectMany(kv => kv.Value.Select(slime => new EventLocationData(
-                                    kv.Key, $"ML_{slime} ({kv.Key})", $"{slime} Plort", "''"
+                        [
+                            .. MarketPlortPlacement.SelectMany(kv => kv.Value.Select(slime => new EventLocationData(
+                                        kv.Key, $"ML_{slime} ({kv.Key})", $"{slime} Plort", "''"
+                                    )
                                 )
-                            )
-                        ).ToArray()
+                            ),
+                        ]
                     )
                    .AddEventLocationsFromList("gates", item: "f\"Opened Gate: {location[0]}\"")
                    .AddLocations(
                         "options.plortsanity > 0",
-                        PlortTypes.Where(plort => plort is not ("Gold Plort" or "Saber Plort"))
-                                  .Select(plort => new LocationData("Menu", $"Sell a {plort}")).ToArray()
+                        [
+                            .. PlortTypes.Where(plort => plort is not ("Gold Plort" or "Saber Plort"))
+                                         .Select(plort => new LocationData("Menu", $"Sell a {plort}")),
+                        ]
                     )
                    .AddLocation(
                         new LocationData("Menu", "Sell a Saber Plort"),
@@ -443,7 +454,7 @@ public class SlimeRancher : BuildData
                                   .GroupBy(t => t.Item1)
                                   .ToDictionary(
                                        g => g.Key,
-                                       g => (ICollection)new StringCollection(g.Select(t => t.VagueName).ToArray())
+                                       g => (ICollection)new StringCollection([.. g.Select(t => t.VagueName)])
                                    )
             )
            .UseInitFunction()

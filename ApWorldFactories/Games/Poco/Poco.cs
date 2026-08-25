@@ -46,7 +46,7 @@ public class Poco : BuildData
     {
         item_fact.AddItemListVariable(
                       "items", ItemFactory.ItemClassification.Progression,
-                      list: ItemData.Select(data => data.Name).ToArray()
+                      list: [.. ItemData.Select(data => data.Name)]
                   )
                  .AddItem("Clown Nose", ItemFactory.ItemClassification.Filler)
                  .AddCreateItems(method
@@ -73,7 +73,7 @@ public class Poco : BuildData
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
-        region_fact.AddRegions("", RegionData.Select(data => data.Region).Distinct().ToArray())
+        region_fact.AddRegions("", [.. RegionData.Select(data => data.Region).Distinct()])
                    .ForEachOf(
                         RegionData,
                         (b, data) => b.AddConnectionCompiledRule(data.ConnectsFrom, data.Region, data.GenRule())
@@ -117,7 +117,7 @@ public class Poco : BuildData
     )
     {
         return new GraphBuilder(GameName)
-              .AddRegions(RegionData.Select(data => data.Region).Distinct().ToArray())
+              .AddRegions([.. RegionData.Select(data => data.Region).Distinct()])
               .ForEachOf(
                    RegionData, (b, data) => b.AddConnection(data.ConnectsFrom, data.Region, data.GenRule())
                )

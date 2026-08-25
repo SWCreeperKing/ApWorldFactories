@@ -60,47 +60,63 @@ public class VampireSurvivors : BuildData
         GetSpreadsheet("charClass").ReadTable(out CharacterClassificationData);
         GetSpreadsheet("stageClass").ReadTable(out StageClassificationData);
 
-        StageData = StageData.Where(data => !overrideStageData.Any(data.IsMatch)).Concat(overrideStageData)
-                             .Where(data => data.IsAcceptable()).ToArray();
+        StageData =
+        [
+            .. StageData.Where(data => !overrideStageData.Any(data.IsMatch)).Concat(overrideStageData)
+                        .Where(data => data.IsAcceptable()),
+        ];
 
-        StageClassificationData = StageClassificationData
-                                 .Where(data => StageData.Any(stage => stage.GetName() == data.Name)).ToArray();
+        StageClassificationData =
+        [
+            .. StageClassificationData
+               .Where(data => StageData.Any(stage => stage.GetName() == data.Name)),
+        ];
 
-        StageEnemyData = StageEnemyData.Where(data => !overrideStageEnemyData.Any(data.IsMatch))
-                                       .Where(data => StageData.Any(stage => stage.StageId == data.StageId))
-                                       .Concat(overrideStageEnemyData)
-                                       .ToArray();
+        StageEnemyData =
+        [
+            .. StageEnemyData.Where(data => !overrideStageEnemyData.Any(data.IsMatch))
+                             .Where(data => StageData.Any(stage => stage.StageId == data.StageId)),
+            .. overrideStageEnemyData,
+        ];
 
-        StageEnemyData = StageEnemyData
-                        .Concat(
-                             StageEnemyData
+        StageEnemyData =
+        [
+            .. StageEnemyData, .. StageEnemyData
+                                 .Where(data => data.StageId is "FOREST" or "LIBRARY" or "WAREHOUSE" or "TOWER"
+                                      or "CHAPEL"
+                                  )
+                                 .Select(data => new StageEnemyData(data.EnemyId, "GREENACRES", data.Minute)),
+        ];
+
+        StageBossData =
+        [
+            .. StageBossData.Where(data => !overrideStageBossData.Any(data.IsMatch))
+                            .Where(data => StageData.Any(stage => stage.StageId == data.StageId)),
+            .. overrideStageBossData,
+        ];
+
+        StageBossData =
+        [
+            .. StageBossData, .. StageBossData
                                 .Where(data => data.StageId is "FOREST" or "LIBRARY" or "WAREHOUSE" or "TOWER"
                                      or "CHAPEL"
                                  )
-                                .Select(data => new StageEnemyData(data.EnemyId, "GREENACRES", data.Minute))
-                         ).ToArray();
+                                .Select(data => new StageBossData(data.BossId, "GREENACRES", data.Minute)),
+        ];
 
-        StageBossData = StageBossData.Where(data => !overrideStageBossData.Any(data.IsMatch))
-                                     .Where(data => StageData.Any(stage => stage.StageId == data.StageId))
-                                     .Concat(overrideStageBossData).ToArray();
+        EnemyData =
+        [
+            .. EnemyData.Where(data => !overrideEnemyData.Any(data.IsMatch)).Concat(overrideEnemyData)
+                        .Where(data => data.IsAcceptable()
+                             // && !EnemyBlacklistData.Contains(data.EnemyId)
+                         ),
+        ];
 
-        StageBossData = StageBossData
-                       .Concat(
-                            StageBossData
-                               .Where(data => data.StageId is "FOREST" or "LIBRARY" or "WAREHOUSE" or "TOWER"
-                                    or "CHAPEL"
-                                )
-                               .Select(data => new StageBossData(data.BossId, "GREENACRES", data.Minute))
-                        ).ToArray();
-
-        EnemyData = EnemyData.Where(data => !overrideEnemyData.Any(data.IsMatch)).Concat(overrideEnemyData)
-                             .Where(data => data.IsAcceptable()
-                                  // && !EnemyBlacklistData.Contains(data.EnemyId)
-                              )
-                             .ToArray();
-
-        CharacterData = CharacterData.Where(data => !overrideCharacterData.Any(data.IsMatch))
-                                     .Concat(overrideCharacterData).Where(data => data.IsAcceptable()).ToArray();
+        CharacterData =
+        [
+            .. CharacterData.Where(data => !overrideCharacterData.Any(data.IsMatch))
+                            .Concat(overrideCharacterData).Where(data => data.IsAcceptable()),
+        ];
 
         StageNameMap = StageData.ToDictionary(data => data.StageId, data => data.StageName);
 
@@ -139,7 +155,7 @@ public class VampireSurvivors : BuildData
         foreach (var enemy in EnemyData.Where(data => data.NeedArcana))
         {
             EnemiesRequireArcana.Add(enemy.Name);
-            EnemyMap[enemy.Name] = StageNameMap.Values.ToArray();
+            EnemyMap[enemy.Name] = [.. StageNameMap.Values];
         }
 
         // MergeLegacyData.MergeData(this);
@@ -539,7 +555,7 @@ public class VampireSurvivors : BuildData
         region_fact.AddRegion("Characters")
                    .AddRegion("Enemies", "options.enemysanity")
                    .ForEachOf(
-                        StageNameMap.Values.ToArray(),
+                        [.. StageNameMap.Values],
                         (b, s) => b.AddRegion(s, $"\"{s}\" in world.final_included_stages_list")
                     )
                    .AddConnection("Menu", "Characters")

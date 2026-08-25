@@ -7,7 +7,7 @@ public readonly struct TechTreeData(DataArray param)
     [Mark] public readonly string Id = param;
 
     [Mark] public readonly string[] ResourceRequirements
-        = param.GetSplitAndTrim().Where(s => s is not "").ToArray();
+        = [.. param.GetSplitAndTrim().Where(s => s is not "")];
 
     [Mark] public readonly string Unlock = param;
     [Mark] public readonly int TierRequirement = param;

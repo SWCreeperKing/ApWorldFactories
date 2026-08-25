@@ -41,7 +41,7 @@ public class Loddlenaut : BuildData
         RegionIdRequiresDepth = RegionRowData.ToDictionary(data => data.Id, data => data.RequiresDepth);
 
         var locatedItems = RegionRowData.SelectMany(data => data.AvailableUpgrades).ToHashSet();
-        ItemsRowData = ItemsRowData.Where(data => !locatedItems.Contains(data.ItemName)).ToArray();
+        ItemsRowData = [.. ItemsRowData.Where(data => !locatedItems.Contains(data.ItemName))];
     }
 
     public override void Locations(WorldFactory _, LocationFactory location_fact)
@@ -58,9 +58,11 @@ public class Loddlenaut : BuildData
            .AddLocations("upgrades", ItemsRowData.Select(data => (string[])[$"Purchase {data.ItemName}", "Upgrades"]))
            .AddLocations(
                 "biome_upgrades",
-                RegionRowData.Where(data => data.AvailableUpgrades.Any())
-                             .SelectMany(data => data.AvailableUpgrades.Select(up => (string[])[up, data.Region]))
-                             .ToArray()
+                [
+                    .. RegionRowData.Where(data => data.AvailableUpgrades.Any())
+                                    .SelectMany(data => data.AvailableUpgrades.Select(up => (string[])[up, data.Region])
+                                     ),
+                ]
             )
            .AddLocations("badges", BadgeRowData.Select(data => (string[])[data.Name, RegionIdMap[data.RegionId]]))
            .AddLocations("evolutions", EvolutionRowData.Select(data => (string[])[data.Name, "Evolutions"]))
@@ -96,7 +98,7 @@ public class Loddlenaut : BuildData
     {
         region_fact
            .AddRegions(regions: ["Upgrades", "Evolutions", "Cooking"])
-           .AddRegions(regions: RegionRowData.Select(data => data.Region).ToArray())
+           .AddRegions(regions: [.. RegionRowData.Select(data => data.Region)])
            .ForEachOf(
                 RegionConnectionsRowData, (b, data) =>
                 {
@@ -117,12 +119,15 @@ public class Loddlenaut : BuildData
            .AddLocationsFromList("badges")
            .AddLocationsFromList("evolutions")
            .AddEventLocations(
-                locations: RegionRowData
-                          .SelectMany(data => data.Plants.Select(plant => new EventLocationData(
-                                       data.Region, $"Pick: {plant}", plant, $"Pick: {plant}"
-                                   )
-                               )
-                           ).ToArray()
+                locations:
+                [
+                    .. RegionRowData
+                       .SelectMany(data => data.Plants.Select(plant => new EventLocationData(
+                                    data.Region, $"Pick: {plant}", plant, $"Pick: {plant}"
+                                )
+                            )
+                        ),
+                ]
             )
            .AddEventLocationsFromList("recipes", item: "location[0].replace('Cook: ', '')");
 
@@ -163,7 +168,7 @@ public class Loddlenaut : BuildData
     {
         return new GraphBuilder(GameName)
               .AddRegions(regions: ["Upgrades", "Evolutions"])
-              .AddRegions(regions: RegionRowData.Select(data => data.Region).ToArray())
+              .AddRegions(regions: [.. RegionRowData.Select(data => data.Region)])
               .ForEachOf(
                    RegionConnectionsRowData, (b, data) =>
                    {

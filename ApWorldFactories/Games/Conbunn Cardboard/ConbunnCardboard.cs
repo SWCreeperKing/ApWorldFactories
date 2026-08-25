@@ -37,7 +37,7 @@ public class ConbunnCardboard : BuildData
            .ReadTable(out AbilityData).SkipColumn()
            .ReadTable(out SkinData);
 
-        RegionData = RegionData.Where(data => data.Region is not "Menu").ToArray();
+        RegionData = [.. RegionData.Where(data => data.Region is not "Menu")];
         RegionMap = RegionData.ToDictionary(data => data.Region, data => data.RegionName);
 
         Unlocks = ConnectionRowData.Where(data => data.HasTransition).DistinctBy(data => data.To).ToDictionary(
@@ -92,8 +92,8 @@ public class ConbunnCardboard : BuildData
     public override void Items(WorldFactory _, ItemFactory item_fact)
     {
         item_fact
-           .AddItemListVariable("unlocks", Progression, list: Unlocks.Values.ToArray())
-           .AddItemListVariable("abilities", Progression, list: AbilityData.Select(data => data.Name).ToArray())
+           .AddItemListVariable("unlocks", Progression, list: [.. Unlocks.Values])
+           .AddItemListVariable("abilities", Progression, list: [.. AbilityData.Select(data => data.Name)])
            .AddItemCountVariable("CDs", new Dictionary<string, int> { ["CD"] = 40 }, Progression)
            .AddItem("Cardboard Coin", Filler)
            .AddCreateItems(method => method.AddCode(CreateItemsFromList("unlocks"))
@@ -118,7 +118,7 @@ public class ConbunnCardboard : BuildData
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
         region_fact.AddRegions(
-                        "", RegionData.Select(data => RegionMap.GetValueOrDefault(data.Region, data.Region)).ToArray()
+                        "", [.. RegionData.Select(data => RegionMap.GetValueOrDefault(data.Region, data.Region))]
                     )
                    .ForEachOf(
                         ConnectionRowData, (b, data) =>

@@ -155,19 +155,23 @@ public class Atlyss : BuildData
                 AchievementData.Where(data => data.Enabled)
                                .Select(data => (string[])[data.Name, data.Area])
             )
-           .AddIndependentVariable(GetGrindData("location", LocationLevelData.Cast<IFarmingNode>().ToArray()))
+           .AddIndependentVariable(GetGrindData("location", [.. LocationLevelData.Cast<IFarmingNode>()]))
            .AddIndependentVariable(
                 GetGrindData(
                     "fishing",
-                    ProfessionsData.Where(data => data.Profession is "Fishing")
-                                   .SelectMany(data => data.GetNodes()).ToArray()
+                    [
+                        .. ProfessionsData.Where(data => data.Profession is "Fishing")
+                                          .SelectMany(data => data.GetNodes()),
+                    ]
                 )
             )
            .AddIndependentVariable(
                 GetGrindData(
                     "mining",
-                    ProfessionsData.Where(data => data.Profession is "Mining")
-                                   .SelectMany(data => data.GetNodes()).ToArray()
+                    [
+                        .. ProfessionsData.Where(data => data.Profession is "Mining")
+                                          .SelectMany(data => data.GetNodes()),
+                    ]
                 )
             )
            .AddIndependentVariable(
@@ -234,7 +238,7 @@ public class Atlyss : BuildData
                 ItemData.GroupBy(data => data.Classification),
                 data => item_fact.AddItemListVariable(
                     $"{data.Key}_items".ToLower(), data.Key,
-                    list: data.Select(d => d.Name).ToArray()
+                    list: [.. data.Select(d => d.Name)]
                 )
             )
            .AddItemCountVariable(
@@ -245,10 +249,12 @@ public class Atlyss : BuildData
             )
            .AddItemListVariable(
                 "portals", Progression,
-                list: LocationLevelData
-                     .Select(data => $"{(data.Area.StartsWith("Sanctum Catacombs") ? "Catacombs" : data.Area)} Portal")
-                     .Distinct()
-                     .ToArray()
+                list:
+                [
+                    .. LocationLevelData
+                      .Select(data => $"{(data.Area.StartsWith("Sanctum Catacombs") ? "Catacombs" : data.Area)} Portal")
+                      .Distinct(),
+                ]
             )
            .AddItem("Progressive Portal", Progression)
            .AddCreateItems(factory =>
@@ -357,7 +363,7 @@ public class Atlyss : BuildData
 
     public override void Regions(WorldFactory worldFactory, RegionFactory region_fact)
     {
-        region_fact.AddRegions("", LocationLevelData.Select(data => data.Area).ToArray())
+        region_fact.AddRegions("", [.. LocationLevelData.Select(data => data.Area)])
                    .ForEachOf(
                         LocationLevelData,
                         (b, data) => b.AddConnectionCompiledRule(data.Connection, data.Area, data.GenRule())
@@ -368,10 +374,11 @@ public class Atlyss : BuildData
                    .AddLocationsFromList("professions")
                    .AddLocations(
                         "",
-                        AchievementData
-                           .Where(data => data is { Enabled: true, Class: ClassType.Any })
-                           .Select(data => new LocationData(data.Area, data.Name))
-                           .ToArray()
+                        [
+                            .. AchievementData
+                              .Where(data => data is { Enabled: true, Class: ClassType.Any })
+                              .Select(data => new LocationData(data.Area, data.Name)),
+                        ]
                     )
                    .AddEventLocationsFromList(
                         "quests", "f\"Quest Completion: {location[0]}\"",
@@ -382,7 +389,7 @@ public class Atlyss : BuildData
                            .GroupBy(data => data.Class),
                         (b, g) => b.AddLocations(
                             $"options.is_class(\"{g.Key}\")".ToLower(),
-                            g.Select(data => new LocationData(data.Area, data.Name)).ToArray()
+                            [.. g.Select(data => new LocationData(data.Area, data.Name))]
                         )
                     );
     }

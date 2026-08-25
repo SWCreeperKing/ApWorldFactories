@@ -59,10 +59,10 @@ public class Dandara : BuildData
         GetSpreadsheet("chests").ReadTable<ChestsRowData>(out var rawOverworldChestsRowData).SkipColumn(2)
                                 .ReadTable<ChestsRowData>(out var rawFearworldChestsRowData);
 
-        RegionRowData = RegionRowData.Where(data => data.Region is not "Menu").ToArray();
+        RegionRowData = [.. RegionRowData.Where(data => data.Region is not "Menu")];
         RoomIdToRegion = RoomsRowData.ToDictionary(data => data.RoomId, data => data.RoomRegion);
         RoomIdToRoomName = RoomsRowData.ToDictionary(data => data.RoomId, data => data.RoomName);
-        ItemsRowData = ItemsRowData.Where(data => data.ItemName is not "" && data.ItemCount is not 0).ToArray();
+        ItemsRowData = [.. ItemsRowData.Where(data => data.ItemName is not "" && data.ItemCount is not 0)];
         ItemIdToItemName = ItemsRowData.ToDictionary(data => data.ItemId, data => data.ItemName);
 
         ConnectionsData = ConnectionsSector.CreateSectorFromData(
@@ -187,7 +187,7 @@ public class Dandara : BuildData
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
         var regionNames = RegionRowData.Select(data => data.Region).ToArray();
-        region_fact.AddRegions("", regionNames.Concat(ShopRowData.Select(data => data.Upgrade)).ToArray())
+        region_fact.AddRegions("", [.. regionNames, .. ShopRowData.Select(data => data.Upgrade)])
                    .ForEachOf(
                         ConnectionsData,
                         (b, sector) => b.AddConnectionCompiledRule(sector.From, sector.To, sector.GenRule())
@@ -199,10 +199,12 @@ public class Dandara : BuildData
                     // .ForEachOf(ShopRowData, (b, data) => b.AddLocationsFromList(data.GetListName))
                    .AddEventLocations(
                         "",
-                        EventItemsData.Select(data => new EventLocationData(
-                                RoomIdToRegion[data.RoomId], data.EventName, data.EventItem, data.EventName
-                            )
-                        ).ToArray()
+                        [
+                            .. EventItemsData.Select(data => new EventLocationData(
+                                    RoomIdToRegion[data.RoomId], data.EventName, data.EventItem, data.EventName
+                                )
+                            ),
+                        ]
                     );
     }
 

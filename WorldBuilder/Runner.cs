@@ -35,8 +35,7 @@ public static class Runner
                    .OrderBy(t => t.GameName)
                    .ToArray();
 
-        List<string> list = ["Exit", "Rebuild All"];
-        list.AddRange(types.Select(t => t.GameName));
+        List<string> list = ["Exit", "Rebuild All", .. types.Select(t => t.GameName)];
         var arr = list.ToArray();
 
         var i = 0;

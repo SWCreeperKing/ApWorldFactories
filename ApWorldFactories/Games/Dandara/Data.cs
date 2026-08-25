@@ -91,7 +91,7 @@ public readonly struct ShopRowData(DataArray param)
         get
         {
             var upgrade = Upgrade;
-            return Enumerable.Range(1, CheckCount).Select(i => (string[])[$"Buy {upgrade} Upgrade #{i}", upgrade]).ToArray();
+            return [.. Enumerable.Range(1, CheckCount).Select(i => (string[])[$"Buy {upgrade} Upgrade #{i}", upgrade])];
         }
     }
 

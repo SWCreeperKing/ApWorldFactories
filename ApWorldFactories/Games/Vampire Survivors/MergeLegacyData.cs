@@ -58,7 +58,7 @@ public static class MergeLegacyData
             "(LEGACY) Transformed Data Hurry", convertedMissingHurry.SelectMany(t => t.Item2.Select(s => $"{t.Item1}\t{s}\t30"))
         );
 
-        vs.WriteData("(LEGACY) missing names", vs.EnemyNameMap.Values.Except(vs.EnemyMap.Keys).ToArray());
+        vs.WriteData("(LEGACY) missing names", [.. vs.EnemyNameMap.Values.Except(vs.EnemyMap.Keys)]);
         CheckForUnnamedEnemies();
         return;
 

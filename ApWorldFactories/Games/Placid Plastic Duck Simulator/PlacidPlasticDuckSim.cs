@@ -19,8 +19,8 @@ public class PlacidPlasticDuckSim : BuildData
     public DuckLogicRowData[] DuckLogicRowData = [];
     public MapRowData[] MapRowData = [];
     public Dictionary<DlcType, string> DlcTypeToName = [];
-    public DlcType[] DlcItems = Enum.GetValues<DlcType>().Where(dlc => dlc.ItemName() is not "").ToArray();
-    public int[] Columns = Enumerable.Range(1, 10).ToArray();
+    public DlcType[] DlcItems = [.. Enum.GetValues<DlcType>().Where(dlc => dlc.ItemName() is not "")];
+    public int[] Columns = [.. Enumerable.Range(1, 10)];
 
     public override void RunShenanigans()
     {
@@ -30,7 +30,7 @@ public class PlacidPlasticDuckSim : BuildData
            .ReadTable(out MapRowData).SkipColumn()
            .ReadTable(out DlcNameRowData[] dlcNames);
 
-        DuckRowData = DuckRowData.Where(data => data.Include).ToArray();
+        DuckRowData = [.. DuckRowData.Where(data => data.Include)];
         DlcTypeToName = dlcNames.ToDictionary(data => data.DlcType, data => data.DlcName);
 
         WriteData(
@@ -70,7 +70,7 @@ public class PlacidPlasticDuckSim : BuildData
         item_fact.AddItem("Progressive Column Unlock", Progression)
                  .AddItem("Progressive Spawn Speed Upgrade", Useful)
                  .AddItem("Random Duck", Filler)
-                 .AddItemListVariable("dlc_items", Progression, list: DlcItems.Select(dlc => dlc.ItemName()).ToArray())
+                 .AddItemListVariable("dlc_items", Progression, list: [.. DlcItems.Select(dlc => dlc.ItemName())])
                  .AddCreateItems(method =>
                       method.AddCode(CreateItemsFromCountGenCode("9", "Progressive Column Unlock"))
                             .AddCode(CreateItemsFromCountGenCode("9", "Progressive Spawn Speed Upgrade"))
@@ -94,7 +94,7 @@ public class PlacidPlasticDuckSim : BuildData
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
-        region_fact.AddRegions(regions: Columns.Select(i => $"Column {i}").ToArray())
+        region_fact.AddRegions(regions: [.. Columns.Select(i => $"Column {i}")])
                    .ForEachOf(
                         Columns,
                         (b, i) => b.AddConnectionCompiledRule(

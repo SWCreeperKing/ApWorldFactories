@@ -38,8 +38,10 @@ public readonly struct RegionRowData(DataArray param) : ILogicSectorDataType<Ski
     [Mark] public readonly string To = param;
     [Mark] public readonly bool SlimeGated = param;
 
-    [Mark] public readonly string[] RegionUnlocks = ((string[])param).Where(s => s.ToLower() is not ("" or "none"))
-                                                                     .ToArray();
+    [Mark] public readonly string[] RegionUnlocks =
+    [
+        .. ((string[])param).Where(s => s.ToLower() is not ("" or "none")),
+    ];
 
     [Mark] public readonly bool NeedsJetpack = param;
 
@@ -181,7 +183,7 @@ public static class SkipLogicHelper
         if (logic.HasFlag(SkipLogic.PostGame)) rules.Add("postgame");
         if (logic.HasFlag(SkipLogic.MarketLogic)) rules.Add("market_logic");
 
-        return rules.ToArray();
+        return [.. rules];
     }
 
     public static string GenRule(this SkipLogic logic) => string.Join(
