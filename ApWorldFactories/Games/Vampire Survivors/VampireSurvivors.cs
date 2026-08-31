@@ -271,11 +271,11 @@ public class VampireSurvivors : BuildData
                            .AddCode(
                                 new IfFactory("\"Random\" in self_list")
                                    .AddCode(
-                                        "return world.random.sample(list, world.random.randint(int(len(list) / 2), len(list)))"
+                                        "return sorted(world.random.sample(list, world.random.randint(int(len(list) / 2), len(list))))"
                                     )
                                    .SetElse(
                                         new CodeBlockFactory().AddCode(
-                                            "return list if \"All\" in self_list else [loc for loc in self_list if loc != \"Random\"]"
+                                            "return list if \"All\" in self_list else sorted([loc for loc in self_list if loc != \"Random\"])"
                                         )
                                     )
                             )
@@ -663,7 +663,7 @@ public class VampireSurvivors : BuildData
                               CreatePushPrecollected(
                                   "Gamemode Unlock: Hurry", "self.options.lock_hurry_behind_item.value"
                               )
-                          ), false, false
+                          ), true, false
             )
            .UseGenerateEarly(method => method.AddCode(GenEarly))
            .UseCreateRegions()
