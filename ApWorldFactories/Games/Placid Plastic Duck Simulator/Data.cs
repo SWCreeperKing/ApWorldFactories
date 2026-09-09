@@ -5,7 +5,7 @@ public readonly struct DuckRowData(DataArray param)
     [Mark] public readonly string DuckName = param;
     [Mark] public readonly string DuckId = param;
     [Mark] public readonly int Column = param;
-    [Mark] public readonly DlcType DlcType = param.GetEnum<DlcType>();
+    [Mark] public readonly DlcType DlcType = param.GetEnum(DlcType.BaseGame);
     [Mark] public readonly bool HasUniqueQuack = param;
     [Mark] public readonly bool SpecialSpawn = param;
     [Mark] public readonly bool Include = param;
@@ -37,7 +37,7 @@ public readonly struct MapRowData(DataArray param)
 public readonly struct DlcNameRowData(DataArray param)
 {
     [Mark] public readonly string DlcName = param.Get(false);
-    public readonly DlcType DlcType = param.GetEnum<DlcType>();
+    public readonly DlcType DlcType = param.GetEnum(DlcType.BaseGame);
 }
 
 public enum DlcType

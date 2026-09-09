@@ -39,7 +39,7 @@ public readonly struct TechData(DataArray param)
 {
     [Mark] public readonly string Name = param;
     [Mark] public readonly int Hex = param;
-    [Mark] public readonly LogicRule RuleType = param.GetEnum<LogicRule>();
+    [Mark] public readonly LogicRule RuleType = param.GetEnum(LogicRule.Always);
 
     [Mark] public readonly string SpecificRuleTechs = string.Join(
         " and ", ((string[])param).Select(s => $"has[\"{s}\"]")

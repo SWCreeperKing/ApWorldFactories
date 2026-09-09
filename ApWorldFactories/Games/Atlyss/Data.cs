@@ -95,12 +95,12 @@ public readonly struct MerchantData(DataArray param)
 public readonly struct ItemData(DataArray param)
 {
     [Mark] public readonly string Name = param;
-    [Mark] public readonly ItemType InGameClassification = param.GetEnum<ItemType>();
+    [Mark] public readonly ItemType InGameClassification = param.GetEnum(ItemType.None);
     [Mark] public readonly int LevelReq = param;
     [Mark] public readonly int Tier = param;
-    [Mark] public readonly ClassType ClassRequirement = param.GetEnum<ClassType>();
-    [Mark] public readonly ItemRarity ItemRarity = param.GetEnum<ItemRarity>();
-    [Mark] public readonly ItemClassification Classification = param.GetEnum<ItemClassification>();
+    [Mark] public readonly ClassType ClassRequirement = param.GetEnum(ClassType.Any);
+    [Mark] public readonly ItemRarity ItemRarity = param.GetEnum(ItemRarity.Common);
+    [Mark] public readonly ItemClassification Classification = param.GetEnum(ItemClassification.Filler);
     [Mark] public readonly string WeaponClass = param;
     [Mark] public readonly string Notes = param;
     [Mark] public readonly int FillerWeight = param;
@@ -112,7 +112,7 @@ public readonly struct AchievementData(DataArray param)
     [Mark] public readonly string Name = param;
     [Mark] public readonly string Area = param.Get(false) is "" ? "Menu" : param;
     [Mark] public readonly int Level = param;
-    [Mark] public readonly ClassType Class = param.GetEnum<ClassType>();
+    [Mark] public readonly ClassType Class = param.GetEnum(ClassType.Any);
     [Mark] public readonly string Subclass = param;
 
     [Mark] public readonly string[] RequiredItems =

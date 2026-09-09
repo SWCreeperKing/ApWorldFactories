@@ -17,8 +17,11 @@ public class DataArray(string[] param)
     public int TryGetInt(int def = 0, bool move = true) => int.TryParse(Get(move), out var i) ? i : def;
     public float TryGetFloat(float def = 0, bool move = true) => float.TryParse(Get(move), out var f) ? f : def;
 
-    public TEnum GetEnum<TEnum>(bool ignoreCase = true, bool move = true) where TEnum : struct
-        => Enum.Parse<TEnum>(Get(move).Replace(" ", "").Replace(",", "").Replace("&", "And"), ignoreCase);
+    public TEnum GetEnum<TEnum>(TEnum def, bool ignoreCase = true, bool move = true) where TEnum : struct
+    {
+        var str = Get(move).Replace(" ", "").Replace(",", "").Replace("&", "And");
+        return !Enum.TryParse(typeof(TEnum), str, ignoreCase, out var res) ? def : (TEnum)res;
+    }
 
     public DataArray SetIndex(int i)
     {

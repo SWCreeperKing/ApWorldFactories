@@ -24,7 +24,7 @@ public readonly struct ItemsRowData(DataArray param)
     [Mark] public readonly string ItemName = param;
     [Mark] public readonly bool IsUpgrade = param;
     [Mark] public readonly int Count = param;
-    [Mark] public readonly ItemClassification Classification = param.GetEnum<ItemClassification>();
+    [Mark] public readonly ItemClassification Classification = param.GetEnum(ItemClassification.Filler);
 }
 
 public readonly struct PlantRowData(DataArray param)

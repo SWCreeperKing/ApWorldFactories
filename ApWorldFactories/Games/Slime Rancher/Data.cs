@@ -73,7 +73,7 @@ public readonly struct SlimeRowData(DataArray param)
     [Mark] public readonly string[] SpawnLocations = param;
     [Mark] public readonly string PlortDrop = param;
     [Mark] public readonly int PlortId = param;
-    [Mark] public readonly SkipLogic SkipLogic = param.GetEnum<SkipLogic>();
+    [Mark] public readonly SkipLogic SkipLogic = param.GetEnum(SkipLogic.None);
 }
 
 public readonly struct LocationNameGroupData(DataArray param)
@@ -139,6 +139,11 @@ public readonly struct RegionUnlockRowData(DataArray param)
     [Mark] public readonly bool ForCreditsGoal = param;
 }
 
+public readonly struct GadgetRowData(DataArray param)
+{
+    
+}
+
 public class GateCreator : DataCreator<GateRowData>
 {
     public override bool IsValidData(GateRowData t) => t.Id != "";
@@ -159,6 +164,11 @@ public class CorporateCreator : DataCreator<CorporateRowData>
     public override bool IsValidData(CorporateRowData t) => t.Location != "";
 }
 
+public enum ExtractionType
+{
+    None, Drill, Pump,
+    Apiary,
+}
 
 [Flags]
 public enum SkipLogic
