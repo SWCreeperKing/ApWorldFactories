@@ -38,7 +38,9 @@ public class Poco : BuildData
     public override void Locations(WorldFactory _, LocationFactory location_fact)
     {
         location_fact.AddLocations("locations", LocationData.Select(data => (string[])[data.Location, data.Area]))
-                     .AddLocations("achievements", AchievementRowData.Select(data => (string[])[data.Achievement, data.Region]))
+                     .AddLocations(
+                          "achievements", AchievementRowData.Select(data => (string[])[data.Achievement, data.Region])
+                      )
                      .AddLocations("note", [["Read John's Note", "Tunnels Cave"]]);
     }
 
@@ -49,9 +51,8 @@ public class Poco : BuildData
                       list: [.. ItemData.Select(data => data.Name)]
                   )
                  .AddItem("Clown Nose", ItemFactory.ItemClassification.Filler)
-                 .AddCreateItems(method
-                      => method.AddCode(CreateItemsFromList("items"))
-                               .AddCode(CreateItemsFillRemainingWithItem("Clown Nose"))
+                 .AddCreateItems(method => method.AddCode(CreateItemsFromList("items"))
+                                                 .AddCode(CreateItemsFillRemainingWithItem("Clown Nose"))
                   );
     }
 
@@ -61,13 +62,9 @@ public class Poco : BuildData
            .AddCompoundLogicFunction("quest", "done_quest", "has[f\"{quest}'s Quest Completion\"]", "quest")
            .AddLogicRules(
                 LocationData.Where(data => data.Requirements.Length != 0 || data.QuestRequirements.Length != 0)
-                            .ToDictionary(
-                                 data => data.Location, data => data.GenRule()
-                             )
+                            .ToDictionary(data => data.Location, data => data.GenRule())
             )
-           .AddLogicRules(
-                NpcQuestData.ToDictionary(data => data.QuestName, data => data.GenRule())
-            )
+           .AddLogicRules(NpcQuestData.ToDictionary(data => data.QuestName, data => data.GenRule()))
            .AddLogicRules(AchievementRowData.ToDictionary(data => data.Achievement, data => data.GenRule()));
     }
 
@@ -93,6 +90,17 @@ public class Poco : BuildData
     {
         init_fact
            .UseInitFunction()
+           .UseLocationGroups(
+                new Dictionary<string, ICollection>()
+                {
+                    ["Rat Skulls"] = new StringCollection(
+                        [.. LocationData.Select(l => l.Location).Where(l => l.StartsWith("Rat Skull"))]
+                    ),
+                    ["Photos"] = new StringCollection(
+                        [.. LocationData.Select(l => l.Location).Where(l => l.StartsWith("Pickup Photo"))]
+                    ),
+                }
+            )
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
            .UseCreateRegions()
            .AddCreateItems()
@@ -111,22 +119,17 @@ public class Poco : BuildData
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
     }
 
-    public override string GenerateGraphViz(
-        WorldFactory worldFactory, Dictionary<string, string> associations, Func<string, string> getRule,
-        string[][] locationDoubleArrays
-    )
+    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
+        Func<string, string> getRule,
+        string[][] locationDoubleArrays)
     {
         return new GraphBuilder(GameName)
               .AddRegions([.. RegionData.Select(data => data.Region).Distinct()])
-              .ForEachOf(
-                   RegionData, (b, data) => b.AddConnection(data.ConnectsFrom, data.Region, data.GenRule())
-               )
+              .ForEachOf(RegionData, (b, data) => b.AddConnection(data.ConnectsFrom, data.Region, data.GenRule()))
               .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
               .ForEachOf(
                    NpcQuestData,
-                   (b, data) => b.AddEventLocation(
-                       data.Area, getRule, data.QuestName, data.QuestName, data.QuestItem
-                   )
+                   (b, data) => b.AddEventLocation(data.Area, getRule, data.QuestName, data.QuestName, data.QuestItem)
                )
               .GenString();
     }

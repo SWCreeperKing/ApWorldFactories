@@ -18,7 +18,7 @@ public class SlimeRancher : BuildData
     public override string GameName => "Slime Rancher";
     public override string ApWorldName => "slime_rancher";
     public override string GoogleSheetId => "15PdrnGmkYdocX9RU-D5U_9OgihRNN9axX71mm-jOPUQ";
-    public override string WorldVersion => "0.3.2.1";
+    public override string WorldVersion => "0.4.0";
 
     public override Dictionary<string, string> SheetGids { get; } = new()
     {
@@ -139,7 +139,7 @@ public class SlimeRancher : BuildData
         );
         WriteData("Upgrades", Upgrades.Select(line => $"{line.Name};{line.Id}"));
         WriteData("7Zee", CorporateLocations.Select(line => $"{line.Location};{line.Level}"));
-        WriteData("Gates", GateData.Select(data => $"{data.Id};{data.RegionUnlock}"));
+        WriteData("Gates", GateData.Select(data => $"{data.Id};{string.Join(';', data.RegionUnlock)}"));
 
         SlimeRancherLogicHelper.ForCompiler = true;
     }

@@ -88,7 +88,7 @@ public readonly struct GateRowData(DataArray param)
     [Mark] public readonly string Name = param;
     [Mark] public readonly string FromArea = param;
     [Mark] public readonly string ToArea = param;
-    [Mark] public readonly string RegionUnlock = param;
+    [Mark] public readonly string[] RegionUnlock = param;
     public string GetText => $"{Id};{Name}";
 }
 
