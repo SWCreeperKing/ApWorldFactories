@@ -12,7 +12,7 @@ public class Poco : BuildData
     public override string GameName => "Poco";
     public override string ApWorldName => "poco";
     public override string GoogleSheetId => "1Hq3zKyTXmiiiCPAdSduEHKs5kzdlWuW7MVS0LdjU6U0";
-    public override string WorldVersion => "0.1.2";
+    public override string WorldVersion => "0.1.3";
 
     public RegionData[] RegionData = [];
     public LocationData[] LocationData = [];
