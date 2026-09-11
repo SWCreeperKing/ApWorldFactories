@@ -99,6 +99,7 @@ public class Poco : BuildData
                     ["Photos"] = new StringCollection(
                         [.. LocationData.Select(l => l.Location).Where(l => l.StartsWith("Pickup Photo"))]
                     ),
+                    ["Achievements"] = new StringCollection([.. AchievementRowData.Select(l => l.Achievement)]),
                 }
             )
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
