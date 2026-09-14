@@ -1,20 +1,54 @@
-Item,Count,Prog type,,Zone ID,Region Name,Include,For Credits
-Air Burst,1,nonprog_useful,,-1,NONE,FALSE,FALSE
-Liquid Slot,1,nonprog_useful,,0,RANCH,FALSE,FALSE
-Golden Sure Shot,1,nonprog_useful,,1,Dry Reef,TRUE,TRUE
-Drone,4,nonprog_useful,,2,Indigo Quarry,TRUE,TRUE
-Advanced Drone,4,nonprog_useful,,3,Moss Blanket,TRUE,TRUE
-Market Link,3,nonprog_useful,,4,Glass Desert,TRUE,TRUE
-Progressive Max Health,4,prog_useful,,5,SEA,FALSE,FALSE
-Progressive Max Ammo,4,prog_useful,,7,Ancient Ruins,TRUE,TRUE
-Progressive Run Efficiency,2,prog_useful,,8,Ancient Ruins Transition,TRUE,TRUE
-Progressive Market Stonks,5,prog_useful,,9,The Wilds,TRUE,FALSE
-Progressive Max Energy,3,prog_prog,,10,Ogden's Retreat,TRUE,FALSE
-Progressive Jetpack,2,prog_prog,,11,Nimble Valley,TRUE,FALSE
-Progressive Treasure Cracker,3,prog_prog,,12,Mochi's Manor,TRUE,FALSE
-75x Newbucks,-,filler,,13,The Slimeulations,TRUE,FALSE
-81x Newbucks,-,filler,,14,Viktor's Workshop,TRUE,FALSE
-99x Newbucks,-,filler,,-,The Grotto,TRUE,FALSE
-100x Newbucks,-,filler,,-,The Overgrowth,TRUE,FALSE
-,,,,-,The Lab,TRUE,FALSE
-,,,,-,The Docks,TRUE,FALSE
+Item,Count,Prog type,,Zone ID,Region Name,Include,For Credits,,Internal Location,Gate Name,Coming From,Going To,Region Unlocks,,7Zee Rewards,level
+Air Burst,1,nonprog_useful,,-1,NONE,FALSE,FALSE,,[x:-252|y:10|z:14],Slime Gate - Dry Reef Beach to Ring Island,Dry Reef - Beach,Dry Reef - Ring Island,Dry Reef,,7Zee lv.1: Roostro Weathervane,1
+Liquid Slot,1,nonprog_useful,,0,RANCH,FALSE,FALSE,,[x:-174|y:2|z:331],Slime Gate - Dry Reef to Moss Blanket,Dry Reef - Main,Moss Blanket - Main,"Dry Reef, Moss Blanket",,7Zee lv.2: Fence Upgrade,2
+Golden Sure Shot,1,nonprog_useful,,1,Dry Reef,TRUE,TRUE,,[x:25|y:13|z:181],Slime Gate - Dry Reef to Indigo Quarry,Dry Reef - Main,Indigo Quarry - Before First Bridge,"Dry Reef, Indigo Quarry",,7Zee lv.3: Path Upgrade,3
+Drone,4,nonprog_useful,,2,Indigo Quarry,TRUE,TRUE,,[x:-29|y:13|z:437],Slime Gate - Moss Blanket to Ancient Ruins Transition,Moss Blanket - Main,Ancient Ruins Transition,"Moss Blanket, Ancient Ruins Transition",,7Zee lv.4: Porch Upgrade,4
+Advanced Drone,4,nonprog_useful,,3,Moss Blanket,TRUE,TRUE,,[x:35|y:6|z:394],Slime Gate - Indigo Quarry to Ancient Ruins Transition,Indigo Quarry - Ancient Ruins Transition Overlap,Ancient Ruins Transition,"Indigo Quarry, Ancient Ruins Transition",,7Zee lv.5: Chroma Station,5
+Market Link,3,nonprog_useful,,4,Glass Desert,TRUE,TRUE,,[x:57|y:-4|z:980],Slime Gate - Ancient Ruins to Glass Desert,Ancient Ruins - Teleporter Room,Glass Desert - First Half,"Ancient Ruins, Glass Desert",,7Zee lv.5: Cobalt Chroma,5
+Progressive Max Health,4,prog_useful,,5,SEA,FALSE,FALSE,,[x:39|y:1030|z:396],Slime Gate - Glass Desert Central Gate,Glass Desert - First Half,Glass Desert - Second Half,Glass Desert,,7Zee lv.5: Milkshake Chroma,5
+Progressive Max Ammo,4,prog_useful,,7,Ancient Ruins,TRUE,TRUE,,[x:-177|y:1025|z:451],Slime Gate - Glass Desert Lower Gate,Glass Desert - First Half,Glass Desert - Second Half,Glass Desert,,7Zee lv.6: Arch Upgrade,6
+Progressive Run Efficiency,2,prog_useful,,8,Ancient Ruins Transition,TRUE,TRUE,,fake id,Slime Gate - Ancient Ruins Transition to Ancient Ruins,Ancient Ruins Transition,Ancient Ruins - Main,"Ancient Ruins Transition, Ancient Ruins",,7Zee lv.7: Firecracker Chroma,7
+Progressive Market Stonks,5,prog_useful,,9,The Wilds,TRUE,FALSE,,,,,,,,7Zee lv.7: Grapeshot Chroma,7
+Progressive Max Energy,3,prog_prog,,10,Ogden's Retreat,TRUE,FALSE,,,,,,,,7Zee lv.8: Slime Toy Shop,8
+Progressive Jetpack,2,prog_prog,,11,Nimble Valley,TRUE,FALSE,,,,,,,,7Zee lv.9: Robo Ranger Chroma,9
+Progressive Treasure Cracker,3,prog_prog,,12,Mochi's Manor,TRUE,FALSE,,,,,,,,7Zee lv.9: Maidatron Chroma,9
+75x Newbucks,-,filler,,13,The Slimeulations,TRUE,FALSE,,,,,,,,7Zee lv.10: Advanced Slime Toys,10
+81x Newbucks,-,filler,,14,Viktor's Workshop,TRUE,FALSE,,,,,,,,7Zee lv.11: Gingersnap Chroma,11
+99x Newbucks,-,filler,,-,The Grotto,TRUE,FALSE,,,,,,,,7Zee lv.11: Peapod Chroma,11
+100x Newbucks,-,filler,,-,The Overgrowth,TRUE,FALSE,,,,,,,,7Zee lv.11: Market Link,11
+,,,,-,The Lab,TRUE,FALSE,,,,,,,,7Zee lv.12: Grotto Upgrade,12
+,,,,-,The Docks,TRUE,FALSE,,,,,,,,7Zee lv.13: Decorizer,13
+,,,,,,,,,,,,,,,7Zee lv.13: Vanguard Chroma,13
+,,,,,,,,,,,,,,,7Zee lv.13: Willow Chroma,13
+,,,,,,,,,,,,,,,7Zee lv.14: Slime Trophy I,14
+,,,,,,,,,,,,,,,7Zee lv.15: Daybreak Chroma,15
+,,,,,,,,,,,,,,,7Zee lv.15: Eventide Chroma,15
+,,,,,,,,,,,,,,,7Zee lv.16: Overgrowth Upgrade,16
+,,,,,,,,,,,,,,,7Zee lv.17: Salamander Chroma,17
+,,,,,,,,,,,,,,,7Zee lv.17: Royalton Chroma,17
+,,,,,,,,,,,,,,,7Zee lv.18: Slime Trophy II,18
+,,,,,,,,,,,,,,,7Zee lv.19: Neopolitan Chroma,19
+,,,,,,,,,,,,,,,7Zee lv.19: Min Chip Chroma,19
+,,,,,,,,,,,,,,,7Zee lv.19: Ultra Dash Boots,19
+,,,,,,,,,,,,,,,7Zee lv.20: Tank Booster Ultra,20
+,,,,,,,,,,,,,,,7Zee lv.20: Master Gordo Snare Blueprint,20
+,,,,,,,,,,,,,,,7Zee lv.21: Ghost Wine Chroma,21
+,,,,,,,,,,,,,,,7Zee lv.21: Volcanic Chroma,21
+,,,,,,,,,,,,,,,7Zee lv.21: Heart Module Ultra,21
+,,,,,,,,,,,,,,,7Zee lv.22: Lab Upgrade,22
+,,,,,,,,,,,,,,,7Zee lv.22: Golden Sureshot,22
+,,,,,,,,,,,,,,,7Zee lv.23: Knight Light Chroma,23
+,,,,,,,,,,,,,,,7Zee lv.23: Pretty Loud Chroma,23
+,,,,,,,,,,,,,,,7Zee lv.23: Titan Drill Blueprint,23
+,,,,,,,,,,,,,,,7Zee lv.24: Slime Trophy III,24
+,,,,,,,,,,,,,,,7Zee lv.24: Abyssal Pump Blueprint,24
+,,,,,,,,,,,,,,,7Zee lv.25: Silverfox Chroma,25
+,,,,,,,,,,,,,,,7Zee lv.25: Frozen Violet Chroma,25
+,,,,,,,,,,,,,,,7Zee lv.25: Royal Apiary Blueprint,25
+,,,,,,,,,,,,,,,7Zee lv.26: Docks Upgrade,26
+,,,,,,,,,,,,,,,7Zee lv.26: Gold Slime Lamp Blueprint,26
+,,,,,,,,,,,,,,,7Zee lv.27: Goldleaf Chroma,27
+,,,,,,,,,,,,,,,7Zee lv.27: Astro Pearl Chroma,27
+,,,,,,,,,,,,,,,7Zee lv.27: Gold Warp Depot Blueprint,27
+,,,,,,,,,,,,,,,7Zee lv.28: Slime Trophy IV,28
+,,,,,,,,,,,,,,,7Zee lv.28: Gold Teleporter Blueprint,28

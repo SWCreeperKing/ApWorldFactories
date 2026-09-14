@@ -8,6 +8,7 @@ What does the factory do?
   - All item and location IDs start at 1
 
 The [WorldBuilder](https://github.com/SWCreeperKing/CreepyUtil/tree/master/CreepyUtil.Archipelago.WorldFactory) project is a template to be added to a project as a dependency
+Template is also available via [Nuget](<https://www.nuget.org/packages/CreepyUtil.Archipelago.WorldFactory.Template/0.1.0>)
 
 ApWorldFactories is all my apworlds and can be used as examples
 notable files:

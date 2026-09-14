@@ -22,41 +22,59 @@ public class SlimeRancher : BuildData
 
     public override Dictionary<string, string> SheetGids { get; } = new()
     {
-        ["GameData"] = "72469245", ["NewLogic"] = "2113673017"
+        ["GameData"] = "72469245", ["RegionData"] = "1103380852", ["Gadget"] = "1612770118",
+        ["LocationData"] = "1056788444",
     };
 
-    private UpgradeRowData[] Upgrades = [];
-    private CorporateRowData[] CorporateLocations = [];
-    private ItemAmountData[] ItemAmountData = [];
-    private RegionUnlockRowData[] RegionUnlockData = [];
     private RegionSector[] RegionSector = [];
     private InteractableSector[] InteractableSector = [];
+
+    private UpgradeRowData[] Upgrades = [];
+    private CorporateLocationRowData[] CorporateLocationData = [];
+    private ItemAmountData[] ItemAmountData = [];
+    private RegionUnlockRowData[] RegionUnlockData = [];
     private GateRowData[] GateData = [];
     private GordoRowData[] GordoData = [];
+    private GadgetRowData[] GadgetData = [];
+    private MaterialsRowData[] MaterialData = [];
 
     private Dictionary<string, int> NonProgressiveUsefulItemCount = [];
     private Dictionary<string, int> ProgressiveUsefulItemCount = [];
     private Dictionary<string, int> ProgressiveProgressionItemCount = [];
     private Dictionary<string, string> LocationMap = [];
+    private Dictionary<int, string[]> CorporateLocationMap = [];
 
     private string[] FillerItems = [];
     private string[] PlortTypes = [];
     private Dictionary<string, List<string>> NormalPlortPlacement = [];
     private Dictionary<string, List<string>> MarketPlortPlacement = [];
+    private Dictionary<string, string> InteractableLogic = [];
+    private Dictionary<string, string> InteractablePlacement = [];
 
     public override void RunShenanigans()
     {
-        GetSpreadsheet("NewLogic")
-           .ReadTable(out RegionRowData[] rawRegionData).SkipColumn()
+        SlimeRancherLogicHelper.ForCompiler = true;
+
+        GetSpreadsheet("LocationData")
+           .ReadTable(out InteractableRowData[] rawInteractableData).SkipColumn()
            .ReadTable(out SlimeRowData[] rawSlimeData).SkipColumn()
+           .ReadTable(out GordoData).SkipColumn()
+           .ReadTable(out Upgrades).SkipColumn()
+           .ReadTable(out CorporateLocationData);
+
+        GetSpreadsheet("RegionData")
+           .ReadTable(out RegionRowData[] rawRegionData).SkipColumn()
            .ReadTable(out LocationNameGroupData[] rawLocationGroups);
 
-        GetSpreadsheet()
-           .ReadTable(out InteractableRowData[] rawInteractableData).SkipColumn()
-           .ReadTable(new GateCreator(), out GateData).SkipColumn()
-           .ReadTable(new GordoCreator(), out GordoData).SkipColumn()
-           .ReadTable(new UpgradeCreator(), out Upgrades).SkipColumn()
-           .ReadTable(new CorporateCreator(), out CorporateLocations);
+        GetSpreadsheet("Gadget")
+           .ReadTable(out GadgetData).SkipColumn()
+           .ReadTable(out MaterialData);
+
+        GetSpreadsheet("GameData")
+           .ReadTable(out ItemAmountData).SkipColumn()
+           .ReadTable(out RegionUnlockData).SkipColumn()
+           .ReadTable(out GateData).SkipColumn()
+           .ReadTable(out CorporateRowData[] corporateData);
 
         LocationMap = rawLocationGroups.SelectMany(data => data.Locations.Select(reg => (reg, data.Group)))
                                        .ToDictionary(t => t.reg, t => t.Group);
@@ -86,10 +104,6 @@ public class SlimeRancher : BuildData
             rawInteractableData, data => new InteractableSector(data)
         );
 
-        GetSpreadsheet("GameData")
-           .ReadTable(out ItemAmountData).SkipColumn()
-           .ReadTable(out RegionUnlockData);
-
         NonProgressiveUsefulItemCount = ItemAmountData.Where(data => data.ProgType is "nonprog_useful")
                                                       .ToDictionary(data => data.Item, data => int.Parse(data.Count));
 
@@ -100,6 +114,14 @@ public class SlimeRancher : BuildData
                                                         .ToDictionary(data => data.Item, data => int.Parse(data.Count));
 
         FillerItems = [.. ItemAmountData.Where(data => data.ProgType is "filler").Select(data => data.Item)];
+
+        CorporateLocationMap = corporateData.GroupBy(line => line.Level)
+                                            .ToDictionary(
+                                                 line => line.Key, line => line.Select(l => l.Location).ToArray()
+                                             );
+
+        InteractableLogic = InteractableSector.ToDictionary(line => line.Id, line => line.GenRule());
+        InteractablePlacement = InteractableSector.ToDictionary(line => line.Id, line => line.Region);
 
         SlimeRancherLogicHelper.ForCompiler = false;
         WriteData(
@@ -138,7 +160,10 @@ public class SlimeRancher : BuildData
             rawInteractableData.Select(line => line.GetText).Distinct()
         );
         WriteData("Upgrades", Upgrades.Select(line => $"{line.Name};{line.Id}"));
-        WriteData("7Zee", CorporateLocations.Select(line => $"{line.Location};{line.Level}"));
+        WriteData(
+            "7Zee",
+            CorporateLocationMap.Keys.SelectMany(level => CorporateLocationMap[level].Select(loc => $"{loc};{level}"))
+        );
         WriteData("Gates", GateData.Select(data => $"{data.Id};{string.Join(';', data.RegionUnlock)}"));
 
         SlimeRancherLogicHelper.ForCompiler = true;
@@ -189,6 +214,15 @@ public class SlimeRancher : BuildData
                 "Plortsanity",
                 "Selling a plort for the first time will send a check\n\nThis will add approximately 16 checks",
                 new Choice(1, "off", "all_except_gold", "all")
+            )
+           .AddOption(
+                "Gadgetsanity", """
+                                A setting to included checks related to the lab gadgets
+
+                                - Blueprints as items
+                                - Finding the blueprints that allow you to craft the gadgets
+                                - Crafting the gadgets themselves after finding the blueprints
+                                """, new Toggle()
             )
            .AddOption(
                 "Fix Market Rates", """
@@ -253,10 +287,16 @@ public class SlimeRancher : BuildData
             )
            .AddLocations(
                 "corporate_locations",
-                CorporateLocations.Select(line => (string[])[line.Location, line.Area])
+                CorporateLocationMap.Values.SelectMany(locs => locs.Select(loc => (string[])[loc, "The Lab"]))
             )
-           .AddLocations("gates", GateData.Select(line => (string[])[line.Name, line.ToArea]))
-           .AddLocations("plorts", PlortTypes.Select(plort => $"Sell a {plort}"));
+           .AddLocations("gates", GateData.Select(line => (string[])[line.Name, line.FromArea]))
+           .AddLocations("plorts", PlortTypes.Select(plort => $"Sell a {plort}"))
+           .AddLocations(
+                "gadget_blueprints",
+                [.. GadgetData.Select(g => (string[])[g.Gadget, g.GetBlueprintRegion(InteractablePlacement)])]
+            )
+           .AddLocations("gadget_crafts", [.. GadgetData.Select(g => (string[])[$"Craft: {g.Gadget}", "The Lab"])])
+            ;
     }
 
     public override void Items(WorldFactory _, ItemFactory item_fact)
@@ -270,6 +310,10 @@ public class SlimeRancher : BuildData
            .AddItemCountVariable("progressive_useful_item_count", ProgressiveUsefulItemCount, Useful)
            .AddItemCountVariable("progressive_progression_item_count", ProgressiveProgressionItemCount, Progression)
            .AddItemListVariable("filler_items", Filler, true, true, FillerItems)
+           .AddItemListVariable(
+                "blueprint_items", Progression, true, true,
+                [.. GadgetData.Select(g => g.Blueprint.Trim()).Where(s => s is not "").DistinctBy(s => s)]
+            )
            .AddItem("Trap Slime", Trap)
            .AddItem("Casey's Letter", ProgressionSkipBalancing)
            .AddCreateItems(func =>
@@ -290,6 +334,10 @@ public class SlimeRancher : BuildData
                     .AddCode(CreateItemsFromMapCountGenCode("non_progressive_useful_items")).AddNewLine()
                     .AddCode(CreateItemsFromMapCountGenCode("progressive_useful_item_count")).AddNewLine()
                     .AddCode(CreateItemsFromMapCountGenCode("progressive_progression_item_count")).AddNewLine()
+                    .AddCode(
+                         new IfFactory("options.gadgetsanity")
+                            .AddCode(CreateItemsFromList("blueprint_items"))
+                     )
                     .AddCode(
                          new IfFactory("options.goal_type == 3").AddCode(
                              CreateItemsFromCountGenCode("options.mail_count", "Casey's Letter")
@@ -316,18 +364,53 @@ public class SlimeRancher : BuildData
     public override void Rules(WorldFactory _, RuleFactory rule_fact)
     {
         rule_fact
+           .AddCompoundLogicFunction("7zee", "has_7zeeLevel", "has[f\"7Zee Level {level}\"]", "level")
            .AddCompoundLogicFunction("cracker", "has_cracker", "hasN['Progressive Treasure Cracker', level]", "level")
            .AddCompoundLogicFunction("energy", "has_energy", "hasN['Progressive Max Energy', amount]", "amount")
            .AddCompoundLogicFunction("jetpack", "has_jetpack", "has['Progressive Jetpack']")
            .AddCompoundLogicFunction("region", "has_region", "has[f\"Region Unlock: {region}\"]", "region")
            .AddCompoundLogicFunction("gate", "has_gate", "has[f\"Opened Gate: {gate}\"]", "gate")
+           .AddCompoundLogicFunction(
+                "drill", "has_drill",
+                $"any[[{string.Join(',', GadgetData.Where(g => g.ExtractionType is ExtractionType.Drill).Select(g => $"\"Craft: {g.Gadget}\""))}]]"
+            )
+           .AddCompoundLogicFunction(
+                "pump", "has_pump",
+                $"any[[{string.Join(',', GadgetData.Where(g => g.ExtractionType is ExtractionType.Pump).Select(g => $"\"Craft: {g.Gadget}\""))}]]"
+            )
+           .AddCompoundLogicFunction(
+                "apiary", "has_apiary",
+                $"any[[{string.Join(',', GadgetData.Where(g => g.ExtractionType is ExtractionType.Apiary).Select(g => $"\"Craft: {g.Gadget}\""))}]]"
+            )
+           .AddLogicRules(
+                CorporateLocationMap.SelectMany(kv => kv.Value.Select(s => (s, $"7zee[{kv.Key}]")))
+                                    .ToDictionary(t => t.s, t => t.Item2)
+            )
            .AddLogicRules(
                 Upgrades.Where(up => up.UnlockNeed is not "").ToDictionary(
                     up => up.Name, up => $"region[\"{up.UnlockNeed}\"]"
                 )
             )
            .AddLogicRules(InteractableSector.ToDictionary(inter => inter.VagueName, inter => inter.GenRule()))
-           .AddLogicRules(PlortTypes.ToDictionary(plort => $"Sell a {plort}", plort => $"has[\"{plort}\"]"));
+           .AddLogicRules(PlortTypes.ToDictionary(plort => $"Sell a {plort}", plort => $"has[\"{plort}\"]"))
+           .AddLogicRules(
+                MaterialData.ToDictionary(
+                    mat => mat.Material,
+                    mat => mat.ExtractionType switch
+                    {
+                        ExtractionType.Drill => "drill", ExtractionType.Pump => "pump",
+                        ExtractionType.Apiary => "apiary", _ => "",
+                    }
+                )
+            )
+           .AddLogicRules(
+                GateData.ToDictionary(
+                    gate => gate.Name,
+                    gate
+                        => $"yaml[\"market_logic\"] or ({string.Join(" and ", gate.RegionUnlock.Select(r => $"region[\"{r}\"]"))})"
+                )
+            ).AddLogicRules(GadgetData.ToDictionary(g => g.Gadget, g => g.GetBlueprintLogic(InteractableLogic)))
+           .AddLogicRules(GadgetData.ToDictionary(g => $"Craft: {g.Gadget}", g => g.GetCraftLogic()));
     }
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
@@ -405,9 +488,14 @@ public class SlimeRancher : BuildData
                         condition: "world.options.enable_stylish_dlc_treasure_pods"
                     )
                    .AddLocationsFromList("corporate_locations", condition: "world.options.include_7z")
-                   .AddEventLocationsFromList(
-                        "corporate_locations", "f\"Bought: {location[0]}\"", "\"7Zee Bought\"",
-                        condition: "world.options.include_7z and world.options.goal_type == 1"
+                   .AddEventLocations(
+                        locations:
+                        [
+                            .. CorporateLocationData.Select(line => new EventLocationData(
+                                    line.Area, $"Bought Level: {line.Level}", $"7Zee Level {line.Level}", "''"
+                                )
+                            ),
+                        ]
                     )
                    .AddEventLocations(
                         locations:
@@ -424,6 +512,16 @@ public class SlimeRancher : BuildData
                         [
                             .. MarketPlortPlacement.SelectMany(kv => kv.Value.Select(slime => new EventLocationData(
                                         kv.Key, $"ML_{slime} ({kv.Key})", $"{slime} Plort", "''"
+                                    )
+                                )
+                            ),
+                        ]
+                    )
+                   .AddEventLocations(
+                        "options.gadgetsanity",
+                        [
+                            .. MaterialData.SelectMany(mat => mat.Locations.Select(l => new EventLocationData(
+                                        l, mat.Material, mat.Material, mat.Material
                                     )
                                 )
                             ),
@@ -448,7 +546,9 @@ public class SlimeRancher : BuildData
     {
         var rule_fact = world_fact.GetRuleFactory();
         init_fact
-           .UseItemGroups(new Dictionary<string, string> { ["unlocks"] = "region_unlocks" })
+           .UseItemGroups(
+                new Dictionary<string, string> { ["unlocks"] = "region_unlocks", ["blueprints"] = "blueprint_items" }
+            )
            .UseLocationGroups(
                 InteractableSector.Select(data => (LocationMap[data.Region], data.VagueName))
                                   .GroupBy(t => t.Item1)
@@ -482,7 +582,7 @@ public class SlimeRancher : BuildData
                 method.AddCode(
                     new MatchFactory("self.options.goal_type")
                        .AddCase("0", CreateGoalCondition("hasN[\"Note Read\", 30]", rule_fact))
-                       .AddCase("1", CreateGoalCondition("hasN[\"7Zee Bought\", len(corporate_locations)]", rule_fact))
+                       .AddCase("1", CreateGoalCondition($"7zee[{CorporateLocationMap.Keys.Max()}]", rule_fact))
                        .AddCase("2", CreateGoalCondition("all[credits_unlocks]", rule_fact))
                        .AddCase("3", CreateGoalCondition("hasN[\"Casey's Letter\", options.mail_count]", rule_fact))
                 )
@@ -511,10 +611,10 @@ public class SlimeRancher : BuildData
                    )
                )
               .ForEachOf(
-                   CorporateLocations,
+                   CorporateLocationData,
                    (b, line) => b.AddEventLocation(
-                       line.Area, getRule, $"Bought: {line.Location}", line.Location,
-                       "7Zee Bought"
+                       line.Area, getRule, $"Bought Level: {line.Level}", "",
+                       $"7Zee Level {line.Level}"
                    )
                )
               .ForEachOf(
@@ -530,6 +630,12 @@ public class SlimeRancher : BuildData
                    )
                )
               .ForEachOf(PlortTypes, (b, plort) => b.AddLocation("Menu", getRule, $"Sell a {plort}"))
+              .ForEachOf(
+                   MaterialData,
+                   (b, mat) => b.ForEachOf(
+                       mat.Locations, (_, l) => b.AddEventLocation(l, getRule, mat.Material, mat.Material, mat.Material)
+                   )
+               )
               .GenString();
     }
 }

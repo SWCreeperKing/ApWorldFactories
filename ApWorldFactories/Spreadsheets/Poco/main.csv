@@ -1,13 +1,13 @@
 Area,Connects from,Requirements,Quest Completion,,Location,Area,Requirements,Quest Completion,Id,,Item,,Npc Quests,Requirements,Area,Quest Completion,,Item,Blocker,,Achievement,Area,Quest Completion
 Gripp's Hoard,,,,,Pickup Axe,Gripp's Hoard,,,Axe,,Axe,,Nari,Magenta Blossom,Garden,,,Cymbal Button,Pickup Rope,,Honk-Happy,Mountain,
 Junk Rivers,Gripp's Hoard,Axe,,,Pickup Photo #5,Gripp's Hoard,,,pic.5,,Cog,,Ojet,"Red Paint, Blue Paint, Green Paint",Water Gate,,,Dog Treat,Pickup Dog Treat,,Worm Crime,Tunnels,
-Launch Pad,Junk Rivers,,,,Rat Skull #1,Junk Rivers,,,skull.1,,Coal,,Gultch,Cooked Fish Dinner,Mountain,,,Pacifier,Pickup Pacifier,,Clownhood Confirmed,Mountain Top,Jaz
+Launch Pad,Junk Rivers,,,,Rat Skull #1,Junk Rivers,,,skull.1,,Coal,,Gultch,"Cooked Fish Dinner, Coal, Match, Frying Pan, Beetle Milk, Fish, Carrot",Mountain,,,Pacifier,Pickup Pacifier,,Clownhood Confirmed,Mountain Top,Jaz
 Tunnels,Launch Pad,,,,Pickup Cog,Launch Pad,,,Cog,,Carrot,,Jaz,"Pacifier, Bug Steak, Dog Treat",Lake Path,Cerberus,,Bug Steak,Pickup Bug Steak,,,,
 Garden,Launch Pad,Coin,,,Pickup Coal,Tunnels,,,Coal,,Worm Castings,,Dungsworth,Cymbal Button,Lake Path,,,Cooked Fish Dinner,Craft Cooked Fish Dinner,,,,
 Lake Path,Launch Pad,,,,Pickup Photo #3,Tunnels,,,pic.3,,Fancy Button,,Weevilton,"Fancy Button, Cute Button, Basic Button",Mountain Top,,,Red Paint,Craft Red Paint,,,,
 Water Gate,Lake Path,Valve Handle,,,Rat Skull #6,Tunnels,,,skull.6,,Coin,,Scuttlesby,,Backrooms #3,,,Blue Paint,Craft Blue Paint,,,,
 Garden,Water Gate,,,,Pickup Carrot,Tunnels,,,Carrot,,Cute Button,,Cerberus,"Pacifier, Bug Steak, Dog Treat",Tunnels,"Dungsworth, Weevilton, Scuttlesby",,Green Paint,Craft Green Paint,,,,
-Mountain,Launch Pad,Potato Battery,,,Pickup Worm Castings,Tunnels,,,Worm Castings,,Feather,,,,,,,,,,,,
+Mountain,Launch Pad,Potato Battery,,,Pickup Worm Castings,Tunnels,,,Worm Castings,,Feather,,,,,,,Old Key,Rat Skull #1,,,,
 Fisherman's Island,Lake Path,Spoon,,,Pickup Fancy Button,Tunnels,,,Fancy Button,,Snail Slime,,,,,,,,,,,,
 Backrooms #1,Gripp's Hoard,Old Key,,,Pickup Coin,Launch Pad,,,Coin,,Valve Handle,,,,,,,,,,,,
 Backrooms #2,Backrooms #1,Bone Key,,,Pickup Cute Button,Garden,,,Cute Button,,Potato Battery,,,,,,,,,,,,

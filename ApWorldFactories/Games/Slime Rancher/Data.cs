@@ -100,7 +100,6 @@ public readonly struct GordoRowData(DataArray param)
     [Mark] public readonly string Contents = param;
     [Mark] public readonly string TeleporterLocation = param;
     [Mark] public readonly string JetpackRequirement = param;
-    [Mark] public readonly string NormalFoodRequirement = param;
     [Mark] public readonly string FavoriteFood = param;
     public string GetText => $"{Id};{Name};Favorite: {FavoriteFood}";
 }
@@ -114,14 +113,17 @@ public readonly struct UpgradeRowData(DataArray param)
     [Mark] public readonly string UnlockNeed = param;
 }
 
+public readonly struct CorporateLocationRowData(DataArray param)
+{
+    [Mark] public readonly int Level = param;
+    [Mark] public readonly string Price = param;
+    [Mark] public readonly string Area = param;
+}
+
 public readonly struct CorporateRowData(DataArray param)
 {
     [Mark] public readonly string Location = param.Get().Trim();
-    [Mark] public readonly int Level = param[0] != "" ? int.Parse(param[0].Split(':')[0].Split('.')[1]) : -1;
-    [Mark] public readonly string Price = param;
-    [Mark] public readonly string Area = param;
-
-    public static implicit operator LocationData(CorporateRowData data) => new(data.Area, data.Location);
+    [Mark] public readonly int Level = param;
 }
 
 public readonly struct ItemAmountData(DataArray param)
@@ -141,27 +143,56 @@ public readonly struct RegionUnlockRowData(DataArray param)
 
 public readonly struct GadgetRowData(DataArray param)
 {
-    
+    public enum GadgetUnlockType
+    {
+        None, TreasurePod, Corp7Zee,
+        RegionUnlock,
+    }
+
+    [Mark] public readonly string Gadget = param;
+    [Mark] public readonly ExtractionType ExtractionType = param.GetEnum(ExtractionType.None);
+    [Mark] public readonly string GadgetId = param;
+    [Mark] public readonly GadgetUnlockType UnlockType = param.GetEnum(GadgetUnlockType.None);
+    [Mark] public readonly string[] CraftingMaterials = param;
+    [Mark] public readonly int ShopPrice = param;
+    [Mark] public readonly int Corp7ZeeLevel = param;
+    [Mark] public readonly string TreasurePodId = param;
+    [Mark] public readonly string RegionUnlock = param;
+    [Mark] public readonly string SlimeGate = param;
+    [Mark] public readonly string DLC = param;
+    [Mark] public readonly string Blueprint = param;
+
+    public string GetBlueprintLogic(Dictionary<string, string> podIdToPodRules)
+    {
+        List<string> logic = [];
+        switch (UnlockType)
+        {
+            case GadgetUnlockType.TreasurePod: logic.Add($"({podIdToPodRules[TreasurePodId]})"); break;
+            case GadgetUnlockType.Corp7Zee: logic.Add($"7zee[{Corp7ZeeLevel}]"); break;
+            case GadgetUnlockType.RegionUnlock
+                when RegionUnlock.Trim() is not "": logic.Add($"region[\"{RegionUnlock}\"]"); break;
+        }
+        if (SlimeGate.Trim() is not "") logic.Add($"gate[\"{SlimeGate}\"]");
+        return string.Join(" and ", logic);
+    }
+
+    public string GetCraftLogic()
+    {
+        List<string> logic = [.. CraftingMaterials.Select(mat => $"has[\"{mat}\"]")];
+        if (Blueprint.Trim() is not "") logic.Add($"has[\"{Blueprint}\"]");
+        return string.Join(" and ", logic);
+    }
+
+    public string GetBlueprintRegion(Dictionary<string, string> podIdToPodRegion)
+        => UnlockType is GadgetUnlockType.TreasurePod ? podIdToPodRegion[TreasurePodId] : "The Lab";
 }
 
-public class GateCreator : DataCreator<GateRowData>
+public readonly struct MaterialsRowData(DataArray param)
 {
-    public override bool IsValidData(GateRowData t) => t.Id != "";
-}
-
-public class GordoCreator : DataCreator<GordoRowData>
-{
-    public override bool IsValidData(GordoRowData t) => t.Id != "";
-}
-
-public class UpgradeCreator : DataCreator<UpgradeRowData>
-{
-    public override bool IsValidData(UpgradeRowData t) => t.Name != "";
-}
-
-public class CorporateCreator : DataCreator<CorporateRowData>
-{
-    public override bool IsValidData(CorporateRowData t) => t.Location != "";
+    [Mark] public readonly string Material = param;
+    [Mark] public readonly string Id = param;
+    [Mark] public readonly string[] Locations = param;
+    [Mark] public readonly ExtractionType ExtractionType = param.GetEnum(ExtractionType.None);
 }
 
 public enum ExtractionType
