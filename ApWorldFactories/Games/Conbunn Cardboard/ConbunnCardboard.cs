@@ -151,6 +151,7 @@ public class ConbunnCardboard : BuildData
                 new Dictionary<string, string> { ["uuid"] = "str(shuffled)" },
                 method => method.AddCode(CreateUniqueId())
             )
+           .UseGetFillerItemName("Cardboard Coin")
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
     }

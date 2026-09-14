@@ -591,6 +591,7 @@ public class SlimeRancher : BuildData
                 new Dictionary<string, string> { ["uuid"] = "str(shuffled)" },
                 method => method.AddCode(CreateUniqueId())
             )
+           .UseGetFillerItemNames(FillerItems)
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
     }

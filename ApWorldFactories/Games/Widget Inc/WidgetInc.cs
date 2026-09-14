@@ -116,7 +116,7 @@ public class WidgetInc : BuildData
                 method
                    .AddCode(CreateItemsFromMapCountGenCode("progressive_tier"))
                    .AddCode(CreateItemsFromClassificationList(exclusionCondition: string.Join(" or ",
-                        ((string[])["Widget Factor", "Progressive Tier", "Motivational Poster"]).Select(
+                        ((string[])["Widget Factory", "Progressive Tier", "Motivational Poster"]).Select(
                             s => $"item == \"{s}\""))))
                    .AddCode(CreateItemsFillRemainingWithItem("Motivational Poster")));
     }
@@ -174,6 +174,7 @@ public class WidgetInc : BuildData
             })
            .UseCreateRegions()
            .AddCreateItems()
+           .UseGetFillerItemName("Motivational Poster")
            .UseSetRules(method => method
                                  .AddCode("player = self.player")
                                  .AddCode(CreateGoalCondition("RocketSegment", world_fact.GetRuleFactory())))

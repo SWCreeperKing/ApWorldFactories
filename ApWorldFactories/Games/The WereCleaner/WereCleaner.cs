@@ -126,6 +126,7 @@ public class WereCleaner : BuildData
            .UseSetRules(method => method
                .AddCode(CreateGoalCondition(StateHas("Nights Survived", "7", returnValue: false)))
             )
+           .UseGetFillerItemName("Floor Penny")
            .UseFillSlotData(new Dictionary<string, string> { ["Kyle"] = "str(\"Best Boi\")" })
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));

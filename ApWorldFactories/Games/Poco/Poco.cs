@@ -116,6 +116,7 @@ public class Poco : BuildData
                 new Dictionary<string, string> { ["uuid"] = "str(shuffled)" },
                 method => method.AddCode(CreateUniqueId())
             )
+           .UseGetFillerItemName("Clown Nose")
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
     }

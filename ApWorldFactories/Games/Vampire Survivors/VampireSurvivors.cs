@@ -41,6 +41,11 @@ public class VampireSurvivors : BuildData
     public Dictionary<string, string[]> EnemyHurryMap = [];
     public List<string> EnemiesRequireArcana = [];
 
+    public string[] FillerItems =
+    [
+        "Empty Coffins", "Floor Chickens", "Suspiciously Clean Skull", "Easter Eggs", "Progressive Nothing"
+    ];
+
     public override void RunShenanigans()
     {
         GetSpreadsheet()
@@ -447,10 +452,7 @@ public class VampireSurvivors : BuildData
                       )
                   )
                  .AddIndependentVariable(
-                      new Variable(
-                          "filler_items",
-                          "['Empty Coffins', 'Floor Chickens', 'Suspiciously Clean Skull', 'Easter Eggs', 'Progressive Nothing']"
-                      )
+                      new Variable("filler_items", $"[{string.Join(',', FillerItems.Select(s => $"\"{s}\""))}]")
                   )
                  .AddToFinalLocationList("**{item: ItemClassification.progression for item in unlock_character_items}")
                  .AddToFinalLocationList("**{item: ItemClassification.progression for item in unlock_stage_items}")
@@ -698,6 +700,7 @@ public class VampireSurvivors : BuildData
                     ["ending_stage_count"] = "int(self.ending_stage_count)",
                 }
             )
+           .UseGetFillerItemNames(FillerItems)
            .InjectCodeIntoWorld(world =>
                 world.AddVariable(new Variable("gen_puml", "False"))
                      .AddVariable(

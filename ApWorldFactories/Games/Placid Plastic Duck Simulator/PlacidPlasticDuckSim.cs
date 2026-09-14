@@ -118,6 +118,7 @@ public class PlacidPlasticDuckSim : BuildData
            .AddCreateItems()
            .UseSetRules(method => method.AddCode(CreateGoalCondition("col[10]", world_fact.GetRuleFactory())))
            .UseFillSlotData()
+           .UseGetFillerItemName("Random Duck")
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
     }
