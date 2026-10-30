@@ -38,6 +38,7 @@ edge [fontname = "monocraft"];"Menu" [label=<<table border="2" cellborder="1" ce
 "GUPPI Ravine" -> "Ripple Reef" [label="has['Ripple Reef']" color="#00008844"]
 "GUPPI Ravine" -> "North GUPPI Ravine" [label="depth and has['North GUPPI Ravine']" color="#00008844"]
 "GUPPI Ravine" -> "GUPPI Campus" [label="depth and has['GUPPI Campus']" color="#00008844"]
+"GUPPI Ravine" -> "Goddle Grotto Entrance" [label="depth and has['Goddle Grotto Entrance']" color="#00008844"]
 "GUPPI Campus" -> "GUPPI Ravine" [label="depth and has['GUPPI Ravine']" color="#00008844"]
 "GUPPI Campus" -> "North GUPPI Ravine" [label="depth and has['North GUPPI Ravine']" color="#00008844"]
 "GUPPI Campus" -> "North of GUPPI Campus" [label="depth and has['North of GUPPI Campus']" color="#00008844"]
@@ -105,6 +106,7 @@ edge [fontname = "monocraft"];"Menu" [label=<<table border="2" cellborder="1" ce
 "Goddle Grotto Entrance" -> "Goddle Grotto" [label="depth and has['Goddle Grotto']" color="#00008844"]
 "Goddle Grotto Entrance" -> "North of GUPPI Campus" [label="depth and has['North of GUPPI Campus']" color="#00008844"]
 "Goddle Grotto Entrance" -> "GUPPI Campus" [label="depth and has['GUPPI Campus']" color="#00008844"]
+"Goddle Grotto Entrance" -> "GUPPI Ravine" [label="depth and has['GUPPI Ravine']" color="#00008844"]
 "Goddle Grotto" -> "Goddle Grotto Entrance" [label="depth and has['Goddle Grotto Entrance']" color="#00008844"]
 
 
