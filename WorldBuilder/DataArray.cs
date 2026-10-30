@@ -19,7 +19,7 @@ public class DataArray(string[] param)
 
     public TEnum GetEnum<TEnum>(TEnum def, bool ignoreCase = true, bool move = true) where TEnum : struct
     {
-        var str = Get(move).Replace(" ", "").Replace(",", "").Replace("&", "And");
+        var str = Get(move).Replace(" ", "").Replace(",", "").Replace("&", "And").Replace('/', '_');
         return !Enum.TryParse(typeof(TEnum), str, ignoreCase, out var res) ? def : (TEnum)res;
     }
 

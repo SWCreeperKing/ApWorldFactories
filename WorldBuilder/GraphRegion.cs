@@ -69,11 +69,11 @@ public class GraphBuilder(string gameName)
         return this;
     }
 
-    public string GenString()
+    public string GenString(string rankDir = "TB")
     {
         StringBuilder sb = new();
 
-        sb.Append($"digraph {GameName.Replace(" ", "_")} {{\nconcentrate=True\nrankdir=TB;\nnode [shape=none]\ngraph [fontname = \"{Font}\"];\nnode [fontname = \"{Font}\"];\nedge [fontname = \"{Font}\"];");
+        sb.Append($"digraph {GameName.Replace(" ", "_")} {{\nconcentrate=True\nrankdir={rankDir};\nnode [shape=none]\ngraph [fontname = \"{Font}\"];\nnode [fontname = \"{Font}\"];\nedge [fontname = \"{Font}\"];");
 
         var regions = Regions.Values.ToArray();
         foreach (var graphRegion in regions) sb.Append(graphRegion.GenNode()).Append('\n');

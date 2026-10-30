@@ -1,4 +1,5 @@
-﻿using ApWorldFactories.Graphviz;
+﻿using System.Security.Cryptography.X509Certificates;
+using ApWorldFactories.Graphviz;
 using CreepyUtil.Archipelago.WorldFactory;
 using static ApWorldFactories.PathConstants;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
@@ -15,6 +16,7 @@ public class Loddlenaut : BuildData
     public override string WorldVersion => "0.1.0";
 
     public RegionRowData[] RegionRowData = [];
+    public RegionRowData[] BiomeRowData = [];
     public RegionConnectionsRowData[] RegionConnectionsRowData = [];
     public ItemsRowData[] ItemsRowData = [];
     public PlantRowData[] PlantRowData = [];
@@ -39,18 +41,33 @@ public class Loddlenaut : BuildData
 
         RegionIdMap = RegionRowData.ToDictionary(data => data.Id, data => data.Region);
         RegionIdRequiresDepth = RegionRowData.ToDictionary(data => data.Id, data => data.RequiresDepth);
+        BiomeRowData = [.. RegionRowData.Where(data => data.IsBiome)];
 
-        var locatedItems = RegionRowData.SelectMany(data => data.AvailableUpgrades).ToHashSet();
-        ItemsRowData = [.. ItemsRowData.Where(data => !locatedItems.Contains(data.ItemName))];
+        WriteData("Biomes", BiomeRowData.Select(b => b.Region));
+        WriteData("RegionIdMap", RegionIdMap.Select(kv => $"{kv.Key}|{kv.Value}"));
+        WriteData("BadgeIdMap", BadgeRowData.Select(b => $"{b.Name}|{b.Id}"));
+        WriteData("ItemIdMap", ItemsRowData.Select(i => $"{i.ItemName}|{i.Id}"));
+        WriteData("CookingIdMap", CookingRowData.Select(c => $"{c.Food}|{c.Id}"));
+        WriteData("EvolutionIdMap", EvolutionRowData.Select(e => $"{e.Name}|{e.LoddleId}"));
+    }
+
+    public override void Options(WorldFactory _, OptionsFactory options_fact)
+    {
+        options_fact
+           .AddOption("Evolutionsanity", "Loddle Evolutions are checks", new Toggle())
+           .AddOption("Cooksanity", "Cooking Recipes are checks", new Toggle())
+           .AddCheckOptions();
     }
 
     public override void Locations(WorldFactory _, LocationFactory location_fact)
     {
+        int[] percentArr = [25, 50, 75, 100];
         location_fact
            .AddLocations(
                 "clean_biomes",
-                RegionRowData.Where(data => data.IsBiome)
-                             .Select(data => (string[])[$"Clean {data.Region}", data.Region])
+                BiomeRowData.SelectMany(data
+                    => percentArr.Select(i => (string[])[$"Clean {data.Region} {i}%", data.Region])
+                )
             ).AddLocations(
                 "find_biomes",
                 RegionRowData.Select(data => (string[])[$"Discovered {data.Region}", data.Region])
@@ -65,7 +82,9 @@ public class Loddlenaut : BuildData
                 ]
             )
            .AddLocations("badges", BadgeRowData.Select(data => (string[])[data.Name, RegionIdMap[data.RegionId]]))
-           .AddLocations("evolutions", EvolutionRowData.Select(data => (string[])[data.Name, "Evolutions"]))
+           .AddLocations(
+                "evolutions", EvolutionRowData.Select(data => (string[])[$"Evolve: {data.Name}", "Evolutions"])
+            )
            .AddLocations("recipes", CookingRowData.Select(data => (string[])[$"Cook: {data.Food}", "Cooking"]));
     }
 
@@ -74,16 +93,31 @@ public class Loddlenaut : BuildData
         item_fact.ForEachOf(
                       ItemsRowData.GroupBy(data => data.Classification),
                       (b, group) => b.AddItemCountVariable(
-                          $"{group.Key}_items".ToLower(), group.ToDictionary(data => data.ItemName, data => data.Count),
+                          $"{group.Key}_items".ToLowerInvariant(),
+                          group.ToDictionary(data => data.ItemName, data => data.Count),
                           group.Key
                       )
                   )
-                 .AddItem("Potato Chip", ItemFactory.ItemClassification.Filler)
+                 .AddItemListVariable(
+                      "region_unlocks", ItemFactory.ItemClassification.Progression,
+                      list:
+                      [
+                          .. RegionRowData.Where(r => r.Region is not "Home Cave"
+                                                      && RegionConnectionsRowData.Where(c => c.B == r.Id)
+                                                         .All(c => c.A is not 3)
+                                           )
+                                          .Select(data => $"{data.Region}")
+                      ]
+                  )
                  .AddCreateItems(method =>
                       method
+                         .AddCode(
+                              // CreateItemsFromList("region_unlocks", exclusionCondition: "item == world.starting_region")
+                              CreateItemsFromList("region_unlocks")
+                          )
                          .AddCode(CreateItemsFromMapCountGenCode("progression_items"))
                          .AddCode(CreateItemsFromMapCountGenCode("useful_items"))
-                         .AddCode(CreateItemsFillRemainingWithItem("Potato Chip"))
+                         .AddCode(CreateItemsFillRemainingWith("list(filler_items.keys())"))
                   );
     }
 
@@ -97,8 +131,9 @@ public class Loddlenaut : BuildData
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
         region_fact
-           .AddRegions(regions: ["Upgrades", "Evolutions", "Cooking"])
-           .AddRegions(regions: [.. RegionRowData.Select(data => data.Region)])
+           .AddRegions(regions: ["Upgrades", .. RegionRowData.Select(data => data.Region)])
+           .AddRegion("Cooking", "options.cooksanity")
+           .AddRegion("Evolutions", "options.evolutionsanity")
            .ForEachOf(
                 RegionConnectionsRowData, (b, data) =>
                 {
@@ -117,16 +152,25 @@ public class Loddlenaut : BuildData
            .AddLocationsFromList("find_biomes")
            .AddLocationsFromList("upgrades")
            .AddLocationsFromList("badges")
+           .AddLocationsFromList("recipes")
            .AddLocationsFromList("evolutions")
            .AddEventLocations(
                 locations:
                 [
-                    .. RegionRowData
-                       .SelectMany(data => data.Plants.Select(plant => new EventLocationData(
-                                    data.Region, $"Pick: {plant}", plant, $"Pick: {plant}"
-                                )
+                    .. BiomeRowData.Select(biome => new EventLocationData(
+                            biome.Region, $"Clean the {biome.Region}", "Biomes Cleaned"
+                        )
+                    ),
+                ]
+            )
+           .AddEventLocations(
+                locations:
+                [
+                    .. RegionRowData.SelectMany(data => data.Plants.Select(plant => new EventLocationData(
+                                data.Region, $"Event Pick: {plant} ({data.Region})", plant
                             )
-                        ),
+                        )
+                    ),
                 ]
             )
            .AddEventLocationsFromList("recipes", item: "location[0].replace('Cook: ', '')");
@@ -138,7 +182,8 @@ public class Loddlenaut : BuildData
             List<string> rules = [];
 
             if (RegionIdRequiresDepth[regionB]) rules.Add("depth");
-            if (RegionIdMap[regionB] is not "Home Cave") rules.Add($"has[\"Region: {RegionIdMap[regionB]}\"]");
+            if (RegionIdMap[regionB] is not "Home Cave" && RegionIdMap[regionA] is not "Home Cave")
+                rules.Add($"has[\"{RegionIdMap[regionB]}\"]");
 
             if (rules.Count != 0)
                 region_fact.AddConnectionCompiledRule(
@@ -151,14 +196,29 @@ public class Loddlenaut : BuildData
     public override void Init(WorldFactory _, WorldInitFactory init_fact)
     {
         init_fact
-           .UseInitFunction()
-           .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
+            // .UseInitFunction(method => method.AddCode(new Variable("self.starting_region", "\"\"")))
+           .UseInitFunction(method => method.AddCode(new Variable("self.starting_region", "\"\"")))
+           .AddUseUniversalTrackerPassthrough(
+                // method =>
+                //     method.AddCode(CreateUtPassthrough("\"starting_region\"", "self.starting_region")),
+                yamlNeeded: false
+            )
+            // .UseGenerateEarly(method => method.AddCode(CreatePushPrecollected("self.starting_region", stringify: false)))
            .UseCreateRegions()
            .AddCreateItems()
            .UseSetRules(method => method
-               .AddCode(CreateGoalCondition(StateHas("Nights Survived", "7", returnValue: false)))
+               .AddCode(CreateGoalCondition(StateHas("Biomes Cleaned", $"{BiomeRowData.Length}", returnValue: false)))
             )
-           .UseFillSlotData()
+           .UseFillSlotData(
+                new Dictionary<string, string> { ["uuid"] = "str(shuffled)" },
+                method => method.AddCode(CreateUniqueId())
+            )
+           .UseGetFillerItemNames(
+                [
+                    .. ItemsRowData.Where(i => i.Classification is ItemFactory.ItemClassification.Filler)
+                                   .Select(i => i.ItemName)
+                ]
+            )
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
            .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
     }
@@ -203,7 +263,8 @@ public class Loddlenaut : BuildData
             List<string> rules = [];
 
             if (RegionIdRequiresDepth[regionB]) rules.Add("depth");
-            if (RegionIdMap[regionB] is not "Home Cave") rules.Add($"has[\"Region: {RegionIdMap[regionB]}\"]");
+            if (RegionIdMap[regionB] is not "Home Cave" && RegionIdMap[regionA] is not "Home Cave")
+                rules.Add($"has[\"{RegionIdMap[regionB]}\"]");
 
             b.AddConnection(RegionIdMap[regionA], RegionIdMap[regionB], string.Join(" and ", rules));
         }

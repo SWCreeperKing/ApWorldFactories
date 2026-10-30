@@ -23,6 +23,7 @@ public readonly struct ItemsRowData(DataArray param)
 {
     [Mark] public readonly string ItemName = param;
     [Mark] public readonly bool IsUpgrade = param;
+    [Mark] public readonly int Id = param;
     [Mark] public readonly int Count = param;
     [Mark] public readonly ItemClassification Classification = param.GetEnum(ItemClassification.Filler);
 }
@@ -36,6 +37,7 @@ public readonly struct BadgeRowData(DataArray param)
 {
     [Mark] public readonly string Name = param;
     [Mark] public readonly int RegionId = param;
+    [Mark] public readonly int Id = param;
 }
 
 public readonly struct CookingRowData(DataArray param)
@@ -43,6 +45,7 @@ public readonly struct CookingRowData(DataArray param)
     [Mark] public readonly string Food = param;
     [Mark] public readonly string[] Plants = param;
     [Mark] public readonly string[] Foods = param;
+    [Mark] public readonly int Id = param;
 
     public string GenRule() => string.Join(" and ",  Plants.Concat(Foods).Select(ingredient => $"has[\"{ingredient}\"]"));
 }
@@ -52,6 +55,7 @@ public readonly struct EvolutionRowData(DataArray param)
     [Mark] public readonly string Name = param;
     [Mark] public readonly string[] Foods = param;
     [Mark] public readonly string[] Plants = param;
+    [Mark] public readonly int LoddleId = param;
     
     public string GenRule() => string.Join(" and ",  Plants.Concat(Foods).Select(ingredient => $"has[\"{ingredient}\"]"));
 }
