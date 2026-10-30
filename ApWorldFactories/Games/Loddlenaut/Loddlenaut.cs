@@ -123,7 +123,14 @@ public class Loddlenaut : BuildData
 
     public override void Rules(WorldFactory _, RuleFactory rule_fact)
     {
+        int[] percentArr = [25, 50, 75, 100];
         rule_fact.AddCompoundLogicFunction("depth", "has_depth", "has[\"Depth Resistance Module\"]")
+                 .AddLogicRules(
+                      BiomeRowData
+                         .SelectMany(data
+                              => percentArr.Select(i => (string[])[$"Clean {data.Region} {i}%", data.GenRule()])
+                          ).ToDictionary(a => a[0], a => a[1])
+                  )
                  .AddLogicRules(CookingRowData.ToDictionary(data => $"Cook: {data.Food}", data => data.GenRule()))
                  .AddLogicRules(EvolutionRowData.ToDictionary(data => data.Name, data => data.GenRule()));
     }
@@ -158,7 +165,7 @@ public class Loddlenaut : BuildData
                 locations:
                 [
                     .. BiomeRowData.Select(biome => new EventLocationData(
-                            biome.Region, $"Clean the {biome.Region}", "Biomes Cleaned"
+                            biome.Region, $"Clean the {biome.Region}", "Biomes Cleaned", $"Clean {biome.Region} 100%"
                         )
                     ),
                 ]

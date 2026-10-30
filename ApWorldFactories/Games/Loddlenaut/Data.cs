@@ -11,6 +11,8 @@ public readonly struct RegionRowData(DataArray param)
     [Mark] public readonly string[] Plants = param;
     [Mark] public readonly string[] AvailableUpgrades = param;
     [Mark] public readonly string[] CleanRequirements = param;
+    
+    public string GenRule() => string.Join(" and ",  Plants.Concat(CleanRequirements).Select(ingredient => $"has[\"{ingredient}\"]"));
 }
 
 public readonly struct RegionConnectionsRowData(DataArray param)
