@@ -139,8 +139,7 @@ public class Loddlenaut : BuildData
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
         region_fact
-           .AddRegions(regions: ["Upgrades", .. RegionRowData.Select(data => data.Region)])
-           .AddRegion("Cooking", "options.cooksanity")
+           .AddRegions(regions: ["Upgrades", "Cooking", .. RegionRowData.Select(data => data.Region)])
            .AddRegion("Evolutions", "options.evolutionsanity")
            .ForEachOf(
                 RegionConnectionsRowData, (b, data) =>
@@ -150,17 +149,14 @@ public class Loddlenaut : BuildData
                 }
             )
            .AddConnection("Menu", "Upgrades")
-           .AddConnectionCompiledRule(
-                "Menu", "Evolutions",
-                $"any[[{string.Join(", ", RegionRowData.Where(data => data.IsBiome).Select(data => $"\"{data.Region}\""))}]]"
-            )
+           .AddConnection("Menu", "Evolutions")
            .AddConnectionCompiledRule("Menu", "Cooking", "has[\"Cooking Module\"]")
            .AddConnection("Menu", "Home Cave")
            .AddLocationsFromList("clean_biomes")
            .AddLocationsFromList("find_biomes")
            .AddLocationsFromList("upgrades")
            .AddLocationsFromList("badges")
-           .AddLocationsFromList("recipes")
+           .AddLocationsFromList("recipes", condition:"options.cooksanity")
            .AddLocationsFromList("evolutions")
            .AddEventLocations(
                 locations:
