@@ -11,8 +11,12 @@ public readonly struct RegionRowData(DataArray param)
     [Mark] public readonly string[] Plants = param;
     [Mark] public readonly string[] AvailableUpgrades = param;
     [Mark] public readonly string[] CleanRequirements = param;
-    
-    public string GenRule() => string.Join(" and ",  Plants.Concat(CleanRequirements).Select(ingredient => $"has[\"{ingredient}\"]"));
+    [Mark] public readonly string[] RegionRequirements = param;
+
+    public string GenRule() => string.Join(
+        " and ",
+        ((string[])[.. Plants, .. CleanRequirements]).Select(item => $"has[\"{item}\"]")
+    );
 }
 
 public readonly struct RegionConnectionsRowData(DataArray param)
@@ -49,7 +53,8 @@ public readonly struct CookingRowData(DataArray param)
     [Mark] public readonly string[] Foods = param;
     [Mark] public readonly int Id = param;
 
-    public string GenRule() => string.Join(" and ",  Plants.Concat(Foods).Select(ingredient => $"has[\"{ingredient}\"]"));
+    public string GenRule()
+        => string.Join(" and ", Plants.Concat(Foods).Select(ingredient => $"has[\"{ingredient}\"]"));
 }
 
 public readonly struct EvolutionRowData(DataArray param)
@@ -58,6 +63,7 @@ public readonly struct EvolutionRowData(DataArray param)
     [Mark] public readonly string[] Foods = param;
     [Mark] public readonly string[] Plants = param;
     [Mark] public readonly int LoddleId = param;
-    
-    public string GenRule() => string.Join(" and ",  Plants.Concat(Foods).Select(ingredient => $"has[\"{ingredient}\"]"));
+
+    public string GenRule()
+        => string.Join(" and ", Plants.Concat(Foods).Select(ingredient => $"has[\"{ingredient}\"]"));
 }

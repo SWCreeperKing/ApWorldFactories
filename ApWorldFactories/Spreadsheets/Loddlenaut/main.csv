@@ -1,0 +1,39 @@
+Region,Id,Req. Depth,Has Biome,Plants,Avil. Upgrades,Clean Requirements,Region Requirements,,A,B,,Item,Is Upgrade,ID,Count,Type,,Plant,,Name,Region,Id,,Food,Recipe (plants),Recipe (food),Id,,Name,Food,Plant,ID,IS A GUESS
+GUPPI Ravine,0,TRUE,FALSE,"Tubey Melon, Pearl Berries","Blaster Module, Scrap Vac, Depth Resistance Module",,,,3,4,,Oxygen Upgrade,TRUE,1,3,Progression,,Coral Pear,,Axel Ramos,5,3,,Coral Cannoli,"Pearl Berries, Star Kelp, Coral Pear, Tubey Melon",,15,,Angler,,"Tubey Melon, Pearl Berries, Lily Banana, Star Kelp, Lotus Kiwi",12,FALSE
+GUPPI Campus,1,TRUE,TRUE,"Tubey Melon, Pearl Berries","Blaster Module, Scrap Vac, Depth Resistance Module","Puddle Scrubber, Blaster Module, Scrap Vac, Depth Resistance Module",,,3,7,,Boost Duration Module,TRUE,2,1,Progression,,Crystal Crisp,,Dr. Tesla Wolff-Kishner,8,7,,Coral Nut Bread,"Coral Pear, Tubey Melon, Lily Banana",,7,,Axo,"Crispy Cookie, Starfish Sandwich","Passion Fig, Coral Pear, Lotus Kiwi, Crystal Crisp",11,FALSE
+North of GUPPI Campus,2,TRUE,FALSE,Tubey Melon,Depth Resistance Module,,,,3,6,,Scanner Pointer Module,TRUE,3,1,Progression,,Kelp Heart,,Galina Mothia,1,8,,Crispy Cookie,"Crystal Crisp, Lily Banana, Star Kelp",,17,,Betta,,"Coral Pear, Kelp Heart, Passion Fig",3,FALSE
+Home Cave,3,FALSE,FALSE,"Tubey Melon, Coral Pear, Passion Fig",,,,,3,11,,Puddle Scrubber,TRUE,10,1,Progression,,Lily Banana,,Hana,14,5,,Fishy Candy,"Lily Banana, Coral Pear",,9,,Bunny,,"Lily Banana, Passion Fig",9,FALSE
+North West of Home Cave,4,FALSE,FALSE,"Tubey Melon, Star Kelp",Blaster Module,,,,3,10,,Blaster Module,TRUE,5,1,Progression,,Lotus Kiwi,,Jorunna,0,2,,Kelp Coffee Drop,"Passion Fig, Kelp Heart, Star Kelp",,11,,Butterfly,Kelp Coffee Drop,"Lily Banana, Kelp Heart, Passion Fig",5,TRUE
+North GUPPI Ravine,5,TRUE,FALSE,Pearl Berries,"Blaster Module, Depth Resistance Module",,,,8,4,,Scrap Vac,TRUE,7,1,Progression,,Passion Fig,,Lazy Azi,9,0,,Kelp Taco,"Star Kelp, Kelp Heart, Coral Pear, Lily Banana",,12,,Manta,Starfish Sandwich,"Coral Pear, Passion Fig",7,FALSE
+Ripple Reef,6,FALSE,TRUE,"Tubey Melon, Coral Pear",,,,,8,10,,Scanner Range Module,TRUE,4,1,Progression,,Pearl Berries,,Mistheart,13,4,,Kiwi Lime Pie,"Lotus Kiwi, Pearl Berries",,10,,Octo,Coral Cannoli,"Lily Banana, Lotus Kiwi, Passion Fig, Pearl Berries",13,TRUE
+North of Home Cave,7,FALSE,FALSE,"Tubey Melon, Coral Pear, Star Kelp, Rainbow Star Kelp, Pearl Berries",Scrap Vac,,,,8,9,,Laser Efficiency Module,TRUE,6,1,Progression,,Rainbow Star Kelp,,Ms. Hunter,12,6,,Rainbow Kelp Pie,"Rainbow Star Kelp, Pearl Berries",Coral Nut Bread,14,,Puffer,"Kiwi Lime Pie, Tropical Jelly","Coral Pear, Crystal Crisp, Lotus Kiwi, Tubey Melon, Star Kelp",10,FALSE
+Tangle Bay,8,FALSE,TRUE,"Tubey Melon, Star Kelp, Rainbow Star Kelp, Kelp Heart","Blaster Module, Scrap Vac, Puddle Scrubber, Global Pollution Module","Blaster Module, Scrap Vac",,,4,10,,Inventory Capacity Module,TRUE,13,1,Progression,,Star Kelp,,Steven Silverback,14,1,,Starfish Sandwich,"Kelp Heart, Tubey Melon, Lotus Kiwi",,13,,Siren,"Kelp Taco, Tropical Jelly","Coral Pear, Tubey Melon, Kelp Heart, Star Kelp, Rainbow Star Kelp",2,TRUE
+West of Flotsam Flats,9,FALSE,FALSE,"Tubey Melon, Star Kelp, Passion Fig",Blaster Module,,,,4,7,,Microplastics Capacity Module,TRUE,8,1,Progression,,Tubey Melon,,,,,,Tropical Jelly,"Tubey Melon, Lily Banana",,8,,Snake,,"Tubey Melon, Lily Banana",8,TRUE
+West of Home Cave,10,FALSE,FALSE,"Tubey Melon, Star Kelp, Rainbow Star Kelp","Blaster Module, Scrap Vac",,,,10,11,,Depth Resistance Module,TRUE,9,1,Progression,,,,,,,,,,,,,Wingfin,,"Lily Banana, Rainbow Star Kelp, Tubey Melon, Star Kelp, Kelp Heart",4,TRUE
+South of Home Cave,11,FALSE,FALSE,"Tubey Melon, Coral Pear",Blaster Module,,,,10,9,,Scrubber Radius Module,TRUE,11,1,Progression,,,,,,,,,,,,,Whisker,Tropical Jelly,"Coral Pear, Tubey Melon, Star Kelp",6,TRUE
+Flotsam Flats,12,FALSE,TRUE,"Tubey Melon, Lotus Kiwi, Lily Banana","Blaster Module, Scanner Range Module, Laser Efficiency Module, Inventory Capacity Module, Light Beacon",Blaster Module,,,11,9,,Global Pollution Module,TRUE,12,1,Progression,,,,,,,,,,,,,,,,,
+North of Flotsam Flats,13,FALSE,FALSE,"Tubey Melon, Coral Pear, Passion Fig",Blaster Module,,,,9,12,,Cooking Module,TRUE,405,1,Progression,,,,,,,,,,,,,,,,,
+Grimy Gulf,14,TRUE,TRUE,"Tubey Melon, Coral Pear, Passion Fig, Star Kelp, Rainbow Star Kelp, Kelp Heart, Lily Banana","Depth Resistance Module, Blaster Module","Puddle Scrubber, Blaster Module",,,11,12,,Light Beacon,FALSE,404,15,Filler,,,,,,,,,,,,,,,,,
+West of Grimy Gulf,15,FALSE,FALSE,"Tubey Melon, Lily Banana","Blaster Module, Scrap Vac, Depth Resistance Module",,,,11,13,,Recharge Ring,FALSE,401,10,Useful,,,,,,,,,,,,,,,,,
+Goddle Grotto Entrance,16,TRUE,FALSE,"Tubey Melon, Kelp Heart, Lily Banana, Coral Pear",Depth Resistance Module,,,,12,13,,Water Purifier,FALSE,402,15,Filler,,,,,,,,,,,,,,,,,
+Goddle Grotto,100,TRUE,TRUE,"Tubey Melon, Pearl Berries, Crystal Crisp, Star Kelp","Blaster Module, Depth Resistance Module","Puddle Scrubber, Blaster Module",GUPPI Ravine,,12,15,,Plant Pollinator,FALSE,403,15,Filler,,,,,,,,,,,,,,,,,
+,,,,,,,,,15,13,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,15,0,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,15,14,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,14,0,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,14,16,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,16,100,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,0,13,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,0,6,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,0,5,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,0,1,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,7,6,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,7,5,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,5,1,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,5,2,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,6,13,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,6,11,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,1,2,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,2,16,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,1,16,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,0,16,,,,,,,,,,,,,,,,,,,,,,,

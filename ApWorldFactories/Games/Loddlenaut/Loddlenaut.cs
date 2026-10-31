@@ -25,6 +25,7 @@ public class Loddlenaut : BuildData
     public EvolutionRowData[] EvolutionRowData = [];
 
     public Dictionary<int, string> RegionIdMap = [];
+    public Dictionary<int, RegionRowData> RegionRegionDataMap = [];
     public Dictionary<int, bool> RegionIdRequiresDepth = [];
 
     public override void RunShenanigans()
@@ -40,6 +41,7 @@ public class Loddlenaut : BuildData
 
 
         RegionIdMap = RegionRowData.ToDictionary(data => data.Id, data => data.Region);
+        RegionRegionDataMap = RegionRowData.ToDictionary(data => data.Id, data => data);
         RegionIdRequiresDepth = RegionRowData.ToDictionary(data => data.Id, data => data.RequiresDepth);
         BiomeRowData = [.. RegionRowData.Where(data => data.IsBiome)];
 
@@ -191,6 +193,9 @@ public class Loddlenaut : BuildData
             if (RegionIdRequiresDepth[regionB]) rules.Add("depth");
             if (RegionIdMap[regionB] is not "Home Cave" && RegionIdMap[regionA] is not "Home Cave")
                 rules.Add($"has[\"{RegionIdMap[regionB]}\"]");
+
+            if (RegionRegionDataMap[regionB].RegionRequirements.Length != 0)
+                rules.AddRange(RegionRegionDataMap[regionB].RegionRequirements.Select(r => $"has[\"{r}\"]"));
 
             if (rules.Count != 0)
                 region_fact.AddConnectionCompiledRule(
