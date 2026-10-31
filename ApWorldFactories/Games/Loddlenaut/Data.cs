@@ -13,10 +13,7 @@ public readonly struct RegionRowData(DataArray param)
     [Mark] public readonly string[] CleanRequirements = param;
     [Mark] public readonly string[] RegionRequirements = param;
 
-    public string GenRule() => string.Join(
-        " and ",
-        ((string[])[.. Plants, .. CleanRequirements]).Select(item => $"has[\"{item}\"]")
-    );
+    public string GenRule() => string.Join(" and ", CleanRequirements.Select(item => $"has[\"{item}\"]"));
 }
 
 public readonly struct RegionConnectionsRowData(DataArray param)

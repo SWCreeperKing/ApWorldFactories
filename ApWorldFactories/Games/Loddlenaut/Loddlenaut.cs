@@ -1,5 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-using ApWorldFactories.Graphviz;
+﻿using ApWorldFactories.Graphviz;
 using CreepyUtil.Archipelago.WorldFactory;
 using static ApWorldFactories.PathConstants;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
@@ -13,10 +12,12 @@ public class Loddlenaut : BuildData
     public override string GameName => "Loddlenaut";
     public override string ApWorldName => "loddlenaut";
     public override string GoogleSheetId => "1_EI5ahH1SeW4HrX7HdRrBHWcOwlh854Flaoovdwosow";
-    public override string WorldVersion => "0.1.0";
+    public override string WorldVersion => "0.1.1";
 
     public RegionRowData[] RegionRowData = [];
     public RegionRowData[] BiomeRowData = [];
+    public string[] RegionsWithUnlock = [];
+
     public RegionConnectionsRowData[] RegionConnectionsRowData = [];
     public ItemsRowData[] ItemsRowData = [];
     public PlantRowData[] PlantRowData = [];
@@ -44,6 +45,12 @@ public class Loddlenaut : BuildData
         RegionRegionDataMap = RegionRowData.ToDictionary(data => data.Id, data => data);
         RegionIdRequiresDepth = RegionRowData.ToDictionary(data => data.Id, data => data.RequiresDepth);
         BiomeRowData = [.. RegionRowData.Where(data => data.IsBiome)];
+        RegionsWithUnlock =
+        [
+            .. RegionRowData.Where(r => r.Region is not "Home Cave"
+                                        && RegionConnectionsRowData.Where(c => c.B == r.Id).All(c => c.A is not 3)
+            ).Select(data => $"{data.Region}")
+        ];
 
         WriteData("Biomes", BiomeRowData.Select(b => b.Region));
         WriteData("RegionIdMap", RegionIdMap.Select(kv => $"{kv.Key}|{kv.Value}"));
@@ -101,15 +108,7 @@ public class Loddlenaut : BuildData
                       )
                   )
                  .AddItemListVariable(
-                      "region_unlocks", ItemFactory.ItemClassification.Progression,
-                      list:
-                      [
-                          .. RegionRowData.Where(r => r.Region is not "Home Cave"
-                                                      && RegionConnectionsRowData.Where(c => c.B == r.Id)
-                                                         .All(c => c.A is not 3)
-                                           )
-                                          .Select(data => $"{data.Region}")
-                      ]
+                      "region_unlocks", ItemFactory.ItemClassification.Progression, list: RegionsWithUnlock
                   )
                  .AddCreateItems(method =>
                       method
@@ -134,7 +133,7 @@ public class Loddlenaut : BuildData
                           ).ToDictionary(a => a[0], a => a[1])
                   )
                  .AddLogicRules(CookingRowData.ToDictionary(data => $"Cook: {data.Food}", data => data.GenRule()))
-                 .AddLogicRules(EvolutionRowData.ToDictionary(data => data.Name, data => data.GenRule()));
+                 .AddLogicRules(EvolutionRowData.ToDictionary(data => $"Evolve: {data.Name}", data => data.GenRule()));
     }
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
@@ -191,10 +190,10 @@ public class Loddlenaut : BuildData
             List<string> rules = [];
 
             if (RegionIdRequiresDepth[regionB]) rules.Add("depth");
-            if (RegionIdMap[regionB] is not "Home Cave" && RegionIdMap[regionA] is not "Home Cave")
+            if (RegionsWithUnlock.Contains(RegionIdMap[regionB]) && RegionIdMap[regionA] is not "Home Cave")
                 rules.Add($"has[\"{RegionIdMap[regionB]}\"]");
 
-            if (RegionRegionDataMap[regionB].RegionRequirements.Length != 0)
+            if ( RegionRegionDataMap[regionB].RegionRequirements.Length != 0)
                 rules.AddRange(RegionRegionDataMap[regionB].RegionRequirements.Select(r => $"has[\"{r}\"]"));
 
             if (rules.Count != 0)
@@ -275,8 +274,11 @@ public class Loddlenaut : BuildData
             List<string> rules = [];
 
             if (RegionIdRequiresDepth[regionB]) rules.Add("depth");
-            if (RegionIdMap[regionB] is not "Home Cave" && RegionIdMap[regionA] is not "Home Cave")
+            if (RegionsWithUnlock.Contains(RegionIdMap[regionB]) && RegionIdMap[regionA] is not "Home Cave")
                 rules.Add($"has[\"{RegionIdMap[regionB]}\"]");
+
+            if (RegionRegionDataMap[regionB].RegionRequirements.Length != 0)
+                rules.AddRange(RegionRegionDataMap[regionB].RegionRequirements.Select(r => $"has[\"{r}\"]"));
 
             b.AddConnection(RegionIdMap[regionA], RegionIdMap[regionB], string.Join(" and ", rules));
         }
