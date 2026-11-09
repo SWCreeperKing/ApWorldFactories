@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Folder Include="Input\DinoBones Tidy Up the Museum\" />
       <Folder Include="Input\Haiku\" />
       <Folder Include="Input\Vampire Survivors\" />
       <Folder Include="Output\Atlyss\" />

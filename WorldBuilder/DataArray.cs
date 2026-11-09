@@ -1,4 +1,4 @@
-﻿namespace ApWorldFactories;
+﻿namespace WorldBuilder;
 
 public class DataArray(string[] param)
 {
@@ -11,6 +11,8 @@ public class DataArray(string[] param)
         if (move) Index++;
         return data.Trim();
     }
+
+    public string GetOrDefault(Func<string, string> action, bool move = true) => action(Get(move));
 
     public bool GetIsTrue(bool move = true) => Get(move).IsTrue();
     public string[] GetSplitAndTrim(char split = ',', bool move = true) => Get(move).SplitAndTrim(split);

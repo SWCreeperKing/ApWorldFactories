@@ -1,6 +1,6 @@
 ﻿using CreepyUtil.ClrCnsl;
 
-namespace ApWorldFactories;
+namespace WorldBuilder;
 
 public class Folder(string name)
 {

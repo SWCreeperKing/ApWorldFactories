@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace ApWorldFactories.Graphviz;
+namespace WorldBuilder;
 
 public class GraphBuilder(string gameName)
 {

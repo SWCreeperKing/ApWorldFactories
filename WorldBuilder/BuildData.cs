@@ -5,7 +5,7 @@ using CreepyUtil.ClrCnsl;
 using CreepyUtil.Pos;
 using static WorldBuilder.Runner;
 
-namespace ApWorldFactories;
+namespace WorldBuilder;
 
 public abstract class BuildData
 {
@@ -17,7 +17,6 @@ public abstract class BuildData
     public abstract string ModFolderName { get; }
     public abstract string GameName { get; }
     public abstract string ApWorldName { get; }
-    public abstract string GoogleSheetId { get; }
     public abstract string WorldVersion { get; }
     public virtual string ArchipelagoVersion => "0.6.5";
     public virtual string GameFolder => GameName;
@@ -33,12 +32,15 @@ public abstract class BuildData
     public virtual string ReadInputDirectory => $"{RawInputPath}{GameName}/";
     public virtual string ApWorldPath => $"E:/coding projects/python/Deathipelago/worlds/{ApWorldName}";
     public virtual string CsvPath => $"E:/coding projects/C#/ApWorldFactories/ApWorldFactories/Spreadsheets/{GameName}";
+    public virtual string GoogleSheetId => "";
     public virtual string MainSheetLink => $"https://docs.google.com/spreadsheets/d/{GoogleSheetId}/export?format=csv";
+    public virtual string GraphOutput => "svg";
 
     public virtual Dictionary<string, string> SheetGids { get; } = [];
 
     public void DownloadSheets()
     {
+        if (GoogleSheetId is "") return;
         if (!Directory.Exists(CsvPath)) Directory.CreateDirectory(CsvPath);
         using var client = new HttpClient();
         var pos = ClrCnsl.GetCursor();
@@ -85,40 +87,14 @@ public abstract class BuildData
 
     public string[] ReadData(string file, string ext = "txt") => File.ReadAllLines($"{ReadInputDirectory}{file}.{ext}");
 
+    public string ReadDataWhile(string file, string ext = "txt")
+        => File.ReadAllText($"{ReadInputDirectory}{file}.{ext}");
+
+    public CsvFactory ReadCsv(string fileName, int linesFromTop = 1, int linesFromLeft = 0)
+        => new CsvParser($"{ReadInputDirectory}{fileName}.csv", linesFromTop, linesFromLeft).ToFactory();
+
     public void Run()
     {
-        
-/*
-###
-# Non-world client methods
-###
-
-def launch_client(*args):
-    from .ManualClient import launch as Main
-    launch_subprocess(Main, name="Manual client")
-
-class VersionedComponent(Component):
-    def __init__(self, display_name: str, script_name: Optional[str] = None, func: Optional[Callable] = None, version: int = 0, file_identifier: Optional[Callable[[str], bool]] = None):
-        super().__init__(display_name=display_name, script_name=script_name, func=func, component_type=Type.CLIENT, file_identifier=file_identifier)
-        self.version = version
-
-def add_client_to_launcher() -> None:
-    version = 2024_07_09 # YYYYMMDD
-    found = False
-    for c in components:
-        if c.display_name == "Manual Client":
-            found = True
-            if getattr(c, "version", 0) < version:  # We have a newer version of the Manual Client than the one the last apworld added
-                c.version = version
-                c.func = launch_client
-                return
-    if not found:
-        components.append(VersionedComponent("Manual Client", "ManualClient", func=launch_client, version=version, file_identifier=SuffixIdentifier('.apmanual')))
-
-add_client_to_launcher()
-
- */
-        
         ClrCnsl.Clr();
         var builder = new WorldFactory(GameName)
                      .SetOnCompilerError((e, s) => ClrCnsl.WriteLine($"[#red]Error: [{s}]\n{e}"))
@@ -209,7 +185,7 @@ add_client_to_launcher()
         var curDir = Directory.GetCurrentDirectory();
         var cmd1 = $"cd {curDir}";
         var cmd2
-            = $"\"{GraphVizPath}\" -Tpng \"{RawOutputPath}Raw Graph Data/{GameName}.dot\" > \"{RawOutputPath}Graph Output/{GameName}.png\"";
+            = $"\"{GraphVizPath}\" -T{GraphOutput} \"{RawOutputPath}Raw Graph Data/{GameName}.dot\" > \"{RawOutputPath}Graph Output/{GameName}.{GraphOutput}\"";
 
         var graphProcess = new ProcessStartInfo
         {

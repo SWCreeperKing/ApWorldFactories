@@ -1,4 +1,4 @@
-﻿namespace ApWorldFactories;
+﻿namespace WorldBuilder;
 
 public abstract class LogicSector<TSector, TData, TIdentifierType>(TData thisData)
     where TSector : LogicSector<TSector, TData, TIdentifierType>
