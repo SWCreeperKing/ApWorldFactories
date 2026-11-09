@@ -1,4 +1,6 @@
-﻿namespace ApWorldFactories.Games.Placid_Plastic_Duck_Simulator;
+﻿using WorldBuilder;
+
+namespace ApWorldFactories.Games.Placid_Plastic_Duck_Simulator;
 
 public readonly struct DuckRowData(DataArray param)
 {

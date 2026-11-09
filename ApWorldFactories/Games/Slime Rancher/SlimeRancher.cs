@@ -1,5 +1,5 @@
-﻿using ApWorldFactories.Graphviz;
-using CreepyUtil.Archipelago.WorldFactory;
+﻿using CreepyUtil.Archipelago.WorldFactory;
+using WorldBuilder;
 using static ApWorldFactories.PathConstants;
 using static CreepyUtil.Archipelago.WorldFactory.ItemFactory.ItemClassification;
 using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
@@ -151,7 +151,11 @@ public class SlimeRancher : BuildData
         noteLocations.AddRange(noteLocationsFromSheet.Where(inter => !noteLocations.Contains(inter)));
 
         WriteData("NoteLocations", noteLocations);
-
+        WriteData(
+            "GadgetPodLocations",
+            GadgetData.Where(data => data.UnlockType is GadgetRowData.GadgetUnlockType.TreasurePod)
+                      .Select(data => $"{data.Gadget}:::{data.TreasurePodId}")
+        );
         WriteData(
             "Zones", RegionUnlockData.Where(data => data.Include).Select(data => $"{data.ZoneId}:{data.RegionName}")
         );
@@ -277,12 +281,12 @@ public class SlimeRancher : BuildData
            .AddLocations("upgrades", Upgrades.Select(line => (string[])[line.Name, line.Area]))
            .AddLocations(
                 "interactables",
-                InteractableSector.Where(sector => !sector.IsSecretStyle && sector.HasNoOption)
+                InteractableSector.Where(sector => sector is { IsSecretStyle: false, HasNoOption: true })
                                   .Select(line => (string[])[line.VagueName, line.Region])
             )
            .AddLocations(
                 "dlc_interactables",
-                InteractableSector.Where(sector => sector.IsSecretStyle && sector.HasNoOption)
+                InteractableSector.Where(sector => sector is { IsSecretStyle: true, HasNoOption: true })
                                   .Select(line => (string[])[line.VagueName, line.Region])
             )
            .AddLocations(
@@ -488,6 +492,7 @@ public class SlimeRancher : BuildData
                         condition: "world.options.enable_stylish_dlc_treasure_pods"
                     )
                    .AddLocationsFromList("corporate_locations", condition: "world.options.include_7z")
+                   .AddLocationsFromList("gadget_blueprints", condition: "world.options.gadgetsanity")
                    .AddEventLocations(
                         locations:
                         [

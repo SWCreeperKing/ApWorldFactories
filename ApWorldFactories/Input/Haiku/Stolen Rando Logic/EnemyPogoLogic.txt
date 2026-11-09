@@ -1,0 +1,188 @@
+Scene 21
+$BottomRight {Right1, Repair}
+BottomRight->Right0: DoubleJump
+BottomRight->Disruptor: DoubleJump
+BottomRight->MoneyPile*: DoubleJump
+// requires falling into the saws to the left of the repair station
+// in order to aggro the flying enemy
+Right0->Disruptor: true
+Right0->MoneyPile*: true
+
+Scene 24 // Tire Village
+
+*->Left0: true
+
+Scene 38 // Huge room in the middle of Bunker
+
+*->*: true
+
+Scene 39
+
+*->Left0: Blink
+
+Scene 40 // Trap room to the left of the Bunker Mid repair station
+
+*->Right0: true
+
+Scene 46
+
+Left->Right0: Lever
+
+Scene 60
+Right1->Right0: Magnet + BLJ
+
+Scene 63 // Left of Bulb Hive
+
+*->*: true
+
+Scene 64 // Central Core, to the right of Echo door
+
+Left->Right0: true
+Right1->Right0: true
+
+Scene 65 // Room to upper left of Bulb Drop
+*->MoneyPile*: true
+
+Scene 66 // Central Core tall room near Quatern
+
+Left0->Left1: true
+Right0->Left1: Ball
+Left1->Left0: true
+Left1->Right0: Ball
+Left1->Right1: true
+Left2->Left0: true
+Left2->Left1: true
+Left2->Right0: Ball
+Left2->Right1: true
+Right2->Left0: true
+Right2->Left1: true
+Right2->Right0: Ball
+Right2->Right1: true
+Right3->Left0: true
+Right3->Left1: true
+Right3->Right0: Ball
+Right3->Right1: true
+
+Scene 68 // Electrified gauntlet after Car Battery
+// These require you to lure a flying enemy from the path to the power cell.
+Right->Left0: Magnet
+Right->Left1: Magnet + Ball
+Right->MoneyPile*: Magnet
+
+Scene 81 // Right of Bulb Hive
+
+Left0<->Right0: true
+
+Scene 104 // Fire Wheels Incinerator Room
+
+Right1->PowerCell: FireRes
+Right*->Lore: FireRes + Magnet
+
+Scene 111 // First Splunk location, in Water Ducts
+
+Right->Left: true // pogo a fish
+
+Scene 114 // Water Ducts, right of the train
+
+*->*: true
+
+Scene 127 // Lower Water Ducts repair station
+$RightSide {Right, Repair}
+RightSide->Left: Light
+RightSide->MoneyPile*: Light + Magnet
+
+Scene 131
+
+Left->Right1: WaterRes | Grapple | Blink
+
+Scene 132
+Right1->MoneyPile3: Blink
+Left1->MoneyPile3: Lever + Blink
+
+Scene 133
+
+Left->Right0: true // + coyote jump
+Left->Right1: true
+Left->MoneyPile*: true
+Right1->Left: Blink + AmplifyingTransputer
+Right1->MoneyPile*: Blink + AmplifyingTransputer
+
+Scene 134
+$UpperPiles {MoneyPile0, MoneyPile1}
+*->UpperPiles: DoubleJump
+
+Scene 135
+
+Right->Left0: true
+Right->Left1: true
+Left1->Left0: Magnet
+Left1->Right: Magnet
+*->Chip: DoubleJump
+
+Scene 147
+Left->Right0: DoubleJump
+Right1->Right0: Blink + DoubleJump
+
+Scene 152 // Amplifying Transputer room
+$Bottom {Left2, Right1}
+
+Bottom->Left0: Light + Ball + BLJ
+Bottom->Left1: Light + Ball + BLJ
+Bottom->Right0: Light + Ball + BLJ
+Bottom->Lore: Light + Ball + BLJ
+// Right1->Chip and Right1->Left2 can be done with just the BLJ
+
+Scene 155
+
+Right->Left1: Light + Lever
+
+Scene 156
+
+*->Disruptor: Light + DoubleJump // pogo on a retracting hook; may require damage tank
+
+Scene 157
+
+Left<->Right: Light
+
+Scene 158 // Entrance to Sunken Wastes from Incinerator
+
+Left<->Right: Light
+
+Scene 173 // Bottom left entrance to Factory
+
+*->*: true
+
+Scene 183
+
+Right->Left: true
+
+Scene 186
+
+Right1->Item: Ball + DoubleJump
+Right1->Left: Ball + DoubleJump
+
+Scene 187
+
+// you may have to wait a while for the frogs to line up
+Left<->Right: true
+
+Scene 193
+
+Left->Right0: true
+Right1->Left: true
+Right1->Right0: true
+Right2->Left: true
+Right2->Right0: true
+
+Scene 214
+
+Right->Left: FireRes
+
+Scene 229
+Left0->MoneyPile*: true // may take a few retries for the frog to cooperate
+
+Scene 251 // Left of the main reactor core room
+Left0<->Right0: true
+
+Scene 253 // Sinking platforms left of Elegy
+Right1->Right0: true

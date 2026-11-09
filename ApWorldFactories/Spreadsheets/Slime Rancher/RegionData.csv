@@ -1,0 +1,61 @@
+Area Coming From,Area Going To,Slime Gated?,Unlock Needed,Needs Jetpack,Minimum Energy Level Required,Plort Types Needed,Slime Gate Required,Skip Logic?,,Location Group,Regions Affected
+Menu,The Ranch,No,,No,0,,,None,,Menu,Menu
+The Ranch,The Grotto,No,The Grotto,No,0,,,None,,The Ranch,"The Ranch, The Grotto, The Overgrowth, The Lab, The Docks, Upgrades"
+The Ranch,The Overgrowth,No,The Overgrowth,No,0,,,None,,Dry Reef,"Dry Reef - Main, Dry Reef - Beach, Dry Reef - Ring Island, Dry Reef - Offshoot"
+The Ranch,The Lab,No,The Lab,No,0,,,None,,The Slime Sea,"The Slime Sea - That One Platform I Refused To Put As A Region Until Now, The Slime Sea - Between Grotto and Dry Reef Island 1, The Slime Sea - Between Grotto and Dry Reef Island 2, The Slime Sea - Mustache Shrine, The Slime Sea - Off Moss Blanket"
+The Overgrowth,The Docks,No,The Docks,No,0,,,None,,Indigo Quarry,"Indigo Quarry - Before First Bridge, Indigo Quarry - After The Bridge, Indigo Quarry - Ash Isles, Indigo Quarry - Ancient Ruins Transition Overlap"
+The Ranch,The Docks,No,The Docks,No,0,,,Obscure Locations,,Moss Blanket,"Moss Blanket - Main, Moss Blanket - Mushroom Island, Moss Blanket - Hunter's Domain"
+Dry Reef - Main,The Docks,No,The Docks,No,0,,,None,,Ancient Ruins,"Ancient Ruins - Main, Ancient Ruins - Teleporter Room, Ancient Ruins Transition"
+The Overgrowth,Ogden's Retreat,No,Ogden's Retreat,No,0,"Boom Plort, Honey Plort, Hunter Plort",Slime Gate - Dry Reef to Moss Blanket,None,,Glass Desert,"Glass Desert - First Half, Glass Desert - Second Half, Glass Desert - That One Island I Need To Name"
+The Grotto,Mochi's Manor,No,Mochi's Manor,No,0,"Boom Plort, Rad Plort, Crystal Plort",Slime Gate - Dry Reef to Indigo Quarry,None,,Ogden's Retreat,"Ogden's Retreat, The Wilds"
+The Lab,Viktor's Workshop,No,Viktor's Workshop,No,0,Quantum Plort,Slime Gate - Ancient Ruins Transition to Ancient Ruins,None,,Mochi's Manor,"Mochi's Manor, Nimble Valley"
+The Ranch,Dry Reef - Main,No,Dry Reef,No,0,,,None,,Viktor's Workshop,"Viktor's Workshop, The Slimeulation"
+The Overgrowth,Dry Reef - Beach,No,Dry Reef,No,0,,,None,,Post-Game,"Post-Game, Dry Reef - H Vault, Moss Blanket - H Vault, Indigo Quarry - H Vault"
+The Ranch,Dry Reef - Beach,No,Dry Reef,No,0,,,Obscure Locations,,,
+Dry Reef - Main,Dry Reef - Beach,Yes,Dry Reef,No,0,,,None,,,
+Dry Reef - Beach,Dry Reef - Ring Island,No,Dry Reef,No,0,,,Easy Skips,,,
+Dry Reef - Beach,Dry Reef - Ring Island,No,Dry Reef,Yes,50,,,None,,,
+Post-Game,Dry Reef - H Vault,Yes,Dry Reef,Yes,50,,,Post-Game,,,
+Post-Game,Dry Reef - H Vault,Yes,Dry Reef,No,0,,,"Post-Game, Easy Skips",,,
+The Slime Sea - Between Grotto and Dry Reef Island 2,Dry Reef - Offshoot,No,Dry Reef,Yes,50,,,None,,,
+Dry Reef - Main,Dry Reef - Offshoot,No,Dry Reef,No,0,,,Precise Movement,,,
+The Grotto,The Slime Sea - That One Platform I Refused To Put As A Region Until Now,No,NONE,No,0,,,None,,,
+The Slime Sea - Between Grotto and Dry Reef Island 1,The Slime Sea - That One Platform I Refused To Put As A Region Until Now,No,NONE,No,0,,,"Precise Movement, Dangerous Skips",,,
+The Slime Sea - Between Grotto and Dry Reef Island 1,The Slime Sea - That One Platform I Refused To Put As A Region Until Now,No,NONE,Yes,50,,,None,,,
+The Slime Sea - That One Platform I Refused To Put As A Region Until Now,The Slime Sea - Between Grotto and Dry Reef Island 1,No,NONE,No,0,,,"Precise Movement, Dangerous Skips",,,
+The Slime Sea - That One Platform I Refused To Put As A Region Until Now,The Slime Sea - Between Grotto and Dry Reef Island 1,No,NONE,Yes,50,,,None,,,
+The Slime Sea - Between Grotto and Dry Reef Island 2,The Slime Sea - Between Grotto and Dry Reef Island 1,No,NONE,Yes,50,,,None,,,
+The Slime Sea - Between Grotto and Dry Reef Island 1,The Slime Sea - Between Grotto and Dry Reef Island 2,No,NONE,Yes,50,,,None,,,
+The Slime Sea - Between Grotto and Dry Reef Island 1,The Slime Sea - Between Grotto and Dry Reef Island 2,No,NONE,No,0,,,"Precise Movement, Dangerous Skips",,,
+Dry Reef - Offshoot,The Slime Sea - Between Grotto and Dry Reef Island 2,No,NONE,Yes,50,,,None,,,
+Dry Reef - Main,The Slime Sea - Mustache Shrine,No,NONE,Yes,250,,,Obscure Locations,,,
+Moss Blanket - Hunter's Domain,The Slime Sea - Off Moss Blanket,No,Moss Blanket,Yes,250,,,None,,,
+Moss Blanket - Hunter's Domain,The Slime Sea - Off Moss Blanket,No,Moss Blanket,Yes,200,,,Obscure Locations,,,
+Dry Reef - Main,Indigo Quarry - Before First Bridge,Yes,Indigo Quarry,No,0,,,None,,,
+Indigo Quarry - After The Bridge,Indigo Quarry - Before First Bridge,No,Indigo Quarry,Yes,50,,,None,,,
+Indigo Quarry - Before First Bridge,Indigo Quarry - After The Bridge,No,Indigo Quarry,Yes,50,,,None,,,
+Indigo Quarry - Ancient Ruins Transition Overlap,Indigo Quarry - After The Bridge,No,Indigo Quarry,No,0,,,None,,,
+Indigo Quarry - After The Bridge,Indigo Quarry - Ash Isles,No,Indigo Quarry,No,0,,,None,,,
+Indigo Quarry - After The Bridge,Indigo Quarry - Ancient Ruins Transition Overlap,No,"Indigo Quarry, Ancient Ruins Transition",No,0,,,None,,,
+Ancient Ruins Transition,Indigo Quarry - Ancient Ruins Transition Overlap,Yes,"Indigo Quarry, Ancient Ruins Transition",No,0,,,None,,,
+Post-Game,Indigo Quarry - H Vault,Yes,Indigo Quarry,Yes,50,,,Post-Game,,,
+Post-Game,Indigo Quarry - H Vault,Yes,Indigo Quarry,No,0,,,"Precise Movement, Post-Game",,,
+Dry Reef - Main,Moss Blanket - Main,Yes,Moss Blanket,No,0,,,None,,,
+Dry Reef - Main,Moss Blanket - Main,No,Moss Blanket,Yes,100,,,Easy Skips,,,
+Moss Blanket - Main,Moss Blanket - Mushroom Island,No,Moss Blanket,Yes,100,,,None,,,
+Moss Blanket - Main,Moss Blanket - Mushroom Island,No,Moss Blanket,No,0,,,"Precise Movement, Obscure Locations",,,
+Moss Blanket - Main,Moss Blanket - Hunter's Domain,No,Moss Blanket,No,0,,,"Precise Movement, Dangerous Skips",,,
+Moss Blanket - Main,Moss Blanket - Hunter's Domain,No,Moss Blanket,Yes,50,,,None,,,
+Post-Game,Moss Blanket - H Vault,Yes,Moss Blanket,Yes,100,,,Post-Game,,,
+Moss Blanket - Main,Ancient Ruins Transition,Yes,Ancient Ruins Transition,No,0,,,None,,,
+Indigo Quarry - Ancient Ruins Transition Overlap,Ancient Ruins Transition,Yes,Ancient Ruins Transition,No,0,,,None,,,
+Ancient Ruins Transition,Ancient Ruins - Main,No,Ancient Ruins,No,0,"Tabby Plort, Rock Plort, Phosphor Plort, Boom Plort, Rad Plort, Honey Plort",,None,,,
+Ancient Ruins - Main,Ancient Ruins - Teleporter Room,Yes,Glass Desert,No,0,,,None,,,
+Ancient Ruins - Teleporter Room,Glass Desert - First Half,No,Glass Desert,No,0,Quantum Plort,,None,,,
+Glass Desert - First Half,Glass Desert - Second Half,Yes,Glass Desert,No,0,,,None,,,
+Glass Desert - First Half,Glass Desert - Second Half,No,Glass Desert,Yes,100,,,"Precise Movement, Obscure Locations",,,
+Glass Desert - First Half,Glass Desert - Second Half,No,Glass Desert,Yes,150,,,Obscure Locations,,,
+Ogden's Retreat,The Wilds,No,The Wilds,No,0,,,None,,,
+Mochi's Manor,Nimble Valley,No,Nimble Valley,No,0,,,None,,,
+Viktor's Workshop,The Slimeulation,No,The Slimeulations,No,0,,,None,,,
+Glass Desert - Second Half,Post-Game,No,NONE,No,0,,,Post-Game,,,

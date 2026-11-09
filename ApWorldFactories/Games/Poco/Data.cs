@@ -1,4 +1,6 @@
-﻿namespace ApWorldFactories.Games.Poco;
+﻿using WorldBuilder;
+
+namespace ApWorldFactories.Games.Poco;
 
 public readonly struct RegionData(DataArray param)
 {

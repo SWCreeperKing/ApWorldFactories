@@ -1,4 +1,5 @@
-﻿using static CreepyUtil.Archipelago.WorldFactory.ItemFactory;
+﻿using WorldBuilder;
+using static CreepyUtil.Archipelago.WorldFactory.ItemFactory;
 
 namespace ApWorldFactories.Games.Loddlenaut;
 

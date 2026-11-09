@@ -1,4 +1,6 @@
-﻿namespace ApWorldFactories.Games.Dandara;
+﻿using WorldBuilder;
+
+namespace ApWorldFactories.Games.Dandara;
 
 public class ConnectionsSector(ConnectionRowData data) : LogicSector<ConnectionsSector, ConnectionRowData, string>(data)
 {

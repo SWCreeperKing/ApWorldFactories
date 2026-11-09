@@ -1,0 +1,208 @@
+Scene 10 // starting area
+Repair->Right0: DoubleJump + (Blink | Grapple)
+Right1->Right0: DoubleJump + (Blink | Grapple)
+Left1->Right0: Lever + DoubleJump + (Blink | Grapple)
+
+Scene 21
+$Top {Disruptor, MoneyPile0, MoneyPile1, Right0}
+$BottomRight {Repair, Right1}
+BottomRight->Top: DoubleJump + (Blink | Grapple)
+
+Scene 31
+*->MoneyPile*: DoubleJump + (Blink | Grapple)
+*->Left0: DoubleJump + (Blink | Grapple)
+
+Scene 32
+Left->*: DoubleJump + (Blink | Grapple)
+Right1->*: DoubleJump + (Blink | Grapple)
+
+Scene 35 // Tall room below Bunker
+$Bottom {Left1, Right1}
+$Top {Chip, Right0}
+Bottom->Top: DoubleJump + (Blink | Grapple)
+
+Scene 43
+Right->Left*: DoubleJump + (Blink | Grapple)
+
+Scene 45
+Left->PowerCell: DoubleJump + (Blink | Grapple)
+
+Scene 52
+$Bottom {Left1, Right1}
+$Top {Left0, Right0}
+Bottom->Top: DoubleJump + (Blink | Grapple)
+
+Scene 54
+// Blink is required here anyway, so Grapple doesn't matter.
+Right->Left: DoubleJump + Blink
+
+Scene 55
+// Grapple can already cross the gap without chaining.
+Left<->Right: DoubleJump + Blink
+
+Scene 60 // Last bomb barrier before Neutron
+Right1->Right0: Bomb + DoubleJump + (Blink | Grapple)
+
+Scene 62 // Mainframe
+$Bottom {Left1, Right1, Door0}
+$Top {Left0, Right0}
+Bottom->Top: DoubleJump + (Blink | Grapple)
+
+Scene 68 // Electrified gauntlet after Car Battery
+Left1->Left0: Ball + DoubleJump + (Blink | Grapple)
+Right->Left0: Ball + DoubleJump + (Blink | Grapple)
+
+Scene 75 // Bomb barriers before Electron
+$Top {Left0, Right}
+Repair->Top: Bomb + DoubleJump + (Blink | Grapple)
+
+Scene 78 // Tricky magnet obstacle course
+// Double jump and grapple don't require any chaining to cross
+Left->Right: DoubleJump + Blink
+
+Scene 87
+!Left0->Right0: Clock + DoubleJump + (Blink | Grapple)
+Left0->Right0: DoubleJump + (Blink | Grapple)
+
+Scene 95 // Steam Town
+*->Chip: DoubleJump + (Blink | Grapple)
+
+Scene 96 // Piston bridge
+// Grapple already crosses the gap by itself
+Left<->Right: DoubleJump + Blink
+Left->Lever: DoubleJump + Blink
+
+Scene 100 // Hidden tunnel toward Factory right side
+Left->Right: DoubleJump + (Blink | Grapple)
+
+Scene 102
+Left->Right*: FireRes + HeatDrive + DoubleJump + (Blink | Grapple)
+
+Scene 123
+// If the bomb floor hasn't been broken first, you must make one
+// trip to break it, then fall back down, wait for coolant to refresh,
+// then climb up again.
+// If you don't have water sealant, this will require you to take damage,
+// so we require Wrench so that the trip is guaranteed to be survivable.
+*1->*0: (Wrench | WaterRes) + Bomb + DoubleJump + 3#Coolant + (Blink | Grapple)
+
+Scene 124
+// From left to right, DoubleJump + Grapple already crosses the gap
+// without chaining.
+// From right to left, Grapple alone suffices.
+Left<->Right: DoubleJump + Blink
+
+Scene 130
+Left->*: DoubleJump + (Blink | Grapple)
+
+Scene 135
+*->Chip: DoubleJump + (Blink | Grapple)
+
+Scene 138 // First Tree
+*->Door: DoubleJump + (Blink | Grapple)
+*->Item: DoubleJump + (Blink + Coolant | Grapple)
+Left->Right0: DoubleJump + (Blink | Grapple)
+Right1->Right0: DoubleJump + (Blink | Grapple)
+
+Scene 139 // Entrance to Lost Archives
+*->Left: DoubleJump + (Blink | Grapple)
+
+Scene 140
+$Bottom {Right1, Repair, Lore}
+Right0->Bottom: DoubleJump + Grapple // Blink already suffices by itself
+Bottom->Right0: DoubleJump + (Blink | Grapple)
+
+Scene 143
+Left->PowerCell: DoubleJump + (Blink | Grapple)
+
+Scene 147
+Left->Right0: DoubleJump + (Blink | Grapple)
+// Blink is required anyway to cross a wall, so Grapple is no use.
+Right1->Right0: DoubleJump + Blink
+
+Scene 153
+$TopArea {Left0, Right0}
+$BottomArea {Left1, Right1}
+// Blink is required anyway to cross a wall, so Grapple is no use.
+BottomArea->TopArea: Light + Blink + DoubleJump
+
+Scene 155
+Left1->Chip: Light + Lever + DoubleJump + (Blink | Grapple)
+!Left1->Chip: Light + DoubleJump + (Blink | Grapple)
+
+Scene 156
+*->Disruptor: Light + DoubleJump + (Blink | Grapple)
+
+Scene 165
+$Bottom {Left1, Right, Elevator}
+Bottom->MoneyPile*: Light + DoubleJump + (Blink | Grapple)
+
+Scene 207
+// Surprisingly, none of this requires any coolant.
+Left1->Left0: Light + DoubleJump + (Blink | Grapple)
+Left1->Chip: Light + Ball + DoubleJump + (Blink | Grapple)
+Left1->MoneyPile*: Light + DoubleJump + (Blink | Grapple)
+
+Scene 175
+// Grapple just lets you go through the saw tunnel
+Right->Left: Lever + DoubleJump + Blink
+Right->Lever: DoubleJump + Blink
+
+Scene 177
+*->MoneyPile*: Ball + DoubleJump + (Blink | Grapple)
+
+Scene 185
+$BuzzsawExit {Left1, Lever}
+Left2->BuzzsawExit: DoubleJump + (Blink | Grapple)
+Left2->Right: DoubleJump + (Blink | Grapple)
+Right->BuzzsawExit: DoubleJump + (Blink | Grapple)
+*->Left0: DoubleJump + (Blink | Ball + Grapple)
+
+Scene 186
+Left->Right0: DoubleJump + (Blink | Grapple)
+Right1->Right0: Ball + DoubleJump + (Blink | Grapple)
+Right1->Left: Ball + DoubleJump + (Blink | Grapple)
+*->Right1: Ball + DoubleJump + (Blink | Grapple)
+*->Item: Ball + DoubleJump + (Blink | Grapple)
+
+Scene 192
+$Up {Left0, PowerCell}
+Left1->Up: DoubleJump + Grapple | DoubleJump + Blink + Coolant
+
+Scene 198 // Surface Right
+!Right0->PowerCell: WaterRes + DoubleJump + (Blink | Grapple)
+
+Scene 228 // Grapple gauntlet to left of Bulb Drop
+$Exit {Left, Right}
+$Monument {PowerCell, Lore}
+// Double jump and grapple don't require any chaining to cross
+Exit->Exit: DoubleJump + Blink
+// Blink won't get you through the narrow section in the middle
+Exit->Monument: DoubleJump + Grapple
+
+Scene 230
+Right1->Right0: DoubleJump + (Blink | Grapple)
+
+Scene 234 // Entrance to Old Arcadia
+Left<->*:
+    2#NeutronOrElectronBoss + ProtonBoss + FireRes + // fire res for Proton
+    CreatorTrioBoss +
+    VirusBoss +
+    10#MiniBoss + DoubleJump + (Blink | Grapple) // double jump chain for Buzzsaw
+
+Scene 248 // Gallery of bosses
+Right1->Right0: DoubleJump + (Blink + 3#Coolant | Grapple + Coolant)
+Right1->Elevator: DoubleJump + Blink + (Grapple | 3#Coolant)
+Right0->*: DoubleJump + Blink
+Elevator->Right*: DoubleJump + Blink
+
+Scene 252 // Main reactor core room
+Left1->Left0: DoubleJump + Grapple + 3#Coolant + Lever
+Left1->MoneyPile*: DoubleJump + Grapple + 3#Coolant + Lever
+Left1->Lever: DoubleJump + Grapple + 3#Coolant
+Left0->Left1: DoubleJump + Grapple + Lever
+
+Scene 255 // Elegy Repair Station
+$Top {Right0, Repair, Left0}
+$Bottom {Right1, Left1}
+Bottom->Top: DoubleJump + (Blink + 3#Coolant | Grapple + 2#Coolant)

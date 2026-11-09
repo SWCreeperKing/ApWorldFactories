@@ -1,4 +1,6 @@
-﻿namespace ApWorldFactories.Games.Vampire_Survivors;
+﻿using WorldBuilder;
+
+namespace ApWorldFactories.Games.Vampire_Survivors;
 
 public readonly struct StageData(DataArray param) : IGetDlc, IGetName
 {

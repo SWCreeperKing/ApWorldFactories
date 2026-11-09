@@ -1,4 +1,6 @@
-﻿namespace ApWorldFactories.Games.Plague_Inc;
+﻿using WorldBuilder;
+
+namespace ApWorldFactories.Games.Plague_Inc;
 
 public readonly struct DiseaseData(DataArray param)
 {

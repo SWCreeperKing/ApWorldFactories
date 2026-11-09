@@ -1,4 +1,6 @@
-﻿namespace ApWorldFactories.Games.ConbunnCardboard;
+﻿using WorldBuilder;
+
+namespace ApWorldFactories.Games.Conbunn_Cardboard;
 
 public readonly struct RegionRowData(DataArray param)
 {

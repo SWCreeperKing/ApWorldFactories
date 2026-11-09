@@ -1,4 +1,5 @@
-﻿using static ApWorldFactories.Games.Funko_Fusion.CollectableType;
+﻿using WorldBuilder;
+using static ApWorldFactories.Games.Funko_Fusion.CollectableType;
 
 namespace ApWorldFactories.Games.Funko_Fusion;
 

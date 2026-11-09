@@ -1,4 +1,5 @@
 ﻿using CreepyUtil.Archipelago.WorldFactory;
+using WorldBuilder;
 
 namespace ApWorldFactories.Games.Slime_Rancher;
 

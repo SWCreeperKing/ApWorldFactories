@@ -1,4 +1,6 @@
-﻿namespace ApWorldFactories.Games.The_WereCleaner;
+﻿using WorldBuilder;
+
+namespace ApWorldFactories.Games.The_WereCleaner;
 
 public readonly struct LevelData(DataArray param)
 {

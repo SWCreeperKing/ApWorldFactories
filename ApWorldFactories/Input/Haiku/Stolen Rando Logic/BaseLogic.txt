@@ -1,0 +1,2223 @@
+// This is a logic file for the Haiku Rando mod
+// Logic is specified per scene, where the passability is defined between transitions and checks
+// (collectively called "nodes") in the room.
+
+// The logic for each edge is defined by a logic statement, which is of the form
+//   From -> To: logicexpression
+// or
+//   From <-> To: logicexpression
+//
+// The latter form is equivalent to:
+//   From -> To: logicexpression
+//   To -> From: logicexpression
+//
+// From and To are node patterns. Node patterns may include wildcards - for example, `A -> *` denotes all edges
+// from A to anywhere else in the room, and `A -> Lever*` denotes all edges from A to any node starting with "Lever".
+// Node patterns may also be preceded with a NOT (!) operator; this matches all nodes not matched by that node pattern.
+
+// Logic expressions are composed of condition names, combined with the AND (+) and OR (|) operators; parentheses
+// may also be used for grouping.
+// For example, `Ball + Bomb + (Magnet | DoubleJump)` means that the ball and bomb upgrades, plus either magnet or
+// jump booster, are required to cross the relevant edge.
+// To denote that N of a specific item (such as power cells) is required to access a node, use the count (#) operator,
+// which takes N on the left side and the item on the right side.
+// For example, `10 # PowerCell` indicates that at least 10 power cells are required.
+//
+// The count operator has the highest precedence, followed by AND, and then OR.
+//
+// Condition names may be:
+// - Ability names - Bomb,Dash,DoubleJump,Grapple,Heal,Ball,Blink,Magnet,FireRes,WaterRes,Light,Clock
+// - Item names - Chip,Slot,PowerCell,Item,Disruptor,Lever,Coolant,Boss
+//
+// Item names may be suffixed with `[N]` (where N is an integer) to denote a specific item of a given type;
+// for instance, `Item[7]` denotes the green skull, and `Chip[25]` is Heat Drive.
+// If neither an indexing suffix nor a count operator are applied to an item, that term will match the only instance
+// of the respective check in the room, if possible; this is particularly useful for Levers.
+//
+// If this is the main logic file, the assumption is that all edges can be traversed unless restricted here
+// If this is an extension logic file for a skip category, it will only specify the edges that have an alternate traversal logic for the skips
+
+// The Lore[N] numbers in the comments need fixing. Some lore got renumbered with the OI update.
+
+// Scene 5
+// Transitions:
+// Checks:
+Scene 5
+//Special scene; no logic here
+
+// Scene 9
+// Transitions: Repair1 (9Repair), Exit28 (28-Train), Repair1 (9Repair), Exit209 (209-Train), Exit136 (136-Train), Exit179 (179-Train), Exit88 (88-Train), Exit146 (146-Train), Exit67 (67-Train), Exit53 (53-Train)
+// Checks: ShopItem0 (Item[5]), ShopItem1 (Item[2]), ShopItem2 (Item[0]), ShopItem3 (Item[7]), ShopItem4 (Item[3]), ShopItem5 (Item[3]), ShopItem6 (Chip[4]), ShopItem7 (Chip[0]), ShopItem8 (Chip[14]), ShopItem9 (Chip[15]), ShopItem10 (Chip[10]), ShopItem11 (Chip[8]), ShopItem12 (ChipSlot[6]), ShopItem13 (ChipSlot[4]), MapMarker (MapMarker[1])
+Scene 9
+*->Exit28: AbandonedWastesTrainStation
+*->Exit88: PinionsTrainStation
+*->Exit179: FactoryTrainStation
+*->Exit53: BunkerTrainStation
+*->Exit209: DuctsTrainStation
+*->Exit136: RuinsTrainStation
+*->Exit67: CoreTrainStation
+*->Exit146: DerelictHoleTrainStation
+
+// Scene 10 : Starting area; Left0 is drop in from above
+// Transitions: Right1 (10-23bottom), Right0 (10-23top), Left1 (11-10), Left0 (34-10), Repair (10Repair), Wake (10Wake)
+// Checks: Lever (Lever[4]), MoneyPile0 (MoneyPile[10]), MoneyPile2 (MoneyPile[0]), MoneyPile3 (MoneyPile[1]), MoneyPile1 (MoneyPile[2]), Lore (Lore[28])
+Scene 10
+$WakeChecks {MoneyPile0, Lore}
+*->Wake: false
+*->Right0: Magnet
+Wake->Right0: DoubleJump | Blink | Grapple
+Wake->Right0: Ball + GyroAccelerator
+Wake->MoneyPile*: true
+*->Left1: Lever
+Left1->Lever: Lever
+Left1->Right1: Lever
+Left1->Right0: Magnet + Lever
+Left1->WakeChecks: Magnet + Lever
+Left1->MoneyPile1: Lever
+Left1->MoneyPile2: Lever
+Left1->MoneyPile3: Lever
+Left0->MoneyPile*: true
+*->Left0: false
+Right0->WakeChecks: Magnet | DoubleJump
+Right0->MoneyPile1: true
+Right0->MoneyPile2: true
+Right0->MoneyPile3: true
+
+// Scene 11
+// Transitions: Right0 (11-10), Right1 (11-12), Left (14-11)
+// Checks: Wrench (Wrench[0]), Item (Item[0])
+Scene 11
+*->Item: Magnet | DoubleJump | Blink
+*->Left: Magnet | DoubleJump | Blink
+Left->Item: true
+
+// Scene 12 : Tutorial area locked gate
+// Transitions: Right1 (12-16), Right0 (12-24), Left1 (13-12), Left0 (11-12)
+// Checks: MoneyPile (MoneyPile[9])
+// Note that we mark access from Right1 as blocked; this is because can only use key from left
+Scene 12
+*->Right1: 4#RustedKey
+Right1->*: false
+!Right1->MoneyPile: true
+
+// Scene 13
+// Transitions: Right (13-12), Left (14-13)
+// Checks: MoneyPile (MoneyPile[28])
+Scene 13
+*->MoneyPile: true
+
+// Scene 14
+// Transitions: Right0 (14-11), Right1 (14-13), Left (22-14)
+// Checks: Lever (Lever[9]), MoneyPile0 (MoneyPile[31]), MoneyPile1 (MoneyPile[30]), MoneyPile2 (MoneyPile[32])
+Scene 14
+Left->*: Lever
+*->Left: Lever
+*->Lever: Lever
+Left->Lever: true
+Right0->MoneyPile*: true
+Right1->MoneyPile*: true
+
+// Scene 15
+// Transitions: Right (15-16), Left (18-15), Repair (15Repair)
+// Checks:
+Scene 15
+//No obstacles
+
+// Scene 16
+// Transitions: Right (16-26), Left1 (15-16), Left0 (12-16)
+// Checks: MoneyPile3 (MoneyPile[11]), MoneyPile4 (MoneyPile[12]), MoneyPile2 (MoneyPile[14]), MoneyPile0 (MoneyPile[15]), MoneyPile1 (MoneyPile[13])
+Scene 16
+*->MoneyPile*: true
+
+// Scene 17
+// Transitions: Right (17-20)
+// Checks: Magnet (Ability[0])
+Scene 17
+//No obstacles
+
+// Scene 18
+// Transitions: Right1 (18-101), Right0 (18-15), Left1 (29-18), Left0 (19-18)
+// Checks:
+Scene 18
+//No obstacles
+
+// Scene 19 : Garbage Magnet Boss
+// Transitions: Right (19-18), Left (20-19)
+// Checks:
+Scene 19
+Left->Right: false // boss door is closed from the other side
+
+// Scene 20
+// Transitions: Right (20-19), Left1 (17-20), Left0 (21-20)
+// Checks:
+Scene 20
+*->Left0: Magnet | DoubleJump
+
+// Scene 21
+// Transitions: Right1 (21-20), Right0 (21-22), Repair (21Repair)
+// Checks: Disruptor (MapDisruptor[1]), MoneyPile1 (MoneyPile[34]), MoneyPile0 (MoneyPile[33])
+Scene 21
+$BottomRight {Right1, Repair}
+BottomRight->Right0: Magnet
+BottomRight->Disruptor: Magnet
+BottomRight->MoneyPile*: Magnet
+Right0->Disruptor: Magnet | DoubleJump
+Right0->MoneyPile*: Magnet | DoubleJump
+
+// Scene 22
+// Transitions: Right (22-14), Left (21-22)
+// Checks:
+Scene 22
+Left->Right: Magnet | DoubleJump
+
+// Scene 23
+// Transitions: Right0 (23-31), Right1 (23-26), Left1 (10-23bottom), Left0 (10-23top)
+// Checks: Chip (Chip[7]), MoneyPile5 (MoneyPile[3]), MoneyPile2 (MoneyPile[7]), MoneyPile4 (MoneyPile[8]), MoneyPile0 (MoneyPile[5]), MoneyPile3 (MoneyPile[4]), MoneyPile1 (MoneyPile[6])
+Scene 23
+Left0->Left1: false
+Left0->Right1: false
+Right0->Left1: false
+Right0->Right1: false
+*0->MoneyPile*: false
+Left1->Left0: false
+Left1->Right0: false
+Right1->Left0: false
+Right1->Right0: false
+Left1->Right1: Magnet | DoubleJump
+Right1->Left1: Magnet | DoubleJump
+*1->MoneyPile*: Magnet | DoubleJump
+Left1->Chip: false
+Right1->Chip: false
+
+
+// Scene 24
+// Transitions: Left0 (27-24), Left1 (12-24), Door (24-166)
+// Checks:
+Scene 24
+*->Left0: Magnet | DoubleJump
+
+// Scene 25 : Capsule fragment after Tired Mother
+// Transitions: Right (25-27)
+// Checks: Item (Item[3])
+Scene 25
+//No obstacles
+
+// Scene 26
+// Transitions: Right (26-109), Left0 (23-26), Left2 (16-26), Left1 (28-26)
+// Checks: Disruptor (MapDisruptor[0]), Lever (Lever[6]), MoneyPile2 (MoneyPile[16]), MoneyPile1 (MoneyPile[18]), MoneyPile0 (MoneyPile[17])
+Scene 26
+*<->Right: Lever
+*->Lever: Lever
+Right->Lever: true
+!Right->MoneyPile*: true
+
+// Scene 27 : Tired Mother Boss
+// Transitions: Right (27-24), Left (25-27)
+// Checks:
+Scene 27
+//No obstacles
+
+// Scene 28
+// Transitions: Right (28-26), Train (28-Train)
+// Checks: TrainStation (TrainStation[0]), ShopItem0 (Item[5]), ShopItem1 (Item[2]), ShopItem2 (Item[0]), ShopItem3 (Chip[4])
+Scene 28
+Right->Train: Clock+TrainStation
+
+// Scene 29 (Abandoned Wastes Elevator)
+// Transitions: Elevator (165-29), Down2 (29-155), Right (29-18), Down0 (162-29), Down1 (151-29)
+// Checks:
+Scene 29
+Right->Elevator: LIGHT
+*->Down*: false
+Down*->*: false
+
+// Scene 30 : Candle Room
+// Transitions: Right (30-31)
+// Checks: Lore (Lore[24])
+Scene 30
+Right->Lore: true
+
+// Scene 31
+// Transitions: Left0 (32-31), Left2 (23-31), Left1 (30-31)
+// Checks: MapMarker (MapMarker[0]), MoneyPile4 (MoneyPile[26]), MoneyPile2 (MoneyPile[25]), MoneyPile3 (MoneyPile[27]), MoneyPile1 (MoneyPile[24]), MoneyPile0 (MoneyPile[23])
+Scene 31
+Left2->Left0: Magnet
+Left2->Left1: Magnet + (Blink | DoubleJump | Grapple)
+Left2->MapMarker: Magnet
+Left2->MoneyPile*: Magnet
+Left1->Left0: Magnet
+Left1->Left2: true
+Left1->MapMarker: Magnet
+Left1->MoneyPile*: Magnet
+Left0->Left1: Blink | DoubleJump | Grapple
+Left0->Left2: true
+Left0->MapMarker: true
+Left0->MoneyPile3: true
+Left0->MoneyPile*: Magnet
+
+// Scene 32 : Hand Room
+// Transitions: Right0 (32-33), Right1 (32-31), Left (34-32)
+// Checks: Lore (Lore[23])
+Scene 32
+Right1->*: Magnet
+Left->*: Magnet
+Right0->Lore: true
+Right1->Lore: Magnet
+Left->Lore: Magnet
+
+// Scene 33 : Traps room on way to Mainframe
+// Transitions: Right (33-61), Left (32-33)
+// Checks: MoneyPile1 (MoneyPile[56]), MoneyPile0 (MoneyPile[22])
+Scene 33
+*->*: Magnet | DoubleJump
+
+// Scene 34
+// Transitions: Right1 (34-10), Right0 (34-32), Left (35-34)
+// Checks: PowerCell (PowerCell[2])
+Scene 34
+*->PowerCell: Magnet | DoubleJump
+Right0->Left: Magnet | DoubleJump
+
+// Scene 35 : Tall room below Bunker
+// Transitions: Right1 (35-34), Right0 (35-42), Left0 (201-35), Left1 (234-35)
+// Checks: Chip (Chip[18])
+Scene 35
+$Bottom {Left1, Right1}
+*->Bottom: true
+Bottom->Right0: Magnet+DoubleJump
+Bottom->Chip: Magnet
+Left0->Right0: Ball | DoubleJump | Blink | Grapple
+*->Left0: false // only opens from the other side
+
+// Scene 36
+// Transitions: Right (36-196), Left (37-36)
+// Checks:
+Scene 36
+// No obstacles
+
+// Scene 37
+// Transitions: Right (37-36), Left (38-37)
+// Checks:
+Scene 37
+// No obstacles
+
+// Scene 38
+// Transitions: Right1 (38-37), Right2 (38-45), Right0 (38-52), Right3 (38-44), Left0 (39-38), Left1 (41-38), Left2 (42-38)
+// Checks:
+Scene 38
+*->*: DoubleJump
+*->Left2: true
+*->Right3: true
+Left0->Right2: true
+*1->Right2: true
+Left0->Left1: true
+Right1->Left1: true
+Right2->Left1: true
+*0->Right1: true
+Right1->Left0: true
+Right0->*: true
+Right3->Right2: Magnet
+Right3->Left1: Magnet
+Left2->Right2: Magnet
+Left2->Left1: Magnet
+*->Right1: Magnet + (Ball | Blink | Grapple)
+*->Left0: Magnet + (Ball | Blink | Grapple)
+*->Right0: Magnet + (Ball | Blink | Grapple)
+
+// Scene 39
+// Transitions: Right (39-38), Left0 (46-39), Left1 (40-39)
+// Checks:
+Scene 39
+*->Left0: Blink + (Magnet | DoubleJump)
+Left0->*: Blink
+
+// Scene 40
+// Transitions: Right0 (40-39), Right1 (40-41), Left (203-40)
+// Checks:
+Scene 40
+*->Right0: Magnet | DoubleJump
+
+// Scene 41
+// Transitions: Right (41-38), Left (40-41), Repair (41Repair)
+// Checks:
+Scene 41
+// No obstacles
+
+// Scene 42
+// Transitions: Right (42-38), Left (35-42)
+// Checks:
+Scene 42
+// No obstacles
+
+// Scene 43
+// Transitions: Right (43-202), Left1 (204-43), Left0 (44-43)
+// Checks: Disruptor (MapDisruptor[4])
+Scene 43
+Left1->Left0: Magnet | DoubleJump
+Right->Left*: Magnet + (DoubleJump | Grapple | Blink)
+//TODO: Left1->Left0 is a pretty easy BLJ
+
+// Scene 44
+// Transitions: Right (44-43), Left (38-44)
+// Checks:
+Scene 44
+// No obstacles
+
+// Scene 45
+// Transitions: Left (38-45)
+// Checks: PowerCell (PowerCell[10])
+Scene 45
+Left->PowerCell: DoubleJump + Magnet + (Grapple | Blink)
+
+// Scene 46
+// Transitions: Right0 (46-47), Right1 (46-39), Left (58-46), Door (222-46)
+// Checks: Lever (Lever[27]), MoneyPile0 (MoneyPile[165]), MoneyPile2 (MoneyPile[167]), MoneyPile1 (MoneyPile[166]), MoneyPile3 (MoneyPile[168])
+Scene 46
+
+$LeftLever {Left, Lever}
+
+Right0->Door: 4#RustedKey
+Right0->Right1: true
+Right0->LeftLever: Lever
+Right0->MoneyPile*: true
+Right1->Door: 4#RustedKey
+Right1->Right0: Magnet | DoubleJump
+Right1->LeftLever: Lever + (Magnet | DoubleJump)
+Right1->MoneyPile*: Magnet | DoubleJump
+Left->Door: Lever + 4#RustedKey
+Left->Right0: Lever + (Magnet | DoubleJump)
+Left->Right1: Lever
+Left->MoneyPile*: Lever + (Magnet | DoubleJump)
+Left->Lever: true
+Door->Right0: Magnet | DoubleJump
+Door->Right1: true
+Door->LeftLever: Lever + (Magnet | DoubleJump)
+Door->MoneyPile*: Magnet | DoubleJump
+
+// Scene 47
+// Transitions: Right (47-48), Left (46-47)
+// Checks: Chip (Chip[25])
+Scene 47
+Right->Left: Magnet | DoubleJump
+*->Chip: DoubleJump
+
+// Scene 48
+// Transitions: Right1 (48-52), Right0 (48-49), Left0 (54-48), Left1 (47-48)
+// Checks:
+Scene 48
+$Bottom {Left1, Right1}
+Bottom->Left0: Magnet | DoubleJump
+Bottom->Right0: (Magnet | DoubleJump) + Ball + Bomb
+Left0->Right0: Ball + Bomb
+Left0->Bottom: true
+Right0->Left0: Ball + (Magnet | DoubleJump)
+Right0->Bottom: Ball
+
+// Scene 49: TV Boss
+// Transitions: Right (49-50), Left (48-49)
+// Checks:
+Scene 49
+*->*: Ball
+
+// Scene 50: World Map Monitor Room
+// Transitions: Right (50-196), Left1 (51-50), Left0 (49-50)
+// Checks: Item (Item[3]), Lore (Lore[2])
+Scene 50
+$Checks {Item, Lore}
+Left0->Left1: Ball
+Left0->Checks: Ball
+Left1->Checks: true
+Right->*: false
+*->Left0: false
+Left0->Right: Ball+Blink
+Left1->Right: Blink
+
+// Scene 51
+// Transitions: Right (51-50), Left (52-51)
+// Checks: Lever (Lever[28])
+Scene 51
+Left->Right: Lever
+Left->Lever: false
+
+// Scene 52
+// Transitions: Right1 (52-53), Right0 (52-51), Left0 (48-52), Left1 (38-52)
+// Checks:
+Scene 52
+Right1->*0: Magnet
+Left1->*0: Magnet
+
+// Scene 53: Bunker Station
+// Transitions: Left (52-53), Train (53-Train)
+// Checks: TrainStation (TrainStation[3])
+Scene 53
+Left->Train: Clock+TrainStation
+
+// Scene 54
+// Transitions: Right (54-48), Left (55-54)
+// Checks: PowerCell (PowerCell[1]), MoneyPile1 (MoneyPile[147]), MoneyPile2 (MoneyPile[148]), MoneyPile0 (MoneyPile[146])
+Scene 54
+Right->Left: Blink+DoubleJump+Magnet
+Left->Right: Blink
+Right->PowerCell: Bomb+Grapple
+Right->MoneyPile*: Bomb
+Left->PowerCell: Bomb+Blink+Grapple
+Left->MoneyPile*: Bomb + Blink
+
+// Scene 55
+// Transitions: Right (55-54), Left (56-55)
+// Checks:
+Scene 55
+Right->Left: Grapple
+Left->Right: Grapple + (Magnet | DoubleJump)
+
+// Scene 56
+// Transitions: Right1 (56-57), Right0 (56-55), Left (246-56)
+// Checks: Disruptor (MapDisruptor[13])
+Scene 56
+Right1->!Left: DoubleJump
+*->Left: false // only opens from the opposite side
+
+// Scene 57
+// Transitions: Right (57-58), Left (56-57), Repair (57Repair)
+// Checks:
+Scene 57
+*->Right: DoubleJump | Grapple | Blink | (Ball + Magnet)
+Right->*: DoubleJump | Grapple | Blink | Ball
+
+// Scene 58: Bunk Beds
+// Transitions: Right (58-46), Left0 (57-58), Left1 (59-58)
+// Checks: Lore (Lore[1]), Splunk (Splunk[0])
+Scene 58
+$Bottom {Left1, Right}
+Bottom->Left0: Magnet | DoubleJump
+Bottom->Lore: Magnet | DoubleJump
+Left0->Bottom: true
+Left0->Lore: true
+Left0->Splunk: 
+    4#Splunk + 
+    Ball + Light + // for the Sunken Wastes encounter
+    (BALL | Blink | Grapple | Magnet | DoubleJump)
+
+// Scene 59: Basketball Court
+// Transitions: Right (59-58), Left (60-59)
+// Checks: Lore (Lore[0])
+Scene 59
+$Edge {Left, Right}
+Edge->Edge: Grapple | Blink
+Right->Lore: Grapple | Blink
+Left->Lore: true
+
+// Scene 60: Last bomb barrier before Neutron
+// Transitions: Right1 (60-201), Right0 (60-59)
+// Checks:
+Scene 60
+Right0->Right1: Bomb
+Right1->Right0: Magnet + DoubleJump + Bomb
+
+// Scene 61 : Upper Left from Mainframe
+// Transitions: Right1 (61-62), Right0 (61-202), Left (33-61)
+// Checks:
+Scene 61
+*->Right0: Bomb + (Magnet | DoubleJump)
+Right0->*: Bomb
+
+// Scene 62 : Mainframe
+// Transitions: Right1 (62-167), Right0 (62-80), Left0 (61-62), Left1 (63-62), Door0 (62-205)
+// Checks: MapMarker (MapMarker[4])
+Scene 62
+Left1->Left0: Magnet
+Left1->Right0: Magnet
+Right1->Left0: Magnet
+Right1->Right0: Magnet
+Left0->Right0: Magnet | Grapple
+Right0->Left0: Magnet | Grapple
+*->Door0: 2#NeutronOrElectronBoss + ProtonBoss + FireRes // fire res for Proton
+Door0->Left1: true
+Door0->Right1: true
+Door0->Left0: Magnet
+Door0->Right0: Magnet
+*->Door1: false // alternative door to Atom?
+*->MapMarker: CreatorTrioBoss
+
+// Scene 63 : Left of Bulb Hive
+// Transitions: Right0 (63-62), Right1 (63-83), Left0 (78-63), Left1 (64-63)
+// Checks: MoneyPile (MoneyPile[40])
+Scene 63
+Right1->Left0: Magnet | DoubleJump
+Right1->Right0: Magnet | DoubleJump
+Left1->Left0: Magnet | DoubleJump
+Left1->Right0: Magnet | DoubleJump
+Right1->Left1: Magnet | DoubleJump // also possible with a precise-ish coyote jump
+Right1->MoneyPile: Magnet | DoubleJump
+
+// Scene 64
+// Transitions: Right0 (64-63), Right1 (64-65), Left (169-64)
+// Checks: MoneyPile (MoneyPile[57])
+Scene 64
+$Bottom {Left, Right1}
+Bottom->Right0: Magnet | DoubleJump
+Bottom->MoneyPile: Magnet | DoubleJump
+//TODO: Probably some BLJ skips
+
+// Scene 65 : Room to upper left of Bulb Drop
+// Transitions: Right (65-66), Left (64-65)
+// Checks: MoneyPile1 (MoneyPile[38]), MoneyPile4 (MoneyPile[37]), MoneyPile0 (MoneyPile[39]), MoneyPile2 (MoneyPile[36]), MoneyPile3 (MoneyPile[35])
+Scene 65
+$BottomCluster {MoneyPile2, MoneyPile3, MoneyPile4}
+*->MoneyPile0: Magnet | DoubleJump | Blink | Grapple
+*->BottomCluster: true
+*->MoneyPile1: Magnet | DoubleJump | Ball | Blink | Grapple
+
+// Scene 66
+// Transitions: Right3 (66-69), Right2 (66-67), Right1 (66-85), Right0 (66-77), Left1 (228-66), Left0 (65-66), Left2 (170-66)
+// Checks:
+Scene 66
+//Left1 can be reached with a fairly easy coyote jump, so no restrictions there
+//Left0,Right0 (ball exit) and Right1 are partitioned from the bottom half by vertical requirement
+Left0->Right0: Ball
+Right1->Right0: Ball
+Right0->*: Ball
+Left1->Left0: Magnet | DoubleJump
+Left1->Right0: Ball + (Magnet | DoubleJump)
+Left1->Right1: Magnet | DoubleJump
+Left2->Left0: Magnet | DoubleJump
+Left2->Left1: true
+Left2->Right0: Ball + (Magnet | DoubleJump)
+Left2->Right1: Magnet | DoubleJump
+Right3->Left0: Magnet | DoubleJump
+Right3->Right0: Ball + (Magnet | DoubleJump)
+Right3->Right1: Magnet | DoubleJump
+*->Right2: false // this transition only opens after crossing it from the other side
+Right2->Left0: Magnet | DoubleJump
+Right2->Left1: true
+Right2->Left2: true
+Right2->Right0: Ball + (Magnet | DoubleJump)
+Right2->Right1: Magnet | DoubleJump
+Right2->Right3: true
+
+// Scene 67
+// Transitions: Right (67-68), Left (66-67), Train (67-Train)
+// Checks: TrainStation (TrainStation[6]), MoneyPile (MoneyPile[185])
+Scene 67
+*->Train: TrainStation+Clock
+Train->Left: true
+Train->Right: Ball + (Magnet | DoubleJump)
+Left->Right: Ball + (Magnet | DoubleJump)
+Right->Left: Ball
+Right->MoneyPile: Ball
+
+// Scene 68 : Electrified gauntlet after Car Battery
+// Transitions: Right (68-86), Left0 (67-68), Left1 (69-68)
+// Checks: Lever (Lever[49]), PowerCell (PowerCell[11]), MoneyPile7 (MoneyPile[132]), MoneyPile0 (MoneyPile[68]), MoneyPile5 (MoneyPile[70]), MoneyPile3 (MoneyPile[101]), MoneyPile6 (MoneyPile[133]), MoneyPile1 (MoneyPile[69]), MoneyPile8 (MoneyPile[103]), MoneyPile4 (MoneyPile[102]), MoneyPile2 (MoneyPile[67])
+Scene 68
+Left0->Left1: Ball
+Left0->Right: Ball + (Magnet | Lever + DoubleJump)
+Left0->Lever: Ball + (Magnet | Lever)
+Left0->MoneyPile*: Ball + Magnet
+Left0->PowerCell: Ball + (Magnet | Lever)
+Left1->Lever: Lever
+Left1->PowerCell: Lever
+Left1->MoneyPile*: Magnet
+Left1->Right: Magnet | (Lever + DoubleJump)
+Left1->Left0: Magnet + Ball
+Right->Lever: true
+Right->PowerCell: true
+Right->MoneyPile*: Magnet + (Lever | DoubleJump)
+Right->Left1: Lever | (Magnet + DoubleJump)
+Right->Left0: Lever + Magnet + Ball | Magnet + DoubleJump + Ball
+
+// Scene 69 : Car Battery Room
+// Transitions: Right0 (69-68), Right1 (69-111), Left0 (66-69), Left1 (71-69top), Left2 (71-69bottom)
+// Checks: Chip (Chip[26])
+Scene 69
+*->Left0: Magnet | DoubleJump
+Right0->Left0: Ball
+Right0->Left1: true
+Right0->Left2: true
+Right0->Right1: true
+Right1->*: Magnet | (Ball + DoubleJump) // corner boost with ball
+Left0->Right0: Ball
+Left0->Chip: Ball
+*->Right0: Magnet | DoubleJump
+*->Chip: Magnet | DoubleJump
+Right0->Chip: true
+
+// Scene 70 : Laser electrified water gauntlet
+// Transitions: Right (70-112), Left (76-70)
+// Checks: MoneyPile2 (MoneyPile[45]), MoneyPile1 (MoneyPile[44]), MoneyPile0 (MoneyPile[43])
+Scene 70
+//No obstacles
+
+// Scene 71 : Car Battery repair; split into two separate paths
+// Transitions: Right1 (71-69bottom), Right0 (71-69top), Left1 (74-71), Left0 (72-71), Repair (71Repair)
+// Checks:
+Scene 71
+$TopHalf {Left0, Right0, Repair}
+$BottomHalf {Left1, Right1}
+TopHalf<->BottomHalf: false
+
+// Scene 72 : Hallway from Incinerator toward Car Battery
+// Transitions: Right (72-71), Left (107-72)
+// Checks:
+Scene 72
+//No obstacles
+
+// Scene 73 : Bombs pickup and sliding laser gauntlet
+// Transitions: Right (73-76), Left (74-73)
+// Checks: Bomb (Ability[2])
+Scene 73
+//No obstacles
+
+// Scene 74 : Bottom Central Core
+// Transitions: Right2 (74-75), Right1 (74-73), Right0 (74-71), Left (106-74)
+// Checks: MoneyPile (MoneyPile[42])
+Scene 74
+*->*: Bomb
+*->MoneyPile: Bomb
+Left->Right2: true
+Right2->Left: true
+Right0<->Right1: Blink // through the wall
+//TODO: This room has a Blink through the wall into bombs at Right1, accessible from Right0
+
+// Scene 75 : Bomb barriers before Electron
+// Transitions: Right (75-76), Left0 (74-75), Left1 (84-75), Repair (75Repair)
+// Checks: Item (Item[1]), Lever (Lever[15]), MoneyPile2 (MoneyPile[46]), MoneyPile1 (MoneyPile[48]), MoneyPile0 (MoneyPile[47])
+Scene 75
+$LeftMoney {MoneyPile0, MoneyPile1}
+Left0->Item: Bomb + (Lever | Ball + Magnet | Ball + DoubleJump)
+Left0->Left1: Bomb + (Lever | Ball + Magnet | Ball + DoubleJump)
+Left0->Lever: Bomb + (Lever | Ball + Magnet | Ball + DoubleJump)
+Left0->MoneyPile*: Bomb + Ball
+Left0->Repair: Bomb
+// Left0<->Right can be crossed itemless, but only if the bomb floor has not been broken yet.
+Left0<->Right: Magnet | Grapple | Blink
+Left1->Item: Magnet | DoubleJump
+Left1->Lever: Magnet | DoubleJump
+Left1->LeftMoney: Ball + (Bomb | Magnet | DoubleJump)
+Left1->MoneyPile2: Ball + Bomb
+Left1->Left0: Lever + Bomb + Magnet
+Left1->Repair: Lever + (Magnet | DoubleJump)
+Left1->Right: Lever + Bomb + Magnet
+Repair->Item: Lever | Ball + Bomb + (Magnet | DoubleJump)
+Repair->LeftMoney: Ball
+Repair->MoneyPile2: Ball + Bomb
+Repair->Left0: Bomb + Magnet
+Repair->Left1: Lever | Ball + Bomb + (Magnet | DoubleJump)
+Repair->Lever: Lever | Ball + Bomb + (Magnet | DoubleJump)
+Repair->Right: Bomb + Magnet
+Right->Item: Bomb + (Lever | Ball + Magnet | Ball + DoubleJump)
+Right->Left1: Ball + Bomb + (Magnet | DoubleJump)
+Right->Lever: Ball + Bomb + (Magnet | DoubleJump)
+Right->MoneyPile*: Ball + Bomb
+Right->Repair: Bomb
+//NOTE: the non-lever path here can be accessed via a pretty easy BLJ after breaking the bomb barrier
+//The path from below can also use a BLJ, though slightly harder
+
+// Scene 76 : Central tesla lasers gauntlet
+// Transitions: Right (76-70), Left0 (73-76), Left1 (75-76)
+// Checks: Disruptor (MapDisruptor[8])
+Scene 76
+*->Left0: Magnet | DoubleJump | Ball
+
+// Scene 77 : Sealants Room
+// Transitions: Right (77-79), Left (66-77)
+// Checks: Lever (Lever[55]), FireRes (FireRes[0]), WaterRes (WaterRes[0])
+Scene 77
+Left->*Res: Lever + Ball + (Magnet | DoubleJump)
+Left->Lever: true
+Left->Right: Lever + Ball + (Magnet | DoubleJump)
+Right->*Res: Ball
+Right->Lever: Lever+Ball
+Right->Left: Lever+Ball
+
+// Scene 78 : Tricky magnet obstacle course
+// Transitions: Right (78-63), Left (168-78)
+// Checks:
+Scene 78
+Left->Right: Magnet | Grapple + DoubleJump
+Right->Left: Magnet | Blink | Grapple + DoubleJump
+
+// Scene 79 : Right of Sealants Room
+// Transitions: Down (79-34), Left1 (77-79), Left0 (81-79)
+// Checks: Lever (Lever[46])
+Scene 79
+//'Down' is not used here
+*->Down: false
+Down->*: false
+Left1->Left0: Magnet | DoubleJump
+//NOTE: Lever here doesn't actually block anything
+
+// Scene 80 : Right of Mainframe
+// Transitions: Right (80-81), Left (62-80)
+// Checks: Disruptor (MapDisruptor[5])
+Scene 80
+Right->*: Ball
+Left->Right: Ball
+
+// Scene 81 : Right of Bulb Hive
+// Transitions: Right1 (81-79), Right0 (81-82), Left0 (80-81), Left1 (83-81)
+// Checks: Item (Item[3])
+Scene 81
+Right1->Left1: Ball
+Left1->Right1: Ball
+*->Left0: Ball + (Magnet | DoubleJump)
+*->Right0: Ball + (Magnet | DoubleJump)
+*->Item: Blink
+//TODO: Possible enemy pogo skips, plus some BLJ and coyote stuff, maybe
+
+// Scene 82 : Power Cell left of elevators room
+// Transitions: Right (82-93), Left (81-82)
+// Checks: PowerCell (PowerCell[14])
+Scene 82
+Right->Left: Ball
+Left->*: Ball
+
+// Scene 83 : Bulb Hive
+// Transitions: Right (83-81), Left (63-83)
+// Checks: Bulblet (Bulblet[0]), Lever2 (Lever[21]), Lever1 (Lever[20]), Lever0 (Lever[22]), Lore (Lore[22])
+Scene 83
+Right->Bulblet: Ball + (Lever0 | Lever1 | Lever2)
+Right->Lore: Ball + (Lever0 | Lever1 | Lever2)
+Right->Left: Blink + Ball + (Lever0 | Lever1 | Lever2)
+Right->Lever0: Ball
+Right->Lever1: Ball + (Lever0 | Lever1 | Lever2)
+Right->Lever2: Ball + (Lever0 | Lever1 | Lever2)
+Left->Bulblet: Blink
+Left->Right: Blink + Ball + (Lever0 | Lever1 | Lever2)
+Left->Lore: Blink + Ball
+Left->Lever2: Blink + Ball
+Left->Lever1: Blink + Ball
+Left->Lever0: Blink + Ball + (Lever0 | Lever1 | Lever2)
+
+// Scene 84 : Electron fight
+// Transitions: Right (84-75)
+// Checks: Lore (Lore[25])
+Scene 84
+Right->Lore: true
+
+// Scene 85 : Grapple Pickup
+// Transitions: Left (66-85)
+// Checks: Grapple (Ability[5])
+Scene 85
+Left->Grapple: DoubleJump + Ball | Grapple
+
+// Scene 86 : Entrance to Pinions Expanse with piston lock
+// Transitions: Right (86-87), Left (68-86)
+// Checks:
+Scene 86
+Right->Left: Lever17
+
+// Scene 87
+// Transitions: Right1 (87-88), Right0 (87-89), Left1 (86-87), Left0 (92-87), Repair (87Repair)
+// Checks:
+Scene 87
+$LeftCorner {Left1, Repair}
+$Bottom {Left1, Repair, Right1}
+Right1->LeftCorner: Magnet | DoubleJump
+Bottom->Right0: Magnet
+Bottom->Left0: Clock + (Magnet | DoubleJump)
+Left0->!Right0: Clock
+Left0->Right0: Clock + Magnet
+Right0->Left0: Clock
+
+// Scene 88 : Pinions Train Station
+// Transitions: Right0 (88-91), Right1 (88-98), Left (87-88), Train (88-Train)
+// Checks: Item (Item[3]), TrainStation (TrainStation[1]), Clock (Clock[0])
+Scene 88
+$Bottom {Left, Right1, Train}
+$RightArea {Right0, Clock}
+*->Train: Clock+TrainStation
+Bottom->Item: DoubleJump | Clock + Magnet
+Bottom->Clock: DoubleJump | Clock + Magnet
+Bottom->RightArea: DoubleJump | Clock + Magnet
+Right0->Item: DoubleJump | Blink | Grapple | Ball | Clock + Magnet
+Right0->Clock: true
+
+// Scene 89
+// Transitions: Right (89-90), Left (87-89)
+// Checks:
+Scene 89
+
+// Scene 90 : Troll platforms room on way to Factory hidden entrance
+// Transitions: Right (90-100), Left2 (91-90), Left1 (89-90), Left0 (94-90)
+// Checks:
+Scene 90
+$Bottom {Left1, Left2}
+$Top {Right, Left0}
+Bottom<->Top: Clock
+
+// Scene 91 : Pinions room above Mischievous Mechanic (Left1 is drop down)
+// Transitions: Right (91-90), Left1 (98-91), Left0 (88-91)
+// Checks: Disruptor (MapDisruptor[9])
+Scene 91
+Left1->*: false
+//No other obstacles besides drop being one-way
+
+// Scene 92 : Breaking platforms gauntlet to elevators room
+// Transitions: Right (92-87), Left (93-92)
+// Checks:
+Scene 92
+//No obstacles
+
+// Scene 93 : Elevators room
+// Transitions: Right2 (93-92), Right0 (93-171), Right1 (93-96), Left (82-93)
+// Checks:
+Scene 93
+$Top {Right0, Left}
+*<->!Top: Clock
+
+// Scene 94 : Breaking platforms right of Steam Town
+// Transitions: Right (94-90), Left (95-94)
+// Checks:
+Scene 94
+//No obstacles
+
+// Scene 95 : Steam Town
+// Transitions: Right1 (95-94), Right0 (95-97), Left (96-95)
+// Checks: Chip (Chip[21]), MoneyPile1 (MoneyPile[0]), MoneyPile9 (MoneyPile[0]), MoneyPile10 (MoneyPile[0]), MoneyPile0 (MoneyPile[0]), MoneyPile5 (MoneyPile[0]), MoneyPile6 (MoneyPile[0]), MoneyPile7 (MoneyPile[0]), MoneyPile8 (MoneyPile[0]), MoneyPile11 (MoneyPile[0]), MoneyPile3 (MoneyPile[0]), MoneyPile4 (MoneyPile[0]), MoneyPile2 (MoneyPile[0])
+Scene 95
+//NOTE: The Chip here is behind the 'save the children' quest
+//This means access is a bit unusual, as it involves visiting room 97 and completing it
+//We thus flag the Chip as being gated based on room 97's obstacles
+*->Chip: SteamTownChildren + (Magnet | (DoubleJump + Lever42))
+
+// Scene 96 : Piston bridge
+// Transitions: Right (96-95), Left (93-96)
+// Checks: Lever (Lever[17])
+Scene 96
+Left<->Right: Grapple | Lever
+Right->Lever: true
+Left->Lever: Grapple | Lever
+
+// Scene 97
+// Transitions: Left (95-97)
+// Checks: Lever (Lever[42])
+Scene 97
+*->Lever: Lever | Magnet
+
+// Scene 98 : Mischievous Mechanic Fight
+// Transitions: Right (98-91), Left (88-98)
+// Checks: Lever (Lever[56]), PowerCell (PowerCell[16]), MoneyPile4 (MoneyPile[178]), MoneyPile6 (MoneyPile[184]), MoneyPile0 (MoneyPile[179]), MoneyPile2 (MoneyPile[180]), MoneyPile5 (MoneyPile[183]), MoneyPile1 (MoneyPile[182]), MoneyPile3 (MoneyPile[181])
+Scene 98
+$LeftPiles {MoneyPile0, MoneyPile2}
+$RightPiles {MoneyPile3, MoneyPile4, MoneyPile5, MoneyPile6}
+*->Right: false
+Left->PowerCell: Lever
+Left->Lever: Lever
+Left->MoneyPile1: Lever + (Magnet | DoubleJump)
+Left->RightPiles: Lever
+Right->Left: Lever
+Right->MoneyPile1: Magnet | DoubleJump
+Right->LeftPiles: Lever
+
+// Scene 100 : Hidden tunnel toward Factory right side
+// Transitions: Right (100-192), Left (90-100)
+// Checks:
+Scene 100
+Left->Right: Magnet
+
+// Scene 101
+// Transitions: Right0 (101-108), Right1 (101-102), Left (18-101)
+// Checks: Chip (Chip[1]), MoneyPile2 (MoneyPile[71]), MoneyPile1 (MoneyPile[73]), MoneyPile0 (MoneyPile[72])
+Scene 101
+*->Chip: FireRes+Ball
+*->Left: FireRes+Magnet
+*->Right0: FireRes + (Magnet | DoubleJump)
+Right0->MoneyPile*: FireRes
+Left->MoneyPile*: FireRes + (Magnet | DoubleJump)
+Right1->MoneyPile*: FireRes + (Magnet | DoubleJump)
+
+// Scene 102
+// Transitions: Right1 (102-103), Right0 (102-107), Left (101-102)
+// Checks: Lever (Lever[12]), PowerCell (PowerCell[3])
+Scene 102
+$Checks {Lever, PowerCell}
+// getting to the PowerCell requires a precise jump
+Left->Right*: FireRes + (Lever | Magnet)
+Left->Checks: FireRes
+Right*->Left: FireRes
+Right*->Checks: FireRes
+
+// Scene 103
+// Transitions: Right (103-105), Left0 (102-103), Left1 (104-103), Repair (103Repair)
+// Checks: Lore (Lore[8])
+Scene 103
+Left0->*: FireRes
+Right->*: FireRes
+*->Repair: FireRes
+Repair->Left1: FireRes
+Repair->Left0: FireRes+Magnet
+Repair->Right: FireRes+Magnet
+Left1->Left0: FireRes+Magnet
+Left1->Right: FireRes+Magnet
+Left0->Lore: FireRes
+Right->Lore: FireRes
+Left1->Lore: FireRes + Magnet
+Repair->Lore: FireRes + Magnet
+
+// Scene 104 : Fire Wheels Incinerator Room
+// Transitions: Right1 (104-106), Right0 (104-103)
+// Checks: PowerCell (PowerCell[4]), Lore (Lore[7]), MoneyPile3 (MoneyPile[81]), MoneyPile2 (MoneyPile[85]), MoneyPile5 (MoneyPile[82]), MoneyPile6 (MoneyPile[79]), MoneyPile0 (MoneyPile[84]), MoneyPile4 (MoneyPile[80]), MoneyPile1 (MoneyPile[83]), PowerCell (PowerCell[4])
+Scene 104
+$LeftWellPiles {MoneyPile4, MoneyPile5, MoneyPile6}
+$LoreArea {Lore, MoneyPile0, MoneyPile1, MoneyPile2}
+*->Right0: FireRes+Magnet
+Right0->*: FireRes + (Magnet | DoubleJump)
+Right1->PowerCell: FireRes + Magnet + DoubleJump | FireRes + HeatDrive + (Blink | Grapple)
+Right*->LoreArea: FireRes + Magnet + (
+    DoubleJump | HeatDrive + Blink | HeatDrive + Grapple | Ball)
+Right1->LeftWellPiles: FireRes
+Right1->MoneyPile3: FireRes + Magnet
+
+// Scene 105
+// Transitions: Left (103-105)
+// Checks: Lore (Lore[9])
+Scene 105
+Left->Lore: true
+
+// Scene 106
+// Transitions: Right (106-74), Left0 (104-106), Left1 (110-106)
+// Checks:
+Scene 106
+*->*: FireRes
+
+// Scene 107 : Incinerator exit toward Car Battery
+// Transitions: Right (107-72), Left (102-107)
+// Checks:
+Scene 107
+*->*: true
+
+// Scene 108
+// Transitions: Right (108-109), Left (101-108)
+// Checks: Disruptor (MapDisruptor[2])
+Scene 108
+Right->Left: FireRes
+Left->Right: FireRes
+// also possible with Ball by wedging yourself between two of the crumbling walls on the right side
+// possible precise-movement category?
+*->Disruptor: FireRes + (Magnet | DoubleJump)
+
+// Scene 109 : Incinerator Top
+// Transitions: Right (109-228), Left1 (108-109), Left0 (26-109)
+// Checks: MoneyPile (MoneyPile[41])
+Scene 109
+Left0->Right: FireRes
+Left0->MoneyPile: FireRes
+Right->Left0: FireRes
+Right->MoneyPile: FireRes
+*->Left1: FireRes
+Left1->*: FireRes + (Magnet | DoubleJump)
+
+// Scene 110 : Dark bridge over fire
+// Transitions: Right (110-106), Left (158-110)
+// Checks: Lever (Lever[13])
+Scene 110
+//Heat Drive and Grapple can cross this room
+Right->Lever: LIGHT
+Right->Left: FireRes + (Lever | HeatDrive + Grapple)
+Left->Right: FireRes + (
+    Lever |
+    HeatDrive + Grapple |
+    HeatDrive + Blink |
+    HeatDrive + Ball + DoubleJump) // two ball jumps
+Left->Lever: FireRes + LIGHT + (
+    Lever |
+    HeatDrive + Grapple |
+    HeatDrive + Blink |
+    HeatDrive + Ball + DoubleJump) // two ball jumps
+
+// Scene 111
+// Transitions: Right (111-112), Left (69-111)
+// Checks:
+Scene 111
+Right->Left: Magnet | DoubleJump | Ball // Ball works because of a corner boost
+
+
+// Scene 112
+// Transitions: Right1 (112-113), Right0 (112-129), Left1 (70-112), Left0 (111-112)
+// Checks:
+Scene 112
+*->*1: Blink | WaterRes
+*1->*: Blink | WaterRes
+
+
+// Scene 113
+// Transitions: Right (113-114), Left (112-113), Repair (113Repair)
+// Checks: Chip (Chip[19]), MoneyPile2 (MoneyPile[88]), MoneyPile1 (MoneyPile[87]), MoneyPile0 (MoneyPile[86])
+Scene 113
+$Checks {Chip, MoneyPile0, MoneyPile1, MoneyPile2}
+*->Checks: Ball | Blink
+
+// Scene 114
+// Transitions: Right0 (114-115), Right1 (114-118), Left1 (209-114), Left0 (113-114)
+// Checks: MoneyPile3 (MoneyPile[118]), MoneyPile2 (MoneyPile[119]), MoneyPile0 (MoneyPile[121]), MoneyPile1 (MoneyPile[120])
+Scene 114
+$Bottom {Left1, Right1}
+$Top {Left0, Right0}
+Bottom->Top: Magnet | DoubleJump
+*->MoneyPile*: Magnet | DoubleJump | Ball | Blink | Grapple
+
+// Scene 115
+// Transitions: Right (115-116), Left (114-115)
+// Checks:
+Scene 115
+Left->Right: Magnet | DoubleJump | Grapple | Ball | Blink // or a coyote jump
+
+// Scene 116
+// Transitions: Right (116-117), Left (115-116)
+// Checks:
+Scene 116
+*->*: Ball
+
+// Scene 117: Water Ducts elevator
+// Transitions: Elevator (178-117), Right (117-210), Left (116-117)
+// Checks: Lore (Lore[18]), MapMarker (MapMarker[3])
+Scene 117
+$Bottom {Elevator, Left}
+Right->Bottom: WaterRes
+Bottom->Right: WaterRes+Magnet
+Bottom->Lore: Magnet + (DoubleJump | WaterRes + Blink | WaterRes + Grapple)
+Bottom->MapMarker: true
+Right->Lore: WaterRes + Magnet + DoubleJump | Magnet + Blink | DoubleJump + Blink | Grapple
+Right->MapMarker: WaterRes
+// Power Processor + 3-bomb jump can do Bottom->Lore too
+
+// Scene 118
+// Transitions: Right2 (118-121), Right1 (118-119bottom), Right0 (118-119top), Left1 (122-118), Left0 (114-118)
+// Checks: Disruptor (MapDisruptor[7]), MoneyPile2 (MoneyPile[163]), MoneyPile1 (MoneyPile[164]), MoneyPile0 (MoneyPile[162])
+Scene 118
+$Top {Disruptor, Right0}
+$BottomTrans {Right2, Left1}
+!Right0->Disruptor: false
+Right0->!Disruptor: false
+*->Right0: false
+Right0->Disruptor: Blink | WaterRes
+Left0->!Top: Blink | WaterRes
+Right1->!Top: Blink | WaterRes
+BottomTrans->!Top: (Blink | WaterRes) + (Magnet | DoubleJump)
+Left1->Right2: Blink | WaterRes
+!Right0->MoneyPile*: Blink | WaterRes
+
+
+// Scene 119
+// Transitions: Right (119-120), Left1 (118-119bottom), Left0 (118-119top)
+// Checks:
+Scene 119
+// No obstacles
+
+// Scene 120
+// Transitions: Right0 (120-208), Right1 (120-207), Left (119-120)
+// Checks: Lever (Lever[54])
+Scene 120
+!Right1->Lever: Lever
+Left->Right0: DoubleJump
+Right1->Right0: Lever + DoubleJump
+Left->Right1: Lever + (DoubleJump | Magnet + Grapple)
+Right0->Right1: Lever
+Right0->Left: true
+Right1->Left: Lever
+
+// Scene 121
+// Transitions: Left (118-121)
+// Checks: PowerCell (PowerCell[5])
+Scene 121
+Left->*:
+    Magnet + Grapple |
+    Magnet + Blink |
+    DoubleJump + Grapple |
+    WaterRes + Magnet |
+    WaterRes + DoubleJump |
+    WaterRes + Grapple |
+    WaterRes + Blink |
+    WaterRes + Bomb // for an air stall
+
+// Scene 122
+// Transitions: Right (122-118), Left (123-122)
+// Checks: MoneyPile1 (MoneyPile[97]), MoneyPile0 (MoneyPile[96])
+Scene 122
+Left->Right: Magnet | DoubleJump | AmplifyingTransputer + Blink + (Grapple | WaterRes)
+*->MoneyPile*: Blink + AmplifyingTransputer | (Magnet | DoubleJump) + (Blink | Grapple | WaterRes)
+
+// Scene 123
+// Transitions: Right1 (123-127), Right0 (123-122), Left0 (124-123), Left1 (126-123)
+// Checks:
+Scene 123
+*0->*0: Grapple | Blink | WaterRes
+*0->*1: Bomb+WaterRes
+*1->*1: Grapple | WaterRes | Blink + DoubleJump
+*1->*0: WaterRes+Magnet+Bomb
+
+
+// Scene 124
+// Transitions: Right (124-123), Left (125-124)
+// Checks:
+Scene 124
+Right->Left: Grapple + DoubleJump | WaterRes
+Left->Right: Grapple | WaterRes
+
+// Scene 125
+// Transitions: Right (125-124), Left (131-125)
+// Checks:
+Scene 125
+// No obstacles
+
+// Scene 126
+// Transitions: Right (126-123), Left (131-126)
+// Checks: Lever (Lever[30]), PowerCell (PowerCell[9])
+Scene 126
+Right->*: Lever + (Grapple | WaterRes)
+Left->Right: Lever + Grapple
+
+// Scene 127: Lower Water Ducts repair station
+// Transitions: Right (127-128), Left (123-127), Repair (127Repair)
+// Checks: Lore (Lore[16]), MoneyPile2 (MoneyPile[98]), MoneyPile0 (MoneyPile[100]), MoneyPile1 (MoneyPile[99])
+Scene 127
+$RightSide {Right, Repair}
+$Transition {Left, Right, Repair}
+Left<->RightSide: Light + (Magnet | DoubleJump)
+Repair<->Right: Light
+Transition->Lore: Light + (Magnet | DoubleJump)
+Transition->MoneyPile*: Light + DoubleJump
+
+// Scene 128
+// Transitions: Right0 (128-207), Right1 (128-206), Left (127-128)
+// Checks: Coolant (Coolant[0])
+Scene 128
+Right*->Left: Light + (Magnet | DoubleJump)
+Left->Right1: Light + (Magnet | DoubleJump)
+*->Right0: DoubleJump+Light
+*->Coolant: Light + (Magnet | DoubleJump)
+
+// Scene 129
+// Transitions: Right (129-130), Left (112-129)
+// Checks: Chip (Chip[2]), Lever (Lever[37])
+Scene 129
+*->Chip: Magnet | DoubleJump
+*->Lever: Magnet | DoubleJump
+
+// Scene 130
+// Transitions: Left (129-130)
+// Checks: Item (Item[3]), Lore (Lore[19])
+Scene 130
+Left->*: Grapple + Magnet + (WaterRes | DoubleJump)
+
+// Scene 131
+// Transitions: Right0 (131-125), Right1 (131-126), Left (132-131bottom)
+// Checks:
+Scene 131
+*->Right1: (WaterRes | Grapple | Blink) + (Magnet | DoubleJump)
+Left->Right0: DoubleJump
+Right0->Left: DoubleJump
+Right1->Left: WaterRes | Grapple | Blink
+Right1->Right0: WaterRes + (Magnet | DoubleJump)
+
+// Scene 132 : Lune up above (with 'Down' transition that's actually Left) and Ruins vertical room
+// Transitions: Right1 (132-143), Right0 (132-131bottom), Left1 (138-132), Left0 (133-132bottom), Down (133-132top)
+// Checks: Disruptor (MapDisruptor[6]), Lever (Lever[47]), Lore (Lore[10]), MoneyPile2 (MoneyPile[122]), MoneyPile0 (MoneyPile[157]), MoneyPile3 (MoneyPile[104]), MoneyPile1 (MoneyPile[123])
+Scene 132
+$BottomPastLever {Right1, Right0, Left0}
+*<->Down: false
+BottomPastLever->Disruptor: Blink + (Magnet | DoubleJump)
+BottomPastLever->Lore: Blink + (Magnet | DoubleJump)
+BottomPastLever->MoneyPile0: Blink + (Magnet | DoubleJump)
+BottomPastLever->Lever: Lever
+Right1->Right0: Magnet | DoubleJump
+Right1->Left0: DoubleJump
+Right1->Left1: Lever
+Right1->MoneyPile*: Blink + (Magnet | DoubleJump)
+Right0->Left0: DoubleJump
+Right0->Left1: Lever
+Right0->Right1: true
+Right0->MoneyPile1: true
+Right0->MoneyPile2: true
+Right0->MoneyPile3: Blink
+Left1->Right0: Lever + (Magnet | DoubleJump)
+Left1->Left0: DoubleJump+Lever
+Left1->Right1: true
+Left1->Disruptor: Lever + Blink + (Magnet | DoubleJump)
+Left1->Lore: Lever + Blink + (Magnet | DoubleJump)
+Left1->MoneyPile*: Lever + Blink + (Magnet | DoubleJump)
+Left1->Lever: true
+Left0->Left1: Lever
+Left0->Right0: true
+Left0->Right1: true
+Left0->MoneyPile1: true
+Left0->MoneyPile2: true
+Left0->MoneyPile3: Blink
+
+// Scene 133
+// Transitions: Right0 (133-225top), Right1 (133-132bottom), Left (134-133)
+// Checks: MoneyPile1 (MoneyPile[175]), MoneyPile0 (MoneyPile[174])
+Scene 133
+Right0->Right1: Ball | Blink + AmplifyingTransputer
+Right0->Left: Ball + Magnet | Ball + DoubleJump | Blink + AmplifyingTransputer + (Magnet | DoubleJump)
+Right0->MoneyPile*: Ball + Magnet | Ball + DoubleJump | Blink + AmplifyingTransputer
+*->Right0: Ball + Magnet | Ball + DoubleJump | Blink + AmplifyingTransputer + Magnet
+Left->Right1: Magnet | DoubleJump
+Left->MoneyPile*: Magnet | DoubleJump
+Right1->Left: Magnet
+Right1->MoneyPile*: Magnet | DoubleJump + Blink + AmplifyingTransputer
+
+// Scene 134
+// Transitions: Right2 (134-137), Right1 (134-136), Right0 (134-133), Left1 (135-134), Left0 (211-134), Left2 (141-134)
+// Checks: PowerCell (PowerCell[18]), MoneyPile1 (MoneyPile[177]), MoneyPile0 (MoneyPile[176]), MoneyPile5 (MoneyPile[161]), MoneyPile2 (MoneyPile[158]), MoneyPile4 (MoneyPile[160]), MoneyPile3 (MoneyPile[159])
+Scene 134
+$LowerPiles {MoneyPile2, MoneyPile3, MoneyPile4, MoneyPile5}
+$UpperPiles {MoneyPile0, MoneyPile1}
+$UpperTransitions {Left0, Left1, Right0, Right1}
+Left2->Right2: Blink
+Left2->Right1: Blink+Magnet
+Left2->Right0: Blink+Magnet
+Left2->Left1: Blink+Magnet
+Left2->Left0: Blink+Magnet
+Left2->PowerCell: Blink+Magnet
+Left2->*: Blink + DoubleJump
+Left2->LowerPiles: Blink + Magnet
+*->Left2: Blink
+Right2->*: DoubleJump
+Right2->Left1: Magnet
+Right2->Left0: Magnet
+Right2->Right1: Magnet
+Right2->Right0: Magnet
+Right2->PowerCell: Magnet + (Blink | Grapple) // also possible with a thorn stand
+Right2->LowerPiles: Magnet // also DoubleJump implied by Right2->* clause
+UpperTransitions->PowerCell: Blink | DoubleJump | Grapple
+UpperTransitions->LowerPiles: true
+UpperTransitions->UpperPiles: Grapple | Magnet + Blink
+!Left2->UpperPiles: Magnet + DoubleJump
+
+// Scene 135
+// Transitions: Right (135-134), Left0 (147-135), Left1 (140-135)
+// Checks: Chip (Chip[27])
+Scene 135
+Right->Left0: Magnet | DoubleJump
+Right->Left1: Magnet | DoubleJump | Blink | Grapple
+Left1->Right: DoubleJump
+Left1->*: Magnet + (Blink | Grapple)
+Left1->Left0: DoubleJump
+*->Chip: Magnet + (Grapple | Blink | DoubleJump)
+Right->Chip: Blink + AmplifyingTransputer
+
+// Scene 136
+// Transitions: Left (134-136), Train (136-Train)
+// Checks: TrainStation (TrainStation[5])
+Scene 136
+*->Train: Clock+TrainStation
+
+// Scene 137 : Door Boss
+// Transitions: Right (137-138), Left (134-137)
+// Checks:
+Scene 137
+Left->Right: 4#RustedKey
+Right->Left: false
+
+// Scene 138: First Tree
+// Transitions: Right1 (138-139), Right0 (138-132), Left (137-138), Door (138-227)
+// Checks: Item (Item[3]), Slot (ChipSlot[3])
+Scene 138
+*->Door: Magnet + (DoubleJump | Grapple)
+Right0->Door: DoubleJump + Grapple | DoubleJump + Blink | Magnet + Grapple
+Left->Right0: Magnet + (DoubleJump | Blink | Grapple)
+Right1->Right0: Magnet + (DoubleJump | Blink | Grapple)
+*->Item: Magnet + Blink + DoubleJump | Magnet + Grapple
+
+// Scene 139: Entrance to Lost Archives
+// Transitions: Right (139-144), Left (138-139), Repair (139Repair)
+// Checks: Lore (Lore[12])
+Scene 139
+$Bottom {Right, Repair}
+Bottom->Left: Magnet
+Bottom->Lore: Magnet
+Left->Right: VirusBoss
+Repair->Right: VirusBoss
+
+// Scene 140
+// Transitions: Right0 (140-135), Right1 (140-141), Repair (140Repair)
+// Checks: Lore (Lore[11]), MapMarker (MapMarker[2])
+Scene 140
+$Bottom {Right1, Repair, Lore}
+Right0->Bottom: Magnet | Blink
+Right0->MapMarker: Magnet
+Bottom->Right0: Magnet
+Bottom->MapMarker: Magnet
+
+// Scene 141
+// Transitions: Right (141-134), Left (140-141)
+// Checks: PowerCell (PowerCell[13])
+Scene 141
+*->*: Blink
+
+// Scene 143
+// Transitions: Left (132-143)
+// Checks: Chip (Chip[22]), PowerCell (PowerCell[7])
+Scene 143
+// This is what's required to pick up the cell without dunking into
+// the spikes.
+// With a dunk, (DoubleJump | Blink | Grapple) is sufficient.
+Left->PowerCell: Magnet + Grapple | Magnet + Blink + DoubleJump
+
+// Scene 144
+// Transitions: Right (144-5), Left (139-144)
+// Checks: Lore0 (Lore[15]), Lore1 (Lore[13]), Lore2 (Lore[14])
+Scene 144
+Left->Right: false
+
+// Scene 146
+// Transitions: Right (146-154), Train (146-Train)
+// Checks: TrainStation (TrainStation[7])
+Scene 146
+Right->Train: Clock+TrainStation
+
+// Scene 147
+// Transitions: Right1 (147-135), Right0 (147-156), Left (153-147)
+// Checks: MoneyPile2 (MoneyPile[78]), MoneyPile0 (MoneyPile[76]), MoneyPile4 (MoneyPile[75]), MoneyPile1 (MoneyPile[77]), MoneyPile3 (MoneyPile[74])
+Scene 147
+Left->Right0: Magnet+DoubleJump
+Right1->Right0: Magnet+Blink+DoubleJump
+Right1->Left: Blink
+*->Right1: Blink
+!Right1->MoneyPile*: Magnet | DoubleJump
+Right1->MoneyPile*: Blink + (Magnet | DoubleJump)
+
+// Scene 151
+// Transitions: Right0 (151-165hidden), Right1 (151-165), Left1 (152-151), Left0 (162-151)
+// Checks: MoneyPile0 (MoneyPile[124]), MoneyPile1 (MoneyPile[126]), MoneyPile2 (MoneyPile[125])
+Scene 151
+Right0->Left0: Ball+Light
+Right0->!Left0: false
+Left0->Right0: Ball+Light
+Left0->!Right0: false
+Right1->Right0: false
+Right1->Left0: false
+Left1->Right0: false
+Left1->Left0: false
+Right1->Left1: Ball+Light
+Right1->MoneyPile*: Ball + Light
+Left1->Right1: Light
+Left1->MoneyPile*: Ball + Light
+
+// Scene 152: Amplifying Transputer room
+// Transitions: Right1 (152-153), Right0 (152-151), Left1 (161-152bottom), Left0 (161-152top), Left2 (160-152)
+// Checks: Chip (Chip[20]), Lore (Lore[4]), MoneyPile5 (MoneyPile[49]), MoneyPile2 (MoneyPile[52]), MoneyPile4 (MoneyPile[51]), MoneyPile1 (MoneyPile[53]), MoneyPile3 (MoneyPile[55]), MoneyPile0 (MoneyPile[54])
+Scene 152
+$TopRightChecks {Lore, MoneyPile0, MoneyPile1, MoneyPile2, MoneyPile3, MoneyPile4, MoneyPile5}
+Left0->Left1: Ball+Light
+Left0->Right0: Ball+Light
+Left0->Left2: Ball+Light
+Left0->Right1: Ball+Light
+Left0->Chip: Ball + Light + (Blink | Grapple)
+Left0->TopRightChecks: Light
+Left1->Left2: Ball+Light
+Left1->Right0: Ball+Light
+Left1->Left1: Ball+Light
+Left1->Left0: Ball+Light
+Left1->Chip: Ball + Light + (Blink | Grapple)
+Left1->TopRightChecks: Ball + Light
+Right0->Left1: Ball+Light
+Right0->Left0: Ball+Light
+Right0->Left2: Ball+Light
+Right0->Right1: Ball+Light
+Right0->Chip: Ball + Light + (Blink | Grapple)
+Right0->TopRightChecks: Ball + Light
+Left2->Chip: Light + (Blink | Grapple)
+Left2->TopRightChecks: Light + Ball + (Magnet | DoubleJump)
+Left2->Left0: Light + Ball + (Magnet | DoubleJump)
+Left2->Left1: Light + Ball + (Magnet | DoubleJump)
+Left2->Right0: Light + Ball + (Magnet | DoubleJump)
+Left2->Right1: Light
+Right1->Chip: Light + (Blink | Grapple) + (DoubleJump | Magnet)
+Right1->TopRightChecks: Light + Ball + (Magnet | DoubleJump)
+Right1->Left0: Light + Ball + (Magnet | DoubleJump)
+Right1->Left1: Light + Ball + (Magnet | DoubleJump)
+Right1->Left2: Light + (Magnet | DoubleJump)
+Right1->Right0: Light + Ball + (Magnet | DoubleJump)
+
+// Scene 153
+// Transitions: Right0 (153-154), Right1 (153-147), Left1 (159-153), Left0 (152-153)
+// Checks:
+Scene 153
+$TopArea {Left0, Right0}
+$BottomArea {Left1, Right1}
+TopArea<->TopArea: Light
+BottomArea->TopArea: Magnet+Blink+Light
+TopArea->BottomArea: Blink+Light
+BottomArea<->BottomArea: Light
+
+// Scene 154
+// Transitions: Right (154-155), Left0 (146-154), Left1 (153-154)
+// Checks: MoneyPile2 (MoneyPile[151]), MoneyPile0 (MoneyPile[149]), MoneyPile1 (MoneyPile[150]), MoneyPile3 (MoneyPile[152]), MoneyPile7 (MoneyPile[154]), MoneyPile5 (MoneyPile[156]), MoneyPile6 (MoneyPile[153]), MoneyPile4 (MoneyPile[155])
+Scene 154
+Left0->*: Light
+Left1->Left0: Light + (Magnet | DoubleJump)
+Left1->Right: Light
+Left1->MoneyPile*: Light
+Right->Left0: Light + (Magnet | DoubleJump)
+Right->Left1: Light
+Right->MoneyPile*: Light
+
+// Scene 155
+// Transitions: Right (155-156), Left0 (165-155), Left1 (154-155)
+// Checks: Chip (Chip[11]), Lever (Lever[48])
+Scene 155
+Left1->Left0: Light + Lever + (Magnet | DoubleJump)
+Left1->Right: Light + Lever
+Left1->Lever: Light
+Left1->Chip: Light + Lever + Magnet
+Left0->Left1: Light + Lever
+Left0->Right: Light
+Left0->Right: Light
+Left0->Chip: Light + Magnet
+Right->Left1: Light + Lever + (Magnet | DoubleJump)
+Right->Left0: Light + (Magnet | DoubleJump)
+Right->Lever: Light + Lever + (Magnet | DoubleJump)
+Right->Chip: Light + Magnet
+
+// Scene 156
+// Transitions: Right (156-157), Left1 (147-156), Left0 (155-156), Repair (156Repair)
+// Checks: Disruptor (MapDisruptor[3])
+Scene 156
+*->Left1: Light
+Left1->*: Magnet+Light
+*->Disruptor: Magnet+Light
+Left0->Right: Light
+Left0->Repair: Light
+Right->Left0: Light
+Right->Repair: Light
+Repair->Left0: Light
+Repair->Right: Light
+
+// Scene 157
+// Transitions: Right (157-158), Left (156-157)
+// Checks:
+Scene 157
+Right->Left: Light + (Magnet | DoubleJump)
+Left->Right: Light + (Magnet | DoubleJump)
+
+// Scene 158
+// Transitions: Right (158-110), Left (157-158)
+// Checks:
+Scene 158
+Left->Right: Light + (Blink | Magnet | DoubleJump)
+Right->Left: Light + (Blink | Magnet | DoubleJump)
+
+// Scene 159
+// Transitions: Right (159-153), Left0 (160-159), Left1 (163-159)
+// Checks: Coolant (Coolant[0])
+Scene 159
+*->Coolant: Blink + (Magnet | DoubleJump)
+*->Left0: Magnet | DoubleJump
+Left1->Right: Magnet | DoubleJump | Blink
+
+// Scene 160
+// Transitions: Right1 (160-159), Right0 (160-152)
+// Checks: Item (Item[0]), Lever (Lever[38]), MoneyPile3 (MoneyPile[138]), MoneyPile2 (MoneyPile[139]), MoneyPile1 (MoneyPile[140]), MoneyPile0 (MoneyPile[137])
+Scene 160
+Right1->*: Blink + Light + (Magnet | DoubleJump)
+Right0->Right1: Blink+Light
+Right0->Item: Light + (Blink | Grapple) + (Magnet | DoubleJump)
+Right0->MoneyPile*: Light
+Right0->Lever: Light + Lever | Light + (Blink | Grapple) + (Magnet | DoubleJump)
+
+// Scene 161
+// Transitions: Right2 (161-152bottom), Right1 (161-152top), Right0 (161-162), Repair (161Repair)
+// Checks:
+Scene 161
+Right1->Repair: Light
+Right1->Right2: Blink+Ball+Light
+Right1->Right0: Light + Blink + Ball + (Magnet | DoubleJump)
+Right2->Repair: Light
+Right2->Right1: Ball+Light
+Right2->Right0: Light + Ball + (Magnet | DoubleJump)
+Right0->*: false
+
+// Scene 162
+// Transitions: Right (162-151), Left (161-162)
+// Checks: Item (Item[3]), PowerCell (PowerCell[23])
+Scene 162
+Right->*: Light + Ball + (Magnet | DoubleJump)
+Left->Right: Ball+Light
+Left->Item: Light
+Left->PowerCell: Light
+
+// Scene 163
+// Transitions: Right (163-159), Left (164-163)
+// Checks: Lever (Lever[53])
+Scene 163
+Left->Right: Blink + (Magnet | DoubleJump)
+Right->Left: Blink
+Right->Lever: Blink + (Magnet | DoubleJump)
+Left->Lever: Magnet | DoubleJump
+
+// Scene 164: Hidden Lab Core
+// Transitions: Right (164-163)
+// Checks: Blink (Ability[3]), Lore0 (Lore[5]), Lore1 (Lore[6])
+Scene 164
+$Checks {Blink, Lore0, Lore1}
+Right->Checks: Blink
+
+// Scene 165
+// Transitions: Elevator (165-29), Right (165-155), Down (165-18), Left0 (151-165hidden), Left1 (151-165)
+// Checks: MoneyPile1 (MoneyPile[142]), MoneyPile0 (MoneyPile[141])
+Scene 165
+$Bottom {Left1, Right}
+*<->Down: false
+*->Left0: false // that transition only unlocks after entering the room from it
+Elevator->Bottom: Light
+Elevator->MoneyPile*: Ball + Light + Magnet + DoubleJump
+Left0->Bottom: Ball + Light
+Left0->MoneyPile*: Ball + Light
+Left0->Elevator: Ball + LIGHT
+Bottom->Bottom: Light
+Bottom->MoneyPile*: Ball + Light + Magnet + DoubleJump
+Bottom->Elevator: LIGHT
+
+// Scene 166
+// Transitions: 24-166 (24-166)
+// Checks:
+Scene 166
+//No obstacles
+
+// Scene 167 : Mainframe repair
+// Transitions: Left (62-167), Repair (167Repair)
+// Checks:
+Scene 167
+//No obstacles
+
+// Scene 168 : Vertical to left of Electric Key shop
+// Transitions: Right1 (168-169), Right0 (168-78)
+// Checks: PowerCell (PowerCell[19])
+Scene 168
+Right1->Right0: Magnet
+Right1->PowerCell: Magnet
+
+// Scene 169 : Electric Key shop entrance
+// Transitions: Right (169-64), Left (168-169), Door (220-169)
+// Checks:
+Scene 169
+*->Door: ElectricKey
+Right->Left: DoubleJump
+
+// Scene 170 : Quatern
+// Transitions: Right (170-66)
+// Checks: Item[3]0 (Item[3]), Chip (Chip[9]), Item[3]1 (Item[3])
+Scene 170
+//The two Item[3] references here are because there are two different capsule fragments
+Right->Item[3]0: 7#PowerCell
+Right->Item[3]1: 17#PowerCell
+Right->Chip: 14#PowerCell
+
+// Scene 171
+// Transitions: Right (171-173), Left (93-171)
+// Checks:
+Scene 171
+// No obstacles
+
+// Scene 172
+// Transitions: Left (173-172), Repair (172Repair)
+// Checks:
+Scene 172
+//No obstacles
+
+// Scene 173
+// Transitions: Right0 (173-172), Right1 (173-174), Left1 (171-173), Left0 (179-173)
+// Checks:
+Scene 173
+$Top {Left0, Right0}
+$Bottom {Left1, Right1}
+Top->MoneyPile*: Magnet | DoubleJump | Blink | Grapple
+Bottom->MoneyPile*: Magnet | DoubleJump
+Bottom->*: Magnet | DoubleJump
+
+// Scene 174 : Mundo (Factory Big Elevator)
+// Transitions: Left2 (180-174), Left3 (173-174), Left1 (182-174), Left0 (187-174), Right2 (174-175), Right1 (174-183), Right0 (174-186)
+// Checks:
+Scene 174
+$F0 {Left3}
+$F1 {Left2, Right2}
+$F2 {Left1, Right1}
+$F3 {Left0, Right0}
+//Mundo levers aren't in pool, so we just presume downward movement okay for logic, upward no
+//The exception is F0->F1, as there's no gate there
+F0->F2: false
+F0->F3: false
+F1->F2: false
+F1->F3: false
+F2->F3: false
+
+// Scene 175
+// Transitions: Right (175-176), Left (174-175)
+// Checks: Lever (Lever[26]), PowerCell (PowerCell[20])
+Scene 175
+Left->Right: Lever | Grapple
+Left->Lever: Grapple
+Right->Left: (Lever + Magnet) | Grapple
+Right->Lever: Magnet | (Lever + Grapple)
+*->PowerCell: Grapple
+// TODO: Blink (also maybe longer blink chip required) can let you get the power cell
+
+// Scene 176
+// Transitions: Right (176-178), Left0 (175-176), Left1 (177-176)
+// Checks:
+Scene 176
+Left1->*: Magnet | DoubleJump
+
+// Scene 177
+// Transitions: Right (177-176)
+// Checks: Chip (Chip[24]), MoneyPile3 (MoneyPile[58]), MoneyPile1 (MoneyPile[60]), MoneyPile0 (MoneyPile[59]), MoneyPile2 (MoneyPile[61])
+Scene 177
+*->Chip: (Ball | Blink) + (Magnet | DoubleJump) | Ball + Grapple
+*->MoneyPile*: Magnet + Ball
+// Ball+blink with no skips is possible but maybe it should be under a "precise movement" setting.
+// Blink only is also possible but requires BLJs.
+// Ball only is possible with bomb jumps.
+
+// Scene 178
+// Transitions: Elevator (178-117), Right (178-192), Left (176-178)
+// Checks:
+Scene 178
+// No obstacles
+
+// Scene 179: Factory Station
+// Transitions: Right (179-173), Left (193-179), Train (179-Train)
+// Checks: Lever (Lever[25]), TrainStation (TrainStation[2])
+Scene 179
+*->Train: Clock+TrainStation
+Left->Lever: true
+Right->Lever: Lever
+
+// Scene 180
+// Transitions: Right (180-174), Left0 (181-180), Left1 (191-180)
+// Checks:
+Scene 180
+*->Left1: Ball
+
+// Scene 181
+// Transitions: Right0 (181-182), Right1 (181-182bottom), Right2 (181-180), Left (190-181)
+// Checks: Disruptor (MapDisruptor[10]), MoneyPile2 (MoneyPile[115]), MoneyPile0 (MoneyPile[113]), MoneyPile1 (MoneyPile[114])
+Scene 181
+// No obstacles
+
+// Scene 182
+// Transitions: Right (182-174), Left1 (181-182bottom), Left0 (181-182)
+// Checks: Lever0 (Lever[44]), Lever1 (Lever[45]), PowerCell (PowerCell[22])
+Scene 182
+Left0->Lever0: true
+Left1->Lever0: Blink + Lever0 + Lever1
+Right->Lever0: Lever1
+Left0->Lever1: Blink + Lever1
+Left1->Lever1: Lever0
+Right->Lever1: Blink
+Left0->PowerCell: Blink + Lever1
+Left1->PowerCell: Lever0
+Right->PowerCell: Blink
+Left1->Left0: Blink + Lever0 + Lever1
+Right->Left0: Lever1
+Left0->Left1: Blink + Lever0 + Lever1
+Right->Left1: Blink + Lever0
+Left0->Right: Lever1
+Left1->Right: Blink + Lever0
+
+// Scene 183
+// Transitions: Right (183-185), Left (174-183)
+// Checks: Disruptor (MapDisruptor[12])
+Scene 183
+Right->Left: Magnet | DoubleJump // or BLJ
+
+// Scene 184
+// Transitions: Right (184-185)
+// Checks: Ball (Ability[1])
+Scene 184
+*->Ball: Ball | Magnet
+// TODO: Dj+bomb jump or grapple+dj climbing will get you up. Without ball you need to beat Sawblade to get to the ball check.
+
+// Scene 185
+// Transitions: Right (185-195), Left0 (186-185), Left1 (184-185), Left2 (183-185)
+// Checks: Lever (Lever[7]), MoneyPile1 (MoneyPile[136]), MoneyPile2 (MoneyPile[135]), MoneyPile0 (MoneyPile[134])
+Scene 185
+Left0->Left1: Ball + (Magnet | Lever)
+Left0->Left2: Ball
+Left0->Right: Ball
+Left0->MoneyPile*: Ball + (Blink | Magnet | DoubleJump)
+Left1->Left0: Lever + Magnet + (Ball | Blink)
+Left1->Left2: Lever
+Left1->Right: Lever
+Left1->MoneyPile*: Lever + Magnet + (Ball | Blink)
+Right->Left0: Ball+Magnet
+Right->Left1: Magnet
+Right->MoneyPile*: Magnet + (Ball | Blink)
+Left0->Lever: Ball+Magnet
+Left1->Lever: true
+Left2->Lever: Magnet
+Left2->MoneyPile*: Magnet + (Ball | Blink)
+Left2->Left1: Magnet
+Left2->Left0: Magnet + (Ball | Blink)
+Left2->Right: Magnet
+Right->Lever: Ball+Magnet
+
+// Scene 186
+// Transitions: Right0 (186-213), Right1 (186-185), Left (174-186)
+// Checks: Item (Item[3])
+Scene 186
+Left->Right0: Magnet + (Grapple | Blink | DoubleJump)
+Left->Item: Ball + Magnet
+*->Right1: Ball + Magnet
+// Reaching the capsule fragment from Right1 can be done with either
+// Magnet or a coyote double jump out of the first ball tunnel in the room.
+Right1->Left: Ball + (Magnet | DoubleJump)
+Right1->Item: Ball + (Magnet | DoubleJump)
+Right1->Right0: Ball + Magnet + (Grapple | Blink | DoubleJump)
+Right0->Item: Ball + Magnet
+Right0->Left: true
+
+// Scene 187
+// Transitions: Right (187-174), Left (188-187)
+// Checks: MoneyPile4 (MoneyPile[91]), MoneyPile2 (MoneyPile[94]), MoneyPile3 (MoneyPile[93]), MoneyPile0 (MoneyPile[92]), MoneyPile1 (MoneyPile[95])
+Scene 187
+// For skips: itemless requires some tight coyote jumps
+Right<->Left: Grapple | DoubleJump | Magnet | Blink | Ball
+*->MoneyPile*: true
+
+// Scene 188
+// Transitions: Right (188-187), Left1 (189-188), Left0 (231-188)
+// Checks:
+Scene 188
+Right->Left0: DoubleJump | Magnet + (Blink | Grapple)
+
+// Scene 189
+// Transitions: Right (189-188)
+// Checks: PowerCell (PowerCell[0])
+Scene 189
+// No obstacles
+
+// Scene 190
+// Transitions: Right (190-181), Left (193-190)
+// Checks:
+Scene 190
+// No obstacles
+
+// Scene 191
+// Transitions: Right (191-180), Left (194-191)
+// Checks: Lore (Lore[21]), MoneyPile5 (MoneyPile[111]), MoneyPile6 (MoneyPile[110]), MoneyPile7 (MoneyPile[112]), MoneyPile1 (MoneyPile[108]), MoneyPile3 (MoneyPile[107]), MoneyPile0 (MoneyPile[109]), MoneyPile2 (MoneyPile[105]), MoneyPile4 (MoneyPile[106])
+Scene 191
+Left->Lore: true
+Left->MoneyPile*: true
+Left->Right: Ball
+Right->*: Ball
+
+// Scene 192
+// Transitions: Left1 (100-192), Left0 (178-192)
+// Checks: PowerCell (PowerCell[21])
+Scene 192
+Left0->*: true
+Left1->Left0: Magnet
+Left1->PowerCell: Magnet
+// TODO: Left1->* might be doable with crazy enemy pogos and dj, is probably fully doable with grapple+dj height
+
+// Scene 193
+// Transitions: Right2 (193-179), Right0 (193-190), Right1 (193-194), Left (229-193)
+// Checks:
+Scene 193
+Right0->*: true
+Right1->Right2: true
+Right2->Right1: true
+Right1->Right0: Magnet | DoubleJump
+Right2->Right0: Magnet | DoubleJump
+Right1->Left: Magnet | DoubleJump
+Right2->Left: Magnet | DoubleJump
+Left->Right0: Magnet | DoubleJump
+// TODO: BLJ skips
+
+// Scene 194
+// Transitions: Right (194-191), Left (193-194), Repair (194Repair)
+// Checks: Chip (Chip[5])
+Scene 194
+*->Right: Ball | Blink
+Right->*: Ball
+
+// Scene 195
+// Transitions: Left (185-195), Repair (195Repair)
+// Checks:
+Scene 195
+
+// Scene 196 : Surface Left
+// Transitions: Right (196-197), Left1 (36-196), Left0 (50-196)
+// Checks:
+Scene 196
+Left1<->Right: WaterRes
+Left0<->*: false
+
+// Scene 197 : Surface Shop
+// Transitions: Right (197-198), Left1 (199-197), Left0 (196-197), Door (197-224)
+// Checks:
+Scene 197
+!Left1<->!Left1: WaterRes
+Left1->*: Blink+WaterRes
+*->Left1: Blink+WaterRes
+
+// Scene 198 : Surface Right
+// Transitions: Right0 (198-200), Right1 (198-231), Left (197-198)
+// Checks: PowerCell (PowerCell[15])
+Scene 198
+!Right0->PowerCell: Magnet+DoubleJump+WaterRes
+Right1<->Left: WaterRes
+*<->Right0: false
+
+// Scene 199 : Catacombs
+// Transitions: Right1 (199-221), Right0 (199-197), Left (233-199)
+// Checks:
+Scene 199
+*->Right0: Magnet | DoubleJump
+*->Right1: 2#NeutronOrElectronBoss + ProtonBoss + FireRes // fire res for Proton
+*->Left: GreenSkull + RedSkull
+
+// Scene 200 : Proton room
+// Transitions: Right (200-217), Left (198-200)
+// Checks: Coolant (Coolant[0]), Lore (Lore[19])
+Scene 200
+$Checks {Coolant, Lore}
+Right->Checks: FireRes + (Magnet | DoubleJump | Blink | Grapple)
+Left->*: false
+
+// Scene 201 : Neutron fight
+// Transitions: Right (201-35), Left (60-201)
+// Checks: Lore (Lore[3])
+Scene 201
+Left->*: true
+
+// Scene 202 : Lower Right Entrance to Bunker
+// Transitions: Left0 (43-202), Left1 (61-202)
+// Checks:
+Scene 202
+Left1->Left0: Magnet
+
+// Scene 203: Kitchen Room in Bunker
+// Transitions: Right (203-40)
+// Checks:
+Scene 203
+
+// Scene 204: Piano Room in Bunker
+// Transitions: Right (204-43)
+// Checks: Item (Item[6])
+Scene 204
+
+// Scene 205
+// Transitions: 62-205 (62-205)
+// Checks:
+Scene 205
+
+// Scene 206: Helm-Crawlers Refuge
+// Transitions: Left (128-206)
+// Checks: DoubleJump (Ability[4]), Lore (Lore[17])
+Scene 206
+Left->DoubleJump: Light
+Left->Lore: Light + (DoubleJump | Magnet + Blink | Magnet + Grapple)
+// (or a 1-bomb jump)
+
+// Scene 207
+// Transitions: Left0 (120-207), Left1 (128-207)
+// Checks: Chip (Chip[6]), MoneyPile2 (MoneyPile[171]), MoneyPile4 (MoneyPile[172]), MoneyPile3 (MoneyPile[173]), MoneyPile1 (MoneyPile[170]), MoneyPile0 (MoneyPile[169])
+Scene 207
+Left1->Left0: DoubleJump+Magnet+Light
+Left1->Chip: DoubleJump+Magnet+Ball+Light
+Left1->MoneyPile*: Light + Magnet + DoubleJump
+Left0->Chip: Ball+Light
+Left0->Left1: Light
+Left0->MoneyPile*: Light + (Magnet | DoubleJump | Blink)
+
+// Scene 208
+// Transitions: Left (120-208), Door (208-223)
+// Checks:
+Scene 208
+Left->Door: DoubleJump
+
+// Scene 209
+// Transitions: Right (209-114), Train (209-Train)
+// Checks: TrainStation (TrainStation[4])
+Scene 209
+Right->Train: Clock+TrainStation
+
+// Scene 210
+// Transitions: Left (117-210)
+// Checks: Slot (ChipSlot[7])
+Scene 210
+Left->Slot: WaterRes
+
+// Scene 211: Melody Room in Ruins
+// Transitions: Right (211-134)
+// Checks:
+Scene 211
+
+// Scene 212
+// Transitions: Left (230-212)
+// Checks: PowerCell (PowerCell[8])
+Scene 212
+// No obstacles: defeating Big Brother gives access to PowerCell
+
+// Scene 213
+// Transitions: Left0 (214-213), Left1 (186-213)
+// Checks: PowerCell (PowerCell[12])
+Scene 213
+Left0->Left1: FireRes
+Left1->Left0: FireRes + (Magnet | DoubleJump)
+*->PowerCell: FireRes + (Magnet | DoubleJump)
+
+// Scene 214
+// Transitions: Right (214-213), Left (215-214)
+// Checks:
+Scene 214
+Right->Left: FireRes + (Magnet | DoubleJump)
+Left->Right: FireRes
+
+// Scene 215
+// Transitions: Right0 (215-218), Right1 (215-214), Left1 (232-215), Left0 (217-215)
+// Checks:
+Scene 215
+Left0<->Right0: FireRes
+Left1<->Right1: FireRes
+$Top {Left0, Right0}
+$Bottom {Left1, Right1}
+Bottom->Top: FireRes + (DoubleJump | Blink + HeatDrive + Magnet | Ball + Magnet)
+//(with just magnet might belong in skips)
+Top->Bottom: FireRes
+
+// Scene 216
+// Transitions: Left (218-216)
+// Checks: Slot (ChipSlot[5])
+Scene 216
+*->Slot: DoubleJump+FireRes
+
+// Scene 217
+// Transitions: Right (217-215), Left (200-217)
+// Checks:
+Scene 217
+*->*: FireRes 
+//(Can be done itemless, but it is a bit tight. Might belong in skips. Should be double checked)
+
+// Scene 218
+// Transitions: Right (218-216), Left (215-218), Repair (218Repair)
+// Checks:
+Scene 218
+*->*: FireRes
+
+// Scene 220: Echo shop in core
+// Transitions: 220-169 (220-169)
+// Checks: ShopItem0 (Chip[16]), ShopItem1 (Chip[13]), ShopItem2 (Chip[12])
+Scene 220
+
+// Scene 221: Room to catacombs in Factory
+// Transitions: Right (221-229), Left (199-221)
+// Checks: Item (Item[0])
+Scene 221
+*->*: NeutronOrElectronBoss | ProtonBoss + FireRes // fire res for Proton
+
+// Scene 222: Storage Room in Bunker (the one that requires a rusty key)
+// Transitions: 222-46 (222-46)
+// Checks:
+Scene 222
+
+// Scene 223: Snailbot Burrow House
+// Transitions: 208-223 (208-223)
+// Checks: PowerCell (PowerCell[6])
+Scene 223
+*->PowerCell: Magnet
+
+// Scene 224: Reaper shop in Surface
+// Transitions: 197-224 (197-224)
+// Checks: ShopItem0 (Item[5]), ShopItem1 (Item[2]), ShopItem2 (Item[8]), ShopItem3 (Chip[23]), ShopItem4 (Chip[17])
+Scene 224
+// No obstacles
+
+
+// Scene 225: Lune Room in Ruins
+// Transitions: Left (133-225top)
+// Checks:
+Scene 225
+
+// Scene 226
+// Transitions: 62-226 (62-226)
+// Checks:
+Scene 226
+
+// Scene 227: Tree Room in Ruins
+// Transitions: 138-227 (138-227)
+// Checks:
+Scene 227
+
+// Scene 228 : Grapple gauntlet to left of Bulb Drop
+// Transitions: Right (228-66), Left (109-228)
+// Checks: PowerCell (PowerCell[17]), Lore (Lore[3])
+Scene 228
+//TODO: Possible skips chaining double jump and blink
+$Monument {PowerCell, Lore}
+$Exit {Left, Right}
+Exit->Exit: Grapple + (Magnet | DoubleJump)
+Exit->Monument: Grapple+Magnet+DoubleJump
+
+// Scene 229
+// Transitions: Right (229-193), Left0 (230-229), Left1 (221-229)
+// Checks: MoneyPile1 (MoneyPile[117]), MoneyPile0 (MoneyPile[116])
+Scene 229
+Right->Left*: Magnet | DoubleJump
+Right->MoneyPile*: DoubleJump | Magnet + Blink | Magnet + Grapple | Magnet + Ball
+Left1->Left0: Magnet | DoubleJump
+Left1->MoneyPile*: DoubleJump | Magnet + Blink | Magnet + Grapple | Magnet + Ball
+Left0->MoneyPile*: DoubleJump | Ball | Blink | Grapple
+// TODO: BLJ skips
+
+// Scene 230
+// Transitions: Right1 (230-229), Right0 (230-212)
+// Checks: Lore (Lore[20])
+Scene 230
+// Blink possible but a bit hazardous because it requires
+// dodging lasers in a tight space; not sure if it qualifies as a "skip"
+Right1->Right0: Magnet + (DoubleJump | Grapple | Blink)
+Right1->Lore: true
+Right0->Lore: true
+Right0->Right1: true
+// TODO: Pretty sure there's several skips here
+
+// Scene 231: Room right of Surface
+// Transitions: Right (231-188), Left (198-231)
+// Checks:
+Scene 231
+
+// Scene 232
+// Transitions: Right (232-215)
+// Checks: Disruptor (MapDisruptor[11]), Lever (Lever[51])
+Scene 232
+Right->Disruptor: FireRes + Grapple + (Lever | Magnet + DoubleJump)
+Right->Lever: FireRes + (Lever | Grapple + Magnet + DoubleJump)
+
+// Scene 233: Chip room in Catacombs
+// Transitions: Right (233-199)
+// Checks: Chip (Chip[3])
+Scene 233
+
+Scene 234 // Entrance to Old Arcadia
+// Transitions: Right (234-35), Left (257-234)
+// Checks: MoneyPile (MoneyPile[187])
+Left<->*:
+    2#NeutronOrElectronBoss + ProtonBoss + FireRes + // fire res for Proton
+    CreatorTrioBoss +
+    VirusBoss +
+    10#MiniBoss + Magnet // magnet for Buzzsaw
+Right->MoneyPile: Blink | Magnet | DoubleJump
+
+// Transitions: Right (246-56), Left (247-246)
+// Checks: Lore (Lore[29])
+Scene 246
+*->*: true
+
+// Transitions: Elevator (248-247), Right (247-246)
+// Checks:
+Scene 247
+*->*: true
+
+// Transitions: Elevator (248-247), Right1 (248-251), Right0 (248-249)
+// Checks:
+Scene 248 // Gallery of bosses
+Right1->Right0: Magnet + Grapple
+Right1->Elevator: Magnet + Grapple + Blink
+Right0->Right1: Grapple
+Right0->Elevator: (Magnet | DoubleJump) + Grapple + Blink
+Elevator->Right*: Grapple + Blink
+
+// Transitions: Right (249-250), Left (248-249)
+// Checks:
+Scene 249
+*->*: true
+
+// Transitions: Elevator (258-250), Right (250-271door), Left (249-250), Repair (250Repair)
+// Checks:
+Scene 250
+*->*: true
+
+// Transitions: Right1 (251-252bottom), Right0 (251-252top), Left1 (253-251), Left0 (248-251)
+// Checks:
+Scene 251 // Left of the main reactor core room
+$Bottom {Right1, Left1}
+$Top {Right0, Left0}
+Bottom<->Top: false
+Bottom->Bottom: true
+Top->Top: DoubleJump | Blink | Grapple
+
+// Transitions: Left1 (251-252bottom), Left0 (251-252top)
+// Checks: Lever (Lever[75]), MoneyPile3 (MoneyPile[195]), MoneyPile2 (MoneyPile[193]), MoneyPile1 (MoneyPile[194]), MoneyPile0 (MoneyPile[192])
+Scene 252 // Main reactor core room
+Left1->Left0: Magnet + Grapple + Lever
+Left1->MoneyPile*: Magnet + DoubleJump + Grapple + Lever
+Left1->Lever: Magnet + Grapple
+Left0->Left1: Magnet + DoubleJump + Grapple + Lever
+Left0->MoneyPile*: DoubleJump
+Left0->Lever: Lever
+
+// Transitions: Right0 (253-251), Right1 (253-254)
+// Checks:
+Scene 253 // Sinking platforms left of Elegy
+Right0->Right1: true
+Right1->Right0: Magnet | DoubleJump
+
+// Transitions: Right (254-255), Left (253-254), Door (270-254)
+// Checks:
+Scene 254 // Elegy
+Right->Left: DoubleJump | Magnet + Blink | Magnet + Grapple
+Right->Door: 4#RustedKey + WaterRes + (DoubleJump | Blink | Grapple)
+Left->Door: 4#RustedKey + WaterRes
+Left->Right: DoubleJump | Blink | Grapple
+Door->Left: WaterRes + (DoubleJump | Magnet + Blink | Magnet + Grapple)
+Door->Right: WaterRes + (DoubleJump | Blink | Grapple)
+
+// Transitions: Right1 (255-256), Right0 (255-258), Left0 (254-255), Left1 (259-255), Repair (255Repair)
+// Checks:
+Scene 255 // Elegy Repair Station
+$Top {Right0, Repair, Left0}
+$Bottom {Right1, Left1}
+Bottom->Bottom: true
+Bottom->Top: Magnet + DoubleJump + (Blink | Grapple)
+Top->Bottom: DoubleJump | Blink | Grapple
+Left0->Right0: Magnet | DoubleJump
+Left0->Repair: Magnet | DoubleJump
+Right0->Repair: true
+Right0->Left0: true
+Repair->Right0: true
+Repair->Left0: true
+
+// Transitions: Right1 (256-269), Right0 (256-257), Left (255-256)
+// Checks:
+Scene 256 // Narrow winding corridor with 3 spiders
+*->*: true
+
+// Transitions: Right (257-234), Left0 (258-257), Left1 (256-257)
+// Checks:
+Scene 257 // First room of Old Arcadia, with 4 orbs
+*->*: true
+
+// Transitions: Elevator (258-250), Right (258-257), Left (255-258)
+// Checks: Lever (Lever[71])
+Scene 258 // Elevator to the Boss Rush floor
+*->*: Lever
+
+// Transitions: Elevator (260-259), Right (259-255)
+// Checks: MoneyPile2 (MoneyPile[188]), MoneyPile1 (MoneyPile[188]), MoneyPile0 (MoneyPile[188])
+Scene 259 // Elevator to Abandonded Wastes
+*->*: true
+
+// Transitions: Elevator (260-259), Right (260-21)
+// Checks: Lever (Lever[72])
+Scene 260 // Elevator to Old Arcadia from Abandoned Wastes
+Elevator->Lever: true
+Elevator->Right: Lever
+Right->*: Lever
+
+// Transitions: Left (256-269)
+// Checks: MoneyPile0 (MoneyPile[190]), MoneyPile1 (MoneyPile[189])
+Scene 269 // Room with a big saw and two scrap rocks
+Left->MoneyPile*: true
+
+// Transitions: 270-254 (270-254)
+// Checks:
+Scene 270 // Mini reactor core room
+
+// Transitions: Left (250-271door)
+// Checks:
+Scene 271 // Entrance to the practice room

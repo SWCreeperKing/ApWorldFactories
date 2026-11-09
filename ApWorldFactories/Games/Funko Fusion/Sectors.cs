@@ -1,4 +1,6 @@
-﻿namespace ApWorldFactories.Games.Funko_Fusion;
+﻿using WorldBuilder;
+
+namespace ApWorldFactories.Games.Funko_Fusion;
 
 public class LocationSector(LocationRowData data) : LogicSector<LocationSector, LocationRowData, string>(data)
 {

@@ -1,4 +1,6 @@
-﻿namespace ApWorldFactories.Games.Slime_Rancher;
+﻿using WorldBuilder;
+
+namespace ApWorldFactories.Games.Slime_Rancher;
 
 public class RegionSector(RegionRowData data) : LogicSector<RegionSector, RegionRowData, SkipLogic>(data)
 {

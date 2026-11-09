@@ -25,6 +25,8 @@ public class DinoBones : BuildData
         DinoBoneDict = Labels.GroupBy(b => b.Species).ToDictionary(g => g.Key, g => g.ToArray());
         BoneToCrate = paths.ToDictionary(b => b.Label.Name, b => b.CrateNumber);
         CrateNumbers = [.. Enumerable.Range(1, BoneToCrate.Values.Max())];
+        
+        WriteData("bonepaths", paths.Select(p => $"{p.Crate}|{p.Object}").DistinctBy(s => s));
     }
 
     public override void Locations(WorldFactory _, LocationFactory location_fact)

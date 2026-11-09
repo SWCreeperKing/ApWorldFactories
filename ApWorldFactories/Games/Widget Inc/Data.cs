@@ -1,4 +1,6 @@
-﻿namespace ApWorldFactories.Games.Widget_Inc;
+﻿using WorldBuilder;
+
+namespace ApWorldFactories.Games.Widget_Inc;
 
 public readonly struct TechTreeData(DataArray param)
 {
