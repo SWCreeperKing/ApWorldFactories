@@ -646,8 +646,6 @@ public class VampireSurvivors : BuildData
                          .CreateUtPassthrough("\"ending_stage_count\"", "self.ending_stage_count"), true, false
             )
            .UseGenerateEarly(method => method.AddCode(GenEarly))
-           .UseCreateRegions()
-           .AddCreateItems()
            .UseSetRules(method =>
                 method.AddCode(
                     new IfFactory("self.options.goal_requirement == 0")

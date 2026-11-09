@@ -557,8 +557,6 @@ public class SlimeRancher : BuildData
                                        g => (ICollection)new StringCollection([.. g.Select(t => t.VagueName)])
                                    )
             )
-           .UseInitFunction()
-           .UseGenerateEarly()
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
            .UseGenerateEarly(method =>
                 method.CreatePushPrecollected("Region Unlock: Dry Reef", "self.options.start_with_dry_reef")
@@ -570,8 +568,6 @@ public class SlimeRancher : BuildData
                       .CreatePushPrecollected("Region Unlock: Viktor's Workshop", "not self.options.include_viktor")
                       .CreatePushPrecollected("Region Unlock: The Slimeulations", "not self.options.include_viktor")
             )
-           .UseCreateRegions()
-           .AddCreateItems()
            .UseSetRules(method =>
                 method.AddCode(
                     new MatchFactory("self.options.goal_type")

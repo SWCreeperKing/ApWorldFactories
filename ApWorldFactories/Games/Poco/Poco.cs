@@ -86,7 +86,6 @@ public class Poco : BuildData
     public override void Init(WorldFactory worldFactory, WorldInitFactory init_fact)
     {
         init_fact
-           .UseInitFunction()
            .UseLocationGroups(
                 new Dictionary<string, ICollection>()
                 {
@@ -100,8 +99,6 @@ public class Poco : BuildData
                 }
             )
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
-           .UseCreateRegions()
-           .AddCreateItems()
            .UseSetRules(method => method.CreateGoalCompiledCondition(
                     string.Join(" and ", NpcQuestData.Select(data => $"has[\"{data.QuestItem}\"]"))
                 )

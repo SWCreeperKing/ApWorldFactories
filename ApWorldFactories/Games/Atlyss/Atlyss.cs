@@ -393,11 +393,7 @@ public class Atlyss : BuildData
 
     public override void Init(WorldFactory factory, WorldInitFactory init_fact)
     {
-        init_fact.UseInitFunction()
-                 .UseGenerateEarly()
-                 .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
-                 .UseCreateRegions()
-                 .AddCreateItems()
+        init_fact.AddUseUniversalTrackerPassthrough(yamlNeeded: false)
                  .UseSetRules(method =>
                       method.AddCode(
                           new MatchFactory("options.goal")
@@ -446,7 +442,7 @@ public class Atlyss : BuildData
 
     private void GetMaxProgressive(string className, ClassType classType, List<string> progressiveItemMapMd,
         ItemFactory item_fact,
-        List<string> progressiveItemMap, out Func<ItemFactoryMethodFactory, IfFactory> addCode)
+        List<string> progressiveItemMap, out Func<CreateItemsMethodFactory, IfFactory> addCode)
     {
         progressiveItemMapMd.AddRange(
             "<details>",

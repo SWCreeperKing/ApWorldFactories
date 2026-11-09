@@ -183,7 +183,6 @@ public class WidgetInc : BuildData
     public override void Init(WorldFactory world_fact, WorldInitFactory init_fact)
     {
         init_fact
-           .UseInitFunction()
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
            .UseGenerateEarly(method =>
                 {
@@ -200,8 +199,6 @@ public class WidgetInc : BuildData
                     }
                 }
             )
-           .UseCreateRegions()
-           .AddCreateItems()
            .UseGetFillerItemName("Motivational Poster")
            .UseSetRules(method => method
                                  .AddCode("player = self.player")

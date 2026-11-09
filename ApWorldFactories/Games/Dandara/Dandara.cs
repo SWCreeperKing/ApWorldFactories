@@ -210,10 +210,7 @@ public class Dandara : BuildData
     public override void Init(WorldFactory world_fact, WorldInitFactory init_fact)
     {
         init_fact
-           .UseInitFunction()
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
-           .UseCreateRegions()
-           .AddCreateItems()
            .UseSetRules(method => method.AddCode(
                     new MatchFactory("options.goal_type")
                        .AddCase("0", method.Raw_CreateGoalCompiledCondition("has[\"FinalBoss_Kill\"]"))

@@ -275,8 +275,6 @@ public class PlagueInc : BuildData
                                                   )
                                               )
             )
-           .UseCreateRegions()
-           .AddCreateItems()
            .UseSetRules(method => method.CreateGoalCompiledCondition("hasN[\"Victory\", self.victories_needed]"))
            .UseFillSlotData(new Dictionary<string, string> { ["victories_needed"] = "int(self.victories_needed)" })
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))

@@ -139,10 +139,7 @@ public class ConbunnCardboard : BuildData
     public override void Init(WorldFactory _, WorldInitFactory init_fact)
     {
         init_fact
-           .UseInitFunction()
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
-           .UseCreateRegions()
-           .AddCreateItems()
            .UseSetRules(method => method.CreateGoalCompiledCondition("hasN[\"CD\", self.options.cds_required_to_goal]"))
            .UseFillSlotData(
                 new Dictionary<string, string> { ["uuid"] = "str(shuffled)" },

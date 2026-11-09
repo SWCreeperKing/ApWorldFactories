@@ -199,16 +199,7 @@ public class Loddlenaut : BuildData
     public override void Init(WorldFactory _, WorldInitFactory init_fact)
     {
         init_fact
-            // .UseInitFunction(method => method.AddCode(new Variable("self.starting_region", "\"\"")))
-           .UseInitFunction(method => method.AddCode(new Variable("self.starting_region", "\"\"")))
-           .AddUseUniversalTrackerPassthrough(
-                // method =>
-                //     method.AddCode(CreateUtPassthrough("\"starting_region\"", "self.starting_region")),
-                yamlNeeded: false
-            )
-            // .UseGenerateEarly(method => method.AddCode(CreatePushPrecollected("self.starting_region", stringify: false)))
-           .UseCreateRegions()
-           .AddCreateItems()
+           .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
            .UseSetRules(method => method.CreateGoalCompiledCondition($"has[\"Biomes Cleaned\", {BiomeRowData.Length}]"))
            .UseFillSlotData(
                 new Dictionary<string, string> { ["uuid"] = "str(shuffled)" },

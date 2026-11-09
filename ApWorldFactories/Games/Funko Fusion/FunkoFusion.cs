@@ -217,8 +217,6 @@ public class FunkoFusion : BuildData
                       .CreatePushPrecollected("self.starting_character", stringify: false)
                       .CreatePushPrecollected("self.starting_filler_character", stringify: false)
             )
-           .UseCreateRegions()
-           .AddCreateItems()
            .UseSetRules(method => method.CreateGoalCompiledCondition("hasN[\"Gold Crown\", options.goal_crowns]"))
            .UseGetFillerItemName("Vinyl")
            .UseFillSlotData(

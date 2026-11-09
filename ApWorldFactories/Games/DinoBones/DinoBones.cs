@@ -10,6 +10,7 @@ public class DinoBones : BuildData
     public override string GameName => "DinoBones Tidy Up the Museum";
     public override string ApWorldName => "dinobones_tidy_up_the_museum";
     public override string WorldVersion => "0.1.0";
+    public override LocalFillSettings LocalFillSettings => new(80, 55, 100);
 
     public static int[] CrateNumbers = [];
     public static BoneLabel[] Labels = [];
@@ -30,14 +31,16 @@ public class DinoBones : BuildData
 
     public override void Locations(WorldFactory _, LocationFactory location_fact)
     {
-        location_fact.AddLocations(
-            "bones",
-            Labels.Select(b => (string[])
-                [
-                    b.Name, BoneToCrate.TryGetValue(b.Name, out var region) ? $"Crate {region}" : "Menu"
-                ]
+        location_fact
+           .AddLocations(
+                "bones_pallet",
+                Labels.Where(l => !BoneToCrate.ContainsKey(l.Name)).Select(b => (string[])[b.Name, "Menu",])
             )
-        );
+           .AddLocations(
+                "bones_crate",
+                Labels.Where(l => BoneToCrate.ContainsKey(l.Name))
+                      .Select(b => (string[])[b.Name, $"Crate {BoneToCrate[b.Name]}",])
+            );
     }
 
     public override void Items(WorldFactory _, ItemFactory item_fact)
@@ -47,7 +50,11 @@ public class DinoBones : BuildData
                 "crates", ItemFactory.ItemClassification.Progression, list: [.. CrateNumbers.Select(i => $"Crate {i}")]
             )
            .AddItem("Dust", ItemFactory.ItemClassification.Filler)
-           .AddCreateItems(method => method.CreateItemsFromList("crates").FillRemainingWithItem("Dust"));
+           .AddCreateItems(method =>
+                method.CreateItemsFromList("crates")
+                      .BalanceLocalFill()
+                      .FillRemainingWithItem("Dust")
+            );
     }
 
     public override void Rules(WorldFactory _, RuleFactory rule_fact)
@@ -62,20 +69,19 @@ public class DinoBones : BuildData
                 CrateNumbers,
                 i => region_fact.AddRegion($"Crate {i}").AddConnectionCompiledRule("Menu", $"Crate {i}", $"crate[{i}]")
             )
-           .AddLocationsFromList("bones");
+           .AddLocationsFromList("bones_pallet", isLocalFillable: false)
+           .AddLocationsFromList("bones_crate");
     }
 
     public override void Init(WorldFactory world_fact, WorldInitFactory init_fact)
     {
         init_fact
-           .UseInitFunction()
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
-           .UseCreateRegions()
-           .AddCreateItems()
-           .UseSetRules(method => method.Raw_CreateGoalCompiledCondition(
+           .UseSetRules(method => method.CreateGoalCompiledCondition(
                     string.Join(" and ", CrateNumbers.Select(i => $"crate[{i}]"))
                 )
             )
+           .UsePreFill(method => method.CreateLocalFill())
            .UseFillSlotData(
                 new Dictionary<string, string> { ["uuid"] = "str(shuffled)" },
                 method => method.CreateUniqueId()

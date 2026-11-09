@@ -31,7 +31,7 @@ public static class Runner
                     )
                    .Select(Activator.CreateInstance)
                    .Cast<BuildData>()
-                   .OrderBy(t => t.GameName)
+                   .OrderBy(t => t.GameName, StringComparer.Ordinal)
                    .ToArray();
 
         List<string> list = ["Exit", "Rebuild All", .. types.Select(t => t.GameName)];

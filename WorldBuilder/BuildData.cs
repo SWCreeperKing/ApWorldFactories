@@ -35,6 +35,7 @@ public abstract class BuildData
     public virtual string GoogleSheetId => "";
     public virtual string MainSheetLink => $"https://docs.google.com/spreadsheets/d/{GoogleSheetId}/export?format=csv";
     public virtual string GraphOutput => "svg";
+    public virtual LocalFillSettings LocalFillSettings => new();
 
     public virtual Dictionary<string, string> SheetGids { get; } = [];
 
@@ -99,6 +100,9 @@ public abstract class BuildData
         var builder = new WorldFactory(GameName)
                      .SetOnCompilerError((e, s) => ClrCnsl.WriteLine($"[#red]Error: [{s}]\n{e}"))
                      .SetOutputDirectory(ApWorldPath);
+
+        if (LocalFillSettings.Enabled) builder.EnableLocalFill(LocalFillSettings.Min, LocalFillSettings.Default, LocalFillSettings.Max);
+
         if (WriteOutputDirectory is not "" && !Directory.Exists(WriteOutputDirectory))
             Directory.CreateDirectory(WriteOutputDirectory);
         if (!Directory.Exists(ApWorldPath)) Directory.CreateDirectory(ApWorldPath);
@@ -301,6 +305,14 @@ public static class Extensions
         string separator = ", ", string leftEnd = "[",
         string rightEnd = "]")
         => $"{leftEnd}{string.Join(separator, arr.Select(s => s.Surround(surround)))}{rightEnd}";
+}
+
+public readonly struct LocalFillSettings(int def = -1, int min = 0, int max = 97)
+{
+    public readonly int Default = def;
+    public readonly int Min = min;
+    public readonly int Max = max;
+    public bool Enabled => Default is not -1;
 }
 
 [AttributeUsage(AttributeTargets.Field)]

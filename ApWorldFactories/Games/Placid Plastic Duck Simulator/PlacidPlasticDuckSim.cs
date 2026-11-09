@@ -113,10 +113,7 @@ public class PlacidPlasticDuckSim : BuildData
     {
         init_fact
            .UseItemGroups(new Dictionary<string, string> { ["column"] = "[\"Progressive Column Unlock\"]" })
-           .UseInitFunction()
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
-           .UseCreateRegions()
-           .AddCreateItems()
            .UseSetRules(method => method.CreateGoalCompiledCondition("col[10]"))
            .UseFillSlotData()
            .UseGetFillerItemName("Random Duck")

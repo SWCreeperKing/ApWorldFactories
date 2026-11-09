@@ -117,8 +117,6 @@ public class WereCleaner : BuildData
         init_fact
            .UseInitFunction(method => method.AddCode(new Variable("self.starting_stage", "\"\"")))
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
-           .UseCreateRegions()
-           .AddCreateItems()
            .UseSetRules(method => method.CreateGoalCompiledCondition("hasN[\"Nights Survived\", 7]"))
            .UseGetFillerItemName("Floor Penny")
            .UseFillSlotData(new Dictionary<string, string> { ["Kyle"] = "str(\"Best Boi\")" })
