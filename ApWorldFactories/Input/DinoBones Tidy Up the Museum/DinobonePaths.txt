@@ -1,0 +1,1922 @@
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Cranium|Cranium
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Cranium|Mandibula
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum anterius|Os carpi dextrum
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum anterius|Os carpi sinistrum
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum anterius|Phalanx distalis manus dextrae - Digitus 1
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum anterius|Phalanx distalis manus dextrae - Digitus 2
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum anterius|Phalanx distalis manus dextrae - Digitus 3
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum anterius|Phalanx distalis manus dextrae - Digitus 4
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum anterius|Phalanx distalis manus sinistrae - Digitus 1
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum anterius|Phalanx distalis manus sinistrae - Digitus 2
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum anterius|Phalanx distalis manus sinistrae - Digitus 3
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum anterius|Phalanx distalis manus sinistrae - Digitus 4
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum anterius|Scapula sinistra
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum posterius|Os tarsi dextrum
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum posterius|Os tarsi sinistrum
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum posterius|Phalanx distalis pedis dextri - Digitus 1
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum posterius|Phalanx distalis pedis dextri - Digitus 2
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum posterius|Phalanx distalis pedis dextri - Digitus 3
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum posterius|Phalanx distalis pedis dextri - Digitus 4
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum posterius|Phalanx distalis pedis sinistri - Digitus 1
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum posterius|Phalanx distalis pedis sinistri - Digitus 2
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum posterius|Phalanx distalis pedis sinistri - Digitus 3
+Kutular/Yığın_1/PF_Crate_01|Brachiosaurus altithorax|Membrum posterius|Phalanx distalis pedis sinistri - Digitus 4
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Cauda|Vertebrae caudales
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Cervix|Vertebra cervicalis 1
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Cervix|Vertebra cervicalis 2
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Cervix|Vertebra cervicalis 3
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Cervix|Vertebra cervicalis 4
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Cervix|Vertebra cervicalis 5
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Cervix|Vertebra cervicalis 6
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Cervix|Vertebra cervicalis 7
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Cranium|Mandibula
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Crista deltopectoralis humeri dextri
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Crista deltopectoralis humeri sinistri
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Humerus dexter
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Humerus sinister
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Os coracoideum dextrum
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Os coracoideum sinistrum
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Os pteroideum dextrum
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Os pteroideum sinistrum
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Phalanges manus dextrae - Digitus 1
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Phalanges manus dextrae - Digitus 2
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Phalanges manus dextrae - Digitus 3
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Phalanges manus sinistrae - Digitus 1
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Phalanges manus sinistrae - Digitus 2
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Phalanges manus sinistrae - Digitus 3
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Phalanx manus dextra - Digitus 4 - 1
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Phalanx manus dextra - Digitus 4 - 2
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Phalanx manus dextra - Digitus 4 - 3
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Phalanx manus sinistra - Digitus 4 - 1
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Phalanx manus sinistra - Digitus 4 - 2
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Phalanx manus sinistra - Digitus 4 - 3
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Radius dexter
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Radius sinister
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Scapula dextra
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Scapula sinistra
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Ulna dextra
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum anterius|Ulna sinistra
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum posterius|Femur dextrum
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum posterius|Femur sinistrum
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum posterius|Tibia dextra
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Membrum posterius|Tibia sinistra
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Pelvis|Costae sacrales dextrae
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Pelvis|Costae sacrales sinistrae
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Pelvis|Ossa pelvis
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Pelvis|Vertebra sacralis 1
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Pelvis|Vertebra sacralis 2
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Pelvis|Vertebra sacralis 3
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Pelvis|Vertebra sacralis 4
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Costa dextra 1
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Costa dextra 2
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Costa dextra 3
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Costa dextra 4
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Costa dextra 5
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Costa dextra 6
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Costa dextra 7
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Costa dextra 9
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Costa sinistra 1
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Costa sinistra 2
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Costa sinistra 3
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Costa sinistra 4
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Costa sinistra 5
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Costa sinistra 6
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Costa sinistra 7
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Costa sinistra 8
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Costa sinistra 9
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Lamina supraneuralis notarii
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Sternum
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Vertebra dorsalis 1
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Vertebra dorsalis 2
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Vertebra dorsalis 3
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Vertebra dorsalis 4
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Vertebra dorsalis 5
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Vertebra dorsalis 6
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Vertebra dorsalis 7
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Vertebra dorsalis 8
+Kutular/Yığın_1/PF_Crate_01|Pteranodon longiceps|Truncus|Vertebra dorsalis 9
+Kutular/Yığın_1/PF_Crate_02|Brachiosaurus altithorax|Cauda|Arcus haemalis 12
+Kutular/Yığın_1/PF_Crate_02|Brachiosaurus altithorax|Cervix|Vertebra cervicalis 11 cum costis
+Kutular/Yığın_1/PF_Crate_02|Brachiosaurus altithorax|Membrum anterius|Ulna sinistra
+Kutular/Yığın_1/PF_Crate_02|Brachiosaurus altithorax|Membrum posterius|Os metatarsale dextrum 1
+Kutular/Yığın_1/PF_Crate_02|Brachiosaurus altithorax|Membrum posterius|Os metatarsale sinistrum 1
+Kutular/Yığın_1/PF_Crate_02|Brachiosaurus altithorax|Truncus|Costa dorsalis dextra 3
+Kutular/Yığın_1/PF_Crate_02|Brachiosaurus altithorax|Truncus|Costa dorsalis sinistra 2
+Kutular/Yığın_1/PF_Crate_02|Brachiosaurus altithorax|Truncus|Vertebra dorsalis 9
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 10
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 11
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 12
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 13
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 16
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 17
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 18
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 20
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 21
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 24
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 3
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 4
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 5
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 6
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 7
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 8
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Arcus haemalis 9
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 11
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 14
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 15
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 16
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 17
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 18
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 19
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 20
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 21
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 22
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 23
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 24
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 25
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 26
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 27
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 28
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 29
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 3
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 30
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 31
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 32
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 4
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 5
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 6
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 8
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebra caudalis 9
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cauda|Vertebrae caudales terminales
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cervix|Vertebra cervicalis 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cervix|Vertebra cervicalis 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cervix|Vertebra cervicalis 3
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cervix|Vertebra cervicalis 4
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cervix|Vertebra cervicalis 5
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cervix|Vertebra cervicalis 6
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cervix|Vertebra cervicalis 7
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Cranium|Pars occipitalis cranii
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Coracoideum dextrum
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Coracoideum sinistrum
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Humerus dexter
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Os metacarpale dextrum - Digitus 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Os metacarpale dextrum - Digitus 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Os metacarpale dextrum - Digitus 3
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Os metacarpale sinistrum - Digitus 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Os metacarpale sinistrum - Digitus 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Os metacarpale sinistrum - Digitus 3
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Ossa digiti manus dextrae - Digitus 4
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Ossa digiti manus sinistrae - Digitus 4
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Phalanx manus dextra - Digitus 1 - 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Phalanx manus dextra - Digitus 2 - 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Phalanx manus sinistra - Digitus 1 - 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Phalanx manus sinistra - Digitus 2 - 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Phalanx ungualis manus dextra - Digitus 1 - 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Phalanx ungualis manus dextra - Digitus 2 - 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Phalanx ungualis manus dextra - Digitus 3
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Phalanx ungualis manus sinistra - Digitus 1 - 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Phalanx ungualis manus sinistra - Digitus 2 - 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Phalanx ungualis manus sinistra - Digitus 3
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum anterius|Radius sinister
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Fibula dextra
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Os metatarsale dextrum - Digitus 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Os metatarsale dextrum - Digitus 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Os metatarsale dextrum - Digitus 3
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Os metatarsale sinistrum - Digitus 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Os metatarsale sinistrum - Digitus 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Os metatarsale sinistrum - Digitus 3
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Phalanx pedis dextra - Digitus 1 - 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Phalanx pedis dextra - Digitus 2 - 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Phalanx pedis dextra - Digitus 3 - 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Phalanx pedis sinistra - Digitus 1 - 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Phalanx pedis sinistra - Digitus 2 - 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Phalanx pedis sinistra - Digitus 3 - 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 1 - 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 2 - 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 3 - 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 1 - 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 2 - 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 3 - 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Membrum posterius|Tibia sinistra
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Pelvis|Costa sacralis dextra 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Pelvis|Costa sacralis dextra 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Pelvis|Costa sacralis dextra 3
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Pelvis|Costa sacralis sinistra 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Pelvis|Costa sacralis sinistra 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Pelvis|Costa sacralis sinistra 3
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Pelvis|Costa sacralis sinistra 4
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Pelvis|Ilium et pubis sinistrum
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Pelvis|Vertebra dorsosacralis 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Pelvis|Vertebra dorsosacralis 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Pelvis|Vertebra sacralis 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Pelvis|Vertebra sacralis 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Pelvis|Vertebra sacralis 3
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Pelvis|Vertebra sacralis 4
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 10
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 11
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 12
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 3
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 6
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 7
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 9
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 10
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 11
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 12
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 3
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 4
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Elementum sternale medianum
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Os sternale dextrum
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Os sternale sinistrum
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Vertebra dorsalis 1
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Vertebra dorsalis 10
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Vertebra dorsalis 12
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Vertebra dorsalis 2
+Kutular/Yığın_1/PF_Crate_02|Parasaurolophus walkeri|Truncus|Vertebra dorsalis 5
+Kutular/Yığın_1/PF_Crate_03|Brachiosaurus altithorax|Cauda|Arcus haemalis 13
+Kutular/Yığın_1/PF_Crate_03|Brachiosaurus altithorax|Cauda|Vertebra caudalis 14
+Kutular/Yığın_1/PF_Crate_03|Brachiosaurus altithorax|Membrum anterius|Humerus sinister
+Kutular/Yığın_1/PF_Crate_03|Brachiosaurus altithorax|Membrum anterius|Ulna dextra
+Kutular/Yığın_1/PF_Crate_03|Brachiosaurus altithorax|Membrum posterius|Fibula dextra
+Kutular/Yığın_1/PF_Crate_03|Brachiosaurus altithorax|Pelvis|Sacrum
+Kutular/Yığın_1/PF_Crate_03|Brachiosaurus altithorax|Truncus|Costa dorsalis dextra 5
+Kutular/Yığın_1/PF_Crate_03|Brachiosaurus altithorax|Truncus|Costa dorsalis dextra 9
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Cauda|Vertebra caudalis 14
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Cauda|Vertebra caudalis 6
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Cauda|Vertebra caudalis 8
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum anterius|Ossa digiti manus dextrae - Digitus 1
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum anterius|Ossa digiti manus dextrae - Digitus 2
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum anterius|Ossa digiti manus dextrae - Digitus 3
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum anterius|Ossa digiti manus dextrae - Digitus 4
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum anterius|Ossa digiti manus dextrae - Digitus 5
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum anterius|Ossa digiti manus sinistrae - Digitus 1
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum anterius|Ossa digiti manus sinistrae - Digitus 2
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum anterius|Ossa digiti manus sinistrae - Digitus 5
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum posterius|Femur dextrum
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum posterius|Ossa digiti pedis dextri - Digitus 1
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum posterius|Ossa digiti pedis dextri - Digitus 2
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum posterius|Ossa digiti pedis dextri - Digitus 3
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum posterius|Ossa digiti pedis dextri - Digitus 4
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum posterius|Ossa digiti pedis sinistri - Digitus 1
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum posterius|Ossa digiti pedis sinistri - Digitus 2
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum posterius|Ossa digiti pedis sinistri - Digitus 3
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum posterius|Ossa digiti pedis sinistri - Digitus 4
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum posterius|Ossa tarsi et metatarsi dextri
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Membrum posterius|Ossa tarsi et metatarsi sinistri
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Pelvis|Ilium sinistrum
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Pelvis|Vertebra sacralis 3
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Truncus|Costa dorsalis dextra 6
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Truncus|Costa dorsalis dextra 7
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Truncus|Costa dorsalis sinistra 3
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Truncus|Costa dorsalis sinistra 5
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Truncus|Costa dorsalis sinistra 6
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Truncus|Costa dorsalis sinistra 8
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Truncus|Vertebra dorsalis 11
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Truncus|Vertebra dorsalis 4
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Truncus|Vertebra dorsalis 7
+Kutular/Yığın_1/PF_Crate_03|Pachycephalosaurus|Truncus|Vertebra dorsalis 8
+Kutular/Yığın_2/PF_Crate_10|Spinosaurus aegyptiacus|Cervix|Vertebra cervicalis et costae cervicales 3
+Kutular/Yığın_2/PF_Crate_10|Spinosaurus aegyptiacus|Cervix|Vertebra cervicalis et costae cervicales 4
+Kutular/Yığın_2/PF_Crate_10|Spinosaurus aegyptiacus|Cervix|Vertebra cervicalis et costae cervicales 5
+Kutular/Yığın_2/PF_Crate_10|Spinosaurus aegyptiacus|Membrum posterius|Femur sinistrum
+Kutular/Yığın_2/PF_Crate_10|Spinosaurus aegyptiacus|Pelvis|Ilium dextrum
+Kutular/Yığın_2/PF_Crate_10|Spinosaurus aegyptiacus|Pelvis|Ilium sinistrum
+Kutular/Yığın_2/PF_Crate_10|Spinosaurus aegyptiacus|Pelvis|Ischium dextrum
+Kutular/Yığın_2/PF_Crate_10|Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 3
+Kutular/Yığın_2/PF_Crate_10|Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 5
+Kutular/Yığın_2/PF_Crate_10|Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 6
+Kutular/Yığın_2/PF_Crate_10|Spinosaurus aegyptiacus|Truncus|Sternum
+Kutular/Yığın_2/PF_Crate_10|Tyrannosaurus rex|Membrum anterius|Os metacarpale dextrum - Digitus 1
+Kutular/Yığın_2/PF_Crate_10|Tyrannosaurus rex|Membrum anterius|Os metacarpale dextrum - Digitus 2
+Kutular/Yığın_2/PF_Crate_10|Tyrannosaurus rex|Membrum anterius|Os metacarpale sinistrum - Digitus 1
+Kutular/Yığın_2/PF_Crate_10|Tyrannosaurus rex|Membrum anterius|Os metacarpale sinistrum - Digitus 2
+Kutular/Yığın_2/PF_Crate_10|Tyrannosaurus rex|Membrum anterius|Phalanx manus dextra - Digitus 1 - 1
+Kutular/Yığın_2/PF_Crate_10|Tyrannosaurus rex|Membrum anterius|Phalanx manus dextra - Digitus 1 - 2
+Kutular/Yığın_2/PF_Crate_10|Tyrannosaurus rex|Membrum anterius|Phalanx manus dextra - Digitus 2 - 1
+Kutular/Yığın_2/PF_Crate_10|Tyrannosaurus rex|Membrum anterius|Phalanx manus dextra - Digitus 2 - 2
+Kutular/Yığın_2/PF_Crate_10|Tyrannosaurus rex|Membrum anterius|Phalanx manus sinistra - Digitus 1 - 1
+Kutular/Yığın_2/PF_Crate_10|Tyrannosaurus rex|Membrum anterius|Phalanx manus sinistra - Digitus 1 - 2
+Kutular/Yığın_2/PF_Crate_10|Tyrannosaurus rex|Membrum anterius|Phalanx manus sinistra - Digitus 2 - 1
+Kutular/Yığın_2/PF_Crate_10|Tyrannosaurus rex|Membrum anterius|Phalanx manus sinistra - Digitus 2 - 2
+Kutular/Yığın_2/PF_Crate_10|Tyrannosaurus rex|Membrum anterius|Phalanx ungualis manus dextra - Digitus 1 - 3
+Kutular/Yığın_2/PF_Crate_10|Tyrannosaurus rex|Membrum anterius|Phalanx ungualis manus dextra - Digitus 2 - 3
+Kutular/Yığın_2/PF_Crate_10|Tyrannosaurus rex|Membrum anterius|Phalanx ungualis manus sinistra - Digitus 1 - 3
+Kutular/Yığın_2/PF_Crate_10|Tyrannosaurus rex|Membrum anterius|Phalanx ungualis manus sinistra - Digitus 2 - 3
+Kutular/Yığın_2/PF_Crate_10|Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 4
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 11
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 17
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 19
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 22
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 6
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 11
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 12
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 22
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 25
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 27
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 29
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 30
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 31
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cervix|Costa cervicalis dextra 4
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cervix|Costa cervicalis dextra 6
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cervix|Costa cervicalis dextra 7
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cervix|Costa cervicalis dextra 8
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cervix|Costa cervicalis sinistra 2
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cervix|Costa cervicalis sinistra 6
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cervix|Costa cervicalis sinistra 7
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Cervix|Vertebra cervicalis 10
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare dextrum 2
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare dextrum 3
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare dextrum 4
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare dextrum 5
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare dextrum 7
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare sinistrum 2
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare sinistrum 3
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare sinistrum 4
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare sinistrum 6
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare sinistrum 8
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Membrum anterius|Scapulocoracoideum dextrum
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Membrum anterius|Scapulocoracoideum sinistrum
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Pelvis|Ilium sinistrum
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 15
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 16
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 3
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 4
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 8
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 12
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 14
+Kutular/Yığın_2/PF_Crate_13|Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 11
+Kutular/Yığın_2/PF_Crate_13|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 53
+Kutular/Yığın_2/PF_Crate_13|Spinosaurus aegyptiacus|Cranium|Os cranii dextrum
+Kutular/Yığın_2/PF_Crate_13|Spinosaurus aegyptiacus|Membrum posterius|Tibia dextra
+Kutular/Yığın_2/PF_Crate_13|Spinosaurus aegyptiacus|Pelvis|Pubis
+Kutular/Yığın_2/PF_Crate_13|Spinosaurus aegyptiacus|Truncus|Processus spinosus 6
+Kutular/Yığın_2/PF_Crate_23|Brachiosaurus altithorax|Cauda|Arcus haemalis 16
+Kutular/Yığın_2/PF_Crate_23|Brachiosaurus altithorax|Cauda|Vertebra caudalis 8
+Kutular/Yığın_2/PF_Crate_23|Brachiosaurus altithorax|Membrum anterius|Os coracoideum dextrum
+Kutular/Yığın_2/PF_Crate_23|Brachiosaurus altithorax|Membrum anterius|Os coracoideum sinistrum
+Kutular/Yığın_2/PF_Crate_23|Brachiosaurus altithorax|Membrum anterius|Os metacarpale dextrum 4
+Kutular/Yığın_2/PF_Crate_23|Brachiosaurus altithorax|Membrum anterius|Radius sinister
+Kutular/Yığın_2/PF_Crate_23|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 5
+Kutular/Yığın_2/PF_Crate_23|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 9
+Kutular/Yığın_2/PF_Crate_23|Kentrosaurus aethiopicus|Integumentum|Osteoderma scapulare sinistrum
+Kutular/Yığın_2/PF_Crate_23|Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 7
+Kutular/Yığın_2/PF_Crate_23|Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 11
+Kutular/Yığın_2/PF_Crate_23|Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 5
+Kutular/Yığın_3/PF_Crate_04|Brachiosaurus altithorax|Cervix|Vertebra cervicalis 1 cum costis
+Kutular/Yığın_3/PF_Crate_04|Brachiosaurus altithorax|Cervix|Vertebra cervicalis 10 cum costis
+Kutular/Yığın_3/PF_Crate_04|Brachiosaurus altithorax|Membrum anterius|Humerus dexter
+Kutular/Yığın_3/PF_Crate_04|Brachiosaurus altithorax|Membrum anterius|Os metacarpale sinistrum 4
+Kutular/Yığın_3/PF_Crate_04|Brachiosaurus altithorax|Membrum posterius|Femur sinistrum
+Kutular/Yığın_3/PF_Crate_04|Brachiosaurus altithorax|Membrum posterius|Os metatarsale dextrum 3
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 10
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 12
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 2
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 3
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 4
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 5
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 7
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 8
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 9
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 14
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 2
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Cervix|Costa cervicalis dextra 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Cervix|Costa cervicalis dextra 3
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Cervix|Costa cervicalis sinistra 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Cervix|Costa cervicalis sinistra 3
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Cervix|Costa cervicalis sinistra 4
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale dextrum 2
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale sinistrum 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale sinistrum 4
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Os carpi dextrum 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Os carpi dextrum 2
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Os carpi sinistrum 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Os carpi sinistrum 2
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale dextrum - Digitus 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale dextrum - Digitus 2
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale dextrum - Digitus 3
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale dextrum - Digitus 4
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale dextrum - Digitus 5
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale sinistrum - Digitus 2
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale sinistrum - Digitus 3
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale sinistrum - Digitus 4
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale sinistrum - Digitus 5
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Phalanx distalis manus dextra - Digitus 2
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Phalanx distalis manus dextra - Digitus 3
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Phalanx distalis manus sinistra - Digitus 2
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Phalanx distalis manus sinistra - Digitus 3
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Phalanx manus dextra - Digitus 2 - 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Phalanx manus dextra - Digitus 3 - 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Phalanx manus dextra - Digitus 4
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Phalanx manus sinistra - Digitus 2 - 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Phalanx manus sinistra - Digitus 3 - 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Phalanx manus sinistra - Digitus 4
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Radius dexter
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Radius sinister
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum anterius|Ulna dextra
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Fibula dextra
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Os metatarsale dextrum - Digitus 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Os metatarsale dextrum - Digitus 2
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Os metatarsale dextrum - Digitus 3
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Os metatarsale sinistrum - Digitus 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Os metatarsale sinistrum - Digitus 2
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Os metatarsale sinistrum - Digitus 3
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Os tarsi dextrum
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Os tarsi sinistrum
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Phalanx distalis pedis dextra - Digitus 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Phalanx distalis pedis dextra - Digitus 2
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Phalanx distalis pedis dextra - Digitus 3
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Phalanx distalis pedis sinistra - Digitus 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Phalanx distalis pedis sinistra - Digitus 2
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Phalanx distalis pedis sinistra - Digitus 3
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Phalanx pedis dextra - Digitus 1 - 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Phalanx pedis dextra - Digitus 2 - 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Phalanx pedis dextra - Digitus 3 - 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Phalanx pedis sinistra - Digitus 1 - 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Phalanx pedis sinistra - Digitus 2 - 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Phalanx pedis sinistra - Digitus 3 - 1
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Membrum posterius|Tibia dextra
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 5
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 6
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 13
+Kutular/Yığın_3/PF_Crate_04|Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 8
+Kutular/Yığın_3/PF_Crate_05|Pteranodon longiceps|Cranium|Cranium
+Kutular/Yığın_3/PF_Crate_05|Pteranodon longiceps|Membrum anterius|Metacarpale dextrum - Digitus 4
+Kutular/Yığın_3/PF_Crate_05|Pteranodon longiceps|Membrum anterius|Metacarpale sinistrum - Digitus 4
+Kutular/Yığın_3/PF_Crate_05|Pteranodon longiceps|Membrum anterius|Phalanx manus dextra - Digitus 4 - 4
+Kutular/Yığın_3/PF_Crate_05|Pteranodon longiceps|Membrum anterius|Phalanx manus sinistra - Digitus 4 - 4
+Kutular/Yığın_3/PF_Crate_05|Pteranodon longiceps|Membrum posterius|Ossa pedis dextri
+Kutular/Yığın_3/PF_Crate_05|Pteranodon longiceps|Membrum posterius|Ossa pedis sinistri
+Kutular/Yığın_3/PF_Crate_05|Pteranodon longiceps|Truncus|Costa dextra 8
+Kutular/Yığın_3/PF_Crate_05|Tyrannosaurus rex|Cauda|Vertebra caudalis 11
+Kutular/Yığın_3/PF_Crate_05|Tyrannosaurus rex|Cauda|Vertebra caudalis 3
+Kutular/Yığın_3/PF_Crate_05|Tyrannosaurus rex|Cauda|Vertebra caudalis 5
+Kutular/Yığın_3/PF_Crate_05|Tyrannosaurus rex|Cervix|Vertebra cervicalis 5
+Kutular/Yığın_3/PF_Crate_05|Tyrannosaurus rex|Cervix|Vertebra cervicodorsalis 2
+Kutular/Yığın_3/PF_Crate_05|Tyrannosaurus rex|Cranium|Ossa dentalia
+Kutular/Yığın_3/PF_Crate_05|Tyrannosaurus rex|Membrum anterius|Humerus dexter
+Kutular/Yığın_3/PF_Crate_05|Tyrannosaurus rex|Membrum posterius|Femur dextrum
+Kutular/Yığın_3/PF_Crate_05|Tyrannosaurus rex|Membrum posterius|Os metatarsale dextrum - Digitus 3
+Kutular/Yığın_3/PF_Crate_05|Tyrannosaurus rex|Truncus|Costa dorsalis dextra 5
+Kutular/Yığın_3/PF_Crate_05|Tyrannosaurus rex|Truncus|Costa dorsalis dextra 8
+Kutular/Yığın_3/PF_Crate_05|Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 2
+Kutular/Yığın_3/PF_Crate_06|Brachiosaurus altithorax|Cauda|Arcus haemalis 10
+Kutular/Yığın_3/PF_Crate_06|Brachiosaurus altithorax|Cauda|Arcus haemalis 17
+Kutular/Yığın_3/PF_Crate_06|Brachiosaurus altithorax|Cauda|Arcus haemalis 4
+Kutular/Yığın_3/PF_Crate_06|Brachiosaurus altithorax|Cauda|Vertebra caudalis 7
+Kutular/Yığın_3/PF_Crate_06|Brachiosaurus altithorax|Cervix|Vertebra cervicalis 8 cum costis
+Kutular/Yığın_3/PF_Crate_06|Brachiosaurus altithorax|Membrum anterius|Os metacarpale sinistrum 1
+Kutular/Yığın_3/PF_Crate_06|Brachiosaurus altithorax|Membrum posterius|Fibula sinistra
+Kutular/Yığın_3/PF_Crate_06|Brachiosaurus altithorax|Membrum posterius|Os metatarsale sinistrum 3
+Kutular/Yığın_3/PF_Crate_06|Brachiosaurus altithorax|Pelvis|Os coxae sinistrum
+Kutular/Yığın_3/PF_Crate_06|Brachiosaurus altithorax|Truncus|Costa dorsalis dextra 8
+Kutular/Yığın_3/PF_Crate_06|Brachiosaurus altithorax|Truncus|Costa dorsalis sinistra 3
+Kutular/Yığın_3/PF_Crate_06|Brachiosaurus altithorax|Truncus|Costa dorsalis sinistra 7
+Kutular/Yığın_3/PF_Crate_06|Brachiosaurus altithorax|Truncus|Os sternale sinistrum
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 11
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 9
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 11
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 12
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 13
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 6
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 7
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 8
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 9
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 6
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 7
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cervix|Vertebra cervicalis et costae cervicales 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cervix|Vertebra cervicalis et costae cervicales 2
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cervix|Vertebra cervicalis et costae cervicales 6
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 10
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 11
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 12
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 13
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 14
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 15
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 16
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 17
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 18
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 19
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 2
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 20
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 21
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 22
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 23
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 24
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 25
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 26
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 27
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 28
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 29
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 30
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 31
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 32
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 33
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 34
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 35
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 36
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 37
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 38
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 39
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 4
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 40
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 41
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 42
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 43
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 44
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 45
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 46
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 47
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 48
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 49
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 5
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 50
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 51
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 52
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 53
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 54
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 55
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 56
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 57
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 58
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 59
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 6
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 60
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 61
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 62
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 63
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 64
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 65
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 66
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 67
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 68
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 7
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 8
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Cranium|Dens 9
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum anterius|Metacarpale dextrum - Digitus 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum anterius|Metacarpale dextrum - Digitus 2
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum anterius|Metacarpale dextrum - Digitus 3
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum anterius|Os carpi dextrum 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum anterius|Os carpi dextrum 2
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum anterius|Os carpi sinistrum 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum anterius|Os carpi sinistrum 2
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum anterius|Phalanx manus dextra - Digitus 1 - 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum anterius|Phalanx manus dextra - Digitus 2 - 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum anterius|Phalanx manus dextra - Digitus 3 - 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum anterius|Phalanx manus sinistra - Digitus 1 - 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum anterius|Phalanx manus sinistra - Digitus 2 - 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum anterius|Phalanx ungualis manus dextra - Digitus 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum anterius|Phalanx ungualis manus dextra - Digitus 2
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum anterius|Phalanx ungualis manus dextra - Digitus 3
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum anterius|Phalanx ungualis manus sinistra - Digitus 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum anterius|Phalanx ungualis manus sinistra - Digitus 2
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum anterius|Phalanx ungualis manus sinistra - Digitus 3
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Metatarsale dextrum - Digitus 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Metatarsale dextrum - Digitus 2
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Metatarsale dextrum - Digitus 3
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Metatarsale dextrum - Digitus 4
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Metatarsale sinistrum - Digitus 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Metatarsale sinistrum - Digitus 2
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Metatarsale sinistrum - Digitus 3
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Metatarsale sinistrum - Digitus 4
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Os tarsi dextrum
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Os tarsi sinistrum
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis dextra - Digitus 1 - 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis dextra - Digitus 2 - 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis dextra - Digitus 2 - 2
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis dextra - Digitus 3 - 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis dextra - Digitus 3 - 2
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis dextra - Digitus 4 - 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis dextra - Digitus 4 - 2
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis sinistra - Digitus 1 - 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis sinistra - Digitus 2 - 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis sinistra - Digitus 2 - 2
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis sinistra - Digitus 3 - 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis sinistra - Digitus 3 - 2
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis sinistra - Digitus 4 - 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis sinistra - Digitus 4 - 2
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 2
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 3
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 4
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 1
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 2
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 3
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 4
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 5
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 3
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 4
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Truncus|Processus spinosus 8
+Kutular/Yığın_3/PF_Crate_06|Spinosaurus aegyptiacus|Truncus|Processus spinosus 9
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Cervix|Vertebra cervicalis 6
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Cranium|Dens molaris inferior dexter
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Cranium|Dens molaris inferior sinister
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Cranium|Dens molaris superior dexter
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Cranium|Dens molaris superior sinister
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Cranium|Mandibula
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Humerus dexter
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os carpale dextrum 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os carpale dextrum 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os carpale dextrum 3
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os carpale dextrum 4
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os carpale dextrum 5
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os carpale dextrum 6
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os carpale dextrum 7
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os carpale sinistrum 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os carpale sinistrum 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os carpale sinistrum 3
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os carpale sinistrum 4
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os carpale sinistrum 5
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os carpale sinistrum 6
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os carpale sinistrum 7
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os metacarpale dextrum - Digitus 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os metacarpale dextrum - Digitus 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os metacarpale dextrum - Digitus 3
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os metacarpale dextrum - Digitus 4
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os metacarpale dextrum - Digitus 5
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os metacarpale sinistrum - Digitus 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os metacarpale sinistrum - Digitus 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os metacarpale sinistrum - Digitus 3
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os metacarpale sinistrum - Digitus 4
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Os metacarpale sinistrum - Digitus 5
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Phalanx manus dextra - Digitus 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Phalanx manus dextra - Digitus 2 - 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Phalanx manus dextra - Digitus 2 - 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Phalanx manus dextra - Digitus 3 - 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Phalanx manus dextra - Digitus 3 - 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Phalanx manus dextra - Digitus 4 - 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Phalanx manus dextra - Digitus 4 - 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Phalanx manus dextra - Digitus 5 - 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Phalanx manus dextra - Digitus 5 - 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Phalanx manus sinistra - Digitus 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Phalanx manus sinistra - Digitus 2 - 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Phalanx manus sinistra - Digitus 2 - 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Phalanx manus sinistra - Digitus 3 - 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Phalanx manus sinistra - Digitus 3 - 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Phalanx manus sinistra - Digitus 4 - 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Phalanx manus sinistra - Digitus 4 - 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Phalanx manus sinistra - Digitus 5 - 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Phalanx manus sinistra - Digitus 5 - 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Radius dexter
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum anterius|Ulna sinistra
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Calcaneus dexter
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Calcaneus sinister
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Fibula sinistra
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os metatarsale dextrum - Digitus 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os metatarsale dextrum - Digitus 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os metatarsale dextrum - Digitus 3
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os metatarsale dextrum - Digitus 4
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os metatarsale dextrum - Digitus 5
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os metatarsale sinistrum - Digitus 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os metatarsale sinistrum - Digitus 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os metatarsale sinistrum - Digitus 3
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os metatarsale sinistrum - Digitus 4
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os metatarsale sinistrum - Digitus 5
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os naviculare dextrum
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os naviculare sinistrum
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os tarsale dextrum 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os tarsale dextrum 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os tarsale dextrum 3
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os tarsale dextrum 4
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os tarsale sinistrum 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os tarsale sinistrum 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os tarsale sinistrum 3
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Os tarsale sinistrum 4
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Patella dextra
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Patella sinistra
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Phalanx pedis dextra - Digitus 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Phalanx pedis dextra - Digitus 2 - 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Phalanx pedis dextra - Digitus 2 - 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Phalanx pedis dextra - Digitus 3 - 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Phalanx pedis dextra - Digitus 3 - 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Phalanx pedis dextra - Digitus 4 - 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Phalanx pedis dextra - Digitus 4 - 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Phalanx pedis dextra - Digitus 5 - 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Phalanx pedis dextra - Digitus 5 - 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Phalanx pedis sinistra - Digitus 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Phalanx pedis sinistra - Digitus 2 - 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Phalanx pedis sinistra - Digitus 2 - 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Phalanx pedis sinistra - Digitus 3 - 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Phalanx pedis sinistra - Digitus 3 - 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Phalanx pedis sinistra - Digitus 4 - 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Phalanx pedis sinistra - Digitus 4 - 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Phalanx pedis sinistra - Digitus 5 - 1
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Phalanx pedis sinistra - Digitus 5 - 2
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Talus dexter
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Talus sinister
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Membrum posterius|Tibia sinistra
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Pelvis|Sacrum
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Truncus|Costa thoracica dextra 10
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Truncus|Costa thoracica dextra 12
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Truncus|Costa thoracica dextra 13
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Truncus|Costa thoracica dextra 6
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Truncus|Costa thoracica sinistra 13
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Truncus|Costa thoracica sinistra 14
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Truncus|Costa thoracica sinistra 5
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Truncus|Costa thoracica sinistra 7
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Truncus|Costa thoracica sinistra 8
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Truncus|Vertebra thoracica 3
+Kutular/Yığın_4/PF_Crate_07|Mammuthus primigenius|Truncus|Vertebra thoracica 4
+Kutular/Yığın_4/PF_Crate_07|Parasaurolophus walkeri|Cauda|Arcus haemalis 14
+Kutular/Yığın_4/PF_Crate_07|Parasaurolophus walkeri|Cauda|Arcus haemalis 28
+Kutular/Yığın_4/PF_Crate_07|Parasaurolophus walkeri|Cauda|Vertebra caudalis 1
+Kutular/Yığın_4/PF_Crate_07|Parasaurolophus walkeri|Cauda|Vertebra caudalis 13
+Kutular/Yığın_4/PF_Crate_07|Parasaurolophus walkeri|Cauda|Vertebra caudalis 2
+Kutular/Yığın_4/PF_Crate_07|Parasaurolophus walkeri|Cauda|Vertebra caudalis 7
+Kutular/Yığın_4/PF_Crate_07|Parasaurolophus walkeri|Cervix|Vertebra cervicalis 8
+Kutular/Yığın_4/PF_Crate_07|Parasaurolophus walkeri|Membrum anterius|Scapula dextra
+Kutular/Yığın_4/PF_Crate_07|Parasaurolophus walkeri|Membrum anterius|Ulna dextra
+Kutular/Yığın_4/PF_Crate_07|Parasaurolophus walkeri|Membrum anterius|Ulna sinistra
+Kutular/Yığın_4/PF_Crate_07|Parasaurolophus walkeri|Membrum posterius|Femur dextrum
+Kutular/Yığın_4/PF_Crate_07|Parasaurolophus walkeri|Membrum posterius|Femur sinistrum
+Kutular/Yığın_4/PF_Crate_07|Parasaurolophus walkeri|Membrum posterius|Tibia dextra
+Kutular/Yığın_4/PF_Crate_07|Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 8
+Kutular/Yığın_4/PF_Crate_07|Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 8
+Kutular/Yığın_4/PF_Crate_07|Parasaurolophus walkeri|Truncus|Vertebra dorsalis 3
+Kutular/Yığın_4/PF_Crate_07|Parasaurolophus walkeri|Truncus|Vertebra dorsalis 6
+Kutular/Yığın_4/PF_Crate_08|Brachiosaurus altithorax|Cauda|Arcus haemalis 11
+Kutular/Yığın_4/PF_Crate_08|Brachiosaurus altithorax|Cauda|Arcus haemalis 3
+Kutular/Yığın_4/PF_Crate_08|Brachiosaurus altithorax|Cauda|Arcus haemalis 9
+Kutular/Yığın_4/PF_Crate_08|Brachiosaurus altithorax|Cauda|Vertebra caudalis 16
+Kutular/Yığın_4/PF_Crate_08|Brachiosaurus altithorax|Cauda|Vertebra caudalis 17
+Kutular/Yığın_4/PF_Crate_08|Brachiosaurus altithorax|Cauda|Vertebra caudalis 6
+Kutular/Yığın_4/PF_Crate_08|Brachiosaurus altithorax|Membrum anterius|Os metacarpale dextrum 1
+Kutular/Yığın_4/PF_Crate_08|Brachiosaurus altithorax|Membrum anterius|Os metacarpale dextrum 2
+Kutular/Yığın_4/PF_Crate_08|Brachiosaurus altithorax|Membrum anterius|Os metacarpale dextrum 3
+Kutular/Yığın_4/PF_Crate_08|Brachiosaurus altithorax|Membrum anterius|Os metacarpale sinistrum 2
+Kutular/Yığın_4/PF_Crate_08|Brachiosaurus altithorax|Membrum anterius|Os metacarpale sinistrum 3
+Kutular/Yığın_4/PF_Crate_08|Brachiosaurus altithorax|Membrum anterius|Radius dexter
+Kutular/Yığın_4/PF_Crate_08|Brachiosaurus altithorax|Membrum posterius|Os metatarsale dextrum 4
+Kutular/Yığın_4/PF_Crate_08|Brachiosaurus altithorax|Membrum posterius|Os metatarsale sinistrum 2
+Kutular/Yığın_4/PF_Crate_08|Brachiosaurus altithorax|Pelvis|Os coxae dextrum
+Kutular/Yığın_4/PF_Crate_08|Brachiosaurus altithorax|Truncus|Os sternale dextrum
+Kutular/Yığın_4/PF_Crate_08|Brachiosaurus altithorax|Truncus|Vertebra dorsalis 7
+Kutular/Yığın_4/PF_Crate_08|Mammuthus primigenius|Membrum anterius|Scapula sinistra
+Kutular/Yığın_4/PF_Crate_08|Mammuthus primigenius|Truncus|Costa thoracica dextra 1
+Kutular/Yığın_4/PF_Crate_08|Mammuthus primigenius|Truncus|Costa thoracica dextra 11
+Kutular/Yığın_4/PF_Crate_08|Mammuthus primigenius|Truncus|Costa thoracica dextra 4
+Kutular/Yığın_4/PF_Crate_08|Mammuthus primigenius|Truncus|Costa thoracica dextra 8
+Kutular/Yığın_4/PF_Crate_08|Mammuthus primigenius|Truncus|Costa thoracica sinistra 1
+Kutular/Yığın_4/PF_Crate_08|Mammuthus primigenius|Truncus|Costa thoracica sinistra 6
+Kutular/Yığın_4/PF_Crate_08|Mammuthus primigenius|Truncus|Vertebra lumbalis 4
+Kutular/Yığın_4/PF_Crate_08|Mammuthus primigenius|Truncus|Vertebra thoracica 10
+Kutular/Yığın_4/PF_Crate_08|Mammuthus primigenius|Truncus|Vertebra thoracica 11
+Kutular/Yığın_4/PF_Crate_08|Mammuthus primigenius|Truncus|Vertebra thoracica 2
+Kutular/Yığın_4/PF_Crate_11|Parasaurolophus walkeri|Cauda|Arcus haemalis 19
+Kutular/Yığın_4/PF_Crate_11|Parasaurolophus walkeri|Cauda|Arcus haemalis 26
+Kutular/Yığın_4/PF_Crate_11|Parasaurolophus walkeri|Cranium|Cranium
+Kutular/Yığın_4/PF_Crate_11|Parasaurolophus walkeri|Membrum anterius|Humerus sinister
+Kutular/Yığın_4/PF_Crate_11|Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 9
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cauda|Arcus haemalis 22
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cauda|Vertebra caudalis 15
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cauda|Vertebra caudalis 16
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cauda|Vertebra caudalis 23
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cauda|Vertebra caudalis 4
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cauda|Vertebra caudalis 42
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cervix|Vertebra cervicalis 4
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 1
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 10
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 11
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 12
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 13
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 14
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 15
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 16
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 17
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 18
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 19
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 2
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 20
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 21
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 22
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 23
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 24
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 25
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 26
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 27
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 28
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 29
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 3
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 30
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 31
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 32
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 33
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 34
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 35
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 36
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 37
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 38
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 39
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 4
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 40
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 41
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 42
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 43
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 44
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 45
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 46
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 47
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 48
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 49
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 5
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 50
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 51
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 52
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 53
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 54
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 55
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 56
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 57
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 58
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 59
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 6
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 60
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 61
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 62
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 63
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 64
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 65
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 66
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 67
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 68
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 69
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 7
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 70
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 71
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 72
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 73
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 74
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 75
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 76
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 8
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Dens 9
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Os quadratojugale sinistrum
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Cranium|Os surangulare dextrum
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Membrum posterius|Femur sinistrum
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Membrum posterius|Os metatarsale dextrum - Digitus 4
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Truncus|Costa dorsalis dextra 4
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Truncus|Costa dorsalis dextra 6
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Truncus|Vertebra dorsalis 1
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Truncus|Vertebra dorsalis 2
+Kutular/Yığın_4/PF_Crate_11|Tyrannosaurus rex|Truncus|Vertebra dorsalis 4
+Kutular/Yığın_5/PF_Crate_12|Brachiosaurus altithorax|Cauda|Arcus haemalis 5
+Kutular/Yığın_5/PF_Crate_12|Brachiosaurus altithorax|Cauda|Arcus haemalis 6
+Kutular/Yığın_5/PF_Crate_12|Brachiosaurus altithorax|Cauda|Arcus haemalis 7
+Kutular/Yığın_5/PF_Crate_12|Brachiosaurus altithorax|Cauda|Vertebra caudalis 10
+Kutular/Yığın_5/PF_Crate_12|Brachiosaurus altithorax|Cauda|Vertebra caudalis 11
+Kutular/Yığın_5/PF_Crate_12|Brachiosaurus altithorax|Cauda|Vertebra caudalis 13
+Kutular/Yığın_5/PF_Crate_12|Brachiosaurus altithorax|Cauda|Vertebra caudalis 15
+Kutular/Yığın_5/PF_Crate_12|Brachiosaurus altithorax|Cauda|Vertebra caudalis 5
+Kutular/Yığın_5/PF_Crate_12|Brachiosaurus altithorax|Cervix|Vertebra cervicalis 12 cum costis
+Kutular/Yığın_5/PF_Crate_12|Brachiosaurus altithorax|Cervix|Vertebra cervicalis 3 cum costis
+Kutular/Yığın_5/PF_Crate_12|Brachiosaurus altithorax|Truncus|Vertebra dorsalis 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 10
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 11
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 12
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 13
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 14
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 15
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 16
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 17
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 18
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 19
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 20
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 21
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 22
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 23
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 24
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 25
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 26
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 27
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 28
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 29
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 30
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 31
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 32
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 33
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 34
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 35
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 36
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 4
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 5
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 6
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 7
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 8
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Cranium|Dens 9
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Os metacarpale dextrum 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Os metacarpale dextrum 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Os metacarpale dextrum 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Os metacarpale dextrum 4
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Os metacarpale dextrum 5
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Os metacarpale sinistrum 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Os metacarpale sinistrum 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Os metacarpale sinistrum 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Os metacarpale sinistrum 4
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Os metacarpale sinistrum 5
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx distalis manus dextrae - Digitus 4 - 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx distalis manus dextrae - Digitus 5 - 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx distalis manus sinistrae - Digitus 4 - 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx distalis manus sinistrae - Digitus 5 - 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 1 - 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 1 - 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 1 - 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 2 - 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 2 - 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 2 - 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 3 - 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 3 - 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 3 - 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 4 - 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 4 - 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 5 - 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 5 - 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 1 - 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 1 - 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 1 - 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 2 - 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 2 - 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 2 - 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 3 - 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 3 - 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 3 - 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 4 - 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 4 - 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 5 - 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 5 - 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx ungualis manus dextrae - Digitus 1 - 4
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx ungualis manus dextrae - Digitus 2 - 4
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx ungualis manus dextrae - Digitus 3 - 4
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx ungualis manus sinistrae - Digitus 1 - 4
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx ungualis manus sinistrae - Digitus 2 - 4
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Phalanx ungualis manus sinistrae - Digitus 3 - 4
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum anterius|Scapula dextra
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Os metatarsale dextrum 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Os metatarsale dextrum 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Os metatarsale dextrum 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Os metatarsale dextrum 4
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Os metatarsale sinistrum 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Os metatarsale sinistrum 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Os metatarsale sinistrum 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Os metatarsale sinistrum 4
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 1 - 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 1 - 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 2 - 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 2 - 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 2 - 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 3 - 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 3 - 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 3 - 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 4 - 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 4 - 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 4 - 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 1 - 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 1 - 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 2 - 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 2 - 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 2 - 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 3 - 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 3 - 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 3 - 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 4 - 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 4 - 2
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 4 - 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx ungualis pedis dextri - Digitus 1 - 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx ungualis pedis dextri - Digitus 2 - 4
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx ungualis pedis dextri - Digitus 3 - 4
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx ungualis pedis dextri - Digitus 4 - 4
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx ungualis pedis sinistri - Digitus 1 - 3
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx ungualis pedis sinistri - Digitus 2 - 4
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx ungualis pedis sinistri - Digitus 3 - 4
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Membrum posterius|Phalanx ungualis pedis sinistri - Digitus 4 - 4
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Pelvis|Ischium sinistrum
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Truncus|Costa dorsalis dextra 1
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Truncus|Costa dorsalis dextra 6
+Kutular/Yığın_5/PF_Crate_12|Triceratops horridus|Truncus|Costa dorsalis sinistra 9
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cauda|Costa caudalis dextra 1
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cauda|Costa caudalis dextra 2
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cauda|Costa caudalis dextra 3
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cauda|Costa caudalis sinistra 1
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cauda|Costa caudalis sinistra 2
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cauda|Vertebra caudalis 1
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cauda|Vertebra caudalis 10
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cauda|Vertebra caudalis 11
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cauda|Vertebra caudalis 12
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cauda|Vertebra caudalis 2
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cauda|Vertebra caudalis 3
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cauda|Vertebra caudalis 7
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cauda|Vertebra caudalis 9
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cauda|Vertebrae caudales distales cum arcubus haemalibus
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cervix|Costa cervicalis dextra 1
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cervix|Costa cervicalis dextra 2
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cervix|Costa cervicalis dextra 3
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cervix|Costa cervicalis dextra 4
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cervix|Costa cervicalis dextra 5
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cervix|Costa cervicalis dextra 6
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cervix|Costa cervicalis sinistra 1
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cervix|Costa cervicalis sinistra 2
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cervix|Costa cervicalis sinistra 3
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cervix|Costa cervicalis sinistra 4
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cervix|Costa cervicalis sinistra 5
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cervix|Costa cervicalis sinistra 6
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cervix|Vertebra cervicalis 1
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cervix|Vertebra cervicalis 2
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cervix|Vertebra cervicalis 3
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cervix|Vertebra cervicalis 4
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cervix|Vertebra cervicalis 5
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Cervix|Vertebra cervicalis 6
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Membrum posterius|Femur sinistrum
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Membrum posterius|Tibia et fibula dextra
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Membrum posterius|Tibia et fibula sinistra
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Pelvis|Costa sacralis dextra 2
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Pelvis|Costa sacralis dextra 3
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Pelvis|Costa sacralis sinistra 2
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Pelvis|Costa sacralis sinistra 3
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Pelvis|Ossa pelvis ventralia
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Pelvis|Vertebra sacralis 1
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Pelvis|Vertebra sacralis 2
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Truncus|Costa dorsalis dextra 3
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Truncus|Costa dorsalis dextra 8
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Truncus|Costa dorsalis dextra 9
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Truncus|Costa dorsalis sinistra 7
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Truncus|Vertebra dorsalis 1
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Truncus|Vertebra dorsalis 2
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Truncus|Vertebra dorsalis 3
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Truncus|Vertebra dorsalis 5
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Truncus|Vertebra dorsalis 6
+Kutular/Yığın_5/PF_Crate_15|Pachycephalosaurus|Truncus|Vertebra dorsalis 9
+Kutular/Yığın_5/PF_Crate_15|Tyrannosaurus rex|Membrum anterius|Humerus sinister
+Kutular/Yığın_5/PF_Crate_15|Tyrannosaurus rex|Membrum posterius|Os metatarsale dextrum - Digitus 2
+Kutular/Yığın_5/PF_Crate_15|Tyrannosaurus rex|Membrum posterius|Os metatarsale sinistrum - Digitus 2
+Kutular/Yığın_5/PF_Crate_15|Tyrannosaurus rex|Membrum posterius|Tibia dextra
+Kutular/Yığın_5/PF_Crate_15|Tyrannosaurus rex|Pelvis|Sacrum
+Kutular/Yığın_5/PF_Crate_15|Tyrannosaurus rex|Truncus|Costa dorsalis dextra 7
+Kutular/Yığın_5/PF_Crate_15|Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 5
+Kutular/Yığın_5/PF_Crate_15|Tyrannosaurus rex|Truncus|Vertebra dorsalis 10
+Kutular/Yığın_5/PF_Crate_15|Tyrannosaurus rex|Truncus|Vertebra dorsalis 9
+Kutular/Yığın_5/PF_Crate_16|Parasaurolophus walkeri|Cauda|Arcus haemalis 22
+Kutular/Yığın_5/PF_Crate_16|Parasaurolophus walkeri|Cauda|Arcus haemalis 23
+Kutular/Yığın_5/PF_Crate_16|Parasaurolophus walkeri|Cauda|Arcus haemalis 25
+Kutular/Yığın_5/PF_Crate_16|Parasaurolophus walkeri|Cauda|Arcus haemalis 27
+Kutular/Yığın_5/PF_Crate_16|Parasaurolophus walkeri|Cauda|Vertebra caudalis 12
+Kutular/Yığın_5/PF_Crate_16|Parasaurolophus walkeri|Cranium|Mandibula
+Kutular/Yığın_5/PF_Crate_16|Parasaurolophus walkeri|Membrum anterius|Radius dexter
+Kutular/Yığın_5/PF_Crate_16|Parasaurolophus walkeri|Membrum anterius|Scapula sinistra
+Kutular/Yığın_5/PF_Crate_16|Parasaurolophus walkeri|Membrum posterius|Fibula sinistra
+Kutular/Yığın_5/PF_Crate_16|Parasaurolophus walkeri|Pelvis|Ilium et pubis dextrum
+Kutular/Yığın_5/PF_Crate_16|Parasaurolophus walkeri|Pelvis|Ischia
+Kutular/Yığın_5/PF_Crate_16|Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 4
+Kutular/Yığın_5/PF_Crate_16|Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 5
+Kutular/Yığın_5/PF_Crate_16|Parasaurolophus walkeri|Truncus|Vertebra dorsalis 4
+Kutular/Yığın_5/PF_Crate_16|Parasaurolophus walkeri|Truncus|Vertebra dorsalis 8
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 15
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 19
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 22
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 24
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 25
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 28
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 32
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 34
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 35
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 37
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 44
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 45
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 5
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 7
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 8
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 15
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 2
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 20
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 24
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 29
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 30
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 32
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 33
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 34
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 35
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 36
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 37
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 39
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 41
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 43
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 44
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 5
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 1
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 11
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 13
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 15
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 16
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 17
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 22
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 23
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 25
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 29
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 3
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 30
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 31
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 35
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 36
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 37
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 39
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 40
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 44
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 46
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 47
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 48
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 49
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 5
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 51
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 52
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cervix|Fragmentum articulationis craniocervicalis 1
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cervix|Vertebra cervicalis et costae cervicales 8
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cranium|Cranium
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Cranium|Mandibula
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Membrum anterius|Coracoideum dextrum
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Membrum anterius|Coracoideum sinistrum
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Membrum anterius|Humerus dexter
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Membrum anterius|Metacarpale sinistrum - Digitus 2
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Membrum anterius|Metacarpale sinistrum - Digitus 3
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Membrum anterius|Phalanx manus sinistra - Digitus 3 - 1
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Membrum anterius|Radius dexter
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Membrum anterius|Ulna dextra
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Membrum posterius|Femur dextrum
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Membrum posterius|Tibia sinistra
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Pelvis|Os pelvis dextrum
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Pelvis|Os pelvis sinistrum
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Pelvis|Processus spinosus 11
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Pelvis|Processus spinosus 12
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 1
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 10
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 11
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 2
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 6
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 8
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 9
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 8
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 2
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 4
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 5
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 6
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 8
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 1
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 13
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 2
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 3
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 4
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 6
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 9
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Processus spinosus 1
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Processus spinosus 2
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Processus spinosus 4
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Processus spinosus 5
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Processus spinosus 7
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 1
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 10
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 11
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 2
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 3
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 4
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 5
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 7
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 8
+Kutular/Yığın_5/PF_Crate_16|Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 9
+Kutular/Yığın_6/PF_Crate_17|Brachiosaurus altithorax|Cauda|Vertebra caudalis 1
+Kutular/Yığın_6/PF_Crate_17|Brachiosaurus altithorax|Cauda|Vertebra caudalis 12
+Kutular/Yığın_6/PF_Crate_17|Brachiosaurus altithorax|Cauda|Vertebra caudalis 2
+Kutular/Yığın_6/PF_Crate_17|Brachiosaurus altithorax|Membrum posterius|Femur dextrum
+Kutular/Yığın_6/PF_Crate_17|Brachiosaurus altithorax|Membrum posterius|Os metatarsale dextrum 2
+Kutular/Yığın_6/PF_Crate_17|Brachiosaurus altithorax|Membrum posterius|Os metatarsale sinistrum 4
+Kutular/Yığın_6/PF_Crate_17|Brachiosaurus altithorax|Truncus|Costa dorsalis dextra 6
+Kutular/Yığın_6/PF_Crate_17|Brachiosaurus altithorax|Truncus|Costa dorsalis sinistra 4
+Kutular/Yığın_6/PF_Crate_17|Brachiosaurus altithorax|Truncus|Costa dorsalis sinistra 8
+Kutular/Yığın_6/PF_Crate_17|Tyrannosaurus rex|Pelvis|Ilium sinistrum
+Kutular/Yığın_6/PF_Crate_17|Tyrannosaurus rex|Truncus|Costa dorsalis dextra 2
+Kutular/Yığın_6/PF_Crate_17|Tyrannosaurus rex|Truncus|Costa dorsalis dextra 3
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 14
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 15
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 16
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 18
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 20
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 21
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 23
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 15
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 18
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 19
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 20
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 23
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 26
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 7
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cervix|Atlas
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cervix|Axis
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cervix|Costa cervicalis dextra 2
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cervix|Costa cervicalis dextra 5
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cervix|Costa cervicalis sinistra 8
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cervix|Vertebra cervicalis 6
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cervix|Vertebra cervicalis 9
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Cranium|Mandibula
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale dextrum 1
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale dextrum 4
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale sinistrum 2
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale sinistrum 3
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale sinistrum 5
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare dextrum 9
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare sinistrum 9
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale sinistrum - Digitus 1
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Pelvis|Ischium sinistrum
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 1
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 12
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 13
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 14
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 2
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 5
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 6
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 13
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 15
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 3
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 4
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 7
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 8
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 1
+Kutular/Yığın_6/PF_Crate_18|Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 12
+Kutular/Yığın_6/PF_Crate_18|Tyrannosaurus rex|Cauda|Vertebra caudalis 1
+Kutular/Yığın_6/PF_Crate_18|Tyrannosaurus rex|Cauda|Vertebra caudalis 9
+Kutular/Yığın_6/PF_Crate_18|Tyrannosaurus rex|Cervix|Vertebra cervicalis 10
+Kutular/Yığın_6/PF_Crate_18|Tyrannosaurus rex|Cranium|Os jugale dextrum
+Kutular/Yığın_6/PF_Crate_18|Tyrannosaurus rex|Membrum anterius|Os coracoideum dextrum
+Kutular/Yığın_6/PF_Crate_18|Tyrannosaurus rex|Membrum posterius|Tibia sinistra
+Kutular/Yığın_6/PF_Crate_18|Tyrannosaurus rex|Pelvis|Ilium dextrum
+Kutular/Yığın_6/PF_Crate_18|Tyrannosaurus rex|Pelvis|Ischium dextrum
+Kutular/Yığın_6/PF_Crate_18|Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 1
+Kutular/Yığın_6/PF_Crate_18|Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 3
+Kutular/Yığın_6/PF_Crate_18|Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 7
+Kutular/Yığın_6/PF_Crate_18|Tyrannosaurus rex|Truncus|Vertebra dorsalis 5
+Kutular/Yığın_6/PF_Crate_18|Tyrannosaurus rex|Truncus|Vertebra dorsalis 7
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 1
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 13
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 16
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 17
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 3
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 4
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 6
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 8
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Cranium|Cranium
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale dextrum 5
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Integumentum|Osteoderma scapulare dextrum
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Membrum anterius|Humerus dexter
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Membrum anterius|Ulna sinistra
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Membrum posterius|Femur dextrum
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Membrum posterius|Femur sinistrum
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Pelvis|Pubis dextra
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Pelvis|Pubis sinistra
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Pelvis|Sacrum
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 10
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 11
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 9
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 10
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 9
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Truncus|Sternum et costae sternales dextra
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Truncus|Sternum et costae sternales sinistra
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 10
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 15
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 16
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 2
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 3
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 4
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 6
+Kutular/Yığın_6/PF_Crate_21|Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 9
+Kutular/Yığın_6/PF_Crate_21|Pachycephalosaurus|Cauda|Arcus haemalis 16
+Kutular/Yığın_6/PF_Crate_21|Pachycephalosaurus|Cauda|Vertebra caudalis 13
+Kutular/Yığın_6/PF_Crate_21|Pachycephalosaurus|Cauda|Vertebra caudalis 17
+Kutular/Yığın_6/PF_Crate_21|Pachycephalosaurus|Cauda|Vertebra caudalis 4
+Kutular/Yığın_6/PF_Crate_21|Pachycephalosaurus|Cauda|Vertebra caudalis 5
+Kutular/Yığın_6/PF_Crate_21|Pachycephalosaurus|Cranium|Cranium
+Kutular/Yığın_6/PF_Crate_21|Pachycephalosaurus|Cranium|Mandibula cum dentibus
+Kutular/Yığın_6/PF_Crate_21|Pachycephalosaurus|Membrum anterius|Ossa carpi et metacarpi sinistri
+Kutular/Yığın_6/PF_Crate_21|Pachycephalosaurus|Pelvis|Ilium dextrum
+Kutular/Yığın_6/PF_Crate_21|Pachycephalosaurus|Truncus|Costa dorsalis dextra 2
+Kutular/Yığın_6/PF_Crate_21|Pachycephalosaurus|Truncus|Costa dorsalis dextra 4
+Kutular/Yığın_6/PF_Crate_21|Pachycephalosaurus|Truncus|Costa dorsalis sinistra 2
+Kutular/Yığın_6/PF_Crate_21|Pachycephalosaurus|Truncus|Costa dorsalis sinistra 4
+Kutular/Yığın_6/PF_Crate_21|Pachycephalosaurus|Truncus|Costa dorsalis sinistra 9
+Kutular/Yığın_6/PF_Crate_21|Pachycephalosaurus|Truncus|Vertebra dorsalis 10
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 1
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Cauda|Arcus haemalis 13
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 10
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 21
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 24
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 28
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Cauda|Vertebrae caudales terminales et arcus haemales
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Cervix|Costa cervicalis dextra 9
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Cervix|Costa cervicalis sinistra 5
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Cervix|Costa cervicalis sinistra 9
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Cervix|Vertebra cervicalis 11
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Cervix|Vertebra cervicalis 3
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Cervix|Vertebra cervicalis 4
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Cervix|Vertebra cervicalis 5
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Cervix|Vertebra cervicalis 7
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Cervix|Vertebra cervicalis 8
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale dextrum 3
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare dextrum 1
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare dextrum 6
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare dextrum 8
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare sinistrum 1
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare sinistrum 5
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare sinistrum 7
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Membrum anterius|Humerus sinister
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Membrum posterius|Fibula sinistra
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Membrum posterius|Tibia sinistra
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Pelvis|Ilium dextrum
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Pelvis|Ischium dextrum
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 1
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 16
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 2
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 14
+Kutular/Yığın_7/PF_Crate_09|Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 7
+Kutular/Yığın_7/PF_Crate_09|Mammuthus primigenius|Cauda|Vertebra caudalis 18
+Kutular/Yığın_7/PF_Crate_09|Mammuthus primigenius|Truncus|Costa thoracica sinistra 11
+Kutular/Yığın_7/PF_Crate_09|Mammuthus primigenius|Truncus|Vertebra thoracica 1
+Kutular/Yığın_7/PF_Crate_14|Brachiosaurus altithorax|Cauda|Arcus haemalis 1
+Kutular/Yığın_7/PF_Crate_14|Brachiosaurus altithorax|Cauda|Arcus haemalis 14
+Kutular/Yığın_7/PF_Crate_14|Brachiosaurus altithorax|Cauda|Arcus haemalis 8
+Kutular/Yığın_7/PF_Crate_14|Brachiosaurus altithorax|Cauda|Vertebra caudalis 9
+Kutular/Yığın_7/PF_Crate_14|Brachiosaurus altithorax|Membrum posterius|Tibia dextra
+Kutular/Yığın_7/PF_Crate_14|Brachiosaurus altithorax|Membrum posterius|Tibia sinistra
+Kutular/Yığın_7/PF_Crate_14|Brachiosaurus altithorax|Truncus|Costa dorsalis dextra 7
+Kutular/Yığın_7/PF_Crate_14|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 26
+Kutular/Yığın_7/PF_Crate_14|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 3
+Kutular/Yığın_7/PF_Crate_14|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 2
+Kutular/Yığın_7/PF_Crate_14|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 33
+Kutular/Yığın_7/PF_Crate_14|Spinosaurus aegyptiacus|Membrum posterius|Fibula sinistra
+Kutular/Yığın_7/PF_Crate_14|Spinosaurus aegyptiacus|Pelvis|Vertebra pelvis 4
+Kutular/Yığın_7/PF_Crate_14|Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 6
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Cauda|Vertebra caudalis 1
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Cauda|Vertebra caudalis 12
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Cauda|Vertebra caudalis 13
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Cauda|Vertebra caudalis 14
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Cauda|Vertebra caudalis 15
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Cauda|Vertebra caudalis 16
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Cauda|Vertebra caudalis 5
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Cauda|Vertebra caudalis 6
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Cervix|Elementum intervertebrale cervicale 2
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Cervix|Elementum intervertebrale cervicale 3
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Cervix|Elementum intervertebrale cervicale 4
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Cervix|Elementum intervertebrale cervicale 6
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Cervix|Vertebra cervicalis 2
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Membrum anterius|Radius sinister
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Membrum posterius|Femur sinistrum
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Truncus|Costa thoracica dextra 3
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Truncus|Costa thoracica sinistra 3
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Truncus|Vertebra thoracica 12
+Kutular/Yığın_7/PF_Crate_19|Mammuthus primigenius|Truncus|Vertebra thoracica 6
+Kutular/Yığın_7/PF_Crate_19|Spinosaurus aegyptiacus|Membrum anterius|Scapula dextra
+Kutular/Yığın_7/PF_Crate_19|Spinosaurus aegyptiacus|Membrum anterius|Scapula sinistra
+Kutular/Yığın_7/PF_Crate_19|Spinosaurus aegyptiacus|Membrum posterius|Fibula dextra
+Kutular/Yığın_7/PF_Crate_19|Spinosaurus aegyptiacus|Pelvis|Ischium sinistrum
+Kutular/Yığın_7/PF_Crate_19|Spinosaurus aegyptiacus|Pelvis|Processus spinosus 10
+Kutular/Yığın_7/PF_Crate_19|Spinosaurus aegyptiacus|Pelvis|Vertebra pelvis 1
+Kutular/Yığın_7/PF_Crate_19|Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 7
+Kutular/Yığın_8/PF_Crate_20|Parasaurolophus walkeri|Cauda|Arcus haemalis 15
+Kutular/Yığın_8/PF_Crate_20|Parasaurolophus walkeri|Cauda|Vertebra caudalis 10
+Kutular/Yığın_8/PF_Crate_20|Parasaurolophus walkeri|Pelvis|Costa sacralis dextra 4
+Kutular/Yığın_8/PF_Crate_20|Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 5
+Kutular/Yığın_8/PF_Crate_20|Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 6
+Kutular/Yığın_8/PF_Crate_20|Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 7
+Kutular/Yığın_8/PF_Crate_20|Parasaurolophus walkeri|Truncus|Vertebra dorsalis 11
+Kutular/Yığın_8/PF_Crate_20|Parasaurolophus walkeri|Truncus|Vertebra dorsalis 7
+Kutular/Yığın_8/PF_Crate_20|Parasaurolophus walkeri|Truncus|Vertebra dorsalis 9
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Arcus haemalis 1
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Arcus haemalis 10
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Arcus haemalis 11
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Arcus haemalis 12
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Arcus haemalis 13
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Arcus haemalis 14
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Arcus haemalis 17
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Arcus haemalis 2
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Arcus haemalis 4
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Arcus haemalis 7
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Arcus haemalis 8
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Arcus haemalis 9
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 1
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 10
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 11
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 12
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 13
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 15
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 16
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 17
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 20
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 22
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 23
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 24
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 25
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 26
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 28
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 30
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 32
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 8
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cauda|Vertebra caudalis 9
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cervix|Costa cervicalis dextra 1
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cervix|Costa cervicalis dextra 2
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cervix|Costa cervicalis dextra 4
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cervix|Costa cervicalis sinistra 1
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cervix|Costa cervicalis sinistra 2
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cervix|Costa cervicalis sinistra 4
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cervix|Vertebra cervicalis 1
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cranium|Epijugale dextrum
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cranium|Epoccipitale 12
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cranium|Epoccipitale 16
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cranium|Epoccipitale 3
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cranium|Epoccipitale 6
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cranium|Epoccipitale 8
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cranium|Mandibula
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cranium|Ornamentum jugale dextrum
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Cranium|Ornamentum jugale sinistrum
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Membrum anterius|Radius dexter
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Membrum anterius|Ulna sinistra
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Membrum posterius|Femur sinistrum
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Membrum posterius|Fibula dextra
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Membrum posterius|Fibula sinistra
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Membrum posterius|Tibia sinistra
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Pelvis|Ischium dextrum
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Truncus|Costa dorsalis dextra 11
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Truncus|Costa dorsalis dextra 3
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Truncus|Costa dorsalis sinistra 1
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Truncus|Costa dorsalis sinistra 11
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Truncus|Costa dorsalis sinistra 2
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Truncus|Costa dorsalis sinistra 3
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Truncus|Costa dorsalis sinistra 7
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Truncus|Costa dorsalis sinistra 8
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Truncus|Vertebra dorsalis 10
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Truncus|Vertebra dorsalis 4
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Truncus|Vertebra dorsalis 6
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Truncus|Vertebra dorsalis 7
+Kutular/Yığın_8/PF_Crate_20|Triceratops horridus|Truncus|Vertebra dorsalis 8
+Kutular/Yığın_8/PF_Crate_22|Brachiosaurus altithorax|Cauda|Arcus haemalis 15
+Kutular/Yığın_8/PF_Crate_22|Brachiosaurus altithorax|Cauda|Arcus haemalis 2
+Kutular/Yığın_8/PF_Crate_22|Brachiosaurus altithorax|Cauda|Vertebra caudalis 19
+Kutular/Yığın_8/PF_Crate_22|Brachiosaurus altithorax|Cauda|Vertebra caudalis 3
+Kutular/Yığın_8/PF_Crate_22|Brachiosaurus altithorax|Cauda|Vertebrae caudales terminales
+Kutular/Yığın_8/PF_Crate_22|Brachiosaurus altithorax|Cervix|Vertebra cervicalis 6 cum costis
+Kutular/Yığın_8/PF_Crate_22|Brachiosaurus altithorax|Cervix|Vertebra cervicalis 9 cum costis
+Kutular/Yığın_8/PF_Crate_22|Brachiosaurus altithorax|Truncus|Vertebra dorsalis 5
+Kutular/Yığın_8/PF_Crate_22|Brachiosaurus altithorax|Truncus|Vertebra dorsalis 6
+Kutular/Yığın_8/PF_Crate_22|Brachiosaurus altithorax|Truncus|Vertebra dorsalis 8
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Cervix|Vertebra cervicodorsalis 3
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum anterius|Scapula dextra
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Os metatarsale dextrum - Digitus 1
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Os metatarsale sinistrum - Digitus 1
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 1 - 1
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 2 - 1
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 2 - 2
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 3 - 1
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 3 - 2
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 3 - 3
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 4 - 1
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 4 - 2
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 4 - 3
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 4 - 4
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 1 - 1
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 2 - 1
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 2 - 2
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 3 - 1
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 3 - 2
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 3 - 3
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 4 - 1
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 4 - 2
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 4 - 3
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 4 - 4
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 1 - 2
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 2 - 3
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 3 - 4
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 4 - 5
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 1 - 2
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 2 - 3
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 3 - 4
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 4 - 5
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Pelvis|Os pubis sinistrum
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 8
+Kutular/Yığın_8/PF_Crate_22|Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 9
+Kutular/Yığın_8/PF_Crate_24|Triceratops horridus|Cauda|Arcus haemalis 6
+Kutular/Yığın_8/PF_Crate_24|Triceratops horridus|Cauda|Vertebra caudalis 3
+Kutular/Yığın_8/PF_Crate_24|Triceratops horridus|Membrum anterius|Scapula sinistra
+Kutular/Yığın_8/PF_Crate_24|Triceratops horridus|Pelvis|Os pubis sinistrum
+Kutular/Yığın_8/PF_Crate_24|Triceratops horridus|Truncus|Costa dorsalis sinistra 10
+Kutular/Yığın_8/PF_Crate_24|Triceratops horridus|Truncus|Costa dorsalis sinistra 6
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Arcus haemalis 1
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Arcus haemalis 10
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Arcus haemalis 11
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Arcus haemalis 12
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Arcus haemalis 16
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Arcus haemalis 17
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Arcus haemalis 18
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Arcus haemalis 2
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Arcus haemalis 20
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Arcus haemalis 4
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Arcus haemalis 5
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Arcus haemalis 7
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Arcus haemalis 8
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 10
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 12
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 13
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 17
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 20
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 22
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 24
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 27
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 30
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 31
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 32
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 33
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 34
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 35
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 36
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 37
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 38
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 39
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 40
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 41
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 44
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 6
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cauda|Vertebra caudalis 8
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cervix|Costa cervicalis dextra 2
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cervix|Costa cervicalis dextra 3
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 2
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 3
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 4
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 8
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 9
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cervix|Costa cervicodorsalis dextra 1
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cervix|Costa cervicodorsalis dextra 2
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cervix|Costa cervicodorsalis sinistra 1
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cervix|Costa cervicodorsalis sinistra 2
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cervix|Vertebra cervicalis 1
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cervix|Vertebra cervicalis 2
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cervix|Vertebra cervicalis 3
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Cervix|Vertebra cervicodorsalis 1
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Membrum anterius|Os antebrachii dextrum 1
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Membrum anterius|Os antebrachii sinistrum 1
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Membrum anterius|Os antebrachii sinistrum 2
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Membrum anterius|Os coracoideum sinistrum
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Membrum anterius|Scapula sinistra
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Membrum posterius|Fibula sinistra
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Pelvis|Ischium sinistrum
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Pelvis|Os pubis dextrum
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Pelvis|Vertebra 13
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Truncus|Costa dorsalis dextra 1
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Truncus|Costa dorsalis dextra 10
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Truncus|Costa dorsalis dextra 9
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 10
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Truncus|Vertebra dorsalis 12
+Kutular/Yığın_8/PF_Crate_24|Tyrannosaurus rex|Truncus|Vertebra dorsalis 6
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 1
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 10
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 11
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 12
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 13
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 14
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 15
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 17
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 18
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 19
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 2
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 20
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 21
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 22
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 23
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 24
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 25
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 26
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 27
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 3
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 4
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 5
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 6
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 7
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 8
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Arcus haemalis 9
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Costa caudalis sinistra 3
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Vertebra caudalis 15
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Vertebra caudalis 16
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Vertebra caudalis 18
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Vertebra caudalis 19
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Vertebra caudalis 20
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Vertebra caudalis 21
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Vertebra caudalis 22
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Vertebra caudalis 23
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Vertebra caudalis 24
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Vertebra caudalis 25
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Vertebra caudalis 26
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Vertebra caudalis 27
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Vertebra caudalis 28
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Vertebra caudalis 29
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Cauda|Vertebra caudalis 30
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Membrum anterius|Humerus dexter
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Membrum anterius|Humerus sinister
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Membrum anterius|Ossa carpi et metacarpi dextri
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Membrum anterius|Ossa digiti manus sinistrae - Digitus 3
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Membrum anterius|Ossa digiti manus sinistrae - Digitus 4
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Membrum anterius|Radius dexter
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Membrum anterius|Radius sinister
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Membrum anterius|Scapula dextra et coracoideum dextrum
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Membrum anterius|Scapula sinistra et coracoideum sinistrum
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Membrum anterius|Ulna dextra
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Membrum anterius|Ulna sinistra
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Pelvis|Costa sacralis dextra 1
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Pelvis|Costa sacralis sinistra 1
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Truncus|Costa dorsalis dextra 1
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Truncus|Costa dorsalis dextra 10
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Truncus|Costa dorsalis dextra 11
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Truncus|Costa dorsalis dextra 5
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Truncus|Costa dorsalis sinistra 1
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Truncus|Costa dorsalis sinistra 10
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Truncus|Costa dorsalis sinistra 11
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Truncus|Os sternale dextrum
+Kutular/Yığın_8/PF_Crate_25|Pachycephalosaurus|Truncus|Os sternale sinistrum
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Arcus haemalis 15
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Arcus haemalis 16
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Arcus haemalis 18
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Arcus haemalis 20
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Arcus haemalis 3
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Arcus haemalis 5
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Vertebra caudalis 14
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Vertebra caudalis 18
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Vertebra caudalis 19
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Vertebra caudalis 2
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Vertebra caudalis 27
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Vertebra caudalis 29
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Vertebra caudalis 31
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Vertebra caudalis 33
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Vertebra caudalis 34
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Vertebra caudalis 4
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Vertebra caudalis 5
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Vertebra caudalis 6
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cauda|Vertebra caudalis 7
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cervix|Costa cervicalis sinistra 3
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cervix|Syncervicale
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cervix|Vertebra cervicalis 2
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cranium|Epijugale sinistrum
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cranium|Epoccipitale 1
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cranium|Epoccipitale 10
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cranium|Epoccipitale 11
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cranium|Epoccipitale 13
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cranium|Epoccipitale 14
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cranium|Epoccipitale 15
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cranium|Epoccipitale 17
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cranium|Epoccipitale 2
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cranium|Epoccipitale 4
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cranium|Epoccipitale 5
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cranium|Epoccipitale 7
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Cranium|Epoccipitale 9
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Membrum anterius|Humerus sinister
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Membrum anterius|Radius sinister
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Membrum anterius|Ulna dextra
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Membrum posterius|Femur dextrum
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Membrum posterius|Tibia dextra
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Pelvis|Os pubis dextrum
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Truncus|Costa dorsalis dextra 10
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Truncus|Costa dorsalis dextra 2
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Truncus|Costa dorsalis dextra 4
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Truncus|Costa dorsalis dextra 5
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Truncus|Costa dorsalis dextra 7
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Truncus|Costa dorsalis dextra 8
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Truncus|Costa dorsalis dextra 9
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Truncus|Vertebra dorsalis 1
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Truncus|Vertebra dorsalis 11
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Truncus|Vertebra dorsalis 2
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Truncus|Vertebra dorsalis 3
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Truncus|Vertebra dorsalis 5
+Kutular/Yığın_8/PF_Crate_25|Triceratops horridus|Truncus|Vertebra dorsalis 9
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cauda|Vertebra caudalis 10
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cauda|Vertebra caudalis 11
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cauda|Vertebra caudalis 17
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cauda|Vertebra caudalis 19
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cauda|Vertebra caudalis 2
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cauda|Vertebra caudalis 3
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cauda|Vertebra caudalis 4
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cauda|Vertebra caudalis 7
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cauda|Vertebra caudalis 8
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cauda|Vertebra caudalis 9
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cervix|Elementum intervertebrale cervicale 1
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cervix|Elementum intervertebrale cervicale 5
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cervix|Elementum intervertebrale cervicale 7
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cervix|Elementum intervertebrale cervicale 8
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cervix|Vertebra cervicalis 1
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cervix|Vertebra cervicalis 3
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cervix|Vertebra cervicalis 4
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cervix|Vertebra cervicalis 7
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Cranium|Apparatus hyoideus
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Membrum anterius|Humerus sinister
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Membrum anterius|Scapula dextra
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Membrum posterius|Fibula dextra
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Membrum posterius|Tibia dextra
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Truncus|Costa thoracica dextra 5
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Truncus|Costa thoracica dextra 7
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Truncus|Costa thoracica sinistra 10
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Truncus|Costa thoracica sinistra 2
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Truncus|Costa thoracica sinistra 4
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Truncus|Costa thoracica sinistra 9
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Truncus|Vertebra lumbalis 1
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Truncus|Vertebra lumbalis 2
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Truncus|Vertebra lumbalis 3
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Truncus|Vertebra thoracica 13
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Truncus|Vertebra thoracica 14
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Truncus|Vertebra thoracica 7
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Truncus|Vertebra thoracica 8
+Kutular/Yığın_8/PF_Crate_26|Mammuthus primigenius|Truncus|Vertebra thoracica 9
+Kutular/Yığın_8/PF_Crate_26|Triceratops horridus|Cauda|Arcus haemalis 19
+Kutular/Yığın_8/PF_Crate_26|Triceratops horridus|Cauda|Vertebra caudalis 21
+Kutular/Yığın_8/PF_Crate_26|Triceratops horridus|Cervix|Costa cervicalis dextra 3
+Kutular/Yığın_8/PF_Crate_26|Triceratops horridus|Membrum anterius|Humerus dexter
+Kutular/Yığın_8/PF_Crate_26|Triceratops horridus|Truncus|Costa dorsalis sinistra 4
+Kutular/Yığın_8/PF_Crate_26|Triceratops horridus|Truncus|Costa dorsalis sinistra 5
+Kutular/Yığın_8/PF_Crate_26|Triceratops horridus|Truncus|Os sternale dextrum
+Kutular/Yığın_8/PF_Crate_26|Triceratops horridus|Truncus|Os sternale sinistrum
+Kutular/Yığın_8/PF_Crate_27|Mammuthus primigenius|Cervix|Vertebra cervicalis 5
+Kutular/Yığın_8/PF_Crate_27|Mammuthus primigenius|Membrum anterius|Ulna dextra
+Kutular/Yığın_8/PF_Crate_27|Mammuthus primigenius|Membrum posterius|Femur dextrum
+Kutular/Yığın_8/PF_Crate_27|Mammuthus primigenius|Truncus|Costa thoracica dextra 14
+Kutular/Yığın_8/PF_Crate_27|Mammuthus primigenius|Truncus|Costa thoracica dextra 2
+Kutular/Yığın_8/PF_Crate_27|Mammuthus primigenius|Truncus|Costa thoracica dextra 9
+Kutular/Yığın_8/PF_Crate_27|Mammuthus primigenius|Truncus|Costa thoracica sinistra 12
+Kutular/Yığın_8/PF_Crate_27|Mammuthus primigenius|Truncus|Vertebra thoracica 5
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Arcus haemalis 13
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Arcus haemalis 14
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Arcus haemalis 15
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Arcus haemalis 19
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Arcus haemalis 21
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Arcus haemalis 23
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Arcus haemalis 24
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Arcus haemalis 25
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Arcus haemalis 3
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Arcus haemalis 6
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Arcus haemalis 9
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Vertebra caudalis 14
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Vertebra caudalis 18
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Vertebra caudalis 19
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Vertebra caudalis 2
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Vertebra caudalis 21
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Vertebra caudalis 25
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Vertebra caudalis 26
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Vertebra caudalis 28
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Vertebra caudalis 29
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Vertebra caudalis 43
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Vertebra caudalis 45
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cauda|Vertebra caudalis 7
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Costa cervicalis dextra 1
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Costa cervicalis dextra 10
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Costa cervicalis dextra 4
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Costa cervicalis dextra 5
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Costa cervicalis dextra 6
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Costa cervicalis dextra 7
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Costa cervicalis dextra 8
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Costa cervicalis dextra 9
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 1
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 10
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 5
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 6
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 7
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Costa cervicodorsalis dextra 3
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Costa cervicodorsalis sinistra 3
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Vertebra cervicalis 6
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Vertebra cervicalis 7
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Vertebra cervicalis 8
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cervix|Vertebra cervicalis 9
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cranium|Os jugale sinistrum
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cranium|Os mandibulae dextrum
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cranium|Os mandibulae sinistrum
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cranium|Os quadratojugale dextrum
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Cranium|Os surangulare sinistrum
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Membrum anterius|Os antebrachii dextrum 2
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Membrum posterius|Fibula dextra
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Membrum posterius|Os metatarsale sinistrum - Digitus 3
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Membrum posterius|Os metatarsale sinistrum - Digitus 4
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Truncus|Costa dorsalis dextra 11
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 11
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 6
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Truncus|Vertebra dorsalis 11
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Truncus|Vertebra dorsalis 3
+Kutular/Yığın_8/PF_Crate_27|Tyrannosaurus rex|Truncus|Vertebra dorsalis 8
+Kutular/Yığın_8/PF_Crate_28|Brachiosaurus altithorax|Cauda|Vertebra caudalis 18
+Kutular/Yığın_8/PF_Crate_28|Brachiosaurus altithorax|Cauda|Vertebra caudalis 4
+Kutular/Yığın_8/PF_Crate_28|Brachiosaurus altithorax|Cervix|Vertebra cervicalis 13 cum costis
+Kutular/Yığın_8/PF_Crate_28|Brachiosaurus altithorax|Cervix|Vertebra cervicalis 2 cum costis
+Kutular/Yığın_8/PF_Crate_28|Brachiosaurus altithorax|Cervix|Vertebra cervicalis 7 cum costis
+Kutular/Yığın_8/PF_Crate_28|Brachiosaurus altithorax|Truncus|Costa dorsalis dextra 4
+Kutular/Yığın_8/PF_Crate_28|Brachiosaurus altithorax|Truncus|Costa dorsalis sinistra 9
+Kutular/Yığın_8/PF_Crate_28|Brachiosaurus altithorax|Truncus|Vertebra dorsalis 2
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 1
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 10
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 12
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 13
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 14
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 16
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 17
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 18
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 2
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 20
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 21
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 23
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 26
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 27
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 29
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 3
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 30
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 31
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 33
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 36
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 38
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 39
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 4
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 40
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 41
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 42
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 43
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 46
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 47
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 6
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 1
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 10
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 14
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 16
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 17
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 18
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 19
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 21
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 22
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 23
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 25
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 27
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 28
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 31
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 38
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 4
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 40
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 42
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 45
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 46
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 47
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Processus spinosus 14
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 10
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 12
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 14
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 18
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 19
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 20
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 21
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 24
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 26
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 27
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 28
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 32
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 34
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 38
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 4
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 41
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 42
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 43
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 45
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 50
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 8
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 9
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cervix|Fragmentum articulationis craniocervicalis 2
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cervix|Vertebra cervicalis et costae cervicales 7
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cranium|Dens 3
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Cranium|Os cranii sinistrum
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Membrum anterius|Humerus sinister
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Membrum anterius|Metacarpale sinistrum - Digitus 1
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Membrum anterius|Radius sinister
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Membrum anterius|Ulna sinistra
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 1
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Pelvis|Processus spinosus 13
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Pelvis|Vertebra pelvis 2
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Pelvis|Vertebra pelvis 3
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 12
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 4
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 7
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 1
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 10
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 11
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 12
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 2
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 7
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 9
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 1
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 10
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 11
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 12
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 13
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 3
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 9
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 10
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 11
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 12
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 5
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 7
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 8
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Processus spinosus 3
+Kutular/Yığın_8/PF_Crate_28|Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 12

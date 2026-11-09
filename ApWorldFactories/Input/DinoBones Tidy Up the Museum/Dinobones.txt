@@ -1,0 +1,1940 @@
+Brachiosaurus altithorax|Cauda|Arcus haemalis 1
+Brachiosaurus altithorax|Cauda|Arcus haemalis 10
+Brachiosaurus altithorax|Cauda|Arcus haemalis 11
+Brachiosaurus altithorax|Cauda|Arcus haemalis 12
+Brachiosaurus altithorax|Cauda|Arcus haemalis 13
+Brachiosaurus altithorax|Cauda|Arcus haemalis 14
+Brachiosaurus altithorax|Cauda|Arcus haemalis 15
+Brachiosaurus altithorax|Cauda|Arcus haemalis 16
+Brachiosaurus altithorax|Cauda|Arcus haemalis 17
+Brachiosaurus altithorax|Cauda|Arcus haemalis 2
+Brachiosaurus altithorax|Cauda|Arcus haemalis 3
+Brachiosaurus altithorax|Cauda|Arcus haemalis 4
+Brachiosaurus altithorax|Cauda|Arcus haemalis 5
+Brachiosaurus altithorax|Cauda|Arcus haemalis 6
+Brachiosaurus altithorax|Cauda|Arcus haemalis 7
+Brachiosaurus altithorax|Cauda|Arcus haemalis 8
+Brachiosaurus altithorax|Cauda|Arcus haemalis 9
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 1
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 10
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 11
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 12
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 13
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 14
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 15
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 16
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 17
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 18
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 19
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 2
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 3
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 4
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 5
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 6
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 7
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 8
+Brachiosaurus altithorax|Cauda|Vertebra caudalis 9
+Brachiosaurus altithorax|Cauda|Vertebrae caudales terminales
+Brachiosaurus altithorax|Cervix|Vertebra cervicalis 1 cum costis
+Brachiosaurus altithorax|Cervix|Vertebra cervicalis 10 cum costis
+Brachiosaurus altithorax|Cervix|Vertebra cervicalis 11 cum costis
+Brachiosaurus altithorax|Cervix|Vertebra cervicalis 12 cum costis
+Brachiosaurus altithorax|Cervix|Vertebra cervicalis 13 cum costis
+Brachiosaurus altithorax|Cervix|Vertebra cervicalis 2 cum costis
+Brachiosaurus altithorax|Cervix|Vertebra cervicalis 3 cum costis
+Brachiosaurus altithorax|Cervix|Vertebra cervicalis 4 cum costis
+Brachiosaurus altithorax|Cervix|Vertebra cervicalis 5 cum costis
+Brachiosaurus altithorax|Cervix|Vertebra cervicalis 6 cum costis
+Brachiosaurus altithorax|Cervix|Vertebra cervicalis 7 cum costis
+Brachiosaurus altithorax|Cervix|Vertebra cervicalis 8 cum costis
+Brachiosaurus altithorax|Cervix|Vertebra cervicalis 9 cum costis
+Brachiosaurus altithorax|Cranium|Cranium
+Brachiosaurus altithorax|Cranium|Mandibula
+Brachiosaurus altithorax|Membrum anterius|Humerus dexter
+Brachiosaurus altithorax|Membrum anterius|Humerus sinister
+Brachiosaurus altithorax|Membrum anterius|Os carpi dextrum
+Brachiosaurus altithorax|Membrum anterius|Os carpi sinistrum
+Brachiosaurus altithorax|Membrum anterius|Os coracoideum dextrum
+Brachiosaurus altithorax|Membrum anterius|Os coracoideum sinistrum
+Brachiosaurus altithorax|Membrum anterius|Os metacarpale dextrum 1
+Brachiosaurus altithorax|Membrum anterius|Os metacarpale dextrum 2
+Brachiosaurus altithorax|Membrum anterius|Os metacarpale dextrum 3
+Brachiosaurus altithorax|Membrum anterius|Os metacarpale dextrum 4
+Brachiosaurus altithorax|Membrum anterius|Os metacarpale sinistrum 1
+Brachiosaurus altithorax|Membrum anterius|Os metacarpale sinistrum 2
+Brachiosaurus altithorax|Membrum anterius|Os metacarpale sinistrum 3
+Brachiosaurus altithorax|Membrum anterius|Os metacarpale sinistrum 4
+Brachiosaurus altithorax|Membrum anterius|Phalanx distalis manus dextrae - Digitus 1
+Brachiosaurus altithorax|Membrum anterius|Phalanx distalis manus dextrae - Digitus 2
+Brachiosaurus altithorax|Membrum anterius|Phalanx distalis manus dextrae - Digitus 3
+Brachiosaurus altithorax|Membrum anterius|Phalanx distalis manus dextrae - Digitus 4
+Brachiosaurus altithorax|Membrum anterius|Phalanx distalis manus sinistrae - Digitus 1
+Brachiosaurus altithorax|Membrum anterius|Phalanx distalis manus sinistrae - Digitus 2
+Brachiosaurus altithorax|Membrum anterius|Phalanx distalis manus sinistrae - Digitus 3
+Brachiosaurus altithorax|Membrum anterius|Phalanx distalis manus sinistrae - Digitus 4
+Brachiosaurus altithorax|Membrum anterius|Radius dexter
+Brachiosaurus altithorax|Membrum anterius|Radius sinister
+Brachiosaurus altithorax|Membrum anterius|Scapula dextra
+Brachiosaurus altithorax|Membrum anterius|Scapula sinistra
+Brachiosaurus altithorax|Membrum anterius|Ulna dextra
+Brachiosaurus altithorax|Membrum anterius|Ulna sinistra
+Brachiosaurus altithorax|Membrum posterius|Femur dextrum
+Brachiosaurus altithorax|Membrum posterius|Femur sinistrum
+Brachiosaurus altithorax|Membrum posterius|Fibula dextra
+Brachiosaurus altithorax|Membrum posterius|Fibula sinistra
+Brachiosaurus altithorax|Membrum posterius|Os metatarsale dextrum 1
+Brachiosaurus altithorax|Membrum posterius|Os metatarsale dextrum 2
+Brachiosaurus altithorax|Membrum posterius|Os metatarsale dextrum 3
+Brachiosaurus altithorax|Membrum posterius|Os metatarsale dextrum 4
+Brachiosaurus altithorax|Membrum posterius|Os metatarsale sinistrum 1
+Brachiosaurus altithorax|Membrum posterius|Os metatarsale sinistrum 2
+Brachiosaurus altithorax|Membrum posterius|Os metatarsale sinistrum 3
+Brachiosaurus altithorax|Membrum posterius|Os metatarsale sinistrum 4
+Brachiosaurus altithorax|Membrum posterius|Os tarsi dextrum
+Brachiosaurus altithorax|Membrum posterius|Os tarsi sinistrum
+Brachiosaurus altithorax|Membrum posterius|Phalanx distalis pedis dextri - Digitus 1
+Brachiosaurus altithorax|Membrum posterius|Phalanx distalis pedis dextri - Digitus 2
+Brachiosaurus altithorax|Membrum posterius|Phalanx distalis pedis dextri - Digitus 3
+Brachiosaurus altithorax|Membrum posterius|Phalanx distalis pedis dextri - Digitus 4
+Brachiosaurus altithorax|Membrum posterius|Phalanx distalis pedis sinistri - Digitus 1
+Brachiosaurus altithorax|Membrum posterius|Phalanx distalis pedis sinistri - Digitus 2
+Brachiosaurus altithorax|Membrum posterius|Phalanx distalis pedis sinistri - Digitus 3
+Brachiosaurus altithorax|Membrum posterius|Phalanx distalis pedis sinistri - Digitus 4
+Brachiosaurus altithorax|Membrum posterius|Tibia dextra
+Brachiosaurus altithorax|Membrum posterius|Tibia sinistra
+Brachiosaurus altithorax|Pelvis|Os coxae dextrum
+Brachiosaurus altithorax|Pelvis|Os coxae sinistrum
+Brachiosaurus altithorax|Pelvis|Sacrum
+Brachiosaurus altithorax|Truncus|Costa dorsalis dextra 1
+Brachiosaurus altithorax|Truncus|Costa dorsalis dextra 2
+Brachiosaurus altithorax|Truncus|Costa dorsalis dextra 3
+Brachiosaurus altithorax|Truncus|Costa dorsalis dextra 4
+Brachiosaurus altithorax|Truncus|Costa dorsalis dextra 5
+Brachiosaurus altithorax|Truncus|Costa dorsalis dextra 6
+Brachiosaurus altithorax|Truncus|Costa dorsalis dextra 7
+Brachiosaurus altithorax|Truncus|Costa dorsalis dextra 8
+Brachiosaurus altithorax|Truncus|Costa dorsalis dextra 9
+Brachiosaurus altithorax|Truncus|Costa dorsalis sinistra 1
+Brachiosaurus altithorax|Truncus|Costa dorsalis sinistra 2
+Brachiosaurus altithorax|Truncus|Costa dorsalis sinistra 3
+Brachiosaurus altithorax|Truncus|Costa dorsalis sinistra 4
+Brachiosaurus altithorax|Truncus|Costa dorsalis sinistra 5
+Brachiosaurus altithorax|Truncus|Costa dorsalis sinistra 6
+Brachiosaurus altithorax|Truncus|Costa dorsalis sinistra 7
+Brachiosaurus altithorax|Truncus|Costa dorsalis sinistra 8
+Brachiosaurus altithorax|Truncus|Costa dorsalis sinistra 9
+Brachiosaurus altithorax|Truncus|Os sternale dextrum
+Brachiosaurus altithorax|Truncus|Os sternale sinistrum
+Brachiosaurus altithorax|Truncus|Vertebra dorsalis 1
+Brachiosaurus altithorax|Truncus|Vertebra dorsalis 2
+Brachiosaurus altithorax|Truncus|Vertebra dorsalis 3
+Brachiosaurus altithorax|Truncus|Vertebra dorsalis 4
+Brachiosaurus altithorax|Truncus|Vertebra dorsalis 5
+Brachiosaurus altithorax|Truncus|Vertebra dorsalis 6
+Brachiosaurus altithorax|Truncus|Vertebra dorsalis 7
+Brachiosaurus altithorax|Truncus|Vertebra dorsalis 8
+Brachiosaurus altithorax|Truncus|Vertebra dorsalis 9
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 1
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 10
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 11
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 12
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 13
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 14
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 15
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 16
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 17
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 18
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 19
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 2
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 20
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 21
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 22
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 23
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 3
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 4
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 5
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 6
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 7
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 8
+Kentrosaurus aethiopicus|Cauda|Arcus haemalis 9
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 1
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 10
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 11
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 12
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 13
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 14
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 15
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 16
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 17
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 18
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 19
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 2
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 20
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 21
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 22
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 23
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 24
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 25
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 26
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 27
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 28
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 29
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 3
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 30
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 31
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 4
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 5
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 6
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 7
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 8
+Kentrosaurus aethiopicus|Cauda|Vertebra caudalis 9
+Kentrosaurus aethiopicus|Cauda|Vertebrae caudales terminales et arcus haemales
+Kentrosaurus aethiopicus|Cervix|Atlas
+Kentrosaurus aethiopicus|Cervix|Axis
+Kentrosaurus aethiopicus|Cervix|Costa cervicalis dextra 1
+Kentrosaurus aethiopicus|Cervix|Costa cervicalis dextra 2
+Kentrosaurus aethiopicus|Cervix|Costa cervicalis dextra 3
+Kentrosaurus aethiopicus|Cervix|Costa cervicalis dextra 4
+Kentrosaurus aethiopicus|Cervix|Costa cervicalis dextra 5
+Kentrosaurus aethiopicus|Cervix|Costa cervicalis dextra 6
+Kentrosaurus aethiopicus|Cervix|Costa cervicalis dextra 7
+Kentrosaurus aethiopicus|Cervix|Costa cervicalis dextra 8
+Kentrosaurus aethiopicus|Cervix|Costa cervicalis dextra 9
+Kentrosaurus aethiopicus|Cervix|Costa cervicalis sinistra 1
+Kentrosaurus aethiopicus|Cervix|Costa cervicalis sinistra 2
+Kentrosaurus aethiopicus|Cervix|Costa cervicalis sinistra 3
+Kentrosaurus aethiopicus|Cervix|Costa cervicalis sinistra 4
+Kentrosaurus aethiopicus|Cervix|Costa cervicalis sinistra 5
+Kentrosaurus aethiopicus|Cervix|Costa cervicalis sinistra 6
+Kentrosaurus aethiopicus|Cervix|Costa cervicalis sinistra 7
+Kentrosaurus aethiopicus|Cervix|Costa cervicalis sinistra 8
+Kentrosaurus aethiopicus|Cervix|Costa cervicalis sinistra 9
+Kentrosaurus aethiopicus|Cervix|Vertebra cervicalis 10
+Kentrosaurus aethiopicus|Cervix|Vertebra cervicalis 11
+Kentrosaurus aethiopicus|Cervix|Vertebra cervicalis 3
+Kentrosaurus aethiopicus|Cervix|Vertebra cervicalis 4
+Kentrosaurus aethiopicus|Cervix|Vertebra cervicalis 5
+Kentrosaurus aethiopicus|Cervix|Vertebra cervicalis 6
+Kentrosaurus aethiopicus|Cervix|Vertebra cervicalis 7
+Kentrosaurus aethiopicus|Cervix|Vertebra cervicalis 8
+Kentrosaurus aethiopicus|Cervix|Vertebra cervicalis 9
+Kentrosaurus aethiopicus|Cranium|Cranium
+Kentrosaurus aethiopicus|Cranium|Mandibula
+Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale dextrum 1
+Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale dextrum 2
+Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale dextrum 3
+Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale dextrum 4
+Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale dextrum 5
+Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale sinistrum 1
+Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale sinistrum 2
+Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale sinistrum 3
+Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale sinistrum 4
+Kentrosaurus aethiopicus|Integumentum|Osteoderma caudale sinistrum 5
+Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare dextrum 1
+Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare dextrum 2
+Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare dextrum 3
+Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare dextrum 4
+Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare dextrum 5
+Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare dextrum 6
+Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare dextrum 7
+Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare dextrum 8
+Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare dextrum 9
+Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare sinistrum 1
+Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare sinistrum 2
+Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare sinistrum 3
+Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare sinistrum 4
+Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare sinistrum 5
+Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare sinistrum 6
+Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare sinistrum 7
+Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare sinistrum 8
+Kentrosaurus aethiopicus|Integumentum|Osteoderma laminare sinistrum 9
+Kentrosaurus aethiopicus|Integumentum|Osteoderma scapulare dextrum
+Kentrosaurus aethiopicus|Integumentum|Osteoderma scapulare sinistrum
+Kentrosaurus aethiopicus|Membrum anterius|Humerus dexter
+Kentrosaurus aethiopicus|Membrum anterius|Humerus sinister
+Kentrosaurus aethiopicus|Membrum anterius|Os carpi dextrum 1
+Kentrosaurus aethiopicus|Membrum anterius|Os carpi dextrum 2
+Kentrosaurus aethiopicus|Membrum anterius|Os carpi sinistrum 1
+Kentrosaurus aethiopicus|Membrum anterius|Os carpi sinistrum 2
+Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale dextrum - Digitus 1
+Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale dextrum - Digitus 2
+Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale dextrum - Digitus 3
+Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale dextrum - Digitus 4
+Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale dextrum - Digitus 5
+Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale sinistrum - Digitus 1
+Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale sinistrum - Digitus 2
+Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale sinistrum - Digitus 3
+Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale sinistrum - Digitus 4
+Kentrosaurus aethiopicus|Membrum anterius|Os metacarpale sinistrum - Digitus 5
+Kentrosaurus aethiopicus|Membrum anterius|Phalanx distalis manus dextra - Digitus 2
+Kentrosaurus aethiopicus|Membrum anterius|Phalanx distalis manus dextra - Digitus 3
+Kentrosaurus aethiopicus|Membrum anterius|Phalanx distalis manus sinistra - Digitus 2
+Kentrosaurus aethiopicus|Membrum anterius|Phalanx distalis manus sinistra - Digitus 3
+Kentrosaurus aethiopicus|Membrum anterius|Phalanx manus dextra - Digitus 2 - 1
+Kentrosaurus aethiopicus|Membrum anterius|Phalanx manus dextra - Digitus 3 - 1
+Kentrosaurus aethiopicus|Membrum anterius|Phalanx manus dextra - Digitus 4
+Kentrosaurus aethiopicus|Membrum anterius|Phalanx manus sinistra - Digitus 2 - 1
+Kentrosaurus aethiopicus|Membrum anterius|Phalanx manus sinistra - Digitus 3 - 1
+Kentrosaurus aethiopicus|Membrum anterius|Phalanx manus sinistra - Digitus 4
+Kentrosaurus aethiopicus|Membrum anterius|Radius dexter
+Kentrosaurus aethiopicus|Membrum anterius|Radius sinister
+Kentrosaurus aethiopicus|Membrum anterius|Scapulocoracoideum dextrum
+Kentrosaurus aethiopicus|Membrum anterius|Scapulocoracoideum sinistrum
+Kentrosaurus aethiopicus|Membrum anterius|Ulna dextra
+Kentrosaurus aethiopicus|Membrum anterius|Ulna sinistra
+Kentrosaurus aethiopicus|Membrum posterius|Femur dextrum
+Kentrosaurus aethiopicus|Membrum posterius|Femur sinistrum
+Kentrosaurus aethiopicus|Membrum posterius|Fibula dextra
+Kentrosaurus aethiopicus|Membrum posterius|Fibula sinistra
+Kentrosaurus aethiopicus|Membrum posterius|Os metatarsale dextrum - Digitus 1
+Kentrosaurus aethiopicus|Membrum posterius|Os metatarsale dextrum - Digitus 2
+Kentrosaurus aethiopicus|Membrum posterius|Os metatarsale dextrum - Digitus 3
+Kentrosaurus aethiopicus|Membrum posterius|Os metatarsale sinistrum - Digitus 1
+Kentrosaurus aethiopicus|Membrum posterius|Os metatarsale sinistrum - Digitus 2
+Kentrosaurus aethiopicus|Membrum posterius|Os metatarsale sinistrum - Digitus 3
+Kentrosaurus aethiopicus|Membrum posterius|Os tarsi dextrum
+Kentrosaurus aethiopicus|Membrum posterius|Os tarsi sinistrum
+Kentrosaurus aethiopicus|Membrum posterius|Phalanx distalis pedis dextra - Digitus 1
+Kentrosaurus aethiopicus|Membrum posterius|Phalanx distalis pedis dextra - Digitus 2
+Kentrosaurus aethiopicus|Membrum posterius|Phalanx distalis pedis dextra - Digitus 3
+Kentrosaurus aethiopicus|Membrum posterius|Phalanx distalis pedis sinistra - Digitus 1
+Kentrosaurus aethiopicus|Membrum posterius|Phalanx distalis pedis sinistra - Digitus 2
+Kentrosaurus aethiopicus|Membrum posterius|Phalanx distalis pedis sinistra - Digitus 3
+Kentrosaurus aethiopicus|Membrum posterius|Phalanx pedis dextra - Digitus 1 - 1
+Kentrosaurus aethiopicus|Membrum posterius|Phalanx pedis dextra - Digitus 2 - 1
+Kentrosaurus aethiopicus|Membrum posterius|Phalanx pedis dextra - Digitus 3 - 1
+Kentrosaurus aethiopicus|Membrum posterius|Phalanx pedis sinistra - Digitus 1 - 1
+Kentrosaurus aethiopicus|Membrum posterius|Phalanx pedis sinistra - Digitus 2 - 1
+Kentrosaurus aethiopicus|Membrum posterius|Phalanx pedis sinistra - Digitus 3 - 1
+Kentrosaurus aethiopicus|Membrum posterius|Tibia dextra
+Kentrosaurus aethiopicus|Membrum posterius|Tibia sinistra
+Kentrosaurus aethiopicus|Pelvis|Ilium dextrum
+Kentrosaurus aethiopicus|Pelvis|Ilium sinistrum
+Kentrosaurus aethiopicus|Pelvis|Ischium dextrum
+Kentrosaurus aethiopicus|Pelvis|Ischium sinistrum
+Kentrosaurus aethiopicus|Pelvis|Pubis dextra
+Kentrosaurus aethiopicus|Pelvis|Pubis sinistra
+Kentrosaurus aethiopicus|Pelvis|Sacrum
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 1
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 10
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 11
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 12
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 13
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 14
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 15
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 16
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 2
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 3
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 4
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 5
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 6
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 7
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 8
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis dextra 9
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 1
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 10
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 11
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 12
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 13
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 14
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 15
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 16
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 2
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 3
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 4
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 5
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 6
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 7
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 8
+Kentrosaurus aethiopicus|Truncus|Costa dorsalis sinistra 9
+Kentrosaurus aethiopicus|Truncus|Sternum et costae sternales dextra
+Kentrosaurus aethiopicus|Truncus|Sternum et costae sternales sinistra
+Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 1
+Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 10
+Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 11
+Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 12
+Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 13
+Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 14
+Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 15
+Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 16
+Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 2
+Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 3
+Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 4
+Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 5
+Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 6
+Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 7
+Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 8
+Kentrosaurus aethiopicus|Truncus|Vertebra dorsalis 9
+Mammuthus primigenius|Cauda|Vertebra caudalis 1
+Mammuthus primigenius|Cauda|Vertebra caudalis 10
+Mammuthus primigenius|Cauda|Vertebra caudalis 11
+Mammuthus primigenius|Cauda|Vertebra caudalis 12
+Mammuthus primigenius|Cauda|Vertebra caudalis 13
+Mammuthus primigenius|Cauda|Vertebra caudalis 14
+Mammuthus primigenius|Cauda|Vertebra caudalis 15
+Mammuthus primigenius|Cauda|Vertebra caudalis 16
+Mammuthus primigenius|Cauda|Vertebra caudalis 17
+Mammuthus primigenius|Cauda|Vertebra caudalis 18
+Mammuthus primigenius|Cauda|Vertebra caudalis 19
+Mammuthus primigenius|Cauda|Vertebra caudalis 2
+Mammuthus primigenius|Cauda|Vertebra caudalis 3
+Mammuthus primigenius|Cauda|Vertebra caudalis 4
+Mammuthus primigenius|Cauda|Vertebra caudalis 5
+Mammuthus primigenius|Cauda|Vertebra caudalis 6
+Mammuthus primigenius|Cauda|Vertebra caudalis 7
+Mammuthus primigenius|Cauda|Vertebra caudalis 8
+Mammuthus primigenius|Cauda|Vertebra caudalis 9
+Mammuthus primigenius|Cervix|Elementum intervertebrale cervicale 1
+Mammuthus primigenius|Cervix|Elementum intervertebrale cervicale 2
+Mammuthus primigenius|Cervix|Elementum intervertebrale cervicale 3
+Mammuthus primigenius|Cervix|Elementum intervertebrale cervicale 4
+Mammuthus primigenius|Cervix|Elementum intervertebrale cervicale 5
+Mammuthus primigenius|Cervix|Elementum intervertebrale cervicale 6
+Mammuthus primigenius|Cervix|Elementum intervertebrale cervicale 7
+Mammuthus primigenius|Cervix|Elementum intervertebrale cervicale 8
+Mammuthus primigenius|Cervix|Vertebra cervicalis 1
+Mammuthus primigenius|Cervix|Vertebra cervicalis 2
+Mammuthus primigenius|Cervix|Vertebra cervicalis 3
+Mammuthus primigenius|Cervix|Vertebra cervicalis 4
+Mammuthus primigenius|Cervix|Vertebra cervicalis 5
+Mammuthus primigenius|Cervix|Vertebra cervicalis 6
+Mammuthus primigenius|Cervix|Vertebra cervicalis 7
+Mammuthus primigenius|Cranium|Apparatus hyoideus
+Mammuthus primigenius|Cranium|Cranium
+Mammuthus primigenius|Cranium|Dens incisivus dexter
+Mammuthus primigenius|Cranium|Dens incisivus sinister
+Mammuthus primigenius|Cranium|Dens molaris inferior dexter
+Mammuthus primigenius|Cranium|Dens molaris inferior sinister
+Mammuthus primigenius|Cranium|Dens molaris superior dexter
+Mammuthus primigenius|Cranium|Dens molaris superior sinister
+Mammuthus primigenius|Cranium|Mandibula
+Mammuthus primigenius|Membrum anterius|Humerus dexter
+Mammuthus primigenius|Membrum anterius|Humerus sinister
+Mammuthus primigenius|Membrum anterius|Os carpale dextrum 1
+Mammuthus primigenius|Membrum anterius|Os carpale dextrum 2
+Mammuthus primigenius|Membrum anterius|Os carpale dextrum 3
+Mammuthus primigenius|Membrum anterius|Os carpale dextrum 4
+Mammuthus primigenius|Membrum anterius|Os carpale dextrum 5
+Mammuthus primigenius|Membrum anterius|Os carpale dextrum 6
+Mammuthus primigenius|Membrum anterius|Os carpale dextrum 7
+Mammuthus primigenius|Membrum anterius|Os carpale sinistrum 1
+Mammuthus primigenius|Membrum anterius|Os carpale sinistrum 2
+Mammuthus primigenius|Membrum anterius|Os carpale sinistrum 3
+Mammuthus primigenius|Membrum anterius|Os carpale sinistrum 4
+Mammuthus primigenius|Membrum anterius|Os carpale sinistrum 5
+Mammuthus primigenius|Membrum anterius|Os carpale sinistrum 6
+Mammuthus primigenius|Membrum anterius|Os carpale sinistrum 7
+Mammuthus primigenius|Membrum anterius|Os metacarpale dextrum - Digitus 1
+Mammuthus primigenius|Membrum anterius|Os metacarpale dextrum - Digitus 2
+Mammuthus primigenius|Membrum anterius|Os metacarpale dextrum - Digitus 3
+Mammuthus primigenius|Membrum anterius|Os metacarpale dextrum - Digitus 4
+Mammuthus primigenius|Membrum anterius|Os metacarpale dextrum - Digitus 5
+Mammuthus primigenius|Membrum anterius|Os metacarpale sinistrum - Digitus 1
+Mammuthus primigenius|Membrum anterius|Os metacarpale sinistrum - Digitus 2
+Mammuthus primigenius|Membrum anterius|Os metacarpale sinistrum - Digitus 3
+Mammuthus primigenius|Membrum anterius|Os metacarpale sinistrum - Digitus 4
+Mammuthus primigenius|Membrum anterius|Os metacarpale sinistrum - Digitus 5
+Mammuthus primigenius|Membrum anterius|Phalanx manus dextra - Digitus 1
+Mammuthus primigenius|Membrum anterius|Phalanx manus dextra - Digitus 2 - 1
+Mammuthus primigenius|Membrum anterius|Phalanx manus dextra - Digitus 2 - 2
+Mammuthus primigenius|Membrum anterius|Phalanx manus dextra - Digitus 3 - 1
+Mammuthus primigenius|Membrum anterius|Phalanx manus dextra - Digitus 3 - 2
+Mammuthus primigenius|Membrum anterius|Phalanx manus dextra - Digitus 4 - 1
+Mammuthus primigenius|Membrum anterius|Phalanx manus dextra - Digitus 4 - 2
+Mammuthus primigenius|Membrum anterius|Phalanx manus dextra - Digitus 5 - 1
+Mammuthus primigenius|Membrum anterius|Phalanx manus dextra - Digitus 5 - 2
+Mammuthus primigenius|Membrum anterius|Phalanx manus sinistra - Digitus 1
+Mammuthus primigenius|Membrum anterius|Phalanx manus sinistra - Digitus 2 - 1
+Mammuthus primigenius|Membrum anterius|Phalanx manus sinistra - Digitus 2 - 2
+Mammuthus primigenius|Membrum anterius|Phalanx manus sinistra - Digitus 3 - 1
+Mammuthus primigenius|Membrum anterius|Phalanx manus sinistra - Digitus 3 - 2
+Mammuthus primigenius|Membrum anterius|Phalanx manus sinistra - Digitus 4 - 1
+Mammuthus primigenius|Membrum anterius|Phalanx manus sinistra - Digitus 4 - 2
+Mammuthus primigenius|Membrum anterius|Phalanx manus sinistra - Digitus 5 - 1
+Mammuthus primigenius|Membrum anterius|Phalanx manus sinistra - Digitus 5 - 2
+Mammuthus primigenius|Membrum anterius|Radius dexter
+Mammuthus primigenius|Membrum anterius|Radius sinister
+Mammuthus primigenius|Membrum anterius|Scapula dextra
+Mammuthus primigenius|Membrum anterius|Scapula sinistra
+Mammuthus primigenius|Membrum anterius|Ulna dextra
+Mammuthus primigenius|Membrum anterius|Ulna sinistra
+Mammuthus primigenius|Membrum posterius|Calcaneus dexter
+Mammuthus primigenius|Membrum posterius|Calcaneus sinister
+Mammuthus primigenius|Membrum posterius|Femur dextrum
+Mammuthus primigenius|Membrum posterius|Femur sinistrum
+Mammuthus primigenius|Membrum posterius|Fibula dextra
+Mammuthus primigenius|Membrum posterius|Fibula sinistra
+Mammuthus primigenius|Membrum posterius|Os metatarsale dextrum - Digitus 1
+Mammuthus primigenius|Membrum posterius|Os metatarsale dextrum - Digitus 2
+Mammuthus primigenius|Membrum posterius|Os metatarsale dextrum - Digitus 3
+Mammuthus primigenius|Membrum posterius|Os metatarsale dextrum - Digitus 4
+Mammuthus primigenius|Membrum posterius|Os metatarsale dextrum - Digitus 5
+Mammuthus primigenius|Membrum posterius|Os metatarsale sinistrum - Digitus 1
+Mammuthus primigenius|Membrum posterius|Os metatarsale sinistrum - Digitus 2
+Mammuthus primigenius|Membrum posterius|Os metatarsale sinistrum - Digitus 3
+Mammuthus primigenius|Membrum posterius|Os metatarsale sinistrum - Digitus 4
+Mammuthus primigenius|Membrum posterius|Os metatarsale sinistrum - Digitus 5
+Mammuthus primigenius|Membrum posterius|Os naviculare dextrum
+Mammuthus primigenius|Membrum posterius|Os naviculare sinistrum
+Mammuthus primigenius|Membrum posterius|Os tarsale dextrum 1
+Mammuthus primigenius|Membrum posterius|Os tarsale dextrum 2
+Mammuthus primigenius|Membrum posterius|Os tarsale dextrum 3
+Mammuthus primigenius|Membrum posterius|Os tarsale dextrum 4
+Mammuthus primigenius|Membrum posterius|Os tarsale sinistrum 1
+Mammuthus primigenius|Membrum posterius|Os tarsale sinistrum 2
+Mammuthus primigenius|Membrum posterius|Os tarsale sinistrum 3
+Mammuthus primigenius|Membrum posterius|Os tarsale sinistrum 4
+Mammuthus primigenius|Membrum posterius|Patella dextra
+Mammuthus primigenius|Membrum posterius|Patella sinistra
+Mammuthus primigenius|Membrum posterius|Phalanx pedis dextra - Digitus 1
+Mammuthus primigenius|Membrum posterius|Phalanx pedis dextra - Digitus 2 - 1
+Mammuthus primigenius|Membrum posterius|Phalanx pedis dextra - Digitus 2 - 2
+Mammuthus primigenius|Membrum posterius|Phalanx pedis dextra - Digitus 3 - 1
+Mammuthus primigenius|Membrum posterius|Phalanx pedis dextra - Digitus 3 - 2
+Mammuthus primigenius|Membrum posterius|Phalanx pedis dextra - Digitus 4 - 1
+Mammuthus primigenius|Membrum posterius|Phalanx pedis dextra - Digitus 4 - 2
+Mammuthus primigenius|Membrum posterius|Phalanx pedis dextra - Digitus 5 - 1
+Mammuthus primigenius|Membrum posterius|Phalanx pedis dextra - Digitus 5 - 2
+Mammuthus primigenius|Membrum posterius|Phalanx pedis sinistra - Digitus 1
+Mammuthus primigenius|Membrum posterius|Phalanx pedis sinistra - Digitus 2 - 1
+Mammuthus primigenius|Membrum posterius|Phalanx pedis sinistra - Digitus 2 - 2
+Mammuthus primigenius|Membrum posterius|Phalanx pedis sinistra - Digitus 3 - 1
+Mammuthus primigenius|Membrum posterius|Phalanx pedis sinistra - Digitus 3 - 2
+Mammuthus primigenius|Membrum posterius|Phalanx pedis sinistra - Digitus 4 - 1
+Mammuthus primigenius|Membrum posterius|Phalanx pedis sinistra - Digitus 4 - 2
+Mammuthus primigenius|Membrum posterius|Phalanx pedis sinistra - Digitus 5 - 1
+Mammuthus primigenius|Membrum posterius|Phalanx pedis sinistra - Digitus 5 - 2
+Mammuthus primigenius|Membrum posterius|Talus dexter
+Mammuthus primigenius|Membrum posterius|Talus sinister
+Mammuthus primigenius|Membrum posterius|Tibia dextra
+Mammuthus primigenius|Membrum posterius|Tibia sinistra
+Mammuthus primigenius|Pelvis|Ossa coxae
+Mammuthus primigenius|Pelvis|Sacrum
+Mammuthus primigenius|Truncus|Costa thoracica dextra 1
+Mammuthus primigenius|Truncus|Costa thoracica dextra 10
+Mammuthus primigenius|Truncus|Costa thoracica dextra 11
+Mammuthus primigenius|Truncus|Costa thoracica dextra 12
+Mammuthus primigenius|Truncus|Costa thoracica dextra 13
+Mammuthus primigenius|Truncus|Costa thoracica dextra 14
+Mammuthus primigenius|Truncus|Costa thoracica dextra 2
+Mammuthus primigenius|Truncus|Costa thoracica dextra 3
+Mammuthus primigenius|Truncus|Costa thoracica dextra 4
+Mammuthus primigenius|Truncus|Costa thoracica dextra 5
+Mammuthus primigenius|Truncus|Costa thoracica dextra 6
+Mammuthus primigenius|Truncus|Costa thoracica dextra 7
+Mammuthus primigenius|Truncus|Costa thoracica dextra 8
+Mammuthus primigenius|Truncus|Costa thoracica dextra 9
+Mammuthus primigenius|Truncus|Costa thoracica sinistra 1
+Mammuthus primigenius|Truncus|Costa thoracica sinistra 10
+Mammuthus primigenius|Truncus|Costa thoracica sinistra 11
+Mammuthus primigenius|Truncus|Costa thoracica sinistra 12
+Mammuthus primigenius|Truncus|Costa thoracica sinistra 13
+Mammuthus primigenius|Truncus|Costa thoracica sinistra 14
+Mammuthus primigenius|Truncus|Costa thoracica sinistra 2
+Mammuthus primigenius|Truncus|Costa thoracica sinistra 3
+Mammuthus primigenius|Truncus|Costa thoracica sinistra 4
+Mammuthus primigenius|Truncus|Costa thoracica sinistra 5
+Mammuthus primigenius|Truncus|Costa thoracica sinistra 6
+Mammuthus primigenius|Truncus|Costa thoracica sinistra 7
+Mammuthus primigenius|Truncus|Costa thoracica sinistra 8
+Mammuthus primigenius|Truncus|Costa thoracica sinistra 9
+Mammuthus primigenius|Truncus|Vertebra lumbalis 1
+Mammuthus primigenius|Truncus|Vertebra lumbalis 2
+Mammuthus primigenius|Truncus|Vertebra lumbalis 3
+Mammuthus primigenius|Truncus|Vertebra lumbalis 4
+Mammuthus primigenius|Truncus|Vertebra thoracica 1
+Mammuthus primigenius|Truncus|Vertebra thoracica 10
+Mammuthus primigenius|Truncus|Vertebra thoracica 11
+Mammuthus primigenius|Truncus|Vertebra thoracica 12
+Mammuthus primigenius|Truncus|Vertebra thoracica 13
+Mammuthus primigenius|Truncus|Vertebra thoracica 14
+Mammuthus primigenius|Truncus|Vertebra thoracica 2
+Mammuthus primigenius|Truncus|Vertebra thoracica 3
+Mammuthus primigenius|Truncus|Vertebra thoracica 4
+Mammuthus primigenius|Truncus|Vertebra thoracica 5
+Mammuthus primigenius|Truncus|Vertebra thoracica 6
+Mammuthus primigenius|Truncus|Vertebra thoracica 7
+Mammuthus primigenius|Truncus|Vertebra thoracica 8
+Mammuthus primigenius|Truncus|Vertebra thoracica 9
+Pachycephalosaurus|Cauda|Arcus haemalis 1
+Pachycephalosaurus|Cauda|Arcus haemalis 10
+Pachycephalosaurus|Cauda|Arcus haemalis 11
+Pachycephalosaurus|Cauda|Arcus haemalis 12
+Pachycephalosaurus|Cauda|Arcus haemalis 13
+Pachycephalosaurus|Cauda|Arcus haemalis 14
+Pachycephalosaurus|Cauda|Arcus haemalis 15
+Pachycephalosaurus|Cauda|Arcus haemalis 16
+Pachycephalosaurus|Cauda|Arcus haemalis 17
+Pachycephalosaurus|Cauda|Arcus haemalis 18
+Pachycephalosaurus|Cauda|Arcus haemalis 19
+Pachycephalosaurus|Cauda|Arcus haemalis 2
+Pachycephalosaurus|Cauda|Arcus haemalis 20
+Pachycephalosaurus|Cauda|Arcus haemalis 21
+Pachycephalosaurus|Cauda|Arcus haemalis 22
+Pachycephalosaurus|Cauda|Arcus haemalis 23
+Pachycephalosaurus|Cauda|Arcus haemalis 24
+Pachycephalosaurus|Cauda|Arcus haemalis 25
+Pachycephalosaurus|Cauda|Arcus haemalis 26
+Pachycephalosaurus|Cauda|Arcus haemalis 27
+Pachycephalosaurus|Cauda|Arcus haemalis 3
+Pachycephalosaurus|Cauda|Arcus haemalis 4
+Pachycephalosaurus|Cauda|Arcus haemalis 5
+Pachycephalosaurus|Cauda|Arcus haemalis 6
+Pachycephalosaurus|Cauda|Arcus haemalis 7
+Pachycephalosaurus|Cauda|Arcus haemalis 8
+Pachycephalosaurus|Cauda|Arcus haemalis 9
+Pachycephalosaurus|Cauda|Costa caudalis dextra 1
+Pachycephalosaurus|Cauda|Costa caudalis dextra 2
+Pachycephalosaurus|Cauda|Costa caudalis dextra 3
+Pachycephalosaurus|Cauda|Costa caudalis sinistra 1
+Pachycephalosaurus|Cauda|Costa caudalis sinistra 2
+Pachycephalosaurus|Cauda|Costa caudalis sinistra 3
+Pachycephalosaurus|Cauda|Vertebra caudalis 1
+Pachycephalosaurus|Cauda|Vertebra caudalis 10
+Pachycephalosaurus|Cauda|Vertebra caudalis 11
+Pachycephalosaurus|Cauda|Vertebra caudalis 12
+Pachycephalosaurus|Cauda|Vertebra caudalis 13
+Pachycephalosaurus|Cauda|Vertebra caudalis 14
+Pachycephalosaurus|Cauda|Vertebra caudalis 15
+Pachycephalosaurus|Cauda|Vertebra caudalis 16
+Pachycephalosaurus|Cauda|Vertebra caudalis 17
+Pachycephalosaurus|Cauda|Vertebra caudalis 18
+Pachycephalosaurus|Cauda|Vertebra caudalis 19
+Pachycephalosaurus|Cauda|Vertebra caudalis 2
+Pachycephalosaurus|Cauda|Vertebra caudalis 20
+Pachycephalosaurus|Cauda|Vertebra caudalis 21
+Pachycephalosaurus|Cauda|Vertebra caudalis 22
+Pachycephalosaurus|Cauda|Vertebra caudalis 23
+Pachycephalosaurus|Cauda|Vertebra caudalis 24
+Pachycephalosaurus|Cauda|Vertebra caudalis 25
+Pachycephalosaurus|Cauda|Vertebra caudalis 26
+Pachycephalosaurus|Cauda|Vertebra caudalis 27
+Pachycephalosaurus|Cauda|Vertebra caudalis 28
+Pachycephalosaurus|Cauda|Vertebra caudalis 29
+Pachycephalosaurus|Cauda|Vertebra caudalis 3
+Pachycephalosaurus|Cauda|Vertebra caudalis 30
+Pachycephalosaurus|Cauda|Vertebra caudalis 4
+Pachycephalosaurus|Cauda|Vertebra caudalis 5
+Pachycephalosaurus|Cauda|Vertebra caudalis 6
+Pachycephalosaurus|Cauda|Vertebra caudalis 7
+Pachycephalosaurus|Cauda|Vertebra caudalis 8
+Pachycephalosaurus|Cauda|Vertebra caudalis 9
+Pachycephalosaurus|Cauda|Vertebrae caudales distales cum arcubus haemalibus
+Pachycephalosaurus|Cervix|Costa cervicalis dextra 1
+Pachycephalosaurus|Cervix|Costa cervicalis dextra 2
+Pachycephalosaurus|Cervix|Costa cervicalis dextra 3
+Pachycephalosaurus|Cervix|Costa cervicalis dextra 4
+Pachycephalosaurus|Cervix|Costa cervicalis dextra 5
+Pachycephalosaurus|Cervix|Costa cervicalis dextra 6
+Pachycephalosaurus|Cervix|Costa cervicalis sinistra 1
+Pachycephalosaurus|Cervix|Costa cervicalis sinistra 2
+Pachycephalosaurus|Cervix|Costa cervicalis sinistra 3
+Pachycephalosaurus|Cervix|Costa cervicalis sinistra 4
+Pachycephalosaurus|Cervix|Costa cervicalis sinistra 5
+Pachycephalosaurus|Cervix|Costa cervicalis sinistra 6
+Pachycephalosaurus|Cervix|Vertebra cervicalis 1
+Pachycephalosaurus|Cervix|Vertebra cervicalis 2
+Pachycephalosaurus|Cervix|Vertebra cervicalis 3
+Pachycephalosaurus|Cervix|Vertebra cervicalis 4
+Pachycephalosaurus|Cervix|Vertebra cervicalis 5
+Pachycephalosaurus|Cervix|Vertebra cervicalis 6
+Pachycephalosaurus|Cranium|Cranium
+Pachycephalosaurus|Cranium|Mandibula cum dentibus
+Pachycephalosaurus|Membrum anterius|Humerus dexter
+Pachycephalosaurus|Membrum anterius|Humerus sinister
+Pachycephalosaurus|Membrum anterius|Ossa carpi et metacarpi dextri
+Pachycephalosaurus|Membrum anterius|Ossa carpi et metacarpi sinistri
+Pachycephalosaurus|Membrum anterius|Ossa digiti manus dextrae - Digitus 1
+Pachycephalosaurus|Membrum anterius|Ossa digiti manus dextrae - Digitus 2
+Pachycephalosaurus|Membrum anterius|Ossa digiti manus dextrae - Digitus 3
+Pachycephalosaurus|Membrum anterius|Ossa digiti manus dextrae - Digitus 4
+Pachycephalosaurus|Membrum anterius|Ossa digiti manus dextrae - Digitus 5
+Pachycephalosaurus|Membrum anterius|Ossa digiti manus sinistrae - Digitus 1
+Pachycephalosaurus|Membrum anterius|Ossa digiti manus sinistrae - Digitus 2
+Pachycephalosaurus|Membrum anterius|Ossa digiti manus sinistrae - Digitus 3
+Pachycephalosaurus|Membrum anterius|Ossa digiti manus sinistrae - Digitus 4
+Pachycephalosaurus|Membrum anterius|Ossa digiti manus sinistrae - Digitus 5
+Pachycephalosaurus|Membrum anterius|Radius dexter
+Pachycephalosaurus|Membrum anterius|Radius sinister
+Pachycephalosaurus|Membrum anterius|Scapula dextra et coracoideum dextrum
+Pachycephalosaurus|Membrum anterius|Scapula sinistra et coracoideum sinistrum
+Pachycephalosaurus|Membrum anterius|Ulna dextra
+Pachycephalosaurus|Membrum anterius|Ulna sinistra
+Pachycephalosaurus|Membrum posterius|Femur dextrum
+Pachycephalosaurus|Membrum posterius|Femur sinistrum
+Pachycephalosaurus|Membrum posterius|Ossa digiti pedis dextri - Digitus 1
+Pachycephalosaurus|Membrum posterius|Ossa digiti pedis dextri - Digitus 2
+Pachycephalosaurus|Membrum posterius|Ossa digiti pedis dextri - Digitus 3
+Pachycephalosaurus|Membrum posterius|Ossa digiti pedis dextri - Digitus 4
+Pachycephalosaurus|Membrum posterius|Ossa digiti pedis sinistri - Digitus 1
+Pachycephalosaurus|Membrum posterius|Ossa digiti pedis sinistri - Digitus 2
+Pachycephalosaurus|Membrum posterius|Ossa digiti pedis sinistri - Digitus 3
+Pachycephalosaurus|Membrum posterius|Ossa digiti pedis sinistri - Digitus 4
+Pachycephalosaurus|Membrum posterius|Ossa tarsi et metatarsi dextri
+Pachycephalosaurus|Membrum posterius|Ossa tarsi et metatarsi sinistri
+Pachycephalosaurus|Membrum posterius|Tibia et fibula dextra
+Pachycephalosaurus|Membrum posterius|Tibia et fibula sinistra
+Pachycephalosaurus|Pelvis|Costa sacralis dextra 1
+Pachycephalosaurus|Pelvis|Costa sacralis dextra 2
+Pachycephalosaurus|Pelvis|Costa sacralis dextra 3
+Pachycephalosaurus|Pelvis|Costa sacralis sinistra 1
+Pachycephalosaurus|Pelvis|Costa sacralis sinistra 2
+Pachycephalosaurus|Pelvis|Costa sacralis sinistra 3
+Pachycephalosaurus|Pelvis|Ilium dextrum
+Pachycephalosaurus|Pelvis|Ilium sinistrum
+Pachycephalosaurus|Pelvis|Ossa pelvis ventralia
+Pachycephalosaurus|Pelvis|Vertebra sacralis 1
+Pachycephalosaurus|Pelvis|Vertebra sacralis 2
+Pachycephalosaurus|Pelvis|Vertebra sacralis 3
+Pachycephalosaurus|Truncus|Costa dorsalis dextra 1
+Pachycephalosaurus|Truncus|Costa dorsalis dextra 10
+Pachycephalosaurus|Truncus|Costa dorsalis dextra 11
+Pachycephalosaurus|Truncus|Costa dorsalis dextra 2
+Pachycephalosaurus|Truncus|Costa dorsalis dextra 3
+Pachycephalosaurus|Truncus|Costa dorsalis dextra 4
+Pachycephalosaurus|Truncus|Costa dorsalis dextra 5
+Pachycephalosaurus|Truncus|Costa dorsalis dextra 6
+Pachycephalosaurus|Truncus|Costa dorsalis dextra 7
+Pachycephalosaurus|Truncus|Costa dorsalis dextra 8
+Pachycephalosaurus|Truncus|Costa dorsalis dextra 9
+Pachycephalosaurus|Truncus|Costa dorsalis sinistra 1
+Pachycephalosaurus|Truncus|Costa dorsalis sinistra 10
+Pachycephalosaurus|Truncus|Costa dorsalis sinistra 11
+Pachycephalosaurus|Truncus|Costa dorsalis sinistra 2
+Pachycephalosaurus|Truncus|Costa dorsalis sinistra 3
+Pachycephalosaurus|Truncus|Costa dorsalis sinistra 4
+Pachycephalosaurus|Truncus|Costa dorsalis sinistra 5
+Pachycephalosaurus|Truncus|Costa dorsalis sinistra 6
+Pachycephalosaurus|Truncus|Costa dorsalis sinistra 7
+Pachycephalosaurus|Truncus|Costa dorsalis sinistra 8
+Pachycephalosaurus|Truncus|Costa dorsalis sinistra 9
+Pachycephalosaurus|Truncus|Os sternale dextrum
+Pachycephalosaurus|Truncus|Os sternale sinistrum
+Pachycephalosaurus|Truncus|Vertebra dorsalis 1
+Pachycephalosaurus|Truncus|Vertebra dorsalis 10
+Pachycephalosaurus|Truncus|Vertebra dorsalis 11
+Pachycephalosaurus|Truncus|Vertebra dorsalis 2
+Pachycephalosaurus|Truncus|Vertebra dorsalis 3
+Pachycephalosaurus|Truncus|Vertebra dorsalis 4
+Pachycephalosaurus|Truncus|Vertebra dorsalis 5
+Pachycephalosaurus|Truncus|Vertebra dorsalis 6
+Pachycephalosaurus|Truncus|Vertebra dorsalis 7
+Pachycephalosaurus|Truncus|Vertebra dorsalis 8
+Pachycephalosaurus|Truncus|Vertebra dorsalis 9
+Parasaurolophus walkeri|Cauda|Arcus haemalis 1
+Parasaurolophus walkeri|Cauda|Arcus haemalis 10
+Parasaurolophus walkeri|Cauda|Arcus haemalis 11
+Parasaurolophus walkeri|Cauda|Arcus haemalis 12
+Parasaurolophus walkeri|Cauda|Arcus haemalis 13
+Parasaurolophus walkeri|Cauda|Arcus haemalis 14
+Parasaurolophus walkeri|Cauda|Arcus haemalis 15
+Parasaurolophus walkeri|Cauda|Arcus haemalis 16
+Parasaurolophus walkeri|Cauda|Arcus haemalis 17
+Parasaurolophus walkeri|Cauda|Arcus haemalis 18
+Parasaurolophus walkeri|Cauda|Arcus haemalis 19
+Parasaurolophus walkeri|Cauda|Arcus haemalis 2
+Parasaurolophus walkeri|Cauda|Arcus haemalis 20
+Parasaurolophus walkeri|Cauda|Arcus haemalis 21
+Parasaurolophus walkeri|Cauda|Arcus haemalis 22
+Parasaurolophus walkeri|Cauda|Arcus haemalis 23
+Parasaurolophus walkeri|Cauda|Arcus haemalis 24
+Parasaurolophus walkeri|Cauda|Arcus haemalis 25
+Parasaurolophus walkeri|Cauda|Arcus haemalis 26
+Parasaurolophus walkeri|Cauda|Arcus haemalis 27
+Parasaurolophus walkeri|Cauda|Arcus haemalis 28
+Parasaurolophus walkeri|Cauda|Arcus haemalis 3
+Parasaurolophus walkeri|Cauda|Arcus haemalis 4
+Parasaurolophus walkeri|Cauda|Arcus haemalis 5
+Parasaurolophus walkeri|Cauda|Arcus haemalis 6
+Parasaurolophus walkeri|Cauda|Arcus haemalis 7
+Parasaurolophus walkeri|Cauda|Arcus haemalis 8
+Parasaurolophus walkeri|Cauda|Arcus haemalis 9
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 1
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 10
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 11
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 12
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 13
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 14
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 15
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 16
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 17
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 18
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 19
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 2
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 20
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 21
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 22
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 23
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 24
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 25
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 26
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 27
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 28
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 29
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 3
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 30
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 31
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 32
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 4
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 5
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 6
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 7
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 8
+Parasaurolophus walkeri|Cauda|Vertebra caudalis 9
+Parasaurolophus walkeri|Cauda|Vertebrae caudales terminales
+Parasaurolophus walkeri|Cervix|Vertebra cervicalis 1
+Parasaurolophus walkeri|Cervix|Vertebra cervicalis 2
+Parasaurolophus walkeri|Cervix|Vertebra cervicalis 3
+Parasaurolophus walkeri|Cervix|Vertebra cervicalis 4
+Parasaurolophus walkeri|Cervix|Vertebra cervicalis 5
+Parasaurolophus walkeri|Cervix|Vertebra cervicalis 6
+Parasaurolophus walkeri|Cervix|Vertebra cervicalis 7
+Parasaurolophus walkeri|Cervix|Vertebra cervicalis 8
+Parasaurolophus walkeri|Cranium|Cranium
+Parasaurolophus walkeri|Cranium|Mandibula
+Parasaurolophus walkeri|Cranium|Pars occipitalis cranii
+Parasaurolophus walkeri|Membrum anterius|Coracoideum dextrum
+Parasaurolophus walkeri|Membrum anterius|Coracoideum sinistrum
+Parasaurolophus walkeri|Membrum anterius|Humerus dexter
+Parasaurolophus walkeri|Membrum anterius|Humerus sinister
+Parasaurolophus walkeri|Membrum anterius|Os metacarpale dextrum - Digitus 1
+Parasaurolophus walkeri|Membrum anterius|Os metacarpale dextrum - Digitus 2
+Parasaurolophus walkeri|Membrum anterius|Os metacarpale dextrum - Digitus 3
+Parasaurolophus walkeri|Membrum anterius|Os metacarpale sinistrum - Digitus 1
+Parasaurolophus walkeri|Membrum anterius|Os metacarpale sinistrum - Digitus 2
+Parasaurolophus walkeri|Membrum anterius|Os metacarpale sinistrum - Digitus 3
+Parasaurolophus walkeri|Membrum anterius|Ossa digiti manus dextrae - Digitus 4
+Parasaurolophus walkeri|Membrum anterius|Ossa digiti manus sinistrae - Digitus 4
+Parasaurolophus walkeri|Membrum anterius|Phalanx manus dextra - Digitus 1 - 1
+Parasaurolophus walkeri|Membrum anterius|Phalanx manus dextra - Digitus 2 - 1
+Parasaurolophus walkeri|Membrum anterius|Phalanx manus sinistra - Digitus 1 - 1
+Parasaurolophus walkeri|Membrum anterius|Phalanx manus sinistra - Digitus 2 - 1
+Parasaurolophus walkeri|Membrum anterius|Phalanx ungualis manus dextra - Digitus 1 - 2
+Parasaurolophus walkeri|Membrum anterius|Phalanx ungualis manus dextra - Digitus 2 - 2
+Parasaurolophus walkeri|Membrum anterius|Phalanx ungualis manus dextra - Digitus 3
+Parasaurolophus walkeri|Membrum anterius|Phalanx ungualis manus sinistra - Digitus 1 - 2
+Parasaurolophus walkeri|Membrum anterius|Phalanx ungualis manus sinistra - Digitus 2 - 2
+Parasaurolophus walkeri|Membrum anterius|Phalanx ungualis manus sinistra - Digitus 3
+Parasaurolophus walkeri|Membrum anterius|Radius dexter
+Parasaurolophus walkeri|Membrum anterius|Radius sinister
+Parasaurolophus walkeri|Membrum anterius|Scapula dextra
+Parasaurolophus walkeri|Membrum anterius|Scapula sinistra
+Parasaurolophus walkeri|Membrum anterius|Ulna dextra
+Parasaurolophus walkeri|Membrum anterius|Ulna sinistra
+Parasaurolophus walkeri|Membrum posterius|Femur dextrum
+Parasaurolophus walkeri|Membrum posterius|Femur sinistrum
+Parasaurolophus walkeri|Membrum posterius|Fibula dextra
+Parasaurolophus walkeri|Membrum posterius|Fibula sinistra
+Parasaurolophus walkeri|Membrum posterius|Os metatarsale dextrum - Digitus 1
+Parasaurolophus walkeri|Membrum posterius|Os metatarsale dextrum - Digitus 2
+Parasaurolophus walkeri|Membrum posterius|Os metatarsale dextrum - Digitus 3
+Parasaurolophus walkeri|Membrum posterius|Os metatarsale sinistrum - Digitus 1
+Parasaurolophus walkeri|Membrum posterius|Os metatarsale sinistrum - Digitus 2
+Parasaurolophus walkeri|Membrum posterius|Os metatarsale sinistrum - Digitus 3
+Parasaurolophus walkeri|Membrum posterius|Phalanx pedis dextra - Digitus 1 - 1
+Parasaurolophus walkeri|Membrum posterius|Phalanx pedis dextra - Digitus 2 - 1
+Parasaurolophus walkeri|Membrum posterius|Phalanx pedis dextra - Digitus 3 - 1
+Parasaurolophus walkeri|Membrum posterius|Phalanx pedis sinistra - Digitus 1 - 1
+Parasaurolophus walkeri|Membrum posterius|Phalanx pedis sinistra - Digitus 2 - 1
+Parasaurolophus walkeri|Membrum posterius|Phalanx pedis sinistra - Digitus 3 - 1
+Parasaurolophus walkeri|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 1 - 2
+Parasaurolophus walkeri|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 2 - 2
+Parasaurolophus walkeri|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 3 - 2
+Parasaurolophus walkeri|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 1 - 2
+Parasaurolophus walkeri|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 2 - 2
+Parasaurolophus walkeri|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 3 - 2
+Parasaurolophus walkeri|Membrum posterius|Tibia dextra
+Parasaurolophus walkeri|Membrum posterius|Tibia sinistra
+Parasaurolophus walkeri|Pelvis|Costa sacralis dextra 1
+Parasaurolophus walkeri|Pelvis|Costa sacralis dextra 2
+Parasaurolophus walkeri|Pelvis|Costa sacralis dextra 3
+Parasaurolophus walkeri|Pelvis|Costa sacralis dextra 4
+Parasaurolophus walkeri|Pelvis|Costa sacralis sinistra 1
+Parasaurolophus walkeri|Pelvis|Costa sacralis sinistra 2
+Parasaurolophus walkeri|Pelvis|Costa sacralis sinistra 3
+Parasaurolophus walkeri|Pelvis|Costa sacralis sinistra 4
+Parasaurolophus walkeri|Pelvis|Ilium et pubis dextrum
+Parasaurolophus walkeri|Pelvis|Ilium et pubis sinistrum
+Parasaurolophus walkeri|Pelvis|Ischia
+Parasaurolophus walkeri|Pelvis|Vertebra dorsosacralis 1
+Parasaurolophus walkeri|Pelvis|Vertebra dorsosacralis 2
+Parasaurolophus walkeri|Pelvis|Vertebra sacralis 1
+Parasaurolophus walkeri|Pelvis|Vertebra sacralis 2
+Parasaurolophus walkeri|Pelvis|Vertebra sacralis 3
+Parasaurolophus walkeri|Pelvis|Vertebra sacralis 4
+Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 1
+Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 10
+Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 11
+Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 12
+Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 2
+Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 3
+Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 4
+Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 5
+Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 6
+Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 7
+Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 8
+Parasaurolophus walkeri|Truncus|Costa dorsalis dextra 9
+Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 1
+Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 10
+Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 11
+Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 12
+Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 2
+Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 3
+Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 4
+Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 5
+Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 6
+Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 7
+Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 8
+Parasaurolophus walkeri|Truncus|Costa dorsalis sinistra 9
+Parasaurolophus walkeri|Truncus|Elementum sternale medianum
+Parasaurolophus walkeri|Truncus|Os sternale dextrum
+Parasaurolophus walkeri|Truncus|Os sternale sinistrum
+Parasaurolophus walkeri|Truncus|Vertebra dorsalis 1
+Parasaurolophus walkeri|Truncus|Vertebra dorsalis 10
+Parasaurolophus walkeri|Truncus|Vertebra dorsalis 11
+Parasaurolophus walkeri|Truncus|Vertebra dorsalis 12
+Parasaurolophus walkeri|Truncus|Vertebra dorsalis 2
+Parasaurolophus walkeri|Truncus|Vertebra dorsalis 3
+Parasaurolophus walkeri|Truncus|Vertebra dorsalis 4
+Parasaurolophus walkeri|Truncus|Vertebra dorsalis 5
+Parasaurolophus walkeri|Truncus|Vertebra dorsalis 6
+Parasaurolophus walkeri|Truncus|Vertebra dorsalis 7
+Parasaurolophus walkeri|Truncus|Vertebra dorsalis 8
+Parasaurolophus walkeri|Truncus|Vertebra dorsalis 9
+Pteranodon longiceps|Cauda|Vertebrae caudales
+Pteranodon longiceps|Cervix|Vertebra cervicalis 1
+Pteranodon longiceps|Cervix|Vertebra cervicalis 2
+Pteranodon longiceps|Cervix|Vertebra cervicalis 3
+Pteranodon longiceps|Cervix|Vertebra cervicalis 4
+Pteranodon longiceps|Cervix|Vertebra cervicalis 5
+Pteranodon longiceps|Cervix|Vertebra cervicalis 6
+Pteranodon longiceps|Cervix|Vertebra cervicalis 7
+Pteranodon longiceps|Cranium|Cranium
+Pteranodon longiceps|Cranium|Mandibula
+Pteranodon longiceps|Membrum anterius|Crista deltopectoralis humeri dextri
+Pteranodon longiceps|Membrum anterius|Crista deltopectoralis humeri sinistri
+Pteranodon longiceps|Membrum anterius|Humerus dexter
+Pteranodon longiceps|Membrum anterius|Humerus sinister
+Pteranodon longiceps|Membrum anterius|Metacarpale dextrum - Digitus 4
+Pteranodon longiceps|Membrum anterius|Metacarpale sinistrum - Digitus 4
+Pteranodon longiceps|Membrum anterius|Os coracoideum dextrum
+Pteranodon longiceps|Membrum anterius|Os coracoideum sinistrum
+Pteranodon longiceps|Membrum anterius|Os pteroideum dextrum
+Pteranodon longiceps|Membrum anterius|Os pteroideum sinistrum
+Pteranodon longiceps|Membrum anterius|Phalanges manus dextrae - Digitus 1
+Pteranodon longiceps|Membrum anterius|Phalanges manus dextrae - Digitus 2
+Pteranodon longiceps|Membrum anterius|Phalanges manus dextrae - Digitus 3
+Pteranodon longiceps|Membrum anterius|Phalanges manus sinistrae - Digitus 1
+Pteranodon longiceps|Membrum anterius|Phalanges manus sinistrae - Digitus 2
+Pteranodon longiceps|Membrum anterius|Phalanges manus sinistrae - Digitus 3
+Pteranodon longiceps|Membrum anterius|Phalanx manus dextra - Digitus 4 - 1
+Pteranodon longiceps|Membrum anterius|Phalanx manus dextra - Digitus 4 - 2
+Pteranodon longiceps|Membrum anterius|Phalanx manus dextra - Digitus 4 - 3
+Pteranodon longiceps|Membrum anterius|Phalanx manus dextra - Digitus 4 - 4
+Pteranodon longiceps|Membrum anterius|Phalanx manus sinistra - Digitus 4 - 1
+Pteranodon longiceps|Membrum anterius|Phalanx manus sinistra - Digitus 4 - 2
+Pteranodon longiceps|Membrum anterius|Phalanx manus sinistra - Digitus 4 - 3
+Pteranodon longiceps|Membrum anterius|Phalanx manus sinistra - Digitus 4 - 4
+Pteranodon longiceps|Membrum anterius|Radius dexter
+Pteranodon longiceps|Membrum anterius|Radius sinister
+Pteranodon longiceps|Membrum anterius|Scapula dextra
+Pteranodon longiceps|Membrum anterius|Scapula sinistra
+Pteranodon longiceps|Membrum anterius|Ulna dextra
+Pteranodon longiceps|Membrum anterius|Ulna sinistra
+Pteranodon longiceps|Membrum posterius|Femur dextrum
+Pteranodon longiceps|Membrum posterius|Femur sinistrum
+Pteranodon longiceps|Membrum posterius|Ossa pedis dextri
+Pteranodon longiceps|Membrum posterius|Ossa pedis sinistri
+Pteranodon longiceps|Membrum posterius|Tibia dextra
+Pteranodon longiceps|Membrum posterius|Tibia sinistra
+Pteranodon longiceps|Pelvis|Costae sacrales dextrae
+Pteranodon longiceps|Pelvis|Costae sacrales sinistrae
+Pteranodon longiceps|Pelvis|Ossa pelvis
+Pteranodon longiceps|Pelvis|Vertebra sacralis 1
+Pteranodon longiceps|Pelvis|Vertebra sacralis 2
+Pteranodon longiceps|Pelvis|Vertebra sacralis 3
+Pteranodon longiceps|Pelvis|Vertebra sacralis 4
+Pteranodon longiceps|Truncus|Costa dextra 1
+Pteranodon longiceps|Truncus|Costa dextra 2
+Pteranodon longiceps|Truncus|Costa dextra 3
+Pteranodon longiceps|Truncus|Costa dextra 4
+Pteranodon longiceps|Truncus|Costa dextra 5
+Pteranodon longiceps|Truncus|Costa dextra 6
+Pteranodon longiceps|Truncus|Costa dextra 7
+Pteranodon longiceps|Truncus|Costa dextra 8
+Pteranodon longiceps|Truncus|Costa dextra 9
+Pteranodon longiceps|Truncus|Costa sinistra 1
+Pteranodon longiceps|Truncus|Costa sinistra 2
+Pteranodon longiceps|Truncus|Costa sinistra 3
+Pteranodon longiceps|Truncus|Costa sinistra 4
+Pteranodon longiceps|Truncus|Costa sinistra 5
+Pteranodon longiceps|Truncus|Costa sinistra 6
+Pteranodon longiceps|Truncus|Costa sinistra 7
+Pteranodon longiceps|Truncus|Costa sinistra 8
+Pteranodon longiceps|Truncus|Costa sinistra 9
+Pteranodon longiceps|Truncus|Lamina supraneuralis notarii
+Pteranodon longiceps|Truncus|Sternum
+Pteranodon longiceps|Truncus|Vertebra dorsalis 1
+Pteranodon longiceps|Truncus|Vertebra dorsalis 2
+Pteranodon longiceps|Truncus|Vertebra dorsalis 3
+Pteranodon longiceps|Truncus|Vertebra dorsalis 4
+Pteranodon longiceps|Truncus|Vertebra dorsalis 5
+Pteranodon longiceps|Truncus|Vertebra dorsalis 6
+Pteranodon longiceps|Truncus|Vertebra dorsalis 7
+Pteranodon longiceps|Truncus|Vertebra dorsalis 8
+Pteranodon longiceps|Truncus|Vertebra dorsalis 9
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 1
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 10
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 11
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 12
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 13
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 14
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 15
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 16
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 17
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 18
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 19
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 2
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 20
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 21
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 22
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 23
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 24
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 25
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 26
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 27
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 28
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 29
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 3
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 30
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 31
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 32
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 33
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 34
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 35
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 36
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 37
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 38
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 39
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 4
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 40
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 41
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 42
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 43
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 44
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 45
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 46
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 47
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 5
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 6
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 7
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 8
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis dextra 9
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 1
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 10
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 11
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 12
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 13
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 14
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 15
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 16
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 17
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 18
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 19
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 2
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 20
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 21
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 22
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 23
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 24
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 25
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 26
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 27
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 28
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 29
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 3
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 30
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 31
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 32
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 33
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 34
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 35
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 36
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 37
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 38
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 39
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 4
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 40
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 41
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 42
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 43
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 44
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 45
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 46
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 47
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 5
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 6
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 7
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 8
+Spinosaurus aegyptiacus|Cauda|Pars arcus haemalis sinistra 9
+Spinosaurus aegyptiacus|Cauda|Processus spinosus 14
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 1
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 10
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 11
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 12
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 13
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 14
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 15
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 16
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 17
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 18
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 19
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 2
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 20
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 21
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 22
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 23
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 24
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 25
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 26
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 27
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 28
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 29
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 3
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 30
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 31
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 32
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 33
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 34
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 35
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 36
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 37
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 38
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 39
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 4
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 40
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 41
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 42
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 43
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 44
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 45
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 46
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 47
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 48
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 49
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 5
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 50
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 51
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 52
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 53
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 6
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 7
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 8
+Spinosaurus aegyptiacus|Cauda|Vertebra caudalis 9
+Spinosaurus aegyptiacus|Cervix|Fragmentum articulationis craniocervicalis 1
+Spinosaurus aegyptiacus|Cervix|Fragmentum articulationis craniocervicalis 2
+Spinosaurus aegyptiacus|Cervix|Vertebra cervicalis et costae cervicales 1
+Spinosaurus aegyptiacus|Cervix|Vertebra cervicalis et costae cervicales 2
+Spinosaurus aegyptiacus|Cervix|Vertebra cervicalis et costae cervicales 3
+Spinosaurus aegyptiacus|Cervix|Vertebra cervicalis et costae cervicales 4
+Spinosaurus aegyptiacus|Cervix|Vertebra cervicalis et costae cervicales 5
+Spinosaurus aegyptiacus|Cervix|Vertebra cervicalis et costae cervicales 6
+Spinosaurus aegyptiacus|Cervix|Vertebra cervicalis et costae cervicales 7
+Spinosaurus aegyptiacus|Cervix|Vertebra cervicalis et costae cervicales 8
+Spinosaurus aegyptiacus|Cranium|Cranium
+Spinosaurus aegyptiacus|Cranium|Dens 1
+Spinosaurus aegyptiacus|Cranium|Dens 10
+Spinosaurus aegyptiacus|Cranium|Dens 11
+Spinosaurus aegyptiacus|Cranium|Dens 12
+Spinosaurus aegyptiacus|Cranium|Dens 13
+Spinosaurus aegyptiacus|Cranium|Dens 14
+Spinosaurus aegyptiacus|Cranium|Dens 15
+Spinosaurus aegyptiacus|Cranium|Dens 16
+Spinosaurus aegyptiacus|Cranium|Dens 17
+Spinosaurus aegyptiacus|Cranium|Dens 18
+Spinosaurus aegyptiacus|Cranium|Dens 19
+Spinosaurus aegyptiacus|Cranium|Dens 2
+Spinosaurus aegyptiacus|Cranium|Dens 20
+Spinosaurus aegyptiacus|Cranium|Dens 21
+Spinosaurus aegyptiacus|Cranium|Dens 22
+Spinosaurus aegyptiacus|Cranium|Dens 23
+Spinosaurus aegyptiacus|Cranium|Dens 24
+Spinosaurus aegyptiacus|Cranium|Dens 25
+Spinosaurus aegyptiacus|Cranium|Dens 26
+Spinosaurus aegyptiacus|Cranium|Dens 27
+Spinosaurus aegyptiacus|Cranium|Dens 28
+Spinosaurus aegyptiacus|Cranium|Dens 29
+Spinosaurus aegyptiacus|Cranium|Dens 3
+Spinosaurus aegyptiacus|Cranium|Dens 30
+Spinosaurus aegyptiacus|Cranium|Dens 31
+Spinosaurus aegyptiacus|Cranium|Dens 32
+Spinosaurus aegyptiacus|Cranium|Dens 33
+Spinosaurus aegyptiacus|Cranium|Dens 34
+Spinosaurus aegyptiacus|Cranium|Dens 35
+Spinosaurus aegyptiacus|Cranium|Dens 36
+Spinosaurus aegyptiacus|Cranium|Dens 37
+Spinosaurus aegyptiacus|Cranium|Dens 38
+Spinosaurus aegyptiacus|Cranium|Dens 39
+Spinosaurus aegyptiacus|Cranium|Dens 4
+Spinosaurus aegyptiacus|Cranium|Dens 40
+Spinosaurus aegyptiacus|Cranium|Dens 41
+Spinosaurus aegyptiacus|Cranium|Dens 42
+Spinosaurus aegyptiacus|Cranium|Dens 43
+Spinosaurus aegyptiacus|Cranium|Dens 44
+Spinosaurus aegyptiacus|Cranium|Dens 45
+Spinosaurus aegyptiacus|Cranium|Dens 46
+Spinosaurus aegyptiacus|Cranium|Dens 47
+Spinosaurus aegyptiacus|Cranium|Dens 48
+Spinosaurus aegyptiacus|Cranium|Dens 49
+Spinosaurus aegyptiacus|Cranium|Dens 5
+Spinosaurus aegyptiacus|Cranium|Dens 50
+Spinosaurus aegyptiacus|Cranium|Dens 51
+Spinosaurus aegyptiacus|Cranium|Dens 52
+Spinosaurus aegyptiacus|Cranium|Dens 53
+Spinosaurus aegyptiacus|Cranium|Dens 54
+Spinosaurus aegyptiacus|Cranium|Dens 55
+Spinosaurus aegyptiacus|Cranium|Dens 56
+Spinosaurus aegyptiacus|Cranium|Dens 57
+Spinosaurus aegyptiacus|Cranium|Dens 58
+Spinosaurus aegyptiacus|Cranium|Dens 59
+Spinosaurus aegyptiacus|Cranium|Dens 6
+Spinosaurus aegyptiacus|Cranium|Dens 60
+Spinosaurus aegyptiacus|Cranium|Dens 61
+Spinosaurus aegyptiacus|Cranium|Dens 62
+Spinosaurus aegyptiacus|Cranium|Dens 63
+Spinosaurus aegyptiacus|Cranium|Dens 64
+Spinosaurus aegyptiacus|Cranium|Dens 65
+Spinosaurus aegyptiacus|Cranium|Dens 66
+Spinosaurus aegyptiacus|Cranium|Dens 67
+Spinosaurus aegyptiacus|Cranium|Dens 68
+Spinosaurus aegyptiacus|Cranium|Dens 7
+Spinosaurus aegyptiacus|Cranium|Dens 8
+Spinosaurus aegyptiacus|Cranium|Dens 9
+Spinosaurus aegyptiacus|Cranium|Mandibula
+Spinosaurus aegyptiacus|Cranium|Os cranii dextrum
+Spinosaurus aegyptiacus|Cranium|Os cranii sinistrum
+Spinosaurus aegyptiacus|Membrum anterius|Coracoideum dextrum
+Spinosaurus aegyptiacus|Membrum anterius|Coracoideum sinistrum
+Spinosaurus aegyptiacus|Membrum anterius|Humerus dexter
+Spinosaurus aegyptiacus|Membrum anterius|Humerus sinister
+Spinosaurus aegyptiacus|Membrum anterius|Metacarpale dextrum - Digitus 1
+Spinosaurus aegyptiacus|Membrum anterius|Metacarpale dextrum - Digitus 2
+Spinosaurus aegyptiacus|Membrum anterius|Metacarpale dextrum - Digitus 3
+Spinosaurus aegyptiacus|Membrum anterius|Metacarpale sinistrum - Digitus 1
+Spinosaurus aegyptiacus|Membrum anterius|Metacarpale sinistrum - Digitus 2
+Spinosaurus aegyptiacus|Membrum anterius|Metacarpale sinistrum - Digitus 3
+Spinosaurus aegyptiacus|Membrum anterius|Os carpi dextrum 1
+Spinosaurus aegyptiacus|Membrum anterius|Os carpi dextrum 2
+Spinosaurus aegyptiacus|Membrum anterius|Os carpi sinistrum 1
+Spinosaurus aegyptiacus|Membrum anterius|Os carpi sinistrum 2
+Spinosaurus aegyptiacus|Membrum anterius|Phalanx manus dextra - Digitus 1 - 1
+Spinosaurus aegyptiacus|Membrum anterius|Phalanx manus dextra - Digitus 2 - 1
+Spinosaurus aegyptiacus|Membrum anterius|Phalanx manus dextra - Digitus 3 - 1
+Spinosaurus aegyptiacus|Membrum anterius|Phalanx manus sinistra - Digitus 1 - 1
+Spinosaurus aegyptiacus|Membrum anterius|Phalanx manus sinistra - Digitus 2 - 1
+Spinosaurus aegyptiacus|Membrum anterius|Phalanx manus sinistra - Digitus 3 - 1
+Spinosaurus aegyptiacus|Membrum anterius|Phalanx ungualis manus dextra - Digitus 1
+Spinosaurus aegyptiacus|Membrum anterius|Phalanx ungualis manus dextra - Digitus 2
+Spinosaurus aegyptiacus|Membrum anterius|Phalanx ungualis manus dextra - Digitus 3
+Spinosaurus aegyptiacus|Membrum anterius|Phalanx ungualis manus sinistra - Digitus 1
+Spinosaurus aegyptiacus|Membrum anterius|Phalanx ungualis manus sinistra - Digitus 2
+Spinosaurus aegyptiacus|Membrum anterius|Phalanx ungualis manus sinistra - Digitus 3
+Spinosaurus aegyptiacus|Membrum anterius|Radius dexter
+Spinosaurus aegyptiacus|Membrum anterius|Radius sinister
+Spinosaurus aegyptiacus|Membrum anterius|Scapula dextra
+Spinosaurus aegyptiacus|Membrum anterius|Scapula sinistra
+Spinosaurus aegyptiacus|Membrum anterius|Ulna dextra
+Spinosaurus aegyptiacus|Membrum anterius|Ulna sinistra
+Spinosaurus aegyptiacus|Membrum posterius|Femur dextrum
+Spinosaurus aegyptiacus|Membrum posterius|Femur sinistrum
+Spinosaurus aegyptiacus|Membrum posterius|Fibula dextra
+Spinosaurus aegyptiacus|Membrum posterius|Fibula sinistra
+Spinosaurus aegyptiacus|Membrum posterius|Metatarsale dextrum - Digitus 1
+Spinosaurus aegyptiacus|Membrum posterius|Metatarsale dextrum - Digitus 2
+Spinosaurus aegyptiacus|Membrum posterius|Metatarsale dextrum - Digitus 3
+Spinosaurus aegyptiacus|Membrum posterius|Metatarsale dextrum - Digitus 4
+Spinosaurus aegyptiacus|Membrum posterius|Metatarsale sinistrum - Digitus 1
+Spinosaurus aegyptiacus|Membrum posterius|Metatarsale sinistrum - Digitus 2
+Spinosaurus aegyptiacus|Membrum posterius|Metatarsale sinistrum - Digitus 3
+Spinosaurus aegyptiacus|Membrum posterius|Metatarsale sinistrum - Digitus 4
+Spinosaurus aegyptiacus|Membrum posterius|Os tarsi dextrum
+Spinosaurus aegyptiacus|Membrum posterius|Os tarsi sinistrum
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis dextra - Digitus 1 - 1
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis dextra - Digitus 2 - 1
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis dextra - Digitus 2 - 2
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis dextra - Digitus 3 - 1
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis dextra - Digitus 3 - 2
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis dextra - Digitus 4 - 1
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis dextra - Digitus 4 - 2
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis sinistra - Digitus 1 - 1
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis sinistra - Digitus 2 - 1
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis sinistra - Digitus 2 - 2
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis sinistra - Digitus 3 - 1
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis sinistra - Digitus 3 - 2
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis sinistra - Digitus 4 - 1
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx pedis sinistra - Digitus 4 - 2
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 1
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 2
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 3
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 4
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 1
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 2
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 3
+Spinosaurus aegyptiacus|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 4
+Spinosaurus aegyptiacus|Membrum posterius|Tibia dextra
+Spinosaurus aegyptiacus|Membrum posterius|Tibia sinistra
+Spinosaurus aegyptiacus|Pelvis|Ilium dextrum
+Spinosaurus aegyptiacus|Pelvis|Ilium sinistrum
+Spinosaurus aegyptiacus|Pelvis|Ischium dextrum
+Spinosaurus aegyptiacus|Pelvis|Ischium sinistrum
+Spinosaurus aegyptiacus|Pelvis|Os pelvis dextrum
+Spinosaurus aegyptiacus|Pelvis|Os pelvis sinistrum
+Spinosaurus aegyptiacus|Pelvis|Processus spinosus 10
+Spinosaurus aegyptiacus|Pelvis|Processus spinosus 11
+Spinosaurus aegyptiacus|Pelvis|Processus spinosus 12
+Spinosaurus aegyptiacus|Pelvis|Processus spinosus 13
+Spinosaurus aegyptiacus|Pelvis|Pubis
+Spinosaurus aegyptiacus|Pelvis|Vertebra pelvis 1
+Spinosaurus aegyptiacus|Pelvis|Vertebra pelvis 2
+Spinosaurus aegyptiacus|Pelvis|Vertebra pelvis 3
+Spinosaurus aegyptiacus|Pelvis|Vertebra pelvis 4
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 1
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 10
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 11
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 12
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 2
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 3
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 4
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 5
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 6
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 7
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 8
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis dextra 9
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 1
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 10
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 11
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 12
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 2
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 3
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 4
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 5
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 6
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 7
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 8
+Spinosaurus aegyptiacus|Truncus|Costa dorsalis sinistra 9
+Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 1
+Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 10
+Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 11
+Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 12
+Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 13
+Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 2
+Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 3
+Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 4
+Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 5
+Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 6
+Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 7
+Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 8
+Spinosaurus aegyptiacus|Truncus|Gastralium dextrum 9
+Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 1
+Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 10
+Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 11
+Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 12
+Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 13
+Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 2
+Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 3
+Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 4
+Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 5
+Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 6
+Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 7
+Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 8
+Spinosaurus aegyptiacus|Truncus|Gastralium sinistrum 9
+Spinosaurus aegyptiacus|Truncus|Processus spinosus 1
+Spinosaurus aegyptiacus|Truncus|Processus spinosus 2
+Spinosaurus aegyptiacus|Truncus|Processus spinosus 3
+Spinosaurus aegyptiacus|Truncus|Processus spinosus 4
+Spinosaurus aegyptiacus|Truncus|Processus spinosus 5
+Spinosaurus aegyptiacus|Truncus|Processus spinosus 6
+Spinosaurus aegyptiacus|Truncus|Processus spinosus 7
+Spinosaurus aegyptiacus|Truncus|Processus spinosus 8
+Spinosaurus aegyptiacus|Truncus|Processus spinosus 9
+Spinosaurus aegyptiacus|Truncus|Sternum
+Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 1
+Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 10
+Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 11
+Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 12
+Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 2
+Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 3
+Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 4
+Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 5
+Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 6
+Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 7
+Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 8
+Spinosaurus aegyptiacus|Truncus|Vertebra dorsalis 9
+Triceratops horridus|Cauda|Arcus haemalis 1
+Triceratops horridus|Cauda|Arcus haemalis 10
+Triceratops horridus|Cauda|Arcus haemalis 11
+Triceratops horridus|Cauda|Arcus haemalis 12
+Triceratops horridus|Cauda|Arcus haemalis 13
+Triceratops horridus|Cauda|Arcus haemalis 14
+Triceratops horridus|Cauda|Arcus haemalis 15
+Triceratops horridus|Cauda|Arcus haemalis 16
+Triceratops horridus|Cauda|Arcus haemalis 17
+Triceratops horridus|Cauda|Arcus haemalis 18
+Triceratops horridus|Cauda|Arcus haemalis 19
+Triceratops horridus|Cauda|Arcus haemalis 2
+Triceratops horridus|Cauda|Arcus haemalis 20
+Triceratops horridus|Cauda|Arcus haemalis 3
+Triceratops horridus|Cauda|Arcus haemalis 4
+Triceratops horridus|Cauda|Arcus haemalis 5
+Triceratops horridus|Cauda|Arcus haemalis 6
+Triceratops horridus|Cauda|Arcus haemalis 7
+Triceratops horridus|Cauda|Arcus haemalis 8
+Triceratops horridus|Cauda|Arcus haemalis 9
+Triceratops horridus|Cauda|Vertebra caudalis 1
+Triceratops horridus|Cauda|Vertebra caudalis 10
+Triceratops horridus|Cauda|Vertebra caudalis 11
+Triceratops horridus|Cauda|Vertebra caudalis 12
+Triceratops horridus|Cauda|Vertebra caudalis 13
+Triceratops horridus|Cauda|Vertebra caudalis 14
+Triceratops horridus|Cauda|Vertebra caudalis 15
+Triceratops horridus|Cauda|Vertebra caudalis 16
+Triceratops horridus|Cauda|Vertebra caudalis 17
+Triceratops horridus|Cauda|Vertebra caudalis 18
+Triceratops horridus|Cauda|Vertebra caudalis 19
+Triceratops horridus|Cauda|Vertebra caudalis 2
+Triceratops horridus|Cauda|Vertebra caudalis 20
+Triceratops horridus|Cauda|Vertebra caudalis 21
+Triceratops horridus|Cauda|Vertebra caudalis 22
+Triceratops horridus|Cauda|Vertebra caudalis 23
+Triceratops horridus|Cauda|Vertebra caudalis 24
+Triceratops horridus|Cauda|Vertebra caudalis 25
+Triceratops horridus|Cauda|Vertebra caudalis 26
+Triceratops horridus|Cauda|Vertebra caudalis 27
+Triceratops horridus|Cauda|Vertebra caudalis 28
+Triceratops horridus|Cauda|Vertebra caudalis 29
+Triceratops horridus|Cauda|Vertebra caudalis 3
+Triceratops horridus|Cauda|Vertebra caudalis 30
+Triceratops horridus|Cauda|Vertebra caudalis 31
+Triceratops horridus|Cauda|Vertebra caudalis 32
+Triceratops horridus|Cauda|Vertebra caudalis 33
+Triceratops horridus|Cauda|Vertebra caudalis 34
+Triceratops horridus|Cauda|Vertebra caudalis 4
+Triceratops horridus|Cauda|Vertebra caudalis 5
+Triceratops horridus|Cauda|Vertebra caudalis 6
+Triceratops horridus|Cauda|Vertebra caudalis 7
+Triceratops horridus|Cauda|Vertebra caudalis 8
+Triceratops horridus|Cauda|Vertebra caudalis 9
+Triceratops horridus|Cervix|Costa cervicalis dextra 1
+Triceratops horridus|Cervix|Costa cervicalis dextra 2
+Triceratops horridus|Cervix|Costa cervicalis dextra 3
+Triceratops horridus|Cervix|Costa cervicalis dextra 4
+Triceratops horridus|Cervix|Costa cervicalis sinistra 1
+Triceratops horridus|Cervix|Costa cervicalis sinistra 2
+Triceratops horridus|Cervix|Costa cervicalis sinistra 3
+Triceratops horridus|Cervix|Costa cervicalis sinistra 4
+Triceratops horridus|Cervix|Syncervicale
+Triceratops horridus|Cervix|Vertebra cervicalis 1
+Triceratops horridus|Cervix|Vertebra cervicalis 2
+Triceratops horridus|Cranium|Cranium
+Triceratops horridus|Cranium|Dens 1
+Triceratops horridus|Cranium|Dens 10
+Triceratops horridus|Cranium|Dens 11
+Triceratops horridus|Cranium|Dens 12
+Triceratops horridus|Cranium|Dens 13
+Triceratops horridus|Cranium|Dens 14
+Triceratops horridus|Cranium|Dens 15
+Triceratops horridus|Cranium|Dens 16
+Triceratops horridus|Cranium|Dens 17
+Triceratops horridus|Cranium|Dens 18
+Triceratops horridus|Cranium|Dens 19
+Triceratops horridus|Cranium|Dens 2
+Triceratops horridus|Cranium|Dens 20
+Triceratops horridus|Cranium|Dens 21
+Triceratops horridus|Cranium|Dens 22
+Triceratops horridus|Cranium|Dens 23
+Triceratops horridus|Cranium|Dens 24
+Triceratops horridus|Cranium|Dens 25
+Triceratops horridus|Cranium|Dens 26
+Triceratops horridus|Cranium|Dens 27
+Triceratops horridus|Cranium|Dens 28
+Triceratops horridus|Cranium|Dens 29
+Triceratops horridus|Cranium|Dens 3
+Triceratops horridus|Cranium|Dens 30
+Triceratops horridus|Cranium|Dens 31
+Triceratops horridus|Cranium|Dens 32
+Triceratops horridus|Cranium|Dens 33
+Triceratops horridus|Cranium|Dens 34
+Triceratops horridus|Cranium|Dens 35
+Triceratops horridus|Cranium|Dens 36
+Triceratops horridus|Cranium|Dens 4
+Triceratops horridus|Cranium|Dens 5
+Triceratops horridus|Cranium|Dens 6
+Triceratops horridus|Cranium|Dens 7
+Triceratops horridus|Cranium|Dens 8
+Triceratops horridus|Cranium|Dens 9
+Triceratops horridus|Cranium|Epijugale dextrum
+Triceratops horridus|Cranium|Epijugale sinistrum
+Triceratops horridus|Cranium|Epoccipitale 1
+Triceratops horridus|Cranium|Epoccipitale 10
+Triceratops horridus|Cranium|Epoccipitale 11
+Triceratops horridus|Cranium|Epoccipitale 12
+Triceratops horridus|Cranium|Epoccipitale 13
+Triceratops horridus|Cranium|Epoccipitale 14
+Triceratops horridus|Cranium|Epoccipitale 15
+Triceratops horridus|Cranium|Epoccipitale 16
+Triceratops horridus|Cranium|Epoccipitale 17
+Triceratops horridus|Cranium|Epoccipitale 2
+Triceratops horridus|Cranium|Epoccipitale 3
+Triceratops horridus|Cranium|Epoccipitale 4
+Triceratops horridus|Cranium|Epoccipitale 5
+Triceratops horridus|Cranium|Epoccipitale 6
+Triceratops horridus|Cranium|Epoccipitale 7
+Triceratops horridus|Cranium|Epoccipitale 8
+Triceratops horridus|Cranium|Epoccipitale 9
+Triceratops horridus|Cranium|Mandibula
+Triceratops horridus|Cranium|Ornamentum jugale dextrum
+Triceratops horridus|Cranium|Ornamentum jugale sinistrum
+Triceratops horridus|Cranium|Ossa basicranii et palati
+Triceratops horridus|Membrum anterius|Humerus dexter
+Triceratops horridus|Membrum anterius|Humerus sinister
+Triceratops horridus|Membrum anterius|Os metacarpale dextrum 1
+Triceratops horridus|Membrum anterius|Os metacarpale dextrum 2
+Triceratops horridus|Membrum anterius|Os metacarpale dextrum 3
+Triceratops horridus|Membrum anterius|Os metacarpale dextrum 4
+Triceratops horridus|Membrum anterius|Os metacarpale dextrum 5
+Triceratops horridus|Membrum anterius|Os metacarpale sinistrum 1
+Triceratops horridus|Membrum anterius|Os metacarpale sinistrum 2
+Triceratops horridus|Membrum anterius|Os metacarpale sinistrum 3
+Triceratops horridus|Membrum anterius|Os metacarpale sinistrum 4
+Triceratops horridus|Membrum anterius|Os metacarpale sinistrum 5
+Triceratops horridus|Membrum anterius|Phalanx distalis manus dextrae - Digitus 4 - 3
+Triceratops horridus|Membrum anterius|Phalanx distalis manus dextrae - Digitus 5 - 3
+Triceratops horridus|Membrum anterius|Phalanx distalis manus sinistrae - Digitus 4 - 3
+Triceratops horridus|Membrum anterius|Phalanx distalis manus sinistrae - Digitus 5 - 3
+Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 1 - 1
+Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 1 - 2
+Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 1 - 3
+Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 2 - 1
+Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 2 - 2
+Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 2 - 3
+Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 3 - 1
+Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 3 - 2
+Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 3 - 3
+Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 4 - 1
+Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 4 - 2
+Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 5 - 1
+Triceratops horridus|Membrum anterius|Phalanx manus dextrae - Digitus 5 - 2
+Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 1 - 1
+Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 1 - 2
+Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 1 - 3
+Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 2 - 1
+Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 2 - 2
+Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 2 - 3
+Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 3 - 1
+Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 3 - 2
+Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 3 - 3
+Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 4 - 1
+Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 4 - 2
+Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 5 - 1
+Triceratops horridus|Membrum anterius|Phalanx manus sinistrae - Digitus 5 - 2
+Triceratops horridus|Membrum anterius|Phalanx ungualis manus dextrae - Digitus 1 - 4
+Triceratops horridus|Membrum anterius|Phalanx ungualis manus dextrae - Digitus 2 - 4
+Triceratops horridus|Membrum anterius|Phalanx ungualis manus dextrae - Digitus 3 - 4
+Triceratops horridus|Membrum anterius|Phalanx ungualis manus sinistrae - Digitus 1 - 4
+Triceratops horridus|Membrum anterius|Phalanx ungualis manus sinistrae - Digitus 2 - 4
+Triceratops horridus|Membrum anterius|Phalanx ungualis manus sinistrae - Digitus 3 - 4
+Triceratops horridus|Membrum anterius|Radius dexter
+Triceratops horridus|Membrum anterius|Radius sinister
+Triceratops horridus|Membrum anterius|Scapula dextra
+Triceratops horridus|Membrum anterius|Scapula sinistra
+Triceratops horridus|Membrum anterius|Ulna dextra
+Triceratops horridus|Membrum anterius|Ulna sinistra
+Triceratops horridus|Membrum posterius|Femur dextrum
+Triceratops horridus|Membrum posterius|Femur sinistrum
+Triceratops horridus|Membrum posterius|Fibula dextra
+Triceratops horridus|Membrum posterius|Fibula sinistra
+Triceratops horridus|Membrum posterius|Os metatarsale dextrum 1
+Triceratops horridus|Membrum posterius|Os metatarsale dextrum 2
+Triceratops horridus|Membrum posterius|Os metatarsale dextrum 3
+Triceratops horridus|Membrum posterius|Os metatarsale dextrum 4
+Triceratops horridus|Membrum posterius|Os metatarsale sinistrum 1
+Triceratops horridus|Membrum posterius|Os metatarsale sinistrum 2
+Triceratops horridus|Membrum posterius|Os metatarsale sinistrum 3
+Triceratops horridus|Membrum posterius|Os metatarsale sinistrum 4
+Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 1 - 1
+Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 1 - 2
+Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 2 - 1
+Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 2 - 2
+Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 2 - 3
+Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 3 - 1
+Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 3 - 2
+Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 3 - 3
+Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 4 - 1
+Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 4 - 2
+Triceratops horridus|Membrum posterius|Phalanx pedis dextri - Digitus 4 - 3
+Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 1 - 1
+Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 1 - 2
+Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 2 - 1
+Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 2 - 2
+Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 2 - 3
+Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 3 - 1
+Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 3 - 2
+Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 3 - 3
+Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 4 - 1
+Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 4 - 2
+Triceratops horridus|Membrum posterius|Phalanx pedis sinistri - Digitus 4 - 3
+Triceratops horridus|Membrum posterius|Phalanx ungualis pedis dextri - Digitus 1 - 3
+Triceratops horridus|Membrum posterius|Phalanx ungualis pedis dextri - Digitus 2 - 4
+Triceratops horridus|Membrum posterius|Phalanx ungualis pedis dextri - Digitus 3 - 4
+Triceratops horridus|Membrum posterius|Phalanx ungualis pedis dextri - Digitus 4 - 4
+Triceratops horridus|Membrum posterius|Phalanx ungualis pedis sinistri - Digitus 1 - 3
+Triceratops horridus|Membrum posterius|Phalanx ungualis pedis sinistri - Digitus 2 - 4
+Triceratops horridus|Membrum posterius|Phalanx ungualis pedis sinistri - Digitus 3 - 4
+Triceratops horridus|Membrum posterius|Phalanx ungualis pedis sinistri - Digitus 4 - 4
+Triceratops horridus|Membrum posterius|Tibia dextra
+Triceratops horridus|Membrum posterius|Tibia sinistra
+Triceratops horridus|Pelvis|Ischium dextrum
+Triceratops horridus|Pelvis|Ischium sinistrum
+Triceratops horridus|Pelvis|Os pubis dextrum
+Triceratops horridus|Pelvis|Os pubis sinistrum
+Triceratops horridus|Pelvis|Ossa ilia et sacrum
+Triceratops horridus|Truncus|Costa dorsalis dextra 1
+Triceratops horridus|Truncus|Costa dorsalis dextra 10
+Triceratops horridus|Truncus|Costa dorsalis dextra 11
+Triceratops horridus|Truncus|Costa dorsalis dextra 2
+Triceratops horridus|Truncus|Costa dorsalis dextra 3
+Triceratops horridus|Truncus|Costa dorsalis dextra 4
+Triceratops horridus|Truncus|Costa dorsalis dextra 5
+Triceratops horridus|Truncus|Costa dorsalis dextra 6
+Triceratops horridus|Truncus|Costa dorsalis dextra 7
+Triceratops horridus|Truncus|Costa dorsalis dextra 8
+Triceratops horridus|Truncus|Costa dorsalis dextra 9
+Triceratops horridus|Truncus|Costa dorsalis sinistra 1
+Triceratops horridus|Truncus|Costa dorsalis sinistra 10
+Triceratops horridus|Truncus|Costa dorsalis sinistra 11
+Triceratops horridus|Truncus|Costa dorsalis sinistra 2
+Triceratops horridus|Truncus|Costa dorsalis sinistra 3
+Triceratops horridus|Truncus|Costa dorsalis sinistra 4
+Triceratops horridus|Truncus|Costa dorsalis sinistra 5
+Triceratops horridus|Truncus|Costa dorsalis sinistra 6
+Triceratops horridus|Truncus|Costa dorsalis sinistra 7
+Triceratops horridus|Truncus|Costa dorsalis sinistra 8
+Triceratops horridus|Truncus|Costa dorsalis sinistra 9
+Triceratops horridus|Truncus|Os sternale dextrum
+Triceratops horridus|Truncus|Os sternale sinistrum
+Triceratops horridus|Truncus|Vertebra dorsalis 1
+Triceratops horridus|Truncus|Vertebra dorsalis 10
+Triceratops horridus|Truncus|Vertebra dorsalis 11
+Triceratops horridus|Truncus|Vertebra dorsalis 2
+Triceratops horridus|Truncus|Vertebra dorsalis 3
+Triceratops horridus|Truncus|Vertebra dorsalis 4
+Triceratops horridus|Truncus|Vertebra dorsalis 5
+Triceratops horridus|Truncus|Vertebra dorsalis 6
+Triceratops horridus|Truncus|Vertebra dorsalis 7
+Triceratops horridus|Truncus|Vertebra dorsalis 8
+Triceratops horridus|Truncus|Vertebra dorsalis 9
+Tyrannosaurus rex|Cauda|Arcus haemalis 1
+Tyrannosaurus rex|Cauda|Arcus haemalis 10
+Tyrannosaurus rex|Cauda|Arcus haemalis 11
+Tyrannosaurus rex|Cauda|Arcus haemalis 12
+Tyrannosaurus rex|Cauda|Arcus haemalis 13
+Tyrannosaurus rex|Cauda|Arcus haemalis 14
+Tyrannosaurus rex|Cauda|Arcus haemalis 15
+Tyrannosaurus rex|Cauda|Arcus haemalis 16
+Tyrannosaurus rex|Cauda|Arcus haemalis 17
+Tyrannosaurus rex|Cauda|Arcus haemalis 18
+Tyrannosaurus rex|Cauda|Arcus haemalis 19
+Tyrannosaurus rex|Cauda|Arcus haemalis 2
+Tyrannosaurus rex|Cauda|Arcus haemalis 20
+Tyrannosaurus rex|Cauda|Arcus haemalis 21
+Tyrannosaurus rex|Cauda|Arcus haemalis 22
+Tyrannosaurus rex|Cauda|Arcus haemalis 23
+Tyrannosaurus rex|Cauda|Arcus haemalis 24
+Tyrannosaurus rex|Cauda|Arcus haemalis 25
+Tyrannosaurus rex|Cauda|Arcus haemalis 3
+Tyrannosaurus rex|Cauda|Arcus haemalis 4
+Tyrannosaurus rex|Cauda|Arcus haemalis 5
+Tyrannosaurus rex|Cauda|Arcus haemalis 6
+Tyrannosaurus rex|Cauda|Arcus haemalis 7
+Tyrannosaurus rex|Cauda|Arcus haemalis 8
+Tyrannosaurus rex|Cauda|Arcus haemalis 9
+Tyrannosaurus rex|Cauda|Vertebra caudalis 1
+Tyrannosaurus rex|Cauda|Vertebra caudalis 10
+Tyrannosaurus rex|Cauda|Vertebra caudalis 11
+Tyrannosaurus rex|Cauda|Vertebra caudalis 12
+Tyrannosaurus rex|Cauda|Vertebra caudalis 13
+Tyrannosaurus rex|Cauda|Vertebra caudalis 14
+Tyrannosaurus rex|Cauda|Vertebra caudalis 15
+Tyrannosaurus rex|Cauda|Vertebra caudalis 16
+Tyrannosaurus rex|Cauda|Vertebra caudalis 17
+Tyrannosaurus rex|Cauda|Vertebra caudalis 18
+Tyrannosaurus rex|Cauda|Vertebra caudalis 19
+Tyrannosaurus rex|Cauda|Vertebra caudalis 2
+Tyrannosaurus rex|Cauda|Vertebra caudalis 20
+Tyrannosaurus rex|Cauda|Vertebra caudalis 21
+Tyrannosaurus rex|Cauda|Vertebra caudalis 22
+Tyrannosaurus rex|Cauda|Vertebra caudalis 23
+Tyrannosaurus rex|Cauda|Vertebra caudalis 24
+Tyrannosaurus rex|Cauda|Vertebra caudalis 25
+Tyrannosaurus rex|Cauda|Vertebra caudalis 26
+Tyrannosaurus rex|Cauda|Vertebra caudalis 27
+Tyrannosaurus rex|Cauda|Vertebra caudalis 28
+Tyrannosaurus rex|Cauda|Vertebra caudalis 29
+Tyrannosaurus rex|Cauda|Vertebra caudalis 3
+Tyrannosaurus rex|Cauda|Vertebra caudalis 30
+Tyrannosaurus rex|Cauda|Vertebra caudalis 31
+Tyrannosaurus rex|Cauda|Vertebra caudalis 32
+Tyrannosaurus rex|Cauda|Vertebra caudalis 33
+Tyrannosaurus rex|Cauda|Vertebra caudalis 34
+Tyrannosaurus rex|Cauda|Vertebra caudalis 35
+Tyrannosaurus rex|Cauda|Vertebra caudalis 36
+Tyrannosaurus rex|Cauda|Vertebra caudalis 37
+Tyrannosaurus rex|Cauda|Vertebra caudalis 38
+Tyrannosaurus rex|Cauda|Vertebra caudalis 39
+Tyrannosaurus rex|Cauda|Vertebra caudalis 4
+Tyrannosaurus rex|Cauda|Vertebra caudalis 40
+Tyrannosaurus rex|Cauda|Vertebra caudalis 41
+Tyrannosaurus rex|Cauda|Vertebra caudalis 42
+Tyrannosaurus rex|Cauda|Vertebra caudalis 43
+Tyrannosaurus rex|Cauda|Vertebra caudalis 44
+Tyrannosaurus rex|Cauda|Vertebra caudalis 45
+Tyrannosaurus rex|Cauda|Vertebra caudalis 5
+Tyrannosaurus rex|Cauda|Vertebra caudalis 6
+Tyrannosaurus rex|Cauda|Vertebra caudalis 7
+Tyrannosaurus rex|Cauda|Vertebra caudalis 8
+Tyrannosaurus rex|Cauda|Vertebra caudalis 9
+Tyrannosaurus rex|Cervix|Costa cervicalis dextra 1
+Tyrannosaurus rex|Cervix|Costa cervicalis dextra 10
+Tyrannosaurus rex|Cervix|Costa cervicalis dextra 2
+Tyrannosaurus rex|Cervix|Costa cervicalis dextra 3
+Tyrannosaurus rex|Cervix|Costa cervicalis dextra 4
+Tyrannosaurus rex|Cervix|Costa cervicalis dextra 5
+Tyrannosaurus rex|Cervix|Costa cervicalis dextra 6
+Tyrannosaurus rex|Cervix|Costa cervicalis dextra 7
+Tyrannosaurus rex|Cervix|Costa cervicalis dextra 8
+Tyrannosaurus rex|Cervix|Costa cervicalis dextra 9
+Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 1
+Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 10
+Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 2
+Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 3
+Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 4
+Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 5
+Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 6
+Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 7
+Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 8
+Tyrannosaurus rex|Cervix|Costa cervicalis sinistra 9
+Tyrannosaurus rex|Cervix|Costa cervicodorsalis dextra 1
+Tyrannosaurus rex|Cervix|Costa cervicodorsalis dextra 2
+Tyrannosaurus rex|Cervix|Costa cervicodorsalis dextra 3
+Tyrannosaurus rex|Cervix|Costa cervicodorsalis sinistra 1
+Tyrannosaurus rex|Cervix|Costa cervicodorsalis sinistra 2
+Tyrannosaurus rex|Cervix|Costa cervicodorsalis sinistra 3
+Tyrannosaurus rex|Cervix|Vertebra cervicalis 1
+Tyrannosaurus rex|Cervix|Vertebra cervicalis 10
+Tyrannosaurus rex|Cervix|Vertebra cervicalis 2
+Tyrannosaurus rex|Cervix|Vertebra cervicalis 3
+Tyrannosaurus rex|Cervix|Vertebra cervicalis 4
+Tyrannosaurus rex|Cervix|Vertebra cervicalis 5
+Tyrannosaurus rex|Cervix|Vertebra cervicalis 6
+Tyrannosaurus rex|Cervix|Vertebra cervicalis 7
+Tyrannosaurus rex|Cervix|Vertebra cervicalis 8
+Tyrannosaurus rex|Cervix|Vertebra cervicalis 9
+Tyrannosaurus rex|Cervix|Vertebra cervicodorsalis 1
+Tyrannosaurus rex|Cervix|Vertebra cervicodorsalis 2
+Tyrannosaurus rex|Cervix|Vertebra cervicodorsalis 3
+Tyrannosaurus rex|Cranium|Cranium
+Tyrannosaurus rex|Cranium|Dens 1
+Tyrannosaurus rex|Cranium|Dens 10
+Tyrannosaurus rex|Cranium|Dens 11
+Tyrannosaurus rex|Cranium|Dens 12
+Tyrannosaurus rex|Cranium|Dens 13
+Tyrannosaurus rex|Cranium|Dens 14
+Tyrannosaurus rex|Cranium|Dens 15
+Tyrannosaurus rex|Cranium|Dens 16
+Tyrannosaurus rex|Cranium|Dens 17
+Tyrannosaurus rex|Cranium|Dens 18
+Tyrannosaurus rex|Cranium|Dens 19
+Tyrannosaurus rex|Cranium|Dens 2
+Tyrannosaurus rex|Cranium|Dens 20
+Tyrannosaurus rex|Cranium|Dens 21
+Tyrannosaurus rex|Cranium|Dens 22
+Tyrannosaurus rex|Cranium|Dens 23
+Tyrannosaurus rex|Cranium|Dens 24
+Tyrannosaurus rex|Cranium|Dens 25
+Tyrannosaurus rex|Cranium|Dens 26
+Tyrannosaurus rex|Cranium|Dens 27
+Tyrannosaurus rex|Cranium|Dens 28
+Tyrannosaurus rex|Cranium|Dens 29
+Tyrannosaurus rex|Cranium|Dens 3
+Tyrannosaurus rex|Cranium|Dens 30
+Tyrannosaurus rex|Cranium|Dens 31
+Tyrannosaurus rex|Cranium|Dens 32
+Tyrannosaurus rex|Cranium|Dens 33
+Tyrannosaurus rex|Cranium|Dens 34
+Tyrannosaurus rex|Cranium|Dens 35
+Tyrannosaurus rex|Cranium|Dens 36
+Tyrannosaurus rex|Cranium|Dens 37
+Tyrannosaurus rex|Cranium|Dens 38
+Tyrannosaurus rex|Cranium|Dens 39
+Tyrannosaurus rex|Cranium|Dens 4
+Tyrannosaurus rex|Cranium|Dens 40
+Tyrannosaurus rex|Cranium|Dens 41
+Tyrannosaurus rex|Cranium|Dens 42
+Tyrannosaurus rex|Cranium|Dens 43
+Tyrannosaurus rex|Cranium|Dens 44
+Tyrannosaurus rex|Cranium|Dens 45
+Tyrannosaurus rex|Cranium|Dens 46
+Tyrannosaurus rex|Cranium|Dens 47
+Tyrannosaurus rex|Cranium|Dens 48
+Tyrannosaurus rex|Cranium|Dens 49
+Tyrannosaurus rex|Cranium|Dens 5
+Tyrannosaurus rex|Cranium|Dens 50
+Tyrannosaurus rex|Cranium|Dens 51
+Tyrannosaurus rex|Cranium|Dens 52
+Tyrannosaurus rex|Cranium|Dens 53
+Tyrannosaurus rex|Cranium|Dens 54
+Tyrannosaurus rex|Cranium|Dens 55
+Tyrannosaurus rex|Cranium|Dens 56
+Tyrannosaurus rex|Cranium|Dens 57
+Tyrannosaurus rex|Cranium|Dens 58
+Tyrannosaurus rex|Cranium|Dens 59
+Tyrannosaurus rex|Cranium|Dens 6
+Tyrannosaurus rex|Cranium|Dens 60
+Tyrannosaurus rex|Cranium|Dens 61
+Tyrannosaurus rex|Cranium|Dens 62
+Tyrannosaurus rex|Cranium|Dens 63
+Tyrannosaurus rex|Cranium|Dens 64
+Tyrannosaurus rex|Cranium|Dens 65
+Tyrannosaurus rex|Cranium|Dens 66
+Tyrannosaurus rex|Cranium|Dens 67
+Tyrannosaurus rex|Cranium|Dens 68
+Tyrannosaurus rex|Cranium|Dens 69
+Tyrannosaurus rex|Cranium|Dens 7
+Tyrannosaurus rex|Cranium|Dens 70
+Tyrannosaurus rex|Cranium|Dens 71
+Tyrannosaurus rex|Cranium|Dens 72
+Tyrannosaurus rex|Cranium|Dens 73
+Tyrannosaurus rex|Cranium|Dens 74
+Tyrannosaurus rex|Cranium|Dens 75
+Tyrannosaurus rex|Cranium|Dens 76
+Tyrannosaurus rex|Cranium|Dens 8
+Tyrannosaurus rex|Cranium|Dens 9
+Tyrannosaurus rex|Cranium|Os jugale dextrum
+Tyrannosaurus rex|Cranium|Os jugale sinistrum
+Tyrannosaurus rex|Cranium|Os mandibulae dextrum
+Tyrannosaurus rex|Cranium|Os mandibulae sinistrum
+Tyrannosaurus rex|Cranium|Os quadratojugale dextrum
+Tyrannosaurus rex|Cranium|Os quadratojugale sinistrum
+Tyrannosaurus rex|Cranium|Os surangulare dextrum
+Tyrannosaurus rex|Cranium|Os surangulare sinistrum
+Tyrannosaurus rex|Cranium|Ossa dentalia
+Tyrannosaurus rex|Membrum anterius|Humerus dexter
+Tyrannosaurus rex|Membrum anterius|Humerus sinister
+Tyrannosaurus rex|Membrum anterius|Os antebrachii dextrum 1
+Tyrannosaurus rex|Membrum anterius|Os antebrachii dextrum 2
+Tyrannosaurus rex|Membrum anterius|Os antebrachii sinistrum 1
+Tyrannosaurus rex|Membrum anterius|Os antebrachii sinistrum 2
+Tyrannosaurus rex|Membrum anterius|Os coracoideum dextrum
+Tyrannosaurus rex|Membrum anterius|Os coracoideum sinistrum
+Tyrannosaurus rex|Membrum anterius|Os metacarpale dextrum - Digitus 1
+Tyrannosaurus rex|Membrum anterius|Os metacarpale dextrum - Digitus 2
+Tyrannosaurus rex|Membrum anterius|Os metacarpale sinistrum - Digitus 1
+Tyrannosaurus rex|Membrum anterius|Os metacarpale sinistrum - Digitus 2
+Tyrannosaurus rex|Membrum anterius|Phalanx manus dextra - Digitus 1 - 1
+Tyrannosaurus rex|Membrum anterius|Phalanx manus dextra - Digitus 1 - 2
+Tyrannosaurus rex|Membrum anterius|Phalanx manus dextra - Digitus 2 - 1
+Tyrannosaurus rex|Membrum anterius|Phalanx manus dextra - Digitus 2 - 2
+Tyrannosaurus rex|Membrum anterius|Phalanx manus sinistra - Digitus 1 - 1
+Tyrannosaurus rex|Membrum anterius|Phalanx manus sinistra - Digitus 1 - 2
+Tyrannosaurus rex|Membrum anterius|Phalanx manus sinistra - Digitus 2 - 1
+Tyrannosaurus rex|Membrum anterius|Phalanx manus sinistra - Digitus 2 - 2
+Tyrannosaurus rex|Membrum anterius|Phalanx ungualis manus dextra - Digitus 1 - 3
+Tyrannosaurus rex|Membrum anterius|Phalanx ungualis manus dextra - Digitus 2 - 3
+Tyrannosaurus rex|Membrum anterius|Phalanx ungualis manus sinistra - Digitus 1 - 3
+Tyrannosaurus rex|Membrum anterius|Phalanx ungualis manus sinistra - Digitus 2 - 3
+Tyrannosaurus rex|Membrum anterius|Scapula dextra
+Tyrannosaurus rex|Membrum anterius|Scapula sinistra
+Tyrannosaurus rex|Membrum posterius|Femur dextrum
+Tyrannosaurus rex|Membrum posterius|Femur sinistrum
+Tyrannosaurus rex|Membrum posterius|Fibula dextra
+Tyrannosaurus rex|Membrum posterius|Fibula sinistra
+Tyrannosaurus rex|Membrum posterius|Os metatarsale dextrum - Digitus 1
+Tyrannosaurus rex|Membrum posterius|Os metatarsale dextrum - Digitus 2
+Tyrannosaurus rex|Membrum posterius|Os metatarsale dextrum - Digitus 3
+Tyrannosaurus rex|Membrum posterius|Os metatarsale dextrum - Digitus 4
+Tyrannosaurus rex|Membrum posterius|Os metatarsale sinistrum - Digitus 1
+Tyrannosaurus rex|Membrum posterius|Os metatarsale sinistrum - Digitus 2
+Tyrannosaurus rex|Membrum posterius|Os metatarsale sinistrum - Digitus 3
+Tyrannosaurus rex|Membrum posterius|Os metatarsale sinistrum - Digitus 4
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 1 - 1
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 2 - 1
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 2 - 2
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 3 - 1
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 3 - 2
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 3 - 3
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 4 - 1
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 4 - 2
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 4 - 3
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis dextra - Digitus 4 - 4
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 1 - 1
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 2 - 1
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 2 - 2
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 3 - 1
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 3 - 2
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 3 - 3
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 4 - 1
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 4 - 2
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 4 - 3
+Tyrannosaurus rex|Membrum posterius|Phalanx pedis sinistra - Digitus 4 - 4
+Tyrannosaurus rex|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 1 - 2
+Tyrannosaurus rex|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 2 - 3
+Tyrannosaurus rex|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 3 - 4
+Tyrannosaurus rex|Membrum posterius|Phalanx ungualis pedis dextra - Digitus 4 - 5
+Tyrannosaurus rex|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 1 - 2
+Tyrannosaurus rex|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 2 - 3
+Tyrannosaurus rex|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 3 - 4
+Tyrannosaurus rex|Membrum posterius|Phalanx ungualis pedis sinistra - Digitus 4 - 5
+Tyrannosaurus rex|Membrum posterius|Tibia dextra
+Tyrannosaurus rex|Membrum posterius|Tibia sinistra
+Tyrannosaurus rex|Pelvis|Ilium dextrum
+Tyrannosaurus rex|Pelvis|Ilium sinistrum
+Tyrannosaurus rex|Pelvis|Ischium dextrum
+Tyrannosaurus rex|Pelvis|Ischium sinistrum
+Tyrannosaurus rex|Pelvis|Os pubis dextrum
+Tyrannosaurus rex|Pelvis|Os pubis sinistrum
+Tyrannosaurus rex|Pelvis|Sacrum
+Tyrannosaurus rex|Pelvis|Vertebra 13
+Tyrannosaurus rex|Truncus|Costa dorsalis dextra 1
+Tyrannosaurus rex|Truncus|Costa dorsalis dextra 10
+Tyrannosaurus rex|Truncus|Costa dorsalis dextra 11
+Tyrannosaurus rex|Truncus|Costa dorsalis dextra 2
+Tyrannosaurus rex|Truncus|Costa dorsalis dextra 3
+Tyrannosaurus rex|Truncus|Costa dorsalis dextra 4
+Tyrannosaurus rex|Truncus|Costa dorsalis dextra 5
+Tyrannosaurus rex|Truncus|Costa dorsalis dextra 6
+Tyrannosaurus rex|Truncus|Costa dorsalis dextra 7
+Tyrannosaurus rex|Truncus|Costa dorsalis dextra 8
+Tyrannosaurus rex|Truncus|Costa dorsalis dextra 9
+Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 1
+Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 10
+Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 11
+Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 2
+Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 3
+Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 4
+Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 5
+Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 6
+Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 7
+Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 8
+Tyrannosaurus rex|Truncus|Costa dorsalis sinistra 9
+Tyrannosaurus rex|Truncus|Vertebra dorsalis 1
+Tyrannosaurus rex|Truncus|Vertebra dorsalis 10
+Tyrannosaurus rex|Truncus|Vertebra dorsalis 11
+Tyrannosaurus rex|Truncus|Vertebra dorsalis 12
+Tyrannosaurus rex|Truncus|Vertebra dorsalis 2
+Tyrannosaurus rex|Truncus|Vertebra dorsalis 3
+Tyrannosaurus rex|Truncus|Vertebra dorsalis 4
+Tyrannosaurus rex|Truncus|Vertebra dorsalis 5
+Tyrannosaurus rex|Truncus|Vertebra dorsalis 6
+Tyrannosaurus rex|Truncus|Vertebra dorsalis 7
+Tyrannosaurus rex|Truncus|Vertebra dorsalis 8
+Tyrannosaurus rex|Truncus|Vertebra dorsalis 9
