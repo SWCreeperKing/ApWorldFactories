@@ -1,6 +1,5 @@
 ﻿using CreepyUtil.Archipelago.WorldFactory;
 using WorldBuilder;
-using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 
 namespace ApWorldFactories.Games.DinoBones;
 
@@ -25,7 +24,7 @@ public class DinoBones : BuildData
         DinoBoneDict = Labels.GroupBy(b => b.Species).ToDictionary(g => g.Key, g => g.ToArray());
         BoneToCrate = paths.ToDictionary(b => b.Label.Name, b => b.CrateNumber);
         CrateNumbers = [.. Enumerable.Range(1, BoneToCrate.Values.Max())];
-        
+
         WriteData("bonepaths", paths.Select(p => $"{p.Crate}|{p.Object}").DistinctBy(s => s));
     }
 
@@ -48,9 +47,7 @@ public class DinoBones : BuildData
                 "crates", ItemFactory.ItemClassification.Progression, list: [.. CrateNumbers.Select(i => $"Crate {i}")]
             )
            .AddItem("Dust", ItemFactory.ItemClassification.Filler)
-           .AddCreateItems(method => method.AddCode(CreateItemsFromList("crates"))
-                                           .AddCode(CreateItemsFillRemainingWithItem("Dust"))
-            );
+           .AddCreateItems(method => method.CreateItemsFromList("crates").FillRemainingWithItem("Dust"));
     }
 
     public override void Rules(WorldFactory _, RuleFactory rule_fact)
@@ -75,20 +72,17 @@ public class DinoBones : BuildData
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
            .UseCreateRegions()
            .AddCreateItems()
-           .UseSetRules(method => method
-               .AddCode(
-                    CreateGoalCondition(
-                        string.Join(" and ", CrateNumbers.Select(i => $"crate[{i}]")), world_fact.GetRuleFactory()
-                    )
+           .UseSetRules(method => method.CreateGoalCondition(
+                    string.Join(" and ", CrateNumbers.Select(i => $"crate[{i}]"))
                 )
             )
            .UseFillSlotData(
                 new Dictionary<string, string> { ["uuid"] = "str(shuffled)" },
-                method => method.AddCode(CreateUniqueId())
+                method => method.CreateUniqueId()
             )
            .UseGetFillerItemName("Dust")
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
-           .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
+           .UseGenerateOutput(method => method.PumlGenCode());
     }
 
     public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,

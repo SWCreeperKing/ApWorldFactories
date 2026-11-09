@@ -1,7 +1,6 @@
 ﻿using CreepyUtil.Archipelago.WorldFactory;
 using WorldBuilder;
 using static ApWorldFactories.PathConstants;
-using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 
 namespace ApWorldFactories.Games.Dandara;
 
@@ -138,9 +137,9 @@ public class Dandara : BuildData
                          .ForEachOf(
                               itemGroups,
                               (b, data) =>
-                                  b.AddCode(CreateItemsFromMapCountGenCode($"{data.Key}_items".ToLower()))
+                                  b.CreateItemsFromMapCountGenCode($"{data.Key}_items".ToLowerInvariant())
                           )
-                         .AddCode(CreateItemsFillRemainingWithItem("Salt"))
+                         .FillRemainingWithItem("Salt")
                   );
     }
 
@@ -154,7 +153,7 @@ public class Dandara : BuildData
                    .ForEachOf(
                         ShopRowData, (b, data) =>
                             b.AddCode(
-                                new IfFactory(StateHas(data.UnlockItem, returnValue: false))
+                                new IfFactory(WorldFactory.StateHas(data.UnlockItem, returnValue: false))
                                    .AddCode($"sum += {data.CheckCount}")
                             )
                     )
@@ -217,12 +216,12 @@ public class Dandara : BuildData
            .AddCreateItems()
            .UseSetRules(method => method.AddCode(
                     new MatchFactory("options.goal_type")
-                       .AddCase("0", CreateGoalCondition("has[\"FinalBoss_Kill\"]", world_fact.GetRuleFactory()))
-                       .AddCase("1", CreateGoalCondition("has[\"DLCF_FearEnded\"]", world_fact.GetRuleFactory()))
+                       .AddCase("0", method.Raw_CreateGoalCondition("has[\"FinalBoss_Kill\"]"))
+                       .AddCase("1", method.Raw_CreateGoalCondition("has[\"DLCF_FearEnded\"]"))
                 )
             )
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
-           .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
+           .UseGenerateOutput(method => method.PumlGenCode());
     }
 
     public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,

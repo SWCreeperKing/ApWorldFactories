@@ -1,7 +1,6 @@
 ﻿using CreepyUtil.Archipelago.WorldFactory;
 using WorldBuilder;
 using static CreepyUtil.Archipelago.WorldFactory.ItemFactory.ItemClassification;
-using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 using Range = CreepyUtil.Archipelago.WorldFactory.Range;
 
 namespace ApWorldFactories.Games.Funko_Fusion;
@@ -66,7 +65,7 @@ public class FunkoFusion : BuildData
                    .AddCode("world.starting_level = random.choice(world_level_map[world.starting_world])")
                    .AddCode("world.starting_character = random.choice(important_characters_list)")
                    .AddCode("world.starting_filler_character = random.choice(blah_characters_list)")
-                   .AddCode(CreateMinimalCatch(GameName))
+                   .CreateMinimalCatch()
             );
     }
 
@@ -135,29 +134,27 @@ public class FunkoFusion : BuildData
             ).AddItem("Gold Crown", Progression).AddItem("Vinyl", Filler)
            .AddCreateItems(method =>
                 method
-                   .AddCode(CreateItemsFromCountGenCode($"{CrownCount}", "Gold Crown"))
+                   .CreateItemsFromCountGenCode($"{CrownCount}", "Gold Crown")
                    .AddCode(
                         new IfFactory("options.world_unlocks").AddCode(
-                            CreateItemsFromList("world_unlocks", exclusionCondition: "item == world.starting_world")
+                            method.Raw_CreateItemsFromList(
+                                "world_unlocks", exclusionCondition: "item == world.starting_world"
+                            )
                         )
                     )
                    .AddCode(
                         new IfFactory("options.level_unlocks").AddCode(
-                            CreateItemsFromList("level_unlocks", exclusionCondition: "item == world.starting_level")
+                            method.Raw_CreateItemsFromList(
+                                "level_unlocks", exclusionCondition: "item == world.starting_level"
+                            )
                         )
                     )
-                   .AddCode(CreateItemsFromList("blueprint_items", exclusionCondition: " item == \"Bounce Pad\""))
-                   .AddCode(
-                        CreateItemsFromList(
-                            "important_characters", exclusionCondition: "item == world.starting_character"
-                        )
+                   .CreateItemsFromList("blueprint_items", exclusionCondition: " item == \"Bounce Pad\"")
+                   .CreateItemsFromList("important_characters", exclusionCondition: "item == world.starting_character")
+                   .CreateItemsFromList(
+                        "blah_characters", exclusionCondition: "item == world.starting_filler_character"
                     )
-                   .AddCode(
-                        CreateItemsFromList(
-                            "blah_characters", exclusionCondition: "item == world.starting_filler_character"
-                        )
-                    )
-                   .AddCode(CreateItemsFillRemainingWithItem("Vinyl"))
+                   .FillRemainingWithItem("Vinyl")
             );
     }
 
@@ -207,27 +204,22 @@ public class FunkoFusion : BuildData
             )
            .AddUseUniversalTrackerPassthrough(
                 method =>
-                    method.AddCode(CreateUtPassthrough("\"starting_world\"", "self.starting_world"))
-                          .AddCode(CreateUtPassthrough("\"starting_level\"", "self.starting_level"))
-                          .AddCode(CreateUtPassthrough("\"starting_character\"", "self.starting_character"))
-                          .AddCode(
-                               CreateUtPassthrough("\"starting_filler_character\"", "self.starting_filler_character")
-                           )
+                    method.CreateUtPassthrough("\"starting_world\"", "self.starting_world")
+                          .CreateUtPassthrough("\"starting_level\"", "self.starting_level")
+                          .CreateUtPassthrough("\"starting_character\"", "self.starting_character")
+                          .CreateUtPassthrough("\"starting_filler_character\"", "self.starting_filler_character")
                 , yamlNeeded: false
             )
            .UseGenerateEarly(method =>
-                method
-                   .AddCode(CreatePushPrecollected("Bounce Pad"))
-                   .AddCode(CreatePushPrecollected("self.starting_world", stringify: false))
-                   .AddCode(CreatePushPrecollected("self.starting_level", stringify: false))
-                   .AddCode(CreatePushPrecollected("self.starting_character", stringify: false))
-                   .AddCode(CreatePushPrecollected("self.starting_filler_character", stringify: false))
+                method.CreatePushPrecollected("Bounce Pad")
+                      .CreatePushPrecollected("self.starting_world", stringify: false)
+                      .CreatePushPrecollected("self.starting_level", stringify: false)
+                      .CreatePushPrecollected("self.starting_character", stringify: false)
+                      .CreatePushPrecollected("self.starting_filler_character", stringify: false)
             )
            .UseCreateRegions()
            .AddCreateItems()
-           .UseSetRules(method => method
-               .AddCode(CreateGoalCondition(StateHas("Gold Crown", "options.goal_crowns", returnValue: false)))
-            )
+           .UseSetRules(method => method.CreateGoalCompiledCondition("hasN[\"Gold Crown\", options.goal_crowns]"))
            .UseGetFillerItemName("Vinyl")
            .UseFillSlotData(
                 new Dictionary<string, string>
@@ -239,7 +231,7 @@ public class FunkoFusion : BuildData
                 }
             )
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
-           .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
+           .UseGenerateOutput(method => method.PumlGenCode());
     }
 
     public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,

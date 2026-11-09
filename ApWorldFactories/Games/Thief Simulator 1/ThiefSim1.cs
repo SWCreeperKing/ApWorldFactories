@@ -1,7 +1,6 @@
 ﻿using CreepyUtil.Archipelago.WorldFactory;
 using WorldBuilder;
 using static ApWorldFactories.PathConstants;
-using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 
 namespace ApWorldFactories.Games.Thief_Simulator_1;
 
@@ -56,7 +55,7 @@ public class ThiefSim1 : BuildData
         item_fact.AddItemListVariable(
                       "items", ItemFactory.ItemClassification.Progression, list: [.. ItemNames.Select(s => s.RawName)]
                   )
-                 .AddCreateItems(method => method.AddCode(CreateItemsFromList("items")));
+                 .AddCreateItems(method => method.CreateItemsFromList("items"));
     }
 
     public override void Rules(WorldFactory _, RuleFactory rule_fact)

@@ -1,7 +1,6 @@
 ﻿using CreepyUtil.Archipelago.WorldFactory;
 using WorldBuilder;
 using static ApWorldFactories.PathConstants;
-using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 
 namespace ApWorldFactories.Games.The_WereCleaner;
 
@@ -66,10 +65,7 @@ public class WereCleaner : BuildData
            .AddItems(ItemFactory.ItemClassification.Progression, items: Abilities)
            .AddItems(ItemFactory.ItemClassification.Progression, items: DayUnlocks)
            .AddItem("Floor Penny", ItemFactory.ItemClassification.Filler)
-           .AddCreateItems(method => method
-                                    .AddCode(CreateItemsFromClassificationList())
-                                    .AddCode(CreateItemsFillRemainingWithItem("Floor Penny"))
-            );
+           .AddCreateItems(method => method.CreateItemsFromClassificationList().FillRemainingWithItem("Floor Penny"));
     }
 
     public override void Rules(WorldFactory _, RuleFactory rule_fact)
@@ -123,13 +119,11 @@ public class WereCleaner : BuildData
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
            .UseCreateRegions()
            .AddCreateItems()
-           .UseSetRules(method => method
-               .AddCode(CreateGoalCondition(StateHas("Nights Survived", "7", returnValue: false)))
-            )
+           .UseSetRules(method => method.CreateGoalCompiledCondition("hasN[\"Nights Survived\", 7]"))
            .UseGetFillerItemName("Floor Penny")
            .UseFillSlotData(new Dictionary<string, string> { ["Kyle"] = "str(\"Best Boi\")" })
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
-           .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
+           .UseGenerateOutput(method => method.PumlGenCode());
     }
 
     public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,

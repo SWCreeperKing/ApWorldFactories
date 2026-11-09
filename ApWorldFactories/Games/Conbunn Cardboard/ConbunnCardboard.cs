@@ -2,7 +2,6 @@
 using WorldBuilder;
 using static ApWorldFactories.PathConstants;
 using static CreepyUtil.Archipelago.WorldFactory.ItemFactory.ItemClassification;
-using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 using Range = CreepyUtil.Archipelago.WorldFactory.Range;
 
 namespace ApWorldFactories.Games.Conbunn_Cardboard;
@@ -53,10 +52,12 @@ public class ConbunnCardboard : BuildData
         WriteData("LocationIds", LocationIdMap.Select(kv => $"{kv.Key}:{kv.Value}"));
         WriteData(
             "TransitionIds",
-            ConnectionRowData.Where(data => data.HasTransition).Select(data => $"{data.TransitionName}:{RegionMap.GetValueOrDefault(data.To, data.To)}")
+            ConnectionRowData.Where(data => data.HasTransition)
+                             .Select(data => $"{data.TransitionName}:{RegionMap.GetValueOrDefault(data.To, data.To)}")
         );
         WriteData(
-            "LocationDoors", RegionData.Where(data => data.HasDoor).Select(data => $"{data.RegionName},{data.DoorFrame}")
+            "LocationDoors",
+            RegionData.Where(data => data.HasDoor).Select(data => $"{data.RegionName},{data.DoorFrame}")
         );
         WriteData(
             "SkinData",
@@ -68,7 +69,7 @@ public class ConbunnCardboard : BuildData
     {
         options_fact
            .AddOption("CDs Required To Goal", "The amount of CDs required to goal", new Range(25, 5, 40))
-           .AddCheckOptions(method => method.AddCode(CreateMinimalCatch(GameName)));
+           .AddCheckOptions(method => method.CreateMinimalCatch());
     }
 
     public override void Locations(WorldFactory _, LocationFactory location_fact)
@@ -95,10 +96,10 @@ public class ConbunnCardboard : BuildData
            .AddItemListVariable("abilities", Progression, list: [.. AbilityData.Select(data => data.Name)])
            .AddItemCountVariable("CDs", new Dictionary<string, int> { ["CD"] = 40 }, Progression)
            .AddItem("Cardboard Coin", Filler)
-           .AddCreateItems(method => method.AddCode(CreateItemsFromList("unlocks"))
-                                           .AddCode(CreateItemsFromList("abilities"))
-                                           .AddCode(CreateItemsFromMapCountGenCode("CDs"))
-                                           .AddCode(CreateItemsFillRemainingWithItem("Cardboard Coin"))
+           .AddCreateItems(method => method.CreateItemsFromList("unlocks")
+                                           .CreateItemsFromList("abilities")
+                                           .CreateItemsFromMapCountGenCode("CDs")
+                                           .FillRemainingWithItem("Cardboard Coin")
             );
     }
 
@@ -142,17 +143,14 @@ public class ConbunnCardboard : BuildData
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
            .UseCreateRegions()
            .AddCreateItems()
-           .UseSetRules(method => method.AddCode(
-                    CreateGoalCondition(StateHas("CD", "self.options.cds_required_to_goal", returnValue: false))
-                )
-            )
+           .UseSetRules(method => method.CreateGoalCompiledCondition("hasN[\"CD\", self.options.cds_required_to_goal]"))
            .UseFillSlotData(
                 new Dictionary<string, string> { ["uuid"] = "str(shuffled)" },
-                method => method.AddCode(CreateUniqueId())
+                method => method.CreateUniqueId()
             )
            .UseGetFillerItemName("Cardboard Coin")
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
-           .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
+           .UseGenerateOutput(method => method.PumlGenCode());
     }
 
     public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,

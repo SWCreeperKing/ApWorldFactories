@@ -1,7 +1,6 @@
 ﻿using CreepyUtil.Archipelago.WorldFactory;
 using WorldBuilder;
 using static CreepyUtil.Archipelago.WorldFactory.ItemFactory.ItemClassification;
-using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 using LocationData = CreepyUtil.Archipelago.WorldFactory.LocationData;
 
 namespace ApWorldFactories.Games.Atlyss;
@@ -229,7 +228,7 @@ public class Atlyss : BuildData
                 {
                     KindsOfItems.Add($"{pair.Key}");
                     item_fact.AddItemCountVariable(
-                        $"item_counts_{pair.Key}".ToLower(), pair.Value, pair.Key,
+                        $"item_counts_{pair.Key}".ToLowerInvariant(), pair.Value, pair.Key,
                         addToList: false
                     );
                 }
@@ -237,7 +236,7 @@ public class Atlyss : BuildData
            .ForEachOf(
                 ItemData.GroupBy(data => data.Classification),
                 data => item_fact.AddItemListVariable(
-                    $"{data.Key}_items".ToLower(), data.Key,
+                    $"{data.Key}_items".ToLowerInvariant(), data.Key,
                     list: [.. data.Select(d => d.Name)]
                 )
             )
@@ -260,31 +259,29 @@ public class Atlyss : BuildData
            .AddCreateItems(factory =>
                 factory
                    .AddCode("random = world.random")
-                   .AddCode(CreateItemsFromMapCountGenCode("any_progressives"))
-                   .AddCode(addFighter)
-                   .AddCode(addMystic)
-                   .AddCode(addBandit)
+                   .CreateItemsFromMapCountGenCode("any_progressives")
+                   .AddCode(addFighter(factory))
+                   .AddCode(addMystic(factory))
+                   .AddCode(addBandit(factory))
                    .ForEachOf(
-                        KindsOfItems, item => factory.AddCode(CreateItemsFromMapCountGenCode($"item_counts_{item.ToLower()}"))
+                        KindsOfItems,
+                        item => factory.CreateItemsFromMapCountGenCode($"item_counts_{item.ToLowerInvariant()}")
                     )
                    .AddCode(
-                        new IfFactory("options.random_portals").AddCode(CreateItemsFromList("portals")).SetElse(
-                            new CodeBlockFactory().AddCode(
-                                CreateItemsFromCountGenCode(
-                                    $"{LocationLevelData.Max(data => data.ProgressivePortalCount)}",
-                                    "Progressive Portal"
+                        new IfFactory("options.random_portals")
+                           .AddCode(factory.Raw_CreateItemsFromList("portals"))
+                           .SetElse(
+                                new CodeBlockFactory().AddCode(
+                                    factory.Raw_CreateItemsFromCountGenCode(
+                                        $"{LocationLevelData.Max(data => data.ProgressivePortalCount)}",
+                                        "Progressive Portal"
+                                    )
                                 )
                             )
-                        )
                     )
                    .AddCode("filler_items = [key for key, value in filler_weights.items()]")
                    .AddCode("filler_weightings = [value for key, value in filler_weights.items()]")
-                   .AddCode(
-                        CreateItemsFillRemainingWithItem(
-                            "random.choices(filler_items, filler_weightings)[0]",
-                            false
-                        )
-                    )
+                   .FillRemainingWithItem("random.choices(filler_items, filler_weightings)[0]", false)
             );
 
         WriteData("progressiveItemMap", progressiveItemMap.Select(s => s.Trim('"')));
@@ -298,11 +295,11 @@ public class Atlyss : BuildData
                 "area", "has_area",
                 $$"""
                   if not state.multiworld.worlds[player].options.random_portals:
-                    return {{StateHas("Progressive Portal", "portal_counts[area]", true, false)}}
+                    return {{WorldFactory.StateHas("Progressive Portal", "portal_counts[area]", true, false)}}
                   if area.startswith("Sanctum Catacombs"):
                     area = "Catacombs"
                   portal = f"{area} Portal"
-                  {{StateHas("portal", stringify: false)}}
+                  {{WorldFactory.StateHas("portal", stringify: false)}}
                   """, "area"
             )
            .AddLogicFunction(
@@ -396,7 +393,6 @@ public class Atlyss : BuildData
 
     public override void Init(WorldFactory factory, WorldInitFactory init_fact)
     {
-        var rule_fact = factory.GetRuleFactory();
         init_fact.UseInitFunction()
                  .UseGenerateEarly()
                  .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
@@ -405,24 +401,24 @@ public class Atlyss : BuildData
                  .UseSetRules(method =>
                       method.AddCode(
                           new MatchFactory("options.goal")
-                             .AddCase("0", CreateGoalCondition("enemy['Slime Diva']", rule_fact))
-                             .AddCase("1", CreateGoalCondition("enemy['Lord Zuulneruda']", rule_fact))
-                             .AddCase("2", CreateGoalCondition("enemy['Colossus']", rule_fact))
-                             .AddCase("3", CreateGoalCondition("enemy['Galius']", rule_fact))
-                             .AddCase("4", CreateGoalCondition("enemy['Lord Kaluuz']", rule_fact))
-                             .AddCase("5", CreateGoalCondition("enemy['Valdur']", rule_fact))
+                             .AddCase("0", method.Raw_CreateGoalCondition("enemy['Slime Diva']"))
+                             .AddCase("1", method.Raw_CreateGoalCondition("enemy['Lord Zuulneruda']"))
+                             .AddCase("2", method.Raw_CreateGoalCondition("enemy['Colossus']"))
+                             .AddCase("3", method.Raw_CreateGoalCondition("enemy['Galius']"))
+                             .AddCase("4", method.Raw_CreateGoalCondition("enemy['Lord Kaluuz']"))
+                             .AddCase("5", method.Raw_CreateGoalCondition("enemy['Valdur']"))
                              .AddCase(
                                   "6",
-                                  CreateGoalCondition(
+                                  method.Raw_CreateGoalCondition(
                                       string.Join(
                                           " and ",
                                           EnemyListData.Where(data => data.IsBoss)
                                                        .Select(data => $"enemy[\"{data.Name}\"]")
-                                      ), rule_fact
+                                      )
                                   )
                               )
                              .AddCase(
-                                  "7", CreateGoalCondition(
+                                  "7", method.Raw_CreateGoalCondition(
                                       string.Join(
                                           " and ", QuestData
                                                   .Where(data => data.Enabled
@@ -430,15 +426,15 @@ public class Atlyss : BuildData
                                                                  )
                                                    )
                                                   .Select(data => $"quest[\"{data.Quest}\"]")
-                                      ), rule_fact
+                                      )
                                   )
                               )
-                             .AddCase("8", CreateGoalCondition("level[32]", rule_fact))
+                             .AddCase("8", method.Raw_CreateGoalCondition("level[32]"))
                       )
                   )
                  .UseFillSlotData()
                  .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
-                 .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
+                 .UseGenerateOutput(method => method.PumlGenCode());
     }
 
     public override void GenerateJson(WorldFactory worldFactory) => worldFactory.GenerateArchipelagoJson(
@@ -450,7 +446,7 @@ public class Atlyss : BuildData
 
     private void GetMaxProgressive(string className, ClassType classType, List<string> progressiveItemMapMd,
         ItemFactory item_fact,
-        List<string> progressiveItemMap, out IfFactory addCode)
+        List<string> progressiveItemMap, out Func<ItemFactoryMethodFactory, IfFactory> addCode)
     {
         progressiveItemMapMd.AddRange(
             "<details>",
@@ -503,9 +499,9 @@ public class Atlyss : BuildData
             );
 
         progressiveItemMapMd.Add("</details>");
-        addCode =
-            new IfFactory($"options.is_class('{classType}')".ToLower()).AddCode(
-                CreateItemsFromMapCountGenCode($"{classType}_progressives".ToLower())
+        addCode = method =>
+            new IfFactory($"options.is_class('{classType}')".ToLowerInvariant()).AddCode(
+                method.CreateItemsFromMapCountGenCode($"{classType}_progressives".ToLowerInvariant())
             );
     }
 

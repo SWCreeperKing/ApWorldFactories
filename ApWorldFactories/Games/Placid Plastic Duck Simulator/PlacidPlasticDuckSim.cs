@@ -2,7 +2,6 @@
 using WorldBuilder;
 using static ApWorldFactories.PathConstants;
 using static CreepyUtil.Archipelago.WorldFactory.ItemFactory.ItemClassification;
-using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 
 namespace ApWorldFactories.Games.Placid_Plastic_Duck_Simulator;
 
@@ -72,25 +71,27 @@ public class PlacidPlasticDuckSim : BuildData
                  .AddItem("Random Duck", Filler)
                  .AddItemListVariable("dlc_items", Progression, list: [.. DlcItems.Select(dlc => dlc.ItemName())])
                  .AddCreateItems(method =>
-                      method.AddCode(CreateItemsFromCountGenCode("9", "Progressive Column Unlock"))
-                            .AddCode(CreateItemsFromCountGenCode("9", "Progressive Spawn Speed Upgrade"))
+                      method.CreateItemsFromCountGenCode("9", "Progressive Column Unlock")
+                            .CreateItemsFromCountGenCode("9", "Progressive Spawn Speed Upgrade")
                             .ForEachOf(
                                  DlcItems, (b, dlc) => b.AddCode(
                                      new IfFactory($"options.{dlc.OptionName()}")
-                                        .AddCode(CreateItem(dlc.ItemName()))
+                                        .AddCode(method.Raw_CreateItem(dlc.ItemName()))
                                  )
                              )
-                            .AddCode(CreateItemsFillRemainingWithItem("Random Duck"))
+                            .FillRemainingWithItem("Random Duck")
                   );
     }
 
-    public override void Rules(WorldFactory _, RuleFactory rule_fact) 
+    public override void Rules(WorldFactory _, RuleFactory rule_fact)
         => rule_fact.AddCompoundLogicFunction(
-        "col", "has_column", "hasN[\"Progressive Column Unlock\", number - 1]", "number"
-    )
-   .AddLogicRules(
-        DuckRowData.Where(data => data.DlcType is not DlcType.BaseGame).ToDictionary(data => data.DuckName, data => $"has[\"{data.DlcType.ItemName()}\"]")
-        );
+                         "col", "has_column", "hasN[\"Progressive Column Unlock\", number - 1]", "number"
+                     )
+                    .AddLogicRules(
+                         DuckRowData.Where(data => data.DlcType is not DlcType.BaseGame).ToDictionary(
+                             data => data.DuckName, data => $"has[\"{data.DlcType.ItemName()}\"]"
+                         )
+                     );
 
     public override void Regions(WorldFactory _, RegionFactory region_fact)
     {
@@ -116,11 +117,11 @@ public class PlacidPlasticDuckSim : BuildData
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
            .UseCreateRegions()
            .AddCreateItems()
-           .UseSetRules(method => method.AddCode(CreateGoalCondition("col[10]", world_fact.GetRuleFactory())))
+           .UseSetRules(method => method.CreateGoalCompiledCondition("col[10]"))
            .UseFillSlotData()
            .UseGetFillerItemName("Random Duck")
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
-           .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
+           .UseGenerateOutput(method => method.PumlGenCode());
     }
 
     public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,

@@ -1,7 +1,6 @@
 ﻿using CreepyUtil.Archipelago.WorldFactory;
 using WorldBuilder;
 using static ApWorldFactories.PathConstants;
-using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 
 namespace ApWorldFactories.Games.Poco;
 
@@ -51,9 +50,7 @@ public class Poco : BuildData
                       list: [.. ItemData.Select(data => data.Name)]
                   )
                  .AddItem("Clown Nose", ItemFactory.ItemClassification.Filler)
-                 .AddCreateItems(method => method.AddCode(CreateItemsFromList("items"))
-                                                 .AddCode(CreateItemsFillRemainingWithItem("Clown Nose"))
-                  );
+                 .AddCreateItems(method => method.CreateItemsFromList("items").FillRemainingWithItem("Clown Nose"));
     }
 
     public override void Rules(WorldFactory _, RuleFactory rule_fact)
@@ -105,20 +102,17 @@ public class Poco : BuildData
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
            .UseCreateRegions()
            .AddCreateItems()
-           .UseSetRules(method => method.AddCode(
-                    CreateGoalCondition(
-                        string.Join(" and ", NpcQuestData.Select(data => $"has[\"{data.QuestItem}\"]")),
-                        worldFactory.GetRuleFactory()
-                    )
+           .UseSetRules(method => method.CreateGoalCompiledCondition(
+                    string.Join(" and ", NpcQuestData.Select(data => $"has[\"{data.QuestItem}\"]"))
                 )
             )
            .UseFillSlotData(
                 new Dictionary<string, string> { ["uuid"] = "str(shuffled)" },
-                method => method.AddCode(CreateUniqueId())
+                method => method.CreateUniqueId()
             )
            .UseGetFillerItemName("Clown Nose")
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
-           .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
+           .UseGenerateOutput(method => method.PumlGenCode());
     }
 
     public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,

@@ -2,7 +2,6 @@
 using WorldBuilder;
 using static ApWorldFactories.PathConstants;
 using static CreepyUtil.Archipelago.WorldFactory.ItemFactory.ItemClassification;
-using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 using Range = CreepyUtil.Archipelago.WorldFactory.Range;
 
 namespace ApWorldFactories.Games.Slime_Rancher;
@@ -271,7 +270,7 @@ public class SlimeRancher : BuildData
                     if options.goal_type == 1 and not options.include_7z:
                         raise_yaml_error(world.player, "7Zee goal type requires you to include 7Zee locations")
                     """
-                ).AddCode(CreateMinimalCatch(GameName))
+                ).CreateMinimalCatch()
             );
     }
 
@@ -335,24 +334,21 @@ public class SlimeRancher : BuildData
                              pool.append(world.create_item(zone))
                          """
                      ).AddNewLine()
-                    .AddCode(CreateItemsFromMapCountGenCode("non_progressive_useful_items")).AddNewLine()
-                    .AddCode(CreateItemsFromMapCountGenCode("progressive_useful_item_count")).AddNewLine()
-                    .AddCode(CreateItemsFromMapCountGenCode("progressive_progression_item_count")).AddNewLine()
+                    .CreateItemsFromMapCountGenCode("non_progressive_useful_items").AddNewLine()
+                    .CreateItemsFromMapCountGenCode("progressive_useful_item_count").AddNewLine()
+                    .CreateItemsFromMapCountGenCode("progressive_progression_item_count").AddNewLine()
                     .AddCode(
                          new IfFactory("options.gadgetsanity")
-                            .AddCode(CreateItemsFromList("blueprint_items"))
+                            .AddCode(func.Raw_CreateItemsFromList("blueprint_items"))
                      )
                     .AddCode(
                          new IfFactory("options.goal_type == 3").AddCode(
-                             CreateItemsFromCountGenCode("options.mail_count", "Casey's Letter")
+                             func.Raw_CreateItemsFromCountGenCode("options.mail_count", "Casey's Letter")
                          )
                      ).AddNewLine()
-                    .AddCode(
-                         CreateItemsFromCountGenCode(
-                             "int(world.location_count * (options.trap_percent / 100))", "Trap Slime"
-                         )
-                     )
-                    .AddCode(CreateItemsFillRemainingWith("filler_items"))
+                    .CreateItemsFromCountGenCode(
+                         "int(world.location_count * (options.trap_percent / 100))", "Trap Slime"
+                     ).FillRemainingWith("filler_items")
             )
            .AddIndependentVariable(
                 new StringArray(
@@ -549,7 +545,6 @@ public class SlimeRancher : BuildData
 
     public override void Init(WorldFactory world_fact, WorldInitFactory init_fact)
     {
-        var rule_fact = world_fact.GetRuleFactory();
         init_fact
            .UseItemGroups(
                 new Dictionary<string, string> { ["unlocks"] = "region_unlocks", ["blueprints"] = "blueprint_items" }
@@ -566,39 +561,35 @@ public class SlimeRancher : BuildData
            .UseGenerateEarly()
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
            .UseGenerateEarly(method =>
-                method.AddCode(CreatePushPrecollected("Region Unlock: Dry Reef", "self.options.start_with_dry_reef"))
-                      .AddCode(CreatePushPrecollected("Drone", "self.options.start_with_drone"))
-                      .AddCode(
-                           CreatePushPrecollected("Region Unlock: Ogden's Retreat", "not self.options.include_ogden")
-                       )
-                      .AddCode(CreatePushPrecollected("Region Unlock: The Wilds", "not self.options.include_ogden"))
-                      .AddCode(CreatePushPrecollected("Region Unlock: Mochi's Manor", "not self.options.include_mochi"))
-                      .AddCode(CreatePushPrecollected("Region Unlock: Nimble Valley", "not self.options.include_mochi"))
-                      .AddCode(
-                           CreatePushPrecollected("Region Unlock: Viktor's Workshop", "not self.options.include_viktor")
-                       )
-                      .AddCode(
-                           CreatePushPrecollected("Region Unlock: The Slimeulations", "not self.options.include_viktor")
-                       )
+                method.CreatePushPrecollected("Region Unlock: Dry Reef", "self.options.start_with_dry_reef")
+                      .CreatePushPrecollected("Drone", "self.options.start_with_drone")
+                      .CreatePushPrecollected("Region Unlock: Ogden's Retreat", "not self.options.include_ogden")
+                      .CreatePushPrecollected("Region Unlock: The Wilds", "not self.options.include_ogden")
+                      .CreatePushPrecollected("Region Unlock: Mochi's Manor", "not self.options.include_mochi")
+                      .CreatePushPrecollected("Region Unlock: Nimble Valley", "not self.options.include_mochi")
+                      .CreatePushPrecollected("Region Unlock: Viktor's Workshop", "not self.options.include_viktor")
+                      .CreatePushPrecollected("Region Unlock: The Slimeulations", "not self.options.include_viktor")
             )
            .UseCreateRegions()
            .AddCreateItems()
            .UseSetRules(method =>
                 method.AddCode(
                     new MatchFactory("self.options.goal_type")
-                       .AddCase("0", CreateGoalCondition("hasN[\"Note Read\", 30]", rule_fact))
-                       .AddCase("1", CreateGoalCondition($"7zee[{CorporateLocationMap.Keys.Max()}]", rule_fact))
-                       .AddCase("2", CreateGoalCondition("all[credits_unlocks]", rule_fact))
-                       .AddCase("3", CreateGoalCondition("hasN[\"Casey's Letter\", options.mail_count]", rule_fact))
+                       .AddCase("0", method.Raw_CreateGoalCompiledCondition("hasN[\"Note Read\", 30]"))
+                       .AddCase("1", method.Raw_CreateGoalCompiledCondition($"7zee[{CorporateLocationMap.Keys.Max()}]"))
+                       .AddCase("2", method.Raw_CreateGoalCompiledCondition("all[credits_unlocks]"))
+                       .AddCase(
+                            "3", method.Raw_CreateGoalCompiledCondition("hasN[\"Casey's Letter\", options.mail_count]")
+                        )
                 )
             )
            .UseFillSlotData(
                 new Dictionary<string, string> { ["uuid"] = "str(shuffled)" },
-                method => method.AddCode(CreateUniqueId())
+                method => method.CreateUniqueId()
             )
            .UseGetFillerItemNames(FillerItems)
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
-           .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
+           .UseGenerateOutput(method => method.PumlGenCode());
     }
 
     public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,

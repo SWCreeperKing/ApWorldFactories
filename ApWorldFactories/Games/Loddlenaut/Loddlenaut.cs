@@ -1,7 +1,6 @@
 ﻿using CreepyUtil.Archipelago.WorldFactory;
 using WorldBuilder;
 using static ApWorldFactories.PathConstants;
-using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 
 namespace ApWorldFactories.Games.Loddlenaut;
 
@@ -112,13 +111,10 @@ public class Loddlenaut : BuildData
                   )
                  .AddCreateItems(method =>
                       method
-                         .AddCode(
-                              // CreateItemsFromList("region_unlocks", exclusionCondition: "item == world.starting_region")
-                              CreateItemsFromList("region_unlocks")
-                          )
-                         .AddCode(CreateItemsFromMapCountGenCode("progression_items"))
-                         .AddCode(CreateItemsFromMapCountGenCode("useful_items"))
-                         .AddCode(CreateItemsFillRemainingWith("list(filler_items.keys())"))
+                         .CreateItemsFromList("region_unlocks")
+                         .CreateItemsFromMapCountGenCode("progression_items")
+                         .CreateItemsFromMapCountGenCode("useful_items")
+                         .FillRemainingWith("list(filler_items.keys())")
                   );
     }
 
@@ -156,7 +152,7 @@ public class Loddlenaut : BuildData
            .AddLocationsFromList("find_biomes")
            .AddLocationsFromList("upgrades")
            .AddLocationsFromList("badges")
-           .AddLocationsFromList("recipes", condition:"options.cooksanity")
+           .AddLocationsFromList("recipes", condition: "options.cooksanity")
            .AddLocationsFromList("evolutions")
            .AddEventLocations(
                 locations:
@@ -189,7 +185,7 @@ public class Loddlenaut : BuildData
             if (RegionsWithUnlock.Contains(RegionIdMap[regionB]) && RegionIdMap[regionA] is not "Home Cave")
                 rules.Add($"has[\"{RegionIdMap[regionB]}\"]");
 
-            if ( RegionRegionDataMap[regionB].RegionRequirements.Length != 0)
+            if (RegionRegionDataMap[regionB].RegionRequirements.Length != 0)
                 rules.AddRange(RegionRegionDataMap[regionB].RegionRequirements.Select(r => $"has[\"{r}\"]"));
 
             if (rules.Count != 0)
@@ -213,12 +209,10 @@ public class Loddlenaut : BuildData
             // .UseGenerateEarly(method => method.AddCode(CreatePushPrecollected("self.starting_region", stringify: false)))
            .UseCreateRegions()
            .AddCreateItems()
-           .UseSetRules(method => method
-               .AddCode(CreateGoalCondition(StateHas("Biomes Cleaned", $"{BiomeRowData.Length}", returnValue: false)))
-            )
+           .UseSetRules(method => method.CreateGoalCompiledCondition($"has[\"Biomes Cleaned\", {BiomeRowData.Length}]"))
            .UseFillSlotData(
                 new Dictionary<string, string> { ["uuid"] = "str(shuffled)" },
-                method => method.AddCode(CreateUniqueId())
+                method => method.CreateUniqueId()
             )
            .UseGetFillerItemNames(
                 [
@@ -227,7 +221,7 @@ public class Loddlenaut : BuildData
                 ]
             )
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
-           .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
+           .UseGenerateOutput(method => method.PumlGenCode());
     }
 
     public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,

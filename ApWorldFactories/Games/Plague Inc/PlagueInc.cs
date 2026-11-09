@@ -1,7 +1,6 @@
 ﻿using CreepyUtil.Archipelago.WorldFactory;
 using WorldBuilder;
 using static CreepyUtil.Archipelago.WorldFactory.ItemFactory.ItemClassification;
-using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 using static ApWorldFactories.PathConstants;
 
 namespace ApWorldFactories.Games.Plague_Inc;
@@ -31,7 +30,9 @@ public class PlagueInc : BuildData
     private Dictionary<string, string> Diseases = [];
     public Dictionary<int, int[]> hexAdjacency = [];
     private TechData.SingledOutTechData[] VictoryScores = [];
+
     private (string name, string disease, string diff, int score)[] DifficultyVictory = [];
+
     //                          disease            tab     nodes
     private readonly Dictionary<string, Dictionary<string, HexMap>> HexMap = [];
 
@@ -188,20 +189,18 @@ public class PlagueInc : BuildData
                       .Select(data => data.Name),
                 ]
             )
-           .AddItemListVariable(
-                "difficulties", Progression, list: [.. DifficultyData.Select(data => data.Difficulty)]
-            )
+           .AddItemListVariable("difficulties", Progression, list: [.. DifficultyData.Select(data => data.Difficulty)])
            .AddItemListVariable("diseases", Progression, list: [.. Diseases.Keys])
            .AddItem("A Sickly Sensation", Filler)
            .AddCreateItems(method =>
                 {
-                    method.AddCode(CreateItemsFromList("tech_items"))
+                    method.CreateItemsFromList("tech_items")
                           .ForEachOf(
                                DifficultyData,
                                data => method.AddCode(
                                    new IfFactory(
                                        $"{data.Difficulty.OptionFormat(suffix: "_difficulty")} and world.starting_diff != \"{data.Difficulty}\""
-                                   ).AddCode(CreateItem(data.Difficulty))
+                                   ).AddCode(method.Raw_CreateItem(data.Difficulty))
                                )
                            ).ForEachOf(
                                Diseases.Keys,
@@ -209,9 +208,9 @@ public class PlagueInc : BuildData
                                    new IfFactory(
                                            $"{disease.OptionFormat()} and world.starting_disease != \"{disease}\""
                                        )
-                                      .AddCode(CreateItem(disease))
+                                      .AddCode(method.Raw_CreateItem(disease))
                                )
-                           ).AddCode(CreateItemsFillRemainingWithItem("A Sickly Sensation"));
+                           ).FillRemainingWithItem("A Sickly Sensation");
                 }
             );
     }
@@ -264,24 +263,24 @@ public class PlagueInc : BuildData
             )
            .AddUseUniversalTrackerPassthrough(
                 yamlNeeded: false,
-                utBlock: factory1 => factory1.AddCode(CreateUtPassthrough("\"victories_needed\"", "victories_needed"))
+                utBlock: factory1 => factory1.CreateUtPassthrough("\"victories_needed\"", "victories_needed")
             )
-           .UseGenerateEarly(method => method.AddCode(CreatePushPrecollected("self.starting_diff", stringify: false))
-                                             .AddCode(CreatePushPrecollected("self.starting_disease", stringify: false))
+           .UseGenerateEarly(method => method.CreatePushPrecollected("self.starting_diff", stringify: false)
+                                             .CreatePushPrecollected("self.starting_disease", stringify: false)
                                              .AddCode(
                                                   new ForLoopFactory("always_avail_tech", "always_tech").AddCode(
-                                                      CreatePushPrecollected("always_avail_tech", stringify: false)
+                                                      method.Raw_CreatePushPrecollected(
+                                                          "always_avail_tech", stringify: false
+                                                      )
                                                   )
                                               )
             )
            .UseCreateRegions()
            .AddCreateItems()
-           .UseSetRules(method => method
-               .AddCode(CreateGoalCondition(StateHas("Victory", "self.victories_needed", returnValue: false)))
-            )
+           .UseSetRules(method => method.CreateGoalCompiledCondition("hasN[\"Victory\", self.victories_needed]"))
            .UseFillSlotData(new Dictionary<string, string> { ["victories_needed"] = "int(self.victories_needed)" })
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))
-           .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
+           .UseGenerateOutput(method => method.PumlGenCode());
     }
 
     public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,

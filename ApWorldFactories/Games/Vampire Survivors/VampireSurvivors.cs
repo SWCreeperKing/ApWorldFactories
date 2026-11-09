@@ -2,7 +2,6 @@
 using WorldBuilder;
 using static ApWorldFactories.PathConstants;
 using static ApWorldFactories.Games.Vampire_Survivors.CodeBank;
-using static CreepyUtil.Archipelago.WorldFactory.PremadePython;
 using Range = CreepyUtil.Archipelago.WorldFactory.Range;
 
 namespace ApWorldFactories.Games.Vampire_Survivors;
@@ -458,50 +457,45 @@ public class VampireSurvivors : BuildData
                  .AddToFinalLocationList("**{item: ItemClassification.progression for item in unlock_stage_items}")
                  .AddToFinalLocationList("**{item: ItemClassification.progression for item in unlock_gamemodes}")
                  .AddToFinalLocationList("**{item: ItemClassification.filler for item in filler_items}")
-                 .AddCreateItems(method => method
-                                          .AddCode(new Variable("stages", "world.final_included_stages_list"))
-                                          .AddCode(new Variable("characters", "world.final_included_characters_list"))
-                                          .AddCode(
-                                               new ForLoopFactory("stage", "stages")
-                                                  .AddCode(
-                                                       new IfFactory("stage == world.starting_stage").AddCode(
-                                                           "continue"
-                                                       )
-                                                   )
-                                                  .AddCode("pool.append(world.create_item(f\"Stage Unlock: {stage}\"))")
-                                           )
-                                          .AddCode(
-                                               new ForLoopFactory("character", "characters")
-                                                  .AddCode(
-                                                       new IfFactory("character == world.starting_character")
-                                                          .AddCode("continue")
-                                                   )
-                                                  .AddCode(
-                                                       "pool.append(world.create_item(f\"Character Unlock: {character}\"))"
-                                                   )
-                                           )
-                                          .AddCode(
-                                               new IfFactory("options.lock_hurry_behind_item").AddCode(
-                                                   CreateItem("Gamemode Unlock: Hurry")
-                                               )
-                                           )
-                                          .AddCode(
-                                               new IfFactory("options.lock_hyper_behind_item").AddCode(
-                                                   CreateItem("Gamemode Unlock: Hyper")
-                                               )
-                                           )
-                                          .AddCode(
-                                               new IfFactory("options.lock_arcanas_behind_item").AddCode(
-                                                   CreateItem("Gamemode Unlock: Arcanas")
-                                               )
-                                           )
-                                          .AddCode(
-                                               new IfFactory("options.egg_inclusion").AddCode(
-                                                   CreateItem("Gamemode Unlock: Eggs")
-                                               )
-                                           )
-                                          .AddCode("world.location_count -= (len(stages) - 1) + (len(characters) - 1)")
-                                          .AddCode(CreateItemsFillRemainingWith("filler_items"))
+                 .AddCreateItems(method =>
+                      method
+                         .AddCode(new Variable("stages", "world.final_included_stages_list"))
+                         .AddCode(new Variable("characters", "world.final_included_characters_list"))
+                         .AddCode(
+                              new ForLoopFactory("stage", "stages")
+                                 .AddCode(new IfFactory("stage == world.starting_stage").AddCode("continue"))
+                                 .AddCode("pool.append(world.create_item(f\"Stage Unlock: {stage}\"))")
+                          )
+                         .AddCode(
+                              new ForLoopFactory("character", "characters")
+                                 .AddCode(
+                                      new IfFactory("character == world.starting_character")
+                                         .AddCode("continue")
+                                  )
+                                 .AddCode("pool.append(world.create_item(f\"Character Unlock: {character}\"))")
+                          )
+                         .AddCode(
+                              new IfFactory("options.lock_hurry_behind_item").AddCode(
+                                  method.Raw_CreateItem("Gamemode Unlock: Hurry")
+                              )
+                          )
+                         .AddCode(
+                              new IfFactory("options.lock_hyper_behind_item").AddCode(
+                                  method.Raw_CreateItem("Gamemode Unlock: Hyper")
+                              )
+                          )
+                         .AddCode(
+                              new IfFactory("options.lock_arcanas_behind_item").AddCode(
+                                  method.Raw_CreateItem("Gamemode Unlock: Arcanas")
+                              )
+                          )
+                         .AddCode(
+                              new IfFactory("options.egg_inclusion").AddCode(
+                                  method.Raw_CreateItem("Gamemode Unlock: Eggs")
+                              )
+                          )
+                         .AddCode("world.location_count -= (len(stages) - 1) + (len(characters) - 1)")
+                         .FillRemainingWith("filler_items")
                   );
     }
 
@@ -645,27 +639,11 @@ public class VampireSurvivors : BuildData
             )
            .AddUseUniversalTrackerPassthrough(
                 method => method
-                         .AddCode(CreateUtPassthrough("\"starting_character\"", "self.starting_character"))
-                         .AddCode(CreateUtPassthrough("\"starting_stage\"", "self.starting_stage"))
-                         .AddCode(CreateUtPassthrough("\"final_stages\"", "self.final_included_stages_list"))
-                         .AddCode(CreateUtPassthrough("\"final_chars\"", "self.final_included_characters_list"))
-                         .AddCode(CreateUtPassthrough("\"ending_stage_count\"", "self.ending_stage_count"))
-                         .AddCode(CreatePushPrecollected("f\"Stage Unlock: {self.starting_stage}\"", stringify: false))
-                         .AddCode(
-                              CreatePushPrecollected(
-                                  "f\"Character Unlock: {self.starting_character}\"", stringify: false
-                              )
-                          )
-                         .AddCode(
-                              CreatePushPrecollected(
-                                  "Gamemode Unlock: Arcanas", "self.options.lock_arcanas_behind_item.value"
-                              )
-                          )
-                         .AddCode(
-                              CreatePushPrecollected(
-                                  "Gamemode Unlock: Hurry", "self.options.lock_hurry_behind_item.value"
-                              )
-                          ), true, false
+                         .CreateUtPassthrough("\"starting_character\"", "self.starting_character")
+                         .CreateUtPassthrough("\"starting_stage\"", "self.starting_stage")
+                         .CreateUtPassthrough("\"final_stages\"", "self.final_included_stages_list")
+                         .CreateUtPassthrough("\"final_chars\"", "self.final_included_characters_list")
+                         .CreateUtPassthrough("\"ending_stage_count\"", "self.ending_stage_count"), true, false
             )
            .UseGenerateEarly(method => method.AddCode(GenEarly))
            .UseCreateRegions()
@@ -674,16 +652,12 @@ public class VampireSurvivors : BuildData
                 method.AddCode(
                     new IfFactory("self.options.goal_requirement == 0")
                        .AddCode(
-                            CreateGoalCondition(
-                                "hasN[\"Beat a Stage\", self.stage_goal_amount]",
-                                worldFactory.GetRuleFactory()
-                            )
+                            method.Raw_CreateGoalCompiledCondition("hasN[\"Beat a Stage\", self.stage_goal_amount]")
                         ).AddElseIf(
                             new ElifFactory("self.options.goal_requirement == 1")
                                .AddCode(
-                                    CreateGoalCondition(
-                                        "stage[EUDAI] and hasN[\"Beat a Stage\", self.ending_stage_count]",
-                                        worldFactory.GetRuleFactory()
+                                    method.CreateGoalCompiledCondition(
+                                        "stage[EUDAI] and hasN[\"Beat a Stage\", self.ending_stage_count]"
                                     )
                                 )
                         )
@@ -713,7 +687,7 @@ public class VampireSurvivors : BuildData
                           )
                       )
             )
-           .UseGenerateOutput(method => method.AddCode(PumlGenCode()));
+           .UseGenerateOutput(method => method.PumlGenCode());
     }
 
     public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
