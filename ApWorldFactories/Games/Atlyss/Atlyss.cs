@@ -401,15 +401,15 @@ public class Atlyss : BuildData
                  .UseSetRules(method =>
                       method.AddCode(
                           new MatchFactory("options.goal")
-                             .AddCase("0", method.Raw_CreateGoalCondition("enemy['Slime Diva']"))
-                             .AddCase("1", method.Raw_CreateGoalCondition("enemy['Lord Zuulneruda']"))
-                             .AddCase("2", method.Raw_CreateGoalCondition("enemy['Colossus']"))
-                             .AddCase("3", method.Raw_CreateGoalCondition("enemy['Galius']"))
-                             .AddCase("4", method.Raw_CreateGoalCondition("enemy['Lord Kaluuz']"))
-                             .AddCase("5", method.Raw_CreateGoalCondition("enemy['Valdur']"))
+                             .AddCase("0", method.Raw_CreateGoalCompiledCondition("enemy['Slime Diva']"))
+                             .AddCase("1", method.Raw_CreateGoalCompiledCondition("enemy['Lord Zuulneruda']"))
+                             .AddCase("2", method.Raw_CreateGoalCompiledCondition("enemy['Colossus']"))
+                             .AddCase("3", method.Raw_CreateGoalCompiledCondition("enemy['Galius']"))
+                             .AddCase("4", method.Raw_CreateGoalCompiledCondition("enemy['Lord Kaluuz']"))
+                             .AddCase("5", method.Raw_CreateGoalCompiledCondition("enemy['Valdur']"))
                              .AddCase(
                                   "6",
-                                  method.Raw_CreateGoalCondition(
+                                  method.Raw_CreateGoalCompiledCondition(
                                       string.Join(
                                           " and ",
                                           EnemyListData.Where(data => data.IsBoss)
@@ -418,7 +418,7 @@ public class Atlyss : BuildData
                                   )
                               )
                              .AddCase(
-                                  "7", method.Raw_CreateGoalCondition(
+                                  "7", method.Raw_CreateGoalCompiledCondition(
                                       string.Join(
                                           " and ", QuestData
                                                   .Where(data => data.Enabled
@@ -429,7 +429,7 @@ public class Atlyss : BuildData
                                       )
                                   )
                               )
-                             .AddCase("8", method.Raw_CreateGoalCondition("level[32]"))
+                             .AddCase("8", method.Raw_CreateGoalCompiledCondition("level[32]"))
                       )
                   )
                  .UseFillSlotData()

@@ -216,8 +216,8 @@ public class Dandara : BuildData
            .AddCreateItems()
            .UseSetRules(method => method.AddCode(
                     new MatchFactory("options.goal_type")
-                       .AddCase("0", method.Raw_CreateGoalCondition("has[\"FinalBoss_Kill\"]"))
-                       .AddCase("1", method.Raw_CreateGoalCondition("has[\"DLCF_FearEnded\"]"))
+                       .AddCase("0", method.Raw_CreateGoalCompiledCondition("has[\"FinalBoss_Kill\"]"))
+                       .AddCase("1", method.Raw_CreateGoalCompiledCondition("has[\"DLCF_FearEnded\"]"))
                 )
             )
            .InjectCodeIntoWorld(world => world.AddVariable(new Variable("gen_puml", "False")))

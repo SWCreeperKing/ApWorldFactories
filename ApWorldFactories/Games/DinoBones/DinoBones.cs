@@ -72,7 +72,7 @@ public class DinoBones : BuildData
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
            .UseCreateRegions()
            .AddCreateItems()
-           .UseSetRules(method => method.CreateGoalCondition(
+           .UseSetRules(method => method.Raw_CreateGoalCompiledCondition(
                     string.Join(" and ", CrateNumbers.Select(i => $"crate[{i}]"))
                 )
             )
