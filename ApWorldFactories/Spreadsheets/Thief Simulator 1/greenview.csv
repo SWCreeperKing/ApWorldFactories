@@ -1,650 +1,650 @@
-Area,Connects from,Requirements,,Location,Area,Requirements,Type,Id,Pickup Item,Do not use
-101,Greenview St,"Mini electric lock pick, Lockpick",,Autumn,101,,Painting,neighborhood1_6f0ddf40-2107-4325-8124-66ac8a893c99,,FALSE
-102,102 Yard,Glass knife,,BeeBee,101,,Painting,neighborhood1_05ac68bb-f87f-45ee-8c02-942119d584b0,,FALSE
-102,Greenview St,Front door key 102,,Evening,101,,Painting,,,FALSE
-102 Yard,Greenview St,DIY Simple Lockpick,,Love,101,,Painting,neighborhood1_3e0def95-50d2-421c-857c-7c051ff96e99,,FALSE
-102 Yard,Greenview St,Climbing Gloves,,Spoons,101,,Painting,neighborhood1_0a528d0a-972c-4954-a10a-4d70eca5e5d2,,FALSE
-103,Greenview St,"Hacking PDA, DIY Simple Lockpick",,Sunset,101,,Painting,neighborhood1_36d1c646-9a97-4beb-bdcd-b3a0565fb7f3,,FALSE
-103,Greenview St,"Glass knife, DIY Simple Lockpick",,$1900 Sunset,101,,Painting,,,FALSE
-104,104 Backyard,Glass knife,,Wave,101,,Painting,neighborhood1_619995da-ee7a-4af6-bede-e1aff8714f38,,FALSE
-104,Greenview St,Mini electric lock pick,,Blue Vase in Living Room,101,,Vase,neighborhood1_c56fa8d3-11a2-460b-ba95-704352a2de56,,FALSE
-104,104 Frontyard,Lockpick,,Blue Vase in 2nd Floor Hallway,101,,Vase,neighborhood1_58361034-817e-41e2-98ff-5f6e205048dc,,FALSE
-104 Backyard,Greenview St,Lockpick,,Blue Vase in Backyard,101,,Vase,neighborhood1_fd961c83-e781-4211-a760-2d55e0a5d9ab,,FALSE
-104 Frontyard,Greenview St,Climbing Gloves,,Dark Red Vase,101,,Vase,neighborhood1_0c158869-351b-4390-82ba-d4e252e00c71,,FALSE
-104 Frontyard,104,Lockpick,,Globe,101,,Decoration,neighborhood1_f4a2ba59-fe5d-4474-a74a-3193165bf1d2,,FALSE
-105,Greenview St,"Lockpick, DIY Simple Lockpick",,Golden Goblet left of Fireplcace,101,,Decoration,neighborhood1_f62c6662-d16d-4643-8ad9-747c09a53bf1,,FALSE
-105,Greenview St,"DIY Simple Lockpick, Climbing Gloves",,Golden Goblet right of Fireplace,101,,Decoration,neighborhood1_c82d809f-8715-42d4-8590-04980bffb7e8,,FALSE
-105,105 Backyard,Glass knife,,Golden Goblet in Bedroom,101,,Decoration,neighborhood1_0f3c229e-35b2-46a4-9aad-2cf4f401d850,,FALSE
-105 Backyard,Greenview St,Lockpick,,Golden Goblet in TV Bedroom,101,,Decoration,neighborhood1_7086e9c3-de21-4129-a6e8-553c23872325,,FALSE
-106,106 Sideroom,Lockpick,,Green Vase left of Fireplace,101,,Vase,neighborhood1_a94004c0-d858-4648-9c8d-cd58e8163ee2,,FALSE
-106,Greenview St,Lockpick,,Green Vase in TV Bedroom inside Closet,101,,Vase,neighborhood1_f50ee559-8cd0-4844-8834-85af491ebdcf,,FALSE
-106 Backyard,Greenview St,Lockpick,,Green Vase in Closet Room 2nd Floor,101,,Vase,neighborhood1_6c83c1d1-6429-45b1-97f0-dce93272ea1b,,FALSE
-106 Sideroom,106 Backyard,,,Pendulum,101,,Decoration,neighborhood1_747ee484-9a21-478c-9b23-68a2a4a8c66a,,FALSE
-107,107 Yard,Glass knife,,Piggy Bank in Kid's Bedroom,101,,Decoration,neighborhood1_e0e372dd-fee5-4140-85b8-8d18497e9d25,,FALSE
-107,107 Yard,Lockpick,,Piggy Bank in TV Bedroom,101,,Decoration,neighborhood1_328f9131-2fc0-44f3-8bb8-985d1216e298,,FALSE
-107,107 Yard,Mini electric lock pick,,Vase - tall,101,,Vase,neighborhood1_dcb0b05e-fab9-4e77-836e-086b57938640,,FALSE
-107 Yard,Greenview St,DIY Simple Lockpick,,Vase 'Black&White',101,,Vase,neighborhood1_699fe524-0898-4916-a121-81996888cc0d,,FALSE
-107 Yard,Greenview St,Climbing Gloves,,Vase 'Black&White' in Kitchen,101,,Vase,neighborhood1_02103fa7-4575-4e0a-8553-4a4758f963d4,,FALSE
-108,108 Backyard,Glass knife,,Yellow Vase on 1st Floor,101,,Vase,neighborhood1_0b8917cf-6cad-4679-8c94-a578d5a8ab84,,FALSE
-108,Greenview St,Mini electric lock pick,,Yellow Vase on 2nd Floor,101,,Vase,neighborhood1_47e95080-b407-40e5-b350-3f646a7b11eb,,FALSE
-108,Greenview St,Climbing Gloves,,Game Fat Max,101,,Software,neighborhood1_6a545849-99d3-472b-add9-b7a89d1d9ecf,,FALSE
-108,Greenview St,Glass knife,,Video Game' console in Living Room,101,,Video Game Electronic,neighborhood1_c1358951-975f-40f9-bba2-426c8ec3b9df,,FALSE
-108 Backyard,Greenview St,Lockpick,,Video game' console pad in Living Room,101,,Video Game Electronic,neighborhood1_923a06c8-eda1-4764-ba80-68065e53dad0,,FALSE
-108 Backyard,Greenview St,Crowbar,,Video game' console pad in TV Bedroom right of console pad,101,,Video Game Electronic,neighborhood1_de222c55-bff6-4bf5-b696-040f5dd9e2a0,,FALSE
-108 Upstairs Living Room,108,Mini electric lock pick,,Video game' console pad in TV Bedroom left of console pad,101,,Video Game Electronic,neighborhood1_9017a98e-6517-42f5-b769-cb1308bcb7b5,,FALSE
-109,Greenview St,Crowbar,,Camera,101,,Camera,neighborhood1_c6c48f53-ca3f-4aa7-9ef8-f9296d7d989a,,FALSE
-109,Greenview St,DIY Simple Lockpick,,Ebricksson,101,,Communication Device,neighborhood1_4acb471a-742a-4da8-a86b-1be5dabcafe7,,FALSE
-109,Greenview St,"DIY Simple Lockpick, Glass knife",,Headphones,101,,Audio Device,neighborhood1_ccb2afe4-50d0-41e6-ade5-d220498e01b0,,FALSE
-110,Greenview St,,,Headset,101,,Audio Device,neighborhood1_2d4b511a-77e4-46ba-bf0f-32cc000789c6,,FALSE
-111,Greenview St,DIY Simple Lockpick,,Huway,101,"Safecracking tools, Hacking tools",Communication Device,neighborhood1_95da5c0c-fbfe-40b3-8399-142d0d926bdd,,FALSE
-112,112 Backyard,DIY Simple Lockpick,,Leovon 100 to clear,101,Safecracking tools,Mobile Device,neighborhood1_6e0c1060-7c13-46b1-a573-552687a44e3e,,FALSE
-112,Greenview St,Lockpick,,Mouse,101,,Computer Peripheral,neighborhood1_6ea03016-dc8b-4b1e-b8f2-0c9e890c21cd,,FALSE
-112,112 Backyard,Glass knife,,Noke in Living Room Dresser,101,,Communication Device,neighborhood1_20b1742a-d266-4e43-b5b6-14df4090ca4b,,FALSE
-112 Backyard,Greenview St,DIY Simple Lockpick,,Noke on 2nd Floor inside Dresser,101,,Communication Device,neighborhood1_102a383a-9419-4eff-b0ef-221d9b6687f4,,FALSE
-112 Backyard,Greenview St,Climbing Gloves,,Remote,101,,Television Equipment,neighborhood1_338f9015-0669-4bca-a040-ba4f3e3357e7,,FALSE
-113,Greenview St,Mini electric lock pick,,SomeSung,101,"Safecracking tools, Hacking tools",Mobile Device,neighborhood1_c076fc48-d4e4-4903-b804-cfd751fcd2d4,,FALSE
-113,Greenview St,Glass knife,,TV in Bedroom,101,,Television,neighborhood1_79dbcba2-552e-42c0-afd3-405f34650c77,,FALSE
-113,Greenview St,Front door key 113,,TV in Living Room,101,,Television,neighborhood1_c0701594-d1f8-4e4c-a212-a7eca5b71e0d,,FALSE
-113 Backyard,Greenview St,DIY Simple Lockpick,,USB Flash,101,,Computer Peripheral,neighborhood1_3c2b1b78-a9a6-4f4c-b7ea-4cb590b677f0,,FALSE
-113 Backyard,Greenview St,Climbing Gloves,,Electric Guitar,101,,Musical Instrument,neighborhood1_91fbd676-ef75-4df9-b5eb-5ee223c974c5,,FALSE
-113 Bedroom,113,Lockpick,,Old Yomaha Guitar,101,,Musical Instrument,neighborhood1_29998148-52f9-46cc-b817-0522cb03aa99,,FALSE
-113 Bedroom,113 Backyard,,,Bracelet,101,"Jewelry tools, Safecracking tools",Accessories,neighborhood1_b362d8a5-0c7f-454c-899e-57c4987bae05,,FALSE
-Greenview St,,Greenview St,,Emerald Bracelet,101,"Jewelry tools, Safecracking tools",Accessories,neighborhood1_813dc134-6a91-4f58-8303-4ddda6b6b10b,,FALSE
-,,,,Coffee Machine,101,,Coffee Machine,neighborhood1_32314cc6-87b5-4d0c-83a5-2ddbaa1f9d99,,FALSE
-,,,,Esevoignas Wine,101,,Wine,neighborhood1_4f8da0c1-8f0a-4a66-860a-330441f88f22,,FALSE
-,,,,Glass Plate,101,,Tableware,neighborhood1_2f9b7ca5-6a7b-48bd-8283-bc3416bb9d67,,FALSE
-,,,,Microwave,101,,Microwave,neighborhood1_de5148e3-728b-4c1a-99ee-820c16f9bb86,,FALSE
-,,,,Riontonip Wine,101,,Wine,neighborhood1_7fc8a7f8-c78d-43af-9ae2-a3e79b17a94a,,FALSE
-,,,,Saucepan farthest from Living Room,101,,Pots and Pans,neighborhood1_41d133ce-9e1a-4c09-9775-cb99f64df135,,FALSE
-,,,,Saucepan closest to Living Room,101,,Pots and Pans,neighborhood1_b144dacf-473c-4e2a-bdc2-76945a792d6f,,FALSE
-,,,,Smaller Saucepan,101,,Pots and Pans,neighborhood1_1ee49888-8d5e-4eab-8322-9c4b53be3c09,,FALSE
-,,,,Teapot,101,,Tea set,neighborhood1_f293d1b4-6e29-4f2e-9928-ba7b84aced52,,FALSE
-,,,,Toaster,101,,Toaster,neighborhood1_20c56d33-fa28-4490-b19d-e477fe21b222,,FALSE
-,,,,Tolrem Wine in Backyard,101,,Wine,neighborhood1_a68e5a11-fc6a-49d3-88c4-7f1e38d81fcc,,FALSE
-,,,,Tolrem Wine in Kitchen,101,,Wine,neighborhood1_8b6f2f4c-1838-43ee-835f-58c5cbdbf7ea,,FALSE
-,,,,$50 Cash in Kid's Bedroom,101,,Paperware,neighborhood1_9a90d3a2-5012-47c4-94e8-2b8dce651f67,,FALSE
-,,,,$50 Cash in Closet Room on white bookshelf,101,,Paperware,neighborhood1_87d110e5-fb3d-4064-acfa-a5a698eeea8b,,FALSE
-,,,,$50 Cash in Closet Room inside white dresser,101,,Paperware,neighborhood1_e086ed11-f2df-4ce5-b71e-ae3470ae5fdc,,FALSE
-,,,,$50 Cash in Backyard,101,,Paperware,neighborhood1_92197cbc-ee81-4dfc-8452-9f645d960bb9,,FALSE
-,,,,$50 Cash in Living Room,101,,Paperware,neighborhood1_4d897212-8b52-4c10-a499-97407fb405a0,,FALSE
-,,,,$50 Cash in Garage,101,,Paperware,neighborhood1_a48c55cb-5a92-4b3b-a88b-536b1f43187f,,FALSE
-,,,,$50 Cash on 2nd Floor on right Dresser,101,,Paperware,neighborhood1_b7beec44-4ac8-4902-bc0e-fa137bacf337,,FALSE
-,,,,$50 Cash in TV Bedroom,101,,Paperware,neighborhood1_9b3bc9cb-444f-4f14-a995-09f9d6e2df42,,FALSE
-,,,,$150 Cash in Kitchen,101,,Paperware,neighborhood1_08bc520b-6e79-4a06-b79d-320b52924216,,FALSE
-,,,,$150 Cash in Master Bedroom inside plant drawer,101,,Paperware,neighborhood1_5a3f28e5-8b27-43e3-a198-94a853d79e25,,FALSE
-,,,,$150 Cash in Master Bedroom on white bookshelf,101,,Paperware,neighborhood1_a8b156b1-1dcf-4315-8c99-71df1c8271dd,,FALSE
-,,,,$50 Cash in Closet Room on white dresser,101,,Paperware,neighborhood1_a52178bc-24dc-40d6-a2c4-6e4cd1ea5ac2,,FALSE
-,,,,Pumpkin,101,,Halloween,neighborhood1_486d06cc-da7f-405a-acaf-ec7b4a8cfff0,,FALSE
-,,,,Gift- blue,101,,Christmas,,,FALSE
-,,,,Gift - green,101,,Christmas,,,FALSE
-,,,,Gift - red,101,,Christmas,,,FALSE
-,,,,Break or steal a painting in 101,101,,,,,FALSE
-,,,,Break wine glasses in 101,101,Crowbar,,,,FALSE
-,,,,Break a window on the second floor in 101,101,Crowbar,,,,FALSE
-,,,,Aisan Cougar,101,Car lock pick gun,Vehicle,,,FALSE
-,,,,Sunset,102,,Painting,neighborhood1_7368db16-9faa-45e8-af83-846e6249843b,,FALSE
-,,,,Evening,102,,Painting,neighborhood1_7558281e-aa53-480b-9c64-42b9fac8bd2d,,FALSE
-,,,,Flower,102,,Painting,neighborhood1_36a87aeb-58bc-4c9b-8377-5ef5dddd0ede,,FALSE
-,,,,Rose,102,,Painting,neighborhood1_c6481306-94a3-4e23-a103-9b9f012d9d9a,,FALSE
-,,,,Blue Vase,102,,Vase,neighborhood1_b7ab3b49-7c26-4d7b-9780-a41bc5c4243b,,FALSE
-,,,,Dark Red Vase,102,,Vase,neighborhood1_610784bd-0631-436f-9b90-8279b468d2d8,,FALSE
-,,,,Metallic Vase,102,,Vase,neighborhood1_ee66d0cc-17c5-4ae6-8bea-ed026921afdc,,FALSE
-,,,,Piggy Bank,102,,Decoration,neighborhood1_64eb9201-061d-4e77-81f5-64419a2da245,,FALSE
-,,,,Red Vase,102,,Vase,neighborhood1_38badd96-d54f-4fad-8d49-5c95716b9e06,,FALSE
-,,,,Vase,102,Safecracking tools,Vase,neighborhood1_0f954b7e-c0ff-4105-9f7c-efa7d9b78a33,,FALSE
-,,,,Vase 'Black&White',102,,Vase,,,FALSE
-,,,,Vase 'Black&White' across from Bathroom on white dresser,102,,Vase,neighborhood1_9374ef08-81ec-4680-be2c-a3c35b4e84f9,,FALSE
-,,,,Xcube' console pad in Master Bedroom closet,102,,Video Game Electronic,neighborhood1_a9f63b7e-a105-4297-a69c-65f714539707,,FALSE
-,,,,Video game' console pad in Kid's Bedroom,102,,Video Game Electronic,neighborhood1_ef7fa1d2-ebb4-4cd9-b68f-39ae5d44c20b,,FALSE
-,,,,Xcube' console,102,,Video Game Electronic,neighborhood1_4b70dd71-d642-4869-b320-f3c987d3898a,,FALSE
-,,,,Xcube' console pad in Living Room left side on white dresser,102,,Video Game Electronic,neighborhood1_a27c78a2-6bce-47c2-9a52-4c3ddb731af6,,FALSE
-,,,,Xcube' console pad in Living Room right side on white dresser,102,,Video Game Electronic,neighborhood1_316a54a1-d5e9-4cb7-b073-e30c48a8d1be,,FALSE
-,,,,Alarm Clock,102,,Clock,neighborhood1_5f781ef2-3365-415f-9d93-fd99c8bc23c3,,FALSE
-,,,,Ebricksson,102,,Communication Device,neighborhood1_762ae256-0706-4298-b80b-b29d9b32c0c5,,FALSE
-,,,,Headset,102,,Audio Device,neighborhood1_20282393-04a4-4af2-9197-38203a0d6379,,FALSE
-,,,,Huway,102,Hacking tools,Communication Device,neighborhood1_596b6e5e-2db5-4898-8087-6adfbbccc403,,FALSE
-,,,,Keyboard,102,,Computer Peripheral,neighborhood1_673171f8-2c77-4f65-8679-8530ae4d3769,,FALSE
-,,,,Landline,102,,Communication Device,neighborhood1_031dd1ad-af05-4ded-917b-9d0dd6bcd703,,FALSE
-,,,,Mouse,102,,Computer Peripheral,neighborhood1_33df8de6-1efa-4b6d-ae2a-09ab780d60e8,,FALSE
-,,,,SomeSung,102,Hacking tools,Mobile Device,neighborhood1_940a5096-caa4-48ab-aeb1-4630aa741e78,,FALSE
-,,,,TV,102,,Television,neighborhood1_e853615b-9b00-4c67-8387-6a3ac4c9cfae,,FALSE
-,,,,uPadTab,102,,Mobile Device,neighborhood1_9f9d2a5f-c593-4d88-ab4d-c6c2baf05f08,,FALSE
-,,,,USB Flash,102,,Computer Peripheral,neighborhood1_b05ba11b-6907-473b-a1c4-327abace874f,,FALSE
-,,,,Emerald Bracelet,102,Jewelry tools,Accessories,neighborhood1_145f16cc-9f5c-40dc-a343-02e9d4724fff,,FALSE
-,,,,Glass Cup in Master Bedroom right side of white bookshelf,102,,Tableware,neighborhood1_66e3a95c-aa61-4d97-9ad2-50cffb7456b0,,FALSE
-,,,,Glass Cup in Master Bedroom left side of white bookshelf,102,,Tableware,neighborhood1_ce3fa670-2baa-42a7-8d1f-862aea0910fb,,FALSE
-,,,,Microwave,102,,Microwave,neighborhood1_1c9428d1-ed2d-4093-860a-5c77107e99b7,,FALSE
-,,,,Pot,102,,Pots and Pans,neighborhood1_c2eaab50-e62b-4bfe-a2c6-6884af3b83e2,,FALSE
-,,,,Teapot,102,,Tea set,neighborhood1_23a92453-8f28-4c73-bcc6-fbfc63ae2fb9,,FALSE
-,,,,Tolrem Wine in Kitchen left of other wine,102,,Wine,neighborhood1_159ab2ae-74e5-4079-852f-65a9c971013b,,FALSE
-,,,,Tolrem Wine in Kitchen right of other wine,102,,Wine,neighborhood1_e718036b-7172-43d2-ab1e-08a7b770dc8f,,FALSE
-,,,,$15 Cash in Master Bedroom in black dresser,102,,Paperware,neighborhood1_23f76fa6-d821-41d7-8d62-f80713c9a567,,FALSE
-,,,,$15 Cash in Master Bedroom right side of bed inside white dresser,102,,Paperware,neighborhood1_bed402de-fc68-4b90-9d15-875c5c2f08c5,,FALSE
-,,,,$15 Cash in Master Bedroom right side of bed inside brown dresser,102,,Paperware,neighborhood1_61fc7854-0b80-4609-8e6f-2d6356f13c12,,FALSE
-,,,,$15 Cash in Living Room white dresser,102,,Paperware,neighborhood1_b6a64492-5c8d-4810-9bed-8e01861da6cd,,FALSE
-,,,,$15 Cash across from Bathroom inside middle white dresser,102,,Paperware,neighborhood1_8e30ebc1-6ac9-45fe-a46b-fa5893184040,,FALSE
-,,,,$50 Cash in Master Bedroom safe right side of Documents,102,Safecracking tools,Paperware,neighborhood1_61e00c5f-2c29-4aa0-8e7f-374c80e5f455,,FALSE
-,,,,$50 Cash in Master Bedroom safe left side of Documents,102,Safecracking tools,Paperware,neighborhood1_fdf90d01-adaa-49fa-a7c5-af4b89a3e1c2,,FALSE
-,,,,$50 Cash in Master Bedroom on black dresser,102,,Paperware,neighborhood1_3be4f239-2ed2-4c82-aa1d-23f053d79abc,,FALSE
-,,,,$50 Cash in Master Bedroom right side of bed inside brown dresser,102,,Paperware,neighborhood1_32b5f840-9508-443f-a09a-dc20d94c4717,,FALSE
-,,,,$50 Cash in Kid's Bedroom,102,,Paperware,neighborhood1_0fb20dfc-def8-478f-967e-fcd8b61ef1f9,,FALSE
-,,,,$50 Cash by entrance right side inside landline dresser,102,,Paperware,neighborhood1_3324537f-4f2a-425a-8f65-bcb44442dd85,,FALSE
-,,,,$50 Cash by entrance left side inside landline dresser,102,,Paperware,neighborhood1_0ab53b17-1ae7-409d-a471-23b0ce07c11d,,FALSE
-,,,,Documents,102,Safecracking tools,Paperware,neighborhood1_4c8205bd-efa9-4958-8800-ea1dc637b455,,FALSE
-,,,,Front Door Key to 102,102,,Key,neighborhood1_3e619945-4bfe-48fe-83c8-1b4f9f3552f0,Front door key 102,FALSE
-,,,,Candy Bag,102,,Halloween,neighborhood1_3a89a79c-46cd-438d-a5c9-1926874d27b5,,FALSE
-,,,,Gift- blue,102,,Christmas,,,FALSE
-,,,,Gift - green,102,,Christmas,,,FALSE
-,,,,Gift - red,102,,Christmas,,,FALSE
-,,,,Break their dishes in 102,102,Crowbar,,,,FALSE
-,,,,Break or steal a decoration in 102,102,,,,,FALSE
-,,,,Apple Vase,103,,Vase,neighborhood1_e1409c77-ec7d-4ac1-9f66-e92c284f3a73,,FALSE
-,,,,Golden Goblet on 2nd Floor on brown dresser,103,,Decoration,neighborhood1_f0771f35-4e08-4dd7-a37a-32fbce784abc,,FALSE
-,,,,Golden Goblet,103,,Decoration,,,FALSE
-,,,,Grey Vase,103,,Vase,neighborhood1_65c80e14-5bc9-4ac1-8cc2-37ea95ec6c83,,FALSE
-,,,,Metallic Vase on 2nd Floor on left side of black dresser,103,,Vase,neighborhood1_c3ea6fc9-0984-4476-909b-faed20e7981e,,FALSE
-,,,,Metallic Vase on 2nd Floor on right side of black dresser,103,,Vase,neighborhood1_41069d88-bedc-4442-8b2b-d351272e84aa,,FALSE
-,,,,Pendulum on 2nd Floor inside of black dresser,103,,Decoration,neighborhood1_2389169a-6595-4969-91c9-f7ff4453a2f7,,FALSE
-,,,,Pendulum,103,,Decoration,neighborhood1_5c7268a6-847f-47a1-9126-043dba6c1c75,,FALSE
-,,,,Red Vase,103,,Vase,neighborhood1_1d4a8f12-2415-4564-bba2-2ecef7f99672,,FALSE
-,,,,Tear Trophy,103,,Decoration,neighborhood1_3f3df329-f3f7-4be5-b352-aea39492c97f,,FALSE
-,,,,Vase 'Black&White' on 2nd Floor inside of black dresser,103,,Vase,neighborhood1_02e602ce-8b1b-4bfa-bddb-481dfb65618c,,FALSE
-,,,,Vase 'Black&White' in Master Bedroom,103,,Vase,neighborhood1_737a1c1f-077b-4e63-a2a3-72433cd3bff5,,FALSE
-,,,,White Vase,103,,Vase,neighborhood1_aae5a2a1-298f-4b64-8acb-e16493691fbb,,FALSE
-,,,,Yellow Vase,103,,Vase,neighborhood1_fbc97fe2-571f-4398-84df-9d60c1690bef,,FALSE
-,,,,Xcube' console,103,,Video Game Electronic,neighborhood1_a223cdf9-fd87-457a-b8d5-9b0c49f88baa,,FALSE
-,,,,Xcube' console pad in Kid's Room,103,,Video Game Electronic,neighborhood1_988cf68b-4ec4-450d-b66e-7b896a89f91d,,FALSE
-,,,,Xcube' console pad in Master Bedroom,103,,Video Game Electronic,neighborhood1_47106ce7-3022-4162-9532-e74a7741fce5,,FALSE
-,,,,Xcube' console pad in Bathroom closet,103,,Video Game Electronic,neighborhood1_8e8a0546-be31-419a-a411-0f18375dca6c,,FALSE
-,,,,Xcube' console pad in Living Room on dresser right most side,103,,Video Game Electronic,neighborhood1_84ca6abd-1b8c-4717-907b-23a070c76544,,FALSE
-,,,,Xcube' console pad in Living Room on dresser left most side,103,,Video Game Electronic,neighborhood1_7c6fae74-fc0d-4001-a487-10879e069993,,FALSE
-,,,,Camera,103,,Camera,,,FALSE
-,,,,Ebricksson,103,,Communication Device,neighborhood1_770d45ff-3c26-4d8b-a450-0b3deffa5e3e,,FALSE
-,,,,Headset in Master Bedroom,103,,Audio Device,neighborhood1_794137a1-b5b1-4239-ba30-38882359e13a,,FALSE
-,,,,Headset,103,,Audio Device,neighborhood1_681e7413-0e48-4745-a622-2fc07f5ac71d,,TRUE
-,,,,Huway,103,Hacking tools,Communication Device,neighborhood1_3e0264a1-8e17-4e38-91eb-e425ece1ef3b,,FALSE
-,,,,Keyboard,103,,Computer Peripheral,neighborhood1_7fdb6ca6-6fcd-4a4d-8de4-590d1bef6f39,,FALSE
-,,,,Lamp,103,,Lamp,,,FALSE
-,,,,Mouse,103,,Computer Peripheral,neighborhood1_7eac2ee3-b16a-4e78-90ae-a2c540f97b9a,,FALSE
-,,,,Noke in Office room desk,103,,Communication Device,neighborhood1_5e91fba3-f2b5-4792-9fe2-4cd2e8f307f4,,FALSE
-,,,,Noke in Bathroom closet,103,,Communication Device,neighborhood1_5b70b006-df08-4fec-ba54-1f815a513747,,FALSE
-,,,,Printer,103,,Office Supplies,neighborhood1_649b74a7-37d9-4059-b90a-29a20ade63ad,,FALSE
-,,,,Remote,103,,Television Equipment,neighborhood1_2928c3e5-3d54-4d2d-8a77-f4d9db458322,,FALSE
-,,,,Router in Bedroom,103,,Ethernet Device,neighborhood1_63253dff-af8a-4924-9308-2665c4c03c9c,,FALSE
-,,,,Router in Master Bedroom,103,,Ethernet Device,neighborhood1_564afab1-a75a-4115-9b14-cd09ec6c3b46,,FALSE
-,,,,TV,103,,Television,neighborhood1_a5e6501b-23a6-433e-a563-e3f2dba34d34,,FALSE
-,,,,USB Flash,103,,Computer Peripheral,neighborhood1_7a1821ec-a13e-4a8e-821e-899ad8a20857,,FALSE
-,,,,Emerald Bracelet,103,"Jewelry tools, Safecracking tools",Accessories,neighborhood1_2ce7afab-e072-431f-9a76-93e5e4f27060,,FALSE
-,,,,Esevoignas Wine middle left bottle in Office Room,103,,Wine,neighborhood1_60b3dda8-453c-4c17-be85-95dfd851dcd6,,FALSE
-,,,,Esevoignas Wine middle right bottle in Office Room,103,,Wine,neighborhood1_4339b458-ce4c-4277-95f0-2daf48811f70,,FALSE
-,,,,Esevoignas Wine in Master Bedroom,103,,Wine,neighborhood1_520fbdee-85a3-4fc2-a384-e021fc29eddf,,FALSE
-,,,,Saucepan,103,,Pots and Pans,neighborhood1_2f6ca804-970a-48aa-bc99-5c3142c05510,,FALSE
-,,,,Teabox,103,,Tea set,neighborhood1_5c807f29-baa3-4134-baea-6d1fc5e1fe84,,FALSE
-,,,,Tolrem Wine right most bottle in Office Room,103,,Wine,neighborhood1_b98e00c9-9500-435f-8bbb-5ef10180084b,,FALSE
-,,,,Tolrem Wine left most bottle in Office Room,103,,Wine,neighborhood1_f416f02e-8ec7-49bc-8d6a-e274dc464610,,FALSE
-,,,,$15 Cash in Master Bedroom,103,,Paperware,neighborhood1_e87a13f8-398d-4ff3-9e72-7233b4750e2c,,FALSE
-,,,,$15 Cash in Bathroom closet,103,,Paperware,neighborhood1_e15d9a55-0f6c-4343-ad64-95d467b61689,,FALSE
-,,,,$50 Cash next to Entrance,103,,Paperware,neighborhood1_29964183-adaf-4017-be0f-04bf65af985c,,FALSE
-,,,,$50 Cash in Bedroom safe on top shelf left side,103,Safecracking tools,Paperware,neighborhood1_25718f34-e5c9-461b-84fb-35e70d6665ea,,FALSE
-,,,,$50 Cash in Bedroom safe on top shelf right side,103,Safecracking tools,Paperware,neighborhood1_0e1c8d26-a8ac-4484-b33f-68d5d9e687cf,,FALSE
-,,,,$50 Cash in Bedroom safe on bottom shelf,103,Safecracking tools,Paperware,neighborhood1_342c6c31-8a20-4dbe-b614-dae41c46cce6,,FALSE
-,,,,$50 Cash on 2nd Floor inside of black dresser,103,,Paperware,neighborhood1_1c02090b-77c0-4b5c-bb71-5a4c8a63e91b,,FALSE
-,,,,$50 Cash in Office filing cabinet,103,,Paperware,neighborhood1_e0cc4ca0-654d-45c6-9cf5-b950872fc877,,FALSE
-,,,,$50 Cash on Dining Table,103,,Paperware,neighborhood1_2598120d-bb18-4b95-9aea-d092f401941a,,FALSE
-,,,,$50 Cash in Living Room dresser,103,,Paperware,neighborhood1_b80d895f-50fb-4ed5-82b8-b4066423bef8,,FALSE
-,,,,Candy Bag,103,,Halloween,neighborhood1_a4281b86-f24c-47bd-83b1-180e964f92a3,,FALSE
-,,,,Gift- blue,103,,Christmas,,,FALSE
-,,,,Gift - red,103,,Christmas,,,FALSE
-,,,,Break or steal their lamp in 103,103,,,,,FALSE
-,,,,Break their sink in 103,103,Crowbar,,,,FALSE
-,,,,Baptism,104,,Painting,neighborhood1_dd378fce-fc26-452c-866d-854dfc249002,,FALSE
-,,,,Daisy,104,,Painting,,,FALSE
-,,,,Deer,104,,Painting,neighborhood1_242e3901-544c-4591-9797-5cc48c678569,,FALSE
-,,,,Kiss,104,,Painting,neighborhood1_49dcd961-18f9-4641-913f-ca1cca3dc9f0,,FALSE
-,,,,Lighthouse,104,,Painting,neighborhood1_c942033b-72dd-41de-9e00-5f8e507a4dd6,,FALSE
-,,,,Love,104,,Painting,neighborhood1_febd013f-1658-4731-829e-32085b7f2376,,FALSE
-,,,,Rose Piano,104,,Painting,neighborhood1_6ea1990b-dd0c-4504-8ba0-3a20849d1819,,FALSE
-,,,,Apple Vase,104,,Vase,neighborhood1_6b4b5c13-ddc0-4ee5-9696-d75c9b648af8,,FALSE
-,,,,Candle Holder in Living Room on right most side of cabinet,104,,Decoration,neighborhood1_330e5e52-b2f5-4ca6-8fc4-5b8b567b8390,,FALSE
-,,,,Candle Holder in Living Room on left most side of cabinet,104,,Decoration,neighborhood1_c787ea23-5974-47f8-a38f-8ff07421eb3e,,FALSE
-,,,,Daisy,104,,Painting,neighborhood1_befbd97d-ed08-40ab-9245-00f4e1c4a5be,,FALSE
-,,,,Flower Vase,104,,Vase,neighborhood1_05670950-ea4e-4405-8aaa-b7f8d8425067,,FALSE
-,,,,Globe,104,,Decoration,neighborhood1_1d2f729a-916c-4703-8b46-1ef00f940bb7,,FALSE
-,,,,Golden Goblet,104,,Decoration,neighborhood1_e9f8d031-efec-438b-91dc-3135824e6116,,FALSE
-,,,,Golden Goblet,104,,Decoration,,,FALSE
-,,,,Pendulum,104,,Decoration,neighborhood1_95061804-529f-49d2-98ca-398b9b11121e,,FALSE
-,,,,Vase - tall,104,,Vase,neighborhood1_5e6e6848-e8c4-4f0c-8b4a-2e064d05f56d,,FALSE
-,,,,Vase - wide,104,,Vase,neighborhood1_9dd53445-0df3-4134-a499-b188346d2b3e,,FALSE
-,,,,Camera,104,,Camera,,,FALSE
-,,,,Damaged uPhone,104,,Communication Device,neighborhood1_11402ebb-0292-4d3b-9689-32f43d8b861c,,FALSE
-,,,,Headphones,104,,Audio Device,neighborhood1_c96b45bd-1362-4dc9-b3af-902d0dee5df0,,FALSE
-,,,,Headphones in Master Bedroom,104,,Audio Device,neighborhood1_446a40be-0f2a-4df4-a644-bfb714b0fd85,,FALSE
-,,,,Headset,104,,Audio Device,neighborhood1_02d19ea9-46f9-46f7-b028-d63c1d38d15c,,TRUE
-,,,,Jomaso Receiver,104,,Television Equipment,neighborhood1_2f30c3c9-7215-4a02-8c11-149871e72057,,FALSE
-,,,,Landline,104,,Communication Device,neighborhood1_0a4c90ca-fca3-4b77-bd61-c4015abc7018,,FALSE
-,,,,Mouse,104,,Computer Peripheral,neighborhood1_f7aaef59-ab9e-4336-b5b0-fed0f55709f7,,FALSE
-,,,,Noke,104,,Communication Device,neighborhood1_ec904532-cae6-421c-9084-09dff1f4d893,,FALSE
-,,,,Radio,104,,Audio Device,,,FALSE
-,,,,Remote,104,,Television Equipment,neighborhood1_f5c388d0-fef1-4b61-98f6-dde05599616c,,FALSE
-,,,,Small TV in Living Room,104,,Television,neighborhood1_8fa15d53-27c3-46d6-a74f-182030053880,,FALSE
-,,,,Small TV in 2nd Floor Bedroom,104,,Television,neighborhood1_1430a78f-ac51-43d0-8f9a-b30f8adea130,,FALSE
-,,,,Speaker bottom left corner of Living Room,104,,Audio Device,neighborhood1_38a42bd4-0ac7-4938-9874-99e602613860,,FALSE
-,,,,Speaker top right corner of Living Room,104,,Audio Device,neighborhood1_c9a80d6a-4820-4374-873d-aec0e3c764b8,,FALSE
-,,,,USB Flash in 2nd Floor Bedroom inside white drawer,104,,Computer Peripheral,neighborhood1_52ad4d91-00ae-46db-8255-c7ee86ded07c,,FALSE
-,,,,Headset,104,,Computer Peripheral,neighborhood1_2c21e3bf-e943-4e3f-b8ea-14f071b8bb5d,,FALSE
-,,,,Bass Guitar,104,,Musical Instrument,neighborhood1_5d569d36-5968-49bc-8557-379702c2a0ea,,FALSE
-,,,,Esevoignas Wine in Kitchen on table in-between bottles,104,,Wine,neighborhood1_9be96cd3-c48b-4a91-8b38-9c4f033c3e6c,,FALSE
-,,,,Esevoignas Wine in Kitchen on table ,104,,Wine,neighborhood1_704e3e86-12c7-48d9-8d41-15ff9065eea5,,FALSE
-,,,,Microwave,104,,Microwave,,,FALSE
-,,,,Evening,104,,Painting,neighborhood1_6b2037cf-9e5f-4f8b-a7fb-791eec0e2508,,FALSE
-,,,,Pot,104,,Pots and Pans,neighborhood1_9d1518d8-54d6-49cb-87c6-2694e87abe4a,,FALSE
-,,,,Riontonip Wine in Kitchen on table,104,,Wine,neighborhood1_5067d237-cbc2-4ab3-8b86-8c8897b625f5,,FALSE
-,,,,Saucepan,104,,Pots and Pans,neighborhood1_bcde5af3-c529-40b0-8432-52304a93cc77,,FALSE
-,,,,Teapot,104,,Tea set,neighborhood1_b181924b-c814-4701-80f6-90f6160d06dd,,FALSE
-,,,,Toaster,104,,Toaster,neighborhood1_bc9c040a-f553-4744-9836-01b038150246,,FALSE
-,,,,$15 Cash in 3rd Floor Bedroom,104,,Paperware,neighborhood1_185ccb8b-d04b-45a6-9ae4-968d99830b9d,,FALSE
-,,,,$15 Cash by Entrance inside white dresser,104,,Paperware,neighborhood1_677810b2-004d-4855-9c39-804f3d902b23,,FALSE
-,,,,$15 Cash in 2nd Floor Bedroom inside bottom white drawers,104,,Paperware,neighborhood1_43fad1a9-5ec1-40a1-9440-7a848651bd8d,,FALSE
-,,,,$15 Cash in 2nd Floor Bedroom inside top white drawers,104,,Paperware,neighborhood1_c599691e-a094-4024-a536-0d641235f261,,FALSE
-,,,,$15 Cash in Kitchen dining table,104,,Paperware,neighborhood1_a399344b-c217-4979-8daa-5070326ea06e,,FALSE
-,,,,$50 Cash by Entrance on white dresser,104,,Paperware,neighborhood1_4faccd95-0f39-4c0f-af8d-d640814525ae,,FALSE
-,,,,$50 Cash in Living Room on cabinet,104,,Paperware,neighborhood1_342d5a43-d26b-4211-97d3-439559acd21d,,FALSE
-,,,,$50 Cash in Garage,104,,Paperware,neighborhood1_f348c7d3-542e-4059-a20c-42bdd77cb612,,FALSE
-,,,,$50 Cash in Master Bedroom closet,104,,Paperware,neighborhood1_f6a163f2-55a6-4618-a254-1173f3a560ef,,FALSE
-,,,,Candy Bag,104,,Halloween,neighborhood1_722351fa-d1ea-4730-82c1-8064df64cda7,,FALSE
-,,,,Break a window in 104,104,Crowbar,,,,FALSE
-,,,,Bolthorn 86 Classic,104,Car lock pick gun,Vehicle,,,FALSE
-,,,,Flower,105,,Painting,neighborhood1_931e8744-bf13-44b0-93ca-dcb25bed48c9,,FALSE
-,,,,Kiss,105,,Painting,neighborhood1_88beb772-25b1-47aa-8682-194e2539ef24,,FALSE
-,,,,Love,105,,Painting,neighborhood1_e7e66604-dcea-41d6-beb4-dd725f66caca,,FALSE
-,,,,Rose,105,,Painting,neighborhood1_4c343366-db49-461f-9a0f-1f2725245637,,FALSE
-,,,,Rose Piano,105,,Painting,neighborhood1_730791d6-54d3-47af-bf05-83dfa8ad704c,,FALSE
-,,,,Smoothie,105,,Painting,neighborhood1_5609a0ce-15e7-41a2-bc74-ac9e2ebbba1c,,FALSE
-,,,,Spoons,105,,Painting,,,FALSE
-,,,,Sunset,105,,Painting,neighborhood1_c27687fc-48be-4bcc-8853-c95238d6a9b9,,FALSE
-,,,,Candle Holder Triple,105,,Decoration,neighborhood1_30238784-927c-4843-b3f0-3d4fb96bf341,,FALSE
-,,,,Chess,105,,Toy,neighborhood1_e49b6d88-6e7d-411c-adfd-81c68733b771,,FALSE
-,,,,Golden Goblet on 1st Floor Bedroom,105,,Decoration,neighborhood1_77036fb7-3e8c-421b-a7ee-eee963fc1c23,,FALSE
-,,,,Golden Goblet,105,,Decoration,,,FALSE
-,,,,Huway,105,Hacking tools,Communication Device,neighborhood1_4e9ef206-b8e1-4311-8c42-b339e357a8d4,,FALSE
-,,,,Headphones,105,,Audio Device,neighborhood1_ccfdaa9b-f245-4441-b4f3-372780f3053c,,FALSE
-,,,,Green Vase,105,,Vase,neighborhood1_252f2d52-4309-4686-bcf5-efa91471833d,,FALSE
-,,,,Metallic Vase,105,,Vase,neighborhood1_466336ef-43c3-4b36-8398-8141c9329857,,FALSE
-,,,,Pendulum,105,,Decoration,neighborhood1_728a4180-c74e-41ac-9410-7cff53d9a53c,,FALSE
-,,,,Vase 'Black&White',105,,Vase,neighborhood1_43904508-85f1-497d-a11a-031f55fe9672,,FALSE
-,,,,Wicker Vase,105,,Vase,neighborhood1_302ebb62-5939-4ae1-b0be-8f29694d2623,,FALSE
-,,,,Ebricksson in 1st Floor Bathroom,105,,Communication Device,neighborhood1_fef7b473-0dba-4cdc-97a6-1afa33d4c06b,,FALSE
-,,,,Ebricksson on 1st Floor Master Bedroom,105,,Communication Device,neighborhood1_aa47d80f-aa3f-43c1-8d6f-0818886d7e78,,FALSE
-,,,,Headphones,105,,Audio Device,,,FALSE
-,,,,Jomaso Receiver,105,,Television Equipment,neighborhood1_d99f1ebb-82d5-4d76-8ab1-b5d99f4508ec,,FALSE
-,,,,Keyboard,105,,Computer Peripheral,,,FALSE
-,,,,Landline,105,,Communication Device,neighborhood1_de8560fe-dd29-4d32-813e-024e272acfde,,FALSE
-,,,,Noke,105,,Communication Device,neighborhood1_1777f27c-3119-446b-97f3-483eab64a966,,FALSE
-,,,,Remote,105,,Television Equipment,neighborhood1_2ebd9ea9-b74e-4fb1-aa16-06ff862aa4c5,,FALSE
-,,,,Router,105,,Ethernet Device,neighborhood1_f16cc082-dc1d-4cff-8ac7-2fe7e38a6e0f,,FALSE
-,,,,Small TV,105,,Television,,,FALSE
-,,,,Autumn,105,,Painting,neighborhood1_9f31d2ac-7526-4c31-80c8-213a88105a74,,FALSE
-,,,,Speaker on 3rd Floor right side of TV,105,,Audio Device,neighborhood1_44d6e780-2740-468a-830a-13308022cdc6,,FALSE
-,,,,Speaker on 3rd Floor left side of TV,105,,Audio Device,neighborhood1_f1719a0d-7e6c-4ec8-b838-43c2a3f46deb,,FALSE
-,,,,USB Flash,105,,Computer Peripheral,neighborhood1_6bd70b88-90a1-4dcd-915c-7d58bbdd69de,,FALSE
-,,,,Amethyst Bracelet,105,"Jewelry tools, Safecracking tools",Accessories,neighborhood1_d497efb0-ff72-43f7-9fbe-7c49c5ef24f4,,FALSE
-,,,,Riontonip Wine on 3rd Floor inside cabinet right most side,105,,Wine,neighborhood1_d304725b-b76d-4093-a125-e7961f14c418,,FALSE
-,,,,Riontonip Wine on 3rd Floor inside cabinet left most side,105,,Wine,neighborhood1_ac3c3619-2da9-4d16-a856-4929846f970c,,FALSE
-,,,,Saucepan,105,,Pots and Pans,neighborhood1_8222733d-7df8-4577-88dc-b28865599429,,FALSE
-,,,,Toaster,105,,Toaster,neighborhood1_fcb2e103-04d4-4e5b-b593-b3175f791ed8,,FALSE
-,,,,$15 Cash on 3rd Floor inside black dresser,105,,Paperware,neighborhood1_22c72378-fc8d-4ded-bc94-cc71392685dc,,FALSE
-,,,,$15 Cash on Bedroom without painting,105,,Paperware,neighborhood1_dfd06c5b-95a5-4ece-8d64-cd9e57207722,,FALSE
-,,,,$50 Cash on 3rd Floor on dining table,105,,Paperware,neighborhood1_1ac6b014-cc65-42fc-9830-6d8a3b04342d,,FALSE
-,,,,$50 Cash on 3rd Floor inside black dresser,105,,Paperware,neighborhood1_e8e1a5d3-0cd5-427c-98b6-b898b77659fc,,FALSE
-,,,,$50 Cash on Bedroom with painting,105,,Paperware,neighborhood1_c41db369-5867-4227-963d-3ce7d1083a7b,,FALSE
-,,,,$50 Cash on Bedroom without painting,105,,Paperware,neighborhood1_090d36d8-1686-48cd-96d2-88bc40f29d6b,,FALSE
-,,,,$50 Cash on 3rd Floor inside black dresser below TV,105,,Paperware,neighborhood1_9596ed27-ce3d-4a16-9123-15ac3752422b,,FALSE
-,,,,Candy Bag,105,,Halloween,neighborhood1_a5b8aab5-7ead-455d-bfff-a77779199cbf,,FALSE
-,,,,Gift- blue,105,,Christmas,,,FALSE
-,,,,Gift - green,105,,Christmas,,,FALSE
-,,,,Break their toilet in 105,105,Crowbar,,,,FALSE
-,,,,Break or steal their TV in 105,105,,,,,FALSE
-,,,,Sunset,106,,Painting,,,FALSE
-,,,,Wave,106,,Painting,neighborhood1_860ed1fd-5e71-4714-a63c-ce6d4a6a0008,,FALSE
-,,,,Golden Goblet,106,,Decoration,,,FALSE
-,,,,Golden Goblet,106,,Decoration,neighborhood1_16ec9d30-fe55-416c-9303-4657cb93ee32,,FALSE
-,,,,Green Vase in 3rd Floor on black dresser right side,106,,Vase,neighborhood1_b0ea4620-0456-48c1-8737-e3a7e0ffef4b,,FALSE
-,,,,Green Vase in 3rd Floor on black dresser left side,106,,Vase,neighborhood1_6803d457-f51d-4d50-b0c4-2dab36fbf787,,FALSE
-,,,,$50 Cash in 3rd Floor inside black dresser,106,,Vase,neighborhood1_849f44b7-a049-44de-aee3-18fb67cbf3aa,,FALSE
-,,,,Metallic Vase,106,,Vase,neighborhood1_b88179a1-faaa-4a23-9ca0-17afc9ebd4a6,,FALSE
-,,,,Tear Trophy,106,,Decoration,neighborhood1_9351be4d-31a4-43b2-ad77-bae7e24d0d5a,,FALSE
-,,,,White Vase,106,,Vase,neighborhood1_1ad293c8-e4d3-49f8-b535-b652afe6004a,,FALSE
-,,,,Wicker Vase,106,,Vase,neighborhood1_61f3cb59-3303-4c31-9ec2-4d497c20931c,,FALSE
-,,,,Yellow Vase,106,,Vase,neighborhood1_dc944fe1-868e-44fb-a2ff-ed8869b1158f,,FALSE
-,,,,Alarm Clock,106,,Clock,neighborhood1_f038ed63-8b09-4d91-9b06-d2a109fb9598,,FALSE
-,,,,Small TV,106,,Television,neighborhood1_3cfad186-cb04-4dce-8e48-2fa442af628f,,FALSE
-,,,,Camera at Living Room Closet inside cabinet,106,,Camera,neighborhood1_6acfc5f1-0036-4b2c-80be-48520e2f1d9d,,FALSE
-,,,,Camera at 1st Floor Hallway inside black cabinet,106,,Camera,neighborhood1_137bea8f-f2d3-4c37-b5fc-3ae1ad62444f,,FALSE
-,,,,Damaged uPhone,106,,Communication Device,neighborhood1_17f79784-adfd-4e6d-b9cc-4564608b943f,,FALSE
-,,,,Huway,106,Hacking tools,Communication Device,neighborhood1_4d29dbdf-b558-4e69-8c90-40cfb69d8b40,,FALSE
-,,,,Landline,106,,Communication Device,neighborhood1_e1c2d923-a5fe-4f98-a374-d7263f855c05,,FALSE
-,,,,Love,106,,Painting,neighborhood1_9152912c-9743-4087-96ff-4d65163fa96d,,FALSE
-,,,,Remote,106,,Television Equipment,neighborhood1_328ffcfc-5415-4247-bd00-7f93865ba0d5,,FALSE
-,,,,SomeSung,106,Hacking tools,Mobile Device,neighborhood1_5008a769-900d-4cf4-8e2f-47587f4c4c3b,,FALSE
-,,,,USB Flash,106,,Computer Peripheral,neighborhood1_fb34cb2c-6aaa-4043-b48d-d96ce0baa0aa,,FALSE
-,,,,Coffee Machine,106,,Coffee Machine,neighborhood1_06cd6829-4e25-4987-9565-2725923b8c14,,FALSE
-,,,,Esevoignas Wine,106,,Wine,neighborhood1_4170cecb-7498-45eb-a604-d7654008a16a,,FALSE
-,,,,Microwave,106,,Microwave,neighborhood1_30f1ab8f-b59c-42f0-b201-26b916bd3179,,FALSE
-,,,,Spoons,106,,Painting,neighborhood1_d9e6e6b3-44a6-4cea-8a0b-834991898985,,FALSE
-,,,,Pot,106,,Pots and Pans,neighborhood1_328a970c-9ee6-4cec-8ca7-dac31fe13443,,FALSE
-,,,,Riontonip Wine,106,,Wine,neighborhood1_9a1ea2f6-36d3-4e6c-9e14-c9e6dbe570f3,,FALSE
-,,,,Saucepan,106,,Pots and Pans,neighborhood1_2a819049-a929-411e-855c-56e6d7b2a19d,,FALSE
-,,,,Teapot,106,,Tea set,neighborhood1_c74568af-f821-4bdc-8c4f-398fb881b5ff,,FALSE
-,,,,Tolrem Wine,106,,Wine,neighborhood1_2ba6ddb9-2c44-4fb4-94e2-d48641de47bc,,FALSE
-,,,,$15 Cash in Garage on right side table,106,,Paperware,neighborhood1_adb2ce95-a11e-4fc7-aced-97f6537d5da4,,FALSE
-,,,,$15 Cash in Living Room inside white drawers,106,,Paperware,neighborhood1_d17e5750-10f4-4b48-a9fe-a19d958718db,,FALSE
-,,,,$15 Cash in 3rd Floor Kitchen inside black dresser,106,,Paperware,neighborhood1_4a4ce9e5-a2a1-417b-b54a-a6fa4daf7daa,,FALSE
-,,,,$15 Cash in Garage on Box,106,,Paperware,neighborhood1_4b21dcb9-98ca-4669-950a-165400c652f8,,FALSE
-,,,,$50 Cash at Entrance brown drawer,106,,Paperware,neighborhood1_a4985e65-6ee3-4611-9c05-e24075a046e4,,FALSE
-,,,,$50 Cash in Living Room inside brown drawer,106,,Paperware,neighborhood1_c5063151-44a4-4390-b8ef-6d36a50b5c32,,FALSE
-,,,,$50 Cash in Living Room inside white drawer,106,,Paperware,neighborhood1_705f2dd3-f694-42a1-843e-a28f12237dd6,,FALSE
-,,,,$50 Cash in Master Bedroom,106,,Paperware,neighborhood1_4ea59602-403f-44a3-9217-f296a2efeec8,,FALSE
-,,,,Pumpkin,106,,Halloween,neighborhood1_7265b56f-d9a0-4872-8f56-ff02a7c605bc,,FALSE
-,,,,Gift- blue,106,,Christmas,,,FALSE
-,,,,Gift - green,106,,Christmas,,,FALSE
-,,,,Break their sink in 106,106,Crowbar,,,,FALSE
-,,,,Break their dishes in 106,106,Crowbar,,,,FALSE
-,,,,Baptism,107,,Painting,neighborhood1_c2483b08-dd88-4601-99a2-c3b2766f7a6a,,FALSE
-,,,,Sunset,107,,Painting,neighborhood1_443f4ec5-0bc9-43ab-8f20-f53649ef9787,,FALSE
-,,,,BeeBee at Living Room across from TV,107,,Painting,neighborhood1_cd905704-eb4e-437f-9ba5-b7b957c536aa,,FALSE
-,,,,BeeBee at Living Room next to brown cabinet,107,,Painting,neighborhood1_0f8f129d-a919-4bc1-ae52-926e7459fe0c,,FALSE
-,,,,BeeBee on 2nd Floor across from stairs,107,,Painting,neighborhood1_c5b202b8-c706-4d3a-aa6b-141acbcb5c87,,FALSE
-,,,,BeeBee on 2nd Floor along the stairs,107,,Painting,neighborhood1_4b4ef13c-e581-4434-b9f3-705c45dcb3e1,,FALSE
-,,,,Evening,107,,Painting,,,FALSE
-,,,,Flower at Living Room,107,,Painting,neighborhood1_75962e92-f69e-4efc-b987-0a2a69b08698,,FALSE
-,,,,Flower on 2nd Floor along the stairs,107,,Painting,neighborhood1_3bfbca98-403c-4f76-a5f5-85ff07e09ba4,,FALSE
-,,,,Flower on 2nd Floor near brown cabinet,107,,Painting,neighborhood1_c06dd8f3-ee9e-4534-a070-c1660d312d58,,FALSE
-,,,,Rose,107,,Painting,neighborhood1_4f03f886-3a50-4002-b726-fac6840b685e,,FALSE
-,,,,Flower Vase,107,,Vase,neighborhood1_d3f41b7d-83bc-4591-945d-0aef90e38cff,,FALSE
-,,,,Vase - tall,107,,Vase,,,FALSE
-,,,,Alarm Clock at Master Bedroom above white cabinet,107,,Clock,neighborhood1_a4e44598-5ce0-44d7-98af-fcf488d32451,,FALSE
-,,,,Alarm Clock at Master Bedroom inside white cabinet,107,,Clock,neighborhood1_73bbddab-d999-45f6-a735-e2cd4a01af55,,FALSE
-,,,,Damaged uPhone,107,,Communication Device,neighborhood1_a9567b95-ebfb-4b8a-8656-536adf59db7b,,FALSE
-,,,,Damaged uPhone at Living Room on top of white cabinet,107,,Communication Device,neighborhood1_bdab4820-7abe-42b2-8fd7-8fd09e425f0f,,FALSE
-,,,,Damaged uPhone at Master Bedroom on top of desk,107,,Communication Device,neighborhood1_d3035680-5714-484e-9a22-cd7faf9634f7,,FALSE
-,,,,Ebricksson,107,,Communication Device,neighborhood1_0c44d81b-b242-4038-b24c-7eb5840e4381,,FALSE
-,,,,Lamp next to Living Room on top of brown cabinet,107,,Lamp,neighborhood1_77f63605-9900-4a30-b292-5431c7a318d2,,FALSE
-,,,,Lamp at Living Room on top of white cabinet,107,,Lamp,neighborhood1_d87eff65-2a39-42a2-bd51-1679359fe7bc,,FALSE
-,,,,Mouse,107,,Computer Peripheral,neighborhood1_2b34bfdc-591c-4804-89dd-9c09b57e3da3,,FALSE
-,,,,Noke next to Living Room inside brown cabinet,107,,Communication Device,neighborhood1_76afa546-64f5-4ef3-898c-f025013acdd7,,FALSE
-,,,,Noke on 2nd Floor inside brown cabinet,107,,Communication Device,neighborhood1_e2e18b84-dc87-4b1c-83b5-69f411db1a85,,FALSE
-,,,,Noke on 2nd Floor on couch,107,,Communication Device,neighborhood1_119a2f85-438c-48de-8422-d38376b3d101,,FALSE
-,,,,Printer,107,,Office Supplies,neighborhood1_30e15075-144e-432e-bb84-c455057af407,,FALSE
-,,,,Radio at Backyard,107 Yard,,Audio Device,neighborhood1_925c17f8-179f-42e1-8d8b-d8c1fba53da8,,FALSE
-,,,,Radio at Living Room inside white cabinet,107,,Audio Device,neighborhood1_c5a8ce7a-78a0-414a-aaca-e83dbdcdf875,,FALSE
-,,,,Router near Entrance below brown drawer,107,,Ethernet Device,neighborhood1_a1b4c565-01e2-4b37-ae18-8fbf3baca08c,,FALSE
-,,,,Router at Living Room near TV,107,,Ethernet Device,neighborhood1_1914cf3e-c80d-4e69-824f-8c7313f3b510,,FALSE
-,,,,Router on 2nd Floor on top of brown cabinet,107,,Ethernet Device,neighborhood1_a89a2880-2702-4b41-a025-7a0f7ebd20be,,FALSE
-,,,,Small TV in Living Room,107,,Television,neighborhood1_31b5c897-2dc8-4545-9acd-e9a379c72c05,,FALSE
-,,,,Small TV in Master Bedroom,107,,Television,neighborhood1_bbbc3084-72f9-4d18-86e5-be8719831218,,FALSE
-,,,,USB Flash,107,,Computer Peripheral,neighborhood1_36b03fa1-c478-44e9-a0d7-91a119ba68c0,,FALSE
-,,,,Old Yomaha Guitar,107,,Musical Instrument,neighborhood1_aed75cea-b775-4ed9-ad0c-2035b93226b7,,FALSE
-,,,,Heirloom Bracelet,107,Jewelry tools,Accessories,neighborhood1_1ce91f4b-db10-4e05-90ed-aa0bda2e8f38,,FALSE
-,,,,Coffee Machine,107,,Coffee Machine,neighborhood1_cc13a847-4674-4480-8a36-0b98baf38c1e,,FALSE
-,,,,Esevoignas Wine,107 Yard,,Wine,neighborhood1_0383c8f2-895d-4fd5-8ca1-1a4f9df6db84,,FALSE
-,,,,Glass Cup at Living Room on white cabinet left side,107,,Tableware,neighborhood1_13a9ec0b-1421-455b-80d8-1ab6a4112782,,FALSE
-,,,,Glass Cup at Living Room on white cabinet right side,107,,Tableware,neighborhood1_4918d0e2-dc2c-4c77-a545-b78844f55e05,,FALSE
-,,,,Microwave,107,,Microwave,neighborhood1_838f0b41-1cd8-4a03-a482-c11a1e22916e,,FALSE
-,,,,Pot,107,,Pots and Pans,neighborhood1_bd03af16-1584-467f-83dc-856e46792459,,FALSE
-,,,,Riontonip Wine,107 Yard,,Wine,neighborhood1_e8654829-9b7d-47a2-8df9-7a9151f530c9,,FALSE
-,,,,Saucepan,107,,Pots and Pans,neighborhood1_3902ae19-ca03-4277-8b74-c990f2e331ba,,FALSE
-,,,,Teapot,107,,Tea set,neighborhood1_b461a83e-ca3f-4df1-a60a-83d7508c99f3,,FALSE
-,,,,$15 Cash at Living Room inside white cabinet,107,,Paperware,neighborhood1_e2668a95-e31a-4415-ac5c-067622309555,,FALSE
-,,,,$50 Cash near Entrance right side of brown drawer,107,,Paperware,neighborhood1_985f574c-666e-499e-91b6-d034b20450ea,,FALSE
-,,,,$50 Cash near Entrance top left side of brown drawer,107,,Paperware,neighborhood1_60a27894-2929-4747-962b-3fcef2f5b226,,FALSE
-,,,,$50 Cash near Entrance bottom left side of brown drawer,107,,Paperware,neighborhood1_03343c98-6b1a-4904-bec5-0ecec258bdb9,,FALSE
-,,,,$50 Cash at Living Room inside white cabinet,107,,Paperware,neighborhood1_4d804b86-6f0d-4ff8-bcb1-cf9c6b56505c,,FALSE
-,,,,$50 Cash at Living Room below white cabinet,107,,Paperware,neighborhood1_3bf09af1-0495-48a3-8864-64ffee43ae25,,FALSE
-,,,,$150 Cash Near Entrance inside brown drawer,107,,Paperware,neighborhood1_006f8fd6-1fb1-4f85-bd27-7535a003cb2f,,FALSE
-,,,,$150 Cash Near Entrance on brown drawer,107,,Paperware,neighborhood1_c07191f2-da80-4f05-bc94-8ce5ab3ed9b9],,FALSE
-,,,,Candy Bag,107 Yard,,Halloween,neighborhood1_9be5e08c-9074-487a-85fa-7cdf0c450c40,,FALSE
-,,,,,,,,,,FALSE
-,,,,Gift - green,107,,Christmas,,,FALSE
-,,,,Break their toilet in 107,107,Crowbar,,,,FALSE
-,,,,Break their wine glasses in 107,107,Crowbar,,,,FALSE
-,,,,BeeBee across from Garage above white drawers,108,,Painting,neighborhood1_4a30223e-8cce-43f7-98c2-2f7d9cd47ccd,,FALSE
-,,,,BeeBee,108,,Painting,neighborhood1_085b0c4a-d67f-4fa1-b760-f16d8d693bd5,,FALSE
-,,,,China,108,,Painting,neighborhood1_b755b688-3a65-44ec-948f-1754eca666ed,,FALSE
-,,,,Daisy,108,,Painting,neighborhood1_f091291e-a542-42d5-ae09-738603895b42,,FALSE
-,,,,Flower next to Garage left of paintings,108,,Painting,neighborhood1_9e48edec-991d-4e0f-96d7-7e439b184d81,,FALSE
-,,,,Flower next to Garage inbetween of paintings,108,,Painting,neighborhood1_78d86ca6-9fe7-4cf9-b62a-c287b892e6d1,,FALSE
-,,,,Flower next to Garage right of paintings,108,,Painting,neighborhood1_82a32c5f-d3a0-429a-b34b-d519fa6e4a1b,,FALSE
-,,,,Flower at 2nd Floor near the stairs,108,,Painting,neighborhood1_037e732b-c230-4447-bc3b-6b9874251e3f,,FALSE
-,,,,Flowers,108,,Painting,neighborhood1_35db3c12-9e0f-4703-9267-12ab0f80eba5,,FALSE
-,,,,Rose,108,,Painting,neighborhood1_e44b6595-614d-45ba-9c63-1497a66e89c0,,FALSE
-,,,,Dark Red Vase in Living Room right of TV,108,,Vase,neighborhood1_faa20ea6-31f1-4dbe-a34a-8d8c34a7ebed,,FALSE
-,,,,Dark Red Vase in Bedroom on top of brown cabinet,108,,Vase,neighborhood1_2d1ed83a-730c-4ef6-a1d5-709b11f1698a,,FALSE
-,,,,Globe,108,,Decoration,neighborhood1_7556d3ad-e842-4abe-9666-e4ab05b7aec5,,FALSE
-,,,,Golden Goblet,108,,Decoration,neighborhood1_71ce0bb3-8bb0-426f-8c5e-b480eec321fc,,FALSE
-,,,,Golden Goblet,108,,Decoration,,,FALSE
-,,,,Pendulum,108,,Decoration,neighborhood1_804b6537-222f-4a04-8e2f-f75d4d58ae4b,,FALSE
-,,,,Piggy Bank,108,,Decoration,neighborhood1_85c0048f-2225-4346-884f-170ac55021d1,,FALSE
-,,,,Tear Trophy,108,,Decoration,neighborhood1_c71f6d21-46c7-45d4-837d-eac6ff35cbfa,,FALSE
-,,,,Vase - tall in Living Room on top of white cabinet,108,,Vase,neighborhood1_173c15fd-b95d-4a05-9259-a61198b06638,,FALSE
-,,,,Vase - tall in Living Room inside brown cabinet,108,,Vase,neighborhood1_eb2bc3b7-d5b7-4056-bc9d-f8a3a8d7cefe,,FALSE
-,,,,Vase 'Black&White',108,,Vase,neighborhood1_743b25bf-14db-4363-a4cf-4d2ff01f44b1,,FALSE
-,,,,White Vase,108,,Vase,neighborhood1_a4175da0-6742-4378-b9bd-4b8a04f2e046,,FALSE
-,,,,Wicker Vase,108,,Vase,neighborhood1_a66664dd-aa17-4645-bc56-c59e02169286,,FALSE
-,,,,Alarm Clock in Master Bedroom on top of white drawers,108,,Clock,neighborhood1_ac94e123-5046-4dbe-8acb-5ea0cb437d65,,FALSE
-,,,,Alarm Clock in Bedroom on top of white cabinet,108,,Clock,neighborhood1_f28bb7dd-9cb3-4af0-9354-300fc5760245,,FALSE
-,,,,Alarm Clock in Bedroom on top of white drawers,108,,Clock,neighborhood1_0d1a04f0-ebaf-426d-9acf-10636b7a1119,,FALSE
-,,,,Radio,108,,Audio Device,neighborhood1_addaf70c-6ae6-4fe0-8d3e-3b9b91053c9c,,FALSE
-,,,,Camera,108,,Camera,neighborhood1_00977dec-bc2e-4f4c-8906-b3d90c6f759c,,FALSE
-,,,,Damaged uPhone at Kitchen on dining table,108,,Communication Device,neighborhood1_b1a21528-1c35-4a31-a83e-2203f916c31c,,FALSE
-,,,,Damaged uPhone in Bathroom,108,,Communication Device,neighborhood1_9543ad6d-355d-47b0-9541-51f672ed886b,,FALSE
-,,,,Damaged uPhone in 2nd Floor above brown drawers,108,,Communication Device,neighborhood1_44aa6dfc-9534-4cd7-a00c-d91434ce0e5f,,FALSE
-,,,,Ebricksson,108,,Communication Device,neighborhood1_322b55cb-26b2-46a3-a2fa-eb2c08446324,,FALSE
-,,,,Headphones in Living Room on top of white cabinet,108,,Audio Device,neighborhood1_ae2dff85-d46c-4889-8885-6932e460bb99,,FALSE
-,,,,Headphones in Master Bedroom inside white cabinet right side,108,,Audio Device,neighborhood1_9c435db8-19b8-461f-970d-f73e062f458e,,FALSE
-,,,,Headphones in Bedroom inside white desk cabinet,108,,Audio Device,neighborhood1_f238331c-4066-441d-a424-0eaa6f055af0,,FALSE
-,,,,Keyboard,108,,Computer Peripheral,neighborhood1_5a22bfe4-95cc-4bd2-8e92-b1697a04bd60,,FALSE
-,,,,Lamp at Master Bedroom left side of bed above white cabinet,108,,Lamp,neighborhood1_2349106f-496b-47ec-a9fc-abd89760d19b,,FALSE
-,,,,Lamp at Master Bedroom right side of bed above white cabinet,108,,Lamp,neighborhood1_a05e27c3-ea55-4cfc-ac37-0cf3bbd162ab,,FALSE
-,,,,Printer,108,,Office Supplies,neighborhood1_f754fbec-130a-434b-b7aa-79a3e8c784ab,,FALSE
-,,,,Router in 2nd Floor below brown drawers,108,,Ethernet Device,neighborhood1_b078b808-574a-48b2-a889-5b01473ba3c8,,FALSE
-,,,,Router in Bedroom below small table,108,,Ethernet Device,neighborhood1_df56f436-899a-4ea1-a705-8d22ea49bda0,,FALSE
-,,,,Small TV,108,,Television,neighborhood1_ccd59414-1535-4f70-9ae7-445805e98c9a,,FALSE
-,,,,USB Flash,108,,Computer Peripheral,,,FALSE
-,,,,Electric Guitar,108,,Musical Instrument,neighborhood1_ee9e5969-3206-4062-bfc8-defb8dbab94f,,FALSE
-,,,,Wender Electric Guitar,108,,Musical Instrument,neighborhood1_74831b80-8e04-4cd4-a2c8-290b7709d39e,,FALSE
-,,,,Esevoignas Wine,108,,Wine,neighborhood1_4d574a66-77b0-4313-b3ef-cd9ccee4ef0e,,FALSE
-,,,,Microwave,108,,Microwave,neighborhood1_54888249-5c07-4b95-8971-7bb49557c031,,FALSE
-,,,,Old Toaster,108,,Toaster,,,FALSE
-,,,,Sunset,108,,Painting,neighborhood1_b7d02951-1293-472a-8d48-6a3891b6c12f,,FALSE
-,,,,$15 Cash in Living Room on top of Couch,108,,Paperware,neighborhood1_d81b72a3-0090-4d87-a19f-01082cc7356b,,FALSE
-,,,,$15 Cash at Kitchen on dining table,108,,Paperware,neighborhood1_b56470f6-94dd-4b13-8871-20bf2dadf2f0,,FALSE
-,,,,$15 Cash in Bathroom,108,,Paperware,neighborhood1_740c1988-5bb1-4b85-b88e-1c1668abc373,,FALSE
-,,,,$50 Cash in Master Bedroom inside brown cabinet,108,,Paperware,neighborhood1_c95fca9a-c220-469a-bd37-0d4d07335380,,FALSE
-,,,,$50 Cash in Master Bedroom inside white cabinet left side,108,,Paperware,neighborhood1_09ac9804-8b97-435b-b453-0754af2502d6,,FALSE
-,,,,$50 Cash in Bedroom inside brown cabinet,108,,Paperware,neighborhood1_eb54526c-6cc0-4746-a257-4cc0fe6c9cea,,FALSE
-,,,,$50 Cash in Bedroom on top of brown cabinet,108,,Paperware,neighborhood1_fbe21d51-302e-4453-82d8-b8de4fa3205b,,FALSE
-,,,,Candy Bag,108,,Halloween,neighborhood1_d4cc1aed-a343-4141-bc0a-fc0de1c06125,,FALSE
-,,,,Gift - green,108,,Christmas,,,FALSE
-,,,,Gift - red,108,,Christmas,,,FALSE
-,,,,Break or steal a decoration in 108,108,,,,,FALSE
-,,,,Steal a Daisy painting in 108,108,,,,,FALSE
-,,,,Old TV,109,,Television,neighborhood1_3e720aa8-9009-49e9-a565-ebdb83e7f83f,,FALSE
-,,,,Old Toaster,109,,Toaster,neighborhood1_7348eb03-2633-48f9-8bbd-986b499263bc,,FALSE
-,,,,Pot,109,,Pots and Pans,neighborhood1_f0c5e461-d953-44d0-8f88-53628ae9ea74,,FALSE
-,,,,Saucepan in Kitchen left of table,109,,Pots and Pans,neighborhood1_4dc4902c-f145-4d28-ab64-b02898f6fdd9,,FALSE
-,,,,Saucepan in Kitchen right of table,109,,Pots and Pans,neighborhood1_57c96f55-e618-4b57-9df3-06e0adecd85f,,FALSE
-,,,,$15 Cash in Bathroom right of trash bag,109,,Paperware,neighborhood1_8f28fef5-9429-4fd9-a510-52eccc83de3c,,FALSE
-,,,,$15 Cash in Bathroom left of trash bag,109,,Paperware,neighborhood1_a86d1100-1014-43f3-bf96-ff81b42f1bbc,,FALSE
-,,,,$15 Cash in Bedroom inside gray cabinet,109,,Paperware,neighborhood1_ca75d2d5-8b21-4b97-b14c-e7cf3b30812c,,FALSE
-,,,,$15 Cash in Bedroom below TV,109,,Paperware,neighborhood1_84d08897-dbd8-485e-a0e8-f6f7da1b5373,,FALSE
-,,,,Front Door Key 109,109,,Key,,,FALSE
-,,,,Autumn,110,,Painting,neighborhood1_3d157583-dd2c-410e-940e-d422ad30bd64,,FALSE
-,,,,Old Toaster,110,,Toaster,neighborhood1_3661579e-5970-445d-8ff7-031983d7fa8b,,FALSE
-,,,,Pot,110,,Pots and Pans,neighborhood1_f2a00797-08e8-40aa-ba96-61cc2bf71a5a,,FALSE
-,,,,Saucepan,110,,Pots and Pans,neighborhood1_f13d0d98-ca64-498b-8f40-88f5ba61ab20,,FALSE
-,,,,Teapot,110,,Tea set,neighborhood1_3d9b9638-3033-4970-8187-3c9b8c35642f,,FALSE
-,,,,$15 Cash in Kitchen above blue table,110,,Paperware,neighborhood1_66388c26-24ed-47a9-94b0-5274c9117511,,FALSE
-,,,,$15 Cash in Bedroom inside desk cabinet,110,,Paperware,neighborhood1_ec9d233d-aadb-41d7-9c0f-36c25832b412,,FALSE
-,,,,$15 Cash in Bedroom inside shoe cabinet,110,,Paperware,neighborhood1_ab2602ae-2313-4281-9504-aba1d7ec33d5,,FALSE
-,,,,Break or steal the painting in 110,110,,,,,FALSE
-,,,,Break their dishes in 110,110,Crowbar,,,,FALSE
-,,,,Old TV,111,,Television,neighborhood1_51a1dc00-bfe1-4b2c-93f1-bce94c0f0231,,FALSE
-,,,,Radio,111,,Audio Device,neighborhood1_e4f91c4b-1c01-4f19-84b8-7787371aad54,,FALSE
-,,,,Pot,111,,Pots and Pans,neighborhood1_6df0afc4-4062-477c-aab2-f29617f99233,,FALSE
-,,,,Box with Shady Content,111,,Box,,,FALSE
-,,,,$50 Cash inside grey cabinet right side,111,,Paperware,neighborhood1_bf20708c-39af-4162-a484-32ebce404912,,FALSE
-,,,,$50 Cash inside grey cabinet left side,111,,Paperware,neighborhood1_209aadea-b8be-4f14-9d78-082c65fd0d60,,FALSE
-,,,,Autumn,112,,Painting,neighborhood1_cf032140-2f55-4fbf-ae4d-1cde70097785,,FALSE
-,,,,Deer,112,,Painting,neighborhood1_e5a26e5d-67a5-4e3f-886e-95839ee8c8e9,,FALSE
-,,,,Kiss,112,,Painting,,,FALSE
-,,,,Chess,112,,Toy,neighborhood1_7f72ab6c-2812-45bc-8923-7454fefceb00,,FALSE
-,,,,Flower Vase,112,,Vase,,,FALSE
-,,,,Golden Goblet,112,,Decoration,neighborhood1_28373a43-5597-497e-b3d8-cdf8a1eddb24,,FALSE
-,,,,Golden Goblet,112,,Decoration,,,FALSE
-,,,,Grey Vase,112,,Vase,neighborhood1_3cd9a394-0bcc-4a65-9ac8-6bbb43fbf648,,FALSE
-,,,,Tear Trophy,112,,Decoration,neighborhood1_c5ac0329-79f1-4b7b-952a-f7032439665e,,FALSE
-,,,,Yellow Vase in Bedroom on brown drawers right side,112,,Vase,neighborhood1_a89a66bf-8211-4f3b-9155-7492b16222fc,,FALSE
-,,,,Yellow Vase in Bedroom on brown drawers left side,112,,Vase,neighborhood1_b389a902-3a1e-4385-886e-b45ec54d1ddc,,FALSE
-,,,,Alarm Clock,112,,Clock,neighborhood1_5254233e-2a14-4952-9082-5c9ff2e5dd40,,FALSE
-,,,,Camera,112,,Camera,neighborhood1_b64bf9c4-05b8-4cd4-8e11-a5a07e346000,,FALSE
-,,,,Landline,112,,Communication Device,neighborhood1_101d29bb-5548-4bae-9656-8e6a95ae63e6,,FALSE
-,,,,Radio,112,,Audio Device,,,FALSE
-,,,,Remote,112,,Television Equipment,neighborhood1_feb2fc6f-ed8d-48b1-9028-0bc037c24c15,,FALSE
-,,,,Small TV in Living Room,112,,Television,neighborhood1_0ad21980-8b56-422f-bf84-c21d1794e312,,FALSE
-,,,,Small TV in Laundry Room,112,,Television,neighborhood1_8441f58e-0437-48c1-973b-2c68d26a2c57,,FALSE
-,,,,USB Flash,112,,Computer Peripheral,neighborhood1_aae878bd-532c-4030-8193-c7b643fcbbfc,,FALSE
-,,,,Bracelet,112,"Jewelry tools, Safecracking tools",Accessories,neighborhood1_e2d7feec-64db-46ae-a90e-c6739a1e3d2c,,FALSE
-,,,,Coffee Machine,112,,Coffee Machine,neighborhood1_74d1597e-a9dc-4d42-8ca1-3ceae10628c1,,FALSE
-,,,,Glass Cup,112,,Tableware,,,FALSE
-,,,,Glass Cup,112,,Tableware,,,FALSE
-,,,,Old Toaster,112,,Toaster,,,FALSE
-,,,,Saucepan,112,,Pots and Pans,neighborhood1_acb89dd9-367f-4548-87d5-42ece9373562,,FALSE
-,,,,Toaster,112,,Toaster,neighborhood1_eca5b565-8feb-46cb-b499-efbe597fa53d,,FALSE
-,,,,Tolrem Wine,112,,Wine,neighborhood1_a0399e15-c974-41a2-9e81-0d0923a1bb84,,FALSE
-,,,,$15 Cash in Bedroom inside desk cabinet,112,,Paperware,neighborhood1_4db7ebba-3a77-4ece-8f2c-0595758bba57,,FALSE
-,,,,$15 Cash in Hallway on top of brown drawers,112,,Paperware,neighborhood1_8661f588-3a28-45bb-9ed3-d6ea729f3667,,FALSE
-,,,,$15 Cash in Living Room on top of white cabinet,112,,Paperware,neighborhood1_856ca056-8601-4e7d-9669-0f690961f351,,FALSE
-,,,,$15 Cash in Kitchen on dining table,112,,Paperware,neighborhood1_8c4713fa-2a25-4d36-b9b2-4701e3435a03,,FALSE
-,,,,$15 Cash in Master Bedroom inside safe bottom side,112,Safecracking tools,Paperware,neighborhood1_26f4f715-7a10-4c94-bae8-93eb76566334,,FALSE
-,,,,$15 Cash in Master Bedroom inside safe top side,112,Safecracking tools,Paperware,neighborhood1_79141d41-cb24-4487-9b86-a59db539bce9,,FALSE
-,,,,$50 Cash in Laundry Room inside grey container,112,,Paperware,neighborhood1_f225c348-775f-41ed-b4b7-25491c0e7bba,,FALSE
-,,,,Candy Bag,112,,Halloween,neighborhood1_5368c04e-827b-47b2-8148-d3819f656598,,FALSE
-,,,,Gift- blue,112,,Christmas,,,FALSE
-,,,,Gift - green,112,,Christmas,,,FALSE
-,,,,Gift - red,112,,Christmas,,,FALSE
-,,,,Break or steal the Kiss painting in 112,112,,,,,FALSE
-,,,,Baptism,113,,Painting,neighborhood1_14d8e7ce-1b84-4266-8572-1ec67a51e3fd,,FALSE
-,,,,Evening,113,,Painting,,,FALSE
-,,,,Wave,113,,Painting,neighborhood1_14377b03-2de6-4bab-bc78-0584d78a39fb,,FALSE
-,,,,Flower Vase near Kitchen above brown drawers,113,,Vase,neighborhood1_b3999862-e090-4aa9-a489-908a061c8f7a,,FALSE
-,,,,Flower Vase at Kitchen on dining table,113,,Vase,neighborhood1_2876e3c0-33d3-48cf-935c-7549922ad3af,,FALSE
-,,,,Grey Vase,113,,Vase,neighborhood1_9aa4ac86-e783-46ec-888e-0f0e9e1a8503,,FALSE
-,,,,Red Vase in Locked Bedroom inside brown cabinets left side,113 Bedroom,,Vase,neighborhood1_c1b261fb-c888-4438-bc23-7a7e4e1cfeff,,FALSE
-,,,,Red Vase in Locked Bedroom inside brown cabinets right side,113 Bedroom,,Vase,neighborhood1_d22e9272-900d-4000-af20-f040bc0bae03,,FALSE
-,,,,Vase - tall near Entrance on shelf right side,113,,Vase,neighborhood1_b43ec22e-2f53-4e7d-8630-03170c744866,,FALSE
-,,,,Vase - tall near Entrance on shelf left side,113,,Vase,neighborhood1_a2079eea-9f99-4876-ad7a-e5dbbe3eaa02,,FALSE
-,,,,Vase - tall in Living Room on shelf,113,,Vase,neighborhood1_e50e2fd3-5af6-45ee-82eb-22de82b6690a,,FALSE
-,,,,Ebricksson,113,,Communication Device,neighborhood1_ddd166de-7094-4da9-939b-3ac9983ce309,,FALSE
-,,,,Harddrive in Kid's Bedroom inside desk cabinet stacked on top,113,,Computer Peripheral,neighborhood1_0d180919-b886-4b74-8979-443b6e47a182,,FALSE
-,,,,Harddrive in Kid's Bedroom inside desk cabinet stacked on bottom,113,,Computer Peripheral,neighborhood1_e8c8ef2b-4f81-4074-89af-e9eed055e69d,,FALSE
-,,,,Jomaha Receiver,113,,Television Equipment,neighborhood1_3f2ba777-6a7a-4031-b4f4-9cd1224dbcd4,,FALSE
-,,,,Noke at Bathroom,113,,Communication Device,neighborhood1_dd24dcad-43a0-4dbb-bbdf-8d0788b1f166,,FALSE
-,,,,Noke near Entrance on white seat,113,,Communication Device,neighborhood1_65ccb18a-efd1-421b-863e-eb96c3ffe950,,FALSE
-,,,,Printer,113,,Office Supplies,neighborhood1_259ca152-c257-4422-b187-5cc4d799dd73,,FALSE
-,,,,Radio,113,,Audio Device,neighborhood1_ae518bcc-d17c-4e2b-91ac-2b58ff639c44,,FALSE
-,,,,Remote,113,,Television Equipment,neighborhood1_829d727d-3fa9-4bdd-affd-9dfd5d487a6c,,FALSE
-,,,,Router at Hallway on top of brown drawers,113,,Ethernet Device,neighborhood1_9f40abbb-af59-42f0-9b64-c0dfd392557e,,FALSE
-,,,,Router in Kid's Bedroom,113,,Ethernet Device,neighborhood1_6164c355-2680-4e7f-b2e3-5b811a955779,,FALSE
-,,,,Small TV at Living Room,113,,Television,neighborhood1_cff938bb-a582-4ef3-bb05-36ae1398ec86,,FALSE
-,,,,Small TV in Kid's Bedroom inside clothes cabinet,113,,Television,neighborhood1_1b3d45ca-0c50-4cea-bdd7-d76499500b6c,,FALSE
-,,,,Esevoignas Wine,113,,Wine,neighborhood1_bf1a5559-ddc1-4d64-96ce-3a8ffd94661e,,FALSE
-,,,,Autumn,113,,Painting,neighborhood1_1d130570-ddb5-494d-96e3-66f83da904db,,FALSE
-,,,,Sunset,113,,Painting,neighborhood1_f0331925-7105-4271-99a2-6971503b27e0,,FALSE
-,,,,Glass Cup in Locked Bedroom in brown cabinet on top left,113 Bedroom,,Tableware,neighborhood1_5d7d7f8b-c7a8-4cc6-951d-d1e2067b3f34,,FALSE
-,,,,Glass Cup in Locked Bedroom in brown cabinet on top middle,113 Bedroom,,Tableware,neighborhood1_fe779180-b857-4c34-858f-508e81d41ba4,,FALSE
-,,,,Glass Cup in Locked Bedroom in brown cabinet on top right,113 Bedroom,,Tableware,neighborhood1_0fb48d5c-8899-4c9a-ba84-e41b0948d8a2,,FALSE
-,,,,Glass Cup in Locked Bedroom in brown cabinet on bottom right,113 Bedroom,,Tableware,neighborhood1_c2900981-2e4d-4dfd-95df-2e77e186bdc2,,FALSE
-,,,,Glass Cup in Locked Bedroom in brown cabinet on bottom middle,113 Bedroom,,Tableware,neighborhood1_66f7552b-a43d-43c9-96ac-c6e1787b3c72,,FALSE
-,,,,Glass Cup in Locked Bedroom in brown cabinet on bottom left,113 Bedroom,,Tableware,neighborhood1_e5d81282-59f8-412f-99f5-2af2e52dcc7c,,FALSE
-,,,,Microwave,113,,Microwave,neighborhood1_971dfadb-8179-4599-a9dc-a7ad99df02bb,,FALSE
-,,,,Pot,113,,Pots and Pans,neighborhood1_7bbf3b9d-c692-43f0-bc54-542cce7905c2,,FALSE
-,,,,Teabox,113,,Tea set,neighborhood1_1b063a39-167b-4817-9af5-09fa52308357,,FALSE
-,,,,Tolrem Wine,113,,Wine,neighborhood1_ebc1b27a-be47-4f87-8b72-619b17aab021,,FALSE
-,,,,$15 Cash at Hallway inside brown cabinet right side,113,,Paperware,neighborhood1_75249d2d-94a3-4840-834a-650b0d53f939,,FALSE
-,,,,$15 Cash near Entrance on shelf,113,,Paperware,neighborhood1_2fef7d42-280b-42f1-9bed-40fe8bb1c16e,,FALSE
-,,,,$15 Cash at Hallway inside brown cabinet left side,113,,Paperware,neighborhood1_e9f4570b-4315-431a-9683-f8f832a60384,,FALSE
-,,,,$15 Cash near Kitchen on top of brown drawers,113,,Paperware,neighborhood1_a28d583c-d26f-4643-99eb-bf24795a1cb3,,FALSE
-,,,,$15 Cash at Kitchen on top of kitchen counter,113,,Paperware,neighborhood1_681d958e-cd61-4772-9608-071e2dd8cf54,,FALSE
-,,,,$15 Cash in Living Room inside black cabinets,113,,Paperware,neighborhood1_2dc471b6-be6d-4009-9f75-602e3f43ad76,,FALSE
-,,,,$15 Cash in Living Room below TV inside brown cabinets,113,,Paperware,neighborhood1_f9b5af03-bbc9-49f5-94be-66da63a37d73,,FALSE
-,,,,$15 Cash in Kid's Bedroom inside desk cabinet,113,,Paperware,neighborhood1_f9cdbc75-be4b-412a-869f-c6db62488b13,,FALSE
-,,,,$50 Cash in Living Room on round table,113,,Paperware,neighborhood1_fc1802a5-9460-4315-a8df-583c84b37ba1,,FALSE
-,,,,Candy Bag,113,,Halloween,neighborhood1_3564e3c6-58bb-40d9-9747-d97afc373284,,FALSE
-,,,,Gift- blue,113,,Christmas,,,FALSE
-,,,,Gift - green,113,,Christmas,,,FALSE
-,,,,Break or steal the pear decoration in 113,113,,,,,FALSE
-,,,,Headphones,102 Yard,,Audio Device,neighborhood1_76674cb9-9592-4394-8bdb-a274d16d3940,,FALSE
-,,,,USB Flash,102 Yard,,Computer Peripheral,neighborhood1_d245029d-8279-48b6-901d-3e4f47e08094,,FALSE
-,,,,Video game' console,104 Frontyard,,Video Game Electronic,neighborhood1_7211dda3-eae1-4d16-95c8-c477ffa33ed3,,FALSE
-,,,,Rose Piano,106 Sideroom,,Painting,neighborhood1_33739604-a640-47f6-b681-9f457f11838f,,FALSE
-,,,,Harddrive,106 Sideroom,,Computer Peripheral,neighborhood1_08230908-ac7d-4e9a-ad73-afb8ff9aa78d,,FALSE
-,,,,Headphones,106 Sideroom,,Audio Device,neighborhood1_a1ae5fe0-f7ec-490d-9e02-e4c62fa354a3,,FALSE
-,,,,Headset,106 Sideroom,,Audio Device,neighborhood1_9f7cc209-b11b-49b4-8b30-354cd51bf76c,,FALSE
-,,,,Mouse,106 Sideroom,,Computer Peripheral,neighborhood1_8b56d84b-8835-4691-bb0b-ae8189e146ec,,FALSE
-,,,,Noke,106 Sideroom,,Communication Device,neighborhood1_e209f9c2-f819-47ae-9379-6901ecacb8bb,,FALSE
-,,,,$50 Cash inside Sideroom Safe bottom shelf left most side,106 Sideroom,Safecracking tools,Paperware,neighborhood1_4618ae90-717b-4a63-bd7d-48af06ec726e,,FALSE
-,,,,$50 Cash inside Sideroom Safe bottom shelf middle left side,106 Sideroom,Safecracking tools,Paperware,neighborhood1_ded7f5a5-ab24-480d-ad2c-2136d6e38142,,FALSE
-,,,,$50 Cash inside Sideroom Safe bottom shelf middle right side,106 Sideroom,Safecracking tools,Paperware,neighborhood1_ced63545-2d9c-4f33-9627-a40cec3143ef,,FALSE
-,,,,$50 Cash inside Sideroom Safe bottom shelf right most side,106 Sideroom,Safecracking tools,Paperware,neighborhood1_bbb04c3b-7ac8-4cd3-b3b0-f0e3bb13ce20,,FALSE
-,,,,$50 Cash inside Sideroom Safe top shelf right  most side,106 Sideroom,Safecracking tools,Paperware,neighborhood1_7486c630-5064-4bd8-989f-2ee9dbe70a00,,FALSE
-,,,,$50 Cash inside Sideroom Safe top shelf middle right side,106 Sideroom,Safecracking tools,Paperware,neighborhood1_df1d477f-b03a-4860-b420-0ec0865941d1,,FALSE
-,,,,$50 Cash inside Sideroom Safe top shelf middle left side,106 Sideroom,Safecracking tools,Paperware,neighborhood1_17b5f3f6-2084-459c-9cf2-91fb124b0d25,,FALSE
-,,,,$50 Cash inside Sideroom Safe top shelf left most side,106 Sideroom,Safecracking tools,Paperware,neighborhood1_07c719f0-0e78-4f50-a24e-bdbddfeead1e,,FALSE
-,,,,Break their window on the second floor in 107,107 Yard,Crowbar,,,,FALSE
-,,,,Radio,108 Backyard,,Audio Device,neighborhood1_37a1b08b-6a66-4012-8218-b01b386d93f1,,FALSE
-,,,,Esevoignas Wine,108 Backyard,,Wine,neighborhood1_45d03629-7ed6-411b-ae27-47b7b1447dcd,,FALSE
-,,,,Riontonip Wine,108 Backyard,,Wine,neighborhood1_db2d7e33-0423-4743-834f-79d64e5d59f5,,FALSE
-,,,,Saucepan,108 Backyard,,Pots and Pans,neighborhood1_3691d652-ec22-4fb0-8d2a-339028628122,,FALSE
-,,,,Teabox,108 Backyard,,Tea set,neighborhood1_608df287-55f2-41b8-b1c1-28a8968e1293,,FALSE
-,,,,Vase - wide,108 Upstairs Living Room,,Vase,neighborhood1_813bc0bd-0b5e-4b13-bded-28381cf872f7,,FALSE
-,,,,Harddrive,108 Upstairs Living Room,,Computer Peripheral,neighborhood1_66e9f9a4-ee98-4328-a309-a7dd6db1b748,,FALSE
-,,,,Jomaso Receiver,108 Upstairs Living Room,,Television Equipment,neighborhood1_13803dae-8f70-4180-a384-917917841782,,FALSE
-,,,,Remote,108 Upstairs Living Room,,Television Equipment,neighborhood1_c8a6f7ee-df34-4669-9238-fcfb5cb79d9b,,FALSE
-,,,,Speaker,108 Upstairs Living Room,,Audio Device,neighborhood1_0f8e0b6e-3a7a-49cf-b580-1d81402f8d31,,FALSE
-,,,,TV,108 Upstairs Living Room,,Television,neighborhood1_fa9d6c36-e2d7-4666-97f5-b1563ed29f8c,,FALSE
-,,,,$50 Cash Below TV left side,108 Upstairs Living Room,,Paperware,neighborhood1_12b98686-cd60-4293-8c3b-35591a2a40bc,,FALSE
-,,,,$50 Cash Below TV right side,108 Upstairs Living Room,,Paperware,neighborhood1_b65df24d-20fe-4864-b39d-8d7cfcf72aa9,,FALSE
-,,,,Harddrive,109 Upstairs Living Room,,Computer Peripheral,neighborhood1_30bb074e-faa3-4a8b-9025-0d7bdb04b3a5,,FALSE
-,,,,Speaker,109 Upstairs Living Room,,Audio Device,neighborhood1_b0c62aa5-b91a-4618-96d1-d1e2f2119f60,,FALSE
-,,,,Harddrive,110 Upstairs Living Room,,Computer Peripheral,neighborhood1_d1b968e2-a0de-4882-87c7-259cd7e59c2f,,FALSE
-,,,,Headphones,113 Backyard,,Audio Device,neighborhood1_487631f4-a3a6-4c63-bc94-a7b8221689d6,,FALSE
-,,,,Radio,113 Backyard,,Audio Device,neighborhood1_c08c5b66-dcaa-4017-9ecb-947734749bfd,,FALSE
-,,,,Baptism,113 Bedroom,,Painting,neighborhood1_20b6c28d-9646-4efa-9692-b723953c87cf,,FALSE
-,,,,Yellow Pear Vase,113 Bedroom,,Vase,neighborhood1_47162ad1-0327-4da1-b966-6538e55109c1,,FALSE
-,,,,Alarm Clock in Locked Bedroom on top of white drawer,113 Bedroom,,Clock,neighborhood1_b716734f-a024-4a34-b1ea-27ebff81e6c9,,FALSE
-,,,,Alarm Clock in Locked Bedroom inside white drawer,113 Bedroom,,Clock,neighborhood1_8ef866d0-b704-426a-a7f2-59dbea9a9d1a,,FALSE
-,,,,Camera,113 Bedroom,,Camera,neighborhood1_230ed145-f624-4ec2-bfd6-dafd10703667,,FALSE
-,,,,Old Yomaha Guitar,113 Bedroom,,Musical Instrument,neighborhood1_e8528bf7-3110-4b3d-8ba6-a266acc1890f,,FALSE
-,,,,$15 Cash in Locked Bedroom on top of white cabinets,113 Bedroom,,Paperware,neighborhood1_d898b877-1d2f-4295-ba88-f0f8067746f3,,FALSE
-,,,,$15 Cash in Locked Bedroom inside brown clothes cabinet,113 Bedroom,,Paperware,neighborhood1_5b1fdbbc-cc82-4474-8dad-c3aab358df2c,,FALSE
-,,,,$15 Cash in Locked Bedroom near bed inside white cabinets,113 Bedroom,,Paperware,neighborhood1_301138c9-8c94-4986-8fc3-8ed2d8ee32f1,,FALSE
-,,,,$50 Cash in Locked Bathroom inside white cabinets,113 Bedroom,,Paperware,neighborhood1_dd5ef0b8-fa74-4c89-8d81-62082167dca6,,FALSE
-,,,,Front Door Key 113,113 Bedroom,,Key,neighborhood1_11f27781-417e-4f86-881c-e4e7c28df697,Front door key 113,FALSE
-,,,,Pumpkin Outside 113,Greenview St,,Halloween,neighborhood1_7dc956aa-d4af-49d9-8576-539c3460146a,,FALSE
-,,,,Pumpkin on 107 Fence,Greenview St,,Halloween,neighborhood1_06f7c07a-724f-4b7a-a8b7-276040539ed4,,FALSE
-,,,,Pumpkin on 108 Roof,Greenview St,,Halloween,neighborhood1_307e9ec8-d499-429a-bb72-4e72f4c5b6a0,,FALSE
-,,,,101 - House security tip 1,Greenview St,,,,,FALSE
-,,,,101 - Possible loot location tip 1,Greenview St,,,,,FALSE
-,,,,101 - House security tip 2,Greenview St,,,,,FALSE
-,,,,101 - Possible loot location tip 2,Greenview St,,,,,FALSE
-,,,,102 - Possible loot location tip 1,Greenview St,,,,,FALSE
-,,,,102 - House security tip,Greenview St,,,,,FALSE
-,,,,102 - Possible loot location tip 2,Greenview St,,,,,FALSE
-,,,,103 - House security tip,Greenview St,,,,,FALSE
-,,,,103 - Possible loot location tip,Greenview St,,,,,FALSE
-,,,,104 - House security tip,Greenview St,,,,,FALSE
-,,,,104 - Possible loot location tip,Greenview St,,,,,FALSE
-,,,,105 - House security tip,Greenview St,,,,,FALSE
-,,,,105 - Possible loot location tip,Greenview St,,,,,FALSE
-,,,,,,,,,,FALSE
-,,,,,,,,,,FALSE
+Area,Connects from,Requirements,Region Unlock,,Location,Area,Requirements,Type,Id,Pickup Item,Do not use
+101,Greenview St,"Mini electric lock pick, Lockpick",FALSE,,Autumn,101,,Painting,neighborhood1_6f0ddf40-2107-4325-8124-66ac8a893c99,,FALSE
+102,102 Yard,Glass knife,FALSE,,BeeBee,101,,Painting,neighborhood1_05ac68bb-f87f-45ee-8c02-942119d584b0,,FALSE
+102,Greenview St,Front door key 102,FALSE,,Evening,101,,Painting,,,FALSE
+102 Yard,Greenview St,DIY Simple Lockpick,FALSE,,Love,101,,Painting,neighborhood1_3e0def95-50d2-421c-857c-7c051ff96e99,,FALSE
+102 Yard,Greenview St,Climbing Gloves,FALSE,,Spoons,101,,Painting,neighborhood1_0a528d0a-972c-4954-a10a-4d70eca5e5d2,,FALSE
+103,Greenview St,"Hacking PDA, DIY Simple Lockpick",FALSE,,Sunset,101,,Painting,neighborhood1_36d1c646-9a97-4beb-bdcd-b3a0565fb7f3,,FALSE
+103,Greenview St,"Glass knife, DIY Simple Lockpick",FALSE,,$1900 Sunset,101,,Painting,,,FALSE
+104,104 Backyard,Glass knife,FALSE,,Wave,101,,Painting,neighborhood1_619995da-ee7a-4af6-bede-e1aff8714f38,,FALSE
+104,Greenview St,Mini electric lock pick,FALSE,,Blue Vase in Living Room,101,,Vase,neighborhood1_c56fa8d3-11a2-460b-ba95-704352a2de56,,FALSE
+104,104 Frontyard,Lockpick,FALSE,,Blue Vase in 2nd Floor Hallway,101,,Vase,neighborhood1_58361034-817e-41e2-98ff-5f6e205048dc,,FALSE
+104 Backyard,Greenview St,Lockpick,FALSE,,Blue Vase in Backyard,101,,Vase,neighborhood1_fd961c83-e781-4211-a760-2d55e0a5d9ab,,FALSE
+104 Frontyard,Greenview St,Climbing Gloves,FALSE,,Dark Red Vase,101,,Vase,neighborhood1_0c158869-351b-4390-82ba-d4e252e00c71,,FALSE
+104 Frontyard,104,Lockpick,FALSE,,Globe,101,,Decoration,neighborhood1_f4a2ba59-fe5d-4474-a74a-3193165bf1d2,,FALSE
+105,Greenview St,"Lockpick, DIY Simple Lockpick",FALSE,,Golden Goblet left of Fireplcace,101,,Decoration,neighborhood1_f62c6662-d16d-4643-8ad9-747c09a53bf1,,FALSE
+105,Greenview St,"DIY Simple Lockpick, Climbing Gloves",FALSE,,Golden Goblet right of Fireplace,101,,Decoration,neighborhood1_c82d809f-8715-42d4-8590-04980bffb7e8,,FALSE
+105,105 Backyard,Glass knife,FALSE,,Golden Goblet in Bedroom,101,,Decoration,neighborhood1_0f3c229e-35b2-46a4-9aad-2cf4f401d850,,FALSE
+105 Backyard,Greenview St,Lockpick,FALSE,,Golden Goblet in TV Bedroom,101,,Decoration,neighborhood1_7086e9c3-de21-4129-a6e8-553c23872325,,FALSE
+106,106 Sideroom,Lockpick,FALSE,,Green Vase left of Fireplace,101,,Vase,neighborhood1_a94004c0-d858-4648-9c8d-cd58e8163ee2,,FALSE
+106,Greenview St,Lockpick,FALSE,,Green Vase in TV Bedroom inside Closet,101,,Vase,neighborhood1_f50ee559-8cd0-4844-8834-85af491ebdcf,,FALSE
+106 Backyard,Greenview St,Lockpick,FALSE,,Green Vase in Closet Room 2nd Floor,101,,Vase,neighborhood1_6c83c1d1-6429-45b1-97f0-dce93272ea1b,,FALSE
+106 Sideroom,106 Backyard,,FALSE,,Pendulum,101,,Decoration,neighborhood1_747ee484-9a21-478c-9b23-68a2a4a8c66a,,FALSE
+107,107 Yard,Glass knife,FALSE,,Piggy Bank in Kid's Bedroom,101,,Decoration,neighborhood1_e0e372dd-fee5-4140-85b8-8d18497e9d25,,FALSE
+107,107 Yard,Lockpick,FALSE,,Piggy Bank in TV Bedroom,101,,Decoration,neighborhood1_328f9131-2fc0-44f3-8bb8-985d1216e298,,FALSE
+107,107 Yard,Mini electric lock pick,FALSE,,Vase - tall,101,,Vase,neighborhood1_dcb0b05e-fab9-4e77-836e-086b57938640,,FALSE
+107 Yard,Greenview St,DIY Simple Lockpick,FALSE,,Vase 'Black&White',101,,Vase,neighborhood1_699fe524-0898-4916-a121-81996888cc0d,,FALSE
+107 Yard,Greenview St,Climbing Gloves,FALSE,,Vase 'Black&White' in Kitchen,101,,Vase,neighborhood1_02103fa7-4575-4e0a-8553-4a4758f963d4,,FALSE
+108,108 Backyard,Glass knife,FALSE,,Yellow Vase on 1st Floor,101,,Vase,neighborhood1_0b8917cf-6cad-4679-8c94-a578d5a8ab84,,FALSE
+108,Greenview St,Mini electric lock pick,FALSE,,Yellow Vase on 2nd Floor,101,,Vase,neighborhood1_47e95080-b407-40e5-b350-3f646a7b11eb,,FALSE
+108,Greenview St,Climbing Gloves,FALSE,,Game Fat Max,101,,Software,neighborhood1_6a545849-99d3-472b-add9-b7a89d1d9ecf,,FALSE
+108,Greenview St,Glass knife,FALSE,,Video Game' console in Living Room,101,,Video Game Electronic,neighborhood1_c1358951-975f-40f9-bba2-426c8ec3b9df,,FALSE
+108 Backyard,Greenview St,Lockpick,FALSE,,Video game' console pad in Living Room,101,,Video Game Electronic,neighborhood1_923a06c8-eda1-4764-ba80-68065e53dad0,,FALSE
+108 Backyard,Greenview St,Crowbar,FALSE,,Video game' console pad in TV Bedroom right of console pad,101,,Video Game Electronic,neighborhood1_de222c55-bff6-4bf5-b696-040f5dd9e2a0,,FALSE
+108 Upstairs Living Room,108,Mini electric lock pick,FALSE,,Video game' console pad in TV Bedroom left of console pad,101,,Video Game Electronic,neighborhood1_9017a98e-6517-42f5-b769-cb1308bcb7b5,,FALSE
+109,Greenview St,Crowbar,FALSE,,Camera,101,,Camera,neighborhood1_c6c48f53-ca3f-4aa7-9ef8-f9296d7d989a,,FALSE
+109,Greenview St,DIY Simple Lockpick,FALSE,,Ebricksson,101,,Communication Device,neighborhood1_4acb471a-742a-4da8-a86b-1be5dabcafe7,,FALSE
+109,Greenview St,"DIY Simple Lockpick, Glass knife",FALSE,,Headphones,101,,Audio Device,neighborhood1_ccb2afe4-50d0-41e6-ade5-d220498e01b0,,FALSE
+110,Greenview St,,FALSE,,Headset,101,,Audio Device,neighborhood1_2d4b511a-77e4-46ba-bf0f-32cc000789c6,,FALSE
+111,Greenview St,DIY Simple Lockpick,FALSE,,Huway,101,"Safecracking tools, Hacking tools",Communication Device,neighborhood1_95da5c0c-fbfe-40b3-8399-142d0d926bdd,,FALSE
+112,112 Backyard,DIY Simple Lockpick,FALSE,,Leovon 100 to clear,101,Safecracking tools,Mobile Device,neighborhood1_6e0c1060-7c13-46b1-a573-552687a44e3e,,FALSE
+112,Greenview St,Lockpick,FALSE,,Mouse,101,,Computer Peripheral,neighborhood1_6ea03016-dc8b-4b1e-b8f2-0c9e890c21cd,,FALSE
+112,112 Backyard,Glass knife,FALSE,,Noke in Living Room Dresser,101,,Communication Device,neighborhood1_20b1742a-d266-4e43-b5b6-14df4090ca4b,,FALSE
+112 Backyard,Greenview St,DIY Simple Lockpick,FALSE,,Noke on 2nd Floor inside Dresser,101,,Communication Device,neighborhood1_102a383a-9419-4eff-b0ef-221d9b6687f4,,FALSE
+112 Backyard,Greenview St,Climbing Gloves,FALSE,,Remote,101,,Television Equipment,neighborhood1_338f9015-0669-4bca-a040-ba4f3e3357e7,,FALSE
+113,Greenview St,Mini electric lock pick,FALSE,,SomeSung,101,"Safecracking tools, Hacking tools",Mobile Device,neighborhood1_c076fc48-d4e4-4903-b804-cfd751fcd2d4,,FALSE
+113,Greenview St,Glass knife,FALSE,,TV in Bedroom,101,,Television,neighborhood1_79dbcba2-552e-42c0-afd3-405f34650c77,,FALSE
+113,Greenview St,Front door key 113,FALSE,,TV in Living Room,101,,Television,neighborhood1_c0701594-d1f8-4e4c-a212-a7eca5b71e0d,,FALSE
+113 Backyard,Greenview St,DIY Simple Lockpick,FALSE,,USB Flash,101,,Computer Peripheral,neighborhood1_3c2b1b78-a9a6-4f4c-b7ea-4cb590b677f0,,FALSE
+113 Backyard,Greenview St,Climbing Gloves,FALSE,,Electric Guitar,101,,Musical Instrument,neighborhood1_91fbd676-ef75-4df9-b5eb-5ee223c974c5,,FALSE
+113 Bedroom,113,Lockpick,FALSE,,Old Yomaha Guitar,101,,Musical Instrument,neighborhood1_29998148-52f9-46cc-b817-0522cb03aa99,,FALSE
+113 Bedroom,113 Backyard,,FALSE,,Bracelet,101,"Jewelry tools, Safecracking tools",Accessories,neighborhood1_b362d8a5-0c7f-454c-899e-57c4987bae05,,FALSE
+Greenview St,,,FALSE,,Emerald Bracelet,101,"Jewelry tools, Safecracking tools",Accessories,neighborhood1_813dc134-6a91-4f58-8303-4ddda6b6b10b,,FALSE
+,,,,,Coffee Machine,101,,Coffee Machine,neighborhood1_32314cc6-87b5-4d0c-83a5-2ddbaa1f9d99,,FALSE
+,,,,,Esevoignas Wine,101,,Wine,neighborhood1_4f8da0c1-8f0a-4a66-860a-330441f88f22,,FALSE
+,,,,,Glass Plate,101,,Tableware,neighborhood1_2f9b7ca5-6a7b-48bd-8283-bc3416bb9d67,,FALSE
+,,,,,Microwave,101,,Microwave,neighborhood1_de5148e3-728b-4c1a-99ee-820c16f9bb86,,FALSE
+,,,,,Riontonip Wine,101,,Wine,neighborhood1_7fc8a7f8-c78d-43af-9ae2-a3e79b17a94a,,FALSE
+,,,,,Saucepan farthest from Living Room,101,,Pots and Pans,neighborhood1_41d133ce-9e1a-4c09-9775-cb99f64df135,,FALSE
+,,,,,Saucepan closest to Living Room,101,,Pots and Pans,neighborhood1_b144dacf-473c-4e2a-bdc2-76945a792d6f,,FALSE
+,,,,,Smaller Saucepan,101,,Pots and Pans,neighborhood1_1ee49888-8d5e-4eab-8322-9c4b53be3c09,,FALSE
+,,,,,Teapot,101,,Tea set,neighborhood1_f293d1b4-6e29-4f2e-9928-ba7b84aced52,,FALSE
+,,,,,Toaster,101,,Toaster,neighborhood1_20c56d33-fa28-4490-b19d-e477fe21b222,,FALSE
+,,,,,Tolrem Wine in Backyard,101,,Wine,neighborhood1_a68e5a11-fc6a-49d3-88c4-7f1e38d81fcc,,FALSE
+,,,,,Tolrem Wine in Kitchen,101,,Wine,neighborhood1_8b6f2f4c-1838-43ee-835f-58c5cbdbf7ea,,FALSE
+,,,,,$50 Cash in Kid's Bedroom,101,,Paperware,neighborhood1_9a90d3a2-5012-47c4-94e8-2b8dce651f67,,FALSE
+,,,,,$50 Cash in Closet Room on white bookshelf,101,,Paperware,neighborhood1_87d110e5-fb3d-4064-acfa-a5a698eeea8b,,FALSE
+,,,,,$50 Cash in Closet Room inside white dresser,101,,Paperware,neighborhood1_e086ed11-f2df-4ce5-b71e-ae3470ae5fdc,,FALSE
+,,,,,$50 Cash in Backyard,101,,Paperware,neighborhood1_92197cbc-ee81-4dfc-8452-9f645d960bb9,,FALSE
+,,,,,$50 Cash in Living Room,101,,Paperware,neighborhood1_4d897212-8b52-4c10-a499-97407fb405a0,,FALSE
+,,,,,$50 Cash in Garage,101,,Paperware,neighborhood1_a48c55cb-5a92-4b3b-a88b-536b1f43187f,,FALSE
+,,,,,$50 Cash on 2nd Floor on right Dresser,101,,Paperware,neighborhood1_b7beec44-4ac8-4902-bc0e-fa137bacf337,,FALSE
+,,,,,$50 Cash in TV Bedroom,101,,Paperware,neighborhood1_9b3bc9cb-444f-4f14-a995-09f9d6e2df42,,FALSE
+,,,,,$150 Cash in Kitchen,101,,Paperware,neighborhood1_08bc520b-6e79-4a06-b79d-320b52924216,,FALSE
+,,,,,$150 Cash in Master Bedroom inside plant drawer,101,,Paperware,neighborhood1_5a3f28e5-8b27-43e3-a198-94a853d79e25,,FALSE
+,,,,,$150 Cash in Master Bedroom on white bookshelf,101,,Paperware,neighborhood1_a8b156b1-1dcf-4315-8c99-71df1c8271dd,,FALSE
+,,,,,$50 Cash in Closet Room on white dresser,101,,Paperware,neighborhood1_a52178bc-24dc-40d6-a2c4-6e4cd1ea5ac2,,FALSE
+,,,,,Pumpkin,101,,Halloween,neighborhood1_486d06cc-da7f-405a-acaf-ec7b4a8cfff0,,FALSE
+,,,,,Gift- blue,101,,Christmas,,,FALSE
+,,,,,Gift - green,101,,Christmas,,,FALSE
+,,,,,Gift - red,101,,Christmas,,,FALSE
+,,,,,Break or steal a painting in 101,101,,,,,FALSE
+,,,,,Break wine glasses in 101,101,Crowbar,,,,FALSE
+,,,,,Break a window on the second floor in 101,101,Crowbar,,,,FALSE
+,,,,,Aisan Cougar,101,Car lock pick gun,Vehicle,,,FALSE
+,,,,,Sunset,102,,Painting,neighborhood1_7368db16-9faa-45e8-af83-846e6249843b,,FALSE
+,,,,,Evening,102,,Painting,neighborhood1_7558281e-aa53-480b-9c64-42b9fac8bd2d,,FALSE
+,,,,,Flower,102,,Painting,neighborhood1_36a87aeb-58bc-4c9b-8377-5ef5dddd0ede,,FALSE
+,,,,,Rose,102,,Painting,neighborhood1_c6481306-94a3-4e23-a103-9b9f012d9d9a,,FALSE
+,,,,,Blue Vase,102,,Vase,neighborhood1_b7ab3b49-7c26-4d7b-9780-a41bc5c4243b,,FALSE
+,,,,,Dark Red Vase,102,,Vase,neighborhood1_610784bd-0631-436f-9b90-8279b468d2d8,,FALSE
+,,,,,Metallic Vase,102,,Vase,neighborhood1_ee66d0cc-17c5-4ae6-8bea-ed026921afdc,,FALSE
+,,,,,Piggy Bank,102,,Decoration,neighborhood1_64eb9201-061d-4e77-81f5-64419a2da245,,FALSE
+,,,,,Red Vase,102,,Vase,neighborhood1_38badd96-d54f-4fad-8d49-5c95716b9e06,,FALSE
+,,,,,Vase,102,Safecracking tools,Vase,neighborhood1_0f954b7e-c0ff-4105-9f7c-efa7d9b78a33,,FALSE
+,,,,,Vase 'Black&White',102,,Vase,,,FALSE
+,,,,,Vase 'Black&White' across from Bathroom on white dresser,102,,Vase,neighborhood1_9374ef08-81ec-4680-be2c-a3c35b4e84f9,,FALSE
+,,,,,Xcube' console pad in Master Bedroom closet,102,,Video Game Electronic,neighborhood1_a9f63b7e-a105-4297-a69c-65f714539707,,FALSE
+,,,,,Video game' console pad in Kid's Bedroom,102,,Video Game Electronic,neighborhood1_ef7fa1d2-ebb4-4cd9-b68f-39ae5d44c20b,,FALSE
+,,,,,Xcube' console,102,,Video Game Electronic,neighborhood1_4b70dd71-d642-4869-b320-f3c987d3898a,,FALSE
+,,,,,Xcube' console pad in Living Room left side on white dresser,102,,Video Game Electronic,neighborhood1_a27c78a2-6bce-47c2-9a52-4c3ddb731af6,,FALSE
+,,,,,Xcube' console pad in Living Room right side on white dresser,102,,Video Game Electronic,neighborhood1_316a54a1-d5e9-4cb7-b073-e30c48a8d1be,,FALSE
+,,,,,Alarm Clock,102,,Clock,neighborhood1_5f781ef2-3365-415f-9d93-fd99c8bc23c3,,FALSE
+,,,,,Ebricksson,102,,Communication Device,neighborhood1_762ae256-0706-4298-b80b-b29d9b32c0c5,,FALSE
+,,,,,Headset,102,,Audio Device,neighborhood1_20282393-04a4-4af2-9197-38203a0d6379,,FALSE
+,,,,,Huway,102,Hacking tools,Communication Device,neighborhood1_596b6e5e-2db5-4898-8087-6adfbbccc403,,FALSE
+,,,,,Keyboard,102,,Computer Peripheral,neighborhood1_673171f8-2c77-4f65-8679-8530ae4d3769,,FALSE
+,,,,,Landline,102,,Communication Device,neighborhood1_031dd1ad-af05-4ded-917b-9d0dd6bcd703,,FALSE
+,,,,,Mouse,102,,Computer Peripheral,neighborhood1_33df8de6-1efa-4b6d-ae2a-09ab780d60e8,,FALSE
+,,,,,SomeSung,102,Hacking tools,Mobile Device,neighborhood1_940a5096-caa4-48ab-aeb1-4630aa741e78,,FALSE
+,,,,,TV,102,,Television,neighborhood1_e853615b-9b00-4c67-8387-6a3ac4c9cfae,,FALSE
+,,,,,uPadTab,102,,Mobile Device,neighborhood1_9f9d2a5f-c593-4d88-ab4d-c6c2baf05f08,,FALSE
+,,,,,USB Flash,102,,Computer Peripheral,neighborhood1_b05ba11b-6907-473b-a1c4-327abace874f,,FALSE
+,,,,,Emerald Bracelet,102,Jewelry tools,Accessories,neighborhood1_145f16cc-9f5c-40dc-a343-02e9d4724fff,,FALSE
+,,,,,Glass Cup in Master Bedroom right side of white bookshelf,102,,Tableware,neighborhood1_66e3a95c-aa61-4d97-9ad2-50cffb7456b0,,FALSE
+,,,,,Glass Cup in Master Bedroom left side of white bookshelf,102,,Tableware,neighborhood1_ce3fa670-2baa-42a7-8d1f-862aea0910fb,,FALSE
+,,,,,Microwave,102,,Microwave,neighborhood1_1c9428d1-ed2d-4093-860a-5c77107e99b7,,FALSE
+,,,,,Pot,102,,Pots and Pans,neighborhood1_c2eaab50-e62b-4bfe-a2c6-6884af3b83e2,,FALSE
+,,,,,Teapot,102,,Tea set,neighborhood1_23a92453-8f28-4c73-bcc6-fbfc63ae2fb9,,FALSE
+,,,,,Tolrem Wine in Kitchen left of other wine,102,,Wine,neighborhood1_159ab2ae-74e5-4079-852f-65a9c971013b,,FALSE
+,,,,,Tolrem Wine in Kitchen right of other wine,102,,Wine,neighborhood1_e718036b-7172-43d2-ab1e-08a7b770dc8f,,FALSE
+,,,,,$15 Cash in Master Bedroom in black dresser,102,,Paperware,neighborhood1_23f76fa6-d821-41d7-8d62-f80713c9a567,,FALSE
+,,,,,$15 Cash in Master Bedroom right side of bed inside white dresser,102,,Paperware,neighborhood1_bed402de-fc68-4b90-9d15-875c5c2f08c5,,FALSE
+,,,,,$15 Cash in Master Bedroom right side of bed inside brown dresser,102,,Paperware,neighborhood1_61fc7854-0b80-4609-8e6f-2d6356f13c12,,FALSE
+,,,,,$15 Cash in Living Room white dresser,102,,Paperware,neighborhood1_b6a64492-5c8d-4810-9bed-8e01861da6cd,,FALSE
+,,,,,$15 Cash across from Bathroom inside middle white dresser,102,,Paperware,neighborhood1_8e30ebc1-6ac9-45fe-a46b-fa5893184040,,FALSE
+,,,,,$50 Cash in Master Bedroom safe right side of Documents,102,Safecracking tools,Paperware,neighborhood1_61e00c5f-2c29-4aa0-8e7f-374c80e5f455,,FALSE
+,,,,,$50 Cash in Master Bedroom safe left side of Documents,102,Safecracking tools,Paperware,neighborhood1_fdf90d01-adaa-49fa-a7c5-af4b89a3e1c2,,FALSE
+,,,,,$50 Cash in Master Bedroom on black dresser,102,,Paperware,neighborhood1_3be4f239-2ed2-4c82-aa1d-23f053d79abc,,FALSE
+,,,,,$50 Cash in Master Bedroom right side of bed inside brown dresser,102,,Paperware,neighborhood1_32b5f840-9508-443f-a09a-dc20d94c4717,,FALSE
+,,,,,$50 Cash in Kid's Bedroom,102,,Paperware,neighborhood1_0fb20dfc-def8-478f-967e-fcd8b61ef1f9,,FALSE
+,,,,,$50 Cash by entrance right side inside landline dresser,102,,Paperware,neighborhood1_3324537f-4f2a-425a-8f65-bcb44442dd85,,FALSE
+,,,,,$50 Cash by entrance left side inside landline dresser,102,,Paperware,neighborhood1_0ab53b17-1ae7-409d-a471-23b0ce07c11d,,FALSE
+,,,,,Documents,102,Safecracking tools,Paperware,neighborhood1_4c8205bd-efa9-4958-8800-ea1dc637b455,,FALSE
+,,,,,Front Door Key to 102,102,,Key,neighborhood1_3e619945-4bfe-48fe-83c8-1b4f9f3552f0,Front door key 102,FALSE
+,,,,,Candy Bag,102,,Halloween,neighborhood1_3a89a79c-46cd-438d-a5c9-1926874d27b5,,FALSE
+,,,,,Gift- blue,102,,Christmas,,,FALSE
+,,,,,Gift - green,102,,Christmas,,,FALSE
+,,,,,Gift - red,102,,Christmas,,,FALSE
+,,,,,Break their dishes in 102,102,Crowbar,,,,FALSE
+,,,,,Break or steal a decoration in 102,102,,,,,FALSE
+,,,,,Apple Vase,103,,Vase,neighborhood1_e1409c77-ec7d-4ac1-9f66-e92c284f3a73,,FALSE
+,,,,,Golden Goblet on 2nd Floor on brown dresser,103,,Decoration,neighborhood1_f0771f35-4e08-4dd7-a37a-32fbce784abc,,FALSE
+,,,,,Golden Goblet,103,,Decoration,,,FALSE
+,,,,,Grey Vase,103,,Vase,neighborhood1_65c80e14-5bc9-4ac1-8cc2-37ea95ec6c83,,FALSE
+,,,,,Metallic Vase on 2nd Floor on left side of black dresser,103,,Vase,neighborhood1_c3ea6fc9-0984-4476-909b-faed20e7981e,,FALSE
+,,,,,Metallic Vase on 2nd Floor on right side of black dresser,103,,Vase,neighborhood1_41069d88-bedc-4442-8b2b-d351272e84aa,,FALSE
+,,,,,Pendulum on 2nd Floor inside of black dresser,103,,Decoration,neighborhood1_2389169a-6595-4969-91c9-f7ff4453a2f7,,FALSE
+,,,,,Pendulum,103,,Decoration,neighborhood1_5c7268a6-847f-47a1-9126-043dba6c1c75,,FALSE
+,,,,,Red Vase,103,,Vase,neighborhood1_1d4a8f12-2415-4564-bba2-2ecef7f99672,,FALSE
+,,,,,Tear Trophy,103,,Decoration,neighborhood1_3f3df329-f3f7-4be5-b352-aea39492c97f,,FALSE
+,,,,,Vase 'Black&White' on 2nd Floor inside of black dresser,103,,Vase,neighborhood1_02e602ce-8b1b-4bfa-bddb-481dfb65618c,,FALSE
+,,,,,Vase 'Black&White' in Master Bedroom,103,,Vase,neighborhood1_737a1c1f-077b-4e63-a2a3-72433cd3bff5,,FALSE
+,,,,,White Vase,103,,Vase,neighborhood1_aae5a2a1-298f-4b64-8acb-e16493691fbb,,FALSE
+,,,,,Yellow Vase,103,,Vase,neighborhood1_fbc97fe2-571f-4398-84df-9d60c1690bef,,FALSE
+,,,,,Xcube' console,103,,Video Game Electronic,neighborhood1_a223cdf9-fd87-457a-b8d5-9b0c49f88baa,,FALSE
+,,,,,Xcube' console pad in Kid's Room,103,,Video Game Electronic,neighborhood1_988cf68b-4ec4-450d-b66e-7b896a89f91d,,FALSE
+,,,,,Xcube' console pad in Master Bedroom,103,,Video Game Electronic,neighborhood1_47106ce7-3022-4162-9532-e74a7741fce5,,FALSE
+,,,,,Xcube' console pad in Bathroom closet,103,,Video Game Electronic,neighborhood1_8e8a0546-be31-419a-a411-0f18375dca6c,,FALSE
+,,,,,Xcube' console pad in Living Room on dresser right most side,103,,Video Game Electronic,neighborhood1_84ca6abd-1b8c-4717-907b-23a070c76544,,FALSE
+,,,,,Xcube' console pad in Living Room on dresser left most side,103,,Video Game Electronic,neighborhood1_7c6fae74-fc0d-4001-a487-10879e069993,,FALSE
+,,,,,Camera,103,,Camera,,,FALSE
+,,,,,Ebricksson,103,,Communication Device,neighborhood1_770d45ff-3c26-4d8b-a450-0b3deffa5e3e,,FALSE
+,,,,,Headset in Master Bedroom,103,,Audio Device,neighborhood1_794137a1-b5b1-4239-ba30-38882359e13a,,FALSE
+,,,,,Headset,103,,Audio Device,neighborhood1_681e7413-0e48-4745-a622-2fc07f5ac71d,,TRUE
+,,,,,Huway,103,Hacking tools,Communication Device,neighborhood1_3e0264a1-8e17-4e38-91eb-e425ece1ef3b,,FALSE
+,,,,,Keyboard,103,,Computer Peripheral,neighborhood1_7fdb6ca6-6fcd-4a4d-8de4-590d1bef6f39,,FALSE
+,,,,,Lamp,103,,Lamp,,,FALSE
+,,,,,Mouse,103,,Computer Peripheral,neighborhood1_7eac2ee3-b16a-4e78-90ae-a2c540f97b9a,,FALSE
+,,,,,Noke in Office room desk,103,,Communication Device,neighborhood1_5e91fba3-f2b5-4792-9fe2-4cd2e8f307f4,,FALSE
+,,,,,Noke in Bathroom closet,103,,Communication Device,neighborhood1_5b70b006-df08-4fec-ba54-1f815a513747,,FALSE
+,,,,,Printer,103,,Office Supplies,neighborhood1_649b74a7-37d9-4059-b90a-29a20ade63ad,,FALSE
+,,,,,Remote,103,,Television Equipment,neighborhood1_2928c3e5-3d54-4d2d-8a77-f4d9db458322,,FALSE
+,,,,,Router in Bedroom,103,,Ethernet Device,neighborhood1_63253dff-af8a-4924-9308-2665c4c03c9c,,FALSE
+,,,,,Router in Master Bedroom,103,,Ethernet Device,neighborhood1_564afab1-a75a-4115-9b14-cd09ec6c3b46,,FALSE
+,,,,,TV,103,,Television,neighborhood1_a5e6501b-23a6-433e-a563-e3f2dba34d34,,FALSE
+,,,,,USB Flash,103,,Computer Peripheral,neighborhood1_7a1821ec-a13e-4a8e-821e-899ad8a20857,,FALSE
+,,,,,Emerald Bracelet,103,"Jewelry tools, Safecracking tools",Accessories,neighborhood1_2ce7afab-e072-431f-9a76-93e5e4f27060,,FALSE
+,,,,,Esevoignas Wine middle left bottle in Office Room,103,,Wine,neighborhood1_60b3dda8-453c-4c17-be85-95dfd851dcd6,,FALSE
+,,,,,Esevoignas Wine middle right bottle in Office Room,103,,Wine,neighborhood1_4339b458-ce4c-4277-95f0-2daf48811f70,,FALSE
+,,,,,Esevoignas Wine in Master Bedroom,103,,Wine,neighborhood1_520fbdee-85a3-4fc2-a384-e021fc29eddf,,FALSE
+,,,,,Saucepan,103,,Pots and Pans,neighborhood1_2f6ca804-970a-48aa-bc99-5c3142c05510,,FALSE
+,,,,,Teabox,103,,Tea set,neighborhood1_5c807f29-baa3-4134-baea-6d1fc5e1fe84,,FALSE
+,,,,,Tolrem Wine right most bottle in Office Room,103,,Wine,neighborhood1_b98e00c9-9500-435f-8bbb-5ef10180084b,,FALSE
+,,,,,Tolrem Wine left most bottle in Office Room,103,,Wine,neighborhood1_f416f02e-8ec7-49bc-8d6a-e274dc464610,,FALSE
+,,,,,$15 Cash in Master Bedroom,103,,Paperware,neighborhood1_e87a13f8-398d-4ff3-9e72-7233b4750e2c,,FALSE
+,,,,,$15 Cash in Bathroom closet,103,,Paperware,neighborhood1_e15d9a55-0f6c-4343-ad64-95d467b61689,,FALSE
+,,,,,$50 Cash next to Entrance,103,,Paperware,neighborhood1_29964183-adaf-4017-be0f-04bf65af985c,,FALSE
+,,,,,$50 Cash in Bedroom safe on top shelf left side,103,Safecracking tools,Paperware,neighborhood1_25718f34-e5c9-461b-84fb-35e70d6665ea,,FALSE
+,,,,,$50 Cash in Bedroom safe on top shelf right side,103,Safecracking tools,Paperware,neighborhood1_0e1c8d26-a8ac-4484-b33f-68d5d9e687cf,,FALSE
+,,,,,$50 Cash in Bedroom safe on bottom shelf,103,Safecracking tools,Paperware,neighborhood1_342c6c31-8a20-4dbe-b614-dae41c46cce6,,FALSE
+,,,,,$50 Cash on 2nd Floor inside of black dresser,103,,Paperware,neighborhood1_1c02090b-77c0-4b5c-bb71-5a4c8a63e91b,,FALSE
+,,,,,$50 Cash in Office filing cabinet,103,,Paperware,neighborhood1_e0cc4ca0-654d-45c6-9cf5-b950872fc877,,FALSE
+,,,,,$50 Cash on Dining Table,103,,Paperware,neighborhood1_2598120d-bb18-4b95-9aea-d092f401941a,,FALSE
+,,,,,$50 Cash in Living Room dresser,103,,Paperware,neighborhood1_b80d895f-50fb-4ed5-82b8-b4066423bef8,,FALSE
+,,,,,Candy Bag,103,,Halloween,neighborhood1_a4281b86-f24c-47bd-83b1-180e964f92a3,,FALSE
+,,,,,Gift- blue,103,,Christmas,,,FALSE
+,,,,,Gift - red,103,,Christmas,,,FALSE
+,,,,,Break or steal their lamp in 103,103,,,,,FALSE
+,,,,,Break their sink in 103,103,Crowbar,,,,FALSE
+,,,,,Baptism,104,,Painting,neighborhood1_dd378fce-fc26-452c-866d-854dfc249002,,FALSE
+,,,,,Daisy,104,,Painting,,,FALSE
+,,,,,Deer,104,,Painting,neighborhood1_242e3901-544c-4591-9797-5cc48c678569,,FALSE
+,,,,,Kiss,104,,Painting,neighborhood1_49dcd961-18f9-4641-913f-ca1cca3dc9f0,,FALSE
+,,,,,Lighthouse,104,,Painting,neighborhood1_c942033b-72dd-41de-9e00-5f8e507a4dd6,,FALSE
+,,,,,Love,104,,Painting,neighborhood1_febd013f-1658-4731-829e-32085b7f2376,,FALSE
+,,,,,Rose Piano,104,,Painting,neighborhood1_6ea1990b-dd0c-4504-8ba0-3a20849d1819,,FALSE
+,,,,,Apple Vase,104,,Vase,neighborhood1_6b4b5c13-ddc0-4ee5-9696-d75c9b648af8,,FALSE
+,,,,,Candle Holder in Living Room on right most side of cabinet,104,,Decoration,neighborhood1_330e5e52-b2f5-4ca6-8fc4-5b8b567b8390,,FALSE
+,,,,,Candle Holder in Living Room on left most side of cabinet,104,,Decoration,neighborhood1_c787ea23-5974-47f8-a38f-8ff07421eb3e,,FALSE
+,,,,,Daisy,104,,Painting,neighborhood1_befbd97d-ed08-40ab-9245-00f4e1c4a5be,,FALSE
+,,,,,Flower Vase,104,,Vase,neighborhood1_05670950-ea4e-4405-8aaa-b7f8d8425067,,FALSE
+,,,,,Globe,104,,Decoration,neighborhood1_1d2f729a-916c-4703-8b46-1ef00f940bb7,,FALSE
+,,,,,Golden Goblet,104,,Decoration,neighborhood1_e9f8d031-efec-438b-91dc-3135824e6116,,FALSE
+,,,,,Golden Goblet,104,,Decoration,,,FALSE
+,,,,,Pendulum,104,,Decoration,neighborhood1_95061804-529f-49d2-98ca-398b9b11121e,,FALSE
+,,,,,Vase - tall,104,,Vase,neighborhood1_5e6e6848-e8c4-4f0c-8b4a-2e064d05f56d,,FALSE
+,,,,,Vase - wide,104,,Vase,neighborhood1_9dd53445-0df3-4134-a499-b188346d2b3e,,FALSE
+,,,,,Camera,104,,Camera,,,FALSE
+,,,,,Damaged uPhone,104,,Communication Device,neighborhood1_11402ebb-0292-4d3b-9689-32f43d8b861c,,FALSE
+,,,,,Headphones,104,,Audio Device,neighborhood1_c96b45bd-1362-4dc9-b3af-902d0dee5df0,,FALSE
+,,,,,Headphones in Master Bedroom,104,,Audio Device,neighborhood1_446a40be-0f2a-4df4-a644-bfb714b0fd85,,FALSE
+,,,,,Headset,104,,Audio Device,neighborhood1_02d19ea9-46f9-46f7-b028-d63c1d38d15c,,TRUE
+,,,,,Jomaso Receiver,104,,Television Equipment,neighborhood1_2f30c3c9-7215-4a02-8c11-149871e72057,,FALSE
+,,,,,Landline,104,,Communication Device,neighborhood1_0a4c90ca-fca3-4b77-bd61-c4015abc7018,,FALSE
+,,,,,Mouse,104,,Computer Peripheral,neighborhood1_f7aaef59-ab9e-4336-b5b0-fed0f55709f7,,FALSE
+,,,,,Noke,104,,Communication Device,neighborhood1_ec904532-cae6-421c-9084-09dff1f4d893,,FALSE
+,,,,,Radio,104,,Audio Device,,,FALSE
+,,,,,Remote,104,,Television Equipment,neighborhood1_f5c388d0-fef1-4b61-98f6-dde05599616c,,FALSE
+,,,,,Small TV in Living Room,104,,Television,neighborhood1_8fa15d53-27c3-46d6-a74f-182030053880,,FALSE
+,,,,,Small TV in 2nd Floor Bedroom,104,,Television,neighborhood1_1430a78f-ac51-43d0-8f9a-b30f8adea130,,FALSE
+,,,,,Speaker bottom left corner of Living Room,104,,Audio Device,neighborhood1_38a42bd4-0ac7-4938-9874-99e602613860,,FALSE
+,,,,,Speaker top right corner of Living Room,104,,Audio Device,neighborhood1_c9a80d6a-4820-4374-873d-aec0e3c764b8,,FALSE
+,,,,,USB Flash in 2nd Floor Bedroom inside white drawer,104,,Computer Peripheral,neighborhood1_52ad4d91-00ae-46db-8255-c7ee86ded07c,,FALSE
+,,,,,Headset,104,,Computer Peripheral,neighborhood1_2c21e3bf-e943-4e3f-b8ea-14f071b8bb5d,,FALSE
+,,,,,Bass Guitar,104,,Musical Instrument,neighborhood1_5d569d36-5968-49bc-8557-379702c2a0ea,,FALSE
+,,,,,Esevoignas Wine in Kitchen on table in-between bottles,104,,Wine,neighborhood1_9be96cd3-c48b-4a91-8b38-9c4f033c3e6c,,FALSE
+,,,,,Esevoignas Wine in Kitchen on table ,104,,Wine,neighborhood1_704e3e86-12c7-48d9-8d41-15ff9065eea5,,FALSE
+,,,,,Microwave,104,,Microwave,,,FALSE
+,,,,,Evening,104,,Painting,neighborhood1_6b2037cf-9e5f-4f8b-a7fb-791eec0e2508,,FALSE
+,,,,,Pot,104,,Pots and Pans,neighborhood1_9d1518d8-54d6-49cb-87c6-2694e87abe4a,,FALSE
+,,,,,Riontonip Wine in Kitchen on table,104,,Wine,neighborhood1_5067d237-cbc2-4ab3-8b86-8c8897b625f5,,FALSE
+,,,,,Saucepan,104,,Pots and Pans,neighborhood1_bcde5af3-c529-40b0-8432-52304a93cc77,,FALSE
+,,,,,Teapot,104,,Tea set,neighborhood1_b181924b-c814-4701-80f6-90f6160d06dd,,FALSE
+,,,,,Toaster,104,,Toaster,neighborhood1_bc9c040a-f553-4744-9836-01b038150246,,FALSE
+,,,,,$15 Cash in 3rd Floor Bedroom,104,,Paperware,neighborhood1_185ccb8b-d04b-45a6-9ae4-968d99830b9d,,FALSE
+,,,,,$15 Cash by Entrance inside white dresser,104,,Paperware,neighborhood1_677810b2-004d-4855-9c39-804f3d902b23,,FALSE
+,,,,,$15 Cash in 2nd Floor Bedroom inside bottom white drawers,104,,Paperware,neighborhood1_43fad1a9-5ec1-40a1-9440-7a848651bd8d,,FALSE
+,,,,,$15 Cash in 2nd Floor Bedroom inside top white drawers,104,,Paperware,neighborhood1_c599691e-a094-4024-a536-0d641235f261,,FALSE
+,,,,,$15 Cash in Kitchen dining table,104,,Paperware,neighborhood1_a399344b-c217-4979-8daa-5070326ea06e,,FALSE
+,,,,,$50 Cash by Entrance on white dresser,104,,Paperware,neighborhood1_4faccd95-0f39-4c0f-af8d-d640814525ae,,FALSE
+,,,,,$50 Cash in Living Room on cabinet,104,,Paperware,neighborhood1_342d5a43-d26b-4211-97d3-439559acd21d,,FALSE
+,,,,,$50 Cash in Garage,104,,Paperware,neighborhood1_f348c7d3-542e-4059-a20c-42bdd77cb612,,FALSE
+,,,,,$50 Cash in Master Bedroom closet,104,,Paperware,neighborhood1_f6a163f2-55a6-4618-a254-1173f3a560ef,,FALSE
+,,,,,Candy Bag,104,,Halloween,neighborhood1_722351fa-d1ea-4730-82c1-8064df64cda7,,FALSE
+,,,,,Break a window in 104,104,Crowbar,,,,FALSE
+,,,,,Bolthorn 86 Classic,104,Car lock pick gun,Vehicle,,,FALSE
+,,,,,Flower,105,,Painting,neighborhood1_931e8744-bf13-44b0-93ca-dcb25bed48c9,,FALSE
+,,,,,Kiss,105,,Painting,neighborhood1_88beb772-25b1-47aa-8682-194e2539ef24,,FALSE
+,,,,,Love,105,,Painting,neighborhood1_e7e66604-dcea-41d6-beb4-dd725f66caca,,FALSE
+,,,,,Rose,105,,Painting,neighborhood1_4c343366-db49-461f-9a0f-1f2725245637,,FALSE
+,,,,,Rose Piano,105,,Painting,neighborhood1_730791d6-54d3-47af-bf05-83dfa8ad704c,,FALSE
+,,,,,Smoothie,105,,Painting,neighborhood1_5609a0ce-15e7-41a2-bc74-ac9e2ebbba1c,,FALSE
+,,,,,Spoons,105,,Painting,,,FALSE
+,,,,,Sunset,105,,Painting,neighborhood1_c27687fc-48be-4bcc-8853-c95238d6a9b9,,FALSE
+,,,,,Candle Holder Triple,105,,Decoration,neighborhood1_30238784-927c-4843-b3f0-3d4fb96bf341,,FALSE
+,,,,,Chess,105,,Toy,neighborhood1_e49b6d88-6e7d-411c-adfd-81c68733b771,,FALSE
+,,,,,Golden Goblet on 1st Floor Bedroom,105,,Decoration,neighborhood1_77036fb7-3e8c-421b-a7ee-eee963fc1c23,,FALSE
+,,,,,Golden Goblet,105,,Decoration,,,FALSE
+,,,,,Huway,105,Hacking tools,Communication Device,neighborhood1_4e9ef206-b8e1-4311-8c42-b339e357a8d4,,FALSE
+,,,,,Headphones,105,,Audio Device,neighborhood1_ccfdaa9b-f245-4441-b4f3-372780f3053c,,FALSE
+,,,,,Green Vase,105,,Vase,neighborhood1_252f2d52-4309-4686-bcf5-efa91471833d,,FALSE
+,,,,,Metallic Vase,105,,Vase,neighborhood1_466336ef-43c3-4b36-8398-8141c9329857,,FALSE
+,,,,,Pendulum,105,,Decoration,neighborhood1_728a4180-c74e-41ac-9410-7cff53d9a53c,,FALSE
+,,,,,Vase 'Black&White',105,,Vase,neighborhood1_43904508-85f1-497d-a11a-031f55fe9672,,FALSE
+,,,,,Wicker Vase,105,,Vase,neighborhood1_302ebb62-5939-4ae1-b0be-8f29694d2623,,FALSE
+,,,,,Ebricksson in 1st Floor Bathroom,105,,Communication Device,neighborhood1_fef7b473-0dba-4cdc-97a6-1afa33d4c06b,,FALSE
+,,,,,Ebricksson on 1st Floor Master Bedroom,105,,Communication Device,neighborhood1_aa47d80f-aa3f-43c1-8d6f-0818886d7e78,,FALSE
+,,,,,Headphones,105,,Audio Device,,,FALSE
+,,,,,Jomaso Receiver,105,,Television Equipment,neighborhood1_d99f1ebb-82d5-4d76-8ab1-b5d99f4508ec,,FALSE
+,,,,,Keyboard,105,,Computer Peripheral,,,FALSE
+,,,,,Landline,105,,Communication Device,neighborhood1_de8560fe-dd29-4d32-813e-024e272acfde,,FALSE
+,,,,,Noke,105,,Communication Device,neighborhood1_1777f27c-3119-446b-97f3-483eab64a966,,FALSE
+,,,,,Remote,105,,Television Equipment,neighborhood1_2ebd9ea9-b74e-4fb1-aa16-06ff862aa4c5,,FALSE
+,,,,,Router,105,,Ethernet Device,neighborhood1_f16cc082-dc1d-4cff-8ac7-2fe7e38a6e0f,,FALSE
+,,,,,Small TV,105,,Television,,,FALSE
+,,,,,Autumn,105,,Painting,neighborhood1_9f31d2ac-7526-4c31-80c8-213a88105a74,,FALSE
+,,,,,Speaker on 3rd Floor right side of TV,105,,Audio Device,neighborhood1_44d6e780-2740-468a-830a-13308022cdc6,,FALSE
+,,,,,Speaker on 3rd Floor left side of TV,105,,Audio Device,neighborhood1_f1719a0d-7e6c-4ec8-b838-43c2a3f46deb,,FALSE
+,,,,,USB Flash,105,,Computer Peripheral,neighborhood1_6bd70b88-90a1-4dcd-915c-7d58bbdd69de,,FALSE
+,,,,,Amethyst Bracelet,105,"Jewelry tools, Safecracking tools",Accessories,neighborhood1_d497efb0-ff72-43f7-9fbe-7c49c5ef24f4,,FALSE
+,,,,,Riontonip Wine on 3rd Floor inside cabinet right most side,105,,Wine,neighborhood1_d304725b-b76d-4093-a125-e7961f14c418,,FALSE
+,,,,,Riontonip Wine on 3rd Floor inside cabinet left most side,105,,Wine,neighborhood1_ac3c3619-2da9-4d16-a856-4929846f970c,,FALSE
+,,,,,Saucepan,105,,Pots and Pans,neighborhood1_8222733d-7df8-4577-88dc-b28865599429,,FALSE
+,,,,,Toaster,105,,Toaster,neighborhood1_fcb2e103-04d4-4e5b-b593-b3175f791ed8,,FALSE
+,,,,,$15 Cash on 3rd Floor inside black dresser,105,,Paperware,neighborhood1_22c72378-fc8d-4ded-bc94-cc71392685dc,,FALSE
+,,,,,$15 Cash on Bedroom without painting,105,,Paperware,neighborhood1_dfd06c5b-95a5-4ece-8d64-cd9e57207722,,FALSE
+,,,,,$50 Cash on 3rd Floor on dining table,105,,Paperware,neighborhood1_1ac6b014-cc65-42fc-9830-6d8a3b04342d,,FALSE
+,,,,,$50 Cash on 3rd Floor inside black dresser,105,,Paperware,neighborhood1_e8e1a5d3-0cd5-427c-98b6-b898b77659fc,,FALSE
+,,,,,$50 Cash on Bedroom with painting,105,,Paperware,neighborhood1_c41db369-5867-4227-963d-3ce7d1083a7b,,FALSE
+,,,,,$50 Cash on Bedroom without painting,105,,Paperware,neighborhood1_090d36d8-1686-48cd-96d2-88bc40f29d6b,,FALSE
+,,,,,$50 Cash on 3rd Floor inside black dresser below TV,105,,Paperware,neighborhood1_9596ed27-ce3d-4a16-9123-15ac3752422b,,FALSE
+,,,,,Candy Bag,105,,Halloween,neighborhood1_a5b8aab5-7ead-455d-bfff-a77779199cbf,,FALSE
+,,,,,Gift- blue,105,,Christmas,,,FALSE
+,,,,,Gift - green,105,,Christmas,,,FALSE
+,,,,,Break their toilet in 105,105,Crowbar,,,,FALSE
+,,,,,Break or steal their TV in 105,105,,,,,FALSE
+,,,,,Sunset,106,,Painting,,,FALSE
+,,,,,Wave,106,,Painting,neighborhood1_860ed1fd-5e71-4714-a63c-ce6d4a6a0008,,FALSE
+,,,,,Golden Goblet,106,,Decoration,,,FALSE
+,,,,,Golden Goblet,106,,Decoration,neighborhood1_16ec9d30-fe55-416c-9303-4657cb93ee32,,FALSE
+,,,,,Green Vase in 3rd Floor on black dresser right side,106,,Vase,neighborhood1_b0ea4620-0456-48c1-8737-e3a7e0ffef4b,,FALSE
+,,,,,Green Vase in 3rd Floor on black dresser left side,106,,Vase,neighborhood1_6803d457-f51d-4d50-b0c4-2dab36fbf787,,FALSE
+,,,,,$50 Cash in 3rd Floor inside black dresser,106,,Vase,neighborhood1_849f44b7-a049-44de-aee3-18fb67cbf3aa,,FALSE
+,,,,,Metallic Vase,106,,Vase,neighborhood1_b88179a1-faaa-4a23-9ca0-17afc9ebd4a6,,FALSE
+,,,,,Tear Trophy,106,,Decoration,neighborhood1_9351be4d-31a4-43b2-ad77-bae7e24d0d5a,,FALSE
+,,,,,White Vase,106,,Vase,neighborhood1_1ad293c8-e4d3-49f8-b535-b652afe6004a,,FALSE
+,,,,,Wicker Vase,106,,Vase,neighborhood1_61f3cb59-3303-4c31-9ec2-4d497c20931c,,FALSE
+,,,,,Yellow Vase,106,,Vase,neighborhood1_dc944fe1-868e-44fb-a2ff-ed8869b1158f,,FALSE
+,,,,,Alarm Clock,106,,Clock,neighborhood1_f038ed63-8b09-4d91-9b06-d2a109fb9598,,FALSE
+,,,,,Small TV,106,,Television,neighborhood1_3cfad186-cb04-4dce-8e48-2fa442af628f,,FALSE
+,,,,,Camera at Living Room Closet inside cabinet,106,,Camera,neighborhood1_6acfc5f1-0036-4b2c-80be-48520e2f1d9d,,FALSE
+,,,,,Camera at 1st Floor Hallway inside black cabinet,106,,Camera,neighborhood1_137bea8f-f2d3-4c37-b5fc-3ae1ad62444f,,FALSE
+,,,,,Damaged uPhone,106,,Communication Device,neighborhood1_17f79784-adfd-4e6d-b9cc-4564608b943f,,FALSE
+,,,,,Huway,106,Hacking tools,Communication Device,neighborhood1_4d29dbdf-b558-4e69-8c90-40cfb69d8b40,,FALSE
+,,,,,Landline,106,,Communication Device,neighborhood1_e1c2d923-a5fe-4f98-a374-d7263f855c05,,FALSE
+,,,,,Love,106,,Painting,neighborhood1_9152912c-9743-4087-96ff-4d65163fa96d,,FALSE
+,,,,,Remote,106,,Television Equipment,neighborhood1_328ffcfc-5415-4247-bd00-7f93865ba0d5,,FALSE
+,,,,,SomeSung,106,Hacking tools,Mobile Device,neighborhood1_5008a769-900d-4cf4-8e2f-47587f4c4c3b,,FALSE
+,,,,,USB Flash,106,,Computer Peripheral,neighborhood1_fb34cb2c-6aaa-4043-b48d-d96ce0baa0aa,,FALSE
+,,,,,Coffee Machine,106,,Coffee Machine,neighborhood1_06cd6829-4e25-4987-9565-2725923b8c14,,FALSE
+,,,,,Esevoignas Wine,106,,Wine,neighborhood1_4170cecb-7498-45eb-a604-d7654008a16a,,FALSE
+,,,,,Microwave,106,,Microwave,neighborhood1_30f1ab8f-b59c-42f0-b201-26b916bd3179,,FALSE
+,,,,,Spoons,106,,Painting,neighborhood1_d9e6e6b3-44a6-4cea-8a0b-834991898985,,FALSE
+,,,,,Pot,106,,Pots and Pans,neighborhood1_328a970c-9ee6-4cec-8ca7-dac31fe13443,,FALSE
+,,,,,Riontonip Wine,106,,Wine,neighborhood1_9a1ea2f6-36d3-4e6c-9e14-c9e6dbe570f3,,FALSE
+,,,,,Saucepan,106,,Pots and Pans,neighborhood1_2a819049-a929-411e-855c-56e6d7b2a19d,,FALSE
+,,,,,Teapot,106,,Tea set,neighborhood1_c74568af-f821-4bdc-8c4f-398fb881b5ff,,FALSE
+,,,,,Tolrem Wine,106,,Wine,neighborhood1_2ba6ddb9-2c44-4fb4-94e2-d48641de47bc,,FALSE
+,,,,,$15 Cash in Garage on right side table,106,,Paperware,neighborhood1_adb2ce95-a11e-4fc7-aced-97f6537d5da4,,FALSE
+,,,,,$15 Cash in Living Room inside white drawers,106,,Paperware,neighborhood1_d17e5750-10f4-4b48-a9fe-a19d958718db,,FALSE
+,,,,,$15 Cash in 3rd Floor Kitchen inside black dresser,106,,Paperware,neighborhood1_4a4ce9e5-a2a1-417b-b54a-a6fa4daf7daa,,FALSE
+,,,,,$15 Cash in Garage on Box,106,,Paperware,neighborhood1_4b21dcb9-98ca-4669-950a-165400c652f8,,FALSE
+,,,,,$50 Cash at Entrance brown drawer,106,,Paperware,neighborhood1_a4985e65-6ee3-4611-9c05-e24075a046e4,,FALSE
+,,,,,$50 Cash in Living Room inside brown drawer,106,,Paperware,neighborhood1_c5063151-44a4-4390-b8ef-6d36a50b5c32,,FALSE
+,,,,,$50 Cash in Living Room inside white drawer,106,,Paperware,neighborhood1_705f2dd3-f694-42a1-843e-a28f12237dd6,,FALSE
+,,,,,$50 Cash in Master Bedroom,106,,Paperware,neighborhood1_4ea59602-403f-44a3-9217-f296a2efeec8,,FALSE
+,,,,,Pumpkin,106,,Halloween,neighborhood1_7265b56f-d9a0-4872-8f56-ff02a7c605bc,,FALSE
+,,,,,Gift- blue,106,,Christmas,,,FALSE
+,,,,,Gift - green,106,,Christmas,,,FALSE
+,,,,,Break their sink in 106,106,Crowbar,,,,FALSE
+,,,,,Break their dishes in 106,106,Crowbar,,,,FALSE
+,,,,,Baptism,107,,Painting,neighborhood1_c2483b08-dd88-4601-99a2-c3b2766f7a6a,,FALSE
+,,,,,Sunset,107,,Painting,neighborhood1_443f4ec5-0bc9-43ab-8f20-f53649ef9787,,FALSE
+,,,,,BeeBee at Living Room across from TV,107,,Painting,neighborhood1_cd905704-eb4e-437f-9ba5-b7b957c536aa,,FALSE
+,,,,,BeeBee at Living Room next to brown cabinet,107,,Painting,neighborhood1_0f8f129d-a919-4bc1-ae52-926e7459fe0c,,FALSE
+,,,,,BeeBee on 2nd Floor across from stairs,107,,Painting,neighborhood1_c5b202b8-c706-4d3a-aa6b-141acbcb5c87,,FALSE
+,,,,,BeeBee on 2nd Floor along the stairs,107,,Painting,neighborhood1_4b4ef13c-e581-4434-b9f3-705c45dcb3e1,,FALSE
+,,,,,Evening,107,,Painting,,,FALSE
+,,,,,Flower at Living Room,107,,Painting,neighborhood1_75962e92-f69e-4efc-b987-0a2a69b08698,,FALSE
+,,,,,Flower on 2nd Floor along the stairs,107,,Painting,neighborhood1_3bfbca98-403c-4f76-a5f5-85ff07e09ba4,,FALSE
+,,,,,Flower on 2nd Floor near brown cabinet,107,,Painting,neighborhood1_c06dd8f3-ee9e-4534-a070-c1660d312d58,,FALSE
+,,,,,Rose,107,,Painting,neighborhood1_4f03f886-3a50-4002-b726-fac6840b685e,,FALSE
+,,,,,Flower Vase,107,,Vase,neighborhood1_d3f41b7d-83bc-4591-945d-0aef90e38cff,,FALSE
+,,,,,Vase - tall,107,,Vase,,,FALSE
+,,,,,Alarm Clock at Master Bedroom above white cabinet,107,,Clock,neighborhood1_a4e44598-5ce0-44d7-98af-fcf488d32451,,FALSE
+,,,,,Alarm Clock at Master Bedroom inside white cabinet,107,,Clock,neighborhood1_73bbddab-d999-45f6-a735-e2cd4a01af55,,FALSE
+,,,,,Damaged uPhone,107,,Communication Device,neighborhood1_a9567b95-ebfb-4b8a-8656-536adf59db7b,,FALSE
+,,,,,Damaged uPhone at Living Room on top of white cabinet,107,,Communication Device,neighborhood1_bdab4820-7abe-42b2-8fd7-8fd09e425f0f,,FALSE
+,,,,,Damaged uPhone at Master Bedroom on top of desk,107,,Communication Device,neighborhood1_d3035680-5714-484e-9a22-cd7faf9634f7,,FALSE
+,,,,,Ebricksson,107,,Communication Device,neighborhood1_0c44d81b-b242-4038-b24c-7eb5840e4381,,FALSE
+,,,,,Lamp next to Living Room on top of brown cabinet,107,,Lamp,neighborhood1_77f63605-9900-4a30-b292-5431c7a318d2,,FALSE
+,,,,,Lamp at Living Room on top of white cabinet,107,,Lamp,neighborhood1_d87eff65-2a39-42a2-bd51-1679359fe7bc,,FALSE
+,,,,,Mouse,107,,Computer Peripheral,neighborhood1_2b34bfdc-591c-4804-89dd-9c09b57e3da3,,FALSE
+,,,,,Noke next to Living Room inside brown cabinet,107,,Communication Device,neighborhood1_76afa546-64f5-4ef3-898c-f025013acdd7,,FALSE
+,,,,,Noke on 2nd Floor inside brown cabinet,107,,Communication Device,neighborhood1_e2e18b84-dc87-4b1c-83b5-69f411db1a85,,FALSE
+,,,,,Noke on 2nd Floor on couch,107,,Communication Device,neighborhood1_119a2f85-438c-48de-8422-d38376b3d101,,FALSE
+,,,,,Printer,107,,Office Supplies,neighborhood1_30e15075-144e-432e-bb84-c455057af407,,FALSE
+,,,,,Radio at Backyard,107 Yard,,Audio Device,neighborhood1_925c17f8-179f-42e1-8d8b-d8c1fba53da8,,FALSE
+,,,,,Radio at Living Room inside white cabinet,107,,Audio Device,neighborhood1_c5a8ce7a-78a0-414a-aaca-e83dbdcdf875,,FALSE
+,,,,,Router near Entrance below brown drawer,107,,Ethernet Device,neighborhood1_a1b4c565-01e2-4b37-ae18-8fbf3baca08c,,FALSE
+,,,,,Router at Living Room near TV,107,,Ethernet Device,neighborhood1_1914cf3e-c80d-4e69-824f-8c7313f3b510,,FALSE
+,,,,,Router on 2nd Floor on top of brown cabinet,107,,Ethernet Device,neighborhood1_a89a2880-2702-4b41-a025-7a0f7ebd20be,,FALSE
+,,,,,Small TV in Living Room,107,,Television,neighborhood1_31b5c897-2dc8-4545-9acd-e9a379c72c05,,FALSE
+,,,,,Small TV in Master Bedroom,107,,Television,neighborhood1_bbbc3084-72f9-4d18-86e5-be8719831218,,FALSE
+,,,,,USB Flash,107,,Computer Peripheral,neighborhood1_36b03fa1-c478-44e9-a0d7-91a119ba68c0,,FALSE
+,,,,,Old Yomaha Guitar,107,,Musical Instrument,neighborhood1_aed75cea-b775-4ed9-ad0c-2035b93226b7,,FALSE
+,,,,,Heirloom Bracelet,107,Jewelry tools,Accessories,neighborhood1_1ce91f4b-db10-4e05-90ed-aa0bda2e8f38,,FALSE
+,,,,,Coffee Machine,107,,Coffee Machine,neighborhood1_cc13a847-4674-4480-8a36-0b98baf38c1e,,FALSE
+,,,,,Esevoignas Wine,107 Yard,,Wine,neighborhood1_0383c8f2-895d-4fd5-8ca1-1a4f9df6db84,,FALSE
+,,,,,Glass Cup at Living Room on white cabinet left side,107,,Tableware,neighborhood1_13a9ec0b-1421-455b-80d8-1ab6a4112782,,FALSE
+,,,,,Glass Cup at Living Room on white cabinet right side,107,,Tableware,neighborhood1_4918d0e2-dc2c-4c77-a545-b78844f55e05,,FALSE
+,,,,,Microwave,107,,Microwave,neighborhood1_838f0b41-1cd8-4a03-a482-c11a1e22916e,,FALSE
+,,,,,Pot,107,,Pots and Pans,neighborhood1_bd03af16-1584-467f-83dc-856e46792459,,FALSE
+,,,,,Riontonip Wine,107 Yard,,Wine,neighborhood1_e8654829-9b7d-47a2-8df9-7a9151f530c9,,FALSE
+,,,,,Saucepan,107,,Pots and Pans,neighborhood1_3902ae19-ca03-4277-8b74-c990f2e331ba,,FALSE
+,,,,,Teapot,107,,Tea set,neighborhood1_b461a83e-ca3f-4df1-a60a-83d7508c99f3,,FALSE
+,,,,,$15 Cash at Living Room inside white cabinet,107,,Paperware,neighborhood1_e2668a95-e31a-4415-ac5c-067622309555,,FALSE
+,,,,,$50 Cash near Entrance right side of brown drawer,107,,Paperware,neighborhood1_985f574c-666e-499e-91b6-d034b20450ea,,FALSE
+,,,,,$50 Cash near Entrance top left side of brown drawer,107,,Paperware,neighborhood1_60a27894-2929-4747-962b-3fcef2f5b226,,FALSE
+,,,,,$50 Cash near Entrance bottom left side of brown drawer,107,,Paperware,neighborhood1_03343c98-6b1a-4904-bec5-0ecec258bdb9,,FALSE
+,,,,,$50 Cash at Living Room inside white cabinet,107,,Paperware,neighborhood1_4d804b86-6f0d-4ff8-bcb1-cf9c6b56505c,,FALSE
+,,,,,$50 Cash at Living Room below white cabinet,107,,Paperware,neighborhood1_3bf09af1-0495-48a3-8864-64ffee43ae25,,FALSE
+,,,,,$150 Cash Near Entrance inside brown drawer,107,,Paperware,neighborhood1_006f8fd6-1fb1-4f85-bd27-7535a003cb2f,,FALSE
+,,,,,$150 Cash Near Entrance on brown drawer,107,,Paperware,neighborhood1_c07191f2-da80-4f05-bc94-8ce5ab3ed9b9],,FALSE
+,,,,,Candy Bag,107 Yard,,Halloween,neighborhood1_9be5e08c-9074-487a-85fa-7cdf0c450c40,,FALSE
+,,,,,,,,,,,FALSE
+,,,,,Gift - green,107,,Christmas,,,FALSE
+,,,,,Break their toilet in 107,107,Crowbar,,,,FALSE
+,,,,,Break their wine glasses in 107,107,Crowbar,,,,FALSE
+,,,,,BeeBee across from Garage above white drawers,108,,Painting,neighborhood1_4a30223e-8cce-43f7-98c2-2f7d9cd47ccd,,FALSE
+,,,,,BeeBee,108,,Painting,neighborhood1_085b0c4a-d67f-4fa1-b760-f16d8d693bd5,,FALSE
+,,,,,China,108,,Painting,neighborhood1_b755b688-3a65-44ec-948f-1754eca666ed,,FALSE
+,,,,,Daisy,108,,Painting,neighborhood1_f091291e-a542-42d5-ae09-738603895b42,,FALSE
+,,,,,Flower next to Garage left of paintings,108,,Painting,neighborhood1_9e48edec-991d-4e0f-96d7-7e439b184d81,,FALSE
+,,,,,Flower next to Garage inbetween of paintings,108,,Painting,neighborhood1_78d86ca6-9fe7-4cf9-b62a-c287b892e6d1,,FALSE
+,,,,,Flower next to Garage right of paintings,108,,Painting,neighborhood1_82a32c5f-d3a0-429a-b34b-d519fa6e4a1b,,FALSE
+,,,,,Flower at 2nd Floor near the stairs,108,,Painting,neighborhood1_037e732b-c230-4447-bc3b-6b9874251e3f,,FALSE
+,,,,,Flowers,108,,Painting,neighborhood1_35db3c12-9e0f-4703-9267-12ab0f80eba5,,FALSE
+,,,,,Rose,108,,Painting,neighborhood1_e44b6595-614d-45ba-9c63-1497a66e89c0,,FALSE
+,,,,,Dark Red Vase in Living Room right of TV,108,,Vase,neighborhood1_faa20ea6-31f1-4dbe-a34a-8d8c34a7ebed,,FALSE
+,,,,,Dark Red Vase in Bedroom on top of brown cabinet,108,,Vase,neighborhood1_2d1ed83a-730c-4ef6-a1d5-709b11f1698a,,FALSE
+,,,,,Globe,108,,Decoration,neighborhood1_7556d3ad-e842-4abe-9666-e4ab05b7aec5,,FALSE
+,,,,,Golden Goblet,108,,Decoration,neighborhood1_71ce0bb3-8bb0-426f-8c5e-b480eec321fc,,FALSE
+,,,,,Golden Goblet,108,,Decoration,,,FALSE
+,,,,,Pendulum,108,,Decoration,neighborhood1_804b6537-222f-4a04-8e2f-f75d4d58ae4b,,FALSE
+,,,,,Piggy Bank,108,,Decoration,neighborhood1_85c0048f-2225-4346-884f-170ac55021d1,,FALSE
+,,,,,Tear Trophy,108,,Decoration,neighborhood1_c71f6d21-46c7-45d4-837d-eac6ff35cbfa,,FALSE
+,,,,,Vase - tall in Living Room on top of white cabinet,108,,Vase,neighborhood1_173c15fd-b95d-4a05-9259-a61198b06638,,FALSE
+,,,,,Vase - tall in Living Room inside brown cabinet,108,,Vase,neighborhood1_eb2bc3b7-d5b7-4056-bc9d-f8a3a8d7cefe,,FALSE
+,,,,,Vase 'Black&White',108,,Vase,neighborhood1_743b25bf-14db-4363-a4cf-4d2ff01f44b1,,FALSE
+,,,,,White Vase,108,,Vase,neighborhood1_a4175da0-6742-4378-b9bd-4b8a04f2e046,,FALSE
+,,,,,Wicker Vase,108,,Vase,neighborhood1_a66664dd-aa17-4645-bc56-c59e02169286,,FALSE
+,,,,,Alarm Clock in Master Bedroom on top of white drawers,108,,Clock,neighborhood1_ac94e123-5046-4dbe-8acb-5ea0cb437d65,,FALSE
+,,,,,Alarm Clock in Bedroom on top of white cabinet,108,,Clock,neighborhood1_f28bb7dd-9cb3-4af0-9354-300fc5760245,,FALSE
+,,,,,Alarm Clock in Bedroom on top of white drawers,108,,Clock,neighborhood1_0d1a04f0-ebaf-426d-9acf-10636b7a1119,,FALSE
+,,,,,Radio,108,,Audio Device,neighborhood1_addaf70c-6ae6-4fe0-8d3e-3b9b91053c9c,,FALSE
+,,,,,Camera,108,,Camera,neighborhood1_00977dec-bc2e-4f4c-8906-b3d90c6f759c,,FALSE
+,,,,,Damaged uPhone at Kitchen on dining table,108,,Communication Device,neighborhood1_b1a21528-1c35-4a31-a83e-2203f916c31c,,FALSE
+,,,,,Damaged uPhone in Bathroom,108,,Communication Device,neighborhood1_9543ad6d-355d-47b0-9541-51f672ed886b,,FALSE
+,,,,,Damaged uPhone in 2nd Floor above brown drawers,108,,Communication Device,neighborhood1_44aa6dfc-9534-4cd7-a00c-d91434ce0e5f,,FALSE
+,,,,,Ebricksson,108,,Communication Device,neighborhood1_322b55cb-26b2-46a3-a2fa-eb2c08446324,,FALSE
+,,,,,Headphones in Living Room on top of white cabinet,108,,Audio Device,neighborhood1_ae2dff85-d46c-4889-8885-6932e460bb99,,FALSE
+,,,,,Headphones in Master Bedroom inside white cabinet right side,108,,Audio Device,neighborhood1_9c435db8-19b8-461f-970d-f73e062f458e,,FALSE
+,,,,,Headphones in Bedroom inside white desk cabinet,108,,Audio Device,neighborhood1_f238331c-4066-441d-a424-0eaa6f055af0,,FALSE
+,,,,,Keyboard,108,,Computer Peripheral,neighborhood1_5a22bfe4-95cc-4bd2-8e92-b1697a04bd60,,FALSE
+,,,,,Lamp at Master Bedroom left side of bed above white cabinet,108,,Lamp,neighborhood1_2349106f-496b-47ec-a9fc-abd89760d19b,,FALSE
+,,,,,Lamp at Master Bedroom right side of bed above white cabinet,108,,Lamp,neighborhood1_a05e27c3-ea55-4cfc-ac37-0cf3bbd162ab,,FALSE
+,,,,,Printer,108,,Office Supplies,neighborhood1_f754fbec-130a-434b-b7aa-79a3e8c784ab,,FALSE
+,,,,,Router in 2nd Floor below brown drawers,108,,Ethernet Device,neighborhood1_b078b808-574a-48b2-a889-5b01473ba3c8,,FALSE
+,,,,,Router in Bedroom below small table,108,,Ethernet Device,neighborhood1_df56f436-899a-4ea1-a705-8d22ea49bda0,,FALSE
+,,,,,Small TV,108,,Television,neighborhood1_ccd59414-1535-4f70-9ae7-445805e98c9a,,FALSE
+,,,,,USB Flash,108,,Computer Peripheral,,,FALSE
+,,,,,Electric Guitar,108,,Musical Instrument,neighborhood1_ee9e5969-3206-4062-bfc8-defb8dbab94f,,FALSE
+,,,,,Wender Electric Guitar,108,,Musical Instrument,neighborhood1_74831b80-8e04-4cd4-a2c8-290b7709d39e,,FALSE
+,,,,,Esevoignas Wine,108,,Wine,neighborhood1_4d574a66-77b0-4313-b3ef-cd9ccee4ef0e,,FALSE
+,,,,,Microwave,108,,Microwave,neighborhood1_54888249-5c07-4b95-8971-7bb49557c031,,FALSE
+,,,,,Old Toaster,108,,Toaster,,,FALSE
+,,,,,Sunset,108,,Painting,neighborhood1_b7d02951-1293-472a-8d48-6a3891b6c12f,,FALSE
+,,,,,$15 Cash in Living Room on top of Couch,108,,Paperware,neighborhood1_d81b72a3-0090-4d87-a19f-01082cc7356b,,FALSE
+,,,,,$15 Cash at Kitchen on dining table,108,,Paperware,neighborhood1_b56470f6-94dd-4b13-8871-20bf2dadf2f0,,FALSE
+,,,,,$15 Cash in Bathroom,108,,Paperware,neighborhood1_740c1988-5bb1-4b85-b88e-1c1668abc373,,FALSE
+,,,,,$50 Cash in Master Bedroom inside brown cabinet,108,,Paperware,neighborhood1_c95fca9a-c220-469a-bd37-0d4d07335380,,FALSE
+,,,,,$50 Cash in Master Bedroom inside white cabinet left side,108,,Paperware,neighborhood1_09ac9804-8b97-435b-b453-0754af2502d6,,FALSE
+,,,,,$50 Cash in Bedroom inside brown cabinet,108,,Paperware,neighborhood1_eb54526c-6cc0-4746-a257-4cc0fe6c9cea,,FALSE
+,,,,,$50 Cash in Bedroom on top of brown cabinet,108,,Paperware,neighborhood1_fbe21d51-302e-4453-82d8-b8de4fa3205b,,FALSE
+,,,,,Candy Bag,108,,Halloween,neighborhood1_d4cc1aed-a343-4141-bc0a-fc0de1c06125,,FALSE
+,,,,,Gift - green,108,,Christmas,,,FALSE
+,,,,,Gift - red,108,,Christmas,,,FALSE
+,,,,,Break or steal a decoration in 108,108,,,,,FALSE
+,,,,,Steal a Daisy painting in 108,108,,,,,FALSE
+,,,,,Old TV,109,,Television,neighborhood1_3e720aa8-9009-49e9-a565-ebdb83e7f83f,,FALSE
+,,,,,Old Toaster,109,,Toaster,neighborhood1_7348eb03-2633-48f9-8bbd-986b499263bc,,FALSE
+,,,,,Pot,109,,Pots and Pans,neighborhood1_f0c5e461-d953-44d0-8f88-53628ae9ea74,,FALSE
+,,,,,Saucepan in Kitchen left of table,109,,Pots and Pans,neighborhood1_4dc4902c-f145-4d28-ab64-b02898f6fdd9,,FALSE
+,,,,,Saucepan in Kitchen right of table,109,,Pots and Pans,neighborhood1_57c96f55-e618-4b57-9df3-06e0adecd85f,,FALSE
+,,,,,$15 Cash in Bathroom right of trash bag,109,,Paperware,neighborhood1_8f28fef5-9429-4fd9-a510-52eccc83de3c,,FALSE
+,,,,,$15 Cash in Bathroom left of trash bag,109,,Paperware,neighborhood1_a86d1100-1014-43f3-bf96-ff81b42f1bbc,,FALSE
+,,,,,$15 Cash in Bedroom inside gray cabinet,109,,Paperware,neighborhood1_ca75d2d5-8b21-4b97-b14c-e7cf3b30812c,,FALSE
+,,,,,$15 Cash in Bedroom below TV,109,,Paperware,neighborhood1_84d08897-dbd8-485e-a0e8-f6f7da1b5373,,FALSE
+,,,,,Front Door Key 109,109,,Key,,,FALSE
+,,,,,Autumn,110,,Painting,neighborhood1_3d157583-dd2c-410e-940e-d422ad30bd64,,FALSE
+,,,,,Old Toaster,110,,Toaster,neighborhood1_3661579e-5970-445d-8ff7-031983d7fa8b,,FALSE
+,,,,,Pot,110,,Pots and Pans,neighborhood1_f2a00797-08e8-40aa-ba96-61cc2bf71a5a,,FALSE
+,,,,,Saucepan,110,,Pots and Pans,neighborhood1_f13d0d98-ca64-498b-8f40-88f5ba61ab20,,FALSE
+,,,,,Teapot,110,,Tea set,neighborhood1_3d9b9638-3033-4970-8187-3c9b8c35642f,,FALSE
+,,,,,$15 Cash in Kitchen above blue table,110,,Paperware,neighborhood1_66388c26-24ed-47a9-94b0-5274c9117511,,FALSE
+,,,,,$15 Cash in Bedroom inside desk cabinet,110,,Paperware,neighborhood1_ec9d233d-aadb-41d7-9c0f-36c25832b412,,FALSE
+,,,,,$15 Cash in Bedroom inside shoe cabinet,110,,Paperware,neighborhood1_ab2602ae-2313-4281-9504-aba1d7ec33d5,,FALSE
+,,,,,Break or steal the painting in 110,110,,,,,FALSE
+,,,,,Break their dishes in 110,110,Crowbar,,,,FALSE
+,,,,,Old TV,111,,Television,neighborhood1_51a1dc00-bfe1-4b2c-93f1-bce94c0f0231,,FALSE
+,,,,,Radio,111,,Audio Device,neighborhood1_e4f91c4b-1c01-4f19-84b8-7787371aad54,,FALSE
+,,,,,Pot,111,,Pots and Pans,neighborhood1_6df0afc4-4062-477c-aab2-f29617f99233,,FALSE
+,,,,,Box with Shady Content,111,,Box,,,FALSE
+,,,,,$50 Cash inside grey cabinet right side,111,,Paperware,neighborhood1_bf20708c-39af-4162-a484-32ebce404912,,FALSE
+,,,,,$50 Cash inside grey cabinet left side,111,,Paperware,neighborhood1_209aadea-b8be-4f14-9d78-082c65fd0d60,,FALSE
+,,,,,Autumn,112,,Painting,neighborhood1_cf032140-2f55-4fbf-ae4d-1cde70097785,,FALSE
+,,,,,Deer,112,,Painting,neighborhood1_e5a26e5d-67a5-4e3f-886e-95839ee8c8e9,,FALSE
+,,,,,Kiss,112,,Painting,,,FALSE
+,,,,,Chess,112,,Toy,neighborhood1_7f72ab6c-2812-45bc-8923-7454fefceb00,,FALSE
+,,,,,Flower Vase,112,,Vase,,,FALSE
+,,,,,Golden Goblet,112,,Decoration,neighborhood1_28373a43-5597-497e-b3d8-cdf8a1eddb24,,FALSE
+,,,,,Golden Goblet,112,,Decoration,,,FALSE
+,,,,,Grey Vase,112,,Vase,neighborhood1_3cd9a394-0bcc-4a65-9ac8-6bbb43fbf648,,FALSE
+,,,,,Tear Trophy,112,,Decoration,neighborhood1_c5ac0329-79f1-4b7b-952a-f7032439665e,,FALSE
+,,,,,Yellow Vase in Bedroom on brown drawers right side,112,,Vase,neighborhood1_a89a66bf-8211-4f3b-9155-7492b16222fc,,FALSE
+,,,,,Yellow Vase in Bedroom on brown drawers left side,112,,Vase,neighborhood1_b389a902-3a1e-4385-886e-b45ec54d1ddc,,FALSE
+,,,,,Alarm Clock,112,,Clock,neighborhood1_5254233e-2a14-4952-9082-5c9ff2e5dd40,,FALSE
+,,,,,Camera,112,,Camera,neighborhood1_b64bf9c4-05b8-4cd4-8e11-a5a07e346000,,FALSE
+,,,,,Landline,112,,Communication Device,neighborhood1_101d29bb-5548-4bae-9656-8e6a95ae63e6,,FALSE
+,,,,,Radio,112,,Audio Device,,,FALSE
+,,,,,Remote,112,,Television Equipment,neighborhood1_feb2fc6f-ed8d-48b1-9028-0bc037c24c15,,FALSE
+,,,,,Small TV in Living Room,112,,Television,neighborhood1_0ad21980-8b56-422f-bf84-c21d1794e312,,FALSE
+,,,,,Small TV in Laundry Room,112,,Television,neighborhood1_8441f58e-0437-48c1-973b-2c68d26a2c57,,FALSE
+,,,,,USB Flash,112,,Computer Peripheral,neighborhood1_aae878bd-532c-4030-8193-c7b643fcbbfc,,FALSE
+,,,,,Bracelet,112,"Jewelry tools, Safecracking tools",Accessories,neighborhood1_e2d7feec-64db-46ae-a90e-c6739a1e3d2c,,FALSE
+,,,,,Coffee Machine,112,,Coffee Machine,neighborhood1_74d1597e-a9dc-4d42-8ca1-3ceae10628c1,,FALSE
+,,,,,Glass Cup,112,,Tableware,,,FALSE
+,,,,,Glass Cup,112,,Tableware,,,FALSE
+,,,,,Old Toaster,112,,Toaster,,,FALSE
+,,,,,Saucepan,112,,Pots and Pans,neighborhood1_acb89dd9-367f-4548-87d5-42ece9373562,,FALSE
+,,,,,Toaster,112,,Toaster,neighborhood1_eca5b565-8feb-46cb-b499-efbe597fa53d,,FALSE
+,,,,,Tolrem Wine,112,,Wine,neighborhood1_a0399e15-c974-41a2-9e81-0d0923a1bb84,,FALSE
+,,,,,$15 Cash in Bedroom inside desk cabinet,112,,Paperware,neighborhood1_4db7ebba-3a77-4ece-8f2c-0595758bba57,,FALSE
+,,,,,$15 Cash in Hallway on top of brown drawers,112,,Paperware,neighborhood1_8661f588-3a28-45bb-9ed3-d6ea729f3667,,FALSE
+,,,,,$15 Cash in Living Room on top of white cabinet,112,,Paperware,neighborhood1_856ca056-8601-4e7d-9669-0f690961f351,,FALSE
+,,,,,$15 Cash in Kitchen on dining table,112,,Paperware,neighborhood1_8c4713fa-2a25-4d36-b9b2-4701e3435a03,,FALSE
+,,,,,$15 Cash in Master Bedroom inside safe bottom side,112,Safecracking tools,Paperware,neighborhood1_26f4f715-7a10-4c94-bae8-93eb76566334,,FALSE
+,,,,,$15 Cash in Master Bedroom inside safe top side,112,Safecracking tools,Paperware,neighborhood1_79141d41-cb24-4487-9b86-a59db539bce9,,FALSE
+,,,,,$50 Cash in Laundry Room inside grey container,112,,Paperware,neighborhood1_f225c348-775f-41ed-b4b7-25491c0e7bba,,FALSE
+,,,,,Candy Bag,112,,Halloween,neighborhood1_5368c04e-827b-47b2-8148-d3819f656598,,FALSE
+,,,,,Gift- blue,112,,Christmas,,,FALSE
+,,,,,Gift - green,112,,Christmas,,,FALSE
+,,,,,Gift - red,112,,Christmas,,,FALSE
+,,,,,Break or steal the Kiss painting in 112,112,,,,,FALSE
+,,,,,Baptism,113,,Painting,neighborhood1_14d8e7ce-1b84-4266-8572-1ec67a51e3fd,,FALSE
+,,,,,Evening,113,,Painting,,,FALSE
+,,,,,Wave,113,,Painting,neighborhood1_14377b03-2de6-4bab-bc78-0584d78a39fb,,FALSE
+,,,,,Flower Vase near Kitchen above brown drawers,113,,Vase,neighborhood1_b3999862-e090-4aa9-a489-908a061c8f7a,,FALSE
+,,,,,Flower Vase at Kitchen on dining table,113,,Vase,neighborhood1_2876e3c0-33d3-48cf-935c-7549922ad3af,,FALSE
+,,,,,Grey Vase,113,,Vase,neighborhood1_9aa4ac86-e783-46ec-888e-0f0e9e1a8503,,FALSE
+,,,,,Red Vase in Locked Bedroom inside brown cabinets left side,113 Bedroom,,Vase,neighborhood1_c1b261fb-c888-4438-bc23-7a7e4e1cfeff,,FALSE
+,,,,,Red Vase in Locked Bedroom inside brown cabinets right side,113 Bedroom,,Vase,neighborhood1_d22e9272-900d-4000-af20-f040bc0bae03,,FALSE
+,,,,,Vase - tall near Entrance on shelf right side,113,,Vase,neighborhood1_b43ec22e-2f53-4e7d-8630-03170c744866,,FALSE
+,,,,,Vase - tall near Entrance on shelf left side,113,,Vase,neighborhood1_a2079eea-9f99-4876-ad7a-e5dbbe3eaa02,,FALSE
+,,,,,Vase - tall in Living Room on shelf,113,,Vase,neighborhood1_e50e2fd3-5af6-45ee-82eb-22de82b6690a,,FALSE
+,,,,,Ebricksson,113,,Communication Device,neighborhood1_ddd166de-7094-4da9-939b-3ac9983ce309,,FALSE
+,,,,,Harddrive in Kid's Bedroom inside desk cabinet stacked on top,113,,Computer Peripheral,neighborhood1_0d180919-b886-4b74-8979-443b6e47a182,,FALSE
+,,,,,Harddrive in Kid's Bedroom inside desk cabinet stacked on bottom,113,,Computer Peripheral,neighborhood1_e8c8ef2b-4f81-4074-89af-e9eed055e69d,,FALSE
+,,,,,Jomaha Receiver,113,,Television Equipment,neighborhood1_3f2ba777-6a7a-4031-b4f4-9cd1224dbcd4,,FALSE
+,,,,,Noke at Bathroom,113,,Communication Device,neighborhood1_dd24dcad-43a0-4dbb-bbdf-8d0788b1f166,,FALSE
+,,,,,Noke near Entrance on white seat,113,,Communication Device,neighborhood1_65ccb18a-efd1-421b-863e-eb96c3ffe950,,FALSE
+,,,,,Printer,113,,Office Supplies,neighborhood1_259ca152-c257-4422-b187-5cc4d799dd73,,FALSE
+,,,,,Radio,113,,Audio Device,neighborhood1_ae518bcc-d17c-4e2b-91ac-2b58ff639c44,,FALSE
+,,,,,Remote,113,,Television Equipment,neighborhood1_829d727d-3fa9-4bdd-affd-9dfd5d487a6c,,FALSE
+,,,,,Router at Hallway on top of brown drawers,113,,Ethernet Device,neighborhood1_9f40abbb-af59-42f0-9b64-c0dfd392557e,,FALSE
+,,,,,Router in Kid's Bedroom,113,,Ethernet Device,neighborhood1_6164c355-2680-4e7f-b2e3-5b811a955779,,FALSE
+,,,,,Small TV at Living Room,113,,Television,neighborhood1_cff938bb-a582-4ef3-bb05-36ae1398ec86,,FALSE
+,,,,,Small TV in Kid's Bedroom inside clothes cabinet,113,,Television,neighborhood1_1b3d45ca-0c50-4cea-bdd7-d76499500b6c,,FALSE
+,,,,,Esevoignas Wine,113,,Wine,neighborhood1_bf1a5559-ddc1-4d64-96ce-3a8ffd94661e,,FALSE
+,,,,,Autumn,113,,Painting,neighborhood1_1d130570-ddb5-494d-96e3-66f83da904db,,FALSE
+,,,,,Sunset,113,,Painting,neighborhood1_f0331925-7105-4271-99a2-6971503b27e0,,FALSE
+,,,,,Glass Cup in Locked Bedroom in brown cabinet on top left,113 Bedroom,,Tableware,neighborhood1_5d7d7f8b-c7a8-4cc6-951d-d1e2067b3f34,,FALSE
+,,,,,Glass Cup in Locked Bedroom in brown cabinet on top middle,113 Bedroom,,Tableware,neighborhood1_fe779180-b857-4c34-858f-508e81d41ba4,,FALSE
+,,,,,Glass Cup in Locked Bedroom in brown cabinet on top right,113 Bedroom,,Tableware,neighborhood1_0fb48d5c-8899-4c9a-ba84-e41b0948d8a2,,FALSE
+,,,,,Glass Cup in Locked Bedroom in brown cabinet on bottom right,113 Bedroom,,Tableware,neighborhood1_c2900981-2e4d-4dfd-95df-2e77e186bdc2,,FALSE
+,,,,,Glass Cup in Locked Bedroom in brown cabinet on bottom middle,113 Bedroom,,Tableware,neighborhood1_66f7552b-a43d-43c9-96ac-c6e1787b3c72,,FALSE
+,,,,,Glass Cup in Locked Bedroom in brown cabinet on bottom left,113 Bedroom,,Tableware,neighborhood1_e5d81282-59f8-412f-99f5-2af2e52dcc7c,,FALSE
+,,,,,Microwave,113,,Microwave,neighborhood1_971dfadb-8179-4599-a9dc-a7ad99df02bb,,FALSE
+,,,,,Pot,113,,Pots and Pans,neighborhood1_7bbf3b9d-c692-43f0-bc54-542cce7905c2,,FALSE
+,,,,,Teabox,113,,Tea set,neighborhood1_1b063a39-167b-4817-9af5-09fa52308357,,FALSE
+,,,,,Tolrem Wine,113,,Wine,neighborhood1_ebc1b27a-be47-4f87-8b72-619b17aab021,,FALSE
+,,,,,$15 Cash at Hallway inside brown cabinet right side,113,,Paperware,neighborhood1_75249d2d-94a3-4840-834a-650b0d53f939,,FALSE
+,,,,,$15 Cash near Entrance on shelf,113,,Paperware,neighborhood1_2fef7d42-280b-42f1-9bed-40fe8bb1c16e,,FALSE
+,,,,,$15 Cash at Hallway inside brown cabinet left side,113,,Paperware,neighborhood1_e9f4570b-4315-431a-9683-f8f832a60384,,FALSE
+,,,,,$15 Cash near Kitchen on top of brown drawers,113,,Paperware,neighborhood1_a28d583c-d26f-4643-99eb-bf24795a1cb3,,FALSE
+,,,,,$15 Cash at Kitchen on top of kitchen counter,113,,Paperware,neighborhood1_681d958e-cd61-4772-9608-071e2dd8cf54,,FALSE
+,,,,,$15 Cash in Living Room inside black cabinets,113,,Paperware,neighborhood1_2dc471b6-be6d-4009-9f75-602e3f43ad76,,FALSE
+,,,,,$15 Cash in Living Room below TV inside brown cabinets,113,,Paperware,neighborhood1_f9b5af03-bbc9-49f5-94be-66da63a37d73,,FALSE
+,,,,,$15 Cash in Kid's Bedroom inside desk cabinet,113,,Paperware,neighborhood1_f9cdbc75-be4b-412a-869f-c6db62488b13,,FALSE
+,,,,,$50 Cash in Living Room on round table,113,,Paperware,neighborhood1_fc1802a5-9460-4315-a8df-583c84b37ba1,,FALSE
+,,,,,Candy Bag,113,,Halloween,neighborhood1_3564e3c6-58bb-40d9-9747-d97afc373284,,FALSE
+,,,,,Gift- blue,113,,Christmas,,,FALSE
+,,,,,Gift - green,113,,Christmas,,,FALSE
+,,,,,Break or steal the pear decoration in 113,113,,,,,FALSE
+,,,,,Headphones,102 Yard,,Audio Device,neighborhood1_76674cb9-9592-4394-8bdb-a274d16d3940,,FALSE
+,,,,,USB Flash,102 Yard,,Computer Peripheral,neighborhood1_d245029d-8279-48b6-901d-3e4f47e08094,,FALSE
+,,,,,Video game' console,104 Frontyard,,Video Game Electronic,neighborhood1_7211dda3-eae1-4d16-95c8-c477ffa33ed3,,FALSE
+,,,,,Rose Piano,106 Sideroom,,Painting,neighborhood1_33739604-a640-47f6-b681-9f457f11838f,,FALSE
+,,,,,Harddrive,106 Sideroom,,Computer Peripheral,neighborhood1_08230908-ac7d-4e9a-ad73-afb8ff9aa78d,,FALSE
+,,,,,Headphones,106 Sideroom,,Audio Device,neighborhood1_a1ae5fe0-f7ec-490d-9e02-e4c62fa354a3,,FALSE
+,,,,,Headset,106 Sideroom,,Audio Device,neighborhood1_9f7cc209-b11b-49b4-8b30-354cd51bf76c,,FALSE
+,,,,,Mouse,106 Sideroom,,Computer Peripheral,neighborhood1_8b56d84b-8835-4691-bb0b-ae8189e146ec,,FALSE
+,,,,,Noke,106 Sideroom,,Communication Device,neighborhood1_e209f9c2-f819-47ae-9379-6901ecacb8bb,,FALSE
+,,,,,$50 Cash inside Sideroom Safe bottom shelf left most side,106 Sideroom,Safecracking tools,Paperware,neighborhood1_4618ae90-717b-4a63-bd7d-48af06ec726e,,FALSE
+,,,,,$50 Cash inside Sideroom Safe bottom shelf middle left side,106 Sideroom,Safecracking tools,Paperware,neighborhood1_ded7f5a5-ab24-480d-ad2c-2136d6e38142,,FALSE
+,,,,,$50 Cash inside Sideroom Safe bottom shelf middle right side,106 Sideroom,Safecracking tools,Paperware,neighborhood1_ced63545-2d9c-4f33-9627-a40cec3143ef,,FALSE
+,,,,,$50 Cash inside Sideroom Safe bottom shelf right most side,106 Sideroom,Safecracking tools,Paperware,neighborhood1_bbb04c3b-7ac8-4cd3-b3b0-f0e3bb13ce20,,FALSE
+,,,,,$50 Cash inside Sideroom Safe top shelf right  most side,106 Sideroom,Safecracking tools,Paperware,neighborhood1_7486c630-5064-4bd8-989f-2ee9dbe70a00,,FALSE
+,,,,,$50 Cash inside Sideroom Safe top shelf middle right side,106 Sideroom,Safecracking tools,Paperware,neighborhood1_df1d477f-b03a-4860-b420-0ec0865941d1,,FALSE
+,,,,,$50 Cash inside Sideroom Safe top shelf middle left side,106 Sideroom,Safecracking tools,Paperware,neighborhood1_17b5f3f6-2084-459c-9cf2-91fb124b0d25,,FALSE
+,,,,,$50 Cash inside Sideroom Safe top shelf left most side,106 Sideroom,Safecracking tools,Paperware,neighborhood1_07c719f0-0e78-4f50-a24e-bdbddfeead1e,,FALSE
+,,,,,Break their window on the second floor in 107,107 Yard,Crowbar,,,,FALSE
+,,,,,Radio,108 Backyard,,Audio Device,neighborhood1_37a1b08b-6a66-4012-8218-b01b386d93f1,,FALSE
+,,,,,Esevoignas Wine,108 Backyard,,Wine,neighborhood1_45d03629-7ed6-411b-ae27-47b7b1447dcd,,FALSE
+,,,,,Riontonip Wine,108 Backyard,,Wine,neighborhood1_db2d7e33-0423-4743-834f-79d64e5d59f5,,FALSE
+,,,,,Saucepan,108 Backyard,,Pots and Pans,neighborhood1_3691d652-ec22-4fb0-8d2a-339028628122,,FALSE
+,,,,,Teabox,108 Backyard,,Tea set,neighborhood1_608df287-55f2-41b8-b1c1-28a8968e1293,,FALSE
+,,,,,Vase - wide,108 Upstairs Living Room,,Vase,neighborhood1_813bc0bd-0b5e-4b13-bded-28381cf872f7,,FALSE
+,,,,,Harddrive,108 Upstairs Living Room,,Computer Peripheral,neighborhood1_66e9f9a4-ee98-4328-a309-a7dd6db1b748,,FALSE
+,,,,,Jomaso Receiver,108 Upstairs Living Room,,Television Equipment,neighborhood1_13803dae-8f70-4180-a384-917917841782,,FALSE
+,,,,,Remote,108 Upstairs Living Room,,Television Equipment,neighborhood1_c8a6f7ee-df34-4669-9238-fcfb5cb79d9b,,FALSE
+,,,,,Speaker,108 Upstairs Living Room,,Audio Device,neighborhood1_0f8e0b6e-3a7a-49cf-b580-1d81402f8d31,,FALSE
+,,,,,TV,108 Upstairs Living Room,,Television,neighborhood1_fa9d6c36-e2d7-4666-97f5-b1563ed29f8c,,FALSE
+,,,,,$50 Cash Below TV left side,108 Upstairs Living Room,,Paperware,neighborhood1_12b98686-cd60-4293-8c3b-35591a2a40bc,,FALSE
+,,,,,$50 Cash Below TV right side,108 Upstairs Living Room,,Paperware,neighborhood1_b65df24d-20fe-4864-b39d-8d7cfcf72aa9,,FALSE
+,,,,,Harddrive,109 Upstairs Living Room,,Computer Peripheral,neighborhood1_30bb074e-faa3-4a8b-9025-0d7bdb04b3a5,,FALSE
+,,,,,Speaker,109 Upstairs Living Room,,Audio Device,neighborhood1_b0c62aa5-b91a-4618-96d1-d1e2f2119f60,,FALSE
+,,,,,Harddrive,110 Upstairs Living Room,,Computer Peripheral,neighborhood1_d1b968e2-a0de-4882-87c7-259cd7e59c2f,,FALSE
+,,,,,Headphones,113 Backyard,,Audio Device,neighborhood1_487631f4-a3a6-4c63-bc94-a7b8221689d6,,FALSE
+,,,,,Radio,113 Backyard,,Audio Device,neighborhood1_c08c5b66-dcaa-4017-9ecb-947734749bfd,,FALSE
+,,,,,Baptism,113 Bedroom,,Painting,neighborhood1_20b6c28d-9646-4efa-9692-b723953c87cf,,FALSE
+,,,,,Yellow Pear Vase,113 Bedroom,,Vase,neighborhood1_47162ad1-0327-4da1-b966-6538e55109c1,,FALSE
+,,,,,Alarm Clock in Locked Bedroom on top of white drawer,113 Bedroom,,Clock,neighborhood1_b716734f-a024-4a34-b1ea-27ebff81e6c9,,FALSE
+,,,,,Alarm Clock in Locked Bedroom inside white drawer,113 Bedroom,,Clock,neighborhood1_8ef866d0-b704-426a-a7f2-59dbea9a9d1a,,FALSE
+,,,,,Camera,113 Bedroom,,Camera,neighborhood1_230ed145-f624-4ec2-bfd6-dafd10703667,,FALSE
+,,,,,Old Yomaha Guitar,113 Bedroom,,Musical Instrument,neighborhood1_e8528bf7-3110-4b3d-8ba6-a266acc1890f,,FALSE
+,,,,,$15 Cash in Locked Bedroom on top of white cabinets,113 Bedroom,,Paperware,neighborhood1_d898b877-1d2f-4295-ba88-f0f8067746f3,,FALSE
+,,,,,$15 Cash in Locked Bedroom inside brown clothes cabinet,113 Bedroom,,Paperware,neighborhood1_5b1fdbbc-cc82-4474-8dad-c3aab358df2c,,FALSE
+,,,,,$15 Cash in Locked Bedroom near bed inside white cabinets,113 Bedroom,,Paperware,neighborhood1_301138c9-8c94-4986-8fc3-8ed2d8ee32f1,,FALSE
+,,,,,$50 Cash in Locked Bathroom inside white cabinets,113 Bedroom,,Paperware,neighborhood1_dd5ef0b8-fa74-4c89-8d81-62082167dca6,,FALSE
+,,,,,Front Door Key 113,113 Bedroom,,Key,neighborhood1_11f27781-417e-4f86-881c-e4e7c28df697,Front door key 113,FALSE
+,,,,,Pumpkin Outside 113,Greenview St,,Halloween,neighborhood1_7dc956aa-d4af-49d9-8576-539c3460146a,,FALSE
+,,,,,Pumpkin on 107 Fence,Greenview St,,Halloween,neighborhood1_06f7c07a-724f-4b7a-a8b7-276040539ed4,,FALSE
+,,,,,Pumpkin on 108 Roof,Greenview St,,Halloween,neighborhood1_307e9ec8-d499-429a-bb72-4e72f4c5b6a0,,FALSE
+,,,,,101 - House security tip 1,Greenview St,,,,,FALSE
+,,,,,101 - Possible loot location tip 1,Greenview St,,,,,FALSE
+,,,,,101 - House security tip 2,Greenview St,,,,,FALSE
+,,,,,101 - Possible loot location tip 2,Greenview St,,,,,FALSE
+,,,,,102 - Possible loot location tip 1,Greenview St,,,,,FALSE
+,,,,,102 - House security tip,Greenview St,,,,,FALSE
+,,,,,102 - Possible loot location tip 2,Greenview St,,,,,FALSE
+,,,,,103 - House security tip,Greenview St,,,,,FALSE
+,,,,,103 - Possible loot location tip,Greenview St,,,,,FALSE
+,,,,,104 - House security tip,Greenview St,,,,,FALSE
+,,,,,104 - Possible loot location tip,Greenview St,,,,,FALSE
+,,,,,105 - House security tip,Greenview St,,,,,FALSE
+,,,,,105 - Possible loot location tip,Greenview St,,,,,FALSE
+,,,,,,,,,,,FALSE
+,,,,,,,,,,,FALSE

@@ -13,7 +13,7 @@
         <DebugSymbols>true</DebugSymbols>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-        <Version>0.1.0</Version>
+        <Version>0.2.1</Version>
         <Title>SW_CreeperKing's Archipelago World Factory Utility Template</Title>
         <Authors>SW_CreeperKing</Authors>
         <Description>A Template Utility for reading in a CSV and creating ApWorlds</Description>

@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Reflection;
+using System.Threading.Tasks.Sources;
 using CreepyUtil.Archipelago.WorldFactory;
 using CreepyUtil.ClrCnsl;
 using CreepyUtil.Pos;
@@ -27,7 +28,7 @@ public abstract class BuildData
 
     public virtual string WriteOutputDirectory => SteamDirectory is "" || ModFolderName is ""
         ? $"{RawOutputPath}{GameFolder}"
-        : $"{SteamDirectory}/{GameFolder}/Mods/{ModFolderName}/Data";
+        : $"{GamePath}/Mods/{ModFolderName}/Data";
 
     public virtual string ReadInputDirectory => $"{RawInputPath}{GameName}/";
     public virtual string ApWorldPath => $"E:/coding projects/python/Deathipelago/worlds/{ApWorldName}";
@@ -35,7 +36,7 @@ public abstract class BuildData
     public virtual string GoogleSheetId => "";
     public virtual string MainSheetLink => $"https://docs.google.com/spreadsheets/d/{GoogleSheetId}/export?format=csv";
     public virtual string GraphOutput => "svg";
-    public virtual LocalFillSettings LocalFillSettings => new();
+    public virtual LocalFillSettings LocalFillSettings => new(-1);
 
     public virtual Dictionary<string, string> SheetGids { get; } = [];
 
@@ -312,7 +313,7 @@ public readonly struct LocalFillSettings(int def = -1, int min = 0, int max = 97
     public readonly int Default = def;
     public readonly int Min = min;
     public readonly int Max = max;
-    public bool Enabled => Default is not -1;
+    public bool Enabled => Default >= 0;
 }
 
 [AttributeUsage(AttributeTargets.Field)]

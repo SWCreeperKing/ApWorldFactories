@@ -14,7 +14,6 @@ public class DinoBones : BuildData
 
     public static int[] CrateNumbers = [];
     public static BoneLabel[] Labels = [];
-    public static Dictionary<string, BoneLabel[]> DinoBoneDict = [];
     public static Dictionary<string, int> BoneToCrate = [];
 
     public override void RunShenanigans()
@@ -22,11 +21,11 @@ public class DinoBones : BuildData
         Labels = ReadData("Dinobones", s => new BoneLabel(s.Split('|')));
         var paths = ReadData("DinobonePaths", s => new BonePath(s.Split('|')));
 
-        DinoBoneDict = Labels.GroupBy(b => b.Species).ToDictionary(g => g.Key, g => g.ToArray());
         BoneToCrate = paths.ToDictionary(b => b.Label.Name, b => b.CrateNumber);
         CrateNumbers = [.. Enumerable.Range(1, BoneToCrate.Values.Max())];
 
         WriteData("bonepaths", paths.Select(p => $"{p.Crate}|{p.Object}").DistinctBy(s => s));
+        WriteData("bonecrates", BoneToCrate.Select(kv => $"{kv.Key}|{kv.Value}"));
     }
 
     public override void Locations(WorldFactory _, LocationFactory location_fact)
@@ -39,7 +38,7 @@ public class DinoBones : BuildData
            .AddLocations(
                 "bones_crate",
                 Labels.Where(l => BoneToCrate.ContainsKey(l.Name))
-                      .Select(b => (string[])[b.Name, $"Crate {BoneToCrate[b.Name]}",])
+                      .Select(b => (string[])[$"{b.Name} (Crate {BoneToCrate[b.Name]})", $"Crate {BoneToCrate[b.Name]}",])
             );
     }
 
@@ -76,6 +75,7 @@ public class DinoBones : BuildData
     public override void Init(WorldFactory world_fact, WorldInitFactory init_fact)
     {
         init_fact
+           .UseItemGroups(new Dictionary<string, string> {["crates"] = "crates"})
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
            .UseSetRules(method => method.CreateGoalCompiledCondition(
                     string.Join(" and ", CrateNumbers.Select(i => $"crate[{i}]"))

@@ -4,7 +4,7 @@ namespace ApWorldFactories.Games.Thief_Simulator_1;
 
 public readonly struct ItemRowData(DataArray param)
 {
-    [Mark] public readonly string RawName = param.Get(false).LowerReplace();
+    [Mark] public readonly string RawName = param.Get(false);
     public readonly string Name = param.Get().LowerReplace();
 }
 
@@ -19,13 +19,20 @@ public readonly struct RegionRowData(DataArray param) : ILogicSectorDataType<str
     [Mark] public readonly string Name = param;
     [Mark] public readonly string ConnectsFrom = param.GetOrDefault(s => s is "" ? "Menu" : s);
     [Mark] public readonly string[] Requirements = [.. ((string[])param).Select(s => s.LowerReplace())];
+    [Mark] public readonly bool IsRegionUnlockable = param;
 
     public string GetIdentifier() => string.Join(",", Requirements);
 
     public bool IsMatch(RegionRowData matchAgainst)
         => Name == matchAgainst.Name && ConnectsFrom == matchAgainst.ConnectsFrom;
 
-    public string GenRule() => $"{string.Join(" and ", Requirements)}";
+    public string GenRule()
+    {
+        var req = Requirements;
+        if (IsRegionUnlockable) req = [$"has[\"{Name}\"]", .. req];
+        return $"{string.Join(" and ", req)}";
+    }
+
     public string Print() => $"Region| {Name}, {ConnectsFrom}| [{string.Join(", ", Requirements)}]";
     public bool IsNoOption() => true;
     public string GenOption() => "";

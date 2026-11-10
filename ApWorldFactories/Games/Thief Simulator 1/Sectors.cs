@@ -6,4 +6,5 @@ public class RegionSector(RegionRowData thisData) : LogicSector<RegionSector, Re
 {
     public string Name = thisData.Name;
     public string From = thisData.ConnectsFrom;
+    public bool IsRegionUnlockable = thisData.IsRegionUnlockable;
 }
