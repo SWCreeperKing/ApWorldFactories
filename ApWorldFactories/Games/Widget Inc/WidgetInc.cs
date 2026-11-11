@@ -75,8 +75,6 @@ public class WidgetInc : BuildData
     public override void Options(OptionsFactory options_fact)
     {
         options_fact
-           .AddOption("Production Multiplier", "Gives a production multiplier", new Range(4, 1, 10))
-           .AddOption("Hand Crafting Multiplier", "Gives a multiplier to hand crafting", new Range(2, 1, 10))
            .AddOption(
                 "Scout Hint Tier Producers", "Scout hint upto [1-13] Tier resource producers\n0 is off",
                 new Range(3, 0, 12)
