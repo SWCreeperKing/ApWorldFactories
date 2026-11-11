@@ -20,19 +20,20 @@ public class ThiefSim1 : BuildData
     };
 
     public RegionSector[] RegionSectors = [];
+
     public ItemRowData[] ItemNames = [];
+
     // public LootTypeRowData[] LootTypes = [];
     public LocationRowData[] LocationRowData = [];
+    public LocationRowData[] EventLocationRowData = [];
     public string[] RegionUnlocks = [];
 
     public override void RunShenanigans()
     {
         GetSpreadsheet()
            .ReadTable(out ItemNames).SkipColumn()
-           // .ReadTable(out LootTypes)
+            // .ReadTable(out LootTypes)
             ;
-
-        ItemNames = [.. ItemNames.Where(i => i.RawName.ToLowerInvariant() is not "crowbar")];
 
         List<RegionRowData> regionRowData = [];
         foreach (var id in (string[])["greenview"])
@@ -49,20 +50,29 @@ public class ThiefSim1 : BuildData
 
         RegionSectors = RegionSector.CreateSectorFromData([.. regionRowData], data => new RegionSector(data));
         RegionUnlocks = [.. RegionSectors.Where(r => r.IsRegionUnlockable).Select(r => r.Name)];
+        EventLocationRowData = [.. LocationRowData.Where(l => l.LocationItem is not "")];
         WriteData("locationIds", LocationRowData.Select(l => $"{l.Name}|{l.Id}"));
     }
 
-    public override void Locations(WorldFactory _, LocationFactory location_fact)
+    public override void Locations(LocationFactory location_fact)
     {
-        location_fact.AddLocations("locs", [.. LocationRowData.Select(loc => (string[])[loc.Name, loc.Region])]);
+        location_fact.AddLocations(
+            "locs",
+            [
+                .. LocationRowData.Where(l => !EventLocationRowData.Contains(l))
+                                  .Select(loc => (string[])[loc.Name, loc.Region])
+            ]
+        );
     }
 
-    public override void Items(WorldFactory _, ItemFactory item_fact)
+    public override void Items(ItemFactory item_fact)
     {
+        string[] eventItems = [.. EventLocationRowData.Select(l => l.LocationItem)];
         item_fact
            .AddItemListVariable("unlocks", ItemFactory.ItemClassification.Progression, list: RegionUnlocks)
            .AddItemListVariable(
-                "items", ItemFactory.ItemClassification.Progression, list: [.. ItemNames.Select(s => s.RawName)]
+                "items", ItemFactory.ItemClassification.Progression,
+                list: [.. ItemNames.Select(s => s.RawName).Where(s => !eventItems.Contains(s))]
             ).AddItem("$15", ItemFactory.ItemClassification.Filler)
            .AddItem("Diamond", ItemFactory.ItemClassification.Progression)
            .AddCreateItems(method =>
@@ -74,17 +84,16 @@ public class ThiefSim1 : BuildData
             );
     }
 
-    public override void Rules(WorldFactory _, RuleFactory rule_fact)
+    public override void Rules(RuleFactory rule_fact)
     {
         rule_fact
-           .AddCompoundLogicFunction("crowbar", "has_crowbar", "True")
            .ForEachOf(
                 ItemNames,
                 name => rule_fact.AddCompoundLogicFunction(name.Name, $"has_{name.Name}", $"has[\"{name.RawName}\"]")
             ).AddLogicRules(LocationRowData.ToDictionary(loc => loc.Name, loc => loc.GenRule()));
     }
 
-    public override void Regions(WorldFactory _, RegionFactory region_fact)
+    public override void Regions(RegionFactory region_fact)
     {
         region_fact
            .AddRegions(regions: [.. RegionSectors.Select(r => r.Name).DistinctBy(s => s)])
@@ -92,10 +101,12 @@ public class ThiefSim1 : BuildData
                 RegionSectors,
                 region => region_fact.AddConnectionCompiledRule(region.From, region.Name, region.GenRule())
             )
-           .AddLocationsFromList("locs");
+           .AddLocationsFromList("locs")
+           .AddEventLocations(locations: [.. EventLocationRowData.Select(l 
+                => new EventLocationData(l.Region, $"Event: [{l.Name}]", l.LocationItem, l.Name))]);
     }
 
-    public override void Init(WorldFactory _, WorldInitFactory init_fact)
+    public override void Init(WorldInitFactory init_fact)
     {
         init_fact
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)

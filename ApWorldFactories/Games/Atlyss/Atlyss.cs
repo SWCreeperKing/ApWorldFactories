@@ -59,7 +59,7 @@ public class Atlyss : BuildData
         }
     }
 
-    public override void Options(WorldFactory _, OptionsFactory options_fact)
+    public override void Options(OptionsFactory options_fact)
     {
         options_fact.AddOption(
                          "Goal",
@@ -126,7 +126,7 @@ public class Atlyss : BuildData
                      );
     }
 
-    public override void Locations(WorldFactory _, LocationFactory location_fact)
+    public override void Locations(LocationFactory location_fact)
     {
         location_fact
            .AddLocations(
@@ -197,7 +197,7 @@ public class Atlyss : BuildData
         }
     }
 
-    public override void Items(WorldFactory _, ItemFactory item_fact)
+    public override void Items(ItemFactory item_fact)
     {
         List<string> progressiveItemMap = [];
         List<string> progressiveItemMapMd = [];
@@ -288,7 +288,7 @@ public class Atlyss : BuildData
         WriteData("progressiveItemMap", progressiveItemMapMd, "md");
     }
 
-    public override void Rules(WorldFactory _, RuleFactory rule_fact)
+    public override void Rules(RuleFactory rule_fact)
     {
         rule_fact
            .AddLogicFunction(
@@ -358,7 +358,7 @@ public class Atlyss : BuildData
             );
     }
 
-    public override void Regions(WorldFactory worldFactory, RegionFactory region_fact)
+    public override void Regions(RegionFactory region_fact)
     {
         region_fact.AddRegions("", [.. LocationLevelData.Select(data => data.Area)])
                    .ForEachOf(
@@ -385,13 +385,13 @@ public class Atlyss : BuildData
                            .Where(data => data is { Enabled: true, Class: not ClassType.Any })
                            .GroupBy(data => data.Class),
                         (b, g) => b.AddLocations(
-                            $"options.is_class(\"{g.Key}\")".ToLower(),
+                            $"options.is_class(\"{g.Key}\")".ToLowerInvariant(),
                             [.. g.Select(data => new LocationData(data.Area, data.Name))]
                         )
                     );
     }
 
-    public override void Init(WorldFactory factory, WorldInitFactory init_fact)
+    public override void Init(WorldInitFactory init_fact)
     {
         init_fact.AddUseUniversalTrackerPassthrough(yamlNeeded: false)
                  .UseSetRules(method =>

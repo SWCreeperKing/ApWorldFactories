@@ -37,7 +37,7 @@ public class PlacidPlasticDuckSim : BuildData
         );
     }
 
-    public override void Options(WorldFactory _, OptionsFactory options_fact) =>
+    public override void Options(OptionsFactory options_fact) =>
         options_fact
             // .AddOption(
             //      "Allow Unpredictable Ducks",
@@ -54,7 +54,7 @@ public class PlacidPlasticDuckSim : BuildData
             // .AddOption("Virtual Thermae", "Enable the stage from the Virtual Thermae DLC", new Toggle())
            .AddCheckOptions();
 
-    public override void Locations(WorldFactory _, LocationFactory location_fact)
+    public override void Locations(LocationFactory location_fact)
     {
         location_fact.ForEachOf(
             DuckRowData.GroupBy(data => data.DlcType),
@@ -64,7 +64,7 @@ public class PlacidPlasticDuckSim : BuildData
         );
     }
 
-    public override void Items(WorldFactory _, ItemFactory item_fact)
+    public override void Items(ItemFactory item_fact)
     {
         item_fact.AddItem("Progressive Column Unlock", Progression)
                  .AddItem("Progressive Spawn Speed Upgrade", Useful)
@@ -83,7 +83,7 @@ public class PlacidPlasticDuckSim : BuildData
                   );
     }
 
-    public override void Rules(WorldFactory _, RuleFactory rule_fact)
+    public override void Rules(RuleFactory rule_fact)
         => rule_fact.AddCompoundLogicFunction(
                          "col", "has_column", "hasN[\"Progressive Column Unlock\", number - 1]", "number"
                      )
@@ -93,7 +93,7 @@ public class PlacidPlasticDuckSim : BuildData
                          )
                      );
 
-    public override void Regions(WorldFactory _, RegionFactory region_fact)
+    public override void Regions(RegionFactory region_fact)
     {
         region_fact.AddRegions(regions: [.. Columns.Select(i => $"Column {i}")])
                    .ForEachOf(
@@ -109,7 +109,7 @@ public class PlacidPlasticDuckSim : BuildData
                     );
     }
 
-    public override void Init(WorldFactory world_fact, WorldInitFactory init_fact)
+    public override void Init(WorldInitFactory init_fact)
     {
         init_fact
            .UseItemGroups(new Dictionary<string, string> { ["column"] = "[\"Progressive Column Unlock\"]" })

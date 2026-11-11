@@ -188,12 +188,12 @@ public class VampireSurvivors : BuildData
         WriteData("ArcanaEnemyList", EnemyData.Where(data => data.NeedArcana).Select(data => data.EnemyId));
     }
 
-    public override void HostSettings(WorldFactory _, HostSettingsFactory host_fact)
+    public override void HostSettings(HostSettingsFactory host_fact)
     {
         host_fact.AddSetting(new Bool("Allow Unfair Characters", "Allow the use of unfair characters", false));
     }
 
-    public override void Options(WorldFactory _, OptionsFactory options_fact)
+    public override void Options(OptionsFactory options_fact)
     {
         options_fact.AddOption(
                          "Goal Requirement",
@@ -343,7 +343,7 @@ public class VampireSurvivors : BuildData
         }
     }
 
-    public override void Locations(WorldFactory _, LocationFactory location_fact)
+    public override void Locations(LocationFactory location_fact)
     {
         List<string> includedChars = [];
         List<string> includedStages = [];
@@ -430,7 +430,7 @@ public class VampireSurvivors : BuildData
         }
     }
 
-    public override void Items(WorldFactory _, ItemFactory item_fact)
+    public override void Items(ItemFactory item_fact)
     {
         item_fact.AddIndependentVariable(
                       new Variable(
@@ -499,7 +499,7 @@ public class VampireSurvivors : BuildData
                   );
     }
 
-    public override void Rules(WorldFactory _, RuleFactory rule_fact)
+    public override void Rules(RuleFactory rule_fact)
     {
         rule_fact.AddCompoundLogicFunction(
                       "char", "has_character", "has[f\"Character Unlock: {character}\"]",
@@ -544,9 +544,9 @@ public class VampireSurvivors : BuildData
                  .AddLogicRule("Kill Death", "stage[\"Ode to Castlevania\"] and char[\"Richter Belmont\"] and hurry");
     }
 
-    public override void Regions(WorldFactory worldFactory, RegionFactory region_fact)
+    public override void Regions(RegionFactory region_fact)
     {
-        var rule_fact = worldFactory.GetRuleFactory();
+        var rule_fact = region_fact.WorldFactory.GetRuleFactory();
 
         region_fact.AddRegion("Characters")
                    .AddRegion("Enemies", "options.enemysanity")
@@ -625,7 +625,7 @@ public class VampireSurvivors : BuildData
                     );
     }
 
-    public override void Init(WorldFactory worldFactory, WorldInitFactory init_fact)
+    public override void Init(WorldInitFactory init_fact)
     {
         init_fact
            .UseInitFunction(method => method

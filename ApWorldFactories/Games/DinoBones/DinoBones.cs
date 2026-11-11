@@ -28,7 +28,7 @@ public class DinoBones : BuildData
         WriteData("bonecrates", BoneToCrate.Select(kv => $"{kv.Key}|{kv.Value}"));
     }
 
-    public override void Locations(WorldFactory _, LocationFactory location_fact)
+    public override void Locations(LocationFactory location_fact)
     {
         location_fact
            .AddLocations(
@@ -42,7 +42,7 @@ public class DinoBones : BuildData
             );
     }
 
-    public override void Items(WorldFactory _, ItemFactory item_fact)
+    public override void Items(ItemFactory item_fact)
     {
         item_fact
            .AddItemListVariable(
@@ -56,12 +56,12 @@ public class DinoBones : BuildData
             );
     }
 
-    public override void Rules(WorldFactory _, RuleFactory rule_fact)
+    public override void Rules(RuleFactory rule_fact)
     {
         rule_fact.AddCompoundLogicFunction("crate", "has_crate", "has[f\"Crate {num}\"]", "num");
     }
 
-    public override void Regions(WorldFactory _, RegionFactory region_fact)
+    public override void Regions(RegionFactory region_fact)
     {
         region_fact
            .ForEachOf(
@@ -72,7 +72,7 @@ public class DinoBones : BuildData
            .AddLocationsFromList("bones_crate");
     }
 
-    public override void Init(WorldFactory world_fact, WorldInitFactory init_fact)
+    public override void Init(WorldInitFactory init_fact)
     {
         init_fact
            .UseItemGroups(new Dictionary<string, string> {["crates"] = "crates"})

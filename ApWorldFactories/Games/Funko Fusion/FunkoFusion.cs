@@ -51,7 +51,7 @@ public class FunkoFusion : BuildData
                                   .ToDictionary(r => r.Key, r => (string[])[.. r.Select(subR => subR.Region)]);
     }
 
-    public override void Options(WorldFactory _, OptionsFactory options_fact)
+    public override void Options(OptionsFactory options_fact)
     {
         options_fact
            .AddOption("World Unlocks", "Require a World Unlock item to access a world", new DefaultOnToggle())
@@ -69,7 +69,7 @@ public class FunkoFusion : BuildData
             );
     }
 
-    public override void Locations(WorldFactory _, LocationFactory location_fact)
+    public override void Locations(LocationFactory location_fact)
     {
         location_fact.AddLocations("locations", LocationSector.Select(sector => (string[])[sector.Name, sector.Region]))
                      .AddIndependentVariable(
@@ -107,7 +107,7 @@ public class FunkoFusion : BuildData
                       );
     }
 
-    public override void Items(WorldFactory _, ItemFactory item_fact)
+    public override void Items(ItemFactory item_fact)
     {
         item_fact
            .AddItemListVariable(
@@ -158,7 +158,7 @@ public class FunkoFusion : BuildData
             );
     }
 
-    public override void Rules(WorldFactory _, RuleFactory rule_fact)
+    public override void Rules(RuleFactory rule_fact)
     {
         rule_fact
            .AddCompoundLogicFunction("world", "has_world_unlock", "not yaml[\"world_unlocks\"] or has[world]", "world")
@@ -177,7 +177,7 @@ public class FunkoFusion : BuildData
             ).AddLogicRules(LocationSector.ToDictionary(sector => sector.Name, sector => sector.GenRule()));
     }
 
-    public override void Regions(WorldFactory _, RegionFactory region_fact)
+    public override void Regions(RegionFactory region_fact)
     {
         region_fact
            .AddRegions("", [.. RegionData.Select(f => f.Region)])
@@ -193,7 +193,7 @@ public class FunkoFusion : BuildData
             ).AddLocationsFromList("locations");
     }
 
-    public override void Init(WorldFactory _, WorldInitFactory init_fact)
+    public override void Init(WorldInitFactory init_fact)
     {
         init_fact
            .UseInitFunction(method => method

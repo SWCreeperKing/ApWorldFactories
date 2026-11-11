@@ -72,7 +72,7 @@ public class WidgetInc : BuildData
         );
     }
 
-    public override void Options(WorldFactory _, OptionsFactory options_fact)
+    public override void Options(OptionsFactory options_fact)
     {
         options_fact
            .AddOption("Production Multiplier", "Gives a production multiplier", new Range(4, 1, 10))
@@ -84,7 +84,7 @@ public class WidgetInc : BuildData
            .AddCheckOptions();
     }
 
-    public override void Locations(WorldFactory _, LocationFactory location_fact)
+    public override void Locations(LocationFactory location_fact)
     {
         location_fact.AddLocations(
             "tech_tree",
@@ -92,7 +92,7 @@ public class WidgetInc : BuildData
         );
     }
 
-    public override void Items(WorldFactory _, ItemFactory item_fact)
+    public override void Items(ItemFactory item_fact)
     {
         item_fact
            .AddItem("Motivational Poster", ItemFactory.ItemClassification.Filler)
@@ -133,7 +133,7 @@ public class WidgetInc : BuildData
             );
     }
 
-    public override void Rules(WorldFactory _, RuleFactory rule_fact)
+    public override void Rules(RuleFactory rule_fact)
     {
         rule_fact
            .AddCompoundLogicFunction("tier", "has_tier", "hasN['Progressive Tier', tier]", "tier")
@@ -141,7 +141,7 @@ public class WidgetInc : BuildData
            .ForEachOf(
                 CraftlessResources, (b, s) => b.AddCompoundLogicFunction(
                     s.Replace(" ", ""),
-                    s.ToLower().Replace(" ", "_"), $"frame['{ResourceBuildingRequirement[s]}']"
+                    s.ToLowerInvariant().Replace(" ", "_"), $"frame['{ResourceBuildingRequirement[s]}']"
                 )
             ).ForEachOf(
                 CraftingRecipes,
@@ -163,7 +163,7 @@ public class WidgetInc : BuildData
             );
     }
 
-    public override void Regions(WorldFactory _, RegionFactory region_fact)
+    public override void Regions(RegionFactory region_fact)
     {
         region_fact.ForEachOf(
             Enumerable.Range(0, 12), (b, i) =>
@@ -180,7 +180,7 @@ public class WidgetInc : BuildData
         ).AddLocationsFromList("tech_tree");
     }
 
-    public override void Init(WorldFactory world_fact, WorldInitFactory init_fact)
+    public override void Init(WorldInitFactory init_fact)
     {
         init_fact
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)

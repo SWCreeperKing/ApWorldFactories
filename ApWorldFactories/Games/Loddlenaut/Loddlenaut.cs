@@ -59,7 +59,7 @@ public class Loddlenaut : BuildData
         WriteData("EvolutionIdMap", EvolutionRowData.Select(e => $"{e.Name}|{e.LoddleId}"));
     }
 
-    public override void Options(WorldFactory _, OptionsFactory options_fact)
+    public override void Options(OptionsFactory options_fact)
     {
         options_fact
            .AddOption("Evolutionsanity", "Loddle Evolutions are checks", new Toggle())
@@ -67,7 +67,7 @@ public class Loddlenaut : BuildData
            .AddCheckOptions();
     }
 
-    public override void Locations(WorldFactory _, LocationFactory location_fact)
+    public override void Locations(LocationFactory location_fact)
     {
         int[] percentArr = [25, 50, 75, 100];
         location_fact
@@ -96,7 +96,7 @@ public class Loddlenaut : BuildData
            .AddLocations("recipes", CookingRowData.Select(data => (string[])[$"Cook: {data.Food}", "Cooking"]));
     }
 
-    public override void Items(WorldFactory _, ItemFactory item_fact)
+    public override void Items(ItemFactory item_fact)
     {
         item_fact.ForEachOf(
                       ItemsRowData.GroupBy(data => data.Classification),
@@ -118,7 +118,7 @@ public class Loddlenaut : BuildData
                   );
     }
 
-    public override void Rules(WorldFactory _, RuleFactory rule_fact)
+    public override void Rules(RuleFactory rule_fact)
     {
         int[] percentArr = [25, 50, 75, 100];
         rule_fact.AddCompoundLogicFunction("depth", "has_depth", "has[\"Depth Resistance Module\"]")
@@ -132,7 +132,7 @@ public class Loddlenaut : BuildData
                  .AddLogicRules(EvolutionRowData.ToDictionary(data => $"Evolve: {data.Name}", data => data.GenRule()));
     }
 
-    public override void Regions(WorldFactory _, RegionFactory region_fact)
+    public override void Regions(RegionFactory region_fact)
     {
         region_fact
            .AddRegions(regions: ["Upgrades", "Cooking", .. RegionRowData.Select(data => data.Region)])
@@ -196,7 +196,7 @@ public class Loddlenaut : BuildData
         }
     }
 
-    public override void Init(WorldFactory _, WorldInitFactory init_fact)
+    public override void Init(WorldInitFactory init_fact)
     {
         init_fact
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)

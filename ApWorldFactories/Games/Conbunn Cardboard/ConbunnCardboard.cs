@@ -65,14 +65,14 @@ public class ConbunnCardboard : BuildData
         );
     }
 
-    public override void Options(WorldFactory _, OptionsFactory options_fact)
+    public override void Options(OptionsFactory options_fact)
     {
         options_fact
            .AddOption("CDs Required To Goal", "The amount of CDs required to goal", new Range(25, 5, 40))
            .AddCheckOptions(method => method.CreateMinimalCatch());
     }
 
-    public override void Locations(WorldFactory _, LocationFactory location_fact)
+    public override void Locations(LocationFactory location_fact)
     {
         location_fact
            .AddLocations("npcs", [["Talk to the Museum Book", RegionMap["Cardbun Museum"]]])
@@ -89,7 +89,7 @@ public class ConbunnCardboard : BuildData
            .AddLocations("skins", SkinData.Select(data => (string[])[data.Name, RegionMap[data.Region]]));
     }
 
-    public override void Items(WorldFactory _, ItemFactory item_fact)
+    public override void Items(ItemFactory item_fact)
     {
         item_fact
            .AddItemListVariable("unlocks", Progression, list: [.. Unlocks.Values])
@@ -103,7 +103,7 @@ public class ConbunnCardboard : BuildData
             );
     }
 
-    public override void Rules(WorldFactory _, RuleFactory rule_fact)
+    public override void Rules(RuleFactory rule_fact)
     {
         rule_fact
            .AddCompoundLogicFunction("unlock", "has_unlock", "has[f\"Transition Unlock: {transition}\"]", "transition")
@@ -115,7 +115,7 @@ public class ConbunnCardboard : BuildData
            .AddLogicRules(SkinData.ToDictionary(data => data.Name, data => data.GenRule(RegionMap)));
     }
 
-    public override void Regions(WorldFactory _, RegionFactory region_fact)
+    public override void Regions(RegionFactory region_fact)
     {
         region_fact.AddRegions(
                         "", [.. RegionData.Select(data => RegionMap.GetValueOrDefault(data.Region, data.Region))]
@@ -136,7 +136,7 @@ public class ConbunnCardboard : BuildData
                    .AddEventLocationsFromList("coins", item: "\"Real Coin\"");
     }
 
-    public override void Init(WorldFactory _, WorldInitFactory init_fact)
+    public override void Init(WorldInitFactory init_fact)
     {
         init_fact
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)

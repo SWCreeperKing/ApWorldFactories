@@ -42,12 +42,12 @@ public class WereCleaner : BuildData
         WriteData("itemIds", ItemData.Select(data => $"{data.Collectible}:{data.CollectibleId}"));
     }
 
-    public override void Options(WorldFactory _, OptionsFactory options_fact) =>
+    public override void Options(OptionsFactory options_fact) =>
         options_fact
            .AddOption("Kill Sanity", "Killing each unique npc sends a check", new DefaultOnToggle())
            .AddCheckOptions();
 
-    public override void Locations(WorldFactory _, LocationFactory location_fact)
+    public override void Locations(LocationFactory location_fact)
     {
         location_fact
            .AddLocations(
@@ -59,7 +59,7 @@ public class WereCleaner : BuildData
            .AddLocations("levels", Days.Select(s => (string[])[s, "Levels"]));
     }
 
-    public override void Items(WorldFactory _, ItemFactory item_fact)
+    public override void Items(ItemFactory item_fact)
     {
         item_fact
            .AddItems(ItemFactory.ItemClassification.Progression, items: Abilities)
@@ -68,7 +68,7 @@ public class WereCleaner : BuildData
            .AddCreateItems(method => method.CreateItemsFromClassificationList().FillRemainingWithItem("Floor Penny"));
     }
 
-    public override void Rules(WorldFactory _, RuleFactory rule_fact)
+    public override void Rules(RuleFactory rule_fact)
     {
         rule_fact
            .AddCompoundLogicFunction("level", "has_level", "has[f'Unlock {level} Night']", "level")
@@ -97,7 +97,7 @@ public class WereCleaner : BuildData
             );
     }
 
-    public override void Regions(WorldFactory _, RegionFactory region_fact)
+    public override void Regions(RegionFactory region_fact)
     {
         region_fact
            .AddRegions("", "Levels", "Collectibles")
@@ -112,7 +112,7 @@ public class WereCleaner : BuildData
            .AddEventLocationsFromList("levels", "f\"Beat: {location[0]}\"", "\"Nights Survived\"");
     }
 
-    public override void Init(WorldFactory _, WorldInitFactory init_fact)
+    public override void Init(WorldInitFactory init_fact)
     {
         init_fact
            .UseInitFunction(method => method.AddCode(new Variable("self.starting_stage", "\"\"")))

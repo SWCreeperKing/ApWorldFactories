@@ -172,7 +172,7 @@ public class SlimeRancher : BuildData
         SlimeRancherLogicHelper.ForCompiler = true;
     }
 
-    public override void Options(WorldFactory _, OptionsFactory options_fact)
+    public override void Options(OptionsFactory options_fact)
     {
         options_fact
            .AddOption(
@@ -274,7 +274,7 @@ public class SlimeRancher : BuildData
             );
     }
 
-    public override void Locations(WorldFactory _, LocationFactory location_fact)
+    public override void Locations(LocationFactory location_fact)
     {
         location_fact
            .AddLocations("upgrades", Upgrades.Select(line => (string[])[line.Name, line.Area]))
@@ -302,7 +302,7 @@ public class SlimeRancher : BuildData
             ;
     }
 
-    public override void Items(WorldFactory _, ItemFactory item_fact)
+    public override void Items(ItemFactory item_fact)
     {
         item_fact
            .AddItemListVariable(
@@ -361,7 +361,7 @@ public class SlimeRancher : BuildData
             );
     }
 
-    public override void Rules(WorldFactory _, RuleFactory rule_fact)
+    public override void Rules(RuleFactory rule_fact)
     {
         rule_fact
            .AddCompoundLogicFunction("7zee", "has_7zeeLevel", "has[f\"7Zee Level {level}\"]", "level")
@@ -413,7 +413,7 @@ public class SlimeRancher : BuildData
            .AddLogicRules(GadgetData.ToDictionary(g => $"Craft: {g.Gadget}", g => g.GetCraftLogic()));
     }
 
-    public override void Regions(WorldFactory _, RegionFactory region_fact)
+    public override void Regions(RegionFactory region_fact)
     {
         var noConditionZones = RegionSector
                               .Where(sector => sector.HasNoOption)
@@ -543,7 +543,7 @@ public class SlimeRancher : BuildData
                    .AddLocation(new LocationData("Menu", "Sell a Gold Plort"), "options.plortsanity > 1");
     }
 
-    public override void Init(WorldFactory world_fact, WorldInitFactory init_fact)
+    public override void Init(WorldInitFactory init_fact)
     {
         init_fact
            .UseItemGroups(

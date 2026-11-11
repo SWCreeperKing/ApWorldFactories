@@ -124,19 +124,19 @@ public abstract class BuildData
         RunShenanigans();
 
         PrintProgress(cur, i++, stepCount, "Generating Options");
-        Options(builder, options_fact);
+        Options(options_fact);
         PrintProgress(cur, i++, stepCount, "Generating Host Settings");
-        HostSettings(builder, host_fact);
+        HostSettings(host_fact);
         PrintProgress(cur, i++, stepCount, "Generating Locations    ");
-        Locations(builder, location_fact);
+        Locations(location_fact);
         PrintProgress(cur, i++, stepCount, "Generating Items    ");
-        Items(builder, item_fact);
+        Items(item_fact);
         PrintProgress(cur, i++, stepCount, "Generating Rules");
-        Rules(builder, rule_fact);
+        Rules(rule_fact);
         PrintProgress(cur, i++, stepCount, "Generating Regions");
-        Regions(builder, region_fact);
+        Regions(region_fact);
         PrintProgress(cur, i++, stepCount, "Generating Init   ");
-        Init(builder, init_fact);
+        Init(init_fact);
 
         PrintProgress(cur, i++, stepCount, "Outputting Options");
         GenerateOptions(options_fact);
@@ -221,15 +221,15 @@ public abstract class BuildData
 
     public abstract void RunShenanigans();
 
-    public virtual void Options(WorldFactory _, OptionsFactory options_fact) => options_fact.AddCheckOptions();
+    public virtual void Options(OptionsFactory options_fact) => options_fact.AddCheckOptions();
 
-    public virtual void HostSettings(WorldFactory _, HostSettingsFactory host_fact) { }
+    public virtual void HostSettings(HostSettingsFactory host_fact) { }
 
-    public abstract void Locations(WorldFactory _, LocationFactory location_fact);
-    public abstract void Items(WorldFactory _, ItemFactory item_fact);
-    public abstract void Rules(WorldFactory _, RuleFactory rule_fact);
-    public abstract void Regions(WorldFactory _, RegionFactory region_fact);
-    public abstract void Init(WorldFactory _, WorldInitFactory init_fact);
+    public abstract void Locations(LocationFactory location_fact);
+    public abstract void Items(ItemFactory item_fact);
+    public abstract void Rules(RuleFactory rule_fact);
+    public abstract void Regions(RegionFactory region_fact);
+    public abstract void Init(WorldInitFactory init_fact);
 
     public virtual void GenerateOptions(OptionsFactory optionsFactory) => optionsFactory.GenerateOptionFile();
 

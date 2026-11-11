@@ -85,7 +85,7 @@ public class PlagueInc : BuildData
         WriteData("techs", TechData.Select(data => data.Name));
     }
 
-    public override void Options(WorldFactory _, OptionsFactory options_fact)
+    public override void Options(OptionsFactory options_fact)
     {
         options_fact.ForEachOf(
             Diseases.Keys,
@@ -137,7 +137,7 @@ public class PlagueInc : BuildData
         );
     }
 
-    public override void Locations(WorldFactory _, LocationFactory location_fact)
+    public override void Locations(LocationFactory location_fact)
     {
         location_fact.ForEachOf(
             Diseases.Keys,
@@ -169,7 +169,7 @@ public class PlagueInc : BuildData
         );
     }
 
-    public override void Items(WorldFactory _, ItemFactory item_fact)
+    public override void Items(ItemFactory item_fact)
     {
         item_fact
            .AddItemListVariable(
@@ -215,7 +215,7 @@ public class PlagueInc : BuildData
             );
     }
 
-    public override void Rules(WorldFactory _, RuleFactory rule_fact)
+    public override void Rules(RuleFactory rule_fact)
     {
         rule_fact
            .AddLogicFunction(
@@ -232,7 +232,7 @@ public class PlagueInc : BuildData
             );
     }
 
-    public override void Regions(WorldFactory _, RegionFactory region_fact)
+    public override void Regions(RegionFactory region_fact)
     {
         region_fact.ForEachOf(
             Diseases.Keys,
@@ -254,7 +254,7 @@ public class PlagueInc : BuildData
         );
     }
 
-    public override void Init(WorldFactory _, WorldInitFactory init_fact)
+    public override void Init(WorldInitFactory init_fact)
     {
         init_fact
            .UseInitFunction(method => method.AddCode(new Variable("self.starting_diff", "\"\""))

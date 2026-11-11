@@ -34,7 +34,7 @@ public class Poco : BuildData
         WriteData("blockers", ItemBlockerData.Select(data => $"{data.Item}:{string.Join(',', data.Blockers)}"));
     }
 
-    public override void Locations(WorldFactory _, LocationFactory location_fact)
+    public override void Locations(LocationFactory location_fact)
     {
         location_fact.AddLocations("locations", LocationData.Select(data => (string[])[data.Location, data.Area]))
                      .AddLocations(
@@ -43,7 +43,7 @@ public class Poco : BuildData
                      .AddLocations("note", [["Read John's Note", "Tunnels Cave"]]);
     }
 
-    public override void Items(WorldFactory _, ItemFactory item_fact)
+    public override void Items(ItemFactory item_fact)
     {
         item_fact.AddItemListVariable(
                       "items", ItemFactory.ItemClassification.Progression,
@@ -53,7 +53,7 @@ public class Poco : BuildData
                  .AddCreateItems(method => method.CreateItemsFromList("items").FillRemainingWithItem("Clown Nose"));
     }
 
-    public override void Rules(WorldFactory _, RuleFactory rule_fact)
+    public override void Rules(RuleFactory rule_fact)
     {
         rule_fact
            .AddCompoundLogicFunction("quest", "done_quest", "has[f\"{quest}'s Quest Completion\"]", "quest")
@@ -65,7 +65,7 @@ public class Poco : BuildData
            .AddLogicRules(AchievementRowData.ToDictionary(data => data.Achievement, data => data.GenRule()));
     }
 
-    public override void Regions(WorldFactory _, RegionFactory region_fact)
+    public override void Regions(RegionFactory region_fact)
     {
         region_fact.AddRegions("", [.. RegionData.Select(data => data.Region).Distinct()])
                    .ForEachOf(
@@ -83,7 +83,7 @@ public class Poco : BuildData
                     );
     }
 
-    public override void Init(WorldFactory worldFactory, WorldInitFactory init_fact)
+    public override void Init(WorldInitFactory init_fact)
     {
         init_fact
            .UseLocationGroups(

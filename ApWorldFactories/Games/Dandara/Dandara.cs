@@ -92,13 +92,13 @@ public class Dandara : BuildData
         );
     }
 
-    public override void Options(WorldFactory _, OptionsFactory options_fact)
+    public override void Options(OptionsFactory options_fact)
     {
         options_fact.AddOption("Goal Type", "Which Boss to defeat as goal", new Choice(0, "final_boss", "true_ending"))
                     .AddCheckOptions();
     }
 
-    public override void Locations(WorldFactory _, LocationFactory location_fact)
+    public override void Locations(LocationFactory location_fact)
     {
         location_fact
            .AddLocations(
@@ -118,7 +118,7 @@ public class Dandara : BuildData
         // ).ForEachOf(ShopRowData, (b, data) => b.AddLocations(data.GetListName, data.GetLocations));
     }
 
-    public override void Items(WorldFactory _, ItemFactory item_fact)
+    public override void Items(ItemFactory item_fact)
     {
         var itemGroups = ItemsRowData.GroupBy(data => data.ItemType).ToArray();
         item_fact.ForEachOf(
@@ -143,7 +143,7 @@ public class Dandara : BuildData
                   );
     }
 
-    public override void Rules(WorldFactory _, RuleFactory rule_fact)
+    public override void Rules(RuleFactory rule_fact)
     {
         rule_fact
            .AddLogicFunction(
@@ -183,7 +183,7 @@ public class Dandara : BuildData
             );
     }
 
-    public override void Regions(WorldFactory _, RegionFactory region_fact)
+    public override void Regions(RegionFactory region_fact)
     {
         var regionNames = RegionRowData.Select(data => data.Region).ToArray();
         region_fact.AddRegions("", [.. regionNames, .. ShopRowData.Select(data => data.Upgrade)])
@@ -207,7 +207,7 @@ public class Dandara : BuildData
                     );
     }
 
-    public override void Init(WorldFactory world_fact, WorldInitFactory init_fact)
+    public override void Init(WorldInitFactory init_fact)
     {
         init_fact
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
