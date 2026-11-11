@@ -281,21 +281,5 @@ public class PlagueInc : BuildData
            .UseGenerateOutput(method => method.PumlGenCode());
     }
 
-    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
-        Func<string, string> getRule,
-        string[][] locationDoubleArrays)
-    {
-        return new GraphBuilder(GameName)
-              .ForEachOf(
-                   Diseases.Keys,
-                   (b, disease) => b.AddConnection("Menu", disease, $"has[\"{disease}\"]").ForEachOf(
-                       DifficultyVictory.Where(t => t.disease == disease),
-                       t => b.AddLocation(
-                           t.disease, new GraphLocation($"Event: {t.name}", getRule(t.name), true, "Victory")
-                       )
-                   )
-               )
-              .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
-              .GenString();
-    }
+    public override GraphBuilder GenerateGraphViz(WorldFactory worldFactory, GraphBuilder builder) => builder;
 }

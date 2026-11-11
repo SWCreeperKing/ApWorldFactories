@@ -215,53 +215,11 @@ public class Loddlenaut : BuildData
            .UseGenerateOutput(method => method.PumlGenCode());
     }
 
-    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
-        Func<string, string> getRule, string[][] locationDoubleArrays)
-    {
-        return new GraphBuilder(GameName)
-              .AddRegions(regions: ["Upgrades", "Evolutions"])
-              .AddRegions(regions: [.. RegionRowData.Select(data => data.Region)])
-              .ForEachOf(
-                   RegionConnectionsRowData, (b, data) =>
-                   {
-                       AddConnection(b, data.A, data.B);
-                       AddConnection(b, data.B, data.A);
-                   }
-               )
-              .AddConnection("Menu", "Upgrades")
-              .AddConnection("Menu", "Cooking", "has[\"Cooking Module\"]")
-              .AddConnection(
-                   "Menu", "Evolutions",
-                   $"any[[{string.Join(", ", RegionRowData.Where(data => data.IsBiome).Select(data => $"\"{data.Region}\""))}]]"
-               )
-              .AddConnection("Menu", "Home Cave")
-              .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
-              .ForEachOf(
-                   RegionRowData,
-                   (b, data) => b.ForEachOf(
-                       data.Plants, (_, plant) => b.AddEventLocation(data.Region, getRule, $"Pick: {plant}", "", plant)
-                   )
-               )
-              .ForEachOf(
-                   CookingRowData,
-                   (b, data) => b.AddEventLocation(
-                       "Cooking", getRule, $"Event: Cook: {data.Food}", $"Cook: {data.Food}", data.Food
-                   )
-               )
-              .GenString();
-
-        void AddConnection(GraphBuilder b, int regionA, int regionB)
-        {
-            List<string> rules = [];
-
-            if (RegionIdRequiresDepth[regionB]) rules.Add("depth");
-            if (RegionsWithUnlock.Contains(RegionIdMap[regionB]) && RegionIdMap[regionA] is not "Home Cave")
-                rules.Add($"has[\"{RegionIdMap[regionB]}\"]");
-
-            if (RegionRegionDataMap[regionB].RegionRequirements.Length != 0)
-                rules.AddRange(RegionRegionDataMap[regionB].RegionRequirements.Select(r => $"has[\"{r}\"]"));
-
-            b.AddConnection(RegionIdMap[regionA], RegionIdMap[regionB], string.Join(" and ", rules));
-        }
-    }
+    public override GraphBuilder GenerateGraphViz(WorldFactory worldFactory, GraphBuilder builder) => builder
+       .ForEachOf(
+            CookingRowData,
+            (b, data) => b.AddEventLocation(
+                "Cooking", builder.GetRule, $"Event: Cook: {data.Food}", $"Cook: {data.Food}", data.Food
+            )
+        );
 }

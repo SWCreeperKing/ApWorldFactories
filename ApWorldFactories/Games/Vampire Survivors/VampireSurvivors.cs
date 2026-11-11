@@ -688,22 +688,12 @@ public class VampireSurvivors : BuildData
            .UseGenerateOutput(method => method.PumlGenCode());
     }
 
-    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
-        Func<string, string> getRule,
-        string[][] locationDoubleArrays)
-    {
-        return new GraphBuilder(GameName)
-              .ForEachOf(StageNameMap, (b, kv) => b.AddConnection("Menu", kv.Value, $"stage[\"{kv.Value}\"]"))
-              .AddConnection("Menu", "Characters")
-              .AddConnection("Menu", "Enemies")
-              .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
-              .ForEachOf(
-                   StageNameMap,
-                   (b, kv) => b.AddEventLocation(
-                       kv.Value, getRule, $"Event: [{kv.Value} Beaten]", $"{kv.Value} Beaten",
-                       "Beat a Stage"
-                   )
-               )
-              .GenString();
-    }
+    public override GraphBuilder GenerateGraphViz(WorldFactory worldFactory, GraphBuilder builder) => builder
+       .ForEachOf(StageNameMap, (b, kv) => b.AddConnection("Menu", kv.Value, $"stage[\"{kv.Value}\"]"))
+       .ForEachOf(
+            StageNameMap,
+            kv => builder.AddEventLocation(
+                kv.Value, builder.GetRule, $"Event: [{kv.Value} Beaten]", $"{kv.Value} Beaten", "Beat a Stage"
+            )
+        );
 }

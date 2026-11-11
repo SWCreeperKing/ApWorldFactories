@@ -124,20 +124,10 @@ public class WereCleaner : BuildData
            .UseGenerateOutput(method => method.PumlGenCode());
     }
 
-    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
-        Func<string, string> getRule, string[][] locationDoubleArrays)
-    {
-        return new GraphBuilder(GameName)
-              .AddRegions("Levels", "Collectibles", "Killsanity")
-              .AddConnection("Menu", "Levels")
-              .AddConnection("Menu", "Collectibles")
-              .AddConnection("Menu", "Killsanity")
-              .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
-              .ForEachOf(
-                   locationDoubleArrays.Where(arr => arr[1] is "Levels"),
-                   (b, strings) => b.AddEventLocation(
-                       strings[1], getRule, $"Beat: {strings[0]}", strings[0], "Nights Survived"
-                   )
-               ).GenString();
-    }
+    public override GraphBuilder GenerateGraphViz(WorldFactory worldFactory, GraphBuilder builder) => builder.ForEachOf(
+        builder.LocationDoubleArray.Where(arr => arr[1] is "Levels"),
+        strings => builder.AddEventLocation(
+            strings[1], builder.GetRule, $"Beat: {strings[0]}", strings[0], "Nights Survived"
+        )
+    );
 }

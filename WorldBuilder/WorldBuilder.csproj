@@ -13,7 +13,7 @@
         <DebugSymbols>true</DebugSymbols>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-        <Version>0.2.2</Version>
+        <Version>0.2.3</Version>
         <Title>SW_CreeperKing's Archipelago World Factory Utility Template</Title>
         <Authors>SW_CreeperKing</Authors>
         <Description>A Template Utility for reading in a CSV and creating ApWorlds</Description>
@@ -23,7 +23,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="CreepyUtil.Archipelago.WorldFactory" Version="0.3.1.6" />
+      <PackageReference Include="CreepyUtil.Archipelago.WorldFactory" Version="0.3.1.8" />
       <PackageReference Include="CreepyUtil.ClrCnsl" Version="0.2.0" />
       <PackageReference Include="CreepyUtil.ClrCnsl.Prompts" Version="0.2.0" />
       <PackageReference Include="CreepyUtil.Pos" Version="0.2.0" />

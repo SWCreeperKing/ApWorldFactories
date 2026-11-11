@@ -102,7 +102,8 @@ public abstract class BuildData
                      .SetOnCompilerError((e, s) => ClrCnsl.WriteLine($"[#red]Error: [{s}]\n{e}"))
                      .SetOutputDirectory(ApWorldPath);
 
-        if (LocalFillSettings.Enabled) builder.EnableLocalFill(LocalFillSettings.Min, LocalFillSettings.Default, LocalFillSettings.Max);
+        if (LocalFillSettings.Enabled)
+            builder.EnableLocalFill(LocalFillSettings.Min, LocalFillSettings.Default, LocalFillSettings.Max);
 
         if (WriteOutputDirectory is not "" && !Directory.Exists(WriteOutputDirectory))
             Directory.CreateDirectory(WriteOutputDirectory);
@@ -163,27 +164,40 @@ public abstract class BuildData
         PrintProgress(cur, i++, stepCount, "World Built!    ");
 
         ClrCnsl.WriteLine("Checking for Graph Gen");
-
         var associations = rule_fact.GetRuleMapAssociations();
         Func<string, string> getRule = s => associations.GetValueOrDefault(s, "");
-        var doubleArr = location_fact.ReadLocationsDoubleArray().SelectMany(kv => kv.Value.Select(arr => arr).ToArray())
-                                     .ToArray();
+        string[][] locationDoubleArray =
+        [
+            .. location_fact.ReadLocationsDoubleArray().SelectMany(kv => kv.Value.ToArray())
+        ];
 
-        var graph = GenerateGraphViz(builder, associations, getRule, doubleArr);
+        var graphBuilder =
+            new GraphBuilder(GameName, locationDoubleArray, getRule)
+               .AddRegions(region_fact.StoredRegions)
+               .ForEachOf(region_fact.StoredRegionData, (b, d) => b.AddConnection(d.RawFrom, d.RawTo, d.Rule))
+               .AddLocationsFromDoubleArray(locationDoubleArray, getRule)
+               .ForEachOf(region_fact.StoredLocationData, (b, d) => b.AddLocation(d.RawRegion, getRule, d.RawLocationName))
+               .ForEachOf(
+                    region_fact.StoredEventLocationData,
+                    (b, d) => b.AddEventLocation(d.RawRegion, getRule, d.RawLocationName, d.RawInheritLocationRule, d.RawItemName)
+                );
 
-        if (graph is "")
+        var graph = GenerateGraphViz(builder, graphBuilder);
+
+        if (graph is null)
         {
             ClrCnsl.WriteLine("No Graph Detected :(");
             return;
         }
 
+        var graphData = graph.GenString();
         ClrCnsl.WriteLine("Writing Graph Data");
         if (!Directory.Exists($"{RawOutputPath}/Raw Graph Data"))
             Directory.CreateDirectory($"{RawOutputPath}/Raw Graph Data");
         if (!Directory.Exists($"{RawOutputPath}/Graph Output"))
             Directory.CreateDirectory($"{RawOutputPath}/Graph Output");
 
-        File.WriteAllText($"{RawOutputPath}/Raw Graph Data/{GameName}.dot", graph);
+        File.WriteAllText($"{RawOutputPath}/Raw Graph Data/{GameName}.dot", graphData);
 
         ClrCnsl.WriteLine("Generating Graph");
 
@@ -253,9 +267,7 @@ public abstract class BuildData
 
     public virtual void ProcessItemList(string[] itemList) { }
 
-    public virtual string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
-        Func<string, string> getRule,
-        string[][] locationDoubleArrays) => "";
+    public virtual GraphBuilder? GenerateGraphViz(WorldFactory worldFactory, GraphBuilder builder) => null;
 }
 
 public class DataCreator<T> : CsvTableRowCreator<T>

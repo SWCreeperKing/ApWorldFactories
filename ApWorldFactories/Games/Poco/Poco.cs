@@ -112,18 +112,5 @@ public class Poco : BuildData
            .UseGenerateOutput(method => method.PumlGenCode());
     }
 
-    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
-        Func<string, string> getRule,
-        string[][] locationDoubleArrays)
-    {
-        return new GraphBuilder(GameName)
-              .AddRegions([.. RegionData.Select(data => data.Region).Distinct()])
-              .ForEachOf(RegionData, (b, data) => b.AddConnection(data.ConnectsFrom, data.Region, data.GenRule()))
-              .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
-              .ForEachOf(
-                   NpcQuestData,
-                   (b, data) => b.AddEventLocation(data.Area, getRule, data.QuestName, data.QuestName, data.QuestItem)
-               )
-              .GenString();
-    }
+    public override GraphBuilder GenerateGraphViz(WorldFactory worldFactory, GraphBuilder builder) => builder;
 }

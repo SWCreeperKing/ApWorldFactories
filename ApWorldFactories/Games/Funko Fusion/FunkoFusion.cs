@@ -232,15 +232,6 @@ public class FunkoFusion : BuildData
            .UseGenerateOutput(method => method.PumlGenCode());
     }
 
-    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
-        Func<string, string> getRule, string[][] locationDoubleArrays)
-        => new GraphBuilder(GameName)
-          .ForEachOf(
-               RegionData,
-               (b, sector) => b.AddConnection(
-                   sector.FromRegion is "" ? "Menu" : sector.FromRegion, sector.Region,
-                   sector.Region is not "Hub" ? $"{(sector.IsSubArea ? "level" : "world")}[\"{sector.Region}\"]" : ""
-               )
-           )
-          .AddLocationsFromDoubleArray(locationDoubleArrays, getRule).GenString("LR");
+    public override GraphBuilder GenerateGraphViz(WorldFactory worldFactory, GraphBuilder builder)
+        => builder.SetRankDir("LR");
 }

@@ -588,47 +588,5 @@ public class SlimeRancher : BuildData
            .UseGenerateOutput(method => method.PumlGenCode());
     }
 
-    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
-        Func<string, string> getRule,
-        string[][] locationDoubleArrays)
-    {
-        return new GraphBuilder(GameName)
-              .ForEachOf(RegionSector, (b, sector) => b.AddConnection(sector.From, sector.To, sector.GenRule()))
-              .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
-              .ForEachOf(
-                   InteractableSector
-                      .Where(inter => inter.IsNote),
-                   (b, inter) => b.AddEventLocation(
-                       inter.Region, getRule, $"Read: {inter.VagueName}", inter.VagueName,
-                       "Note Read"
-                   )
-               )
-              .ForEachOf(
-                   CorporateLocationData,
-                   (b, line) => b.AddEventLocation(
-                       line.Area, getRule, $"Bought Level: {line.Level}", "",
-                       $"7Zee Level {line.Level}"
-                   )
-               )
-              .ForEachOf(
-                   NormalPlortPlacement,
-                   (b, kv) => b.ForEachOf(
-                       kv.Value, (_, slime) => b.AddEventLocation(kv.Key, getRule, slime, "", $"{slime} Plort")
-                   )
-               )
-              .ForEachOf(
-                   MarketPlortPlacement,
-                   (b, kv) => b.ForEachOf(
-                       kv.Value, (_, slime) => b.AddEventLocation(kv.Key, getRule, $"ML_{slime}", "", $"{slime} Plort")
-                   )
-               )
-              .ForEachOf(PlortTypes, (b, plort) => b.AddLocation("Menu", getRule, $"Sell a {plort}"))
-              .ForEachOf(
-                   MaterialData,
-                   (b, mat) => b.ForEachOf(
-                       mat.Locations, (_, l) => b.AddEventLocation(l, getRule, mat.Material, mat.Material, mat.Material)
-                   )
-               )
-              .GenString();
-    }
+    public override GraphBuilder GenerateGraphViz(WorldFactory worldFactory, GraphBuilder builder) => builder;
 }

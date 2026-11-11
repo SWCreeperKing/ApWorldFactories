@@ -221,26 +221,7 @@ public class Dandara : BuildData
            .UseGenerateOutput(method => method.PumlGenCode());
     }
 
-    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
-        Func<string, string> getRule,
-        string[][] locationDoubleArrays)
-    {
-        var regionNames = RegionRowData.Select(data => data.Region).ToArray();
-        return new GraphBuilder(GameName)
-              .AddRegions(regionNames)
-              .ForEachOf(
-                   ConnectionsData, (b, sector) =>
-                       b.AddConnection(sector.From, sector.To, sector.GenRule())
-               )
-              .ForEachOf(ShopRowData, (b, data) => b.AddConnection("Menu", data.Upgrade, data.GetRule))
-              .ForEachOf(
-                   EventItemsData,
-                   (b, data) => b.AddEventLocation(
-                       RoomIdToRegion[data.RoomId], getRule, data.EventName, data.EventName, data.EventItem
-                   )
-               )
-              .AddLocationsFromDoubleArray(locationDoubleArrays, getRule).GenString();
-    }
+    public override GraphBuilder GenerateGraphViz(WorldFactory worldFactory, GraphBuilder builder) => builder;
 
     public override void GenerateJson(WorldFactory worldFactory) => worldFactory.GenerateArchipelagoJson(
         ArchipelagoVersion, WorldVersion, "Smores9000", "SW_CreeperKing"

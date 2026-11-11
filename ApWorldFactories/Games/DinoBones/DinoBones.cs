@@ -38,7 +38,11 @@ public class DinoBones : BuildData
            .AddLocations(
                 "bones_crate",
                 Labels.Where(l => BoneToCrate.ContainsKey(l.Name))
-                      .Select(b => (string[])[$"{b.Name} (Crate {BoneToCrate[b.Name]})", $"Crate {BoneToCrate[b.Name]}",])
+                      .Select(b => (string[])
+                           [
+                               $"{b.Name} (Crate {BoneToCrate[b.Name]})", $"Crate {BoneToCrate[b.Name]}",
+                           ]
+                       )
             );
     }
 
@@ -75,7 +79,7 @@ public class DinoBones : BuildData
     public override void Init(WorldInitFactory init_fact)
     {
         init_fact
-           .UseItemGroups(new Dictionary<string, string> {["crates"] = "crates"})
+           .UseItemGroups(new Dictionary<string, string> { ["crates"] = "crates" })
            .AddUseUniversalTrackerPassthrough(yamlNeeded: false)
            .UseSetRules(method => method.CreateGoalCompiledCondition(
                     string.Join(" and ", CrateNumbers.Select(i => $"crate[{i}]"))
@@ -91,14 +95,5 @@ public class DinoBones : BuildData
            .UseGenerateOutput(method => method.PumlGenCode());
     }
 
-    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
-        Func<string, string> getRule,
-        string[][] locationDoubleArrays)
-        => new GraphBuilder(GameName)
-          .ForEachOf(
-               CrateNumbers,
-               (b, i) => b.AddConnection("Menu", $"Crate {i}", $"crate[{i}]")
-           )
-          .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
-          .GenString();
+    public override GraphBuilder GenerateGraphViz(WorldFactory worldFactory, GraphBuilder builder) => builder;
 }

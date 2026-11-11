@@ -121,15 +121,5 @@ public class PlacidPlasticDuckSim : BuildData
            .UseGenerateOutput(method => method.PumlGenCode());
     }
 
-    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
-        Func<string, string> getRule,
-        string[][] locationDoubleArrays)
-    {
-        return new GraphBuilder(GameName)
-              .ForEachOf(
-                   Columns, (b, i) => b.AddConnection(i == 1 ? "Menu" : $"Column {i - 1}", $"Column {i}", $"col[{i}]")
-               )
-              .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
-              .GenString();
-    }
+    public override GraphBuilder GenerateGraphViz(WorldFactory worldFactory, GraphBuilder builder) => builder;
 }

@@ -501,20 +501,12 @@ public class Atlyss : BuildData
             );
     }
 
-    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
-        Func<string, string> getRule,
-        string[][] locationDoubleArrays)
-    {
-        return new GraphBuilder(GameName)
-              .ForEachOf(LocationLevelData, (b, data) => b.AddConnection(data.Connection, data.Area, data.GenRule()))
-              .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
-              .ForEachOf(
-                   QuestData.Where(data => data.Enabled),
-                   (b, data) => b.AddEventLocation(
-                       data.AreaAccepted, getRule, $"Quest Completion: {data.Quest}",
-                       data.Quest,
-                       $"Complete: {data.Quest}"
-                   )
-               ).GenString();
-    }
+    public override GraphBuilder GenerateGraphViz(WorldFactory worldFactory, GraphBuilder builder) => builder
+       .ForEachOf(
+            QuestData.Where(data => data.Enabled),
+            (b, data) => b.AddEventLocation(
+                data.AreaAccepted, builder.GetRule, $"Quest Completion: {data.Quest}", data.Quest,
+                $"Complete: {data.Quest}"
+            )
+        );
 }

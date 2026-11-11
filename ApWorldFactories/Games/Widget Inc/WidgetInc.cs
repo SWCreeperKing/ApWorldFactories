@@ -212,25 +212,7 @@ public class WidgetInc : BuildData
            .UseGenerateOutput(method => method.PumlGenCode());
     }
 
-    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
-        Func<string, string> getRule,
-        string[][] locationDoubleArrays)
-    {
-        return new GraphBuilder(GameName)
-              .ForEachOf(
-                   Enumerable.Range(0, 12), (b, i) =>
-                   {
-                       if (i == 0)
-                       {
-                           b.AddConnection("Menu", "Tier 1", "tier[1]");
-                           return;
-                       }
-                       b.AddConnection($"Tier {i}", $"Tier {i + 1}", $"tier[{i + 1}]");
-                   }
-               )
-              .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
-              .GenString();
-    }
+    public override GraphBuilder GenerateGraphViz(WorldFactory worldFactory, GraphBuilder builder) => builder;
 
     public override void ProcessLocationList(string[] locationList) => WriteData("locations", locationList);
 }

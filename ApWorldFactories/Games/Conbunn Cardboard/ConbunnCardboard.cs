@@ -150,27 +150,11 @@ public class ConbunnCardboard : BuildData
            .UseGenerateOutput(method => method.PumlGenCode());
     }
 
-    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
-        Func<string, string> getRule,
-        string[][] locationDoubleArrays)
-    {
-        return new GraphBuilder(GameName)
-              .ForEachOf(
-                   ConnectionRowData,
-                   (b, data) =>
-                   {
-                       b.AddConnection(
-                           data.From, RegionMap.GetValueOrDefault(data.To, data.To), data.GenRule(RegionMap)
-                       );
-                   }
-               )
-              .AddLocationsFromDoubleArray(locationDoubleArrays, getRule).ForEachOf(
-                   LocationData.Where(data => data.IsCoin),
-                   (b, data) => b.AddEventLocation(
-                       RegionMap[data.Region], getRule, $"Event: {LocationIdMap[data.Id]}", LocationIdMap[data.Id],
-                       "Real Coin"
-                   )
-               )
-              .GenString();
-    }
+    public override GraphBuilder GenerateGraphViz(WorldFactory worldFactory, GraphBuilder builder) => builder.ForEachOf(
+        LocationData.Where(data => data.IsCoin),
+        (b, data) => b.AddEventLocation(
+            RegionMap[data.Region], builder.GetRule, $"Event: {LocationIdMap[data.Id]}", LocationIdMap[data.Id],
+            "Real Coin"
+        )
+    );
 }

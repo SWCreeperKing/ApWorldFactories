@@ -2,11 +2,15 @@
 
 namespace WorldBuilder;
 
-public class GraphBuilder(string gameName)
+public class GraphBuilder(string gameName, string[][] locationDoubleArray, Func<string, string> getRule)
 {
     private const string Font = "monocraft";
     private string GameName = gameName;
     private Dictionary<string, GraphRegion> Regions = new() { ["Menu"] = new GraphRegion("Menu") };
+
+    public string[][] LocationDoubleArray = locationDoubleArray;
+    public Func<string, string> GetRule = getRule;
+    public string RankDir = "TB";
 
     public GraphBuilder AddRegion(string region)
     {
@@ -29,7 +33,7 @@ public class GraphBuilder(string gameName)
     {
         return this.ForEachOf(doubleArray, (b, strings) => b.AddLocation(strings[1], getRule, strings[0]));
     }
-    
+
     public GraphBuilder AddLocation(string region, GraphLocation location)
     {
         if (!Regions.ContainsKey(region)) AddRegion(region);
@@ -37,18 +41,16 @@ public class GraphBuilder(string gameName)
         return this;
     }
 
-    public GraphBuilder AddLocation(
-        string region, Func<string, string> getRule, string location, bool isEvent = false, string placedItem = ""
-    )
+    public GraphBuilder AddLocation(string region, Func<string, string> getRule, string location, bool isEvent = false,
+        string placedItem = "")
     {
         if (!Regions.ContainsKey(region)) AddRegion(region);
         Regions[region].Locations.Add(new GraphLocation(location, getRule(location), isEvent, placedItem));
         return this;
     }
 
-    public GraphBuilder AddEventLocation(
-        string region, Func<string, string> getRule, string eventLocation, string ruleLocation, string placedItem = ""
-    )
+    public GraphBuilder AddEventLocation(string region, Func<string, string> getRule, string eventLocation,
+        string ruleLocation, string placedItem = "")
     {
         if (!Regions.ContainsKey(region)) AddRegion(region);
         Regions[region].Locations.Add(new GraphLocation(eventLocation, getRule(ruleLocation), true, placedItem));
@@ -69,11 +71,19 @@ public class GraphBuilder(string gameName)
         return this;
     }
 
-    public string GenString(string rankDir = "TB")
+    public GraphBuilder SetRankDir(string rankDir = "TB")
+    {
+        RankDir = rankDir;
+        return this;
+    }
+
+    public string GenString()
     {
         StringBuilder sb = new();
 
-        sb.Append($"digraph {GameName.Replace(" ", "_")} {{\nconcentrate=True\nrankdir={rankDir};\nnode [shape=none]\ngraph [fontname = \"{Font}\"];\nnode [fontname = \"{Font}\"];\nedge [fontname = \"{Font}\"];");
+        sb.Append(
+            $"digraph {GameName.Replace(" ", "_")} {{\nconcentrate=True\nrankdir={RankDir};\nnode [shape=none]\ngraph [fontname = \"{Font}\"];\nnode [fontname = \"{Font}\"];\nedge [fontname = \"{Font}\"];"
+        );
 
         var regions = Regions.Values.ToArray();
         foreach (var graphRegion in regions) sb.Append(graphRegion.GenNode()).Append('\n');
@@ -104,7 +114,9 @@ public class GraphRegion(string name)
         if (Locations.Count != 0)
         {
             sb.Append("<tr><td><b>Location</b></td><td><b>Logic</b></td><td><b>Item</b></td></tr>");
-            foreach (var graphLocation in Locations.OrderBy(loc => loc.IsEvent)) sb.Append(graphLocation.GenLocation());
+            foreach (var graphLocation in
+                     Locations.DistinctBy(loc => $"{loc.IsEvent} lock+ {loc.GenLocation()}")
+                              .OrderBy(loc => loc.IsEvent)) sb.Append(graphLocation.GenLocation());
         }
 
 
@@ -125,8 +137,8 @@ public readonly struct GraphConnection(string from, string to, string rules = ""
         => $"\"{From}\" -> \"{To}\"{(Rules is not "" ? $" [label=\"{Rules.Replace('"', '\'')}\" color=\"#00008844\"]" : "")}";
 }
 
-public readonly struct GraphLocation
-    (string name, string logic = "", bool isEventLocation = false, string placedItem = "")
+public readonly struct GraphLocation(string name, string logic = "", bool isEventLocation = false,
+    string placedItem = "")
 {
     public readonly string LocationName = name;
     public readonly string Logic = logic.Trim() is "" or "True" ? "N/A" : logic;

@@ -102,8 +102,15 @@ public class ThiefSim1 : BuildData
                 region => region_fact.AddConnectionCompiledRule(region.From, region.Name, region.GenRule())
             )
            .AddLocationsFromList("locs")
-           .AddEventLocations(locations: [.. EventLocationRowData.Select(l 
-                => new EventLocationData(l.Region, $"Event: [{l.Name}]", l.LocationItem, l.Name))]);
+           .AddEventLocations(
+                locations:
+                [
+                    .. EventLocationRowData.Select(l => new EventLocationData(
+                            l.Region, $"Event: [{l.Name}]", l.LocationItem, l.Name
+                        )
+                    )
+                ]
+            );
     }
 
     public override void Init(WorldInitFactory init_fact)
@@ -116,11 +123,5 @@ public class ThiefSim1 : BuildData
            .UseGenerateOutput(method => method.PumlGenCode());
     }
 
-    public override string GenerateGraphViz(WorldFactory worldFactory, Dictionary<string, string> associations,
-        Func<string, string> getRule, string[][] locationDoubleArrays)
-        => new GraphBuilder(GameName)
-          .ForEachOf(RegionSectors, (b, region) => b.AddConnection(region.From, region.Name, region.GenRule()))
-          .AddLocationsFromDoubleArray(locationDoubleArrays, getRule)
-          .GenString();
-
+    public override GraphBuilder GenerateGraphViz(WorldFactory worldFactory, GraphBuilder builder) => builder;
 }
